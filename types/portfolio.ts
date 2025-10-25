@@ -59,6 +59,7 @@ export interface Language {
   skills: string;
   contact: string;
   resume: string;
+  blog: string;
   viewMore: string;
   getInTouch: string;
   sendMessage: string;
@@ -78,6 +79,9 @@ export interface Language {
   projectsCompleted: string;
   skillsMastered: string;
   education: string;
+  readMore: string;
+  latestPosts: string;
+  allPosts: string;
 }
 
 export interface PortfolioData {

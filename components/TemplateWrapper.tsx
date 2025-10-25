@@ -2,13 +2,18 @@
 
 import { ReactNode } from 'react';
 import { usePortfolio } from '@/context/PortfolioContext';
+import ModernTemplate from '@/templates/ModernTemplate';
+import ClassicTemplate from '@/templates/ClassicTemplate';
+import MinimalTemplate from '@/templates/MinimalTemplate';
 
 export default function TemplateWrapper({ children }: { children: ReactNode }) {
   const { template } = usePortfolio();
 
-  return (
-    <div className={`template-${template}`} data-template={template}>
-      {children}
-    </div>
-  );
+  const TemplateComponent = {
+    modern: ModernTemplate,
+    classic: ClassicTemplate,
+    minimal: MinimalTemplate,
+  }[template];
+
+  return <TemplateComponent>{children}</TemplateComponent>;
 }

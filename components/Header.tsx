@@ -4,7 +4,15 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { usePortfolio } from '@/context/PortfolioContext';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MoreHorizontal } from 'lucide-react';
+import TemplateSwitcher from '@/components/TemplateSwitcher';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
 
 export default function Header() {
   const { profile, language } = usePortfolio();
@@ -15,10 +23,14 @@ export default function Header() {
     { key: 'home', path: '/' },
     { key: 'projects', path: '/projects' },
     { key: 'experience', path: '/experience' },
+    { key: 'blog', path: '/blog' },
     { key: 'skills', path: '/skills' },
     { key: 'resume', path: '/resume' },
     { key: 'contact', path: '/contact' },
   ];
+
+  const primaryMenuItems = menuItems.slice(0, 4);
+  const moreMenuItems = menuItems.slice(4);
 
   const isActive = (path: string) => {
     return pathname === path;
@@ -33,7 +45,7 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-1">
-            {menuItems.map((item) => {
+            {primaryMenuItems.map((item) => {
               const active = isActive(item.path);
 
               return (
@@ -46,10 +58,40 @@ export default function Header() {
                       : 'text-foreground/80 hover:text-foreground hover:bg-accent'
                   }`}
                 >
-                  {language[item.key]}
+                  {language[item.key as keyof typeof language]}
                 </Link>
               );
             })}
+
+            {moreMenuItems.length > 0 && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-1">
+                    More
+                    <MoreHorizontal size={16} />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  {moreMenuItems.map((item) => {
+                    const active = isActive(item.path);
+                    return (
+                      <DropdownMenuItem key={item.key} asChild>
+                        <Link
+                          href={item.path}
+                          className={`cursor-pointer ${
+                            active ? 'bg-accent' : ''
+                          }`}
+                        >
+                          {language[item.key as keyof typeof language]}
+                        </Link>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
+
+            <TemplateSwitcher />
           </nav>
 
           <button
@@ -78,7 +120,7 @@ export default function Header() {
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {language[item.key]}
+                    {language[item.key as keyof typeof language]}
                   </Link>
                 );
               })}

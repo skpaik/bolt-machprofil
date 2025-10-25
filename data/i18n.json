@@ -8,6 +8,7 @@
     "skills": "Skills",
     "contact": "Contact",
     "resume": "Resume",
+    "blog": "Blog",
     "viewMore": "View More",
     "getInTouch": "Get In Touch",
     "sendMessage": "Send Message",
@@ -26,7 +27,10 @@
     "yearsExperience": "Years Experience",
     "projectsCompleted": "Projects Completed",
     "skillsMastered": "Skills Mastered",
-    "education": "Education"
+    "education": "Education",
+    "readMore": "Read More",
+    "latestPosts": "Latest Posts",
+    "allPosts": "All Posts"
   },
   "es": {
     "name": "Español",
@@ -37,6 +41,7 @@
     "skills": "Habilidades",
     "contact": "Contacto",
     "resume": "Currículum",
+    "blog": "Blog",
     "viewMore": "Ver Más",
     "getInTouch": "Contactar",
     "sendMessage": "Enviar Mensaje",
@@ -55,7 +60,10 @@
     "yearsExperience": "Años de Experiencia",
     "projectsCompleted": "Proyectos Completados",
     "skillsMastered": "Habilidades Dominadas",
-    "education": "Educación"
+    "education": "Educación",
+    "readMore": "Leer Más",
+    "latestPosts": "Últimas Publicaciones",
+    "allPosts": "Todas las Publicaciones"
   },
   "fr": {
     "name": "Français",
@@ -66,6 +74,7 @@
     "skills": "Compétences",
     "contact": "Contact",
     "resume": "CV",
+    "blog": "Blog",
     "viewMore": "Voir Plus",
     "getInTouch": "Contactez-Nous",
     "sendMessage": "Envoyer Message",
@@ -84,6 +93,9 @@
     "yearsExperience": "Années d'Expérience",
     "projectsCompleted": "Projets Terminés",
     "skillsMastered": "Compétences Maîtrisées",
-    "education": "Éducation"
+    "education": "Éducation",
+    "readMore": "Lire Plus",
+    "latestPosts": "Derniers Articles",
+    "allPosts": "Tous les Articles"
   }
 }
