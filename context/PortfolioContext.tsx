@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import portfolioData from '@/data/portfolio.json';
+import languageData from '@/data/i18n.json';
 import { Profile, Language, ProfileType, TemplateType, LanguageType, ThemeType } from '@/types/portfolio';
 
 interface PortfolioContextType {
@@ -37,7 +38,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     if (savedTemplate) {
       setTemplate(savedTemplate);
     }
-    if (savedLanguage && portfolioData.languages[savedLanguage]) {
+    if (savedLanguage && languageData[savedLanguage]) {
       setLanguageType(savedLanguage);
     }
     if (savedTheme) {
@@ -64,7 +65,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   }, [theme]);
 
   const profile = portfolioData.profiles[profileType] as Profile;
-  const language = portfolioData.languages[languageType] as Language;
+  const language = languageData[languageType] as Language;
 
   return (
     <PortfolioContext.Provider

@@ -51,7 +51,33 @@ export interface Profile {
 
 export interface Language {
   name: string;
-  [key: string]: string;
+
+  home: string;
+  projects: string;
+  portfolio: string;
+  experience: string;
+  skills: string;
+  contact: string;
+  resume: string;
+  viewMore: string;
+  getInTouch: string;
+  sendMessage: string;
+  downloadCV: string;
+  language: string;
+  template: string;
+  profile: string;
+  theme: string;
+  contactInfo: string;
+  email: string;
+  phone: string;
+  location: string;
+  connectWithMe: string;
+  allSkills: string;
+  professionalHighlights: string;
+  yearsExperience: string;
+  projectsCompleted: string;
+  skillsMastered: string;
+  education: string;
 }
 
 export interface PortfolioData {
@@ -63,7 +89,7 @@ export interface PortfolioData {
   };
 }
 
-export type ProfileType = 'developer' | 'photographer' | 'teacher';
+export type ProfileType = 'developer' | 'photographer' | 'teacher' | 'student';
 export type TemplateType = 'modern' | 'classic' | 'minimal';
 export type LanguageType = 'en' | 'es' | 'fr';
 export type ThemeType = 'light' | 'dark';

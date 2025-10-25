@@ -42,6 +42,7 @@ export default function Footer() {
     { code: 'developer', name: 'Developer' },
     { code: 'photographer', name: 'Photographer' },
     { code: 'teacher', name: 'Teacher' },
+    { code: 'student', name: 'Student' },
   ];
 
   return (

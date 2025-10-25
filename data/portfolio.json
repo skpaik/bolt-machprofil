@@ -17,21 +17,36 @@
         {
           "title": "E-Commerce Platform",
           "description": "Built a scalable e-commerce platform handling 100K+ daily users with real-time inventory management",
-          "technologies": ["React", "Node.js", "PostgreSQL", "Redis"],
+          "technologies": [
+            "React",
+            "Node.js",
+            "PostgreSQL",
+            "Redis"
+          ],
           "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
           "link": "#"
         },
         {
           "title": "Analytics Dashboard",
           "description": "Real-time analytics dashboard with interactive data visualizations and reporting features",
-          "technologies": ["Next.js", "TypeScript", "D3.js", "MongoDB"],
+          "technologies": [
+            "Next.js",
+            "TypeScript",
+            "D3.js",
+            "MongoDB"
+          ],
           "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
           "link": "#"
         },
         {
           "title": "Mobile Banking App",
           "description": "Secure mobile banking application with biometric authentication and transaction tracking",
-          "technologies": ["React Native", "Express", "MySQL", "AWS"],
+          "technologies": [
+            "React Native",
+            "Express",
+            "MySQL",
+            "AWS"
+          ],
           "image": "https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&w=600",
           "link": "#"
         }
@@ -65,10 +80,33 @@
         }
       ],
       "skills": {
-        "Frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
-        "Backend": ["Node.js", "Express", "Python", "Django", "REST APIs"],
-        "Database": ["PostgreSQL", "MongoDB", "Redis", "MySQL"],
-        "DevOps": ["Docker", "AWS", "CI/CD", "Kubernetes", "Git"]
+        "Frontend": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vue.js"
+        ],
+        "Backend": [
+          "Node.js",
+          "Express",
+          "Python",
+          "Django",
+          "REST APIs"
+        ],
+        "Database": [
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "MySQL"
+        ],
+        "DevOps": [
+          "Docker",
+          "AWS",
+          "CI/CD",
+          "Kubernetes",
+          "Git"
+        ]
       }
     },
     "photographer": {
@@ -136,10 +174,31 @@
         }
       ],
       "skills": {
-        "Photography": ["Portrait", "Wedding", "Landscape", "Street", "Commercial"],
-        "Equipment": ["Canon EOS R5", "Sony A7IV", "DJI Drone", "Lighting Setup"],
-        "Editing": ["Adobe Lightroom", "Photoshop", "Capture One", "Color Grading"],
-        "Business": ["Client Management", "Marketing", "Social Media", "Pricing"]
+        "Photography": [
+          "Portrait",
+          "Wedding",
+          "Landscape",
+          "Street",
+          "Commercial"
+        ],
+        "Equipment": [
+          "Canon EOS R5",
+          "Sony A7IV",
+          "DJI Drone",
+          "Lighting Setup"
+        ],
+        "Editing": [
+          "Adobe Lightroom",
+          "Photoshop",
+          "Capture One",
+          "Color Grading"
+        ],
+        "Business": [
+          "Client Management",
+          "Marketing",
+          "Social Media",
+          "Pricing"
+        ]
       }
     },
     "teacher": {
@@ -152,7 +211,9 @@
       "avatar": "https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=400",
       "social": {
         "linkedin": "https://linkedin.com",
-        "twitter": "https://twitter.com"
+        "twitter": "https://twitter.com",
+        "facebook": "https://facebook.com",
+        "instagram": "https://instagram.com"
       },
       "projects": [
         {
@@ -206,100 +267,119 @@
         }
       ],
       "skills": {
-        "Teaching": ["Lesson Planning", "Classroom Management", "Assessment", "Differentiation"],
-        "Technology": ["Google Classroom", "Educational Software", "Online Learning"],
-        "Subjects": ["Algebra", "Calculus", "Geometry", "Statistics"],
-        "Leadership": ["Mentoring", "Curriculum Design", "Professional Development"]
+        "Teaching": [
+          "Lesson Planning",
+          "Classroom Management",
+          "Assessment",
+          "Differentiation"
+        ],
+        "Technology": [
+          "Google Classroom",
+          "Educational Software",
+          "Online Learning"
+        ],
+        "Subjects": [
+          "Algebra",
+          "Calculus",
+          "Geometry",
+          "Statistics"
+        ],
+        "Leadership": [
+          "Mentoring",
+          "Curriculum Design",
+          "Professional Development"
+        ]
       }
-    }
-  },
-  "languages": {
-    "en": {
-      "name": "English",
-      "home": "Home",
-      "projects": "Projects",
-      "portfolio": "Portfolio",
-      "experience": "Experience",
-      "skills": "Skills",
-      "contact": "Contact",
-      "resume": "Resume",
-      "viewMore": "View More",
-      "getInTouch": "Get In Touch",
-      "sendMessage": "Send Message",
-      "downloadCV": "Download CV",
-      "language": "Language",
-      "template": "Template",
-      "profile": "Profile",
-      "theme": "Theme",
-      "contactInfo": "Contact Information",
-      "email": "Email",
-      "phone": "Phone",
-      "location": "Location",
-      "connectWithMe": "Connect With Me",
-      "allSkills": "All Skills",
-      "professionalHighlights": "Professional Highlights",
-      "yearsExperience": "Years Experience",
-      "projectsCompleted": "Projects Completed",
-      "skillsMastered": "Skills Mastered",
-      "education": "Education"
     },
-    "es": {
-      "name": "Español",
-      "home": "Inicio",
-      "projects": "Proyectos",
-      "portfolio": "Portafolio",
-      "experience": "Experiencia",
-      "skills": "Habilidades",
-      "contact": "Contacto",
-      "resume": "Currículum",
-      "viewMore": "Ver Más",
-      "getInTouch": "Contactar",
-      "sendMessage": "Enviar Mensaje",
-      "downloadCV": "Descargar CV",
-      "language": "Idioma",
-      "template": "Plantilla",
-      "profile": "Perfil",
-      "theme": "Tema",
-      "contactInfo": "Información de Contacto",
-      "email": "Correo",
-      "phone": "Teléfono",
-      "location": "Ubicación",
-      "connectWithMe": "Conéctate Conmigo",
-      "allSkills": "Todas las Habilidades",
-      "professionalHighlights": "Aspectos Destacados Profesionales",
-      "yearsExperience": "Años de Experiencia",
-      "projectsCompleted": "Proyectos Completados",
-      "skillsMastered": "Habilidades Dominadas",
-      "education": "Educación"
-    },
-    "fr": {
-      "name": "Français",
-      "home": "Accueil",
-      "projects": "Projets",
-      "portfolio": "Portfolio",
-      "experience": "Expérience",
-      "skills": "Compétences",
-      "contact": "Contact",
-      "resume": "CV",
-      "viewMore": "Voir Plus",
-      "getInTouch": "Contactez-Nous",
-      "sendMessage": "Envoyer Message",
-      "downloadCV": "Télécharger CV",
-      "language": "Langue",
-      "template": "Modèle",
-      "profile": "Profil",
-      "theme": "Thème",
-      "contactInfo": "Coordonnées",
-      "email": "Email",
-      "phone": "Téléphone",
-      "location": "Localisation",
-      "connectWithMe": "Connectez-Vous Avec Moi",
-      "allSkills": "Toutes les Compétences",
-      "professionalHighlights": "Faits Saillants Professionnels",
-      "yearsExperience": "Années d'Expérience",
-      "projectsCompleted": "Projets Terminés",
-      "skillsMastered": "Compétences Maîtrisées",
-      "education": "Éducation"
+    "student": {
+      "name": "Dr. Sarah Williams",
+      "title": "Mathematics Teacher",
+      "email": "sarah.williams@email.com",
+      "phone": "+1 (555) 234-5678",
+      "location": "Boston, MA",
+      "bio": "Dedicated educator with 10+ years of experience inspiring students in mathematics. Committed to innovative teaching methods and student success.",
+      "avatar": "https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "social": {
+        "linkedin": "https://linkedin.com",
+        "twitter": "https://twitter.com",
+        "facebook": "https://facebook.com",
+        "instagram": "https://instagram.com"
+      },
+      "projects": [
+        {
+          "title": "Interactive Math Learning Platform",
+          "description": "Developed online platform with gamified lessons improving student engagement by 45%",
+          "category": "Digital Learning",
+          "image": "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "link": "#"
+        },
+        {
+          "title": "STEM Workshop Series",
+          "description": "Created and led hands-on STEM workshops for middle school students",
+          "category": "Workshop",
+          "image": "https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "link": "#"
+        },
+        {
+          "title": "Curriculum Development",
+          "description": "Designed comprehensive mathematics curriculum aligned with state standards",
+          "category": "Curriculum",
+          "image": "https://images.pexels.com/photos/256520/pexels-photo-256520.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "link": "#"
+        }
+      ],
+      "experience": [
+        {
+          "company": "Lincoln High School",
+          "position": "Senior Mathematics Teacher",
+          "period": "2018 - Present",
+          "description": "Teaching AP Calculus, Algebra, and Geometry. Mentor for new teachers and department coordinator"
+        },
+        {
+          "company": "Educational Consulting Firm",
+          "position": "Curriculum Consultant",
+          "period": "2015 - 2018",
+          "description": "Developed mathematics curricula for school districts across the region"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Ph.D. in Education",
+          "period": "2010 - 2014",
+          "description": "Research focus on mathematics education and curriculum design"
+        },
+        {
+          "institution": "Boston College",
+          "degree": "Master of Education",
+          "period": "2008 - 2010",
+          "description": "Specialized in secondary mathematics education"
+        }
+      ],
+      "skills": {
+        "Teaching": [
+          "Lesson Planning",
+          "Classroom Management",
+          "Assessment",
+          "Differentiation"
+        ],
+        "Technology": [
+          "Google Classroom",
+          "Educational Software",
+          "Online Learning"
+        ],
+        "Subjects": [
+          "Algebra",
+          "Calculus",
+          "Geometry",
+          "Statistics"
+        ],
+        "Leadership": [
+          "Mentoring",
+          "Curriculum Design",
+          "Professional Development"
+        ]
+      }
     }
   }
 }
