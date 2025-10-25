@@ -64,3 +64,14 @@ Edit `/data/portfolio.json` to customize your portfolio information.
 ## License
 
 MIT
+
+## Command
+Template change meaning different layout. Not the existing layout. On change of template total layout will change to a new design.
+
+Apart from current 3 template, in future I will add more template.
+
+Also attach a blog/article menu. on click on the page blog will show with paginations.
+
+Details blog can also be visible.
+
+Also show the top 4 menu in main list. rest of the menu links go under more link.
