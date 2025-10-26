@@ -10,12 +10,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Layout } from 'lucide-react';
-import {templates, TemplateType} from '@/types/portfolio';
+import {ConfigData} from "@/data/config-data";
 
 export default function TemplateSwitcher() {
   const { template, setTemplate } = usePortfolio();
 
-  const currentTemplate = templates.find((t) => t.value === template);
+  const currentTemplate =ConfigData. templates.find(t => t.value === template);
 
   return (
     <DropdownMenu>
@@ -26,7 +26,7 @@ export default function TemplateSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {templates.map((t) => (
+        {ConfigData.templates.map((t) => (
           <DropdownMenuItem
             key={t.value}
             onClick={() => setTemplate(t.value)}

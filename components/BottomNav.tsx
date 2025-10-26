@@ -11,35 +11,23 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {ConfigData} from "@/data/config-data";
 
 export default function BottomNav() {
   const { langI18n } = usePortfolio();
   const pathname = usePathname();
 
-  const primaryMenuItems = [
-    { key: 'home', path: '/', icon: Home },
-    { key: 'projects', path: '/projects', icon: Briefcase },
-    { key: 'experience', path: '/experience', icon: Calendar },
-    { key: 'blog', path: '/blog', icon: FileText },
-  ];
-
-  const moreMenuItems = [
-    { key: 'publications', path: '/publications', label: 'Publications' },
-    { key: 'certificate', path: '/certificate', label: 'Certificates' },
-    { key: 'gallery', path: '/gallery', label: 'Gallery' },
-  ];
-
   const isActive = (path: string) => {
     return pathname === path;
   };
 
-  const isMoreActive = moreMenuItems.some((item) => pathname === item.path);
+  const isMoreActive = ConfigData.moreMenuItems.some((item) => pathname === item.path);
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-around items-center h-16">
-          {primaryMenuItems.map((item) => {
+          {ConfigData.primaryMenuItems.map((item) => {
             const active = isActive(item.path);
             const Icon = item.icon;
 
@@ -75,7 +63,7 @@ export default function BottomNav() {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" side="top" className="mb-2">
-              {moreMenuItems.map((item) => {
+              {ConfigData.moreMenuItems.map((item) => {
                 const active = isActive(item.path);
                 return (
                   <DropdownMenuItem key={item.key} asChild>

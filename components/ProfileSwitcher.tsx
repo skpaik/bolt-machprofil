@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {Globe, Layout} from 'lucide-react';
-import {profiles, ProfileType, TemplateType} from '@/types/portfolio';
+import {ConfigData} from "@/data/config-data";
 
 export default function ProfileSwitcher() {
   const {
@@ -28,7 +28,7 @@ export default function ProfileSwitcher() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          {profiles.map((prof) => (
+          {ConfigData.profiles.map((prof) => (
               <DropdownMenuItem
                   key={prof.code}
                   onClick={() => setProfileType(prof.code)}
