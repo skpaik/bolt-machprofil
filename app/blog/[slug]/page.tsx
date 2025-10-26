@@ -2,40 +2,26 @@
 
 import React, { useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import blogsData from '@/data/blogs.json';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
 import Link from 'next/link';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  cover_image: string;
-  author: string;
-  published: boolean;
-  published_at: string;
-  tags: string[];
-  read_time: number;
-}
+import {BlogPost} from "@/types/portfolio";
+import {usePortfolio} from "@/context/PortfolioContext";
 
 export default function BlogDetailPage() {
   const params = useParams();
   const router = useRouter();
+  const { profile } = usePortfolio();
 
   const post = useMemo(() => {
-    return (blogsData.blogs as BlogPost[]).find(
-      (p) => p.slug === params.slug
-    );
+    return (profile.blogs as BlogPost[]).find((p) => p.slug === params.slug);
   }, [params.slug]);
 
   const relatedPosts = useMemo(() => {
     if (!post) return [];
-    return (blogsData.blogs as BlogPost[])
+    return (profile.blogs as BlogPost[])
       .filter((p) => p.slug !== post.slug)
       .slice(0, 3);
   }, [post]);
