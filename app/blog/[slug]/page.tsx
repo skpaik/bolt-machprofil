@@ -1,71 +1,44 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { supabase, BlogPost } from '@/lib/supabase';
+import blogsData from '@/data/blogs.json';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
 import Link from 'next/link';
 
+interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  cover_image: string;
+  author: string;
+  published: boolean;
+  published_at: string;
+  tags: string[];
+  read_time: number;
+}
+
 export default function BlogDetailPage() {
   const params = useParams();
   const router = useRouter();
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
 
-  useEffect(() => {
-    if (params.slug) {
-      fetchPost(params.slug as string);
-    }
+  const post = useMemo(() => {
+    return (blogsData.blogs as BlogPost[]).find(
+      (p) => p.slug === params.slug
+    );
   }, [params.slug]);
 
-  const fetchPost = async (slug: string) => {
-    setLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from('blog_posts')
-        .select('*')
-        .eq('slug', slug)
-        .eq('published', true)
-        .maybeSingle();
-
-      if (error) throw error;
-
-      if (data) {
-        setPost(data);
-        fetchRelatedPosts(data.tags);
-      } else {
-        router.push('/blog');
-      }
-    } catch (error) {
-      console.error('Error fetching post:', error);
-      router.push('/blog');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const fetchRelatedPosts = async (tags: string[]) => {
-    if (!tags || tags.length === 0) return;
-
-    try {
-      const { data, error } = await supabase
-        .from('blog_posts')
-        .select('*')
-        .eq('published', true)
-        .neq('slug', params.slug as string)
-        .order('published_at', { ascending: false })
-        .limit(3);
-
-      if (error) throw error;
-      setRelatedPosts(data || []);
-    } catch (error) {
-      console.error('Error fetching related posts:', error);
-    }
-  };
+  const relatedPosts = useMemo(() => {
+    if (!post) return [];
+    return (blogsData.blogs as BlogPost[])
+      .filter((p) => p.slug !== post.slug)
+      .slice(0, 3);
+  }, [post]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -89,23 +62,18 @@ export default function BlogDetailPage() {
     }
   };
 
-  if (loading) {
+  if (!post) {
     return (
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="space-y-6">
-          <div className="h-10 bg-muted animate-pulse rounded" />
-          <div className="aspect-video bg-muted animate-pulse rounded" />
-          <div className="space-y-4">
-            <div className="h-4 bg-muted animate-pulse rounded" />
-            <div className="h-4 bg-muted animate-pulse rounded" />
-            <div className="h-4 bg-muted animate-pulse rounded w-3/4" />
-          </div>
+        <div className="text-center">
+          <h1 className="text-3xl font-bold mb-4">Post not found</h1>
+          <Button asChild>
+            <Link href="/blog">Back to Blog</Link>
+          </Button>
         </div>
       </div>
     );
   }
-
-  if (!post) return null;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

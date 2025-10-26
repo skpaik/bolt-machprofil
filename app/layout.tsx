@@ -5,6 +5,7 @@ import { PortfolioProvider } from '@/context/PortfolioContext';
 import TemplateWrapper from '@/components/TemplateWrapper';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import BottomNav from '@/components/BottomNav';
 import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -24,11 +25,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <PortfolioProvider>
           <TemplateWrapper>
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col min-h-screen pb-16">
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
+            <BottomNav />
           </TemplateWrapper>
           <Toaster />
         </PortfolioProvider>

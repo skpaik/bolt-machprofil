@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { usePortfolio } from '@/context/PortfolioContext';
-import { supabase, BlogPost } from '@/lib/supabase';
+import blogsData from '@/data/blogs.json';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -11,48 +11,33 @@ import Link from 'next/link';
 
 const POSTS_PER_PAGE = 6;
 
+interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  cover_image: string;
+  author: string;
+  published: boolean;
+  published_at: string;
+  tags: string[];
+  read_time: number;
+}
+
 export default function BlogPage() {
   const { language } = usePortfolio();
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPosts, setTotalPosts] = useState(0);
 
-  useEffect(() => {
-    fetchPosts();
-  }, [currentPage]);
-
-  const fetchPosts = async () => {
-    setLoading(true);
-    try {
-      const from = (currentPage - 1) * POSTS_PER_PAGE;
-      const to = from + POSTS_PER_PAGE - 1;
-
-      const { count } = await supabase
-        .from('blog_posts')
-        .select('*', { count: 'exact', head: true })
-        .eq('published', true);
-
-      setTotalPosts(count || 0);
-
-      const { data, error } = await supabase
-        .from('blog_posts')
-        .select('*')
-        .eq('published', true)
-        .order('published_at', { ascending: false })
-        .range(from, to);
-
-      if (error) throw error;
-      setPosts(data || []);
-    } catch (error) {
-      console.error('Error fetching posts:', error);
-      setPosts([]);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  const posts = blogsData.blogs as BlogPost[];
+  const totalPosts = posts.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+  const currentPosts = useMemo(() => {
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    const endIndex = startIndex + POSTS_PER_PAGE;
+    return posts.slice(startIndex, endIndex);
+  }, [posts, currentPage]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -61,29 +46,6 @@ export default function BlogPage() {
       day: 'numeric',
     });
   };
-
-  if (loading) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[...Array(6)].map((_, i) => (
-            <Card key={i} className="overflow-hidden">
-              <div className="aspect-video bg-muted animate-pulse" />
-              <CardHeader>
-                <div className="h-6 bg-muted animate-pulse rounded" />
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="h-4 bg-muted animate-pulse rounded" />
-                  <div className="h-4 bg-muted animate-pulse rounded" />
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -94,108 +56,100 @@ export default function BlogPage() {
         </p>
       </div>
 
-      {posts.length === 0 ? (
-        <div className="text-center py-12">
-          <p className="text-xl text-muted-foreground">No blog posts yet. Check back soon!</p>
-        </div>
-      ) : (
-        <>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <Card key={post.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
-                <Link href={`/blog/${post.slug}`}>
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={post.cover_image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </Link>
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                    <Calendar size={14} />
-                    <span>{formatDate(post.published_at)}</span>
-                    <span>•</span>
-                    <Clock size={14} />
-                    <span>{post.read_time} min read</span>
-                  </div>
-                  <Link href={`/blog/${post.slug}`}>
-                    <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h2>
-                  </Link>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground line-clamp-3 mb-4">
-                    {post.excerpt}
-                  </p>
-                  {post.tags && post.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
-                      {post.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="secondary">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
-                </CardContent>
-                <CardFooter>
-                  <Button variant="ghost" asChild className="w-full">
-                    <Link href={`/blog/${post.slug}`}>{language.readMore}</Link>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {currentPosts.map((post) => (
+          <Card key={post.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
+            <Link href={`/blog/${post.slug}`}>
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={post.cover_image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </Link>
+            <CardHeader>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                <Calendar size={14} />
+                <span>{formatDate(post.published_at)}</span>
+                <span>•</span>
+                <Clock size={14} />
+                <span>{post.read_time} min read</span>
+              </div>
+              <Link href={`/blog/${post.slug}`}>
+                <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                  {post.title}
+                </h2>
+              </Link>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground line-clamp-3 mb-4">
+                {post.excerpt}
+              </p>
+              {post.tags && post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.slice(0, 3).map((tag) => (
+                    <Badge key={tag} variant="secondary">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+            <CardFooter>
+              <Button variant="ghost" asChild className="w-full">
+                <Link href={`/blog/${post.slug}`}>{language.readMore}</Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-2 mt-12">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+            disabled={currentPage === 1}
+          >
+            <ChevronLeft size={20} />
+          </Button>
+
+          <div className="flex items-center gap-2">
+            {[...Array(totalPages)].map((_, i) => {
+              const page = i + 1;
+              if (
+                page === 1 ||
+                page === totalPages ||
+                (page >= currentPage - 1 && page <= currentPage + 1)
+              ) {
+                return (
+                  <Button
+                    key={page}
+                    variant={currentPage === page ? 'default' : 'outline'}
+                    size="icon"
+                    onClick={() => setCurrentPage(page)}
+                  >
+                    {page}
                   </Button>
-                </CardFooter>
-              </Card>
-            ))}
+                );
+              } else if (page === currentPage - 2 || page === currentPage + 2) {
+                return <span key={page}>...</span>;
+              }
+              return null;
+            })}
           </div>
 
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 mt-12">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                disabled={currentPage === 1}
-              >
-                <ChevronLeft size={20} />
-              </Button>
-
-              <div className="flex items-center gap-2">
-                {[...Array(totalPages)].map((_, i) => {
-                  const page = i + 1;
-                  if (
-                    page === 1 ||
-                    page === totalPages ||
-                    (page >= currentPage - 1 && page <= currentPage + 1)
-                  ) {
-                    return (
-                      <Button
-                        key={page}
-                        variant={currentPage === page ? 'default' : 'outline'}
-                        size="icon"
-                        onClick={() => setCurrentPage(page)}
-                      >
-                        {page}
-                      </Button>
-                    );
-                  } else if (page === currentPage - 2 || page === currentPage + 2) {
-                    return <span key={page}>...</span>;
-                  }
-                  return null;
-                })}
-              </div>
-
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                disabled={currentPage === totalPages}
-              >
-                <ChevronRight size={20} />
-              </Button>
-            </div>
-          )}
-        </>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+            disabled={currentPage === totalPages}
+          >
+            <ChevronRight size={20} />
+          </Button>
+        </div>
       )}
     </div>
   );
