@@ -7,13 +7,13 @@ import { Badge } from '@/components/ui/badge';
 import { Briefcase, Calendar } from 'lucide-react';
 
 export default function ExperiencePage() {
-  const { profile, language } = usePortfolio();
+  const { profile, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          {language.experience}
+          {langI18n.experience}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
           My professional journey and career milestones that have shaped my expertise.

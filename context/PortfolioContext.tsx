@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import portfolioData from '@/data/portfolio.json';
 import languageData from '@/data/i18n.json';
-import { Profile, Language, ProfileType, TemplateType, LanguageType, ThemeType } from '@/types/portfolio';
+import { Profile, LanguageI18n, ProfileType, TemplateType, LanguageType, ThemeType } from '@/types/portfolio';
 
 interface PortfolioContextType {
   profile: Profile;
@@ -11,7 +11,7 @@ interface PortfolioContextType {
   setProfileType: (type: ProfileType) => void;
   template: TemplateType;
   setTemplate: (type: TemplateType) => void;
-  language: Language;
+  langI18n: LanguageI18n;
   languageType: LanguageType;
   setLanguageType: (type: LanguageType) => void;
   theme: ThemeType;
@@ -65,7 +65,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   }, [theme]);
 
   const profile = portfolioData.profiles[profileType] as Profile;
-  const language = languageData[languageType] as Language;
+  const langI18n = languageData[languageType] as LanguageI18n;
 
   return (
     <PortfolioContext.Provider
@@ -75,7 +75,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
         setProfileType,
         template,
         setTemplate,
-        language,
+        langI18n,
         languageType,
         setLanguageType,
         theme,

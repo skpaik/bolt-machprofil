@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Download, Mail, Phone, MapPin, Briefcase, GraduationCap, Award } from 'lucide-react';
 
 export default function ResumePage() {
-  const { profile, language } = usePortfolio();
+  const { profile, langI18n } = usePortfolio();
 
   const handleDownloadPDF = () => {
     window.print();
@@ -34,12 +34,12 @@ export default function ResumePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 print-container">
         <div className="mb-8 flex justify-between items-center no-print">
           <div>
-            <h1 className="text-4xl font-bold text-foreground mb-2">{language.resume}</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-2">{langI18n.resume}</h1>
             <p className="text-muted-foreground">Professional curriculum vitae</p>
           </div>
           <Button onClick={handleDownloadPDF} size="lg" className="gap-2">
             <Download size={20} />
-            {language.downloadCV}
+            {langI18n.downloadCV}
           </Button>
         </div>
 
@@ -75,7 +75,7 @@ export default function ResumePage() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold flex items-center gap-2">
               <Briefcase size={24} />
-              {language.experience}
+              {langI18n.experience}
             </h3>
             <div className="space-y-6">
               {profile.experience.map((exp, index) => (
@@ -96,7 +96,7 @@ export default function ResumePage() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold flex items-center gap-2">
               <GraduationCap size={24} />
-              {language.education}
+              {langI18n.education}
             </h3>
             <div className="space-y-6">
               {profile.education.map((edu, index) => (
@@ -115,7 +115,7 @@ export default function ResumePage() {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">{language.skills}</h3>
+            <h3 className="text-2xl font-semibold">{langI18n.skills}</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {Object.entries(profile.skills).map(([category, skills]) => (
                 <div key={category}>

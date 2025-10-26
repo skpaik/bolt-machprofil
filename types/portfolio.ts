@@ -1,3 +1,32 @@
+export interface BlogPost2 {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  cover_image: string;
+  author: string;
+  published: boolean;
+  published_at: string;
+  created_at: string;
+  updated_at: string;
+  tags: string[];
+  read_time: number;
+}
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  cover_image: string;
+  author: string;
+  published: boolean;
+  published_at: string;
+  tags: string[];
+  read_time: number;
+}
+
 export interface SocialLinks {
   github?: string;
   linkedin?: string;
@@ -43,13 +72,14 @@ export interface Profile {
   bio: string;
   avatar: string;
   social: SocialLinks;
+  blogs: BlogPost[];
   projects: Project[];
   experience: Experience[];
   education: Education[];
   skills: Skills;
 }
 
-export interface Language {
+export interface LanguageI18n {
   name: string;
 
   home: string;
@@ -89,7 +119,7 @@ export interface PortfolioData {
     [key: string]: Profile;
   };
   languages: {
-    [key: string]: Language;
+    [key: string]: LanguageI18n;
   };
 }
 

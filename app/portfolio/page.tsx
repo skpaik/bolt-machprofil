@@ -8,13 +8,13 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 
 export default function PortfolioPage() {
-  const { profile, language } = usePortfolio();
+  const { profile, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          {language.portfolio}
+          {langI18n.portfolio}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
           A curated collection showcasing my creative work and professional achievements.
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
 
               <Button variant="outline" className="w-full gap-2" asChild>
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  {language.viewMore}
+                  {langI18n.viewMore}
                   <ExternalLink size={16} />
                 </a>
               </Button>

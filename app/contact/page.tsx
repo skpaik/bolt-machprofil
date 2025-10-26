@@ -11,7 +11,7 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, Facebo
 import { useToast } from '@/hooks/use-toast';
 
 export default function ContactPage() {
-  const { profile, language } = usePortfolio();
+  const { profile, langI18n } = usePortfolio();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -48,10 +48,10 @@ export default function ContactPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12 text-center">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          {language.contact}
+          {langI18n.contact}
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          {language.getInTouch}. I'd love to hear from you and discuss how we can work together.
+          {langI18n.getInTouch}. I&apos;d love to hear from you and discuss how we can work together.
         </p>
       </div>
 
@@ -125,7 +125,7 @@ export default function ContactPage() {
         </div>
 
         <Card className="p-8">
-          <h2 className="text-2xl font-semibold mb-6">{language.sendMessage}</h2>
+          <h2 className="text-2xl font-semibold mb-6">{langI18n.sendMessage}</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name">Name *</Label>
@@ -179,7 +179,7 @@ export default function ContactPage() {
 
             <Button type="submit" className="w-full gap-2" size="lg">
               <Send size={18} />
-              {language.sendMessage}
+              {langI18n.sendMessage}
             </Button>
           </form>
         </Card>

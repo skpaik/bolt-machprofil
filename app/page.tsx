@@ -9,7 +9,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Facebook } f
 import Link from 'next/link';
 
 export default function Home() {
-  const { profile, language } = usePortfolio();
+  const { profile, langI18n } = usePortfolio();
 
   const getSocialIcon = (platform: string) => {
     const icons: { [key: string]: React.ReactNode } = {
@@ -67,10 +67,10 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-3 pt-4">
             <Button asChild size="lg">
-              <Link href="/contact">{language.getInTouch}</Link>
+              <Link href="/contact">{langI18n.getInTouch}</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/projects">{language.viewMore}</Link>
+              <Link href="/projects">{langI18n.viewMore}</Link>
             </Button>
           </div>
         </div>

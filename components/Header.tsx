@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { usePortfolio } from '@/context/PortfolioContext';
 import TemplateSwitcher from '@/components/TemplateSwitcher';
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ProfileSwitcher from "@/components/ProfileSwitcher";
 
 export default function Header() {
   const { profile } = usePortfolio();
@@ -16,7 +18,9 @@ export default function Header() {
             <span className="text-xl font-bold text-foreground">{profile.name}</span>
           </Link>
 
+          <LanguageSwitcher />
           <TemplateSwitcher />
+          <ProfileSwitcher/>
         </div>
       </div>
     </header>

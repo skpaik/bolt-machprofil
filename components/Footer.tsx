@@ -11,39 +11,17 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { LanguageType, TemplateType, ProfileType } from '@/types/portfolio';
+import TemplateSwitcher from "@/components/TemplateSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ProfileSwitcher from "@/components/ProfileSwitcher";
 
 export default function Footer() {
   const {
     profile,
-    language,
-    languageType,
-    setLanguageType,
-    template,
-    setTemplate,
-    profileType,
-    setProfileType,
+    langI18n,
     theme,
     setTheme
   } = usePortfolio();
-
-  const languages: { code: LanguageType; name: string }[] = [
-    { code: 'en', name: 'English' },
-    { code: 'es', name: 'Español' },
-    { code: 'fr', name: 'Français' },
-  ];
-
-  const templates: { code: TemplateType; name: string }[] = [
-    { code: 'modern', name: 'Modern' },
-    { code: 'classic', name: 'Classic' },
-    { code: 'minimal', name: 'Minimal' },
-  ];
-
-  const profiles: { code: ProfileType; name: string }[] = [
-    { code: 'developer', name: 'Developer' },
-    { code: 'photographer', name: 'Photographer' },
-    { code: 'teacher', name: 'Teacher' },
-    { code: 'student', name: 'Student' },
-  ];
 
   return (
     <footer className="border-t bg-background">
@@ -56,65 +34,11 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Globe size={16} />
-                  <span className="hidden sm:inline">{language.language}</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {languages.map((lang) => (
-                  <DropdownMenuItem
-                    key={lang.code}
-                    onClick={() => setLanguageType(lang.code)}
-                    className={languageType === lang.code ? 'bg-accent' : ''}
-                  >
-                    {lang.name}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <LanguageSwitcher />
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Layout size={16} />
-                  <span className="hidden sm:inline">{language.template}</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {templates.map((tmpl) => (
-                  <DropdownMenuItem
-                    key={tmpl.code}
-                    onClick={() => setTemplate(tmpl.code)}
-                    className={template === tmpl.code ? 'bg-accent' : ''}
-                  >
-                    {tmpl.name}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <TemplateSwitcher />
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Globe size={16} />
-                  <span className="hidden sm:inline">{language.profile}</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {profiles.map((prof) => (
-                  <DropdownMenuItem
-                    key={prof.code}
-                    onClick={() => setProfileType(prof.code)}
-                    className={profileType === prof.code ? 'bg-accent' : ''}
-                  >
-                    {prof.name}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <ProfileSwitcher/>
 
             <Button
               variant="outline"
@@ -123,7 +47,7 @@ export default function Footer() {
               className="gap-2"
             >
               {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
-              <span className="hidden sm:inline">{language.theme}</span>
+              <span className="hidden sm:inline">{langI18n.theme}</span>
             </Button>
           </div>
         </div>

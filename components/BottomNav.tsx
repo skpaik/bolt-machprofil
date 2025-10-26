@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 export default function BottomNav() {
-  const { language } = usePortfolio();
+  const { langI18n } = usePortfolio();
   const pathname = usePathname();
 
   const primaryMenuItems = [
@@ -55,7 +55,7 @@ export default function BottomNav() {
               >
                 <Icon size={24} />
                 <span className="text-xs mt-1">
-                  {language[item.key as keyof typeof language]}
+                  {langI18n[item.key as keyof typeof langI18n]}
                 </span>
               </Link>
             );

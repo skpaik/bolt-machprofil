@@ -7,13 +7,13 @@ import { Badge } from '@/components/ui/badge';
 import { GraduationCap, Calendar } from 'lucide-react';
 
 export default function EducationPage() {
-  const { profile, language } = usePortfolio();
+  const { profile, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          {language.education}
+          {langI18n.education}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
           My academic journey and educational achievements that have shaped my career.

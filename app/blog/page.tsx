@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from 'react';
 import { usePortfolio } from '@/context/PortfolioContext';
-import blogsData from '@/data/blogs.json';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -11,25 +10,11 @@ import Link from 'next/link';
 
 const POSTS_PER_PAGE = 6;
 
-interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  cover_image: string;
-  author: string;
-  published: boolean;
-  published_at: string;
-  tags: string[];
-  read_time: number;
-}
-
 export default function BlogPage() {
-  const { language } = usePortfolio();
+  const { profile,  langI18n } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
 
-  const posts = blogsData.blogs as BlogPost[];
+  const posts = profile.blogs;
   const totalPosts = posts.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
@@ -50,9 +35,9 @@ export default function BlogPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{language.blog}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">{langI18n.blog}</h1>
         <p className="text-lg text-muted-foreground">
-          {language.latestPosts}
+          {langI18n.latestPosts}
         </p>
       </div>
 
@@ -98,7 +83,7 @@ export default function BlogPage() {
             </CardContent>
             <CardFooter>
               <Button variant="ghost" asChild className="w-full">
-                <Link href={`/blog/${post.slug}`}>{language.readMore}</Link>
+                <Link href={`/blog/${post.slug}`}>{langI18n.readMore}</Link>
               </Button>
             </CardFooter>
           </Card>
