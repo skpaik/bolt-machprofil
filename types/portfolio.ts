@@ -84,8 +84,6 @@ export interface PrimaryMenuItem {
 }
 
 
-
-
 export interface Skills {
     [category: string]: string[];
 }
@@ -139,6 +137,13 @@ export interface LanguageI18n {
     readMore: string;
     latestPosts: string;
     allPosts: string;
+}
+
+export interface SettingSchema {
+    portfolioProfile: string;
+    portfolioTemplate: string,
+    portfolioLanguage: string,
+    portfolioTheme: string,
 }
 
 export interface PortfolioData {
