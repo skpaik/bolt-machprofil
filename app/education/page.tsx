@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { GraduationCap, Calendar } from 'lucide-react';
 
 export default function EducationPage() {
-  const { profile, langI18n } = usePortfolio();
+  const { appData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -21,7 +21,7 @@ export default function EducationPage() {
       </div>
 
       <div className="space-y-8">
-        {profile.experience.map((exp, index) => (
+        {appData.experience.map((exp, index) => (
           <Card key={index} className="p-6 md:p-8 hover:shadow-lg transition-shadow">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div className="flex-1">
@@ -59,7 +59,7 @@ export default function EducationPage() {
             </div>
           </div>
           <h3 className="font-semibold text-lg mb-2">Academic Excellence</h3>
-          <p className="text-3xl font-bold text-primary mb-2">{profile.experience.length}+</p>
+          <p className="text-3xl font-bold text-primary mb-2">{appData.experience.length}+</p>
           <p className="text-sm text-muted-foreground">Years of Study</p>
         </Card>
 
@@ -70,7 +70,7 @@ export default function EducationPage() {
             </div>
           </div>
           <h3 className="font-semibold text-lg mb-2">Projects Completed</h3>
-          <p className="text-3xl font-bold text-primary mb-2">{profile.projects.length}+</p>
+          <p className="text-3xl font-bold text-primary mb-2">{appData.projects.length}+</p>
           <p className="text-sm text-muted-foreground">Academic Projects</p>
         </Card>
 
@@ -82,7 +82,7 @@ export default function EducationPage() {
           </div>
           <h3 className="font-semibold text-lg mb-2">Skills Acquired</h3>
           <p className="text-3xl font-bold text-primary mb-2">
-            {Object.keys(profile.skills).reduce((acc, key) => acc + profile.skills[key].length, 0)}+
+            {Object.keys(appData.skills).reduce((acc, key) => acc + appData.skills[key].length, 0)}+
           </p>
           <p className="text-sm text-muted-foreground">Technical Skills</p>
         </Card>

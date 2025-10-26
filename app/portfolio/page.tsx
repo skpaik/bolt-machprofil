@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 
 export default function PortfolioPage() {
-  const { profile, langI18n } = usePortfolio();
+  const { appData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -22,7 +22,7 @@ export default function PortfolioPage() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {profile.projects.map((project, index) => (
+        {appData.projects.map((project, index) => (
           <Card key={index} className="overflow-hidden group hover:shadow-xl transition-all duration-300">
             <div className="aspect-video overflow-hidden">
               <img

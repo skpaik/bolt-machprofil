@@ -10,16 +10,10 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Layout } from 'lucide-react';
-import { TemplateType } from '@/types/portfolio';
+import {templates, TemplateType} from '@/types/portfolio';
 
 export default function TemplateSwitcher() {
   const { template, setTemplate } = usePortfolio();
-
-  const templates: { value: TemplateType; label: string; description: string }[] = [
-    { value: 'modern', label: 'Modern', description: 'Gradient & bold design' },
-    { value: 'classic', label: 'Classic', description: 'Traditional & elegant' },
-    { value: 'minimal', label: 'Minimal', description: 'Clean & simple' },
-  ];
 
   const currentTemplate = templates.find((t) => t.value === template);
 

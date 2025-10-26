@@ -11,7 +11,7 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, Facebo
 import { useToast } from '@/hooks/use-toast';
 
 export default function ContactPage() {
-  const { profile, langI18n } = usePortfolio();
+  const { appData, langI18n } = usePortfolio();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -67,10 +67,10 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium text-foreground mb-1">Email</p>
                   <a
-                    href={`mailto:${profile.email}`}
+                    href={`mailto:${appData.email}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {profile.email}
+                    {appData.email}
                   </a>
                 </div>
               </div>
@@ -82,10 +82,10 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium text-foreground mb-1">Phone</p>
                   <a
-                    href={`tel:${profile.phone}`}
+                    href={`tel:${appData.phone}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {profile.phone}
+                    {appData.phone}
                   </a>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-1">Location</p>
-                  <p className="text-muted-foreground">{profile.location}</p>
+                  <p className="text-muted-foreground">{appData.location}</p>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
           <Card className="p-6">
             <h2 className="text-2xl font-semibold mb-6">Connect With Me</h2>
             <div className="flex flex-wrap gap-3">
-              {Object.entries(profile.social).map(([platform, url]) => (
+              {Object.entries(appData.social).map(([platform, url]) => (
                 <Button key={platform} variant="outline" className="gap-2" asChild>
                   <a href={url} target="_blank" rel="noopener noreferrer">
                     {getSocialIcon(platform)}

@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Briefcase, Calendar } from 'lucide-react';
 
 export default function CurriculumPage() {
-  const { profile, langI18n } = usePortfolio();
+  const { appData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -21,7 +21,7 @@ export default function CurriculumPage() {
       </div>
 
       <div className="space-y-8">
-        {profile.experience.map((exp, index) => (
+        {appData.experience.map((exp, index) => (
           <Card key={index} className="p-6 md:p-8 hover:shadow-lg transition-shadow">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div className="flex-1">

@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, BookOpen } from 'lucide-react';
 
 export default function PublicationsPage() {
-  const { profile } = usePortfolio();
+  const { appData } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -22,7 +22,7 @@ export default function PublicationsPage() {
       </div>
 
       <div className="space-y-6">
-        {profile.projects.map((project, index) => (
+        {appData.projects.map((project, index) => (
           <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-48 h-32 flex-shrink-0 overflow-hidden rounded-lg">

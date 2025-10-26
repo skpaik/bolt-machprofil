@@ -17,7 +17,7 @@ import ProfileSwitcher from "@/components/ProfileSwitcher";
 
 export default function Footer() {
   const {
-    profile,
+    appData,
     langI18n,
     theme,
     setTheme
@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} {profile.name}. All rights reserved.
+              © {new Date().getFullYear()} {appData.name}. All rights reserved.
             </p>
           </div>
 

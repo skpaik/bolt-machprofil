@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Download, Mail, Phone, MapPin, Briefcase, GraduationCap, Award } from 'lucide-react';
 
 export default function ResumePage() {
-  const { profile, langI18n } = usePortfolio();
+  const { appData, langI18n } = usePortfolio();
 
   const handleDownloadPDF = () => {
     window.print();
@@ -45,21 +45,21 @@ export default function ResumePage() {
 
         <div className="bg-card border rounded-lg p-8 md:p-12 space-y-8">
           <div className="text-center space-y-4 pb-8 border-b">
-            <h2 className="text-4xl font-bold">{profile.name}</h2>
-            <p className="text-2xl text-muted-foreground">{profile.title}</p>
+            <h2 className="text-4xl font-bold">{appData.name}</h2>
+            <p className="text-2xl text-muted-foreground">{appData.title}</p>
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>{profile.email}</span>
+                <span>{appData.email}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>{profile.phone}</span>
+                <span>{appData.phone}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span>{profile.location}</span>
+                <span>{appData.location}</span>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function ResumePage() {
               <Award size={24} />
               Professional Summary
             </h3>
-            <p className="text-muted-foreground leading-relaxed">{profile.bio}</p>
+            <p className="text-muted-foreground leading-relaxed">{appData.bio}</p>
           </div>
 
           <div className="space-y-6">
@@ -78,7 +78,7 @@ export default function ResumePage() {
               {langI18n.experience}
             </h3>
             <div className="space-y-6">
-              {profile.experience.map((exp, index) => (
+              {appData.experience.map((exp, index) => (
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between items-start flex-wrap gap-2">
                     <div>
@@ -99,7 +99,7 @@ export default function ResumePage() {
               {langI18n.education}
             </h3>
             <div className="space-y-6">
-              {profile.education.map((edu, index) => (
+              {appData.education.map((edu, index) => (
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between items-start flex-wrap gap-2">
                     <div>
@@ -117,7 +117,7 @@ export default function ResumePage() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">{langI18n.skills}</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              {Object.entries(profile.skills).map(([category, skills]) => (
+              {Object.entries(appData.skills).map(([category, skills]) => (
                 <div key={category}>
                   <h4 className="font-semibold mb-3">{category}</h4>
                   <div className="flex flex-wrap gap-2">

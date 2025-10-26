@@ -5,7 +5,7 @@ import {usePortfolio} from '@/context/PortfolioContext';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from '@/components/ui/dropdown-menu';
 import {Globe} from 'lucide-react';
-import {LanguageType} from '@/types/portfolio';
+import {languages, LanguageType} from '@/types/portfolio';
 
 export default function LanguageSwitcher() {
     const {
@@ -13,12 +13,6 @@ export default function LanguageSwitcher() {
         languageType,
         setLanguageType,
     } = usePortfolio();
-
-    const languages: { code: LanguageType; name: string }[] = [
-        { code: 'en', name: 'English' },
-        { code: 'es', name: 'Español' },
-        { code: 'fr', name: 'Français' },
-    ];
 
     return (
         <DropdownMenu>

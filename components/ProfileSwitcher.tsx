@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {Globe, Layout} from 'lucide-react';
-import {ProfileType, TemplateType} from '@/types/portfolio';
+import {profiles, ProfileType, TemplateType} from '@/types/portfolio';
 
 export default function ProfileSwitcher() {
   const {
@@ -18,13 +18,6 @@ export default function ProfileSwitcher() {
     profileType,
     setProfileType
   } = usePortfolio();
-
-  const profiles: { code: ProfileType; name: string }[] = [
-    { code: 'developer', name: 'Developer' },
-    { code: 'photographer', name: 'Photographer' },
-    { code: 'teacher', name: 'Teacher' },
-    { code: 'student', name: 'Student' },
-  ];
 
   return (
       <DropdownMenu>

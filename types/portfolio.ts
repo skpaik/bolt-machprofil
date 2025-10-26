@@ -63,7 +63,7 @@ export interface Skills {
   [category: string]: string[];
 }
 
-export interface Profile {
+export interface AppData {
   name: string;
   title: string;
   email: string;
@@ -116,7 +116,7 @@ export interface LanguageI18n {
 
 export interface PortfolioData {
   profiles: {
-    [key: string]: Profile;
+    [key: string]: AppData;
   };
   languages: {
     [key: string]: LanguageI18n;
@@ -127,3 +127,22 @@ export type ProfileType = 'developer' | 'photographer' | 'teacher' | 'student';
 export type TemplateType = 'modern' | 'classic' | 'minimal';
 export type LanguageType = 'en' | 'es' | 'fr';
 export type ThemeType = 'light' | 'dark';
+
+export const languages: { code: LanguageType; name: string }[] = [
+  { code: 'en', name: 'English' },
+  { code: 'es', name: 'Español' },
+  { code: 'fr', name: 'Français' },
+];
+
+export const profiles: { code: ProfileType; name: string }[] = [
+  { code: 'developer', name: 'Developer' },
+  { code: 'photographer', name: 'Photographer' },
+  { code: 'teacher', name: 'Teacher' },
+  { code: 'student', name: 'Student' },
+];
+
+export const templates: { value: TemplateType; label: string; description: string }[] = [
+  { value: 'modern', label: 'Modern', description: 'Gradient & bold design' },
+  { value: 'classic', label: 'Classic', description: 'Traditional & elegant' },
+  { value: 'minimal', label: 'Minimal', description: 'Clean & simple' },
+];

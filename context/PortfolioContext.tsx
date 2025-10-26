@@ -3,10 +3,10 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import portfolioData from '@/data/portfolio.json';
 import languageData from '@/data/i18n.json';
-import { Profile, LanguageI18n, ProfileType, TemplateType, LanguageType, ThemeType } from '@/types/portfolio';
+import {AppData, LanguageI18n, ProfileType, TemplateType, LanguageType, ThemeType } from '@/types/portfolio';
 
 interface PortfolioContextType {
-  profile: Profile;
+  appData: AppData;
   profileType: ProfileType;
   setProfileType: (type: ProfileType) => void;
   template: TemplateType;
@@ -64,13 +64,13 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     document.documentElement.classList.toggle('dark', theme === 'dark');
   }, [theme]);
 
-  const profile = portfolioData.profiles[profileType] as Profile;
+  const appData = portfolioData.profiles[profileType] as AppData;
   const langI18n = languageData[languageType] as LanguageI18n;
 
   return (
     <PortfolioContext.Provider
       value={{
-        profile,
+        appData,
         profileType,
         setProfileType,
         template,

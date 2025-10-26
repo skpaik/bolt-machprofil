@@ -9,7 +9,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Facebook } f
 import Link from 'next/link';
 
 export default function Home() {
-  const { profile, langI18n } = usePortfolio();
+  const { appData, langI18n } = usePortfolio();
 
   const getSocialIcon = (platform: string) => {
     const icons: { [key: string]: React.ReactNode } = {
@@ -28,35 +28,35 @@ export default function Home() {
         <div className="space-y-6">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-              {profile.name}
+              {appData.name}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-              {profile.title}
+              {appData.title}
             </p>
             <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-              {profile.bio}
+              {appData.bio}
             </p>
           </div>
 
           <div className="space-y-3">
             <div className="flex items-center gap-3 text-muted-foreground">
               <Mail size={18} />
-              <a href={`mailto:${profile.email}`} className="hover:text-foreground transition-colors">
-                {profile.email}
+              <a href={`mailto:${appData.email}`} className="hover:text-foreground transition-colors">
+                {appData.email}
               </a>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Phone size={18} />
-              <span>{profile.phone}</span>
+              <span>{appData.phone}</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <MapPin size={18} />
-              <span>{profile.location}</span>
+              <span>{appData.location}</span>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-3">
-            {Object.entries(profile.social).map(([platform, url]) => (
+            {Object.entries(appData.social).map(([platform, url]) => (
               <Button key={platform} variant="outline" size="icon" asChild>
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   {getSocialIcon(platform)}
@@ -79,18 +79,18 @@ export default function Home() {
           <Card className="p-8 w-full max-w-md">
             <div className="flex flex-col items-center space-y-6">
               <Avatar className="w-64 h-64">
-                <AvatarImage src={profile.avatar} alt={profile.name} />
+                <AvatarImage src={appData.avatar} alt={appData.name} />
                 <AvatarFallback className="text-4xl">
-                  {profile.name.split(' ').map(n => n[0]).join('')}
+                  {appData.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
 
               <div className="text-center space-y-2">
-                <h3 className="text-2xl font-semibold">{profile.name}</h3>
-                <p className="text-muted-foreground">{profile.title}</p>
+                <h3 className="text-2xl font-semibold">{appData.name}</h3>
+                <p className="text-muted-foreground">{appData.title}</p>
                 <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
                   <MapPin size={14} />
-                  {profile.location}
+                  {appData.location}
                 </p>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function Home() {
       </div>
 
       <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {profile.projects.slice(0, 4).map((project, index) => (
+        {appData.projects.slice(0, 4).map((project, index) => (
           <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
             <div className="aspect-video overflow-hidden">
               <img
