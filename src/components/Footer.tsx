@@ -14,6 +14,7 @@ import { LanguageType, TemplateType, ProfileType } from '@/types/portfolio';
 import TemplateSwitcher from "@/components/TemplateSwitcher";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ProfileSwitcher from "@/components/ProfileSwitcher";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Footer() {
   const {
@@ -35,20 +36,9 @@ export default function Footer() {
 
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
-
             <TemplateSwitcher />
-
             <ProfileSwitcher/>
-
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className="gap-2"
-            >
-              {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
-              <span className="hidden sm:inline">{langI18n.theme}</span>
-            </Button>
+            <ThemeSwitcher/>
           </div>
         </div>
       </div>

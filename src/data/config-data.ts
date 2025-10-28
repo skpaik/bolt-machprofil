@@ -1,7 +1,13 @@
 import {LanguageItem, PrimaryMenuItem, ProfileItem, TemplateItem} from "@/types/portfolio";
-import {Briefcase, Calendar, FileText, Home} from "lucide-react";
+import {Briefcase, Calendar, FileText, Home, Monitor, Moon, Sun} from "lucide-react";
 
 export class ConfigData {
+    static themes = [
+        { value: 'light', label: 'Light', icon: Sun },
+        { value: 'dark', label: 'Dark', icon: Moon },
+        { value: 'system', label: 'System', icon: Monitor },
+    ];
+
     static templates: TemplateItem[] = [
         {value: 'modern', label: 'Modern', description: 'Gradient & bold design'},
         {value: 'classic', label: 'Classic', description: 'Traditional & elegant'},

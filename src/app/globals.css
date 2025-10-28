@@ -64,6 +64,12 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
+  nav, header {
+    background-color: hsl(var(--background));
+  }
+  [role="menu"], [data-radix-popper-content-wrapper] {
+    background-color: hsl(var(--popover));
+  }
 }
 
 /* Template-specific styles */

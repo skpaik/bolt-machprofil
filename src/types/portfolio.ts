@@ -158,4 +158,4 @@ export interface PortfolioData {
 export type ProfileType = 'developer' | 'photographer' | 'teacher' | 'student';
 export type TemplateType = 'modern' | 'classic' | 'minimal';
 export type LanguageType = 'en' | 'es' | 'fr';
-export type ThemeType = 'light' | 'dark';
+export type ThemeType = 'light' | 'dark' | 'system';
