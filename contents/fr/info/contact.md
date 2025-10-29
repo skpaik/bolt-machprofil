@@ -1,6 +1,6 @@
 ---
 title: "Contacts for language: fr"
-contact_list:
+contacts:
   - type: "Email"
     value: "alex@example.com"
     label: "Work"

@@ -1,6 +1,6 @@
 ---
 title: "Languages for language: de"
-language_list:
+languages:
   - name: "English"
     read: "Fluent"
     write: "Fluent"

@@ -1,6 +1,6 @@
 ---
 title: "References for language: de"
-reference_list:
+references:
   - name: "Dr. Laura Schmidt"
     position: "Engineering Manager"
     organization: "TechCorp GmbH"

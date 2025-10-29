@@ -1,6 +1,6 @@
 ---
 title: "Skills for language: en"
-skill_list:
+skills:
   - category: "Programming"
     items:
       - "Python"

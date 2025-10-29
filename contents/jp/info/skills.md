@@ -1,6 +1,6 @@
 ---
 title: "Skills for language: jp"
-skill_list:
+skills:
   - category: "Programming"
     items:
       - "Python"
