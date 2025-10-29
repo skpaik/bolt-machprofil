@@ -26,6 +26,7 @@ export interface BlogPost {
     published_at: string;
     tags: string[];
     read_time: number;
+    category: string;
 }
 
 export interface SocialLinks {

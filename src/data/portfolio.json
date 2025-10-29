@@ -23,6 +23,7 @@
           "cover_image": "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 2",
           "published_at": "2024-10-15T10:00:00Z",
           "tags": ["React", "TypeScript", "Web Development"],
           "read_time": 5
@@ -36,6 +37,7 @@
           "cover_image": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 1",
           "published_at": "2024-10-10T14:30:00Z",
           "tags": ["Node.js", "API", "Backend"],
           "read_time": 8
@@ -49,6 +51,7 @@
           "cover_image": "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 3",
           "published_at": "2024-10-05T09:15:00Z",
           "tags": ["CSS", "Frontend", "Design"],
           "read_time": 6
@@ -62,6 +65,7 @@
           "cover_image": "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 4",
           "published_at": "2024-09-28T11:00:00Z",
           "tags": ["Database", "SQL", "Backend"],
           "read_time": 7
@@ -75,6 +79,7 @@
           "cover_image": "https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 3",
           "published_at": "2024-09-20T16:45:00Z",
           "tags": ["Performance", "Web Development", "Optimization"],
           "read_time": 6
@@ -88,6 +93,7 @@
           "cover_image": "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 5",
           "published_at": "2024-09-15T13:20:00Z",
           "tags": ["Git", "Version Control", "Development"],
           "read_time": 5
@@ -101,6 +107,7 @@
           "cover_image": "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 4",
           "published_at": "2024-09-08T10:30:00Z",
           "tags": ["Docker", "DevOps", "Containers"],
           "read_time": 9
@@ -114,6 +121,7 @@
           "cover_image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600",
           "author": "Alex Johnson",
           "published": true,
+          "category": "Cat 5",
           "published_at": "2024-09-01T15:00:00Z",
           "tags": ["Testing", "React", "Quality Assurance"],
           "read_time": 10
