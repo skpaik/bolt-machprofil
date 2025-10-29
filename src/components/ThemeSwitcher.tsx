@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { usePortfolio } from '@/context/PortfolioContext';
+import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Button } from '@/components/ui/button';
 import {
     DropdownMenu,
@@ -10,7 +10,7 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {ConfigData} from "@/data/config-data";
-import {ThemeType} from "@/types/portfolio";
+import {ThemeType} from "@/lib/types/portfolio";
 
 
 export default function ThemeSwitcher() {

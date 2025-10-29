@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { usePortfolio } from '@/context/PortfolioContext';
+import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';

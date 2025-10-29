@@ -1,4 +1,4 @@
-import {LanguageItem, PrimaryMenuItem, ProfileItem, TemplateItem} from "@/types/portfolio";
+import {LanguageItem, PrimaryMenuItem, ProfileItem, TemplateItem} from "@/lib/types/portfolio";
 import {Briefcase, Calendar, FileText, Home, Monitor, Moon, Sun} from "lucide-react";
 
 export class ConfigData {

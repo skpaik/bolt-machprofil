@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from 'react';
-import { usePortfolio } from '@/context/PortfolioContext';
+import { usePortfolio } from '@/components/context/PortfolioContext';
 import ModernTemplate from '@/templates/ModernTemplate';
 import ClassicTemplate from '@/templates/ClassicTemplate';
 import MinimalTemplate from '@/templates/MinimalTemplate';

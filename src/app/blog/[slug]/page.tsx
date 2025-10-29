@@ -7,8 +7,8 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
 import Link from 'next/link';
-import {BlogPost} from "@/types/portfolio";
-import {usePortfolio} from "@/context/PortfolioContext";
+import {BlogPost} from "@/lib/types/portfolio";
+import {usePortfolio} from "@/components/context/PortfolioContext";
 
 export default function BlogDetailPage() {
   const params = useParams();

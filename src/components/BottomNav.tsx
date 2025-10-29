@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { usePortfolio } from '@/context/PortfolioContext';
+import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Home, Briefcase, Calendar, FileText, MoreHorizontal } from 'lucide-react';
 import {
   DropdownMenu,

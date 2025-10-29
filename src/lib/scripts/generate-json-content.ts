@@ -60,8 +60,8 @@ interface ValidationResult {
 }
 
 const CONTENTS_DIR = path.join(process.cwd(), "contents");
-const OUTPUT_DIR = path.join(process.cwd(), "data");
-const OUTPUT_FILE = path.join(OUTPUT_DIR, "content.json");
+const OUTPUT_DIR = path.join(process.cwd(), "src/data");
+const OUTPUT_FILE = path.join(OUTPUT_DIR, "contents.json");
 
 // Sections that use named files (bio.md, contact.md, etc.)
 const NAMED_SECTIONS = ["info"];

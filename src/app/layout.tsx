@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from "next/font/google";
-import { PortfolioProvider } from '@/context/PortfolioContext';
+import { PortfolioProvider } from '@/components/context/PortfolioContext';
 import TemplateWrapper from '@/components/TemplateWrapper';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

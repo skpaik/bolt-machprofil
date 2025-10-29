@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "create:sample": "tsx scripts/generate-md-content.ts",
-    "create:json": "tsx scripts/generate-json-content.ts",
+    "create:sample": "tsx src/lib/scripts/generate-md-content.ts",
+    "create:json": "tsx src/lib/scripts/generate-json-content.ts",
     "export": "next build && next export -o docs",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown ."

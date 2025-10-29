@@ -12,7 +12,7 @@ import {
     SettingSchema,
     TemplateType,
     ThemeType,
-} from "@/types/portfolio";
+} from "@/lib/types/portfolio";
 
 interface PortfolioContextType {
     appData: AppData;

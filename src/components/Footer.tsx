@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { usePortfolio } from '@/context/PortfolioContext';
+import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Globe, Layout, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -10,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { LanguageType, TemplateType, ProfileType } from '@/types/portfolio';
+import { LanguageType, TemplateType, ProfileType } from '@/lib/types/portfolio';
 import TemplateSwitcher from "@/components/TemplateSwitcher";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ProfileSwitcher from "@/components/ProfileSwitcher";

@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import {usePortfolio} from '@/context/PortfolioContext';
+import {usePortfolio} from '@/components/context/PortfolioContext';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from '@/components/ui/dropdown-menu';
 import {Globe} from 'lucide-react';
