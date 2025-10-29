@@ -13,7 +13,7 @@ Switch between different design aesthetics:
 ### Professional Profiles
 Pre-configured profiles for different professions:
 - **Developer**: Tech stack, coding projects, technical skills
-- **Photographer**: Portfolio gallery, creative work, equipment
+- **Photographer**: Portfolio photos, creative work, equipment
 - **Teacher**: Curriculum, teaching experience, educational projects
 
 ### Additional Features

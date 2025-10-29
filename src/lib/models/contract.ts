@@ -143,7 +143,7 @@ export interface BlogSchema {
   category?: string;
 }
 
-export interface GallerySchema {
+export interface PhotoSchema {
   title: string;
   image: string;
   category: string;

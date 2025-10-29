@@ -8,7 +8,7 @@ import { X } from 'lucide-react';
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const gallery = [
+  const photos = [
     {
       id: 1,
       title: 'Team Collaboration',
@@ -59,7 +59,7 @@ export default function GalleryPage() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {gallery.map((item) => (
+        {photos.map((item) => (
           <Card
             key={item.id}
             className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow"

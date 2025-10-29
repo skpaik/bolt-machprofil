@@ -1,26 +1,26 @@
 {
   "config": {},
   "de": {
-    "blog_list": [
+    "blogs": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Blog Post 1 (DE)",
-        "date": "2024-02-27",
-        "author": "Alex Johnson",
+        "date": "2024-11-28",
+        "author": "John Doe",
         "excerpt": "A short summary for blog post 1 in DE.",
         "tags": [
           "tech",
-          "javascript"
+          "typescript"
         ],
         "image": "/images/blog-1.jpg",
         "featured": false,
-        "readTime": 3,
-        "category": "Tutorial",
-        "content": "🇩🇪 (DE) Node.js Cloud Next.js TypeScript Next.js Architecture Cloud Node.js Node.js Next.js.\n\n🇩🇪 (DE) Architecture Cloud Architecture Architecture Architecture React Cloud JavaScript React Next.js.\n\n🇩🇪 (DE) Node.js JavaScript Next.js TypeScript Next.js Node.js Architecture Cloud Next.js Node.js.\n\n🇩🇪 (DE) Cloud Node.js Node.js Next.js JavaScript Node.js Cloud React JavaScript Cloud.\n\n🇩🇪 (DE) Architecture TypeScript TypeScript Cloud TypeScript JavaScript JavaScript Next.js React TypeScript."
+        "readTime": 6,
+        "category": "Guide",
+        "content": "🇩🇪 (DE) React React React Next.js Cloud Cloud React Node.js JavaScript TypeScript.\n\n🇩🇪 (DE) TypeScript React Cloud Cloud React Cloud React Cloud Cloud JavaScript.\n\n🇩🇪 (DE) Architecture Next.js Architecture TypeScript Architecture TypeScript TypeScript React Architecture Next.js.\n\n🇩🇪 (DE) React JavaScript Node.js TypeScript React Architecture TypeScript TypeScript TypeScript React.\n\n🇩🇪 (DE) Architecture Next.js TypeScript React JavaScript Architecture TypeScript Cloud TypeScript TypeScript."
       }
     ],
-    "certificate_list": [
+    "certificates": [
       {
         "slug": "1",
         "order": 1,
@@ -42,24 +42,24 @@
         "content": "NA"
       }
     ],
-    "education_list": [
+    "educations": [
       {
         "slug": "1",
         "order": 1,
         "title": "Education 1 (DE)",
         "institution": "RWTH Aachen",
-        "location": "Berlin, Germany",
+        "location": "Munich, Germany",
         "startDate": "2016-10-01",
         "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Data Science.",
+        "description": "Completed a degree in Computer Science with focus on Artificial Intelligence.",
         "logo": "/images/education-1.png",
-        "degree": "Bachelor's",
+        "degree": "Master's",
         "grade": "1.3",
         "featured": true,
-        "content": "🇩🇪 (DE) TypeScript React React TypeScript JavaScript Next.js Architecture Next.js React JavaScript.\n\n🇩🇪 (DE) JavaScript Next.js JavaScript Node.js Architecture Architecture Node.js JavaScript Node.js Next.js.\n\n🇩🇪 (DE) React Node.js Next.js Next.js Next.js Node.js Cloud TypeScript React TypeScript."
+        "content": "🇩🇪 (DE) React TypeScript Node.js Node.js TypeScript React Cloud Architecture Architecture Architecture.\n\n🇩🇪 (DE) JavaScript Next.js JavaScript JavaScript Next.js React Next.js Next.js Node.js TypeScript.\n\n🇩🇪 (DE) Architecture Cloud Architecture JavaScript Node.js JavaScript Next.js Architecture JavaScript Node.js."
       }
     ],
-    "experience_list": [
+    "experiences": [
       {
         "slug": "1",
         "order": 1,
@@ -81,24 +81,7 @@
           "Responsibility 3 for experience 1"
         ],
         "logo": "/images/organization-logo-1.png",
-        "content": "🇩🇪 (DE) Architecture Node.js Next.js JavaScript Cloud Next.js JavaScript Cloud Architecture Next.js.\n\n🇩🇪 (DE) TypeScript Node.js Next.js React React JavaScript Architecture Next.js Next.js Cloud.\n\n🇩🇪 (DE) React Cloud Cloud Architecture TypeScript Cloud Cloud Architecture Architecture TypeScript."
-      }
-    ],
-    "gallery_list": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (DE)",
-        "image": "/images/gallery-1.jpg",
-        "category": "Opinion",
-        "description": "Project 1 overview in DE.",
-        "date": "2020-01-01",
-        "tags": [
-          "javascript",
-          "react"
-        ],
-        "featured": false,
-        "content": "🇩🇪 (DE) Cloud JavaScript Architecture TypeScript Architecture Node.js JavaScript Architecture TypeScript JavaScript.\n\n🇩🇪 (DE) Next.js Cloud Next.js TypeScript TypeScript TypeScript Node.js TypeScript Next.js Architecture.\n\n🇩🇪 (DE) Next.js React React Next.js React React TypeScript Cloud Next.js React."
+        "content": "🇩🇪 (DE) Cloud Cloud Next.js Architecture Cloud Node.js TypeScript JavaScript Next.js Next.js.\n\n🇩🇪 (DE) TypeScript TypeScript JavaScript Cloud JavaScript Next.js Cloud Node.js Architecture Next.js.\n\n🇩🇪 (DE) React Cloud Next.js JavaScript TypeScript Node.js Architecture JavaScript JavaScript TypeScript."
       }
     ],
     "info": {
@@ -120,7 +103,7 @@
           "slug": "contact",
           "order": 0,
           "title": "Contacts for language: de",
-          "contact_list": [
+          "contacts": [
             {
               "type": "Email",
               "value": "alex@example.com",
@@ -165,7 +148,7 @@
           "slug": "languages",
           "order": 0,
           "title": "Languages for language: de",
-          "language_list": [
+          "languages": [
             {
               "name": "English",
               "read": "Fluent",
@@ -207,7 +190,7 @@
           "slug": "reference",
           "order": 0,
           "title": "References for language: de",
-          "reference_list": [
+          "references": [
             {
               "name": "Dr. Laura Schmidt",
               "position": "Engineering Manager",
@@ -232,7 +215,7 @@
           "slug": "skills",
           "order": 0,
           "title": "Skills for language: de",
-          "skill_list": [
+          "skills": [
             {
               "category": "Programming",
               "items": [
@@ -303,26 +286,43 @@
         }
       ]
     },
-    "project_list": [
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (DE)",
+        "image": "/images/photo-1.jpg",
+        "category": "Guide",
+        "description": "Project 1 overview in DE.",
+        "date": "2020-01-01",
+        "tags": [
+          "tech",
+          "javascript"
+        ],
+        "featured": false,
+        "content": "🇩🇪 (DE) Architecture Cloud TypeScript JavaScript Cloud Cloud Next.js Architecture React TypeScript.\n\n🇩🇪 (DE) Node.js React React Next.js JavaScript Cloud Next.js Cloud React Next.js.\n\n🇩🇪 (DE) Architecture Cloud React Cloud JavaScript React Next.js Cloud Cloud Next.js."
+      }
+    ],
+    "projects": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Project 1 (DE)",
         "description": "Project 1 overview in DE.",
         "technologies": [
-          "React",
-          "Node.js"
+          "TypeScript",
+          "React"
         ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
-        "date": "2024-02-22",
+        "date": "2024-08-25",
         "image": "/images/project-1.jpg",
-        "status": "in-progress",
+        "status": "planned",
         "featured": false,
-        "content": "🇩🇪 (DE) TypeScript TypeScript JavaScript JavaScript TypeScript Cloud Architecture Cloud Node.js React.\n\n🇩🇪 (DE) Architecture Architecture Cloud Architecture TypeScript TypeScript TypeScript React Node.js Node.js.\n\n🇩🇪 (DE) TypeScript Cloud JavaScript TypeScript Next.js Next.js Architecture React Next.js Node.js.\n\n🇩🇪 (DE) TypeScript Architecture Node.js React Next.js Next.js Cloud Next.js Node.js JavaScript."
+        "content": "🇩🇪 (DE) Architecture Node.js Architecture Architecture TypeScript TypeScript JavaScript React TypeScript JavaScript.\n\n🇩🇪 (DE) TypeScript TypeScript TypeScript TypeScript JavaScript Architecture React Cloud TypeScript Cloud.\n\n🇩🇪 (DE) Cloud React Node.js Node.js Architecture JavaScript Architecture Node.js Node.js Architecture.\n\n🇩🇪 (DE) React Cloud Architecture Next.js Cloud Next.js JavaScript JavaScript TypeScript Architecture."
       }
     ],
-    "publication_list": [
+    "publications": [
       {
         "slug": "1",
         "order": 1,
@@ -349,26 +349,26 @@
     ]
   },
   "en": {
-    "blog_list": [
+    "blogs": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Blog Post 1 (EN)",
-        "date": "2024-06-14",
-        "author": "Alex Johnson",
+        "date": "2024-02-23",
+        "author": "John Doe",
         "excerpt": "A short summary for blog post 1 in EN.",
         "tags": [
           "tech",
           "javascript"
         ],
         "image": "/images/blog-1.jpg",
-        "featured": true,
-        "readTime": 10,
-        "category": "Opinion",
-        "content": "Node.js Node.js TypeScript React Node.js Cloud JavaScript JavaScript React React.\n\nArchitecture Architecture Next.js JavaScript Node.js TypeScript Architecture Cloud Cloud JavaScript.\n\nReact TypeScript React React JavaScript TypeScript Cloud TypeScript React JavaScript.\n\nNext.js Architecture Next.js Cloud TypeScript Architecture Node.js Architecture TypeScript Node.js.\n\nArchitecture TypeScript Cloud Cloud React Next.js Node.js JavaScript TypeScript Node.js."
+        "featured": false,
+        "readTime": 3,
+        "category": "Guide",
+        "content": "Architecture TypeScript Node.js Next.js Next.js Cloud Cloud React TypeScript Architecture.\n\nReact Node.js Cloud Architecture Next.js Next.js JavaScript Node.js Next.js Next.js.\n\nArchitecture Node.js React Architecture Next.js Node.js TypeScript React Node.js Next.js.\n\nJavaScript React Next.js Cloud Next.js React Node.js Cloud TypeScript Cloud.\n\nArchitecture Cloud React Architecture Architecture Architecture React JavaScript React Node.js."
       }
     ],
-    "certificate_list": [
+    "certificates": [
       {
         "slug": "1",
         "order": 1,
@@ -390,24 +390,24 @@
         "content": "NA"
       }
     ],
-    "education_list": [
+    "educations": [
       {
         "slug": "1",
         "order": 1,
         "title": "Education 1 (EN)",
-        "institution": "Technical University Berlin",
+        "institution": "Humboldt University",
         "location": "Hamburg, Germany",
         "startDate": "2016-10-01",
         "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Data Science.",
+        "description": "Completed a degree in Computer Science with focus on Software Engineering.",
         "logo": "/images/education-1.png",
-        "degree": "PhD",
-        "grade": "1.3",
+        "degree": "Bachelor's",
+        "grade": "1.7",
         "featured": false,
-        "content": "JavaScript Architecture Next.js Cloud React Next.js Next.js JavaScript Architecture React.\n\nCloud JavaScript Architecture TypeScript Node.js React React TypeScript Cloud TypeScript.\n\nArchitecture JavaScript Next.js JavaScript Node.js Next.js Cloud Next.js JavaScript Cloud."
+        "content": "JavaScript Architecture JavaScript Next.js React JavaScript Architecture Next.js TypeScript Architecture.\n\nTypeScript JavaScript React Architecture Next.js JavaScript TypeScript JavaScript Architecture React.\n\nArchitecture Cloud Architecture React Cloud Node.js Node.js TypeScript Next.js Cloud."
       }
     ],
-    "experience_list": [
+    "experiences": [
       {
         "slug": "1",
         "order": 1,
@@ -429,24 +429,7 @@
           "Responsibility 3 for experience 1"
         ],
         "logo": "/images/organization-logo-1.png",
-        "content": "Node.js Next.js Architecture JavaScript Node.js Node.js Cloud Cloud Node.js Architecture.\n\nArchitecture Architecture Architecture Architecture TypeScript React JavaScript React Node.js Next.js.\n\nArchitecture React Next.js Next.js TypeScript Architecture Architecture JavaScript Node.js TypeScript."
-      }
-    ],
-    "gallery_list": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (EN)",
-        "image": "/images/gallery-1.jpg",
-        "category": "Tutorial",
-        "description": "Project 1 overview in EN.",
-        "date": "2020-01-01",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
-        "featured": false,
-        "content": "JavaScript Cloud Next.js JavaScript Architecture Architecture Next.js React React TypeScript.\n\nArchitecture TypeScript Cloud Architecture JavaScript Cloud Architecture TypeScript JavaScript TypeScript.\n\nArchitecture Cloud Node.js JavaScript Node.js Node.js Node.js Node.js JavaScript React."
+        "content": "Cloud Cloud Node.js Node.js React Cloud React Cloud Architecture JavaScript.\n\nNext.js TypeScript JavaScript Next.js Cloud JavaScript Architecture React JavaScript React.\n\nArchitecture JavaScript Node.js Next.js Architecture Node.js Cloud Cloud Cloud Cloud."
       }
     ],
     "info": {
@@ -468,7 +451,7 @@
           "slug": "contact",
           "order": 0,
           "title": "Contacts for language: en",
-          "contact_list": [
+          "contacts": [
             {
               "type": "Email",
               "value": "alex@example.com",
@@ -513,7 +496,7 @@
           "slug": "languages",
           "order": 0,
           "title": "Languages for language: en",
-          "language_list": [
+          "languages": [
             {
               "name": "English",
               "read": "Fluent",
@@ -555,7 +538,7 @@
           "slug": "reference",
           "order": 0,
           "title": "References for language: en",
-          "reference_list": [
+          "references": [
             {
               "name": "Dr. Laura Schmidt",
               "position": "Engineering Manager",
@@ -580,7 +563,7 @@
           "slug": "skills",
           "order": 0,
           "title": "Skills for language: en",
-          "skill_list": [
+          "skills": [
             {
               "category": "Programming",
               "items": [
@@ -651,26 +634,43 @@
         }
       ]
     },
-    "project_list": [
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (EN)",
+        "image": "/images/photo-1.jpg",
+        "category": "Guide",
+        "description": "Project 1 overview in EN.",
+        "date": "2020-01-01",
+        "tags": [
+          "react",
+          "javascript"
+        ],
+        "featured": true,
+        "content": "Cloud TypeScript Node.js Cloud Cloud JavaScript Next.js TypeScript TypeScript Node.js.\n\nArchitecture Next.js Architecture React Node.js Node.js Architecture TypeScript React Node.js.\n\nNode.js Next.js TypeScript JavaScript React Architecture JavaScript Next.js Node.js JavaScript."
+      }
+    ],
+    "projects": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Project 1 (EN)",
         "description": "Project 1 overview in EN.",
         "technologies": [
-          "React",
-          "Node.js"
+          "Node.js",
+          "Next.js"
         ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
-        "date": "2024-08-07",
+        "date": "2024-01-09",
         "image": "/images/project-1.jpg",
-        "status": "planned",
-        "featured": true,
-        "content": "Node.js Next.js React Cloud Next.js JavaScript React Cloud Cloud Node.js.\n\nNext.js React Architecture Architecture TypeScript Next.js JavaScript Next.js Architecture Architecture.\n\nArchitecture Node.js Architecture Cloud Node.js Next.js Architecture React TypeScript Node.js.\n\nTypeScript Next.js Cloud JavaScript Node.js Next.js Node.js Architecture Cloud Cloud."
+        "status": "in-progress",
+        "featured": false,
+        "content": "JavaScript React Node.js TypeScript TypeScript Node.js TypeScript React Next.js React.\n\nJavaScript TypeScript Next.js Architecture Node.js Node.js Node.js Cloud Architecture Architecture.\n\nCloud Architecture Node.js Architecture React TypeScript Architecture Node.js Cloud Architecture.\n\nNext.js TypeScript Node.js React JavaScript Next.js React Next.js React TypeScript."
       }
     ],
-    "publication_list": [
+    "publications": [
       {
         "slug": "1",
         "order": 1,
@@ -697,26 +697,26 @@
     ]
   },
   "es": {
-    "blog_list": [
+    "blogs": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Blog Post 1 (ES)",
-        "date": "2024-09-21",
-        "author": "John Doe",
+        "date": "2024-01-23",
+        "author": "Jane Smith",
         "excerpt": "A short summary for blog post 1 in ES.",
         "tags": [
           "tech",
-          "typescript"
+          "react"
         ],
         "image": "/images/blog-1.jpg",
-        "featured": false,
-        "readTime": 6,
+        "featured": true,
+        "readTime": 4,
         "category": "Tutorial",
-        "content": "Cloud Next.js TypeScript Next.js Node.js React Architecture Cloud JavaScript TypeScript.\n\nNext.js Node.js React Node.js Cloud JavaScript Next.js Cloud React Node.js.\n\nTypeScript Node.js Cloud Node.js TypeScript React React JavaScript JavaScript Next.js.\n\nNode.js TypeScript JavaScript Architecture Architecture Cloud Architecture Next.js TypeScript React.\n\nReact Cloud Next.js TypeScript Node.js TypeScript JavaScript Cloud Cloud Cloud."
+        "content": "TypeScript TypeScript React Cloud Node.js TypeScript JavaScript Cloud React TypeScript.\n\nNode.js JavaScript TypeScript Next.js Architecture JavaScript React React React Next.js.\n\nReact JavaScript Cloud Node.js Cloud JavaScript Architecture React TypeScript Next.js.\n\nJavaScript Next.js JavaScript Architecture Cloud Node.js Next.js Node.js TypeScript React.\n\nNext.js Next.js TypeScript React React Next.js Node.js Next.js JavaScript Architecture."
       }
     ],
-    "certificate_list": [
+    "certificates": [
       {
         "slug": "1",
         "order": 1,
@@ -738,24 +738,24 @@
         "content": "NA"
       }
     ],
-    "education_list": [
+    "educations": [
       {
         "slug": "1",
         "order": 1,
         "title": "Education 1 (ES)",
         "institution": "University of Hamburg",
-        "location": "Hamburg, Germany",
+        "location": "Munich, Germany",
         "startDate": "2016-10-01",
         "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Artificial Intelligence.",
+        "description": "Completed a degree in Computer Science with focus on Cloud Computing.",
         "logo": "/images/education-1.png",
         "degree": "Master's",
-        "grade": "2.3",
-        "featured": false,
-        "content": "Architecture JavaScript Architecture TypeScript Architecture Architecture JavaScript Cloud Next.js JavaScript.\n\nArchitecture Node.js Architecture Node.js Cloud TypeScript Cloud Next.js Architecture Architecture.\n\nNext.js Node.js Next.js Architecture JavaScript Next.js React React React React."
+        "grade": "2.0",
+        "featured": true,
+        "content": "Node.js Cloud Next.js JavaScript JavaScript JavaScript TypeScript React Cloud JavaScript.\n\nReact Next.js React Cloud TypeScript TypeScript Next.js Node.js Cloud Next.js.\n\nJavaScript TypeScript JavaScript Architecture Cloud TypeScript Next.js Next.js React React."
       }
     ],
-    "experience_list": [
+    "experiences": [
       {
         "slug": "1",
         "order": 1,
@@ -777,24 +777,7 @@
           "Responsibility 3 for experience 1"
         ],
         "logo": "/images/organization-logo-1.png",
-        "content": "Next.js JavaScript React Architecture JavaScript Next.js Architecture Node.js JavaScript Architecture.\n\nNext.js Node.js TypeScript Next.js Architecture React JavaScript JavaScript JavaScript TypeScript.\n\nNext.js JavaScript Next.js TypeScript TypeScript Next.js Node.js JavaScript Architecture Next.js."
-      }
-    ],
-    "gallery_list": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (ES)",
-        "image": "/images/gallery-1.jpg",
-        "category": "Guide",
-        "description": "Project 1 overview in ES.",
-        "date": "2020-01-01",
-        "tags": [
-          "react",
-          "typescript"
-        ],
-        "featured": false,
-        "content": "JavaScript TypeScript Cloud Node.js Node.js Node.js React JavaScript Cloud JavaScript.\n\nTypeScript Node.js TypeScript React Next.js Node.js Cloud Cloud JavaScript React.\n\nNext.js Cloud Cloud Next.js Architecture Cloud Architecture JavaScript Architecture Cloud."
+        "content": "Architecture Architecture JavaScript TypeScript React Next.js Next.js React Architecture React.\n\nArchitecture Architecture React Cloud TypeScript Architecture React React Cloud JavaScript.\n\nCloud JavaScript Architecture React React Node.js TypeScript Architecture Next.js Next.js."
       }
     ],
     "info": {
@@ -816,7 +799,7 @@
           "slug": "contact",
           "order": 0,
           "title": "Contacts for language: es",
-          "contact_list": [
+          "contacts": [
             {
               "type": "Email",
               "value": "alex@example.com",
@@ -861,7 +844,7 @@
           "slug": "languages",
           "order": 0,
           "title": "Languages for language: es",
-          "language_list": [
+          "languages": [
             {
               "name": "English",
               "read": "Fluent",
@@ -903,7 +886,7 @@
           "slug": "reference",
           "order": 0,
           "title": "References for language: es",
-          "reference_list": [
+          "references": [
             {
               "name": "Dr. Laura Schmidt",
               "position": "Engineering Manager",
@@ -928,7 +911,7 @@
           "slug": "skills",
           "order": 0,
           "title": "Skills for language: es",
-          "skill_list": [
+          "skills": [
             {
               "category": "Programming",
               "items": [
@@ -999,26 +982,43 @@
         }
       ]
     },
-    "project_list": [
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (ES)",
+        "image": "/images/photo-1.jpg",
+        "category": "Tutorial",
+        "description": "Project 1 overview in ES.",
+        "date": "2020-01-01",
+        "tags": [
+          "typescript",
+          "react"
+        ],
+        "featured": false,
+        "content": "Architecture Architecture Node.js Node.js JavaScript Next.js JavaScript Architecture React Node.js.\n\nJavaScript TypeScript React JavaScript Architecture Architecture JavaScript Cloud TypeScript JavaScript.\n\nArchitecture React Architecture Cloud Cloud TypeScript Architecture Architecture JavaScript Next.js."
+      }
+    ],
+    "projects": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Project 1 (ES)",
         "description": "Project 1 overview in ES.",
         "technologies": [
-          "Node.js",
-          "Next.js"
+          "Next.js",
+          "TypeScript"
         ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
-        "date": "2024-05-05",
+        "date": "2024-09-09",
         "image": "/images/project-1.jpg",
         "status": "in-progress",
-        "featured": true,
-        "content": "React JavaScript Node.js Next.js JavaScript Architecture Next.js Next.js JavaScript TypeScript.\n\nArchitecture React Next.js React React Architecture Next.js Node.js Architecture Architecture.\n\nJavaScript Next.js Cloud TypeScript Node.js React Next.js React Next.js TypeScript.\n\nArchitecture Architecture Node.js Next.js TypeScript Next.js TypeScript React React Next.js."
+        "featured": false,
+        "content": "Next.js React Cloud Cloud Next.js TypeScript Node.js Next.js TypeScript Architecture.\n\nJavaScript Architecture Architecture Next.js Node.js Node.js TypeScript React Node.js React.\n\nArchitecture TypeScript React TypeScript React TypeScript JavaScript Cloud Next.js Cloud.\n\nNode.js Architecture Architecture Next.js Node.js TypeScript Next.js JavaScript React Next.js."
       }
     ],
-    "publication_list": [
+    "publications": [
       {
         "slug": "1",
         "order": 1,
@@ -1045,26 +1045,26 @@
     ]
   },
   "fr": {
-    "blog_list": [
+    "blogs": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Blog Post 1 (FR)",
-        "date": "2024-05-20",
+        "date": "2024-01-01",
         "author": "Jane Smith",
         "excerpt": "A short summary for blog post 1 in FR.",
         "tags": [
-          "typescript",
-          "react"
+          "tech",
+          "javascript"
         ],
         "image": "/images/blog-1.jpg",
         "featured": false,
-        "readTime": 3,
+        "readTime": 11,
         "category": "Opinion",
-        "content": "🇫🇷 (FR) TypeScript Cloud React Cloud Node.js Cloud React Architecture Architecture JavaScript.\n\n🇫🇷 (FR) Cloud Node.js TypeScript Node.js TypeScript Node.js JavaScript Cloud Next.js TypeScript.\n\n🇫🇷 (FR) Next.js Architecture Node.js JavaScript Next.js Node.js Node.js JavaScript Architecture JavaScript.\n\n🇫🇷 (FR) TypeScript Architecture React Next.js Next.js Node.js React React React Cloud.\n\n🇫🇷 (FR) Cloud Node.js JavaScript Next.js Cloud React Cloud Next.js TypeScript JavaScript."
+        "content": "🇫🇷 (FR) Node.js JavaScript Node.js Cloud JavaScript Architecture React JavaScript TypeScript Cloud.\n\n🇫🇷 (FR) JavaScript Next.js TypeScript JavaScript Node.js Cloud JavaScript JavaScript Node.js Node.js.\n\n🇫🇷 (FR) Node.js Next.js React Cloud Next.js React JavaScript Next.js React Node.js.\n\n🇫🇷 (FR) JavaScript TypeScript JavaScript Next.js Node.js React Architecture Cloud TypeScript JavaScript.\n\n🇫🇷 (FR) React Cloud Architecture JavaScript TypeScript React Architecture React JavaScript Next.js."
       }
     ],
-    "certificate_list": [
+    "certificates": [
       {
         "slug": "1",
         "order": 1,
@@ -1086,24 +1086,24 @@
         "content": "NA"
       }
     ],
-    "education_list": [
+    "educations": [
       {
         "slug": "1",
         "order": 1,
         "title": "Education 1 (FR)",
         "institution": "Humboldt University",
-        "location": "Cologne, Germany",
+        "location": "Munich, Germany",
         "startDate": "2016-10-01",
         "endDate": "2018-09-30",
         "description": "Completed a degree in Computer Science with focus on Software Engineering.",
         "logo": "/images/education-1.png",
-        "degree": "Bachelor's",
-        "grade": "2.0",
+        "degree": "PhD",
+        "grade": "1.7",
         "featured": false,
-        "content": "🇫🇷 (FR) Architecture JavaScript Cloud React TypeScript Architecture JavaScript Cloud React Node.js.\n\n🇫🇷 (FR) JavaScript JavaScript Cloud Node.js JavaScript Architecture Cloud JavaScript Architecture Next.js.\n\n🇫🇷 (FR) JavaScript Node.js TypeScript React React Cloud Node.js TypeScript Cloud TypeScript."
+        "content": "🇫🇷 (FR) JavaScript Next.js Cloud Node.js Architecture React React Architecture JavaScript Cloud.\n\n🇫🇷 (FR) Next.js JavaScript TypeScript Node.js Next.js Node.js JavaScript React Architecture JavaScript.\n\n🇫🇷 (FR) Next.js Next.js Architecture Node.js Architecture TypeScript Architecture Node.js Architecture Next.js."
       }
     ],
-    "experience_list": [
+    "experiences": [
       {
         "slug": "1",
         "order": 1,
@@ -1125,24 +1125,7 @@
           "Responsibility 3 for experience 1"
         ],
         "logo": "/images/organization-logo-1.png",
-        "content": "🇫🇷 (FR) JavaScript React Cloud Architecture React TypeScript React JavaScript Next.js React.\n\n🇫🇷 (FR) Next.js Cloud TypeScript TypeScript Next.js JavaScript Next.js Node.js JavaScript JavaScript.\n\n🇫🇷 (FR) Cloud Node.js JavaScript Architecture JavaScript JavaScript JavaScript Next.js React Node.js."
-      }
-    ],
-    "gallery_list": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (FR)",
-        "image": "/images/gallery-1.jpg",
-        "category": "Tutorial",
-        "description": "Project 1 overview in FR.",
-        "date": "2020-01-01",
-        "tags": [
-          "tech",
-          "react"
-        ],
-        "featured": false,
-        "content": "🇫🇷 (FR) TypeScript Node.js JavaScript TypeScript Cloud Node.js JavaScript TypeScript JavaScript Cloud.\n\n🇫🇷 (FR) React JavaScript Architecture TypeScript Cloud Next.js Node.js Next.js Node.js Node.js.\n\n🇫🇷 (FR) JavaScript Node.js Next.js TypeScript Next.js TypeScript Next.js Next.js Cloud Cloud."
+        "content": "🇫🇷 (FR) JavaScript Architecture Cloud Cloud Next.js React Architecture React React Cloud.\n\n🇫🇷 (FR) JavaScript TypeScript Next.js Cloud React Next.js Cloud TypeScript Next.js React.\n\n🇫🇷 (FR) Cloud JavaScript Architecture Architecture Node.js TypeScript TypeScript Cloud Node.js TypeScript."
       }
     ],
     "info": {
@@ -1164,7 +1147,7 @@
           "slug": "contact",
           "order": 0,
           "title": "Contacts for language: fr",
-          "contact_list": [
+          "contacts": [
             {
               "type": "Email",
               "value": "alex@example.com",
@@ -1209,7 +1192,7 @@
           "slug": "languages",
           "order": 0,
           "title": "Languages for language: fr",
-          "language_list": [
+          "languages": [
             {
               "name": "English",
               "read": "Fluent",
@@ -1251,7 +1234,7 @@
           "slug": "reference",
           "order": 0,
           "title": "References for language: fr",
-          "reference_list": [
+          "references": [
             {
               "name": "Dr. Laura Schmidt",
               "position": "Engineering Manager",
@@ -1276,7 +1259,7 @@
           "slug": "skills",
           "order": 0,
           "title": "Skills for language: fr",
-          "skill_list": [
+          "skills": [
             {
               "category": "Programming",
               "items": [
@@ -1347,26 +1330,43 @@
         }
       ]
     },
-    "project_list": [
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (FR)",
+        "image": "/images/photo-1.jpg",
+        "category": "Opinion",
+        "description": "Project 1 overview in FR.",
+        "date": "2020-01-01",
+        "tags": [
+          "tech",
+          "javascript"
+        ],
+        "featured": false,
+        "content": "🇫🇷 (FR) TypeScript Node.js TypeScript TypeScript TypeScript React React JavaScript Node.js Next.js.\n\n🇫🇷 (FR) TypeScript Cloud JavaScript Next.js JavaScript Node.js Cloud Node.js Next.js Architecture.\n\n🇫🇷 (FR) Node.js Node.js React Cloud Next.js Node.js Node.js TypeScript JavaScript JavaScript."
+      }
+    ],
+    "projects": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Project 1 (FR)",
         "description": "Project 1 overview in FR.",
         "technologies": [
-          "TypeScript",
-          "Node.js"
+          "Node.js",
+          "Next.js"
         ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
-        "date": "2024-02-16",
+        "date": "2024-02-27",
         "image": "/images/project-1.jpg",
         "status": "planned",
         "featured": false,
-        "content": "🇫🇷 (FR) Next.js Architecture React JavaScript Next.js React Cloud React Next.js Cloud.\n\n🇫🇷 (FR) TypeScript Next.js React React React Architecture Next.js Cloud JavaScript React.\n\n🇫🇷 (FR) TypeScript React Next.js React Node.js Architecture React React Cloud React.\n\n🇫🇷 (FR) React Architecture Cloud React Node.js TypeScript React Architecture Next.js TypeScript."
+        "content": "🇫🇷 (FR) JavaScript TypeScript React TypeScript JavaScript React Architecture JavaScript Node.js TypeScript.\n\n🇫🇷 (FR) Next.js Node.js Architecture JavaScript Node.js Next.js React Architecture JavaScript Next.js.\n\n🇫🇷 (FR) TypeScript Node.js JavaScript Cloud Node.js Next.js TypeScript Cloud Architecture Cloud.\n\n🇫🇷 (FR) Node.js Node.js Node.js Cloud React JavaScript TypeScript JavaScript Node.js Cloud."
       }
     ],
-    "publication_list": [
+    "publications": [
       {
         "slug": "1",
         "order": 1,
@@ -1393,26 +1393,26 @@
     ]
   },
   "jp": {
-    "blog_list": [
+    "blogs": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Blog Post 1 (JP)",
-        "date": "2024-07-14",
-        "author": "John Doe",
+        "date": "2024-01-11",
+        "author": "Jane Smith",
         "excerpt": "A short summary for blog post 1 in JP.",
         "tags": [
-          "react",
-          "typescript"
+          "tech",
+          "javascript"
         ],
         "image": "/images/blog-1.jpg",
-        "featured": false,
+        "featured": true,
         "readTime": 10,
         "category": "Opinion",
-        "content": "TypeScript Cloud React TypeScript Architecture TypeScript React Architecture TypeScript Cloud.\n\nJavaScript Cloud Node.js Cloud Next.js TypeScript Cloud Cloud Node.js Node.js.\n\nJavaScript Next.js Next.js TypeScript Cloud JavaScript Architecture Cloud TypeScript Next.js.\n\nTypeScript Next.js Cloud TypeScript Cloud TypeScript JavaScript Next.js Architecture Next.js.\n\nNext.js Cloud Next.js Node.js Architecture Next.js Next.js JavaScript JavaScript Cloud."
+        "content": "Node.js Node.js Next.js Cloud React Node.js JavaScript React JavaScript Node.js.\n\nReact Next.js Architecture TypeScript TypeScript Cloud JavaScript React JavaScript Node.js.\n\nJavaScript Node.js React TypeScript Next.js Next.js Node.js JavaScript Architecture JavaScript.\n\nReact Node.js React JavaScript React Node.js JavaScript Next.js JavaScript TypeScript.\n\nNode.js TypeScript TypeScript Node.js Node.js Architecture TypeScript JavaScript Next.js TypeScript."
       }
     ],
-    "certificate_list": [
+    "certificates": [
       {
         "slug": "1",
         "order": 1,
@@ -1434,13 +1434,13 @@
         "content": "NA"
       }
     ],
-    "education_list": [
+    "educations": [
       {
         "slug": "1",
         "order": 1,
         "title": "Education 1 (JP)",
-        "institution": "University of Hamburg",
-        "location": "Cologne, Germany",
+        "institution": "Humboldt University",
+        "location": "Munich, Germany",
         "startDate": "2016-10-01",
         "endDate": "2018-09-30",
         "description": "Completed a degree in Computer Science with focus on Cybersecurity.",
@@ -1448,10 +1448,10 @@
         "degree": "Diploma",
         "grade": "2.3",
         "featured": false,
-        "content": "TypeScript JavaScript JavaScript Node.js Cloud Cloud Next.js TypeScript React Cloud.\n\nArchitecture Cloud Node.js Node.js Architecture Architecture React Node.js Next.js Architecture.\n\nNode.js TypeScript Next.js Next.js Cloud Node.js TypeScript Architecture Architecture Cloud."
+        "content": "Cloud Architecture React Next.js TypeScript JavaScript React React Node.js Node.js.\n\nTypeScript JavaScript React Architecture Node.js Cloud Next.js React JavaScript Next.js.\n\nArchitecture React Next.js Architecture Node.js TypeScript JavaScript Architecture Next.js Next.js."
       }
     ],
-    "experience_list": [
+    "experiences": [
       {
         "slug": "1",
         "order": 1,
@@ -1473,24 +1473,7 @@
           "Responsibility 3 for experience 1"
         ],
         "logo": "/images/organization-logo-1.png",
-        "content": "React Cloud JavaScript TypeScript JavaScript TypeScript Node.js Node.js Node.js Node.js.\n\nNode.js Next.js Next.js React Architecture Next.js React Next.js Architecture Next.js.\n\nCloud JavaScript Architecture Architecture JavaScript Architecture Next.js Architecture Next.js React."
-      }
-    ],
-    "gallery_list": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (JP)",
-        "image": "/images/gallery-1.jpg",
-        "category": "Guide",
-        "description": "Project 1 overview in JP.",
-        "date": "2020-01-01",
-        "tags": [
-          "tech",
-          "react"
-        ],
-        "featured": false,
-        "content": "Cloud Node.js JavaScript TypeScript JavaScript Node.js Next.js Architecture Architecture JavaScript.\n\nNode.js React React Node.js React Cloud Next.js TypeScript JavaScript Architecture.\n\nCloud Cloud Architecture Next.js Cloud Architecture JavaScript Next.js Architecture TypeScript."
+        "content": "Architecture React TypeScript React Node.js TypeScript Next.js JavaScript JavaScript JavaScript.\n\nTypeScript JavaScript Cloud Architecture Architecture TypeScript JavaScript React Cloud TypeScript.\n\nCloud React React Architecture Architecture Architecture JavaScript Next.js Cloud Architecture."
       }
     ],
     "info": {
@@ -1512,7 +1495,7 @@
           "slug": "contact",
           "order": 0,
           "title": "Contacts for language: jp",
-          "contact_list": [
+          "contacts": [
             {
               "type": "Email",
               "value": "alex@example.com",
@@ -1557,7 +1540,7 @@
           "slug": "languages",
           "order": 0,
           "title": "Languages for language: jp",
-          "language_list": [
+          "languages": [
             {
               "name": "English",
               "read": "Fluent",
@@ -1599,7 +1582,7 @@
           "slug": "reference",
           "order": 0,
           "title": "References for language: jp",
-          "reference_list": [
+          "references": [
             {
               "name": "Dr. Laura Schmidt",
               "position": "Engineering Manager",
@@ -1624,7 +1607,7 @@
           "slug": "skills",
           "order": 0,
           "title": "Skills for language: jp",
-          "skill_list": [
+          "skills": [
             {
               "category": "Programming",
               "items": [
@@ -1695,26 +1678,43 @@
         }
       ]
     },
-    "project_list": [
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (JP)",
+        "image": "/images/photo-1.jpg",
+        "category": "Guide",
+        "description": "Project 1 overview in JP.",
+        "date": "2020-01-01",
+        "tags": [
+          "tech",
+          "javascript"
+        ],
+        "featured": false,
+        "content": "React Cloud Node.js Node.js Architecture Next.js Cloud Node.js Next.js Node.js.\n\nNode.js Architecture TypeScript Architecture Architecture Node.js Cloud React React Node.js.\n\nTypeScript Architecture Node.js Node.js JavaScript React Cloud TypeScript Node.js Node.js."
+      }
+    ],
+    "projects": [
       {
         "slug": "1",
         "order": 1,
         "title": "My Project 1 (JP)",
         "description": "Project 1 overview in JP.",
         "technologies": [
-          "Next.js",
+          "TypeScript",
           "Node.js"
         ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
-        "date": "2024-12-26",
+        "date": "2024-07-06",
         "image": "/images/project-1.jpg",
-        "status": "completed",
+        "status": "in-progress",
         "featured": false,
-        "content": "Architecture React Architecture React Next.js Architecture Node.js React Architecture React.\n\nNode.js Next.js React Node.js Node.js JavaScript React Next.js Node.js Cloud.\n\nTypeScript JavaScript TypeScript TypeScript Architecture React Next.js Cloud Architecture JavaScript.\n\nCloud React Cloud Cloud TypeScript Architecture Node.js React Node.js Next.js."
+        "content": "TypeScript Cloud Cloud JavaScript Architecture Cloud TypeScript Cloud Node.js React.\n\nJavaScript TypeScript JavaScript React JavaScript Node.js JavaScript React React React.\n\nTypeScript JavaScript JavaScript Next.js JavaScript Cloud Next.js Cloud Next.js Architecture.\n\nNext.js Architecture Architecture JavaScript JavaScript Node.js Node.js React Cloud TypeScript."
       }
     ],
-    "publication_list": [
+    "publications": [
       {
         "slug": "1",
         "order": 1,

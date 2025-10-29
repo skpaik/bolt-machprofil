@@ -14,7 +14,7 @@ import {
 // =======================
 // CONFIGURATION
 // =======================
-const OUTPUT_DIR = path.join(__dirname, "../contents");
+const OUTPUT_DIR = path.join(__dirname, "../../../contents");
 const LANGUAGES = ["en", "de", "fr", "es", "jp"]; // Configurable
 const BLOG_COUNT = 1; // Configurable
 const MAX_ITEM = 1; // Configurable
@@ -178,7 +178,7 @@ ${body}
 // =======================
 function generateGallery(id: number, lang: string): string {
   const title = `Senior Developer ${id} (${lang.toUpperCase()})`;
-  const image = `/images/gallery-${id}.jpg`;
+  const image = `/images/photo-${id}.jpg`;
   const category = randomFrom(["Tutorial", "Guide", "Opinion"]);
   const description = `Project ${id} overview in ${lang.toUpperCase()}.`;
   const date = "2020-01-01";
@@ -271,7 +271,7 @@ function generateSkills(lang: string): string {
     { category: "Languages", items: ["English", "German", "French"] },
   ];
 
-  // Convert categories to properly indented YAML under skill_list
+  // Convert categories to properly indented YAML under skills
   const yamlSkillList = categories
     .map(
       (cat) =>
@@ -284,7 +284,7 @@ function generateSkills(lang: string): string {
   // Full markdown file content
   return `---
 title: "Skills for language: ${lang}"
-skill_list:
+skills:
 ${yamlSkillList}
 ---
 
@@ -406,7 +406,7 @@ ${testsYaml}${l.level ? `    level: "${l.level}"\n` : ""}`;
 
   return `---
 title: "Languages for language: ${lang}"
-language_list:
+languages:
 ${yamlLanguages}
 ---
 
@@ -473,7 +473,7 @@ function generateReferences(lang: string): string {
 
   return `---
 title: "References for language: ${lang}"
-reference_list:
+references:
 ${yamlReferences}
 ---
 
@@ -544,7 +544,7 @@ function generateContacts(lang: string): string {
 
   return `---
 title: "Contacts for language: ${lang}"
-contact_list:
+contacts:
 ${yamlContacts}
 ---
 
@@ -589,14 +589,14 @@ function getOrCreateDir(lang: string, name: string) {
 // MAIN
 // =======================
 for (const lang of LANGUAGES) {
-  const blogDir = getOrCreateDir(lang, "blog_list");
-  const projectDir = getOrCreateDir(lang, "project_list");
-  const educationDir = getOrCreateDir(lang, "education_list");
-  const expDir = getOrCreateDir(lang, "experience_list");
-  const galleryDir = getOrCreateDir(lang, "gallery_list");
+  const blogDir = getOrCreateDir(lang, "blogs");
+  const projectDir = getOrCreateDir(lang, "projects");
+  const educationDir = getOrCreateDir(lang, "educations");
+  const expDir = getOrCreateDir(lang, "experiences");
+  const galleryDir = getOrCreateDir(lang, "photos");
   const infoDir = getOrCreateDir(lang, "info");
-  const certDir = getOrCreateDir(lang, "certificate_list");
-  const publishDir = getOrCreateDir(lang, "publication_list");
+  const certDir = getOrCreateDir(lang, "certificates");
+  const publishDir = getOrCreateDir(lang, "publications");
 
   for (let i = 1; i <= BLOG_COUNT; i++) {
     fs.writeFileSync(

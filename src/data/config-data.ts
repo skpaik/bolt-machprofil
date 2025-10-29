@@ -37,6 +37,6 @@ export class ConfigData {
     static moreMenuItems: PrimaryMenuItem[] = [
         {key: 'publications', path: '/publications', label: 'Publications'},
         {key: 'certificate', path: '/certificate', label: 'Certificates'},
-        {key: 'gallery', path: '/gallery', label: 'Gallery'},
+        {key: 'photos', path: '/photos', label: 'Photos'},
     ];
 }
