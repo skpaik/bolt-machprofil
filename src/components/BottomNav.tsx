@@ -12,9 +12,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {MenuService} from "@/lib/services/menu.service";
+import {useIsMobile} from "@/lib/hooks/use-is-mobile";
 
 export default function BottomNav() {
   const { langI18n } = usePortfolio();
+  const isMobile = useIsMobile();
+  const { primaryMenuItems, moreMenuItems } = MenuService.getMenu(isMobile);
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -45,7 +48,7 @@ export default function BottomNav() {
     return pathname === path;
   };
 
-  const isMoreActive = MenuService.moreMenuItems.some((item) => pathname === item.path);
+  const isMoreActive = moreMenuItems.some((item) => pathname === item.path);
 
   return (
       <nav
@@ -55,7 +58,7 @@ export default function BottomNav() {
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-around items-center h-16">
-            {MenuService.primaryMenuItems.map((item) => {
+            {primaryMenuItems.map((item) => {
               const active = isActive(item.path);
               const Icon = item.icon;
 
@@ -91,7 +94,7 @@ export default function BottomNav() {
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" side="top" className="mb-2">
-                {MenuService.moreMenuItems.map((item) => {
+                {moreMenuItems.map((item) => {
                   const active = isActive(item.path);
                   return (
                       <DropdownMenuItem key={item.key} asChild>
