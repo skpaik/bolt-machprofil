@@ -78,7 +78,6 @@ export interface LanguageItem {
 }
 
 export interface PrimaryMenuItem {
-    label?: string
     key: string;
     path: string,
     icon?: any
@@ -108,14 +107,29 @@ export interface AppData {
 export interface LanguageI18n {
     name: string;
 
+    //primaryMenuItems Start
     home: string;
+    about: string;
     projects: string;
-    portfolio: string;
     experience: string;
-    skills: string;
-    contact: string;
-    resume: string;
     blog: string;
+    resume: string;
+    contact: string;
+    more: string;
+    //primaryMenuItems End
+
+    //moreMenuItems Start
+    education: string;
+    skills: string;
+    services: string;
+    testimonials: string;
+    publications: string;
+    certificates: string;
+    photos: string;
+    privacy: string;
+    terms: string;
+    //moreMenuItems End
+
     viewMore: string;
     getInTouch: string;
     sendMessage: string;
@@ -134,7 +148,6 @@ export interface LanguageI18n {
     yearsExperience: string;
     projectsCompleted: string;
     skillsMastered: string;
-    education: string;
     readMore: string;
     latestPosts: string;
     allPosts: string;
@@ -158,5 +171,5 @@ export interface PortfolioData {
 
 export type ProfileType = 'developer' | 'photographer' | 'teacher' | 'student';
 export type TemplateType = 'modern' | 'classic' | 'minimal';
-export type LanguageType = 'en' | 'es' | 'fr';
+export type LanguageType = 'en' | 'de'  | 'es' | 'fr';
 export type ThemeType = 'light' | 'dark' | 'system';

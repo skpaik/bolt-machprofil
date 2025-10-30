@@ -23,6 +23,7 @@ export class ConfigData {
 
     static languages: LanguageItem[] = [
         {code: 'en', name: 'English'},
+        {code: 'de', name: 'German'},
         {code: 'es', name: 'Español'},
         {code: 'fr', name: 'Français'},
     ];
@@ -35,8 +36,8 @@ export class ConfigData {
     ];
 
     static moreMenuItems: PrimaryMenuItem[] = [
-        {key: 'publications', path: '/publications', label: 'Publications'},
-        {key: 'certificate', path: '/certificate', label: 'Certificates'},
-        {key: 'photos', path: '/photos', label: 'Photos'},
+        {key: 'publications', path: '/publications'},
+        {key: 'certificate', path: '/certificate'},
+        {key: 'photos', path: '/photos'},
     ];
 }

@@ -51,7 +51,7 @@ export default function GalleryPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          Gallery
+          Photos
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
           A visual journey through projects, events, and memorable moments.

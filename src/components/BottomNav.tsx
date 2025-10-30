@@ -11,7 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import {ConfigData} from "@/data/config-data";
+import {MenuService} from "@/lib/services/menu.service";
 
 export default function BottomNav() {
   const { langI18n } = usePortfolio();
@@ -45,7 +45,7 @@ export default function BottomNav() {
     return pathname === path;
   };
 
-  const isMoreActive = ConfigData.moreMenuItems.some((item) => pathname === item.path);
+  const isMoreActive = MenuService.moreMenuItems.some((item) => pathname === item.path);
 
   return (
       <nav
@@ -55,7 +55,7 @@ export default function BottomNav() {
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-around items-center h-16">
-            {ConfigData.primaryMenuItems.map((item) => {
+            {MenuService.primaryMenuItems.map((item) => {
               const active = isActive(item.path);
               const Icon = item.icon;
 
@@ -87,11 +87,11 @@ export default function BottomNav() {
                     }`}
                 >
                   <MoreHorizontal size={24} />
-                  <span className="text-xs mt-1">More</span>
+                  <span className="text-xs mt-1">{langI18n.more}</span>
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" side="top" className="mb-2">
-                {ConfigData.moreMenuItems.map((item) => {
+                {MenuService.moreMenuItems.map((item) => {
                   const active = isActive(item.path);
                   return (
                       <DropdownMenuItem key={item.key} asChild>
@@ -101,7 +101,7 @@ export default function BottomNav() {
                                 active ? 'bg-accent' : ''
                             }`}
                         >
-                          {item.label}
+                          {langI18n[item.key as keyof typeof langI18n]}
                         </Link>
                       </DropdownMenuItem>
                   );
