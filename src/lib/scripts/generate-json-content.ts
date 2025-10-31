@@ -9,7 +9,7 @@ import {
   PhotoSchema,
   ProjectSchema,
   PublicationSchema,
-} from "@/lib/models/contract";
+} from "@/lib/types/contract";
 
 // Schema Interfaces for each content type
 // =======================

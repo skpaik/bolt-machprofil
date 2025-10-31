@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Calendar, Clock, ChevronLeft, ChevronRight, Filter, Search, SortAsc } from 'lucide-react';
+import { Calendar, Clock, Search } from 'lucide-react';
 import Link from 'next/link';
+import { FilterBar } from '@/components/shared/FilterBar';
+import { Pagination } from '@/components/shared/Pagination';
+import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 
 const POSTS_PER_PAGE = 6;
 
@@ -81,15 +82,15 @@ export default function BlogPage() {
 
   // Get unique categories and tags for filters
   const categories = useMemo(() => {
-    const uniqueCategories = [...new Set(filteredPosts.map(post => post.category).filter(Boolean))];
+    const uniqueCategories = [...new Set(posts.map(post => post.category).filter(Boolean))];
     return uniqueCategories.sort();
-  }, [filteredPosts]);
+  }, [posts]);
 
   const tags = useMemo(() => {
-    const allTags = filteredPosts.flatMap(post => post.tags || []);
+    const allTags = posts.flatMap(post => post.tags || []);
     const uniqueTags = [...new Set(allTags)];
     return uniqueTags.sort();
-  }, [filteredPosts]);
+  }, [posts]);
 
   const totalPosts = filteredPosts.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
@@ -101,7 +102,7 @@ export default function BlogPage() {
   }, [filteredPosts, currentPage]);
 
   // Reset to first page when filters change
-  React.useEffect(() => {
+  useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery, selectedCategory, selectedTag, sortBy]);
 
@@ -113,212 +114,159 @@ export default function BlogPage() {
     });
   };
 
+  // Configure filters for FilterBar component
+  const filterConfigs: FilterConfig[] = [
+    {
+      name: 'category',
+      label: 'Category',
+      value: selectedCategory,
+      onChange: setSelectedCategory,
+      options: [
+        { value: 'all', label: 'All Categories' },
+        ...categories.map(cat => ({ value: cat, label: cat }))
+      ]
+    },
+    {
+      name: 'tag',
+      label: 'Tag',
+      value: selectedTag,
+      onChange: setSelectedTag,
+      options: [
+        { value: 'all', label: 'All Tags' },
+        ...tags.map(tag => ({ value: tag, label: tag }))
+      ]
+    }
+  ];
+
+  // Configure sort options
+  const sortConfig: SortConfig = {
+    value: sortBy,
+    onChange: (value: string) => setSortBy(value as SortOption),
+    options: [
+      { value: 'date-desc', label: 'Date (Newest)' },
+      { value: 'date-asc', label: 'Date (Oldest)' },
+      { value: 'title-asc', label: 'Title (A-Z)' },
+      { value: 'title-desc', label: 'Title (Z-A)' },
+      { value: 'category-asc', label: 'Category (A-Z)' },
+      { value: 'category-desc', label: 'Category (Z-A)' }
+    ]
+  };
+
+  const handleClearAll = () => {
+    setSearchQuery('');
+    setSelectedCategory('all');
+    setSelectedTag('all');
+    setSortBy('date-desc');
+  };
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{langI18n.blog}</h1>
-        <p className="text-lg text-muted-foreground">
-          {langI18n.latestPosts}
-        </p>
-      </div>
-
-        {/* Search and Filter Controls */}
-        <div className="mb-8 space-y-4">
-          {/* Search Bar */}
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
-            <Input
-                placeholder="Search posts by title, content, category, or tags..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
-            />
-          </div>
-
-          {/* Filters Row */}
-          <div className="flex flex-wrap gap-4 items-center">
-            <div className="flex items-center gap-2">
-              <Filter size={16} />
-              <span className="text-sm font-medium">Filters:</span>
-            </div>
-
-            {/* Category Filter */}
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                {categories.map((category) => (
-                    <SelectItem key={category} value={category}>
-                      {category}
-                    </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            {/* Tag Filter */}
-            <Select value={selectedTag} onValueChange={setSelectedTag}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Tag" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Tags</SelectItem>
-                {tags.map((tag) => (
-                    <SelectItem key={tag} value={tag}>
-                      {tag}
-                    </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            {/* Sort Options */}
-            <div className="flex items-center gap-2">
-              <SortAsc size={16} />
-              <Select value={sortBy} onValueChange={(value: SortOption) => setSortBy(value)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Sort by" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="date-desc">Date (Newest)</SelectItem>
-                  <SelectItem value="date-asc">Date (Oldest)</SelectItem>
-                  <SelectItem value="title-asc">Title (A-Z)</SelectItem>
-                  <SelectItem value="title-desc">Title (Z-A)</SelectItem>
-                  <SelectItem value="category-asc">Category (A-Z)</SelectItem>
-                  <SelectItem value="category-desc">Category (Z-A)</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            {/* Results Count */}
-            <div className="text-sm text-muted-foreground">
-              {totalPosts} post{totalPosts !== 1 ? 's' : ''} found
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        {/* Header Section - Compact and Responsive */}
+        <div className="mb-8 sm:mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+                {langI18n.blog}
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground">
+                {langI18n.latestPosts}
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Posts Grid */}
+        {/* Filter Bar Component */}
+        <FilterBar
+            searchValue={searchQuery}
+            onSearchChange={setSearchQuery}
+            searchPlaceholder="Search posts by title, content, category, or tags..."
+            filters={filterConfigs}
+            sortConfig={sortConfig}
+            resultsCount={totalPosts}
+            resultsLabel={totalPosts === 1 ? 'post' : 'posts'}
+            onClearAll={handleClearAll}
+        />
+
+        {/* Posts Grid or Empty State */}
         {currentPosts.length > 0 ? (
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {currentPosts.map((post) => (
-          <Card key={post.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
-            <Link href={`/blog/${post.slug}`}>
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={post.cover_image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-            <CardHeader>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                <Calendar size={14} />
-                <span>{formatDate(post.published_at)}</span>
-                <span>•</span>
-                <Clock size={14} />
-                <span>{post.read_time} min read</span>
-              </div>
-              <Link href={`/blog/${post.slug}`}>
-                <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                  {post.title}
-                </h2>
-              </Link>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              {currentPosts.map((post) => (
+                  <Card key={post.id} className="overflow-hidden group hover:shadow-lg transition-shadow flex flex-col">
+                    <Link href={`/blog/${post.slug}`}>
+                      <div className="aspect-video overflow-hidden">
+                        <img
+                            src={post.cover_image}
+                            alt={post.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </Link>
+                    <CardHeader className="flex-1">
+                      <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground mb-2 flex-wrap">
+                        <div className="flex items-center gap-1">
+                          <Calendar size={14} />
+                          <span>{formatDate(post.published_at)}</span>
+                        </div>
+                        <span>•</span>
+                        <div className="flex items-center gap-1">
+                          <Clock size={14} />
+                          <span>{post.read_time} min read</span>
+                        </div>
+                      </div>
+                      <Link href={`/blog/${post.slug}`}>
+                        <h2 className="text-xl sm:text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">
+                          {post.title}
+                        </h2>
+                      </Link>
                       {post.category && (
                           <Badge variant="outline" className="mt-2 w-fit">
                             {post.category}
                           </Badge>
                       )}
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground line-clamp-3 mb-4">
-                {post.excerpt}
-              </p>
-              {post.tags && post.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {post.tags.slice(0, 3).map((tag) => (
-                    <Badge key={tag} variant="secondary">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-            <CardFooter>
-              <Button variant="ghost" asChild className="w-full">
-                <Link href={`/blog/${post.slug}`}>{langI18n.readMore}</Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm sm:text-base text-muted-foreground line-clamp-3 mb-4">
+                        {post.excerpt}
+                      </p>
+                      {post.tags && post.tags.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {post.tags.slice(0, 3).map((tag) => (
+                                <Badge key={tag} variant="secondary" className="text-xs">
+                                  {tag}
+                                </Badge>
+                            ))}
+                          </div>
+                      )}
+                    </CardContent>
+                    <CardFooter>
+                      <Button variant="ghost" asChild className="w-full">
+                        <Link href={`/blog/${post.slug}`}>{langI18n.readMore}</Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+              ))}
+            </div>
         ) : (
             <div className="text-center py-12">
               <div className="text-muted-foreground mb-4">
                 <Search size={48} className="mx-auto mb-4 opacity-50" />
                 <h3 className="text-xl font-semibold mb-2">No posts found</h3>
-                <p>Try adjusting your search terms or filters to find what you're looking for.</p>
+                <p className="text-sm sm:text-base">
+                  Try adjusting your search terms or filters to find what you're looking for.
+                </p>
               </div>
-              <Button
-                  variant="outline"
-                  onClick={() => {
-                    setSearchQuery('');
-                    setSelectedCategory('all');
-                    setSelectedTag('all');
-                    setSortBy('date-desc');
-                  }}
-              >
+              <Button variant="outline" onClick={handleClearAll}>
                 Clear all filters
               </Button>
             </div>
         )}
 
-      {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-2 mt-12">
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-            disabled={currentPage === 1}
-          >
-            <ChevronLeft size={20} />
-          </Button>
-
-          <div className="flex items-center gap-2">
-            {[...Array(totalPages)].map((_, i) => {
-              const page = i + 1;
-              if (
-                page === 1 ||
-                page === totalPages ||
-                (page >= currentPage - 1 && page <= currentPage + 1)
-              ) {
-                return (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? 'default' : 'outline'}
-                    size="icon"
-                    onClick={() => setCurrentPage(page)}
-                  >
-                    {page}
-                  </Button>
-                );
-              } else if (page === currentPage - 2 || page === currentPage + 2) {
-                return <span key={page}>...</span>;
-              }
-              return null;
-            })}
-          </div>
-
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-            disabled={currentPage === totalPages}
-          >
-            <ChevronRight size={20} />
-          </Button>
-        </div>
-      )}
-    </div>
+        {/* Pagination Component */}
+        <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+        />
+      </div>
   );
 }

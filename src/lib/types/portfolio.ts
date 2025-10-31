@@ -1,22 +1,9 @@
-export interface BlogPost2 {
+export interface BaseContent {
     id: string;
     title: string;
-    slug: string;
-    excerpt: string;
-    content: string;
-    cover_image: string;
-    author: string;
-    published: boolean;
-    published_at: string;
-    created_at: string;
-    updated_at: string;
-    tags: string[];
-    read_time: number;
 }
 
-export interface BlogPost {
-    id: string;
-    title: string;
+export interface BlogPost extends BaseContent {
     slug: string;
     excerpt: string;
     content: string;
@@ -27,6 +14,21 @@ export interface BlogPost {
     tags: string[];
     read_time: number;
     category: string;
+}
+
+export interface Photo extends BaseContent {
+    slug: string;
+    excerpt: string;
+    content: string;
+    cover_image: string;
+    author: string;
+    published: boolean;
+    published_at: string;
+    tags: string[];
+    location?: string;
+    album: string;
+    description: string;
+    image: string;
 }
 
 export interface SocialLinks {
@@ -88,6 +90,10 @@ export interface Skills {
     [category: string]: string[];
 }
 
+export interface AppConfig {
+    item_per_page: number;
+}
+
 export interface AppData {
     name: string;
     title: string;
@@ -96,12 +102,14 @@ export interface AppData {
     location: string;
     bio: string;
     avatar: string;
+    //configData: ConfigData;
     social: SocialLinks;
     blogs: BlogPost[];
     projects: Project[];
     experience: Experience[];
     education: Education[];
     skills: Skills;
+    photos: Photo[];
 }
 
 export interface LanguageI18n {
@@ -171,5 +179,5 @@ export interface PortfolioData {
 
 export type ProfileType = 'developer' | 'photographer' | 'teacher' | 'student';
 export type TemplateType = 'modern' | 'classic' | 'minimal';
-export type LanguageType = 'en' | 'de'  | 'es' | 'fr';
+export type LanguageType = 'en' | 'de' | 'es' | 'fr';
 export type ThemeType = 'light' | 'dark' | 'system';

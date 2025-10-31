@@ -1,103 +1,260 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { X, Search } from 'lucide-react';
+import { usePortfolio } from "@/components/context/PortfolioContext";
+import { Pagination } from "@/components/shared/Pagination";
+import { FilterBar } from '@/components/shared/FilterBar';
+import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 
-export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+type SortOption = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc' | 'album-asc' | 'album-desc';
 
-  const photos = [
-    {
-      id: 1,
-      title: 'Team Collaboration',
-      category: 'Workspace',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      id: 2,
-      title: 'Code Review Session',
-      category: 'Development',
-      image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      id: 3,
-      title: 'Conference Speaking',
-      category: 'Events',
-      image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      id: 4,
-      title: 'Workshop Facilitation',
-      category: 'Education',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      id: 5,
-      title: 'Product Launch',
-      category: 'Events',
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      id: 6,
-      title: 'Hackathon Winner',
-      category: 'Achievement',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-  ];
+export default function PhotoPage() {
+    const { appData, appConfig, langI18n } = usePortfolio();
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedAlbum, setSelectedAlbum] = useState<string>('all');
+    const [selectedTag, setSelectedTag] = useState<string>('all');
+    const [sortBy, setSortBy] = useState<SortOption>('date-desc');
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
-          Photos
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-3xl">
-          A visual journey through projects, events, and memorable moments.
-        </p>
-      </div>
+    const photos = appData.photos;
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {photos.map((item) => (
-          <Card
-            key={item.id}
-            className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow"
-            onClick={() => setSelectedImage(item.image)}
-          >
-            <div className="aspect-square overflow-hidden">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-              />
+    // Filter and search photos
+    const filteredPhotos = useMemo(() => {
+        let filtered = photos.filter(photo => {
+            // Album filter
+            if (selectedAlbum !== 'all' && photo.album !== selectedAlbum) {
+                return false;
+            }
+
+            // Tag filter
+            if (selectedTag !== 'all' && !photo.tags?.includes(selectedTag)) {
+                return false;
+            }
+
+            // Search filter
+            if (searchQuery) {
+                const query = searchQuery.toLowerCase();
+                const searchableText = [
+                    photo.title,
+                    photo.album,
+                    photo.description || '',
+                    ...(photo.tags || [])
+                ].join(' ').toLowerCase();
+
+                if (!searchableText.includes(query)) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+
+        // Sort photos
+        filtered.sort((a, b) => {
+            switch (sortBy) {
+                case 'date-desc':
+                    return new Date(b.published_at || 0).getTime() - new Date(a.published_at || 0).getTime();
+                case 'date-asc':
+                    return new Date(a.published_at || 0).getTime() - new Date(b.published_at || 0).getTime();
+                case 'title-asc':
+                    return a.title.localeCompare(b.title);
+                case 'title-desc':
+                    return b.title.localeCompare(a.title);
+                case 'album-asc':
+                    return (a.album || '').localeCompare(b.album || '');
+                case 'album-desc':
+                    return (b.album || '').localeCompare(a.album || '');
+                default:
+                    return 0;
+            }
+        });
+
+        return filtered;
+    }, [photos, selectedAlbum, searchQuery, selectedTag, sortBy]);
+
+    // Get unique albums and tags for filters
+    const albums = useMemo(() => {
+        const uniqueAlbums = [...new Set(photos.map(photo => photo.album).filter(Boolean))];
+        return uniqueAlbums.sort();
+    }, [photos]);
+
+    const tags = useMemo(() => {
+        const allTags = photos.flatMap(photo => photo.tags || []);
+        const uniqueTags = [...new Set(allTags)];
+        return uniqueTags.sort();
+    }, [photos]);
+
+    const totalPhotos = filteredPhotos.length;
+    const totalPages = Math.ceil(totalPhotos / appConfig.item_per_page);
+
+    const currentPhotos = useMemo(() => {
+        const startIndex = (currentPage - 1) * appConfig.item_per_page;
+        const endIndex = startIndex + appConfig.item_per_page;
+        return filteredPhotos.slice(startIndex, endIndex);
+    }, [filteredPhotos, currentPage, appConfig.item_per_page]);
+
+    // Reset to first page when filters change
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [searchQuery, selectedAlbum, selectedTag, sortBy]);
+
+    // Configure filters for FilterBar component
+    const filterConfigs: FilterConfig[] = [
+        {
+            name: 'album',
+            label: 'Album',
+            value: selectedAlbum,
+            onChange: setSelectedAlbum,
+            options: [
+                { value: 'all', label: 'All Albums' },
+                ...albums.map(album => ({ value: album, label: album }))
+            ]
+        },
+        {
+            name: 'tag',
+            label: 'Tag',
+            value: selectedTag,
+            onChange: setSelectedTag,
+            options: [
+                { value: 'all', label: 'All Tags' },
+                ...tags.map(tag => ({ value: tag, label: tag }))
+            ]
+        }
+    ];
+
+    // Configure sort options
+    const sortConfig: SortConfig = {
+        value: sortBy,
+        onChange: (value: string) => setSortBy(value as SortOption),
+        options: [
+            { value: 'date-desc', label: 'Date (Newest)' },
+            { value: 'date-asc', label: 'Date (Oldest)' },
+            { value: 'title-asc', label: 'Title (A-Z)' },
+            { value: 'title-desc', label: 'Title (Z-A)' },
+            { value: 'album-asc', label: 'Album (A-Z)' },
+            { value: 'album-desc', label: 'Album (Z-A)' }
+        ]
+    };
+
+    const handleClearAll = () => {
+        setSearchQuery('');
+        setSelectedAlbum('all');
+        setSelectedTag('all');
+        setSortBy('date-desc');
+    };
+
+    return (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            {/* Header Section */}
+            <div className="mb-8 sm:mb-12">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
+                            Photos
+                        </h1>
+                        <p className="text-base sm:text-lg text-muted-foreground">
+                            A visual journey through projects, events, and memorable moments.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-              <Badge variant="secondary">{item.category}</Badge>
-            </div>
-          </Card>
-        ))}
-      </div>
 
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-background/95 backdrop-blur flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-4 right-4 p-2 rounded-full bg-background border hover:bg-accent transition-colors"
-            onClick={() => setSelectedImage(null)}
-          >
-            <X size={24} />
-          </button>
-          <img
-            src={selectedImage}
-            alt="Gallery item"
-            className="max-w-full max-h-full object-contain rounded-lg"
-          />
+            {/* Filter Bar Component */}
+            <FilterBar
+                searchValue={searchQuery}
+                onSearchChange={setSearchQuery}
+                searchPlaceholder="Search photos by title, album, tags, or description..."
+                filters={filterConfigs}
+                sortConfig={sortConfig}
+                resultsCount={totalPhotos}
+                resultsLabel={totalPhotos === 1 ? 'photo' : 'photos'}
+                onClearAll={handleClearAll}
+            />
+
+            {/* Photos Grid or Empty State */}
+            {currentPhotos.length > 0 ? (
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    {currentPhotos.map((item) => (
+                        <Card
+                            key={item.id}
+                            className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow"
+                            onClick={() => setSelectedImage(item.image)}
+                        >
+                            <div className="aspect-square overflow-hidden">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                />
+                            </div>
+                            <div className="p-4">
+                                <h3 className="font-semibold text-lg mb-2 line-clamp-1">
+                                    {item.title}
+                                </h3>
+                                <div className="flex flex-wrap gap-2 items-center">
+                                    <Badge variant="secondary">{item.album}</Badge>
+                                    {item.tags && item.tags.length > 0 && (
+                                        <>
+                                            {item.tags.slice(0, 2).map((tag) => (
+                                                <Badge key={tag} variant="outline" className="text-xs">
+                                                    {tag}
+                                                </Badge>
+                                            ))}
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+                        </Card>
+                    ))}
+                </div>
+            ) : (
+                <div className="text-center py-12">
+                    <div className="text-muted-foreground mb-4">
+                        <Search size={48} className="mx-auto mb-4 opacity-50" />
+                        <h3 className="text-xl font-semibold mb-2">No photos found</h3>
+                        <p className="text-sm sm:text-base">
+                            Try adjusting your search terms or filters to find what you're looking for.
+                        </p>
+                    </div>
+                    <Button variant="outline" onClick={handleClearAll}>
+                        Clear all filters
+                    </Button>
+                </div>
+            )}
+
+            {/* Image Modal */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 z-50 bg-background/95 backdrop-blur flex items-center justify-center p-4"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button
+                        className="absolute top-4 right-4 p-2 rounded-full bg-background border hover:bg-accent transition-colors"
+                        onClick={() => setSelectedImage(null)}
+                        aria-label="Close image"
+                    >
+                        <X size={24} />
+                    </button>
+                    <img
+                        src={selectedImage}
+                        alt="Gallery item"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                </div>
+            )}
+
+            {/* Pagination Component */}
+            <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+            />
         </div>
-      )}
-    </div>
-  );
+    );
 }

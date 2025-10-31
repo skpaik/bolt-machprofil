@@ -9,7 +9,7 @@ import {
   SocialLinkSchema,
   ContactSchema,
   BioSchema,
-} from "@/lib/models/contract";
+} from "@/lib/types/contract";
 
 // =======================
 // CONFIGURATION
