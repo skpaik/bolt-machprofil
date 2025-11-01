@@ -9,11 +9,11 @@ import { usePortfolio } from "@/components/context/PortfolioContext";
 import { Pagination } from "@/components/shared/Pagination";
 import { FilterBar } from '@/components/shared/FilterBar';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
+import {SortOption} from "@/lib/types/type.config";
 
-type SortOption = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc' | 'album-asc' | 'album-desc';
 
 export default function PhotoPage() {
-    const { appData, appConfig, langI18n } = usePortfolio();
+    const { appData, contentData, appConfig, langI18n } = usePortfolio();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
@@ -21,7 +21,7 @@ export default function PhotoPage() {
     const [selectedTag, setSelectedTag] = useState<string>('all');
     const [sortBy, setSortBy] = useState<SortOption>('date-desc');
 
-    const photos = appData.photos;
+    const photos = contentData.photos;
 
     // Filter and search photos
     const filteredPhotos = useMemo(() => {

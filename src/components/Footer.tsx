@@ -1,16 +1,7 @@
 "use client";
 
 import React from 'react';
-import { usePortfolio } from '@/components/context/PortfolioContext';
-import { Globe, Layout, Sun, Moon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { LanguageType, TemplateType, ProfileType } from '@/lib/types/portfolio';
+import {usePortfolio} from '@/components/context/PortfolioContext';
 import TemplateSwitcher from "@/components/TemplateSwitcher";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ProfileSwitcher from "@/components/ProfileSwitcher";
@@ -35,8 +26,8 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <LanguageSwitcher />
-            <TemplateSwitcher />
+            <LanguageSwitcher/>
+            <TemplateSwitcher/>
             <ProfileSwitcher/>
             <ThemeSwitcher/>
           </div>

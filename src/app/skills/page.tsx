@@ -8,13 +8,13 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 
 export default function PortfolioPage() {
-  const { appData, langI18n } = usePortfolio();
+  const { appData, contentData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-4">
-          {langI18n.portfolio}
+          {langI18n.skills}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
           A curated collection showcasing my creative work and professional achievements.
@@ -22,7 +22,7 @@ export default function PortfolioPage() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {appData.projects.map((project, index) => (
+        {contentData.projects.map((project, index) => (
           <Card key={index} className="overflow-hidden group hover:shadow-xl transition-all duration-300">
             <div className="aspect-video overflow-hidden">
               <img

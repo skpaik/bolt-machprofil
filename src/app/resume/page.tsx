@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Download, Mail, Phone, MapPin, Briefcase, GraduationCap, Award } from 'lucide-react';
 
 export default function ResumePage() {
-  const { appData, langI18n } = usePortfolio();
+  const { appData, contentData, langI18n } = usePortfolio();
 
   const handleDownloadPDF = () => {
     window.print();
@@ -78,7 +78,7 @@ export default function ResumePage() {
               {langI18n.experience}
             </h3>
             <div className="space-y-6">
-              {appData.experience.map((exp, index) => (
+              {contentData.experience.map((exp, index) => (
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between items-start flex-wrap gap-2">
                     <div>
@@ -99,7 +99,7 @@ export default function ResumePage() {
               {langI18n.education}
             </h3>
             <div className="space-y-6">
-              {appData.education.map((edu, index) => (
+              {contentData.education.map((edu, index) => (
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between items-start flex-wrap gap-2">
                     <div>
@@ -117,7 +117,7 @@ export default function ResumePage() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">{langI18n.skills}</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              {Object.entries(appData.skills).map(([category, skills]) => (
+              {Object.entries(contentData.skills).map(([category, skills]) => (
                 <div key={category}>
                   <h4 className="font-semibold mb-3">{category}</h4>
                   <div className="flex flex-wrap gap-2">

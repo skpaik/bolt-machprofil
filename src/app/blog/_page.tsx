@@ -11,10 +11,10 @@ import Link from 'next/link';
 const POSTS_PER_PAGE = 6;
 
 export default function BlogPage() {
-  const { appData,  langI18n } = usePortfolio();
+  const { appData, contentData,  langI18n } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
 
-  const posts = appData.blogs;
+  const posts = contentData.blogs;
   const totalPosts = posts.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 

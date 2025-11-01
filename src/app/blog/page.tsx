@@ -10,20 +10,20 @@ import Link from 'next/link';
 import { FilterBar } from '@/components/shared/FilterBar';
 import { Pagination } from '@/components/shared/Pagination';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
+import {SortOption} from "@/lib/types/type.config";
 
 const POSTS_PER_PAGE = 6;
 
-type SortOption = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc' | 'category-asc' | 'category-desc';
 
 export default function BlogPage() {
-  const { appData, langI18n } = usePortfolio();
+  const { appData, contentData, langI18n } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedTag, setSelectedTag] = useState<string>('all');
   const [sortBy, setSortBy] = useState<SortOption>('date-desc');
 
-  const posts = appData.blogs;
+  const posts = contentData.blogs;
 
   // Filter and search posts
   const filteredPosts = useMemo(() => {

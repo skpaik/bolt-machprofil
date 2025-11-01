@@ -1,3 +1,5 @@
+import {LanguageType, ProfileType, TemplateType} from "@/lib/types/type.config";
+
 export interface BaseContent {
     id: string;
     title: string;
@@ -94,6 +96,15 @@ export interface AppConfig {
     item_per_page: number;
 }
 
+export interface ContentData {
+    blogs: BlogPost[];
+    projects: Project[];
+    experience: Experience[];
+    education: Education[];
+    skills: Skills;
+    photos: Photo[];
+}
+
 export interface AppData {
     name: string;
     title: string;
@@ -104,12 +115,6 @@ export interface AppData {
     avatar: string;
     //configData: ConfigData;
     social: SocialLinks;
-    blogs: BlogPost[];
-    projects: Project[];
-    experience: Experience[];
-    education: Education[];
-    skills: Skills;
-    photos: Photo[];
 }
 
 export interface LanguageI18n {
@@ -176,8 +181,3 @@ export interface PortfolioData {
         [key: string]: LanguageI18n;
     };
 }
-
-export type ProfileType = 'developer' | 'photographer' | 'teacher' | 'student';
-export type TemplateType = 'modern' | 'classic' | 'minimal';
-export type LanguageType = 'en' | 'de' | 'es' | 'fr';
-export type ThemeType = 'light' | 'dark' | 'system';

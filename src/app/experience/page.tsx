@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Briefcase, Calendar } from 'lucide-react';
 
 export default function ExperiencePage() {
-  const { appData, langI18n } = usePortfolio();
+  const { appData, contentData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -21,7 +21,7 @@ export default function ExperiencePage() {
       </div>
 
       <div className="space-y-8">
-        {appData.experience.map((exp, index) => (
+        {contentData.experience.map((exp, index) => (
           <Card key={index} className="p-6 md:p-8 hover:shadow-lg transition-shadow">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div className="flex-1">
@@ -56,19 +56,19 @@ export default function ExperiencePage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">
-              {appData.experience.length}+
+              {contentData.experience.length}+
             </div>
             <p className="text-muted-foreground">Years Experience</p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">
-              {appData.projects.length}+
+              {contentData.projects.length}+
             </div>
             <p className="text-muted-foreground">Projects Completed</p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">
-              {Object.keys(appData.skills).reduce((acc, key) => acc + appData.skills[key].length, 0)}+
+              {Object.keys(contentData.skills).reduce((acc, key) => acc + contentData.skills[key].length, 0)}+
             </div>
             <p className="text-muted-foreground">Skills Mastered</p>
           </div>

@@ -13,15 +13,15 @@ import {usePortfolio} from "@/components/context/PortfolioContext";
 export default function BlogDetailPage() {
   const params = useParams();
   const router = useRouter();
-  const { appData } = usePortfolio();
+  const { appData, contentData } = usePortfolio();
 
   const post = useMemo(() => {
-    return (appData.blogs as BlogPost[]).find((p) => p.slug === params.slug);
+    return (contentData.blogs as BlogPost[]).find((p) => p.slug === params.slug);
   }, [params.slug]);
 
   const relatedPosts = useMemo(() => {
     if (!post) return [];
-    return (appData.blogs as BlogPost[])
+    return (contentData.blogs as BlogPost[])
       .filter((p) => p.slug !== post.slug)
       .slice(0, 3);
   }, [post]);
