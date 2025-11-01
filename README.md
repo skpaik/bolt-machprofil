@@ -64,3 +64,26 @@ Edit `/data/portfolio.json` to customize your portfolio information.
 ## License
 
 MIT
+
+
+## Command
+Recently I have made a lot of changes.
+
+Check all the pages in src/app folder.
+
+I have added some sample file, which contents is not correct as I copy from other location.
+
+like testimonials. services, about, terms, privacy and some other pages contents are not correct as the folder name.
+
+So update all contents and fields related to the page/folder names with sample data as other pages uses the sample data from a single file.
+
+change the typescript interfaces property from allow null or not based on standard.
+
+I have added filters, search, sort in blog, photos, projects with paginations.
+
+Add those features if any page required it by following the same structure,
+
+You can add paginations only or filtersbar only if thats enough for a page.
+
+I not sure that any pages needed any details page except blog, If required add that too.
+
