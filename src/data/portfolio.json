@@ -165,6 +165,7 @@
       "projects": [
         {
           "title": "E-Commerce Platform",
+          "project_type": "Web Application",
           "description": "Built a scalable e-commerce platform handling 100K+ daily users with real-time inventory management",
           "technologies": [
             "React",
@@ -173,7 +174,10 @@
             "Redis"
           ],
           "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
+          "link": "#",
+          "tags":  [],
+          "started_at":  "",
+          "ended_at": ""
         },
         {
           "title": "Analytics Dashboard",
@@ -185,7 +189,11 @@
             "MongoDB"
           ],
           "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
+          "link": "#",
+          "project_type":  "",
+          "tags":  [],
+          "started_at":  "",
+          "ended_at": ""
         },
         {
           "title": "Mobile Banking App",
@@ -197,7 +205,11 @@
             "AWS"
           ],
           "image": "https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
+          "link": "#",
+          "project_type":  "",
+          "tags":  [],
+          "started_at":  "",
+          "ended_at": ""
         }
       ],
       "experience": [
@@ -257,7 +269,33 @@
           "Git"
         ]
       },
-      "photos": []
+      "photos": [],
+      "certificates": [
+        {
+          "id": 1,
+          "title": "AWS Certified Solutions Architect",
+          "issuer": "Amazon Web Services",
+          "date": "2024",
+          "credential": "AWS-CSA-123456",
+          "image": "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "id": 2,
+          "title": "Professional Scrum Master I",
+          "issuer": "Scrum.org",
+          "date": "2023",
+          "credential": "PSM-789012",
+          "image": "https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "id": 3,
+          "title": "Google Cloud Professional Developer",
+          "issuer": "Google Cloud",
+          "date": "2023",
+          "credential": "GCP-PD-345678",
+          "image": "https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+      ]
     },
     "photographer": {
       "name": "Emma Martinez",
@@ -417,7 +455,8 @@
           ],
           "image": "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600"
         }
-      ]
+      ],
+      "certificates": []
     },
     "teacher": {
       "name": "Dr. Sarah Williams",
@@ -509,7 +548,8 @@
           "Professional Development"
         ]
       },
-      "photos": []
+      "photos": [],
+      "certificates": []
     },
     "student": {
       "name": "Dr. Sarah Williams",
@@ -854,7 +894,8 @@
           "Professional Development"
         ]
       },
-      "photos": []
+      "photos": [],
+      "certificates": []
     }
   }
 }

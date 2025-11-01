@@ -4,4 +4,14 @@ export type LanguageType = 'en' | 'de' | 'es' | 'fr';
 export type ThemeType = 'light' | 'dark' | 'system';
 
 
-export type SortOption = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc' | 'category-asc' | 'category-desc'| 'album-asc' | 'album-desc';
+export type SortOption =
+    'date-desc'
+    | 'date-asc'
+    | 'title-asc'
+    | 'title-desc'
+    | 'category-asc'
+    | 'category-desc'
+    | 'album-asc'
+    | 'album-desc'
+    | 'project-type-asc'
+    | 'project-type-desc';

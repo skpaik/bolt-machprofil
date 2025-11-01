@@ -10,6 +10,8 @@ import { Pagination } from "@/components/shared/Pagination";
 import { FilterBar } from '@/components/shared/FilterBar';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {SortOption} from "@/lib/types/type.config";
+import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
+import {PageHeading} from "@/components/shared/PageHeading";
 
 
 export default function PhotoPage() {
@@ -151,18 +153,10 @@ export default function PhotoPage() {
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             {/* Header Section */}
-            <div className="mb-8 sm:mb-12">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div>
-                        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
-                            Photos
-                        </h1>
-                        <p className="text-base sm:text-lg text-muted-foreground">
-                            A visual journey through projects, events, and memorable moments.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <PageHeading
+                title={langI18n.photos}
+                subTitle={"A visual journey through projects, events, and memorable moments."}
+            />
 
             {/* Filter Bar Component */}
             <FilterBar
@@ -213,18 +207,10 @@ export default function PhotoPage() {
                     ))}
                 </div>
             ) : (
-                <div className="text-center py-12">
-                    <div className="text-muted-foreground mb-4">
-                        <Search size={48} className="mx-auto mb-4 opacity-50" />
-                        <h3 className="text-xl font-semibold mb-2">No photos found</h3>
-                        <p className="text-sm sm:text-base">
-                            Try adjusting your search terms or filters to find what you're looking for.
-                        </p>
-                    </div>
-                    <Button variant="outline" onClick={handleClearAll}>
-                        Clear all filters
-                    </Button>
-                </div>
+                <ListEmptyDisplay
+                    title={"No photos found"}
+                    message={"Try adjusting your search terms or filters to find what you're looking for."}
+                    handleClearAll={handleClearAll}/>
             )}
 
             {/* Image Modal */}

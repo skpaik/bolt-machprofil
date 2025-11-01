@@ -191,9 +191,10 @@ function generateGallery(id: number, lang: string): string {
   return `---
 title: "${title}"
 image: "${image}"
+album: "${category}"
 category: "${category}"
 description: "${description}"
-date: "${date}"
+published_at: "${date}"
 tags: [${tags.map((t) => `"${t}"`).join(", ")}]
 featured: ${featured}
 ---

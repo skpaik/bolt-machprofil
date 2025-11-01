@@ -5,20 +5,17 @@ import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { GraduationCap, Calendar } from 'lucide-react';
+import {PageHeading} from "@/components/shared/PageHeading";
 
 export default function EducationPage() {
   const { appData, contentData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
-          {langI18n.education}
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-3xl">
-          My academic journey and educational achievements that have shaped my career.
-        </p>
-      </div>
+      <PageHeading
+          title={langI18n.education}
+          subTitle={"My academic journey and educational achievements that have shaped my career."}
+      />
 
       <div className="space-y-8">
         {contentData.experience.map((exp, index) => (

@@ -6,20 +6,17 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, BookOpen } from 'lucide-react';
+import {PageHeading} from "@/components/shared/PageHeading";
 
 export default function PublicationsPage() {
-  const { appData, contentData } = usePortfolio();
+  const { appData, contentData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
-          Publications
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-3xl">
-          Research, articles, and contributions to the field.
-        </p>
-      </div>
+        <PageHeading
+            title={langI18n.publications}
+            subTitle={"Research, articles, and contributions to the field."}
+        />
 
       <div className="space-y-6">
         {contentData.projects.map((project, index) => (

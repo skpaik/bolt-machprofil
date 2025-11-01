@@ -6,20 +6,17 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import {PageHeading} from "@/components/shared/PageHeading";
 
 export default function PortfolioPage() {
   const { appData, contentData, langI18n } = usePortfolio();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
-          {langI18n.skills}
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-3xl">
-          A curated collection showcasing my creative work and professional achievements.
-        </p>
-      </div>
+        <PageHeading
+            title={langI18n.skills}
+            subTitle={"A curated collection showcasing my creative work and professional achievements."}
+        />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {contentData.projects.map((project, index) => (

@@ -33,6 +33,13 @@ export interface Photo extends BaseContent {
     image: string;
 }
 
+export interface Certificate extends BaseContent {
+    issuer: string;
+    date: string;
+    credential: string;
+    image: string;
+}
+
 export interface SocialLinks {
     github?: string;
     linkedin?: string;
@@ -47,8 +54,12 @@ export interface Project {
     description: string;
     technologies?: string[];
     category?: string;
+    project_type: string;
+    tags: string[];
     image: string;
     link: string;
+    started_at: string;
+    ended_at: string;
 }
 
 export interface Experience {
@@ -103,6 +114,7 @@ export interface ContentData {
     education: Education[];
     skills: Skills;
     photos: Photo[];
+    certificates: Certificate[];
 }
 
 export interface AppData {

@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
 import { useToast } from '@/lib/hooks/use-toast';
+import {PageHeading} from "@/components/shared/PageHeading";
 
 export default function ContactPage() {
   const { appData, langI18n } = usePortfolio();
@@ -46,14 +47,10 @@ export default function ContactPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
-          {langI18n.contact}
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          {langI18n.getInTouch}. I&apos;d love to hear from you and discuss how we can work together.
-        </p>
-      </div>
+      <PageHeading
+          title={langI18n.contact}
+          subTitle={langI18n.getInTouch + ". I&apos;d love to hear from you and discuss how we can work together."}
+      />
 
       <div className="grid lg:grid-cols-2 gap-12">
         <div className="space-y-8">

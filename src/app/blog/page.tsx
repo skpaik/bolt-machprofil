@@ -11,6 +11,7 @@ import { FilterBar } from '@/components/shared/FilterBar';
 import { Pagination } from '@/components/shared/Pagination';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {SortOption} from "@/lib/types/type.config";
+import {PageHeading} from "@/components/shared/PageHeading";
 
 const POSTS_PER_PAGE = 6;
 
@@ -162,18 +163,10 @@ export default function BlogPage() {
   return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Header Section - Compact and Responsive */}
-        <div className="mb-8 sm:mb-12">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
-                {langI18n.blog}
-              </h1>
-              <p className="text-base sm:text-lg text-muted-foreground">
-                {langI18n.latestPosts}
-              </p>
-            </div>
-          </div>
-        </div>
+        <PageHeading
+            title={langI18n.blog}
+            subTitle={langI18n.latestPosts}
+        />
 
         {/* Filter Bar Component */}
         <FilterBar
