@@ -161,7 +161,7 @@ export default function BlogPage() {
   };
 
   return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <>
         {/* Header Section - Compact and Responsive */}
         <PageHeading
             title={langI18n.blog}
@@ -260,6 +260,6 @@ export default function BlogPage() {
             totalPages={totalPages}
             onPageChange={setCurrentPage}
         />
-      </div>
+      </>
   );
 }

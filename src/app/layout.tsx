@@ -35,10 +35,14 @@ export default function RootLayout({
           <TemplateWrapper>
             <div className="flex flex-col min-h-screen pb-16">
               <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
+              <main className="flex-1">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+                  {children}
+                </div>
+              </main>
+              <Footer/>
             </div>
-            <BottomNav />
+            <BottomNav/>
           </TemplateWrapper>
           <Toaster />
         </PortfolioProvider>

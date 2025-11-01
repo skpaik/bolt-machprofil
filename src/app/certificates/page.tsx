@@ -12,7 +12,7 @@ export default function CertificatePage() {
   const { appData, contentData, langI18n } = usePortfolio();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <>
         <PageHeading
             title={langI18n.certificates}
             subTitle={"Professional certifications and achievements demonstrating expertise and commitment to continuous learning."}
@@ -55,6 +55,6 @@ export default function CertificatePage() {
           </Card>
         ))}
       </div>
-    </div>
+    </>
   );
 }

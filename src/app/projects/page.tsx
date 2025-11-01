@@ -150,7 +150,7 @@ export default function ProjectsPage() {
     };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <>
         <PageHeading
             title={langI18n.projects}
             subTitle={"A showcase of my work, demonstrating expertise and passion across various projects."}
@@ -225,6 +225,6 @@ export default function ProjectsPage() {
             totalPages={totalPages}
             onPageChange={setCurrentPage}
         />
-    </div>
+    </>
   );
 }

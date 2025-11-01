@@ -46,7 +46,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <>
       <PageHeading
           title={langI18n.contact}
           subTitle={langI18n.getInTouch + ". I&apos;d love to hear from you and discuss how we can work together."}
@@ -181,6 +181,6 @@ export default function ContactPage() {
           </form>
         </Card>
       </div>
-    </div>
+    </>
   );
 }
