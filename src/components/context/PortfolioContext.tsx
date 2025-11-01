@@ -4,15 +4,8 @@ import React, {createContext, ReactNode, useContext, useEffect, useState,} from 
 import portfolioData from "@/data/portfolio.json";
 import languageData from "@/data/i18n.json";
 import settingData from "@/data/settings.json";
-import {
-    LanguageType,
-    ProfileType,
-    TemplateType,
-    ThemeType,
-} from "@/lib/types/type.config";
-import {
-    AppConfig, AppData, ContentData, LanguageI18n, SettingSchema
-} from "@/lib/types/portfolio";
+import {LanguageType, ProfileType, TemplateType, ThemeType,} from "@/lib/types/type.config";
+import {AppConfig, AppData, ContentData, LanguageI18n, SettingSchema} from "@/lib/types/portfolio";
 
 interface PortfolioContextType {
     appData: AppData;
@@ -109,10 +102,10 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
     }, [theme]);
 
     // Derived data
-    const appData = portfolioData.profiles[profileType] as AppData;
-    const contentData = portfolioData.profiles[profileType] as ContentData;
-    const appConfig = portfolioData.app_config as AppConfig;
-    const langI18n = languageData[languageType] as LanguageI18n;
+    const appData: AppData = portfolioData.profiles[profileType];
+    const contentData: ContentData = portfolioData.profiles[profileType];
+    const appConfig: AppConfig = portfolioData.app_config;
+    const langI18n: LanguageI18n = languageData[languageType];
 
     return (
         <PortfolioContext.Provider

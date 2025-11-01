@@ -1,7 +1,7 @@
 import {LanguageType, ProfileType, TemplateType} from "@/lib/types/type.config";
 
 export interface BaseContent {
-    id: string;
+    id: number;
     title: string;
 }
 
@@ -19,17 +19,16 @@ export interface BlogPost extends BaseContent {
 }
 
 export interface Photo extends BaseContent {
-    slug: string;
-    excerpt: string;
-    content: string;
-    cover_image: string;
-    author: string;
-    published: boolean;
-    published_at: string;
+    excerpt?: string;
+    content?: string;
+    cover_image?: string;
+    author?: string;
+    published?: boolean;
+    published_at?: string;
     tags: string[];
     location?: string;
-    album: string;
-    description: string;
+    album?: string;
+    description?: string;
     image: string;
 }
 
@@ -55,11 +54,11 @@ export interface Project {
     technologies?: string[];
     category?: string;
     project_type: string;
-    tags: string[];
-    image: string;
-    link: string;
-    started_at: string;
-    ended_at: string;
+//    tags: string[];
+    image?: string;
+    link?: string;
+    started_at?: string;
+    ended_at?: string;
 }
 
 export interface Experience {

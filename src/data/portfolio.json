@@ -18,7 +18,7 @@
       },
       "blogs": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -36,7 +36,7 @@
           "read_time": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Building Scalable Node.js APIs",
           "slug": "building-scalable-nodejs-apis",
           "excerpt": "Best practices for designing and implementing scalable REST APIs with Node.js and Express.",
@@ -54,7 +54,7 @@
           "read_time": 8
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Modern CSS Techniques for 2024",
           "slug": "modern-css-techniques-2024",
           "excerpt": "Explore the latest CSS features including container queries, cascade layers, and has() selector.",
@@ -72,7 +72,7 @@
           "read_time": 6
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Database Design Best Practices",
           "slug": "database-design-best-practices",
           "excerpt": "Learn essential principles for designing efficient and maintainable database schemas.",
@@ -90,7 +90,7 @@
           "read_time": 7
         },
         {
-          "id": "5",
+          "id": 5,
           "title": "Introduction to Web Performance",
           "slug": "introduction-web-performance",
           "excerpt": "Optimize your web applications for speed and deliver better user experiences.",
@@ -108,7 +108,7 @@
           "read_time": 6
         },
         {
-          "id": "6",
+          "id": 6,
           "title": "Mastering Git Workflows",
           "slug": "mastering-git-workflows",
           "excerpt": "Learn effective Git branching strategies and collaboration workflows for teams.",
@@ -126,7 +126,7 @@
           "read_time": 5
         },
         {
-          "id": "7",
+          "id": 7,
           "title": "Understanding Docker Containers",
           "slug": "understanding-docker-containers",
           "excerpt": "A comprehensive guide to containerization with Docker for development and deployment.",
@@ -144,7 +144,7 @@
           "read_time": 9
         },
         {
-          "id": "8",
+          "id": 8,
           "title": "Testing Strategies for React Apps",
           "slug": "testing-strategies-react-apps",
           "excerpt": "Implement comprehensive testing with Jest, React Testing Library, and Cypress.",
@@ -166,6 +166,7 @@
         {
           "title": "E-Commerce Platform",
           "project_type": "Web Application",
+          "category": "Web",
           "description": "Built a scalable e-commerce platform handling 100K+ daily users with real-time inventory management",
           "technologies": [
             "React",
@@ -175,12 +176,14 @@
           ],
           "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
           "link": "#",
-          "tags":  [],
-          "started_at":  "",
+          "tags": [],
+          "started_at": "",
           "ended_at": ""
         },
         {
           "title": "Analytics Dashboard",
+          "project_type": "Web Application",
+          "category": "Web",
           "description": "Real-time analytics dashboard with interactive data visualizations and reporting features",
           "technologies": [
             "Next.js",
@@ -190,13 +193,14 @@
           ],
           "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
           "link": "#",
-          "project_type":  "",
-          "tags":  [],
-          "started_at":  "",
+          "tags": [],
+          "started_at": "",
           "ended_at": ""
         },
         {
           "title": "Mobile Banking App",
+          "project_type": "Web Application",
+          "category": "Web",
           "description": "Secure mobile banking application with biometric authentication and transaction tracking",
           "technologies": [
             "React Native",
@@ -206,9 +210,8 @@
           ],
           "image": "https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&w=600",
           "link": "#",
-          "project_type":  "",
-          "tags":  [],
-          "started_at":  "",
+          "tags": [],
+          "started_at": "",
           "ended_at": ""
         }
       ],
@@ -313,6 +316,7 @@
       "projects": [
         {
           "title": "Wedding Collections",
+          "project_type": "Web Application",
           "description": "Romantic and timeless wedding photography capturing your special day",
           "category": "Wedding",
           "image": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -320,6 +324,7 @@
         },
         {
           "title": "Portrait Sessions",
+          "project_type": "Web Application",
           "description": "Professional portraits that showcase your unique personality and style",
           "category": "Portrait",
           "image": "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -327,6 +332,7 @@
         },
         {
           "title": "Nature & Landscapes",
+          "project_type": "Web Application",
           "description": "Breathtaking landscapes and nature photography from around the world",
           "category": "Landscape",
           "image": "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -334,6 +340,7 @@
         },
         {
           "title": "Street Photography",
+          "project_type": "Web Application",
           "description": "Candid moments and urban life captured in stunning detail",
           "category": "Street",
           "image": "https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -476,6 +483,7 @@
       "projects": [
         {
           "title": "Interactive Math Learning Platform",
+          "project_type": "Web Application",
           "description": "Developed online platform with gamified lessons improving student engagement by 45%",
           "category": "Digital Learning",
           "image": "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -483,6 +491,7 @@
         },
         {
           "title": "STEM Workshop Series",
+          "project_type": "Web Application",
           "description": "Created and led hands-on STEM workshops for middle school students",
           "category": "Workshop",
           "image": "https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -490,6 +499,7 @@
         },
         {
           "title": "Curriculum Development",
+          "project_type": "Web Application",
           "description": "Designed comprehensive mathematics curriculum aligned with state standards",
           "category": "Curriculum",
           "image": "https://images.pexels.com/photos/256520/pexels-photo-256520.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -567,7 +577,7 @@
       },
       "blogs": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -585,7 +595,7 @@
           "read_time": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Building Scalable Node.js APIs",
           "slug": "building-scalable-nodejs-apis",
           "excerpt": "Best practices for designing and implementing scalable REST APIs with Node.js and Express.",
@@ -603,7 +613,7 @@
           "read_time": 8
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Modern CSS Techniques for 2024",
           "slug": "modern-css-techniques-2024",
           "excerpt": "Explore the latest CSS features including container queries, cascade layers, and has() selector.",
@@ -621,7 +631,7 @@
           "read_time": 6
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Database Design Best Practices",
           "slug": "database-design-best-practices",
           "excerpt": "Learn essential principles for designing efficient and maintainable database schemas.",
@@ -639,7 +649,7 @@
           "read_time": 7
         },
         {
-          "id": "5",
+          "id": 5,
           "title": "Introduction to Web Performance",
           "slug": "introduction-web-performance",
           "excerpt": "Optimize your web applications for speed and deliver better user experiences.",
@@ -657,7 +667,7 @@
           "read_time": 6
         },
         {
-          "id": "6",
+          "id": 6,
           "title": "Mastering Git Workflows",
           "slug": "mastering-git-workflows",
           "excerpt": "Learn effective Git branching strategies and collaboration workflows for teams.",
@@ -675,7 +685,7 @@
           "read_time": 5
         },
         {
-          "id": "7",
+          "id": 7,
           "title": "Understanding Docker Containers",
           "slug": "understanding-docker-containers",
           "excerpt": "A comprehensive guide to containerization with Docker for development and deployment.",
@@ -693,7 +703,7 @@
           "read_time": 9
         },
         {
-          "id": "8",
+          "id": 8,
           "title": "Testing Strategies for React Apps",
           "slug": "testing-strategies-react-apps",
           "excerpt": "Implement comprehensive testing with Jest, React Testing Library, and Cypress.",
@@ -711,7 +721,7 @@
           "read_time": 10
         },
         {
-          "id": "9",
+          "id": 9,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -729,7 +739,7 @@
           "read_time": 5
         },
         {
-          "id": "10",
+          "id": 10,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -747,7 +757,7 @@
           "read_time": 5
         },
         {
-          "id": "11",
+          "id": 11,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -765,7 +775,7 @@
           "read_time": 5
         },
         {
-          "id": "12",
+          "id": 12,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -783,7 +793,7 @@
           "read_time": 5
         },
         {
-          "id": "13",
+          "id": 13,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -801,7 +811,7 @@
           "read_time": 5
         },
         {
-          "id": "14",
+          "id": 15,
           "title": "Getting Started with React and TypeScript",
           "slug": "getting-started-react-typescript",
           "excerpt": "Learn how to set up a React project with TypeScript and build type-safe applications from the ground up.",
@@ -822,6 +832,7 @@
       "projects": [
         {
           "title": "Interactive Math Learning Platform",
+          "project_type": "Web Application",
           "description": "Developed online platform with gamified lessons improving student engagement by 45%",
           "category": "Digital Learning",
           "image": "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -829,6 +840,7 @@
         },
         {
           "title": "STEM Workshop Series",
+          "project_type": "Web Application",
           "description": "Created and led hands-on STEM workshops for middle school students",
           "category": "Workshop",
           "image": "https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -836,6 +848,7 @@
         },
         {
           "title": "Curriculum Development",
+          "project_type": "Web Application",
           "description": "Designed comprehensive mathematics curriculum aligned with state standards",
           "category": "Curriculum",
           "image": "https://images.pexels.com/photos/256520/pexels-photo-256520.jpeg?auto=compress&cs=tinysrgb&w=600",
