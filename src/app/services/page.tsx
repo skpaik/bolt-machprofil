@@ -7,54 +7,22 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
-  Code,
-  Palette,
-  Smartphone,
-  Database,
-  Cloud,
-  Search,
-  Megaphone,
-  BarChart,
-  Pen,
-  Video,
-  ShoppingCart,
-  Users,
   Zap,
-  Settings,
   Shield,
   Globe,
-  Camera,
   HeadphonesIcon,
   CheckCircle,
   Clock,
   DollarSign,
   ArrowRight
 } from 'lucide-react';
-
-// Service interface - adaptable for any professional service
-interface Service {
-  id: string;
-  title: string;
-  category: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  features: string[];
-  deliverables?: string[];
-  pricing?: {
-    type: 'Fixed' | 'Hourly' | 'Project-based' | 'Contact';
-    amount?: string;
-    currency?: string;
-  };
-  duration?: string;
-  popular?: boolean;
-  tags?: string[];
-}
+import {Service} from "@/lib/types/portfolio";
+import {getLucidIcon} from "@/components/lucid-icon-map";
 
 // Sample services data - covers various professional services
 const SAMPLE_SERVICES: Service[] = [
   {
-    id: '1',
+    id: 1,
     title: 'Web Development',
     category: 'Development',
     icon: 'Code',
@@ -86,7 +54,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Full Stack']
   },
   {
-    id: '2',
+    id: 2,
     title: 'Mobile App Development',
     category: 'Development',
     icon: 'Smartphone',
@@ -118,7 +86,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['React Native', 'Flutter', 'iOS', 'Android', 'Mobile']
   },
   {
-    id: '3',
+    id: 3,
     title: 'UI/UX Design',
     category: 'Design',
     icon: 'Palette',
@@ -149,7 +117,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['Figma', 'UI/UX', 'Prototyping', 'User Research', 'Design Systems']
   },
   {
-    id: '4',
+    id: 4,
     title: 'SEO Optimization',
     category: 'Marketing',
     icon: 'Search',
@@ -180,7 +148,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['SEO', 'Google Analytics', 'Content', 'Marketing', 'Growth']
   },
   {
-    id: '5',
+    id: 5,
     title: 'Cloud Solutions',
     category: 'Infrastructure',
     icon: 'Cloud',
@@ -211,7 +179,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['AWS', 'Azure', 'GCP', 'DevOps', 'Infrastructure']
   },
   {
-    id: '6',
+    id: 6,
     title: 'Digital Marketing',
     category: 'Marketing',
     icon: 'Megaphone',
@@ -242,7 +210,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['Social Media', 'PPC', 'Email Marketing', 'Content', 'Analytics']
   },
   {
-    id: '7',
+    id: 7,
     title: 'E-commerce Solutions',
     category: 'Development',
     icon: 'ShoppingCart',
@@ -274,7 +242,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['Shopify', 'WooCommerce', 'E-commerce', 'Payments', 'Inventory']
   },
   {
-    id: '8',
+    id: 8,
     title: 'Content Writing',
     category: 'Content',
     icon: 'Pen',
@@ -305,7 +273,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['Writing', 'SEO', 'Blogging', 'Copywriting', 'Content Strategy']
   },
   {
-    id: '9',
+    id: 9,
     title: 'API Development',
     category: 'Development',
     icon: 'Database',
@@ -336,7 +304,7 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['REST', 'GraphQL', 'Node.js', 'API', 'Backend']
   },
   {
-    id: '10',
+    id: 10,
     title: 'Consulting & Strategy',
     category: 'Consulting',
     icon: 'Users',
@@ -367,23 +335,6 @@ const SAMPLE_SERVICES: Service[] = [
     tags: ['Consulting', 'Strategy', 'Architecture', 'Training', 'Mentorship']
   }
 ];
-
-// Icon mapping
-const iconMap: { [key: string]: React.ReactNode } = {
-  'Code': <Code className="w-6 h-6" />,
-  'Palette': <Palette className="w-6 h-6" />,
-  'Smartphone': <Smartphone className="w-6 h-6" />,
-  'Database': <Database className="w-6 h-6" />,
-  'Cloud': <Cloud className="w-6 h-6" />,
-  'Search': <Search className="w-6 h-6" />,
-  'Megaphone': <Megaphone className="w-6 h-6" />,
-  'BarChart': <BarChart className="w-6 h-6" />,
-  'Pen': <Pen className="w-6 h-6" />,
-  'Video': <Video className="w-6 h-6" />,
-  'ShoppingCart': <ShoppingCart className="w-6 h-6" />,
-  'Users': <Users className="w-6 h-6" />,
-  'Settings': <Settings className="w-6 h-6" />,
-};
 
 export default function ServicePage() {
   const { appData, langI18n } = usePortfolio();
@@ -439,7 +390,7 @@ export default function ServicePage() {
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      {iconMap[service.icon] || <Settings className="w-6 h-6" />}
+                      {getLucidIcon(service.icon)}
                     </div>
                     <Badge variant="secondary">{service.category}</Badge>
                   </div>

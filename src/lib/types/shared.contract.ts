@@ -1,6 +1,12 @@
+import {SortOption} from "@/lib/types/type.config";
 
 export interface FilterOption {
     value: string;
+    label: string;
+}
+
+export interface SortFilterOption {
+    value: SortOption;
     label: string;
 }
 
@@ -14,6 +20,6 @@ export interface FilterConfig {
 
 export interface SortConfig {
     value: string;
-    options: FilterOption[];
+    options: SortFilterOption[];
     onChange: (value: string) => void;
 }

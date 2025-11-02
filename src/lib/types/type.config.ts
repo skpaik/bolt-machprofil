@@ -5,7 +5,8 @@ export type ThemeType = 'light' | 'dark' | 'system';
 
 
 export type SortOption =
-    'date-desc'
+    'all'
+    | 'date-desc'
     | 'date-asc'
     | 'title-asc'
     | 'title-desc'
@@ -14,4 +15,10 @@ export type SortOption =
     | 'album-asc'
     | 'album-desc'
     | 'project-type-asc'
-    | 'project-type-desc';
+    | 'project-type-desc'
+    | 'name-asc'
+    | 'name-desc'
+    | 'proficiency-desc'
+    | 'proficiency-asc'
+    | 'experience-desc'
+    | 'experience-asc';

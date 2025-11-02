@@ -20,71 +20,9 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
+import {SortOption} from "@/lib/types/type.config";
+import { getLucidIcon } from "@/components/lucid-icon-map";
 
-// Skill interface - adaptable for any profession
-interface Skill {
-    id: string;
-    name: string;
-    category: string; // Technical, Design, Business, Soft Skills, Languages, etc.
-    proficiency: number; // 0-100
-    level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
-    yearsOfExperience?: number;
-    tags?: string[];
-    description?: string;
-    certifications?: string[];
-    icon?: string;
-}
-
-type SortOption = 'name-asc' | 'name-desc' | 'proficiency-desc' | 'proficiency-asc' | 'category-asc' | 'category-desc' | 'experience-desc' | 'experience-asc';
-
-// Sample skills data - covers various professions
-const SAMPLE_SKILLS: Skill[] = [
-    // Technical Skills
-    { id: '1', name: 'JavaScript', category: 'Technical', proficiency: 95, level: 'Expert', yearsOfExperience: 8, tags: ['Programming', 'Frontend', 'Backend'], description: 'Full-stack JavaScript development including ES6+, async/await, and modern frameworks.' },
-    { id: '2', name: 'React', category: 'Technical', proficiency: 90, level: 'Expert', yearsOfExperience: 6, tags: ['Frontend', 'Framework', 'UI'], description: 'Building scalable web applications with React, hooks, and state management.' },
-    { id: '3', name: 'TypeScript', category: 'Technical', proficiency: 88, level: 'Advanced', yearsOfExperience: 5, tags: ['Programming', 'Type Safety'], description: 'Strong typing for JavaScript applications, interfaces, and generics.' },
-    { id: '4', name: 'Python', category: 'Technical', proficiency: 85, level: 'Advanced', yearsOfExperience: 6, tags: ['Programming', 'Backend', 'Data Science'], description: 'Backend development, automation, and data analysis.' },
-    { id: '5', name: 'Node.js', category: 'Technical', proficiency: 87, level: 'Advanced', yearsOfExperience: 7, tags: ['Backend', 'API', 'Server'], description: 'Server-side JavaScript with Express, RESTful APIs, and microservices.' },
-
-    // Design Skills
-    { id: '6', name: 'UI/UX Design', category: 'Design', proficiency: 80, level: 'Advanced', yearsOfExperience: 5, tags: ['Design', 'User Experience', 'Interface'], description: 'Creating intuitive and visually appealing user interfaces.' },
-    { id: '7', name: 'Figma', category: 'Design', proficiency: 85, level: 'Advanced', yearsOfExperience: 4, tags: ['Design Tool', 'Prototyping', 'Collaboration'], description: 'Wireframing, prototyping, and design systems.' },
-    { id: '8', name: 'Adobe Photoshop', category: 'Design', proficiency: 75, level: 'Advanced', yearsOfExperience: 7, tags: ['Image Editing', 'Graphics'], description: 'Photo editing, digital art, and graphic design.' },
-    { id: '9', name: 'Illustration', category: 'Design', proficiency: 70, level: 'Intermediate', yearsOfExperience: 3, tags: ['Art', 'Creative', 'Visual'], description: 'Digital and traditional illustration techniques.' },
-
-    // Business Skills
-    { id: '10', name: 'Project Management', category: 'Business', proficiency: 82, level: 'Advanced', yearsOfExperience: 6, tags: ['Management', 'Planning', 'Leadership'], description: 'Agile methodologies, Scrum, and team coordination.' },
-    { id: '11', name: 'Business Analysis', category: 'Business', proficiency: 78, level: 'Advanced', yearsOfExperience: 5, tags: ['Analysis', 'Strategy', 'Requirements'], description: 'Requirements gathering, stakeholder management, and process improvement.' },
-    { id: '12', name: 'Marketing Strategy', category: 'Business', proficiency: 73, level: 'Intermediate', yearsOfExperience: 4, tags: ['Marketing', 'Strategy', 'Growth'], description: 'Digital marketing, SEO, and brand development.' },
-
-    // Soft Skills
-    { id: '13', name: 'Communication', category: 'Soft Skills', proficiency: 90, level: 'Expert', yearsOfExperience: 10, tags: ['Interpersonal', 'Collaboration'], description: 'Clear verbal and written communication across teams and stakeholders.' },
-    { id: '14', name: 'Problem Solving', category: 'Soft Skills', proficiency: 88, level: 'Expert', yearsOfExperience: 10, tags: ['Critical Thinking', 'Analysis'], description: 'Analytical thinking and creative solution development.' },
-    { id: '15', name: 'Leadership', category: 'Soft Skills', proficiency: 80, level: 'Advanced', yearsOfExperience: 7, tags: ['Management', 'Mentoring', 'Team Building'], description: 'Team leadership, mentoring, and conflict resolution.' },
-
-    // Languages
-    { id: '16', name: 'English', category: 'Languages', proficiency: 100, level: 'Expert', yearsOfExperience: 20, tags: ['Communication', 'Native'], description: 'Native speaker with excellent written and verbal skills.' },
-    { id: '17', name: 'Spanish', category: 'Languages', proficiency: 75, level: 'Advanced', yearsOfExperience: 8, tags: ['Communication', 'Second Language'], description: 'Conversational and business proficiency.' },
-    { id: '18', name: 'German', category: 'Languages', proficiency: 60, level: 'Intermediate', yearsOfExperience: 3, tags: ['Communication', 'Learning'], description: 'Intermediate conversational skills.' },
-
-    // Tools & Technologies
-    { id: '19', name: 'Git', category: 'Tools', proficiency: 92, level: 'Expert', yearsOfExperience: 8, tags: ['Version Control', 'Collaboration'], description: 'Version control, branching strategies, and team collaboration.' },
-    { id: '20', name: 'Docker', category: 'Tools', proficiency: 80, level: 'Advanced', yearsOfExperience: 4, tags: ['DevOps', 'Containers'], description: 'Containerization and deployment workflows.' },
-    { id: '21', name: 'AWS', category: 'Tools', proficiency: 77, level: 'Advanced', yearsOfExperience: 5, tags: ['Cloud', 'Infrastructure'], description: 'Cloud services, EC2, S3, Lambda, and serverless architecture.' },
-];
-
-// Category icons mapping
-const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-        'Technical': <Code className="w-5 h-5" />,
-        'Design': <Palette className="w-5 h-5" />,
-        'Business': <TrendingUp className="w-5 h-5" />,
-        'Soft Skills': <MessageSquare className="w-5 h-5" />,
-        'Languages': <MessageSquare className="w-5 h-5" />,
-        'Tools': <Wrench className="w-5 h-5" />,
-    };
-    return iconMap[category] || <Star className="w-5 h-5" />;
-};
 
 // Proficiency color mapping
 const getProficiencyColor = (proficiency: number): string => {
@@ -95,7 +33,7 @@ const getProficiencyColor = (proficiency: number): string => {
 };
 
 export default function SkillPage() {
-    const { appData, contentData, langI18n } = usePortfolio();
+    const { appData, contentData,appConfig, langI18n } = usePortfolio();
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -103,8 +41,8 @@ export default function SkillPage() {
     const [sortBy, setSortBy] = useState<SortOption>('proficiency-desc');
 
     // Use real data if available, otherwise use sample data
-    const skills = SAMPLE_SKILLS;
-    const ITEMS_PER_PAGE = 12;
+    const skills = contentData.skills;
+    const ITEMS_PER_PAGE = appConfig.item_per_page;
 
     // Filter and search skills
     const filteredSkills = useMemo(() => {
@@ -123,7 +61,7 @@ export default function SkillPage() {
             if (searchQuery) {
                 const query = searchQuery.toLowerCase();
                 const searchableText = [
-                    skill.name,
+                    skill.title,
                     skill.category,
                     skill.level,
                     skill.description || '',
@@ -142,9 +80,9 @@ export default function SkillPage() {
         filtered.sort((a, b) => {
             switch (sortBy) {
                 case 'name-asc':
-                    return a.name.localeCompare(b.name);
+                    return a.title.localeCompare(b.title);
                 case 'name-desc':
-                    return b.name.localeCompare(a.name);
+                    return b.title.localeCompare(a.title);
                 case 'proficiency-desc':
                     return b.proficiency - a.proficiency;
                 case 'proficiency-asc':
@@ -264,10 +202,10 @@ export default function SkillPage() {
                                 <div className="flex items-start justify-between mb-3">
                                     <div className="flex items-center gap-3">
                                         <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                                            {getCategoryIcon(skill.category)}
+                                            {getLucidIcon(skill.category)}
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-lg">{skill.name}</h3>
+                                            <h3 className="font-bold text-lg">{skill.title}</h3>
                                             <p className="text-sm text-muted-foreground">{skill.category}</p>
                                         </div>
                                     </div>

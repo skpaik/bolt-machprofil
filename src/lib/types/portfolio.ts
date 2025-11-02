@@ -39,6 +39,11 @@ export interface Certificate extends BaseContent {
     image: string;
 }
 
+export interface TermsSection extends BaseContent {
+    icon: any;
+    content: string[];
+}
+
 export interface SocialLinks {
     github?: string;
     linkedin?: string;
@@ -97,11 +102,34 @@ export interface PrimaryMenuItem {
     icon?: any
 }
 
-
-export interface Skills {
-    [category: string]: string[];
+// Skill interface - adaptable for any profession
+export interface Skills extends BaseContent {
+    category: string; // Technical, Design, Business, Soft Skills, Languages, etc.
+    proficiency: number; // 0-100
+    level: string;//  'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
+    yearsOfExperience?: number;
+    tags?: string[];
+    description?: string;
+    certifications?: string[];
+    icon?: string;
 }
-
+// Service interface - adaptable for any professional service
+export interface Service  extends BaseContent {
+    category: string;
+    description: string;
+    shortDescription: string;
+    icon: string;
+    features: string[];
+    deliverables?: string[];
+    pricing?: {
+        type: 'Fixed' | 'Hourly' | 'Project-based' | 'Contact';
+        amount?: string;
+        currency?: string;
+    };
+    duration?: string;
+    popular?: boolean;
+    tags?: string[];
+}
 export interface AppConfig {
     item_per_page: number;
 }
@@ -111,9 +139,11 @@ export interface ContentData {
     projects: Project[];
     experience: Experience[];
     education: Education[];
-    skills: Skills;
+    skills: Skills[];
     photos: Photo[];
     certificates: Certificate[];
+    terms: TermsSection[];
+    //services: Service[];
 }
 
 export interface AppData {
