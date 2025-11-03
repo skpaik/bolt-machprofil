@@ -5,7 +5,6 @@ import {usePortfolio} from '@/components/context/PortfolioContext';
 import {Card, CardContent} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
-import {ArrowRight, Download, Heart, Mail, MapPin} from 'lucide-react';
 import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function AboutPage() {
@@ -53,11 +52,11 @@ export default function AboutPage() {
                         <div
                             className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-muted-foreground mb-6">
                             <div className="flex items-center gap-2">
-                                <MapPin className="w-4 h-4"/>
+                                {showLucidIcon('map-pin', 'w-4 h-4')}
                                 <span>{hero.location}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Mail className="w-4 h-4"/>
+                                {showLucidIcon('mail', 'w-4 h-4')}
                                 <a href={`mailto:${hero.email}`} className="hover:text-primary transition-colors">
                                     {hero.email}
                                 </a>
@@ -139,7 +138,7 @@ export default function AboutPage() {
                 <Card className="mb-12">
                     <CardContent className="p-6 sm:p-8">
                         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                            <Heart className="w-6 h-6 text-primary"/>
+                            {showLucidIcon('heart', 'w-6 h-6 text-primary')}
                             Interests & Hobbies
                         </h2>
                         <div className="flex flex-wrap gap-3">
@@ -167,11 +166,11 @@ export default function AboutPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="text-lg px-8">
                                 {cta.primaryButton}
-                                <ArrowRight className="w-5 h-5 ml-2"/>
+                                {showLucidIcon('arrow-right', 'w-5 h-5 ml-2')}
                             </Button>
                             {hero.resumeUrl && (
                                 <Button size="lg" variant="outline" className="text-lg px-8">
-                                    <Download className="w-5 h-5 mr-2"/>
+                                    {showLucidIcon('download', 'w-5 h-5 mr-2')}
                                     {cta.secondaryButton}
                                 </Button>
                             )}

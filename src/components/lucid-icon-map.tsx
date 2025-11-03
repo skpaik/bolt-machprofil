@@ -45,6 +45,8 @@ import {
     Users,
     Video,
     Wrench,
+    Download,
+    ArrowRight
 } from 'lucide-react'; // Icon mapping
 
 // Icon mapping for dynamic lookup
@@ -80,8 +82,8 @@ export const ICON_MAP: { [key: string]: LucideIcon } = {
     'shield': Shield,
     'file-text': FileText,
     'check-circle': CheckCircle,
-
-
+    'download': Download,
+    'arrow-right': ArrowRight,
     'briefcase': Briefcase,
     'target': Target,
     'heart': Heart,
