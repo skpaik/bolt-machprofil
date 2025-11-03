@@ -1,122 +1,184 @@
 "use client";
 
 import React from 'react';
-import { usePortfolio } from '@/components/context/PortfolioContext';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
-import Link from 'next/link';
+import {usePortfolio} from '@/components/context/PortfolioContext';
+import {Card, CardContent} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
+import {Button} from '@/components/ui/button';
+import {ArrowRight, Download, Heart, Mail, MapPin} from 'lucide-react';
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
-export default function Home() {
-  const { appData, contentData, langI18n } = usePortfolio();
+export default function AboutPage() {
+    const {appData, langI18n, aboutContentData, contentData} = usePortfolio();
 
-  const getSocialIcon = (platform: string) => {
-    const icons: { [key: string]: React.ReactNode } = {
-      github: <Github size={20} />,
-      linkedin: <Linkedin size={20} />,
-      twitter: <Twitter size={20} />,
-      instagram: <Instagram size={20} />,
-      facebook: <Facebook size={20} />,
-    };
-    return icons[platform] || null;
-  };
+    const {
+        hero,
+        intro,
+        sections = [],
+        stats = [],
+        interests = [],
+        socialLinks = [],
+        cta
+    } = aboutContentData;
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-              {appData.name}
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-              {appData.title}
-            </p>
-            <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-              {appData.bio}
-            </p>
-          </div>
+    return (
+        <>
+            {/* Hero Section */}
+            <div className="mb-12">
+                <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    {/* Profile Image */}
+                    <div className="relative">
+                        <div className="w-48 h-48 rounded-full overflow-hidden ring-4 ring-primary/20">
+                            <img
+                                src={hero.image}
+                                alt={hero.name}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        {hero.available && (
+                            <div
+                                className="absolute bottom-2 right-2 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+                                <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                                Available
+                            </div>
+                        )}
+                    </div>
 
-          <div className="space-y-3">
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <Mail size={18} />
-              <a href={`mailto:${appData.email}`} className="hover:text-foreground transition-colors">
-                {appData.email}
-              </a>
+                    {/* Hero Text */}
+                    <div className="flex-1 text-center md:text-left">
+                        <h1 className="text-4xl sm:text-5xl font-bold mb-2">{hero.name}</h1>
+                        <p className="text-2xl text-primary font-semibold mb-3">{hero.title}</p>
+                        <p className="text-lg text-muted-foreground mb-4">{hero.tagline}</p>
+
+                        <div
+                            className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-muted-foreground mb-6">
+                            <div className="flex items-center gap-2">
+                                <MapPin className="w-4 h-4"/>
+                                <span>{hero.location}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Mail className="w-4 h-4"/>
+                                <a href={`mailto:${hero.email}`} className="hover:text-primary transition-colors">
+                                    {hero.email}
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Social Links */}
+                        <div className="flex gap-3 justify-center md:justify-start">
+                            {socialLinks.map((social) => {
+                                return (
+                                    <a
+                                        key={social.platform}
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                                        aria-label={social.platform}
+                                    >
+                                        {showLucidIcon(social.icon, 'w-5 h-5')}
+                                    </a>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <Phone size={18} />
-              <span>{appData.phone}</span>
-            </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <MapPin size={18} />
-              <span>{appData.location}</span>
-            </div>
-          </div>
 
-          <div className="flex flex-wrap gap-3">
-            {Object.entries(appData.social).map(([platform, url]) => (
-              <Button key={platform} variant="outline" size="icon" asChild>
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  {getSocialIcon(platform)}
-                </a>
-              </Button>
-            ))}
-          </div>
+            {/* Introduction */}
+            {intro && (
+                <Card className="mb-12 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+                    <CardContent className="p-6 sm:p-8">
+                        <p className="text-lg leading-relaxed">{intro}</p>
+                    </CardContent>
+                </Card>
+            )}
 
-          <div className="flex flex-wrap gap-3 pt-4">
-            <Button asChild size="lg">
-              <Link href="/contact">{langI18n.getInTouch}</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/projects">{langI18n.viewMore}</Link>
-            </Button>
-          </div>
-        </div>
+            {/* Stats */}
+            {stats.length > 0 && (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                    {stats.map((stat) => {
+                        return (
+                            <Card key={stat.label} className="text-center">
+                                <CardContent className="p-6">
+                                    {showLucidIcon(stat.icon, 'w-8 h-8 mx-auto mb-3 text-primary')}
+                                    <div className="text-3xl font-bold mb-1">{stat.value}</div>
+                                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                                </CardContent>
+                            </Card>
+                        );
+                    })}
+                </div>
+            )}
 
-        <div className="flex justify-center">
-          <Card className="p-8 w-full max-w-md">
-            <div className="flex flex-col items-center space-y-6">
-              <Avatar className="w-64 h-64">
-                <AvatarImage src={appData.avatar} alt={appData.name} />
-                <AvatarFallback className="text-4xl">
-                  {appData.name.split(' ').map(n => n[0]).join('')}
-                </AvatarFallback>
-              </Avatar>
+            {/* About Sections */}
+            {sections.length > 0 && (
+                <div className="space-y-8 mb-12">
+                    {sections.map((section) => {
+                        return (
+                            <Card key={section.id}>
+                                <CardContent className="p-6 sm:p-8">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                                            {showLucidIcon(section.icon, 'w-5 h-5')}
+                                        </div>
+                                        <h2 className="text-2xl font-bold">{section.title}</h2>
+                                    </div>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        {section.content}
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        );
+                    })}
+                </div>
+            )}
 
-              <div className="text-center space-y-2">
-                <h3 className="text-2xl font-semibold">{appData.name}</h3>
-                <p className="text-muted-foreground">{appData.title}</p>
-                <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-                  <MapPin size={14} />
-                  {appData.location}
-                </p>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </div>
+            {/* Interests/Hobbies */}
+            {interests.length > 0 && (
+                <Card className="mb-12">
+                    <CardContent className="p-6 sm:p-8">
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                            <Heart className="w-6 h-6 text-primary"/>
+                            Interests & Hobbies
+                        </h2>
+                        <div className="flex flex-wrap gap-3">
+                            {interests.map((interest) => {
+                                return (
+                                    <Badge key={interest.name} variant="secondary" className="px-4 py-2 text-sm">
+                                        {showLucidIcon(interest.icon, 'w-4 h-4 mr-2')}
+                                        {interest.name}
+                                    </Badge>
+                                );
+                            })}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
 
-      <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {contentData.projects.slice(0, 4).map((project, index) => (
-          <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
-            <div className="aspect-video overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
-              <p className="text-sm text-muted-foreground line-clamp-2">
-                {project.description}
-              </p>
-            </div>
-          </Card>
-        ))}
-      </div>
-    </div>
-  );
+            {/* CTA Section */}
+            {cta && (
+                <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
+                    <CardContent className="p-8 sm:p-12 text-center">
+                        <h2 className="text-3xl font-bold mb-3">{cta.title}</h2>
+                        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                            {cta.description}
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button size="lg" className="text-lg px-8">
+                                {cta.primaryButton}
+                                <ArrowRight className="w-5 h-5 ml-2"/>
+                            </Button>
+                            {hero.resumeUrl && (
+                                <Button size="lg" variant="outline" className="text-lg px-8">
+                                    <Download className="w-5 h-5 mr-2"/>
+                                    {cta.secondaryButton}
+                                </Button>
+                            )}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+        </>
+    );
 }

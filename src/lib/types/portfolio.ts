@@ -164,6 +164,8 @@ export interface StaticContentData {
     privacy: TermsPrivacy;
 }
 
+
+
 export interface AppData {
     name: string;
     title: string;

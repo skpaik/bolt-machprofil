@@ -3,33 +3,48 @@
 import React from 'react';
 import {
     AlertCircle,
+    Award,
     BarChart,
+    Book,
+    Briefcase,
+    Calendar,
+    Camera,
     CheckCircle,
     Clock,
     Cloud,
     Code,
+    Coffee,
     Cookie,
     Database,
     DollarSign,
     Eye,
     FileText,
+    Github,
+    Globe,
+    Heart,
+    Linkedin,
     Lock,
     LucideIcon,
     Mail,
+    MapPin,
     Megaphone,
     MessageSquare,
+    Music,
     Palette,
     Pen,
+    Plane,
     Search,
     Settings,
     Shield,
     ShoppingCart,
     Smartphone,
+    Target,
     TrendingUp,
+    Twitter,
     UserCheck,
     Users,
     Video,
-    Wrench
+    Wrench,
 } from 'lucide-react'; // Icon mapping
 
 // Icon mapping for dynamic lookup
@@ -65,9 +80,26 @@ export const ICON_MAP: { [key: string]: LucideIcon } = {
     'shield': Shield,
     'file-text': FileText,
     'check-circle': CheckCircle,
+
+
+    'briefcase': Briefcase,
+    'target': Target,
+    'heart': Heart,
+    'award': Award,
+    'calendar': Calendar,
+    'music': Music,
+    'camera': Camera,
+    'book': Book,
+    'plane': Plane,
+    'coffee': Coffee,
+    'github': Github,
+    'linkedin': Linkedin,
+    'twitter': Twitter,
+    'globe': Globe,
+    'map-pin': MapPin,
 };
 
-export const showLucidIcon = (icon: string) => {
+export const showLucidIcon = (icon: string, cssClass='w-5 h-5 text-primary') => {
     const IconComponent = ICON_MAP[icon];
-    return <IconComponent className="w-5 h-5 text-primary"/>;
+    return <IconComponent className={cssClass}/>;
 };
