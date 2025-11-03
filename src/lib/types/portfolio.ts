@@ -38,12 +38,11 @@ export interface Certificate extends BaseContent {
     credential: string;
     image: string;
 }
-
-export interface TermsSection extends BaseContent {
-    icon: any;
-    content: string[];
+export interface TermsSection extends BaseContent{
+    icon: string; // Icon name as string for dynamic lookup
+    content: string;
+    list?: string[];
 }
-
 export interface PrivacySection extends BaseContent {
     icon: string; // Icon name as string for dynamic lookup
     content: string;
@@ -55,6 +54,16 @@ export interface Privacy extends BaseContent {
     subtitle: string;
     lastUpdated: string;
     sections: PrivacySection[];
+    contactTitle: string;
+    contactText: string;
+    footerText: string;
+}
+
+
+export interface Terms extends BaseContent {
+    subtitle: string;
+    lastUpdated: string;
+    sections: TermsSection[];
     contactTitle: string;
     contactText: string;
     footerText: string;
@@ -163,7 +172,7 @@ export interface ContentData {
 }
 
 export interface StaticContentData {
-    terms: TermsSection[];
+    terms: Terms;
     privacy: Privacy;
 }
 

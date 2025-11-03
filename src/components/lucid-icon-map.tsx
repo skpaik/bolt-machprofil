@@ -4,6 +4,7 @@ import React from 'react';
 import {
     AlertCircle,
     BarChart,
+    CheckCircle,
     Clock,
     Cloud,
     Code,
@@ -24,7 +25,6 @@ import {
     Shield,
     ShoppingCart,
     Smartphone,
-    Star,
     TrendingUp,
     UserCheck,
     Users,
@@ -62,7 +62,9 @@ export const ICON_MAP: { [key: string]: LucideIcon } = {
     'lock': Lock,
     'clock': Clock,
     'alert-circle': AlertCircle,
-    'shield': Shield
+    'shield': Shield,
+    'file-text': FileText,
+    'check-circle': CheckCircle,
 };
 
 export const showLucidIcon = (icon: string) => {
