@@ -140,7 +140,7 @@ export interface ContentData {
     skills: Skills[];
     photos: Photo[];
     certificates: Certificate[];
-    //services: Service[];
+    services: Service[];
 }
 
 export interface TermsPrivacySection extends BaseContent {
