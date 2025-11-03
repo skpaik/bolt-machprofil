@@ -2,14 +2,26 @@
 
 import React, {createContext, ReactNode, useContext, useEffect, useState,} from "react";
 import portfolioData from "@/data/portfolio.json";
+import staticContentsData from "@/data/static_contents.json";
+import blogContentsData from "@/data/blog_contents.json";
 import languageData from "@/data/i18n.json";
 import settingData from "@/data/settings.json";
 import {LanguageType, ProfileType, TemplateType, ThemeType,} from "@/lib/types/type.config";
-import {AppConfig, AppData, ContentData, LanguageI18n, SettingSchema} from "@/lib/types/portfolio";
+import {
+    AppConfig,
+    AppData,
+    BlogPost,
+    ContentData,
+    LanguageI18n,
+    SettingSchema,
+    StaticContentData
+} from "@/lib/types/portfolio";
 
 interface PortfolioContextType {
     appData: AppData;
     contentData: ContentData;
+    staticContentData: StaticContentData;
+    blogContentData: BlogPost[];
     appConfig: AppConfig;
     profileType: ProfileType;
     setProfileType: (type: ProfileType) => void;
@@ -104,6 +116,8 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
     // Derived data
     const appData: AppData = portfolioData.profiles[profileType];
     const contentData: ContentData = portfolioData.profiles[profileType];
+    const staticContentData: StaticContentData = staticContentsData[languageType];
+    const blogContentData: BlogPost[] = blogContentsData[languageType];
     const appConfig: AppConfig = portfolioData.app_config;
     const langI18n: LanguageI18n = languageData[languageType];
 
@@ -111,7 +125,9 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
         <PortfolioContext.Provider
             value={{
                 appData,
+                blogContentData,
                 contentData,
+                staticContentData,
                 appConfig,
                 profileType,
                 setProfileType,

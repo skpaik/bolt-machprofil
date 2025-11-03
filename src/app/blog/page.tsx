@@ -17,14 +17,14 @@ const POSTS_PER_PAGE = 6;
 
 
 export default function BlogPage() {
-  const { appData, contentData, langI18n } = usePortfolio();
+  const { appData, blogContentData, langI18n } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedTag, setSelectedTag] = useState<string>('all');
   const [sortBy, setSortBy] = useState<SortOption>('date-desc');
 
-  const posts = contentData.blogs;
+  const posts = blogContentData;
 
   // Filter and search posts
   const filteredPosts = useMemo(() => {

@@ -21,7 +21,7 @@ import {
 import { Button } from '@/components/ui/button';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {SortOption} from "@/lib/types/type.config";
-import { getLucidIcon } from "@/components/lucid-icon-map";
+import { showLucidIcon} from "@/components/lucid-icon-map";
 
 
 // Proficiency color mapping
@@ -202,7 +202,7 @@ export default function SkillPage() {
                                 <div className="flex items-start justify-between mb-3">
                                     <div className="flex items-center gap-3">
                                         <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                                            {getLucidIcon(skill.category)}
+                                            {showLucidIcon(skill.category)}
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-lg">{skill.title}</h3>

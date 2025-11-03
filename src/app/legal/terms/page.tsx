@@ -7,10 +7,10 @@ import {Card, CardContent} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {CheckCircle, Clock, Mail} from 'lucide-react';
-import {getLucidIcon} from "@/components/lucid-icon-map";
+import { showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function TermsPage() {
-    const {appData, contentData, langI18n} = usePortfolio();
+    const {appData, staticContentData, langI18n} = usePortfolio();
     return (
         <>
             <PageHeading
@@ -28,12 +28,12 @@ export default function TermsPage() {
 
             {/* Terms Sections */}
             <div className="space-y-6">
-                {contentData.terms.map((section, index) => (
+                {staticContentData.terms.map((section, index) => (
                     <Card key={section.id} id={section.id.toString()}>
                         <CardContent className="p-6">
                             <div className="flex items-start gap-4 mb-4">
                                 <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
-                                    {getLucidIcon(section.icon)}
+                                    {showLucidIcon(section.icon)}
                                 </div>
                                 <h2 className="text-xl font-bold">
                                     {index + 1}. {section.title}

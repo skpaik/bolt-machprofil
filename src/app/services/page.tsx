@@ -17,7 +17,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import {Service} from "@/lib/types/portfolio";
-import {getLucidIcon} from "@/components/lucid-icon-map";
+import { showLucidIcon} from "@/components/lucid-icon-map";
 
 // Sample services data - covers various professional services
 const SAMPLE_SERVICES: Service[] = [
@@ -390,7 +390,7 @@ export default function ServicePage() {
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      {getLucidIcon(service.icon)}
+                      {showLucidIcon(service.icon)}
                     </div>
                     <Badge variant="secondary">{service.category}</Badge>
                   </div>

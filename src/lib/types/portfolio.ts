@@ -44,6 +44,22 @@ export interface TermsSection extends BaseContent {
     content: string[];
 }
 
+export interface PrivacySection extends BaseContent {
+    icon: string; // Icon name as string for dynamic lookup
+    content: string;
+    list?: string[];
+    note?: string;
+}
+
+export interface Privacy extends BaseContent {
+    subtitle: string;
+    lastUpdated: string;
+    sections: PrivacySection[];
+    contactTitle: string;
+    contactText: string;
+    footerText: string;
+}
+
 export interface SocialLinks {
     github?: string;
     linkedin?: string;
@@ -113,8 +129,9 @@ export interface Skills extends BaseContent {
     certifications?: string[];
     icon?: string;
 }
+
 // Service interface - adaptable for any professional service
-export interface Service  extends BaseContent {
+export interface Service extends BaseContent {
     category: string;
     description: string;
     shortDescription: string;
@@ -130,21 +147,26 @@ export interface Service  extends BaseContent {
     popular?: boolean;
     tags?: string[];
 }
+
 export interface AppConfig {
     item_per_page: number;
 }
 
 export interface ContentData {
-    blogs: BlogPost[];
     projects: Project[];
     experience: Experience[];
     education: Education[];
     skills: Skills[];
     photos: Photo[];
     certificates: Certificate[];
-    terms: TermsSection[];
     //services: Service[];
 }
+
+export interface StaticContentData {
+    terms: TermsSection[];
+    privacy: Privacy;
+}
+
 
 export interface AppData {
     name: string;
@@ -205,6 +227,7 @@ export interface LanguageI18n {
     readMore: string;
     latestPosts: string;
     allPosts: string;
+    lastUpdated: string;
 }
 
 export interface SettingSchema {

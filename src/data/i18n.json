@@ -38,7 +38,8 @@
     "skillsMastered": "Skills Mastered",
     "readMore": "Read More",
     "latestPosts": "Latest Posts",
-    "allPosts": "All Posts"
+    "allPosts": "All Posts",
+    "lastUpdated": "Last Updated"
   },
   "es": {
     "name": "Español",
@@ -79,7 +80,8 @@
     "skillsMastered": "Habilidades Dominadas",
     "readMore": "Leer Más",
     "latestPosts": "Últimas Publicaciones",
-    "allPosts": "Todas las Publicaciones"
+    "allPosts": "Todas las Publicaciones",
+    "lastUpdated": "Last Updated"
   },
   "fr": {
     "name": "Français",
@@ -120,7 +122,8 @@
     "skillsMastered": "Compétences Maîtrisées",
     "readMore": "Lire Plus",
     "latestPosts": "Derniers Articles",
-    "allPosts": "Tous les Articles"
+    "allPosts": "Tous les Articles",
+    "lastUpdated": "Last Updated"
   },
   "de": {
     "name": "Deutsch",
@@ -161,6 +164,7 @@
     "skillsMastered": "Beherrschte Fähigkeiten",
     "readMore": "Mehr Lesen",
     "latestPosts": "Neueste Beiträge",
-    "allPosts": "Alle Beiträge"
+    "allPosts": "Alle Beiträge",
+    "lastUpdated": "Last Updated"
   }
 }
