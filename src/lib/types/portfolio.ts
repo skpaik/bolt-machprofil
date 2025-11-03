@@ -75,7 +75,7 @@ export interface Project2 {
     ended_at?: string;
 }
 
-export interface Project extends BaseContent{
+export interface Project extends BaseContent {
     slug: string;
     description: string;
     shortDescription: string;
@@ -95,13 +95,34 @@ export interface Project extends BaseContent{
     featured?: boolean;
     likes?: number;
     views?: number;
-    status:  string | 'Completed' | 'In Progress' | 'Ongoing';
+    status: string | 'Completed' | 'In Progress' | 'Ongoing';
 }
-export interface Experience {
+
+export interface Experience2 {
     company: string;
     position: string;
     period: string;
     description: string;
+}
+
+export interface Experience {
+    id: string;
+    company: string;
+    companyUrl?: string;
+    logo?: string;
+    position: string;
+    employmentType: string | 'Full-time' | 'Part-time' | 'Contract' | 'Freelance' | 'Internship';
+    location: string;
+    locationType: string | 'On-site' | 'Remote' | 'Hybrid';
+    startDate: string;
+    endDate: string | 'Present';
+    duration?: string;
+    description: string;
+    responsibilities: string[];
+    achievements?: string[];
+    technologies: string[];
+    projects?: string[];
+    current?: boolean;
 }
 
 export interface Education {
