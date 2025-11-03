@@ -5,6 +5,7 @@ export interface BaseContent {
     title: string;
 }
 
+
 export interface BlogPost extends BaseContent {
     slug: string;
     excerpt: string;
@@ -38,36 +39,7 @@ export interface Certificate extends BaseContent {
     credential: string;
     image: string;
 }
-export interface TermsSection extends BaseContent{
-    icon: string; // Icon name as string for dynamic lookup
-    content: string;
-    list?: string[];
-}
-export interface PrivacySection extends BaseContent {
-    icon: string; // Icon name as string for dynamic lookup
-    content: string;
-    list?: string[];
-    note?: string;
-}
 
-export interface Privacy extends BaseContent {
-    subtitle: string;
-    lastUpdated: string;
-    sections: PrivacySection[];
-    contactTitle: string;
-    contactText: string;
-    footerText: string;
-}
-
-
-export interface Terms extends BaseContent {
-    subtitle: string;
-    lastUpdated: string;
-    sections: TermsSection[];
-    contactTitle: string;
-    contactText: string;
-    footerText: string;
-}
 
 export interface SocialLinks {
     github?: string;
@@ -171,11 +143,26 @@ export interface ContentData {
     //services: Service[];
 }
 
-export interface StaticContentData {
-    terms: Terms;
-    privacy: Privacy;
+export interface TermsPrivacySection extends BaseContent {
+    icon: string; // Icon name as string for dynamic lookup
+    content: string;
+    list?: string[];
+    note?: string;
 }
 
+export interface TermsPrivacy extends BaseContent {
+    subtitle: string;
+    lastUpdated: string;
+    sections: TermsPrivacySection[];
+    contactTitle: string;
+    contactText: string;
+    footerText: string;
+}
+
+export interface StaticContentData {
+    terms: TermsPrivacy;
+    privacy: TermsPrivacy;
+}
 
 export interface AppData {
     name: string;
