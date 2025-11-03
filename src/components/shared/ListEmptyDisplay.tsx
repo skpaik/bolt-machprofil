@@ -16,7 +16,7 @@ export function ListEmptyDisplay({title, message, handleClearAll,}: ListEmptyDis
                 <Search size={48} className="mx-auto mb-4 opacity-50"/>
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>
                 <p className="text-sm sm:text-base">
-                    {message} Try adjusting your search terms or filters to find what you're looking for.
+                    {message}
                 </p>
             </div>
             <Button variant="outline" onClick={handleClearAll}>

@@ -8,7 +8,7 @@ import { Briefcase, Calendar } from 'lucide-react';
 import {PageHeading} from "@/components/shared/PageHeading";
 
 export default function ExperiencePage() {
-  const { appData, contentData, langI18n } = usePortfolio();
+  const { appData, contentData,projectContentData, langI18n } = usePortfolio();
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function ExperiencePage() {
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-primary mb-2">
-              {contentData.projects.length}+
+              {projectContentData.length}+
             </div>
             <p className="text-muted-foreground">Projects Completed</p>
           </div>

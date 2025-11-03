@@ -46,11 +46,21 @@ import {
     Video,
     Wrench,
     Download,
-    ArrowRight
+    ArrowRight,
+    Building2,
+    ExternalLink,
+    Trophy,
+    Star,
+    Sparkles
 } from 'lucide-react'; // Icon mapping
 
 // Icon mapping for dynamic lookup
 export const ICON_MAP: { [key: string]: LucideIcon } = {
+    'sparkles': Sparkles,
+    'star': Star,
+    'building2': Building2,
+    'external-link': ExternalLink,
+    'trophy': Trophy,
     'eye': Eye,
     'cookie': Cookie,
     'user-check': UserCheck,
