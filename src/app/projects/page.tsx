@@ -2,37 +2,46 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { usePortfolio } from '@/components/context/PortfolioContext';
-import { Card } from '@/components/ui/card';
+import { PageHeading } from "@/components/shared/PageHeading";
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
-import {SortOption} from "@/lib/types/type.config";
+import { FilterBar } from '@/components/shared/FilterBar';
+import { Pagination } from '@/components/shared/Pagination';
+import Link from 'next/link';
+import {Project} from "@/lib/types/portfolio";
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
-import {FilterBar} from "@/components/shared/FilterBar";
+import {SortOption} from "@/lib/types/type.config";
 import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
-import {PageHeading} from "@/components/shared/PageHeading";
-import {Pagination} from "@/components/shared/Pagination";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function ProjectsPage() {
-  const { appData, contentData, appConfig, langI18n } = usePortfolio();
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const { projectContentData, appConfig, langI18n, contentData } = usePortfolio();
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
-    const [selectedProjectType, setSelectedProjectType] = useState<string>('all');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
     const [selectedTechnology, setSelectedTechnology] = useState<string>('all');
+    const [selectedStatus, setSelectedStatus] = useState<string>('all');
     const [sortBy, setSortBy] = useState<SortOption>('date-desc');
 
-    const projects = contentData.projects;
+    // Use real data if available, otherwise use sample data
+    const projects = projectContentData;
+    const ITEMS_PER_PAGE =appConfig.item_per_page;
 
     // Filter and search projects
     const filteredProjects = useMemo(() => {
         let filtered = projects.filter(project => {
-            // Project type filter
-            if (selectedProjectType !== 'all' && project.project_type !== selectedProjectType) {
+            // Category filter
+            if (selectedCategory !== 'all' && project.category !== selectedCategory) {
                 return false;
             }
 
-            // Tag filter
+            // Status filter
+            if (selectedStatus !== 'all' && project.status !== selectedStatus) {
+                return false;
+            }
+
+            // Technology filter
             if (selectedTechnology !== 'all' && !project.technologies?.includes(selectedTechnology)) {
                 return false;
             }
@@ -42,8 +51,12 @@ export default function ProjectsPage() {
                 const query = searchQuery.toLowerCase();
                 const searchableText = [
                     project.title,
+                    project.description,
+                    project.shortDescription,
                     project.category,
-                    project.description || '',
+                    project.client || '',
+                    project.role,
+                    ...(project.tags || []),
                     ...(project.technologies || [])
                 ].join(' ').toLowerCase();
 
@@ -59,29 +72,29 @@ export default function ProjectsPage() {
         filtered.sort((a, b) => {
             switch (sortBy) {
                 case 'date-desc':
-                    return new Date(b.started_at || 0).getTime() - new Date(a.started_at || 0).getTime();
+                    return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
                 case 'date-asc':
-                    return new Date(a.started_at || 0).getTime() - new Date(b.started_at || 0).getTime();
+                    return new Date(a.startDate).getTime() - new Date(b.startDate).getTime();
                 case 'title-asc':
                     return a.title.localeCompare(b.title);
                 case 'title-desc':
                     return b.title.localeCompare(a.title);
-                case 'project-type-asc':
-                    return (a.project_type || '').localeCompare(b.project_type || '');
-                case 'project-type-desc':
-                    return (b.project_type || '').localeCompare(a.project_type || '');
+                case 'likes-desc':
+                    return (b.likes || 0) - (a.likes || 0);
+                case 'views-desc':
+                    return (b.views || 0) - (a.views || 0);
                 default:
                     return 0;
             }
         });
 
         return filtered;
-    }, [projects, selectedProjectType, searchQuery, selectedTechnology, sortBy]);
+    }, [projects, selectedCategory, selectedStatus, searchQuery, selectedTechnology, sortBy]);
 
-    // Get unique albums and technology for filters
-    const projectTypeList = useMemo(() => {
-        const uniqueProjectType = [...new Set(projects.map(project => project.project_type).filter(Boolean))];
-        return uniqueProjectType.sort();
+    // Get unique categories
+    const categories = useMemo(() => {
+        const uniqueCategories = [...new Set(projects.map(p => p.category))];
+        return uniqueCategories.sort();
     }, [projects]);
 
     const technologies = useMemo(() => {
@@ -91,29 +104,33 @@ export default function ProjectsPage() {
     }, [projects]);
 
     const totalProjects = filteredProjects.length;
-    const totalPages = Math.ceil(totalProjects / appConfig.item_per_page);
+    const totalPages = Math.ceil(totalProjects / ITEMS_PER_PAGE);
 
     const currentProjects = useMemo(() => {
-        const startIndex = (currentPage - 1) * appConfig.item_per_page;
-        const endIndex = startIndex + appConfig.item_per_page;
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
         return filteredProjects.slice(startIndex, endIndex);
-    }, [filteredProjects, currentPage, appConfig.item_per_page]);
+    }, [filteredProjects, currentPage]);
+
+    // Separate featured and regular projects
+    const featuredProjects = currentProjects.filter(p => p.featured);
+    const regularProjects = currentProjects.filter(p => !p.featured);
 
     // Reset to first page when filters change
     useEffect(() => {
         setCurrentPage(1);
-    }, [searchQuery, selectedProjectType, selectedTechnology, sortBy]);
+    }, [searchQuery, selectedCategory, selectedTechnology, selectedStatus, sortBy]);
 
-    // Configure filters for FilterBar component
+    // Configure filters
     const filterConfigs: FilterConfig[] = [
         {
-            name: 'project_type',
-            label: 'Project type',
-            value: selectedProjectType,
-            onChange: setSelectedProjectType,
+            name: 'category',
+            label: 'Category',
+            value: selectedCategory,
+            onChange: setSelectedCategory,
             options: [
-                { value: 'all', label: 'All Project Type' },
-                ...projectTypeList.map(ptl => ({ value: ptl, label: ptl }))
+                { value: 'all', label: 'All Categories' },
+                ...categories.map(cat => ({ value: cat, label: cat }))
             ]
         },
         {
@@ -125,10 +142,21 @@ export default function ProjectsPage() {
                 { value: 'all', label: 'All Technology' },
                 ...technologies.map(technology => ({ value: technology, label: technology }))
             ]
+        },
+        {
+            name: 'status',
+            label: 'Status',
+            value: selectedStatus,
+            onChange: setSelectedStatus,
+            options: [
+                { value: 'all', label: 'All Status' },
+                { value: 'Completed', label: 'Completed' },
+                { value: 'In Progress', label: 'In Progress' },
+                { value: 'Ongoing', label: 'Ongoing' }
+            ]
         }
     ];
 
-    // Configure sort options
     const sortConfig: SortConfig = {
         value: sortBy,
         onChange: (value: string) => setSortBy(value as SortOption),
@@ -137,94 +165,228 @@ export default function ProjectsPage() {
             { value: 'date-asc', label: 'Date (Oldest)' },
             { value: 'title-asc', label: 'Title (A-Z)' },
             { value: 'title-desc', label: 'Title (Z-A)' },
-            { value: 'project-type-asc', label: 'Project type (A-Z)' },
-            { value: 'project-type-desc', label: 'Project type (Z-A)' }
+            { value: 'likes-desc', label: 'Most Liked' },
+            { value: 'views-desc', label: 'Most Viewed' }
         ]
     };
 
     const handleClearAll = () => {
         setSearchQuery('');
-        setSelectedProjectType('all');
+        setSelectedCategory('all');
+        setSelectedStatus('all');
         setSelectedTechnology('all');
         setSortBy('date-desc');
     };
 
-  return (
-    <>
-        <PageHeading
-            title={langI18n.projects}
-            subTitle={"A showcase of my work, demonstrating expertise and passion across various projects."}
-        />
-        {/* Filter Bar Component */}
-        <FilterBar
-            searchValue={searchQuery}
-            onSearchChange={setSearchQuery}
-            searchPlaceholder="Search project by title, album, Technology, or description..."
-            filters={filterConfigs}
-            sortConfig={sortConfig}
-            resultsCount={totalProjects}
-            resultsLabel={totalProjects === 1 ? 'project' : 'Projects'}
-            onClearAll={handleClearAll}
-        />
-        {/* Projects Grid or Empty State */}
-        {currentProjects.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {currentProjects.map((project, index) => (
-                    <Card key={index} className="overflow-hidden group hover:shadow-xl transition-all duration-300">
-                        <div className="aspect-video overflow-hidden">
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                        </div>
-                        <div className="p-6 space-y-4">
-                            <div>
-                                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                                    {project.title}
-                                </h3>
-                                {project.category && (
-                                    <Badge variant="secondary" className="mb-3">
-                                        {project.category}
-                                    </Badge>
-                                )}
-                                <p className="text-muted-foreground text-sm leading-relaxed">
-                                    {project.description}
-                                </p>
+    const formatDate = (dateString: string) => {
+        if (dateString === 'Ongoing') return 'Ongoing';
+        return new Date(dateString).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short'
+        });
+    };
+
+    const getStatusColor = (status: string) => {
+        switch (status) {
+            case 'Completed': return 'default';
+            case 'In Progress': return 'secondary';
+            case 'Ongoing': return 'outline';
+            default: return 'outline';
+        }
+    };
+
+    const ProjectCard = ({ project }: { project: Project }) => (
+        <Card className={`overflow-hidden group hover:shadow-xl transition-all ${
+            project.featured ? 'border-2 border-primary' : ''
+        }`}>
+            {project.featured && (
+                <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 px-4 text-center flex items-center justify-center gap-1">
+                    {showLucidIcon('star', 'w-3 h-3 fill-current')}
+                    FEATURED
+                </div>
+            )}
+
+            <Link href={`/projects/${project.slug}`}>
+                <div className="aspect-video overflow-hidden relative">
+                    <img
+                        src={project.thumbnail}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+            </Link>
+
+            <CardHeader>
+                <div className="flex items-start justify-between mb-2">
+                    <Badge variant={getStatusColor(project.status) as any}>
+                        {project.status}
+                    </Badge>
+                    <div className="flex gap-3 text-xs text-muted-foreground">
+                        {project.views && (
+                            <div className="flex items-center gap-1">
+                                {showLucidIcon('eye', 'w-3 h-3')}
+                                <span>{project.views}</span>
                             </div>
+                        )}
+                        {project.likes && (
+                            <div className="flex items-center gap-1">
+                                {showLucidIcon('heart', 'w-3 h-3')}
+                                <span>{project.likes}</span>
+                            </div>
+                        )}
+                    </div>
+                </div>
 
-                            {project.technologies && project.technologies.length > 0 && (
-                                <div className="flex flex-wrap gap-2">
-                                    {project.technologies.map((tech, techIndex) => (
-                                        <Badge key={techIndex} variant="outline" className="text-xs">
-                                            {tech}
-                                        </Badge>
-                                    ))}
-                                </div>
-                            )}
+                <Link href={`/projects/${project.slug}`}>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors line-clamp-1">
+                        {project.title}
+                    </h3>
+                </Link>
 
-                            <Button variant="outline" className="w-full gap-2" asChild>
-                                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                    {langI18n.viewMore}
-                                    <ExternalLink size={16} />
-                                </a>
-                            </Button>
+                <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                    {project.shortDescription}
+                </p>
+
+                <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
+                    <div className="flex items-center gap-1">
+                        {showLucidIcon('calendar', 'w-3 h-3')}
+                        <span>{formatDate(project.startDate)}</span>
+                    </div>
+                    {project.client && (
+                        <div className="flex items-center gap-1">
+                            {showLucidIcon('users', 'w-3 h-3')}
+                            <span className="line-clamp-1">{project.client}</span>
                         </div>
-                    </Card>
-                ))}
-            </div>
-        ) : (
-            <ListEmptyDisplay
-                title={"No project found"}
-                message={"Try adjusting your search terms or filters to find what you're looking for."}
-                handleClearAll={handleClearAll}/>
-        )}
-        {/* Pagination Component */}
-        <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-        />
-    </>
-  );
+                    )}
+                </div>
+
+                <Badge variant="outline" className="mb-3">{project.category}</Badge>
+            </CardHeader>
+
+            <CardContent>
+                <div className="mb-4">
+                    <div className="flex items-center gap-2 text-xs font-semibold mb-2 text-muted-foreground">
+                        {showLucidIcon('code', 'w-3 h-3')}
+                        <span>Technologies</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                        {project.technologies.slice(0, 4).map((tech) => (
+                            <Badge key={tech} variant="secondary" className="text-xs">
+                                {tech}
+                            </Badge>
+                        ))}
+                        {project.technologies.length > 4 && (
+                            <Badge variant="secondary" className="text-xs">
+                                +{project.technologies.length - 4}
+                            </Badge>
+                        )}
+                    </div>
+                </div>
+
+                {project.tags && project.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                        {project.tags.slice(0, 3).map((tag) => (
+                            <Badge key={tag} variant="outline" className="text-xs">
+                                {tag}
+                            </Badge>
+                        ))}
+                    </div>
+                )}
+            </CardContent>
+
+            <CardFooter className="flex gap-2">
+                {project.liveUrl && (
+                    <Button variant="default" size="sm" className="flex-1" asChild>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            {showLucidIcon('external-link', 'w-3 h-3 mr-1')}
+                            Live
+                        </a>
+                    </Button>
+                )}
+                {project.githubUrl && (
+                    <Button variant="outline" size="sm" className="flex-1" asChild>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            {showLucidIcon('github', 'w-3 h-3 mr-1')}
+                            Code
+                        </a>
+                    </Button>
+                )}
+                {!project.liveUrl && !project.githubUrl && (
+                    <Button variant="ghost" size="sm" className="flex-1" asChild>
+                        <Link href={`/projects/${project.slug}`}>
+                            View Details
+                        </Link>
+                    </Button>
+                )}
+            </CardFooter>
+        </Card>
+    );
+
+    return (
+        <>
+            <PageHeading
+                title={langI18n.projects || "Projects"}
+                subTitle="A showcase of my work, from web applications to mobile apps and everything in between."
+            />
+
+            {/* Filter Bar */}
+            <FilterBar
+                searchValue={searchQuery}
+                onSearchChange={setSearchQuery}
+                searchPlaceholder="Search projects by title, technology, category, or tags..."
+                filters={filterConfigs}
+                sortConfig={sortConfig}
+                resultsCount={totalProjects}
+                resultsLabel={totalProjects === 1 ? 'project' : 'projects'}
+                onClearAll={handleClearAll}
+            />
+
+            {/* Projects Grid or Empty State */}
+            {currentProjects.length > 0 ? (
+                <>
+                    {/* Featured Projects */}
+                    {featuredProjects.length > 0 && (
+                        <div className="mb-12">
+                            <div className="flex items-center gap-2 mb-6">
+                                {showLucidIcon('award', 'w-5 h-5 text-primary')}
+                                <h2 className="text-2xl font-bold">Featured Projects</h2>
+                            </div>
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {featuredProjects.map((project) => (
+                                    <ProjectCard key={project.id} project={project} />
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Regular Projects */}
+                    {regularProjects.length > 0 && (
+                        <div>
+                            {featuredProjects.length > 0 && (
+                                <h2 className="text-2xl font-bold mb-6">All Projects</h2>
+                            )}
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {regularProjects.map((project) => (
+                                    <ProjectCard key={project.id} project={project} />
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </>
+            ) : (
+                <ListEmptyDisplay
+                        title={"No projects found"}
+                        message={"Try adjusting your search terms or filters."}
+                        handleClearAll={handleClearAll}/>
+            )}
+
+            {/* Pagination */}
+            <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+            />
+        </>
+    );
 }
