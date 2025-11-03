@@ -9,7 +9,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Facebook } f
 import Link from 'next/link';
 
 export default function Home() {
-  const { appData, contentData, langI18n } = usePortfolio();
+  const { appData, contentData, projectContentData, langI18n } = usePortfolio();
 
   const getSocialIcon = (platform: string) => {
     const icons: { [key: string]: React.ReactNode } = {
@@ -99,11 +99,11 @@ export default function Home() {
       </div>
 
       <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {contentData.projects.slice(0, 4).map((project, index) => (
+        {projectContentData.slice(0, 4).map((project, index) => (
           <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
             <div className="aspect-video overflow-hidden">
               <img
-                src={project.image}
+                src={project.thumbnail}
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />

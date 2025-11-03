@@ -9,7 +9,7 @@ import { ExternalLink, BookOpen } from 'lucide-react';
 import {PageHeading} from "@/components/shared/PageHeading";
 
 export default function PublicationsPage() {
-  const { appData, contentData, langI18n } = usePortfolio();
+  const { appData, projectContentData, langI18n } = usePortfolio();
 
   return (
     <>
@@ -19,12 +19,12 @@ export default function PublicationsPage() {
         />
 
       <div className="space-y-6">
-        {contentData.projects.map((project, index) => (
+        {projectContentData.map((project, index) => (
           <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-48 h-32 flex-shrink-0 overflow-hidden rounded-lg">
                 <img
-                  src={project.image}
+                  src={project.thumbnail}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
@@ -44,7 +44,7 @@ export default function PublicationsPage() {
                   </p>
                 </div>
                 <Button variant="outline" size="sm" className="gap-2" asChild>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <BookOpen size={16} />
                     Read More
                     <ExternalLink size={14} />

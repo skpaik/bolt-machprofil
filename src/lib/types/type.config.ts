@@ -3,7 +3,6 @@ export type TemplateType = 'modern' | 'classic' | 'minimal';
 export type LanguageType = 'en' | 'de' | 'es' | 'fr';
 export type ThemeType = 'light' | 'dark' | 'system';
 
-
 export type SortOption =
     'all'
     | 'date-desc'
@@ -21,4 +20,8 @@ export type SortOption =
     | 'proficiency-desc'
     | 'proficiency-asc'
     | 'experience-desc'
-    | 'experience-asc';
+    | 'experience-asc'
+    | 'issuer-asc'
+    | 'issuer-desc'
+    | 'likes-desc'
+    | 'views-desc';

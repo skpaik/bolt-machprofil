@@ -33,13 +33,25 @@ export interface Photo extends BaseContent {
     image: string;
 }
 
-export interface Certificate extends BaseContent {
-    issuer: string;
+export interface Certificate2 extends BaseContent {
     date: string;
     credential: string;
     image: string;
 }
 
+export interface Certificate extends BaseContent {
+    issuer: string;
+    issueDate: string;
+    expiryDate?: string | 'No Expiry';
+    credentialId?: string;
+    credentialUrl?: string;
+    category: string;
+    skills?: string[];
+    description?: string;
+    logo?: string;
+    verified?: boolean;
+    featured?: boolean;
+}
 
 export interface SocialLinks {
     github?: string;
@@ -50,7 +62,7 @@ export interface SocialLinks {
     pinterest?: string;
 }
 
-export interface Project {
+export interface Project2 {
     title: string;
     description: string;
     technologies?: string[];
@@ -63,6 +75,28 @@ export interface Project {
     ended_at?: string;
 }
 
+export interface Project extends BaseContent{
+    slug: string;
+    description: string;
+    shortDescription: string;
+    category: string;
+    tags: string[];
+    thumbnail: string;
+    images?: string[];
+    startDate: string;
+    endDate?: string | 'Ongoing';
+    client?: string;
+    role: string;
+    technologies: string[];
+    features?: string[];
+    liveUrl?: string;
+    githubUrl?: string;
+    caseStudyUrl?: string;
+    featured?: boolean;
+    likes?: number;
+    views?: number;
+    status:  string | 'Completed' | 'In Progress' | 'Ongoing';
+}
 export interface Experience {
     company: string;
     position: string;
@@ -163,7 +197,6 @@ export interface StaticContentData {
     terms: TermsPrivacy;
     privacy: TermsPrivacy;
 }
-
 
 
 export interface AppData {
