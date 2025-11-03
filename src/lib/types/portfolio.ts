@@ -175,7 +175,7 @@ export interface Service extends BaseContent {
     features: string[];
     deliverables?: string[];
     pricing?: {
-        type: 'Fixed' | 'Hourly' | 'Project-based' | 'Contact';
+        type: string | 'Fixed' | 'Hourly' | 'Project-based' | 'Contact';
         amount?: string;
         currency?: string;
     };
@@ -189,13 +189,10 @@ export interface AppConfig {
 }
 
 export interface ContentData {
-    projects: Project[];
-    experience: Experience[];
     education: Education[];
     skills: Skills[];
     photos: Photo[];
     certificates: Certificate[];
-    services: Service[];
 }
 
 export interface TermsPrivacySection extends BaseContent {
