@@ -195,7 +195,7 @@ export interface AppConfig {
 
 export interface ContentData {
    // education: Education[];
-    skills: Skills[];
+    //skills: Skills[];
     photos: Photo[];
 }
 

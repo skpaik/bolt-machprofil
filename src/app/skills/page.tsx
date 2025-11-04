@@ -33,7 +33,7 @@ const getProficiencyColor = (proficiency: number): string => {
 };
 
 export default function SkillPage() {
-    const { appData, contentData,appConfig, langI18n } = usePortfolio();
+    const { appData, skillContentData,appConfig, langI18n } = usePortfolio();
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -41,7 +41,7 @@ export default function SkillPage() {
     const [sortBy, setSortBy] = useState<SortOption>('proficiency-desc');
 
     // Use real data if available, otherwise use sample data
-    const skills = contentData.skills;
+    const skills = skillContentData;
     const ITEMS_PER_PAGE = appConfig.item_per_page;
 
     // Filter and search skills
