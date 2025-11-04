@@ -98,12 +98,6 @@ export interface Project extends BaseContent {
     status: string | 'Completed' | 'In Progress' | 'Ongoing';
 }
 
-export interface Experience2 {
-    company: string;
-    position: string;
-    period: string;
-    description: string;
-}
 
 export interface Experience {
     id: string;
@@ -126,10 +120,21 @@ export interface Experience {
 }
 
 export interface Education {
+    id: number;
     institution: string;
     degree: string;
-    period: string;
-    description: string;
+    field: string;
+    startDate: string;
+    endDate: string | 'Present';
+    location: string;
+    gpa?: string;
+    grade?: string;
+    description?: string;
+    achievements?: string[];
+    coursework?: string[];
+    activities?: string[];
+    logo?: string;
+    type: string | 'Degree' | 'Certificate' | 'Course' | 'Bootcamp' | 'Self-Study';
 }
 
 export interface TemplateItem {
@@ -189,7 +194,7 @@ export interface AppConfig {
 }
 
 export interface ContentData {
-    education: Education[];
+   // education: Education[];
     skills: Skills[];
     photos: Photo[];
     certificates: Certificate[];

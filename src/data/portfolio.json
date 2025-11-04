@@ -16,59 +16,6 @@
         "linkedin": "https://linkedin.com",
         "twitter": "https://twitter.com"
       },
-      "projects": [
-        {
-          "title": "E-Commerce Platform",
-          "project_type": "Web Application",
-          "category": "Web",
-          "description": "Built a scalable e-commerce platform handling 100K+ daily users with real-time inventory management",
-          "technologies": [
-            "React",
-            "Node.js",
-            "PostgreSQL",
-            "Redis"
-          ],
-          "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#",
-          "tags": [],
-          "started_at": "",
-          "ended_at": ""
-        },
-        {
-          "title": "Analytics Dashboard",
-          "project_type": "Web Application",
-          "category": "Web",
-          "description": "Real-time analytics dashboard with interactive data visualizations and reporting features",
-          "technologies": [
-            "Next.js",
-            "TypeScript",
-            "D3.js",
-            "MongoDB"
-          ],
-          "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#",
-          "tags": [],
-          "started_at": "",
-          "ended_at": ""
-        },
-        {
-          "title": "Mobile Banking App",
-          "project_type": "Web Application",
-          "category": "Web",
-          "description": "Secure mobile banking application with biometric authentication and transaction tracking",
-          "technologies": [
-            "React Native",
-            "Express",
-            "MySQL",
-            "AWS"
-          ],
-          "image": "https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#",
-          "tags": [],
-          "started_at": "",
-          "ended_at": ""
-        }
-      ],
       "education": [
         {
           "institution": "University of California",
@@ -369,48 +316,6 @@
         "instagram": "https://instagram.com",
         "facebook": "https://facebook.com"
       },
-      "projects": [
-        {
-          "title": "Wedding Collections",
-          "project_type": "Web Application",
-          "description": "Romantic and timeless wedding photography capturing your special day",
-          "category": "Wedding",
-          "image": "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        },
-        {
-          "title": "Portrait Sessions",
-          "project_type": "Web Application",
-          "description": "Professional portraits that showcase your unique personality and style",
-          "category": "Portrait",
-          "image": "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        },
-        {
-          "title": "Nature & Landscapes",
-          "project_type": "Web Application",
-          "description": "Breathtaking landscapes and nature photography from around the world",
-          "category": "Landscape",
-          "image": "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        },
-        {
-          "title": "Street Photography",
-          "project_type": "Web Application",
-          "description": "Candid moments and urban life captured in stunning detail",
-          "category": "Street",
-          "image": "https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        }
-      ],
-      "education": [
-        {
-          "institution": "New York Institute of Photography",
-          "degree": "Professional Photography Certification",
-          "period": "2016 - 2017",
-          "description": "Comprehensive training in portrait, commercial, and digital photography"
-        }
-      ],
       "skills": [
         {
           "id": 1,
@@ -807,46 +712,6 @@
         "facebook": "https://facebook.com",
         "instagram": "https://instagram.com"
       },
-      "projects": [
-        {
-          "title": "Interactive Math Learning Platform",
-          "project_type": "Web Application",
-          "description": "Developed online platform with gamified lessons improving student engagement by 45%",
-          "category": "Digital Learning",
-          "image": "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        },
-        {
-          "title": "STEM Workshop Series",
-          "project_type": "Web Application",
-          "description": "Created and led hands-on STEM workshops for middle school students",
-          "category": "Workshop",
-          "image": "https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        },
-        {
-          "title": "Curriculum Development",
-          "project_type": "Web Application",
-          "description": "Designed comprehensive mathematics curriculum aligned with state standards",
-          "category": "Curriculum",
-          "image": "https://images.pexels.com/photos/256520/pexels-photo-256520.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        }
-      ],
-      "education": [
-        {
-          "institution": "Harvard University",
-          "degree": "Ph.D. in Education",
-          "period": "2010 - 2014",
-          "description": "Research focus on mathematics education and curriculum design"
-        },
-        {
-          "institution": "Boston College",
-          "degree": "Master of Education",
-          "period": "2008 - 2010",
-          "description": "Specialized in secondary mathematics education"
-        }
-      ],
       "skills": [
         {
           "id": 1,
@@ -880,46 +745,6 @@
         "facebook": "https://facebook.com",
         "instagram": "https://instagram.com"
       },
-      "projects": [
-        {
-          "title": "Interactive Math Learning Platform",
-          "project_type": "Web Application",
-          "description": "Developed online platform with gamified lessons improving student engagement by 45%",
-          "category": "Digital Learning",
-          "image": "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        },
-        {
-          "title": "STEM Workshop Series",
-          "project_type": "Web Application",
-          "description": "Created and led hands-on STEM workshops for middle school students",
-          "category": "Workshop",
-          "image": "https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        },
-        {
-          "title": "Curriculum Development",
-          "project_type": "Web Application",
-          "description": "Designed comprehensive mathematics curriculum aligned with state standards",
-          "category": "Curriculum",
-          "image": "https://images.pexels.com/photos/256520/pexels-photo-256520.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "link": "#"
-        }
-      ],
-      "education": [
-        {
-          "institution": "Harvard University",
-          "degree": "Ph.D. in Education",
-          "period": "2010 - 2014",
-          "description": "Research focus on mathematics education and curriculum design"
-        },
-        {
-          "institution": "Boston College",
-          "degree": "Master of Education",
-          "period": "2008 - 2010",
-          "description": "Specialized in secondary mathematics education"
-        }
-      ],
       "skills": [
         {
           "id": 1,

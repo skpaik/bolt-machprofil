@@ -6,6 +6,7 @@ import staticContentsData from "@/data/static_contents.json";
 import blogContentsData from "@/data/blog_contents.json";
 import projectContentsData from "@/data/project_contents.json";
 import experienceContentsData from "@/data/experience_contents.json";
+import educationContentsData from "@/data/education_contents.json";
 import serviceContentsData from "@/data/service_contents.json";
 import aboutContentsData from "@/data/about_contents.json";
 import languageData from "@/data/i18n.json";
@@ -16,6 +17,7 @@ import {
     AppData,
     BlogPost,
     ContentData,
+    Education,
     Experience,
     LanguageI18n, Project,
     Service,
@@ -32,6 +34,7 @@ interface PortfolioContextType {
     blogContentData: BlogPost[];
     projectContentData: Project[];
     experienceContentData: Experience[];
+    educationContentData: Education[];
     serviceContentData: Service[];
     appConfig: AppConfig;
     profileType: ProfileType;
@@ -131,6 +134,7 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
     const blogContentData: BlogPost[] = blogContentsData[languageType];
     const projectContentData: Project[] = projectContentsData[languageType];
     const experienceContentData: Experience[] = experienceContentsData[languageType];
+    const educationContentData: Education[] = educationContentsData[languageType];
     const serviceContentData: Service[] = serviceContentsData[languageType];
     const appConfig: AppConfig = portfolioData.app_config;
     const aboutContentData: AboutContentData = aboutContentsData[languageType];
@@ -144,6 +148,7 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
                 blogContentData,
                 projectContentData,
                 experienceContentData,
+                educationContentData,
                 serviceContentData,
                 contentData,
                 staticContentData,

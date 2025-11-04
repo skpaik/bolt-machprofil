@@ -49,11 +49,15 @@ import {
     UserCheck,
     Users,
     Video,
-    Wrench
+    Wrench,
+    GraduationCap,
+    BookOpen
 } from 'lucide-react'; // Icon mapping
 
 // Icon mapping for dynamic lookup
-export const ICON_MAP: { [key: string]: LucideIcon } = {
+const ICON_MAP: { [key: string]: LucideIcon } = {
+    'graduation-cap': GraduationCap,
+    'book-open': BookOpen,
     'trending-up': TrendingUp,
     'chevron-right': ChevronRight,
     'sparkles': Sparkles,
