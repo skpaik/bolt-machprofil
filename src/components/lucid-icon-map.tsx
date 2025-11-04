@@ -4,6 +4,7 @@ import {
     Award,
     BarChart,
     Book,
+    BookOpen,
     Briefcase,
     Building2,
     Calendar,
@@ -23,7 +24,9 @@ import {
     FileText,
     Github,
     Globe,
+    GraduationCap,
     Heart,
+    Link,
     Linkedin,
     Lock,
     LucideIcon,
@@ -35,6 +38,7 @@ import {
     Palette,
     Pen,
     Plane,
+    Quote,
     Search,
     Settings,
     Shield,
@@ -50,12 +54,12 @@ import {
     Users,
     Video,
     Wrench,
-    GraduationCap,
-    BookOpen
 } from 'lucide-react'; // Icon mapping
 
 // Icon mapping for dynamic lookup
 const ICON_MAP: { [key: string]: LucideIcon } = {
+    'quote': Quote,
+    'link': Link,
     'graduation-cap': GraduationCap,
     'book-open': BookOpen,
     'trending-up': TrendingUp,

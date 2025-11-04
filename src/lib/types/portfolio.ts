@@ -33,11 +33,6 @@ export interface Photo extends BaseContent {
     image: string;
 }
 
-export interface Certificate2 extends BaseContent {
-    date: string;
-    credential: string;
-    image: string;
-}
 
 export interface Certificate extends BaseContent {
     issuer: string;
@@ -62,18 +57,6 @@ export interface SocialLinks {
     pinterest?: string;
 }
 
-export interface Project2 {
-    title: string;
-    description: string;
-    technologies?: string[];
-    category?: string;
-    project_type: string;
-//    tags: string[];
-    image?: string;
-    link?: string;
-    started_at?: string;
-    ended_at?: string;
-}
 
 export interface Project extends BaseContent {
     slug: string;
@@ -170,6 +153,7 @@ export interface Skills extends BaseContent {
     certifications?: string[];
     icon?: string;
 }
+
 // Testimonial interface
 export interface Testimonial {
     id: string;
@@ -186,6 +170,7 @@ export interface Testimonial {
     featured?: boolean;
     verified?: boolean;
 }
+
 // Service interface - adaptable for any professional service
 export interface Service extends BaseContent {
     category: string;
@@ -209,7 +194,7 @@ export interface AppConfig {
 }
 
 export interface ContentData {
-   // education: Education[];
+    // education: Education[];
     //skills: Skills[];
     photos: Photo[];
 }
@@ -303,6 +288,23 @@ export interface SettingSchema {
     portfolioTemplate: string,
     portfolioLanguage: string,
     portfolioTheme: string,
+}
+
+export interface Publication extends BaseContent {
+    authors: string[];
+    publishedIn: string; // Journal, Conference, Book, etc.
+    publisher?: string;
+    year: string;
+    month?: string;
+    type: string | 'Journal' | 'Conference' | 'Book Chapter' | 'Workshop' | 'Preprint' | 'Thesis' | 'Patent';
+    abstract: string;
+    keywords?: string[];
+    doi?: string;
+    url?: string;
+    pdfUrl?: string;
+    citations?: number;
+    featured?: boolean;
+    status: string | 'Published' | 'In Press' | 'Under Review' | 'Preprint';
 }
 
 export interface PortfolioData {
