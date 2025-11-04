@@ -67,9 +67,7 @@ MIT
 
 
 ## Command
-- Home
 - Blog
-- Resume
 - Publications
 - Photos
 

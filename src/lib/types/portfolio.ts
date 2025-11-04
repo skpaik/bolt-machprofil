@@ -170,7 +170,22 @@ export interface Skills extends BaseContent {
     certifications?: string[];
     icon?: string;
 }
-
+// Testimonial interface
+export interface Testimonial {
+    id: string;
+    name: string;
+    role: string;
+    company: string;
+    location?: string;
+    avatar?: string;
+    rating: number;
+    testimonial: string;
+    date: string;
+    project?: string;
+    category: string;
+    featured?: boolean;
+    verified?: boolean;
+}
 // Service interface - adaptable for any professional service
 export interface Service extends BaseContent {
     category: string;

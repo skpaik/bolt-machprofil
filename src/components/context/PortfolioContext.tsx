@@ -10,6 +10,7 @@ import educationContentsData from "@/data/education_contents.json";
 import serviceContentsData from "@/data/service_contents.json";
 import certificateContentsData from "@/data/certificate_contents.json";
 import skillContentsData from "@/data/skill_contents.json";
+import testimonialContentsData from "@/data/testimonial_contents.json";
 import aboutContentsData from "@/data/about_contents.json";
 import languageData from "@/data/i18n.json";
 import settingData from "@/data/settings.json";
@@ -25,7 +26,7 @@ import {
     LanguageI18n, Project,
     Service,
     SettingSchema, Skills,
-    StaticContentData
+    StaticContentData, Testimonial
 } from "@/lib/types/portfolio";
 import {AboutContentData} from "@/lib/types/about.contract";
 
@@ -41,6 +42,7 @@ interface PortfolioContextType {
     serviceContentData: Service[];
     certificateContentData: Certificate[];
     skillContentData: Skills[];
+    testimonialContentData: Testimonial[];
     appConfig: AppConfig;
     profileType: ProfileType;
     setProfileType: (type: ProfileType) => void;
@@ -143,6 +145,7 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
     const serviceContentData: Service[] = serviceContentsData[languageType];
     const certificateContentData: Certificate[] = certificateContentsData[languageType];
     const skillContentData: Skills[] = skillContentsData[languageType];
+    const testimonialContentData: Testimonial[] = testimonialContentsData[languageType];
     const appConfig: AppConfig = portfolioData.app_config;
     const aboutContentData: AboutContentData = aboutContentsData[languageType];
     const langI18n: LanguageI18n = languageData[languageType];
@@ -159,6 +162,7 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
                 serviceContentData,
                 certificateContentData,
                 skillContentData,
+                testimonialContentData,
                 contentData,
                 staticContentData,
                 appConfig,

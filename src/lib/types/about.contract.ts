@@ -5,6 +5,8 @@ export interface HeroSection {
     image: string;
     location: string;
     email: string;
+    phone: string;
+    website: string;
     resumeUrl: string;
     available: boolean;
 }
