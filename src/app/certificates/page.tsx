@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from 'react';
-import { usePortfolio } from '@/components/context/PortfolioContext';
-import { PageHeading } from "@/components/shared/PageHeading";
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { FilterBar } from '@/components/shared/FilterBar';
-import { Pagination } from '@/components/shared/Pagination';
+import React, {useEffect, useMemo, useState} from 'react';
+import {usePortfolio} from '@/components/context/PortfolioContext';
+import {PageHeading} from "@/components/shared/PageHeading";
+import {Card, CardContent, CardFooter, CardHeader} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
+import {Button} from '@/components/ui/button';
+import {FilterBar} from '@/components/shared/FilterBar';
+import {Pagination} from '@/components/shared/Pagination';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {SortOption} from "@/lib/types/type.config";
 import {Certificate} from "@/lib/types/portfolio";
@@ -15,7 +15,7 @@ import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
 import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function CertificatesPage() {
-    const { appConfig, langI18n, contentData } = usePortfolio();
+    const {appConfig, certificateContentData, langI18n, contentData} = usePortfolio();
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -23,8 +23,8 @@ export default function CertificatesPage() {
     const [sortBy, setSortBy] = useState<SortOption>('date-desc');
 
     // Use real data if available, otherwise use sample data
-    const certificates = contentData.certificates;
-    const ITEMS_PER_PAGE =appConfig.item_per_page;
+    const certificates = certificateContentData;
+    const ITEMS_PER_PAGE = appConfig.item_per_page;
 
     // Filter and search certificates
     const filteredCertificates = useMemo(() => {
@@ -117,8 +117,8 @@ export default function CertificatesPage() {
             value: selectedCategory,
             onChange: setSelectedCategory,
             options: [
-                { value: 'all', label: 'All Categories' },
-                ...categories.map(cat => ({ value: cat, label: cat }))
+                {value: 'all', label: 'All Categories'},
+                ...categories.map(cat => ({value: cat, label: cat}))
             ]
         },
         {
@@ -127,9 +127,9 @@ export default function CertificatesPage() {
             value: selectedStatus,
             onChange: setSelectedStatus,
             options: [
-                { value: 'all', label: 'All Status' },
-                { value: 'valid', label: 'Valid' },
-                { value: 'expired', label: 'Expired' }
+                {value: 'all', label: 'All Status'},
+                {value: 'valid', label: 'Valid'},
+                {value: 'expired', label: 'Expired'}
             ]
         }
     ];
@@ -138,12 +138,12 @@ export default function CertificatesPage() {
         value: sortBy,
         onChange: (value: string) => setSortBy(value as SortOption),
         options: [
-            { value: 'date-desc', label: 'Issue Date (Newest)' },
-            { value: 'date-asc', label: 'Issue Date (Oldest)' },
-            { value: 'name-asc', label: 'Name (A-Z)' },
-            { value: 'name-desc', label: 'Name (Z-A)' },
-            { value: 'issuer-asc', label: 'Issuer (A-Z)' },
-            { value: 'issuer-desc', label: 'Issuer (Z-A)' }
+            {value: 'date-desc', label: 'Issue Date (Newest)'},
+            {value: 'date-asc', label: 'Issue Date (Oldest)'},
+            {value: 'name-asc', label: 'Name (A-Z)'},
+            {value: 'name-desc', label: 'Name (Z-A)'},
+            {value: 'issuer-asc', label: 'Issuer (A-Z)'},
+            {value: 'issuer-desc', label: 'Issuer (Z-A)'}
         ]
     };
 
@@ -166,7 +166,7 @@ export default function CertificatesPage() {
         return new Date(expiryDate) < new Date();
     };
 
-    const CertificateCard = ({ cert }: { cert: Certificate }) => {
+    const CertificateCard = ({cert}: { cert: Certificate }) => {
         const expired = isExpired(cert.expiryDate);
 
         return (
@@ -181,7 +181,7 @@ export default function CertificatesPage() {
                     <div className="flex items-start justify-between mb-3">
                         {cert.logo && (
                             <div className="w-16 h-16 rounded-lg overflow-hidden bg-muted flex-shrink-0">
-                                <img src={cert.logo} alt={cert.issuer} className="w-full h-full object-cover" />
+                                <img src={cert.logo} alt={cert.issuer} className="w-full h-full object-cover"/>
                             </div>
                         )}
                         <div className="flex gap-2">
@@ -293,7 +293,7 @@ export default function CertificatesPage() {
                             </div>
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {featuredCertificates.map((cert) => (
-                                    <CertificateCard key={cert.id} cert={cert} />
+                                    <CertificateCard key={cert.id} cert={cert}/>
                                 ))}
                             </div>
                         </div>
@@ -307,7 +307,7 @@ export default function CertificatesPage() {
                             )}
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {regularCertificates.map((cert) => (
-                                    <CertificateCard key={cert.id} cert={cert} />
+                                    <CertificateCard key={cert.id} cert={cert}/>
                                 ))}
                             </div>
                         </div>

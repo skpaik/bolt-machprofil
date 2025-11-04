@@ -197,7 +197,6 @@ export interface ContentData {
    // education: Education[];
     skills: Skills[];
     photos: Photo[];
-    certificates: Certificate[];
 }
 
 export interface TermsPrivacySection extends BaseContent {
