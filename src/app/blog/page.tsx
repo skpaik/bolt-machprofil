@@ -5,30 +5,54 @@ import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Search } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Search } from 'lucide-react';
 import Link from 'next/link';
-import { FilterBar } from '@/components/shared/FilterBar';
+import { FilterBar,  } from '@/components/shared/FilterBar';
 import { Pagination } from '@/components/shared/Pagination';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
-import {SortOption} from "@/lib/types/type.config";
-import {PageHeading} from "@/components/shared/PageHeading";
+import {BlogPost} from "@/lib/types/portfolio";
+
+type SortOption = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc';
 
 const POSTS_PER_PAGE = 6;
 
-
 export default function BlogPage() {
   const { appData, blogContentData, langI18n } = usePortfolio();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedTag, setSelectedTag] = useState<string>('all');
   const [sortBy, setSortBy] = useState<SortOption>('date-desc');
 
+  // Use real data if available, otherwise use sample data
   const posts = blogContentData;
+
+  // Get URL parameters
+  const categoryParam = searchParams?.get('category');
+  const tagParam = searchParams?.get('tag');
+  const sortParam = searchParams?.get('sort');
+  const pageParam = searchParams?.get('page');
+  const searchParam = searchParams?.get('search');
+
+  // Sync state with URL parameters
+  useEffect(() => {
+    if (categoryParam) setSelectedCategory(decodeURIComponent(categoryParam));
+    if (tagParam) setSelectedTag(decodeURIComponent(tagParam));
+    if (sortParam) setSortBy(sortParam as SortOption);
+    if (searchParam) setSearchQuery(decodeURIComponent(searchParam));
+    if (pageParam) {
+      const page = parseInt(pageParam);
+      if (!isNaN(page) && page > 0) setCurrentPage(page);
+    }
+  }, []);
 
   // Filter and search posts
   const filteredPosts = useMemo(() => {
-    let filtered = posts.filter(post => {
+    let filtered = posts.filter((post: BlogPost) => {
       // Category filter
       if (selectedCategory !== 'all' && post.category !== selectedCategory) {
         return false;
@@ -59,12 +83,12 @@ export default function BlogPage() {
     });
 
     // Sort posts
-    filtered.sort((a, b) => {
+    filtered.sort((a: BlogPost, b: BlogPost) => {
       switch (sortBy) {
         case 'date-desc':
-          return new Date(b.published_at).getTime() - new Date(a.published_at).getTime();
+          return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
         case 'date-asc':
-          return new Date(a.published_at).getTime() - new Date(b.published_at).getTime();
+          return new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
         case 'title-asc':
           return a.title.localeCompare(b.title);
         case 'title-desc':
@@ -81,14 +105,14 @@ export default function BlogPage() {
     return filtered;
   }, [posts, selectedCategory, selectedTag, searchQuery, sortBy]);
 
-  // Get unique categories and tags for filters
+  // Get unique categories and tags
   const categories = useMemo(() => {
-    const uniqueCategories = [...new Set(posts.map(post => post.category).filter(Boolean))];
+    const uniqueCategories = [...new Set(posts.map((post: BlogPost) => post.category).filter(Boolean))];
     return uniqueCategories.sort();
   }, [posts]);
 
   const tags = useMemo(() => {
-    const allTags = posts.flatMap(post => post.tags || []);
+    const allTags = posts.flatMap((post: BlogPost) => post.tags || []);
     const uniqueTags = [...new Set(allTags)];
     return uniqueTags.sort();
   }, [posts]);
@@ -102,10 +126,99 @@ export default function BlogPage() {
     return filteredPosts.slice(startIndex, endIndex);
   }, [filteredPosts, currentPage]);
 
+  // Update URL with all parameters
+  const updateURL = (updates: Record<string, string | null>) => {
+    const params = new URLSearchParams(searchParams?.toString());
+
+    Object.entries(updates).forEach(([key, value]) => {
+      if (value && value !== 'all' && value !== '') {
+        params.set(key, value);
+      } else {
+        params.delete(key);
+      }
+    });
+
+    router.push(`/blog?${params.toString()}`, { scroll: false });
+  };
+
   // Reset to first page when filters change
   useEffect(() => {
     setCurrentPage(1);
+    updateURL({ page: null });
   }, [searchQuery, selectedCategory, selectedTag, sortBy]);
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    updateURL({ search: value || null, page: null });
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    updateURL({ category: category === 'all' ? null : category, page: null });
+  };
+
+  const handleTagChange = (tag: string) => {
+    setSelectedTag(tag);
+    updateURL({ tag: tag === 'all' ? null : tag, page: null });
+  };
+
+  const handleSortChange = (sort: string) => {
+    setSortBy(sort as SortOption);
+    updateURL({ sort: sort === 'date-desc' ? null : sort, page: null });
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    updateURL({ page: page > 1 ? page.toString() : null });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleClearAll = () => {
+    setSearchQuery('');
+    setSelectedCategory('all');
+    setSelectedTag('all');
+    setSortBy('date-desc');
+    setCurrentPage(1);
+    router.push('/blog', { scroll: false });
+  };
+
+  // Configure filters
+  const filterConfigs: FilterConfig[] = [
+    {
+      name: 'category',
+      label: 'Category',
+      value: selectedCategory,
+      onChange: handleCategoryChange,
+      options: [
+        { value: 'all', label: 'All Categories' },
+        ...categories.map((cat: string) => ({ value: cat, label: cat }))
+      ]
+    },
+    {
+      name: 'tag',
+      label: 'Tag',
+      value: selectedTag,
+      onChange: handleTagChange,
+      options: [
+        { value: 'all', label: 'All Tags' },
+        ...tags.map((tag: string) => ({ value: tag, label: tag }))
+      ]
+    }
+  ];
+
+  // Configure sort options
+  const sortConfig: SortConfig = {
+    value: sortBy,
+    onChange: handleSortChange,
+    options: [
+      { value: 'date-desc', label: 'Latest First' },
+      { value: 'date-asc', label: 'Oldest First' },
+      { value: 'title-asc', label: 'Title (A-Z)' },
+      { value: 'title-desc', label: 'Title (Z-A)' },
+      { value: 'category-asc', label: 'Category (A-Z)' },
+      { value: 'category-desc', label: 'Category (Z-A)' }
+    ]
+  };
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -115,64 +228,20 @@ export default function BlogPage() {
     });
   };
 
-  // Configure filters for FilterBar component
-  const filterConfigs: FilterConfig[] = [
-    {
-      name: 'category',
-      label: 'Category',
-      value: selectedCategory,
-      onChange: setSelectedCategory,
-      options: [
-        { value: 'all', label: 'All Categories' },
-        ...categories.map(cat => ({ value: cat, label: cat }))
-      ]
-    },
-    {
-      name: 'tag',
-      label: 'Tag',
-      value: selectedTag,
-      onChange: setSelectedTag,
-      options: [
-        { value: 'all', label: 'All Tags' },
-        ...tags.map(tag => ({ value: tag, label: tag }))
-      ]
-    }
-  ];
-
-  // Configure sort options
-  const sortConfig: SortConfig = {
-    value: sortBy,
-    onChange: (value: string) => setSortBy(value as SortOption),
-    options: [
-      { value: 'date-desc', label: 'Date (Newest)' },
-      { value: 'date-asc', label: 'Date (Oldest)' },
-      { value: 'title-asc', label: 'Title (A-Z)' },
-      { value: 'title-desc', label: 'Title (Z-A)' },
-      { value: 'category-asc', label: 'Category (A-Z)' },
-      { value: 'category-desc', label: 'Category (Z-A)' }
-    ]
-  };
-
-  const handleClearAll = () => {
-    setSearchQuery('');
-    setSelectedCategory('all');
-    setSelectedTag('all');
-    setSortBy('date-desc');
-  };
-
   return (
-      <>
-        {/* Header Section - Compact and Responsive */}
-        <PageHeading
-            title={langI18n.blog}
-            subTitle={langI18n.latestPosts}
-        />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{langI18n.blog || 'Blog'}</h1>
+          <p className="text-lg text-muted-foreground">
+            {langI18n.latestPosts || 'Latest articles, tutorials, and insights on web development and technology.'}
+          </p>
+        </div>
 
-        {/* Filter Bar Component */}
+        {/* Filter Bar */}
         <FilterBar
             searchValue={searchQuery}
-            onSearchChange={setSearchQuery}
-            searchPlaceholder="Search posts by title, content, category, or tags..."
+            onSearchChange={handleSearchChange}
+            searchPlaceholder="Search posts by title, content, or tags..."
             filters={filterConfigs}
             sortConfig={sortConfig}
             resultsCount={totalPosts}
@@ -182,32 +251,28 @@ export default function BlogPage() {
 
         {/* Posts Grid or Empty State */}
         {currentPosts.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-              {currentPosts.map((post) => (
-                  <Card key={post.id} className="overflow-hidden group hover:shadow-lg transition-shadow flex flex-col">
-                    <Link href={`/blog/${post.slug}`}>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {currentPosts.map((post: BlogPost) => (
+                  <Card key={post.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
+                    <Link href={`/blog/${post.id}`}>
                       <div className="aspect-video overflow-hidden">
                         <img
-                            src={post.cover_image}
+                            src={post.coverImage}
                             alt={post.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     </Link>
-                    <CardHeader className="flex-1">
-                      <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground mb-2 flex-wrap">
-                        <div className="flex items-center gap-1">
-                          <Calendar size={14} />
-                          <span>{formatDate(post.published_at)}</span>
-                        </div>
+                    <CardHeader>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{formatDate(post.publishedAt)}</span>
                         <span>•</span>
-                        <div className="flex items-center gap-1">
-                          <Clock size={14} />
-                          <span>{post.read_time} min read</span>
-                        </div>
+                        <Clock className="w-4 h-4" />
+                        <span>{post.readTime} min read</span>
                       </div>
-                      <Link href={`/blog/${post.slug}`}>
-                        <h2 className="text-xl sm:text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">
+                      <Link href={`/blog/${post.id}`}>
+                        <h2 className="text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">
                           {post.title}
                         </h2>
                       </Link>
@@ -218,12 +283,13 @@ export default function BlogPage() {
                       )}
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm sm:text-base text-muted-foreground line-clamp-3 mb-4">
+                      <p className="text-muted-foreground line-clamp-3 mb-4">
                         {post.excerpt}
                       </p>
+
                       {post.tags && post.tags.length > 0 && (
                           <div className="flex flex-wrap gap-2">
-                            {post.tags.slice(0, 3).map((tag) => (
+                            {post.tags.slice(0, 3).map((tag: string) => (
                                 <Badge key={tag} variant="secondary" className="text-xs">
                                   {tag}
                                 </Badge>
@@ -232,8 +298,11 @@ export default function BlogPage() {
                       )}
                     </CardContent>
                     <CardFooter>
-                      <Button variant="ghost" asChild className="w-full">
-                        <Link href={`/blog/${post.slug}`}>{langI18n.readMore}</Link>
+                      <Button variant="ghost" size="sm" className="w-full" asChild>
+                        <Link href={`/blog/${post.id}`}>
+                          Read More
+                          <ArrowRight className="w-4 h-4 ml-1" />
+                        </Link>
                       </Button>
                     </CardFooter>
                   </Card>
@@ -254,12 +323,12 @@ export default function BlogPage() {
             </div>
         )}
 
-        {/* Pagination Component */}
+        {/* Pagination */}
         <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
-            onPageChange={setCurrentPage}
-        />
-      </>
+            onPageChange={handlePageChange}
+            />
+      </div>
   );
 }
