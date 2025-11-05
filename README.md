@@ -68,6 +68,5 @@ MIT
 
 ## Command
 - Blog
-- Publications
 - Photos
 

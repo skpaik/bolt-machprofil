@@ -7,16 +7,15 @@ export interface BaseContent {
 
 
 export interface BlogPost extends BaseContent {
-    slug: string;
     excerpt: string;
     content: string;
-    cover_image: string;
+    coverImage: string;
+    publishedAt: string;
+    readTime: number;
     author: string;
-    published: boolean;
-    published_at: string;
-    tags: string[];
-    read_time: number;
     category: string;
+    tags: string[];
+    featured?: boolean;
 }
 
 export interface Photo extends BaseContent {
