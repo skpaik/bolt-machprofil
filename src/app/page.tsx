@@ -6,23 +6,19 @@ import {Card, CardContent, CardFooter, CardHeader} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {
-    ArrowRight,
     Code,
-    Download,
     ExternalLink,
-    Eye,
     Github,
     Globe,
     Linkedin,
     Mail,
-    MapPin,
     Sparkles,
-    Star,
     Twitter,
     Users,
     Zap
 } from 'lucide-react';
 import Link from 'next/link';
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 const ICON_MAP: any = {
     github: Github,
@@ -169,13 +165,13 @@ export default function HomePage() {
                             <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                                 {profile.location && (
                                     <div className="flex items-center gap-2">
-                                        <MapPin className="w-4 h-4"/>
+                                        {showLucidIcon('map-pin', 'w-4 h-4')}
                                         <span>{profile.location}</span>
                                     </div>
                                 )}
                                 {profile.email && (
                                     <div className="flex items-center gap-2">
-                                        <Mail className="w-4 h-4"/>
+                                        {showLucidIcon('mail', 'w-4 h-4')}
                                         <a href={`mailto:${profile.email}`}
                                            className="hover:text-primary transition-colors">
                                             {profile.email}
@@ -194,14 +190,14 @@ export default function HomePage() {
                                 </Button>
                                 <Button size="lg" variant="outline" className="text-lg px-8" asChild>
                                     <Link href="/projects">
-                                        <Eye className="w-5 h-5 mr-2"/>
+                                        {showLucidIcon('eye', 'w-5 h-5 mr-2')}
                                         View Projects
                                     </Link>
                                 </Button>
                                 {profile.resumeUrl && (
                                     <Button size="lg" variant="ghost" className="text-lg px-8" asChild>
                                         <Link href="/resume">
-                                            <Download className="w-5 h-5 mr-2"/>
+                                            {showLucidIcon('download', 'w-5 h-5 mr-2')}
                                             Resume
                                         </Link>
                                     </Button>
@@ -319,7 +315,7 @@ export default function HomePage() {
                                 <Button variant="outline" asChild>
                                     <Link href="/projects">
                                         View All
-                                        <ArrowRight className="w-4 h-4 ml-2"/>
+                                        {showLucidIcon('arrow-right', 'w-4 h-4 ml-2')}
                                     </Link>
                                 </Button>
                             )}
@@ -380,7 +376,7 @@ export default function HomePage() {
                                     <CardContent className="pt-6">
                                         <div className="flex gap-1 mb-4">
                                             {[...Array(testimonial.rating || 5)].map((_, i) => (
-                                                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400"/>
+                                                showLucidIcon('star', 'w-5 h-5 fill-yellow-400 text-yellow-400')
                                             ))}
                                         </div>
                                         <p className="text-muted-foreground mb-6 italic">
@@ -418,7 +414,7 @@ export default function HomePage() {
                         <Button size="lg" className="text-lg px-8" asChild>
                             <Link href="/contact">
                                 Start a Project
-                                <ArrowRight className="w-5 h-5 ml-2"/>
+                                {showLucidIcon('arrow-right', 'w-5 h-5 ml-2')}
                             </Link>
                         </Button>
                         <Button size="lg" variant="outline" className="text-lg px-8" asChild>
