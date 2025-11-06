@@ -139,9 +139,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
             {/* Main Content */}
             <div className="mt-8">
               {/* You can render markdown content here */}
-              <div className="whitespace-pre-wrap">
-                {post.content}
-              </div>
+              <div className="whitespace-pre-wrap text-foreground/90 leading-relaxed" dangerouslySetInnerHTML={{__html: post.content}}
+              />
             </div>
           </article>
 
