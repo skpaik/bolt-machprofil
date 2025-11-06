@@ -1,6 +1,12 @@
 "use client";
 
-import React, {createContext, ReactNode, useContext, useEffect, useState,} from "react";
+import React, {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import portfolioData from "@/data/portfolio.json";
 import staticContentsData from "@/data/static_contents.json";
 import blogContentsData from "@/data/blog_contents.json";
@@ -16,189 +22,211 @@ import photoContentsData from "@/data/photos_contents.json";
 import aboutContentsData from "@/data/about_contents.json";
 import languageData from "@/data/i18n.json";
 import settingData from "@/data/settings.json";
-import {LanguageType, ProfileType, TemplateType, ThemeType,} from "@/lib/types/type.config";
 import {
-    AppConfig,
-    AppData,
-    BlogPost,
-    Certificate,
-    ContentData,
-    Education,
-    Experience,
-    LanguageI18n,
-    Photo,
-    Project,
-    Publication,
-    Service,
-    SettingSchema, Skills,
-    StaticContentData, Testimonial
+  LanguageType,
+  ProfileType,
+  TemplateType,
+  ThemeType,
+} from "@/lib/types/type.config";
+import {
+  AppConfig,
+  AppData,
+  BlogPost,
+  Certificate,
+  ContentData,
+  Education,
+  Experience,
+  LanguageI18n,
+  Photo,
+  Project,
+  Publication,
+  Service,
+  SettingSchema,
+  Skills,
+  StaticContentData,
+  Testimonial,
 } from "@/lib/types/portfolio";
-import {AboutContentData} from "@/lib/types/about.contract";
+import { AboutContentData } from "@/lib/types/about.contract";
 
 interface PortfolioContextType {
-    appData: AppData;
-    contentData: ContentData;
-    staticContentData: StaticContentData;
-    aboutContentData: AboutContentData;
-    blogContentData: BlogPost[];
-    projectContentData: Project[];
-    experienceContentData: Experience[];
-    educationContentData: Education[];
-    serviceContentData: Service[];
-    certificateContentData: Certificate[];
-    skillContentData: Skills[];
-    testimonialContentData: Testimonial[];
-    publicationContentData: Publication[];
-    photoContentData: Photo[];
-    appConfig: AppConfig;
-    profileType: ProfileType;
-    setProfileType: (type: ProfileType) => void;
-    template: TemplateType;
-    setTemplate: (type: TemplateType) => void;
-    langI18n: LanguageI18n;
-    languageType: LanguageType;
-    setLanguageType: (type: LanguageType) => void;
-    theme: ThemeType;
-    setTheme: (theme: ThemeType) => void;
+  appData: AppData;
+  contentData: ContentData;
+  staticContentData: StaticContentData;
+  aboutContentData: AboutContentData;
+  blogContentData: BlogPost[];
+  projectContentData: Project[];
+  experienceContentData: Experience[];
+  educationContentData: Education[];
+  serviceContentData: Service[];
+  certificateContentData: Certificate[];
+  skillContentData: Skills[];
+  testimonialContentData: Testimonial[];
+  publicationContentData: Publication[];
+  photoContentData: Photo[];
+  appConfig: AppConfig;
+  profileType: ProfileType;
+  setProfileType: (type: ProfileType) => void;
+  template: TemplateType;
+  setTemplate: (type: TemplateType) => void;
+  langI18n: LanguageI18n;
+  languageType: LanguageType;
+  setLanguageType: (type: LanguageType) => void;
+  theme: ThemeType;
+  setTheme: (theme: ThemeType) => void;
 }
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
-    undefined
+  undefined,
 );
 
 // Safe helper — works both client and SSR
 function getInitialValue<T extends string>(
-    key: string,
-    fallback: T,
-    validValues?: readonly T[]
+  key: string,
+  fallback: T,
+  validValues?: readonly T[],
 ): T {
-    if (typeof window === "undefined") return fallback;
-    try {
-        const stored = localStorage.getItem(key) as T | null;
-        if (stored && (!validValues || validValues.includes(stored))) {
-            return stored;
-        }
-    } catch {
-        /* ignore errors */
+  if (typeof window === "undefined") return fallback;
+  try {
+    const stored = localStorage.getItem(key) as T | null;
+    if (stored && (!validValues || validValues.includes(stored))) {
+      return stored;
     }
-    return fallback;
+  } catch {
+    /* ignore errors */
+  }
+  return fallback;
 }
 
-export function PortfolioProvider({children}: { children: ReactNode }) {
-    const setting = settingData as SettingSchema;
+export function PortfolioProvider({ children }: { children: ReactNode }) {
+  const setting = settingData as SettingSchema;
 
-    // ✅ Lazy initialization — runs once on first render in browser
-    const [profileType, setProfileType] = useState<ProfileType>(() =>
-        getInitialValue(
-            "portfolioProfile",
-            setting.portfolioProfile as ProfileType,
-            Object.keys(portfolioData.profiles) as ProfileType[]
-        )
-    );
+  // ✅ Lazy initialization — runs once on first render in browser
+  const [profileType, setProfileType] = useState<ProfileType>(() =>
+    getInitialValue(
+      "portfolioProfile",
+      setting.portfolioProfile as ProfileType,
+      Object.keys(portfolioData.profiles) as ProfileType[],
+    ),
+  );
 
-    const [template, setTemplate] = useState<TemplateType>(() =>
-        getInitialValue(
-            "portfolioTemplate",
-            setting.portfolioTemplate as TemplateType,
-        )
-    );
+  const [template, setTemplate] = useState<TemplateType>(() =>
+    getInitialValue(
+      "portfolioTemplate",
+      setting.portfolioTemplate as TemplateType,
+    ),
+  );
 
-    const [languageType, setLanguageType] = useState<LanguageType>(() =>
-        getInitialValue(
-            "portfolioLanguage",
-            setting.portfolioLanguage as LanguageType,
-            Object.keys(languageData) as LanguageType[]
-        )
-    );
+  const [languageType, setLanguageType] = useState<LanguageType>(() =>
+    getInitialValue(
+      "portfolioLanguage",
+      setting.portfolioLanguage as LanguageType,
+      Object.keys(languageData) as LanguageType[],
+    ),
+  );
 
-    const [theme, setTheme] = useState<ThemeType>(() =>
-        getInitialValue(
-            "portfolioTheme",
-            setting.portfolioTheme as ThemeType,
-        )
-    );
+  const [theme, setTheme] = useState<ThemeType>(() =>
+    getInitialValue("portfolioTheme", setting.portfolioTheme as ThemeType),
+  );
 
-    // Keep theme synced to DOM
-    useEffect(() => {
-        document.documentElement.classList.toggle("dark", theme === "dark");
-    }, [theme]);
+  // Keep theme synced to DOM
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
 
-    // Persist on change
-    useEffect(() => {
-        localStorage.setItem("portfolioProfile", profileType);
-    }, [profileType]);
+  // Persist on change
+  useEffect(() => {
+    localStorage.setItem("portfolioProfile", profileType);
+  }, [profileType]);
 
-    useEffect(() => {
-        localStorage.setItem("portfolioTemplate", template);
-    }, [template]);
+  useEffect(() => {
+    localStorage.setItem("portfolioTemplate", template);
+  }, [template]);
 
-    useEffect(() => {
-        localStorage.setItem("portfolioLanguage", languageType);
-    }, [languageType]);
+  useEffect(() => {
+    localStorage.setItem("portfolioLanguage", languageType);
+  }, [languageType]);
 
-    useEffect(() => {
-        localStorage.setItem("portfolioTheme", theme);
-        document.documentElement.classList.toggle("dark", theme === "dark");
-    }, [theme]);
+  useEffect(() => {
+    localStorage.setItem("portfolioTheme", theme);
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
 
-    // Derived data
-    const appData: AppData = portfolioData.profiles[profileType];
-    const contentData: ContentData = portfolioData.profiles[profileType];
-    const staticContentData: StaticContentData = staticContentsData[languageType];
-    const blogContentData: BlogPost[] = blogContentsData[languageType];
-    const projectContentData: Project[] = projectContentsData[languageType];
-    const experienceContentData: Experience[] = experienceContentsData[languageType];
-    const educationContentData: Education[] = educationContentsData[languageType];
-    const serviceContentData: Service[] = serviceContentsData[languageType];
-    const certificateContentData: Certificate[] = certificateContentsData[languageType];
-    const skillContentData: Skills[] = skillContentsData[languageType];
-    const testimonialContentData: Testimonial[] = testimonialContentsData[languageType];
-    const publicationContentData: Publication[] = publicationContentsData[languageType];
-    const photoContentData: Photo[] = photoContentsData[languageType];
-    const appConfig: AppConfig = portfolioData.app_config;
-    const aboutContentData: AboutContentData = aboutContentsData[languageType];
-    const langI18n: LanguageI18n = languageData[languageType];
+  const contentData: ContentData = {
+    blogs: [],
+    certificates: [],
+    educations: [],
+    experience: [],
+    photos: [],
+    projects: [],
+    publications: [],
+    services: [],
+    skills: [],
+    testimonials: [],
+  };
+  // Derived data
+  const appData: AppData = portfolioData.profiles[profileType];
+  const staticContentData: StaticContentData = staticContentsData[languageType];
+  const blogContentData: BlogPost[] = blogContentsData[languageType];
+  const projectContentData: Project[] = projectContentsData[languageType];
+  const experienceContentData: Experience[] =
+    experienceContentsData[languageType];
+  const educationContentData: Education[] = educationContentsData[languageType];
+  const serviceContentData: Service[] = serviceContentsData[languageType];
+  const certificateContentData: Certificate[] =
+    certificateContentsData[languageType];
+  const skillContentData: Skills[] = skillContentsData[languageType];
+  const testimonialContentData: Testimonial[] =
+    testimonialContentsData[languageType];
+  const publicationContentData: Publication[] =
+    publicationContentsData[languageType];
+  const photoContentData: Photo[] = photoContentsData[languageType];
+  const appConfig: AppConfig = portfolioData.app_config;
+  const aboutContentData: AboutContentData = aboutContentsData[languageType];
+  const langI18n: LanguageI18n = languageData[languageType];
 
-    return (
-        <PortfolioContext.Provider
-            value={{
-                appData,
-                aboutContentData,
-                blogContentData,
-                projectContentData,
-                experienceContentData,
-                educationContentData,
-                serviceContentData,
-                certificateContentData,
-                skillContentData,
-                testimonialContentData,
-                publicationContentData,
-                photoContentData,
-                contentData,
-                staticContentData,
-                appConfig,
-                profileType,
-                setProfileType,
-                template,
-                setTemplate,
-                langI18n,
-                languageType,
-                setLanguageType,
-                theme,
-                setTheme,
-            }}
-        >
-            {children}
-        </PortfolioContext.Provider>
-    );
+  contentData.staticContent = staticContentData;
+  contentData.photos = photoContentData;
+
+  return (
+    <PortfolioContext.Provider
+      value={{
+        appData,
+        aboutContentData,
+        blogContentData,
+        projectContentData,
+        experienceContentData,
+        educationContentData,
+        serviceContentData,
+        certificateContentData,
+        skillContentData,
+        testimonialContentData,
+        publicationContentData,
+        photoContentData,
+        contentData,
+        staticContentData,
+        appConfig,
+        profileType,
+        setProfileType,
+        template,
+        setTemplate,
+        langI18n,
+        languageType,
+        setLanguageType,
+        theme,
+        setTheme,
+      }}
+    >
+      {children}
+    </PortfolioContext.Provider>
+  );
 }
 
 export function usePortfolio() {
-    const context = useContext(PortfolioContext);
+  const context = useContext(PortfolioContext);
 
-    if (context === undefined) {
-        throw new Error("usePortfolio must be used within a PortfolioProvider");
-    }
+  if (context === undefined) {
+    throw new Error("usePortfolio must be used within a PortfolioProvider");
+  }
 
-    return context;
+  return context;
 }
