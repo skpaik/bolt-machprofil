@@ -18,20 +18,16 @@ export interface BlogPost extends BaseContent {
     featured?: boolean;
 }
 
-export interface Photo extends BaseContent {
-    excerpt?: string;
-    content?: string;
-    cover_image?: string;
-    author?: string;
-    published?: boolean;
-    published_at?: string;
-    tags: string[];
-    location?: string;
-    album?: string;
-    description?: string;
+export interface Photo  extends BaseContent{
     image: string;
+    album: string;
+    description?: string;
+    date?: string;
+    location?: string;
+    camera?: string;
+    tags?: string[];
+    // views?: number;
 }
-
 
 export interface Certificate extends BaseContent {
     issuer: string;
