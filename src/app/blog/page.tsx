@@ -14,6 +14,7 @@ import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {BlogPost} from "@/lib/types/portfolio";
 import {formatDateLong} from "@/lib/helpers/date.helper";
 import {SortOption} from "@/lib/types/type.config";
+import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
 
 export default function BlogPage() {
   const { appData,appConfig, blogContentData, langI18n } = usePortfolio();
@@ -299,18 +300,10 @@ export default function BlogPage() {
               ))}
             </div>
         ) : (
-            <div className="text-center py-12">
-              <div className="text-muted-foreground mb-4">
-                <Search size={48} className="mx-auto mb-4 opacity-50" />
-                <h3 className="text-xl font-semibold mb-2">No posts found</h3>
-                <p className="text-sm sm:text-base">
-                  Try adjusting your search terms or filters to find what you're looking for.
-                </p>
-              </div>
-              <Button variant="outline" onClick={handleClearAll}>
-                Clear all filters
-              </Button>
-            </div>
+            <ListEmptyDisplay
+                title={"No posts found"}
+                message={"Try adjusting your search terms or filters to find what you're looking for."}
+                handleClearAll={handleClearAll}/>
         )}
 
         {/* Pagination */}
