@@ -8,29 +8,10 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { FilterBar } from '@/components/shared/FilterBar';
 import { Pagination } from '@/components/shared/Pagination';
-import {
-    Code,
-    Palette,
-    Wrench,
-    MessageSquare,
-    TrendingUp,
-    Award,
-    Star,
-    Search
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {SortOption} from "@/lib/types/type.config";
 import { showLucidIcon} from "@/components/lucid-icon-map";
-
-
-// Proficiency color mapping
-const getProficiencyColor = (proficiency: number): string => {
-    if (proficiency >= 90) return 'bg-green-500';
-    if (proficiency >= 75) return 'bg-blue-500';
-    if (proficiency >= 60) return 'bg-yellow-500';
-    return 'bg-orange-500';
-};
+import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
 
 export default function SkillPage() {
     const { appData, skillContentData,appConfig, langI18n } = usePortfolio();
@@ -234,7 +215,7 @@ export default function SkillPage() {
                             <CardContent>
                                 {skill.yearsOfExperience && (
                                     <div className="flex items-center gap-2 mb-3 text-sm text-muted-foreground">
-                                        <Award className="w-4 h-4" />
+                                        {showLucidIcon('award', 'w-4 h-4')}
                                         <span>{skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'} of experience</span>
                                     </div>
                                 )}
@@ -259,18 +240,10 @@ export default function SkillPage() {
                     ))}
                 </div>
             ) : (
-                <div className="text-center py-12">
-                    <div className="text-muted-foreground mb-4">
-                        <Search size={48} className="mx-auto mb-4 opacity-50" />
-                        <h3 className="text-xl font-semibold mb-2">No skills found</h3>
-                        <p className="text-sm sm:text-base">
-                            Try adjusting your search terms or filters to find what you're looking for.
-                        </p>
-                    </div>
-                    <Button variant="outline" onClick={handleClearAll}>
-                        Clear all filters
-                    </Button>
-                </div>
+                <ListEmptyDisplay
+                    title={"No skills found"}
+                    message={"Try adjusting your search terms or filters to find what you're looking for."}
+                    handleClearAll={handleClearAll}/>
             )}
 
             {/* Pagination */}
