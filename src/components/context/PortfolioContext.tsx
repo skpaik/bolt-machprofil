@@ -12,6 +12,7 @@ import certificateContentsData from "@/data/certificate_contents.json";
 import skillContentsData from "@/data/skill_contents.json";
 import testimonialContentsData from "@/data/testimonial_contents.json";
 import publicationContentsData from "@/data/publication_contents.json";
+import photoContentsData from "@/data/photos_contents.json";
 import aboutContentsData from "@/data/about_contents.json";
 import languageData from "@/data/i18n.json";
 import settingData from "@/data/settings.json";
@@ -25,6 +26,7 @@ import {
     Education,
     Experience,
     LanguageI18n,
+    Photo,
     Project,
     Publication,
     Service,
@@ -47,6 +49,7 @@ interface PortfolioContextType {
     skillContentData: Skills[];
     testimonialContentData: Testimonial[];
     publicationContentData: Publication[];
+    photoContentData: Photo[];
     appConfig: AppConfig;
     profileType: ProfileType;
     setProfileType: (type: ProfileType) => void;
@@ -151,6 +154,7 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
     const skillContentData: Skills[] = skillContentsData[languageType];
     const testimonialContentData: Testimonial[] = testimonialContentsData[languageType];
     const publicationContentData: Publication[] = publicationContentsData[languageType];
+    const photoContentData: Photo[] = photoContentsData[languageType];
     const appConfig: AppConfig = portfolioData.app_config;
     const aboutContentData: AboutContentData = aboutContentsData[languageType];
     const langI18n: LanguageI18n = languageData[languageType];
@@ -169,6 +173,7 @@ export function PortfolioProvider({children}: { children: ReactNode }) {
                 skillContentData,
                 testimonialContentData,
                 publicationContentData,
+                photoContentData,
                 contentData,
                 staticContentData,
                 appConfig,

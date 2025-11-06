@@ -191,7 +191,6 @@ export interface AppConfig {
 export interface ContentData {
     // education: Education[];
     //skills: Skills[];
-    photos: Photo[];
 }
 
 export interface TermsPrivacySection extends BaseContent {

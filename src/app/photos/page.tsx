@@ -17,7 +17,7 @@ import {formatDateLong} from "@/lib/helpers/date.helper";
 type ViewMode = 'gallery' | 'albums';
 
 export default function PhotoPage() {
-    const { appData, contentData, appConfig, langI18n } = usePortfolio();
+    const { appData, photoContentData, appConfig, langI18n } = usePortfolio();
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -29,7 +29,7 @@ export default function PhotoPage() {
     const [viewMode, setViewMode] = useState<ViewMode>('gallery');
 
     // Use real data if available, otherwise use sample data
-    const photos =  contentData.photos;
+    const photos =  photoContentData;
 
     // Get URL parameters
     const albumParam = searchParams?.get('album');
@@ -333,7 +333,7 @@ export default function PhotoPage() {
     }
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <>
             {/* Header */}
             <div className="mb-8 sm:mb-12">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
@@ -470,6 +470,6 @@ export default function PhotoPage() {
                     />
                 </>
             )}
-        </div>
+        </>
     );
 }
