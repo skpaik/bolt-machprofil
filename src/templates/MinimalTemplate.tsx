@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export default function MinimalTemplate({ children }: { children: ReactNode }) {
   return (
@@ -12,10 +12,13 @@ export default function MinimalTemplate({ children }: { children: ReactNode }) {
         }
 
         .minimal-template {
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-family:
+            -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
 
-        .minimal-template h1, .minimal-template h2, .minimal-template h3 {
+        .minimal-template h1,
+        .minimal-template h2,
+        .minimal-template h3 {
           font-weight: 300;
           letter-spacing: -0.02em;
           color: hsl(0, 0%, 20%);
