@@ -1,14 +1,14 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Calendar, Clock, ArrowLeft, Share2, Tag } from 'lucide-react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import {formatDateLong} from "@/lib/helpers/date.helper";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 interface BlogDetailPageProps {
     slug: string;
@@ -33,7 +33,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
             </p>
             <Button asChild>
               <Link href="/blog">
-                <ArrowLeft className="w-4 h-4 mr-2" />
+                {showLucidIcon('arrow-left', 'w-4 h-4 mr-2')}
                 Back to Blog
               </Link>
             </Button>
@@ -71,7 +71,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
         <div className="bg-muted/30 border-b">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <Button variant="ghost" onClick={() => router.back()} className="mb-6">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              {showLucidIcon('arrow-left', 'w-4 h-4 mr-2')}
               Back to Blog
             </Button>
 
@@ -88,12 +88,12 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
 
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
+                  {showLucidIcon('calendar', 'w-4 h-4')}
                   <span>{formatDateLong(post.publishedAt)}</span>
                 </div>
                 <span>•</span>
                 <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
+                  {showLucidIcon('clock', 'w-4 h-4')}
                   <span>{post.readTime} min read</span>
                 </div>
                 <Button
@@ -102,7 +102,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
                     onClick={handleShare}
                     className="ml-auto"
                 >
-                  <Share2 className="w-4 h-4 mr-2" />
+                  {showLucidIcon('share2', 'w-4 h-4 mr-2')}
                   Share
                 </Button>
               </div>
@@ -141,7 +141,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
           {post.tags && post.tags.length > 0 && (
               <div className="mt-12 pt-8 border-t">
                 <div className="flex items-center gap-2 mb-4">
-                  <Tag className="w-5 h-5 text-muted-foreground" />
+                  {showLucidIcon('tag', 'w-5 h-5 text-muted-foreground')}
                   <h3 className="font-semibold">Tags</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -182,7 +182,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
                               {relatedPost.excerpt}
                             </p>
                             <div className="flex items-center gap-2 mt-3 text-xs text-muted-foreground">
-                              <Calendar className="w-3 h-3" />
+                              {showLucidIcon('calendar', 'w-3 h-3')}
                               <span>{formatDateLong(relatedPost.publishedAt)}</span>
                             </div>
                           </div>
@@ -197,7 +197,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
           <div className="mt-16 pt-8 border-t">
             <Button asChild>
               <Link href="/blog">
-                <ArrowLeft className="w-4 h-4 mr-2" />
+                {showLucidIcon('arrow-left', 'w-4 h-4 mr-2')}
                 Back to All Posts
               </Link>
             </Button>

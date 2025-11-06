@@ -1,35 +1,12 @@
 "use client";
 
 import React, {useMemo} from 'react';
+import Link from 'next/link';
 import {usePortfolio} from '@/components/context/PortfolioContext';
 import {Card, CardContent, CardFooter, CardHeader} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
-import {
-    Code,
-    ExternalLink,
-    Github,
-    Globe,
-    Linkedin,
-    Mail,
-    Sparkles,
-    Twitter,
-    Users,
-    Zap
-} from 'lucide-react';
-import Link from 'next/link';
 import {showLucidIcon} from "@/components/lucid-icon-map";
-
-const ICON_MAP: any = {
-    github: Github,
-    linkedin: Linkedin,
-    twitter: Twitter,
-    globe: Globe,
-    code: Code,
-    smartphone: Code,
-    palette: Sparkles,
-    users: Users
-};
 
 export default function HomePage() {
     const {
@@ -184,7 +161,7 @@ export default function HomePage() {
                             <div className="flex flex-wrap gap-4">
                                 <Button size="lg" className="text-lg px-8" asChild>
                                     <Link href="/contact">
-                                        <Mail className="w-5 h-5 mr-2"/>
+                                        {showLucidIcon('mail', 'w-5 h-5 mr-2')}
                                         Get in Touch
                                     </Link>
                                 </Button>
@@ -208,7 +185,6 @@ export default function HomePage() {
                             {socialLinks.length > 0 && (
                                 <div className="flex gap-3">
                                     {socialLinks.map((social: any) => {
-                                        const IconComponent = ICON_MAP[social.icon] || ExternalLink;
                                         return (
                                             <a
                                                 key={social.platform}
@@ -218,7 +194,7 @@ export default function HomePage() {
                                                 className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
                                                 aria-label={social.platform}
                                             >
-                                                <IconComponent className="w-5 h-5"/>
+                                                {showLucidIcon(social.icon, 'w-5 h-5')}
                                             </a>
                                         );
                                     })}
@@ -279,13 +255,12 @@ export default function HomePage() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {topServices.map((service: any) => {
-                                const IconComponent = ICON_MAP[service.icon] || Zap;
                                 return (
                                     <Card key={service.id} className="hover:shadow-lg transition-shadow">
                                         <CardHeader>
                                             <div
                                                 className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                                                <IconComponent className="w-6 h-6 text-primary"/>
+                                                {showLucidIcon(service.icon, 'w-6 h-6 text-primary')}
                                             </div>
                                             <h3 className="text-xl font-bold">{service.title}</h3>
                                         </CardHeader>

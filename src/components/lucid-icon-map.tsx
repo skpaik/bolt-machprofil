@@ -54,10 +54,18 @@ import {
     Users,
     Video,
     Wrench,
+    Zap,
+    ArrowLeft,
+    Share2,
+    Tag
 } from 'lucide-react'; // Icon mapping
 
 // Icon mapping for dynamic lookup
 const ICON_MAP: { [key: string]: LucideIcon } = {
+    'tag': Tag,
+    'share2': Share2,
+    'arrow-left': ArrowLeft,
+    'zap': Zap,
     'quote': Quote,
     'link': Link,
     'graduation-cap': GraduationCap,

@@ -282,7 +282,7 @@ export default function PublicationsPage() {
     );
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <>
             <PageHeading
                 title={langI18n.publications || "Publications"}
                 subTitle="Research papers, articles, and academic contributions in computer science and related fields."
@@ -375,6 +375,6 @@ export default function PublicationsPage() {
                 totalPages={totalPages}
                 onPageChange={setCurrentPage}
             />
-        </div>
+        </>
     );
 }

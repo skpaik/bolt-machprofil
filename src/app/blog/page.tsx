@@ -5,7 +5,6 @@ import { usePortfolio } from '@/components/context/PortfolioContext';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, ArrowRight, Search } from 'lucide-react';
 import Link from 'next/link';
 import { FilterBar,  } from '@/components/shared/FilterBar';
 import { Pagination } from '@/components/shared/Pagination';
@@ -15,6 +14,8 @@ import {BlogPost} from "@/lib/types/portfolio";
 import {formatDateLong} from "@/lib/helpers/date.helper";
 import {SortOption} from "@/lib/types/type.config";
 import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
+import {showLucidIcon} from "@/components/lucid-icon-map";
+import {PageHeading} from "@/components/shared/PageHeading";
 
 export default function BlogPage() {
   const { appData,appConfig, blogContentData, langI18n } = usePortfolio();
@@ -220,13 +221,11 @@ export default function BlogPage() {
   };
 
   return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{langI18n.blog || 'Blog'}</h1>
-          <p className="text-lg text-muted-foreground">
-            {langI18n.latestPosts || 'Latest articles, tutorials, and insights on web development and technology.'}
-          </p>
-        </div>
+      <>
+        <PageHeading
+            title={langI18n.blog}
+            subTitle="Latest articles, tutorials, and insights on web development and technology."
+        />
 
         {/* Filter Bar */}
         <FilterBar
@@ -256,10 +255,10 @@ export default function BlogPage() {
                     </Link>
                     <CardHeader>
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                        <Calendar className="w-4 h-4" />
+                        {showLucidIcon('calendar', 'w-4 h-4')}
                         <span>{formatDateLong(post.publishedAt)}</span>
                         <span>•</span>
-                        <Clock className="w-4 h-4" />
+                        {showLucidIcon('clock', 'w-4 h-4')}
                         <span>{post.readTime} min read</span>
                       </div>
                       <Link href={`/blog/${post.id}`}>
@@ -292,7 +291,7 @@ export default function BlogPage() {
                       <Button variant="ghost" size="sm" className="w-full" asChild>
                         <Link href={`/blog/${post.id}`}>
                           Read More
-                          <ArrowRight className="w-4 h-4 ml-1" />
+                          {showLucidIcon('arrow-right', 'w-4 h-4 ml-1')}
                         </Link>
                       </Button>
                     </CardFooter>
@@ -312,6 +311,6 @@ export default function BlogPage() {
             totalPages={totalPages}
             onPageChange={handlePageChange}
             />
-      </div>
+      </>
   );
 }
