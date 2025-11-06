@@ -14,7 +14,14 @@
       "endDate": "2024-06-20",
       "client": "RetailCo Inc.",
       "role": "Full Stack Developer",
-      "technologies": ["Next.js", "React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      "technologies": [
+        "Next.js",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Stripe",
+        "Tailwind CSS"
+      ],
       "features": [
         "Product catalog with search and filters",
         "Shopping cart and checkout flow",
@@ -43,7 +50,14 @@
       "endDate": "2024-02-15",
       "client": "HealthTech Solutions",
       "role": "Lead Developer",
-      "technologies": ["React", "TypeScript", "PostgreSQL", "Express", "Socket.io", "Docker"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Express",
+        "Socket.io",
+        "Docker"
+      ],
       "features": [
         "Appointment scheduling",
         "Patient records management",
@@ -70,7 +84,14 @@
       "startDate": "2023-07-01",
       "endDate": "2023-11-30",
       "role": "Frontend Developer",
-      "technologies": ["Vue.js", "D3.js", "Chart.js", "Node.js", "Redis", "AWS"],
+      "technologies": [
+        "Vue.js",
+        "D3.js",
+        "Chart.js",
+        "Node.js",
+        "Redis",
+        "AWS"
+      ],
       "features": [
         "Multi-platform integration",
         "Real-time analytics",
@@ -97,7 +118,14 @@
       "startDate": "2024-03-01",
       "endDate": "Ongoing",
       "role": "Full Stack Developer",
-      "technologies": ["Next.js", "OpenAI API", "Python", "FastAPI", "PostgreSQL", "Vercel"],
+      "technologies": [
+        "Next.js",
+        "OpenAI API",
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Vercel"
+      ],
       "features": [
         "AI-powered content generation",
         "Multiple content types",
@@ -125,7 +153,13 @@
       "endDate": "2023-12-20",
       "client": "FitLife App",
       "role": "Mobile Developer",
-      "technologies": ["React Native", "Firebase", "Node.js", "MongoDB", "Stripe"],
+      "technologies": [
+        "React Native",
+        "Firebase",
+        "Node.js",
+        "MongoDB",
+        "Stripe"
+      ],
       "features": [
         "Workout tracking",
         "Nutrition logging",
@@ -152,7 +186,14 @@
       "endDate": "2023-09-05",
       "client": "HomeFinder",
       "role": "Full Stack Developer",
-      "technologies": ["Next.js", "Mapbox", "PostgreSQL", "Prisma", "AWS S3", "Tailwind CSS"],
+      "technologies": [
+        "Next.js",
+        "Mapbox",
+        "PostgreSQL",
+        "Prisma",
+        "AWS S3",
+        "Tailwind CSS"
+      ],
       "features": [
         "Advanced property search",
         "Interactive maps",
@@ -178,7 +219,14 @@
       "startDate": "2024-02-01",
       "endDate": "Ongoing",
       "role": "Tech Lead",
-      "technologies": ["React", "TypeScript", "GraphQL", "Apollo", "PostgreSQL", "Docker"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "GraphQL",
+        "Apollo",
+        "PostgreSQL",
+        "Docker"
+      ],
       "features": [
         "Kanban and Gantt views",
         "Time tracking",
@@ -205,7 +253,13 @@
       "startDate": "2023-11-01",
       "endDate": "2024-01-15",
       "role": "Full Stack Developer",
-      "technologies": ["Next.js", "WebSocket", "Redis", "Chart.js", "CoinGecko API"],
+      "technologies": [
+        "Next.js",
+        "WebSocket",
+        "Redis",
+        "Chart.js",
+        "CoinGecko API"
+      ],
       "features": [
         "Real-time price tracking",
         "Portfolio management",
@@ -233,7 +287,14 @@
       "endDate": "2024-03-30",
       "client": "EduTech Academy",
       "role": "Lead Developer",
-      "technologies": ["Next.js", "Vimeo API", "PostgreSQL", "Stripe", "AWS", "Redis"],
+      "technologies": [
+        "Next.js",
+        "Vimeo API",
+        "PostgreSQL",
+        "Stripe",
+        "AWS",
+        "Redis"
+      ],
       "features": [
         "Video course player",
         "Interactive quizzes",

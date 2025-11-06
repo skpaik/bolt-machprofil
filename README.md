@@ -5,18 +5,23 @@ A modern, highly customizable portfolio website built with Next.js 13, TypeScrip
 ## Key Features
 
 ### Visual Templates
+
 Switch between different design aesthetics:
+
 - **Modern**: Bold, vibrant design with gradients and animations
-- **Classic**: Traditional, elegant layout with serif typography  
+- **Classic**: Traditional, elegant layout with serif typography
 - **Minimal**: Clean, spacious design with subtle styling
 
 ### Professional Profiles
+
 Pre-configured profiles for different professions:
+
 - **Developer**: Tech stack, coding projects, technical skills
 - **Photographer**: Portfolio photos, creative work, equipment
 - **Teacher**: Curriculum, teaching experience, educational projects
 
 ### Additional Features
+
 - **Multi-language Support**: English, Spanish, and French
 - **Theme Switching**: Light and dark modes
 - **Resume/CV Page**: Professional CV with PDF download (print functionality)
@@ -65,8 +70,7 @@ Edit `/data/portfolio.json` to customize your portfolio information.
 
 MIT
 
-
 ## Command
+
 - Blog
 - Photos
-

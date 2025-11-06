@@ -1,6 +1,6 @@
 {
   "de": [],
-  "en":[
+  "en": [
     {
       "id": "1",
       "company": "TechCorp Inc.",
@@ -27,8 +27,20 @@
         "Increased test coverage from 45% to 95%",
         "Implemented CI/CD pipeline reducing deployment time by 80%"
       ],
-      "technologies": ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS", "Docker", "Kubernetes"],
-      "projects": ["Customer Portal Redesign", "Real-time Analytics Dashboard", "API Gateway Implementation"],
+      "technologies": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "projects": [
+        "Customer Portal Redesign",
+        "Real-time Analytics Dashboard",
+        "API Gateway Implementation"
+      ],
       "current": true
     },
     {
@@ -57,8 +69,20 @@
         "Developed reusable component library used across 20+ projects",
         "Received \"Developer of the Year\" award in 2021"
       ],
-      "technologies": ["React", "Vue.js", "Node.js", "Express", "MongoDB", "MySQL", "Git"],
-      "projects": ["E-commerce Platform", "Corporate Website CMS", "Booking System"]
+      "technologies": [
+        "React",
+        "Vue.js",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "MySQL",
+        "Git"
+      ],
+      "projects": [
+        "E-commerce Platform",
+        "Corporate Website CMS",
+        "Booking System"
+      ]
     },
     {
       "id": "3",
@@ -86,7 +110,15 @@
         "Achieved 100% accessibility score on all major features",
         "Contributed to 3 successful product launches"
       ],
-      "technologies": ["React", "Redux", "JavaScript", "SASS", "Webpack", "Jest", "Cypress"],
+      "technologies": [
+        "React",
+        "Redux",
+        "JavaScript",
+        "SASS",
+        "Webpack",
+        "Jest",
+        "Cypress"
+      ],
       "projects": ["SaaS Dashboard", "Analytics Platform", "Admin Panel"]
     },
     {
@@ -113,8 +145,19 @@
         "Built long-term relationships with 10+ recurring clients",
         "Generated $150K+ in revenue"
       ],
-      "technologies": ["WordPress", "PHP", "JavaScript", "MySQL", "HTML/CSS", "jQuery"],
-      "projects": ["Restaurant Website", "Real Estate Platform", "Portfolio Sites"]
+      "technologies": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "HTML/CSS",
+        "jQuery"
+      ],
+      "projects": [
+        "Restaurant Website",
+        "Real Estate Platform",
+        "Portfolio Sites"
+      ]
     },
     {
       "id": "5",
@@ -142,7 +185,15 @@
         "Received positive feedback from team leads and clients",
         "Rapidly expanded technical skill set"
       ],
-      "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "PHP", "Git"],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery",
+        "PHP",
+        "Git"
+      ],
       "projects": ["Client Websites", "Landing Pages", "WordPress Themes"]
     }
   ],

@@ -11,7 +11,13 @@
       "month": "March",
       "type": "Journal",
       "abstract": "This survey provides a comprehensive overview of deep learning techniques applied to natural language processing tasks. We discuss recent advances in transformer architectures, pre-training methods, and their applications across various NLP domains including machine translation, sentiment analysis, and question answering.",
-      "keywords": ["Deep Learning", "Natural Language Processing", "Transformers", "BERT", "GPT"],
+      "keywords": [
+        "Deep Learning",
+        "Natural Language Processing",
+        "Transformers",
+        "BERT",
+        "GPT"
+      ],
       "doi": "10.1109/TNNLS.2024.1234567",
       "url": "https://ieeexplore.ieee.org/document/example",
       "pdfUrl": "/publications/nlp-survey-2024.pdf",
@@ -29,7 +35,12 @@
       "month": "July",
       "type": "Conference",
       "abstract": "We present novel mixed precision training techniques that significantly reduce training time and memory consumption for large-scale neural networks. Our approach achieves up to 3x speedup while maintaining model accuracy on various benchmark datasets.",
-      "keywords": ["Deep Learning", "Mixed Precision", "Neural Networks", "GPU Optimization"],
+      "keywords": [
+        "Deep Learning",
+        "Mixed Precision",
+        "Neural Networks",
+        "GPU Optimization"
+      ],
       "doi": "10.48550/arXiv.2024.example",
       "url": "https://proceedings.mlr.press/example",
       "pdfUrl": "/publications/mixed-precision-icml2024.pdf",
@@ -47,7 +58,12 @@
       "month": "November",
       "type": "Journal",
       "abstract": "This paper explores machine learning approaches for automated code review, including defect detection, code smell identification, and security vulnerability analysis. We present a comprehensive framework that integrates multiple ML models to provide intelligent code review suggestions.",
-      "keywords": ["Machine Learning", "Software Engineering", "Code Review", "Static Analysis"],
+      "keywords": [
+        "Machine Learning",
+        "Software Engineering",
+        "Code Review",
+        "Static Analysis"
+      ],
       "doi": "10.1145/3234567.8901234",
       "url": "https://dl.acm.org/doi/example",
       "pdfUrl": "/publications/code-review-ml-2023.pdf",
@@ -64,7 +80,13 @@
       "month": "September",
       "type": "Conference",
       "abstract": "We propose a blockchain-based framework for secure and privacy-preserving data sharing in healthcare systems. The framework leverages smart contracts and cryptographic techniques to ensure data integrity, auditability, and patient consent management.",
-      "keywords": ["Blockchain", "Healthcare", "Privacy", "Security", "Data Sharing"],
+      "keywords": [
+        "Blockchain",
+        "Healthcare",
+        "Privacy",
+        "Security",
+        "Data Sharing"
+      ],
       "doi": "10.1109/ICHI.2023.example",
       "url": "https://ieeexplore.ieee.org/document/healthcare",
       "citations": 34,
@@ -81,7 +103,13 @@
       "month": "June",
       "type": "Book Chapter",
       "abstract": "This chapter examines the performance characteristics of modern JavaScript frameworks including React, Vue, and Angular. We provide empirical analysis and best practices for optimizing web application performance in production environments.",
-      "keywords": ["Web Development", "JavaScript", "React", "Performance", "Optimization"],
+      "keywords": [
+        "Web Development",
+        "JavaScript",
+        "React",
+        "Performance",
+        "Optimization"
+      ],
       "doi": "10.1007/978-3-example",
       "url": "https://link.springer.com/chapter/example",
       "pdfUrl": "/publications/web-performance-2023.pdf",
@@ -98,7 +126,13 @@
       "month": "December",
       "type": "Workshop",
       "abstract": "We present a federated learning approach tailored for IoT networks with limited bandwidth and heterogeneous devices. Our method achieves comparable accuracy to centralized training while preserving data privacy and reducing communication overhead.",
-      "keywords": ["Federated Learning", "IoT", "Privacy", "Edge Computing", "Machine Learning"],
+      "keywords": [
+        "Federated Learning",
+        "IoT",
+        "Privacy",
+        "Edge Computing",
+        "Machine Learning"
+      ],
       "url": "https://neurips.cc/workshop/example",
       "pdfUrl": "/publications/federated-iot-2023.pdf",
       "citations": 12,
@@ -114,7 +148,12 @@
       "month": "January",
       "type": "Journal",
       "abstract": "This study investigates explainable AI techniques for medical diagnosis applications. We present case studies demonstrating how interpretable machine learning models can assist clinicians in making informed decisions while maintaining diagnostic accuracy.",
-      "keywords": ["Explainable AI", "Medical Diagnosis", "Healthcare", "Interpretability"],
+      "keywords": [
+        "Explainable AI",
+        "Medical Diagnosis",
+        "Healthcare",
+        "Interpretability"
+      ],
       "doi": "10.1038/s42256-024-example",
       "url": "https://www.nature.com/articles/example",
       "citations": 89,
@@ -130,7 +169,12 @@
       "month": "April",
       "type": "Preprint",
       "abstract": "We propose a lightweight neural network architecture optimized for real-time object detection on edge devices. Our approach achieves state-of-the-art accuracy while maintaining inference speeds suitable for resource-constrained environments.",
-      "keywords": ["Object Detection", "Edge Computing", "Neural Networks", "Computer Vision"],
+      "keywords": [
+        "Object Detection",
+        "Edge Computing",
+        "Neural Networks",
+        "Computer Vision"
+      ],
       "doi": "10.48550/arXiv.2404.example",
       "url": "https://arxiv.org/abs/example",
       "pdfUrl": "/publications/edge-detection-2024.pdf",
@@ -147,7 +191,12 @@
       "month": "August",
       "type": "Conference",
       "abstract": "We introduce novel graph neural network architectures for analyzing social networks. Our models effectively capture complex relationships and dynamics in large-scale social graphs, enabling improved community detection and influence prediction.",
-      "keywords": ["Graph Neural Networks", "Social Networks", "Community Detection", "Deep Learning"],
+      "keywords": [
+        "Graph Neural Networks",
+        "Social Networks",
+        "Community Detection",
+        "Deep Learning"
+      ],
       "doi": "10.1145/3580305.example",
       "url": "https://dl.acm.org/doi/kdd2023",
       "citations": 51,

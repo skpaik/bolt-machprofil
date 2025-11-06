@@ -10,12 +10,7 @@
       "author": "Abul Mal",
       "readTime": 8,
       "category": "Web Development",
-      "tags": [
-        "React",
-        "JavaScript",
-        "Hooks",
-        "Frontend"
-      ],
+      "tags": ["React", "JavaScript", "Hooks", "Frontend"],
       "featured": true
     },
     {
@@ -28,12 +23,7 @@
       "author": "Abul Mal",
       "readTime": 10,
       "category": "Programming",
-      "tags": [
-        "TypeScript",
-        "JavaScript",
-        "Best Practices",
-        "Code Quality"
-      ],
+      "tags": ["TypeScript", "JavaScript", "Best Practices", "Code Quality"],
       "featured": true
     },
     {
@@ -46,12 +36,7 @@
       "author": "Abul Mal",
       "readTime": 12,
       "category": "Web Development",
-      "tags": [
-        "Next.js",
-        "React",
-        "App Router",
-        "SSR"
-      ],
+      "tags": ["Next.js", "React", "App Router", "SSR"],
       "featured": true
     },
     {
@@ -64,12 +49,7 @@
       "author": "Abul Mal",
       "readTime": 6,
       "category": "CSS & Design",
-      "tags": [
-        "CSS",
-        "Grid",
-        "Flexbox",
-        "Layout"
-      ]
+      "tags": ["CSS", "Grid", "Flexbox", "Layout"]
     },
     {
       "id": 5,
@@ -81,13 +61,7 @@
       "author": "Abul Mal",
       "readTime": 15,
       "category": "Backend Development",
-      "tags": [
-        "Node.js",
-        "Express",
-        "API",
-        "REST",
-        "MongoDB"
-      ]
+      "tags": ["Node.js", "Express", "API", "REST", "MongoDB"]
     },
     {
       "id": 6,
@@ -99,12 +73,7 @@
       "author": "Abul Mal",
       "readTime": 7,
       "category": "CSS & Design",
-      "tags": [
-        "Responsive Design",
-        "CSS",
-        "Mobile First",
-        "Web Design"
-      ]
+      "tags": ["Responsive Design", "CSS", "Mobile First", "Web Design"]
     },
     {
       "id": 7,
@@ -116,12 +85,7 @@
       "author": "Abul Mal",
       "readTime": 14,
       "category": "DevOps",
-      "tags": [
-        "Docker",
-        "Kubernetes",
-        "Containers",
-        "DevOps"
-      ]
+      "tags": ["Docker", "Kubernetes", "Containers", "DevOps"]
     },
     {
       "id": 8,
@@ -133,12 +97,7 @@
       "author": "Abul Mal",
       "readTime": 11,
       "category": "Programming",
-      "tags": [
-        "JavaScript",
-        "Design Patterns",
-        "OOP",
-        "Software Architecture"
-      ]
+      "tags": ["JavaScript", "Design Patterns", "OOP", "Software Architecture"]
     },
     {
       "id": 9,
@@ -150,12 +109,7 @@
       "author": "Abul Mal",
       "readTime": 9,
       "category": "CSS & Design",
-      "tags": [
-        "Tailwind CSS",
-        "CSS",
-        "Utility-First",
-        "Styling"
-      ]
+      "tags": ["Tailwind CSS", "CSS", "Utility-First", "Styling"]
     },
     {
       "id": 10,
@@ -167,12 +121,7 @@
       "author": "Abul Mal",
       "readTime": 13,
       "category": "Backend Development",
-      "tags": [
-        "GraphQL",
-        "REST",
-        "API",
-        "Backend"
-      ]
+      "tags": ["GraphQL", "REST", "API", "Backend"]
     },
     {
       "id": 11,
@@ -184,12 +133,7 @@
       "author": "Abul Mal",
       "readTime": 16,
       "category": "Database",
-      "tags": [
-        "MongoDB",
-        "Database",
-        "NoSQL",
-        "Aggregation"
-      ]
+      "tags": ["MongoDB", "Database", "NoSQL", "Aggregation"]
     },
     {
       "id": 12,
@@ -201,12 +145,7 @@
       "author": "Abul Mal",
       "readTime": 10,
       "category": "Web Development",
-      "tags": [
-        "React",
-        "Performance",
-        "Optimization",
-        "JavaScript"
-      ]
+      "tags": ["React", "Performance", "Optimization", "JavaScript"]
     }
   ],
   "de": [],
@@ -223,11 +162,7 @@
       "published": true,
       "category": "Cat 2",
       "published_at": "2024-10-15T10:00:00Z",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Web Development"
-      ],
+      "tags": ["React", "TypeScript", "Web Development"],
       "read_time": 5
     },
     {
@@ -241,11 +176,7 @@
       "published": true,
       "category": "Cat 1",
       "published_at": "2024-10-10T14:30:00Z",
-      "tags": [
-        "Node.js",
-        "API",
-        "Backend"
-      ],
+      "tags": ["Node.js", "API", "Backend"],
       "read_time": 8
     },
     {
@@ -259,11 +190,7 @@
       "published": true,
       "category": "Cat 3",
       "published_at": "2024-10-05T09:15:00Z",
-      "tags": [
-        "CSS",
-        "Frontend",
-        "Design"
-      ],
+      "tags": ["CSS", "Frontend", "Design"],
       "read_time": 6
     },
     {
@@ -277,11 +204,7 @@
       "published": true,
       "category": "Cat 4",
       "published_at": "2024-09-28T11:00:00Z",
-      "tags": [
-        "Database",
-        "SQL",
-        "Backend"
-      ],
+      "tags": ["Database", "SQL", "Backend"],
       "read_time": 7
     },
     {
@@ -295,11 +218,7 @@
       "published": true,
       "category": "Cat 3",
       "published_at": "2024-09-20T16:45:00Z",
-      "tags": [
-        "Performance",
-        "Web Development",
-        "Optimization"
-      ],
+      "tags": ["Performance", "Web Development", "Optimization"],
       "read_time": 6
     },
     {
@@ -313,11 +232,7 @@
       "published": true,
       "category": "Cat 5",
       "published_at": "2024-09-15T13:20:00Z",
-      "tags": [
-        "Git",
-        "Version Control",
-        "Development"
-      ],
+      "tags": ["Git", "Version Control", "Development"],
       "read_time": 5
     },
     {
@@ -331,11 +246,7 @@
       "published": true,
       "category": "Cat 4",
       "published_at": "2024-09-08T10:30:00Z",
-      "tags": [
-        "Docker",
-        "DevOps",
-        "Containers"
-      ],
+      "tags": ["Docker", "DevOps", "Containers"],
       "read_time": 9
     },
     {
@@ -349,11 +260,7 @@
       "published": true,
       "category": "Cat 5",
       "published_at": "2024-09-01T15:00:00Z",
-      "tags": [
-        "Testing",
-        "React",
-        "Quality Assurance"
-      ],
+      "tags": ["Testing", "React", "Quality Assurance"],
       "read_time": 10
     },
     {
@@ -367,11 +274,7 @@
       "published": true,
       "category": "Cat 2",
       "published_at": "2024-10-15T10:00:00Z",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Web Development"
-      ],
+      "tags": ["React", "TypeScript", "Web Development"],
       "read_time": 5
     },
     {
@@ -385,11 +288,7 @@
       "published": true,
       "category": "Cat 2",
       "published_at": "2024-10-15T10:00:00Z",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Web Development"
-      ],
+      "tags": ["React", "TypeScript", "Web Development"],
       "read_time": 5
     },
     {
@@ -403,11 +302,7 @@
       "published": true,
       "category": "Cat 2",
       "published_at": "2024-10-15T10:00:00Z",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Web Development"
-      ],
+      "tags": ["React", "TypeScript", "Web Development"],
       "read_time": 5
     },
     {
@@ -421,11 +316,7 @@
       "published": true,
       "category": "Cat 2",
       "published_at": "2024-10-15T10:00:00Z",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Web Development"
-      ],
+      "tags": ["React", "TypeScript", "Web Development"],
       "read_time": 5
     },
     {
@@ -439,11 +330,7 @@
       "published": true,
       "category": "Cat 2",
       "published_at": "2024-10-15T10:00:00Z",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Web Development"
-      ],
+      "tags": ["React", "TypeScript", "Web Development"],
       "read_time": 5
     },
     {
@@ -457,11 +344,7 @@
       "published": true,
       "category": "Cat 2",
       "published_at": "2024-10-15T10:00:00Z",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Web Development"
-      ],
+      "tags": ["React", "TypeScript", "Web Development"],
       "read_time": 5
     }
   ]
