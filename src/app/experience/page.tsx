@@ -7,6 +7,7 @@ import {Card, CardContent, CardHeader} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {showLucidIcon} from "@/components/lucid-icon-map";
+import {formatDateShort} from "@/lib/helpers/date.helper";
 
 
 export default function ExperiencePage() {
@@ -23,14 +24,6 @@ export default function ExperiencePage() {
             return total + (end.getTime() - start.getTime());
         }, 0) / (1000 * 60 * 60 * 24 * 365)
     );
-
-    const formatDate = (dateString: string) => {
-        if (dateString === 'Present') return 'Present';
-        return new Date(dateString).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short'
-        });
-    };
 
     const getEmploymentTypeColor = (type: string) => {
         switch (type) {
@@ -161,7 +154,7 @@ export default function ExperiencePage() {
                                             <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-3">
                                                 <div className="flex items-center gap-2">
                                                     {showLucidIcon('calendar', 'w-4 h-4')}
-                                                    <span>{formatDate(exp.startDate)} - {formatDate(exp.endDate)}</span>
+                                                    <span>{formatDateShort(exp.startDate)} - {formatDateShort(exp.endDate)}</span>
                                                     {exp.duration && <span>({exp.duration})</span>}
                                                 </div>
                                                 <div className="flex items-center gap-2">

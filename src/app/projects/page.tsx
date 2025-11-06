@@ -14,6 +14,7 @@ import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {SortOption} from "@/lib/types/type.config";
 import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
 import {showLucidIcon} from "@/components/lucid-icon-map";
+import {formatDateShort} from "@/lib/helpers/date.helper";
 
 export default function ProjectsPage() {
     const { projectContentData, appConfig, langI18n, contentData } = usePortfolio();
@@ -178,14 +179,6 @@ export default function ProjectsPage() {
         setSortBy('date-desc');
     };
 
-    const formatDate = (dateString: string) => {
-        if (dateString === 'Ongoing') return 'Ongoing';
-        return new Date(dateString).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short'
-        });
-    };
-
     const getStatusColor = (status: string) => {
         switch (status) {
             case 'Completed': return 'default';
@@ -251,7 +244,7 @@ export default function ProjectsPage() {
                 <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
                     <div className="flex items-center gap-1">
                         {showLucidIcon('calendar', 'w-3 h-3')}
-                        <span>{formatDate(project.startDate)}</span>
+                        <span>{formatDateShort(project.startDate)}</span>
                     </div>
                     {project.client && (
                         <div className="flex items-center gap-1">

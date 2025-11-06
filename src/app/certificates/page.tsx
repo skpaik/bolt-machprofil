@@ -13,6 +13,7 @@ import {SortOption} from "@/lib/types/type.config";
 import {Certificate} from "@/lib/types/portfolio";
 import {ListEmptyDisplay} from "@/components/shared/ListEmptyDisplay";
 import {showLucidIcon} from "@/components/lucid-icon-map";
+import {formatDateLong} from "@/lib/helpers/date.helper";
 
 export default function CertificatesPage() {
     const {appConfig, certificateContentData, langI18n, contentData} = usePortfolio();
@@ -154,13 +155,6 @@ export default function CertificatesPage() {
         setSortBy('date-desc');
     };
 
-    const formatDate = (dateString: string) => {
-        return new Date(dateString).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short'
-        });
-    };
-
     const isExpired = (expiryDate: string | undefined) => {
         if (!expiryDate || expiryDate === 'No Expiry') return false;
         return new Date(expiryDate) < new Date();
@@ -219,7 +213,7 @@ export default function CertificatesPage() {
                     <div className="space-y-2 text-sm mb-4">
                         <div className="flex items-center gap-2 text-muted-foreground">
                             {showLucidIcon('calendar', 'w-4 h-4')}
-                            <span>Issued: {formatDate(cert.issueDate)}</span>
+                            <span>Issued: {formatDateLong(cert.issueDate)}</span>
                         </div>
                         {cert.expiryDate && (
                             <div className="flex items-center gap-2 text-muted-foreground">
@@ -227,7 +221,7 @@ export default function CertificatesPage() {
                                 <span>
                   {cert.expiryDate === 'No Expiry'
                       ? 'No Expiry'
-                      : `Expires: ${formatDate(cert.expiryDate)}`}
+                      : `Expires: ${formatDateLong(cert.expiryDate)}`}
                 </span>
                             </div>
                         )}

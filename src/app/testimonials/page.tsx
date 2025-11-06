@@ -18,6 +18,7 @@ import {
   Users,
   ThumbsUp
 } from 'lucide-react';
+import {formatDateShort} from "@/lib/helpers/date.helper";
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (
@@ -60,13 +61,6 @@ export default function TestimonialsPage() {
   const averageRating = (testimonials.reduce((acc, t) => acc + t.rating, 0) / totalTestimonials).toFixed(1);
   const fiveStarCount = testimonials.filter(t => t.rating === 5).length;
   const verifiedCount = testimonials.filter(t => t.verified).length;
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short'
-    });
-  };
 
   const getInitials = (name: string) => {
     return name
@@ -194,7 +188,7 @@ export default function TestimonialsPage() {
                           )}
                           <div className="flex items-center gap-2">
                             <Calendar className="w-4 h-4" />
-                            <span>{formatDate(testimonial.date)}</span>
+                            <span>{formatDateShort(testimonial.date)}</span>
                           </div>
                         </div>
 
@@ -266,7 +260,7 @@ export default function TestimonialsPage() {
                           )}
                           <div className="flex items-center gap-2">
                             <Calendar className="w-3 h-3" />
-                            <span>{formatDate(testimonial.date)}</span>
+                            <span>{formatDateShort(testimonial.date)}</span>
                           </div>
                         </div>
 

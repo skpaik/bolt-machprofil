@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import {formatDateLong} from "@/lib/helpers/date.helper";
 
 const POSTS_PER_PAGE = 6;
 
@@ -24,13 +25,7 @@ export default function BlogPage() {
     return posts.slice(startIndex, endIndex);
   }, [posts, currentPage]);
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
+
 
   return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -56,7 +51,7 @@ export default function BlogPage() {
                 <CardHeader>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                     <Calendar size={14} />
-                    <span>{formatDate(post.published_at)}</span>
+                    <span>{formatDateLong(post.published_at)}</span>
                     <span>•</span>
                     <Clock size={14} />
                     <span>{post.read_time} min read</span>

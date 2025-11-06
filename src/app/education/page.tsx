@@ -6,6 +6,7 @@ import { PageHeading } from "@/components/shared/PageHeading";
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {showLucidIcon} from "@/components/lucid-icon-map";
+import {formatDateShort} from "@/lib/helpers/date.helper";
 
 export default function EducationPage() {
   const { educationContentData, langI18n } = usePortfolio();
@@ -24,11 +25,7 @@ export default function EducationPage() {
     return colorMap[type] || 'outline';
   };
 
-  const formatDate = (date: string) => {
-    if (date === 'Present') return 'Present';
-    const d = new Date(date);
-    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
-  };
+
 
   return (
       <>
@@ -73,7 +70,7 @@ export default function EducationPage() {
                       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
                         <div className="flex items-center gap-2">
                           {showLucidIcon('calendar', 'w-4 h-4')}
-                          <span>{formatDate(edu.startDate)} - {formatDate(edu.endDate)}</span>
+                          <span>{formatDateShort(edu.startDate)} - {formatDateShort(edu.endDate)}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           {showLucidIcon('map-pin', 'w-4 h-4')}

@@ -23,6 +23,7 @@ import {
   FileText,
   Printer
 } from 'lucide-react';
+import {formatDateShort} from "@/lib/helpers/date.helper";
 
 export default function ResumePage() {
   const {
@@ -64,14 +65,6 @@ export default function ResumePage() {
 
   const handlePrint = () => {
     window.print();
-  };
-
-  const formatDate = (dateString: string) => {
-    if (dateString === 'Present' || dateString === 'Ongoing') return dateString;
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short'
-    });
   };
 
   // Group skills by category
@@ -213,7 +206,7 @@ export default function ResumePage() {
                               <div className="text-sm text-muted-foreground text-right">
                                 <div className="flex items-center gap-1">
                                   <Calendar className="w-3 h-3" />
-                                  {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
+                                  {formatDateShort(exp.startDate)} - {formatDateShort(exp.endDate)}
                                 </div>
                                 <div className="flex items-center gap-1 mt-1">
                                   <MapPin className="w-3 h-3" />
@@ -268,7 +261,7 @@ export default function ResumePage() {
                                 <div className="text-sm text-muted-foreground">{edu.field}</div>
                               </div>
                               <div className="text-sm text-muted-foreground text-right">
-                                <div>{formatDate(edu.startDate)} - {formatDate(edu.endDate)}</div>
+                                <div>{formatDateShort(edu.startDate)} - {formatDateShort(edu.endDate)}</div>
                                 {edu.gpa && <div className="font-semibold">GPA: {edu.gpa}</div>}
                               </div>
                             </div>
@@ -334,9 +327,9 @@ export default function ResumePage() {
                               )}
                             </div>
                             <div className="text-sm text-muted-foreground text-right">
-                              <div>{formatDate(cert.issueDate)}</div>
+                              <div>{formatDateShort(cert.issueDate)}</div>
                               {cert.expiryDate && cert.expiryDate !== 'No Expiry' && (
-                                  <div className="text-xs">Expires: {formatDate(cert.expiryDate)}</div>
+                                  <div className="text-xs">Expires: {formatDateShort(cert.expiryDate)}</div>
                               )}
                             </div>
                           </div>

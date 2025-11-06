@@ -12,6 +12,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {Photo} from "@/lib/types/portfolio";
 import {SortOption} from "@/lib/types/type.config";
+import {formatDateLong} from "@/lib/helpers/date.helper";
 
 type ViewMode = 'gallery' | 'albums';
 
@@ -245,15 +246,6 @@ export default function PhotoPage() {
         router.push(`/photos?${params.toString()}`, { scroll: true });
     };
 
-    const formatDate = (dateString?: string) => {
-        if (!dateString) return null;
-        return new Date(dateString).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    };
-
     // If photo detail is open, show full-screen view
     if (currentPhoto) {
         return (
@@ -305,7 +297,7 @@ export default function PhotoPage() {
                             {currentPhoto.date && (
                                 <div className="flex items-center gap-2 text-sm">
                                     <Calendar className="w-4 h-4 text-muted-foreground" />
-                                    <span>{formatDate(currentPhoto.date)}</span>
+                                    <span>{formatDateLong(currentPhoto.date)}</span>
                                 </div>
                             )}
                             {currentPhoto.location && (

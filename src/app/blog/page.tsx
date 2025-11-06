@@ -12,16 +12,14 @@ import { Pagination } from '@/components/shared/Pagination';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {FilterConfig, SortConfig} from "@/lib/types/shared.contract";
 import {BlogPost} from "@/lib/types/portfolio";
-
-type SortOption = 'date-desc' | 'date-asc' | 'title-asc' | 'title-desc';
-
-const POSTS_PER_PAGE = 6;
+import {formatDateLong} from "@/lib/helpers/date.helper";
+import {SortOption} from "@/lib/types/type.config";
 
 export default function BlogPage() {
-  const { appData, blogContentData, langI18n } = usePortfolio();
+  const { appData,appConfig, blogContentData, langI18n } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
-
+  const POSTS_PER_PAGE = appConfig.item_per_page;
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -220,14 +218,6 @@ export default function BlogPage() {
     ]
   };
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
-
   return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
@@ -266,7 +256,7 @@ export default function BlogPage() {
                     <CardHeader>
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Calendar className="w-4 h-4" />
-                        <span>{formatDate(post.publishedAt)}</span>
+                        <span>{formatDateLong(post.publishedAt)}</span>
                         <span>•</span>
                         <Clock className="w-4 h-4" />
                         <span>{post.readTime} min read</span>

@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/card';
 import { Calendar, Clock, ArrowLeft, Share2, Tag } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import {formatDateLong} from "@/lib/helpers/date.helper";
 
 interface BlogDetailPageProps {
     slug: string;
@@ -40,14 +41,6 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
         </div>
     );
   }
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -96,7 +89,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <span>{formatDate(post.publishedAt)}</span>
+                  <span>{formatDateLong(post.publishedAt)}</span>
                 </div>
                 <span>•</span>
                 <div className="flex items-center gap-2">
@@ -190,7 +183,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<BlogD
                             </p>
                             <div className="flex items-center gap-2 mt-3 text-xs text-muted-foreground">
                               <Calendar className="w-3 h-3" />
-                              <span>{formatDate(relatedPost.publishedAt)}</span>
+                              <span>{formatDateLong(relatedPost.publishedAt)}</span>
                             </div>
                           </div>
                         </Card>
