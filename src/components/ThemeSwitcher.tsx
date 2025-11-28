@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ConfigData } from "@/data/config-data";
-import {ThemeType} from "@/lib/types/type.config";
+import { ThemeType } from "@/lib/types/type.config";
 
 export default function ThemeSwitcher() {
   const { theme, setTheme, langI18n } = usePortfolio();

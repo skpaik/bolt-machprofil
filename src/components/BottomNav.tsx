@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { MenuService } from "@/lib/services/menu.service";
 import { useIsMobile } from "@/lib/hooks/use-is-mobile";
-import {showLucidIcon} from "@/components/lucid-icon-map";
+import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function BottomNav() {
   const { langI18n } = usePortfolio();

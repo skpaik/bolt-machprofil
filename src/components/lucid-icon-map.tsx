@@ -67,20 +67,14 @@ import {
   Image as ImageIcon,
   Grid3x3,
   Layers,
-
-
   Printer,
-
   HeadphonesIcon,
-
   ThumbsUp,
   Monitor,
   Moon,
   Sun,
-
   FileUser,
   Home,
-
   User,
 } from "lucide-react"; // Icon mapping
 
@@ -88,17 +82,17 @@ import {
 const ICON_MAP: { [key: string]: LucideIcon } = {
   user: User,
   home: Home,
-  'file-user': FileUser,
+  "file-user": FileUser,
   monitor: Monitor,
   moon: Moon,
   sun: Sun,
-  'thumbs-up': ThumbsUp,
-  'headphones-icon': HeadphonesIcon,
+  "thumbs-up": ThumbsUp,
+  "headphones-icon": HeadphonesIcon,
   printer: Printer,
   layers: Layers,
   grid3x3: Grid3x3,
   x: X,
-  'image-icon': ImageIcon,
+  "image-icon": ImageIcon,
   phone: Phone,
   send: Send,
   instagram: Instagram,
@@ -172,14 +166,13 @@ const ICON_MAP: { [key: string]: LucideIcon } = {
 export const showLucidIcon = (
   icon: string,
   cssClass = "w-5 h-5 text-primary",
-  size?: string | number
+  size?: string | number,
 ) => {
   const IconComponent = ICON_MAP[icon.toLowerCase()];
   // console.log(icon, IconComponent)
-  if (size){
+  if (size) {
     return <IconComponent className={cssClass} size={size} />;
-  }
-  else {
-    return <IconComponent className={cssClass}/>;
+  } else {
+    return <IconComponent className={cssClass} />;
   }
 };

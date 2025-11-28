@@ -34,7 +34,7 @@ export default function ResumePage() {
     langI18n,
     contentData,
   } = usePortfolio();
-const     aboutContent =contentData.about_content
+  const aboutContent = contentData.about_content;
 
   // Aggregate data from different sources
   const profile = aboutContent.hero || {

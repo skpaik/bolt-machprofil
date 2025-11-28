@@ -10,7 +10,7 @@ import {
   Skills,
   Testimonial,
 } from "@/lib/types/portfolio";
-import {AboutContent} from "@/lib/types/about.contract";
+import { AboutContent } from "@/lib/types/about.contract";
 
 export const contentFileMap = {
   about_content: "about_content",

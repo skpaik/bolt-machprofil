@@ -7,16 +7,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
-  Facebook,
-} from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import { useToast } from "@/lib/hooks/use-toast";
 import { PageHeading } from "@/components/shared/PageHeading";
-import {showLucidIcon} from "@/components/lucid-icon-map";
+import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function ContactPage() {
   const { appData, langI18n } = usePortfolio();
@@ -71,7 +65,7 @@ export default function ContactPage() {
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="p-2 bg-primary/10 rounded-lg mt-1">
-                  {showLucidIcon('mail', "text-primary", 20)}
+                  {showLucidIcon("mail", "text-primary", 20)}
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-1">Email</p>
@@ -86,7 +80,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4">
                 <div className="p-2 bg-primary/10 rounded-lg mt-1">
-                  {showLucidIcon('phone', "text-primary", 20)}
+                  {showLucidIcon("phone", "text-primary", 20)}
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-1">Phone</p>
@@ -101,7 +95,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4">
                 <div className="p-2 bg-primary/10 rounded-lg mt-1">
-                  {showLucidIcon('map-pin', "text-primary", 20)}
+                  {showLucidIcon("map-pin", "text-primary", 20)}
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-1">Location</p>
@@ -195,7 +189,7 @@ export default function ContactPage() {
             </div>
 
             <Button type="submit" className="w-full gap-2" size="lg">
-              {showLucidIcon('send', "", 18)}
+              {showLucidIcon("send", "", 18)}
               {langI18n.sendMessage}
             </Button>
           </form>
