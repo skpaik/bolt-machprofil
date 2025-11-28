@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePortfolio } from '@/components/context/PortfolioContext';
-import TemplateSwitcher from '@/components/TemplateSwitcher';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePortfolio } from "@/components/context/PortfolioContext";
+import TemplateSwitcher from "@/components/TemplateSwitcher";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ProfileSwitcher from "@/components/ProfileSwitcher";
 
@@ -27,27 +27,30 @@ export default function Header() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
 
   return (
-    <header className={`sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b transition-transform duration-300 ${
-              isVisible ? 'translate-y-0' : '-translate-y-full'
-          }`}
-      >
+    <header
+      className={`sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-foreground">{appData.name}</span>
+            <span className="text-xl font-bold text-foreground">
+              {appData.name}
+            </span>
           </Link>
 
           <LanguageSwitcher />
           <TemplateSwitcher />
-          <ProfileSwitcher/>
+          <ProfileSwitcher />
         </div>
       </div>
     </header>

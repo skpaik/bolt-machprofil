@@ -64,10 +64,12 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
-  nav, header {
+  nav,
+  header {
     background-color: hsl(var(--background));
   }
-  [role="menu"], [data-radix-popper-content-wrapper] {
+  [role="menu"],
+  [data-radix-popper-content-wrapper] {
     background-color: hsl(var(--popover));
   }
 }
@@ -75,8 +77,13 @@
 /* Template-specific styles */
 
 /* Modern Template - Bold, vibrant, with gradients */
-.template-modern h1, .template-modern h2 {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.7) 100%);
+.template-modern h1,
+.template-modern h2 {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--primary) / 0.7) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -92,16 +99,21 @@
 
 /* Classic Template - Traditional, elegant, serif-inspired */
 .template-classic {
-  font-family: system-ui, -apple-system, serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    serif;
 }
 
-.template-classic h1, .template-classic h2, .template-classic h3 {
-  font-family: Georgia, 'Times New Roman', serif;
+.template-classic h1,
+.template-classic h2,
+.template-classic h3 {
+  font-family: Georgia, "Times New Roman", serif;
   letter-spacing: -0.02em;
 }
 
 .template-classic .card {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid hsl(var(--border));
 }
 
@@ -110,7 +122,9 @@
   letter-spacing: 0.01em;
 }
 
-.template-minimal h1, .template-minimal h2, .template-minimal h3 {
+.template-minimal h1,
+.template-minimal h2,
+.template-minimal h3 {
   font-weight: 300;
   letter-spacing: 0.03em;
 }

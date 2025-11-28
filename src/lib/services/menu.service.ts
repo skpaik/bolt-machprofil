@@ -24,15 +24,15 @@ export class MenuService {
 
   // Static "more" items that are always in More menu
   private static staticMoreMenuItems: PrimaryMenuItem[] = [
-    { key: "education", path: "/education" },
-    { key: "skills", path: "/skills" },
-    { key: "services", path: "/services" },
-    { key: "testimonials", path: "/testimonials" },
-    { key: "publications", path: "/publications" },
-    { key: "certificates", path: "/certificates" },
-    { key: "photos", path: "/photos" },
-    { key: "privacy", path: "/legal/privacy" },
-    { key: "terms", path: "/legal/terms" },
+    { key: "education", path: "/education", icon: Mail },
+    { key: "skills", path: "/skills", icon: Mail },
+    { key: "services", path: "/services", icon: Mail },
+    { key: "testimonials", path: "/testimonials", icon: Mail },
+    { key: "publications", path: "/publications", icon: Mail },
+    { key: "certificates", path: "/certificates", icon: Mail },
+    { key: "photos", path: "/photos", icon: Mail },
+    { key: "privacy", path: "/legal/privacy", icon: Mail },
+    { key: "terms", path: "/legal/terms", icon: Mail },
   ];
 
   /**

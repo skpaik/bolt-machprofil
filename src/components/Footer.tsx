@@ -1,19 +1,14 @@
 "use client";
 
-import React from 'react';
-import {usePortfolio} from '@/components/context/PortfolioContext';
+import React from "react";
+import { usePortfolio } from "@/components/context/PortfolioContext";
 import TemplateSwitcher from "@/components/TemplateSwitcher";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ProfileSwitcher from "@/components/ProfileSwitcher";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Footer() {
-  const {
-    appData,
-    langI18n,
-    theme,
-    setTheme
-  } = usePortfolio();
+  const { appData, langI18n, theme, setTheme } = usePortfolio();
 
   return (
     <footer className="border-t bg-background">
@@ -26,10 +21,10 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <LanguageSwitcher/>
-            <TemplateSwitcher/>
-            <ProfileSwitcher/>
-            <ThemeSwitcher/>
+            <LanguageSwitcher />
+            <TemplateSwitcher />
+            <ProfileSwitcher />
+            <ThemeSwitcher />
           </div>
         </div>
       </div>

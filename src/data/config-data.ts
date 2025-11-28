@@ -1,18 +1,5 @@
-import {
-  LanguageItem,
-  PrimaryMenuItem,
-  ProfileItem,
-  TemplateItem,
-} from "@/lib/types/portfolio";
-import {
-  Briefcase,
-  Calendar,
-  FileText,
-  Home,
-  Monitor,
-  Moon,
-  Sun,
-} from "lucide-react";
+import { LanguageItem, ProfileItem, TemplateItem } from "@/lib/types/portfolio";
+import { Monitor, Moon, Sun } from "lucide-react";
 
 export class ConfigData {
   static themes = [
@@ -22,13 +9,21 @@ export class ConfigData {
   ];
 
   static templates: TemplateItem[] = [
-    { value: "modern", label: "Modern", description: "Gradient & bold design" },
+    {
+      value: "modern",
+      label: "Modern",
+      description: "Gradient & bold design",
+    },
     {
       value: "classic",
       label: "Classic",
       description: "Traditional & elegant",
     },
-    { value: "minimal", label: "Minimal", description: "Clean & simple" },
+    {
+      value: "minimal",
+      label: "Minimal",
+      description: "Clean & simple",
+    },
   ];
 
   static profiles: ProfileItem[] = [
@@ -43,18 +38,5 @@ export class ConfigData {
     { code: "de", name: "German" },
     { code: "es", name: "Español" },
     { code: "fr", name: "Français" },
-  ];
-
-  static primaryMenuItems: PrimaryMenuItem[] = [
-    { key: "home", path: "/", icon: Home },
-    { key: "projects", path: "/projects", icon: Briefcase },
-    { key: "experience", path: "/experience", icon: Calendar },
-    { key: "blog", path: "/blog", icon: FileText },
-  ];
-
-  static moreMenuItems: PrimaryMenuItem[] = [
-    { key: "publications", path: "/publications" },
-    { key: "certificate", path: "/certificate" },
-    { key: "photos", path: "/photos" },
   ];
 }

@@ -1,24 +1,34 @@
 "use client";
 
-import React, { useState } from 'react';
-import { usePortfolio } from '@/components/context/PortfolioContext';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
-import { useToast } from '@/lib/hooks/use-toast';
-import {PageHeading} from "@/components/shared/PageHeading";
+import React, { useState } from "react";
+import { usePortfolio } from "@/components/context/PortfolioContext";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Facebook,
+} from "lucide-react";
+import { useToast } from "@/lib/hooks/use-toast";
+import { PageHeading } from "@/components/shared/PageHeading";
 
 export default function ContactPage() {
   const { appData, langI18n } = usePortfolio();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -27,10 +37,12 @@ export default function ContactPage() {
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -48,8 +60,11 @@ export default function ContactPage() {
   return (
     <>
       <PageHeading
-          title={langI18n.contact}
-          subTitle={langI18n.getInTouch + ". I&apos;d love to hear from you and discuss how we can work together."}
+        title={langI18n.contact}
+        subTitle={
+          langI18n.getInTouch +
+          ". I&apos;d love to hear from you and discuss how we can work together."
+        }
       />
 
       <div className="grid lg:grid-cols-2 gap-12">
@@ -103,7 +118,12 @@ export default function ContactPage() {
             <h2 className="text-2xl font-semibold mb-6">Connect With Me</h2>
             <div className="flex flex-wrap gap-3">
               {Object.entries(appData.social).map(([platform, url]) => (
-                <Button key={platform} variant="outline" className="gap-2" asChild>
+                <Button
+                  key={platform}
+                  variant="outline"
+                  className="gap-2"
+                  asChild
+                >
                   <a href={url} target="_blank" rel="noopener noreferrer">
                     {getSocialIcon(platform)}
                     <span className="capitalize">{platform}</span>
@@ -116,13 +136,16 @@ export default function ContactPage() {
           <Card className="p-6 bg-primary/5">
             <h3 className="font-semibold mb-2">Quick Response</h3>
             <p className="text-sm text-muted-foreground">
-              I typically respond to inquiries within 24-48 hours during business days.
+              I typically respond to inquiries within 24-48 hours during
+              business days.
             </p>
           </Card>
         </div>
 
         <Card className="p-8">
-          <h2 className="text-2xl font-semibold mb-6">{langI18n.sendMessage}</h2>
+          <h2 className="text-2xl font-semibold mb-6">
+            {langI18n.sendMessage}
+          </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name">Name *</Label>

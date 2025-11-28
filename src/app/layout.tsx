@@ -1,12 +1,12 @@
-import './globals.css';
-import type { Metadata } from 'next';
+import "./globals.css";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { PortfolioProvider } from '@/components/context/PortfolioContext';
-import TemplateWrapper from '@/components/TemplateWrapper';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import BottomNav from '@/components/BottomNav';
-import { Toaster } from '@/components/ui/toaster';
+import { PortfolioProvider } from "@/components/context/PortfolioContext";
+import TemplateWrapper from "@/components/TemplateWrapper";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BottomNav from "@/components/BottomNav";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio Website',
-  description: 'Professional portfolio website showcasing work, skills, and experience',
+  title: "Portfolio Website",
+  description:
+    "Professional portfolio website showcasing work, skills, and experience",
 };
 
 export default function RootLayout({
@@ -30,7 +31,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <PortfolioProvider>
           <TemplateWrapper>
             <div className="flex flex-col min-h-screen pb-16">
@@ -40,9 +43,9 @@ export default function RootLayout({
                   {children}
                 </div>
               </main>
-              <Footer/>
+              <Footer />
             </div>
-            <BottomNav/>
+            <BottomNav />
           </TemplateWrapper>
           <Toaster />
         </PortfolioProvider>
