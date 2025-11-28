@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Github, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import { useToast } from "@/lib/hooks/use-toast";
 import { PageHeading } from "@/components/shared/PageHeading";
 import { showLucidIcon } from "@/components/lucid-icon-map";
@@ -35,17 +34,6 @@ export default function ContactPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const getSocialIcon = (platform: string) => {
-    const icons: { [key: string]: React.ReactNode } = {
-      github: <Github size={20} />,
-      linkedin: <Linkedin size={20} />,
-      twitter: <Twitter size={20} />,
-      instagram: <Instagram size={20} />,
-      facebook: <Facebook size={20} />,
-    };
-    return icons[platform] || null;
   };
 
   return (
@@ -116,7 +104,7 @@ export default function ContactPage() {
                   asChild
                 >
                   <a href={url} target="_blank" rel="noopener noreferrer">
-                    {getSocialIcon(platform)}
+                    {showLucidIcon(platform, "", 20)}
                     <span className="capitalize">{platform}</span>
                   </a>
                 </Button>

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { usePortfolio } from "@/components/context/PortfolioContext";
-import { MoreHorizontal } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -89,7 +88,7 @@ export default function BottomNav() {
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                <MoreHorizontal size={24} />
+                {showLucidIcon('more-horizontal', "", 24)}
                 <span className="text-xs mt-1">{langI18n.more}</span>
               </button>
             </DropdownMenuTrigger>

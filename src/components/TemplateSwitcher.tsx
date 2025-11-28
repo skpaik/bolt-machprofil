@@ -9,8 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Layout } from "lucide-react";
 import { ConfigData } from "@/data/config-data";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function TemplateSwitcher() {
   const { template, setTemplate } = usePortfolio();
@@ -23,7 +23,7 @@ export default function TemplateSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
-          <Layout size={16} />
+            {showLucidIcon('layout', '', 16)}
           <span className="hidden sm:inline">{currentTemplate?.label}</span>
         </Button>
       </DropdownMenuTrigger>

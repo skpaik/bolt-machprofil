@@ -2,28 +2,11 @@
 
 import React from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Download,
-  Mail,
-  MapPin,
-  Phone,
-  Globe,
-  Linkedin,
-  Github,
-  Briefcase,
-  GraduationCap,
-  Award,
-  Code,
-  Star,
-  Calendar,
-  ExternalLink,
-  FileText,
-  Printer,
-} from "lucide-react";
 import { formatDateShort } from "@/lib/helpers/date.helper";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function ResumePage() {
   const {
@@ -93,11 +76,11 @@ export default function ResumePage() {
             </div>
             <div className="flex gap-2">
               <Button variant="outline" onClick={handlePrint}>
-                <Printer className="w-4 h-4 mr-2" />
+                {showLucidIcon('printer', "w-4 h-4 mr-2")}
                 Print
               </Button>
               <Button onClick={handleDownload}>
-                <Download className="w-4 h-4 mr-2" />
+                {showLucidIcon('download', "w-4 h-4 mr-2")}
                 Download PDF
               </Button>
             </div>
@@ -132,7 +115,7 @@ export default function ResumePage() {
                 <div className="grid sm:grid-cols-2 gap-2 text-sm">
                   {profile.email && (
                     <div className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-muted-foreground" />
+                      {showLucidIcon('mail', "w-4 h-4 text-muted-foreground")}
                       <a
                         href={`mailto:${profile.email}`}
                         className="hover:text-primary"
@@ -143,7 +126,7 @@ export default function ResumePage() {
                   )}
                   {profile.phone && (
                     <div className="flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-muted-foreground" />
+                      {showLucidIcon('phone', "w-4 h-4 text-muted-foreground")}
                       <a
                         href={`tel:${profile.phone}`}
                         className="hover:text-primary"
@@ -154,13 +137,13 @@ export default function ResumePage() {
                   )}
                   {profile.location && (
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-muted-foreground" />
+                      {showLucidIcon('map-pin', "w-4 h-4 text-muted-foreground")}
                       <span>{profile.location}</span>
                     </div>
                   )}
                   {profile.website && (
                     <div className="flex items-center gap-2">
-                      <Globe className="w-4 h-4 text-muted-foreground" />
+                      {showLucidIcon('globe', "w-4 h-4 text-muted-foreground")}
                       <a
                         href={profile.website}
                         className="hover:text-primary"
@@ -172,7 +155,7 @@ export default function ResumePage() {
                   )}
                   {profile.linkedin && (
                     <div className="flex items-center gap-2">
-                      <Linkedin className="w-4 h-4 text-muted-foreground" />
+                      {showLucidIcon('linkedin', "w-4 h-4 text-muted-foreground")}
                       <a
                         href={`https://${profile.linkedin}`}
                         className="hover:text-primary"
@@ -184,7 +167,7 @@ export default function ResumePage() {
                   )}
                   {profile.github && (
                     <div className="flex items-center gap-2">
-                      <Github className="w-4 h-4 text-muted-foreground" />
+                      {showLucidIcon('github', "w-4 h-4 text-muted-foreground")}
                       <a
                         href={`https://${profile.github}`}
                         className="hover:text-primary"
@@ -203,7 +186,7 @@ export default function ResumePage() {
             {/* Summary Section */}
             <div>
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-primary" />
+                {showLucidIcon('file-text', "w-5 h-5 text-primary")}
                 Professional Summary
               </h3>
               <p className="text-muted-foreground leading-relaxed">{summary}</p>
@@ -215,7 +198,7 @@ export default function ResumePage() {
             {experiences.length > 0 && (
               <div className="print:break-inside-avoid">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Briefcase className="w-5 h-5 text-primary" />
+                  {showLucidIcon('brief-case', "w-5 h-5 text-primary")}
                   Work Experience
                 </h3>
                 <div className="space-y-6">
@@ -230,12 +213,12 @@ export default function ResumePage() {
                         </div>
                         <div className="text-sm text-muted-foreground text-right">
                           <div className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3" />
+                            {showLucidIcon('calendar', "w-3 h-3")}
                             {formatDateShort(exp.startDate)} -{" "}
                             {formatDateShort(exp.endDate)}
                           </div>
                           <div className="flex items-center gap-1 mt-1">
-                            <MapPin className="w-3 h-3" />
+                            {showLucidIcon('map-pin', "w-3 h-3")}
                             {exp.location}
                           </div>
                         </div>
@@ -285,7 +268,7 @@ export default function ResumePage() {
             {education.length > 0 && (
               <div className="print:break-inside-avoid">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5 text-primary" />
+                  {showLucidIcon('graduation-cap', "w-5 h-5 text-primary")}
                   Education
                 </h3>
                 <div className="space-y-4">
@@ -325,7 +308,7 @@ export default function ResumePage() {
             {Object.keys(groupedSkills).length > 0 && (
               <div className="print:break-inside-avoid">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Code className="w-5 h-5 text-primary" />
+                  {showLucidIcon('code', "w-5 h-5 text-primary")}
                   Skills & Technologies
                 </h3>
                 <div className="space-y-4">
@@ -372,7 +355,7 @@ export default function ResumePage() {
             {certificates.length > 0 && (
               <div className="print:break-inside-avoid">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Award className="w-5 h-5 text-primary" />
+                  {showLucidIcon('award', "w-5 h-5 text-primary")}
                   Certifications
                 </h3>
                 <div className="space-y-3">

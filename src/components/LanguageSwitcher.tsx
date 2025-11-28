@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Globe } from "lucide-react";
+import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ConfigData } from "@/data/config-data";
 
 export default function LanguageSwitcher() {
@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
-          <Globe size={16} />
+            {showLucidIcon('globe', '', 16)}
           <span className="hidden sm:inline">{langI18n.language}</span>
         </Button>
       </DropdownMenuTrigger>

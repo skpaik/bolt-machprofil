@@ -1,11 +1,10 @@
 import { LanguageItem, ProfileItem, TemplateItem } from "@/lib/types/portfolio";
-import { Monitor, Moon, Sun } from "lucide-react";
 
 export class ConfigData {
   static themes = [
-    { value: "light", label: "Light", icon: Sun },
-    { value: "dark", label: "Dark", icon: Moon },
-    { value: "system", label: "System", icon: Monitor },
+    { value: "light", label: "Light", icon: 'sun' },
+    { value: "dark", label: "Dark", icon: "moon" },
+    { value: "system", label: "System", icon: "monitor" },
   ];
 
   static templates: TemplateItem[] = [

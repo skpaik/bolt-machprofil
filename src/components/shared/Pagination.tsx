@@ -1,7 +1,6 @@
 // components/shared/Pagination.tsx
-import React from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export interface PaginationProps {
   currentPage: number;
@@ -71,7 +70,7 @@ export function Pagination({
         className="h-9 w-9"
         aria-label="Previous page"
       >
-        <ChevronLeft size={18} />
+        {showLucidIcon('chevron-left', '', 18)}
       </Button>
 
       {/* Page Numbers - Desktop */}
@@ -116,7 +115,7 @@ export function Pagination({
         className="h-9 w-9"
         aria-label="Next page"
       >
-        <ChevronRight size={18} />
+        {showLucidIcon('chevron-right', '', 18)}
       </Button>
     </div>
   );

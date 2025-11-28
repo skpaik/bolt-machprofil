@@ -9,8 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Globe, Layout } from "lucide-react";
 import { ConfigData } from "@/data/config-data";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function ProfileSwitcher() {
   const { langI18n, profileType, setProfileType } = usePortfolio();
@@ -19,7 +19,7 @@ export default function ProfileSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
-          <Globe size={16} />
+            {showLucidIcon('globe', '', 16)}
           <span className="hidden sm:inline">{langI18n.profile}</span>
         </Button>
       </DropdownMenuTrigger>

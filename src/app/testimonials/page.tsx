@@ -7,29 +7,16 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Star,
-  Quote,
-  Briefcase,
-  MapPin,
-  Calendar,
-  TrendingUp,
-  Award,
-  Users,
-  ThumbsUp,
-} from "lucide-react";
 import { formatDateShort } from "@/lib/helpers/date.helper";
+import {ShowIcon, showLucidIcon} from "@/components/lucid-icon-map";
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (
     <div className="flex gap-0.5">
       {[1, 2, 3, 4, 5].map((star) => (
-        <Star
-          key={star}
-          className={`w-4 h-4 ${
-            star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
-          }`}
-        />
+          <ShowIcon icon={'star'} key={star} className={`w-4 h-4 ${
+        star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+    }`} />
       ))}
     </div>
   );
@@ -82,7 +69,7 @@ export default function TestimonialsPage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
         <Card className="text-center p-6 bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-950 dark:to-yellow-900 border-yellow-200 dark:border-yellow-800">
           <div className="flex justify-center mb-2">
-            <Star className="w-8 h-8 text-yellow-500 fill-yellow-500" />
+            {showLucidIcon('star', "w-8 h-8 text-yellow-500 fill-yellow-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{averageRating}</div>
           <div className="text-sm text-muted-foreground">Average Rating</div>
@@ -90,7 +77,7 @@ export default function TestimonialsPage() {
 
         <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900 border-blue-200 dark:border-blue-800">
           <div className="flex justify-center mb-2">
-            <Users className="w-8 h-8 text-blue-500" />
+            {showLucidIcon('users', "w-8 h-8 text-blue-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{totalTestimonials}</div>
           <div className="text-sm text-muted-foreground">Happy Clients</div>
@@ -98,7 +85,7 @@ export default function TestimonialsPage() {
 
         <Card className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 border-green-200 dark:border-green-800">
           <div className="flex justify-center mb-2">
-            <Award className="w-8 h-8 text-green-500" />
+            {showLucidIcon('award', "w-8 h-8 text-green-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{fiveStarCount}</div>
           <div className="text-sm text-muted-foreground">5-Star Reviews</div>
@@ -106,7 +93,7 @@ export default function TestimonialsPage() {
 
         <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900 border-purple-200 dark:border-purple-800">
           <div className="flex justify-center mb-2">
-            <ThumbsUp className="w-8 h-8 text-purple-500" />
+            {showLucidIcon('thumbs-up', "w-8 h-8 text-purple-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{verifiedCount}</div>
           <div className="text-sm text-muted-foreground">Verified Reviews</div>
@@ -131,7 +118,7 @@ export default function TestimonialsPage() {
       {featuredTestimonials.length > 0 && (
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-6">
-            <TrendingUp className="w-5 h-5 text-primary" />
+            {showLucidIcon('trending-up', "w-5 h-5 text-primary")}
             <h2 className="text-2xl font-bold">Featured Testimonials</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -142,7 +129,7 @@ export default function TestimonialsPage() {
               >
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
-                    <Quote className="w-10 h-10 text-primary/20" />
+                    {showLucidIcon('quote', "w-10 h-10 text-primary/20")}
                     <div className="flex items-center gap-2">
                       <StarRating rating={testimonial.rating} />
                       {testimonial.verified && (
@@ -179,23 +166,23 @@ export default function TestimonialsPage() {
 
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
-                      <Briefcase className="w-4 h-4" />
+                      {showLucidIcon('brief-case', "w-4 h-4")}
                       <span>{testimonial.company}</span>
                     </div>
                     {testimonial.location && (
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
+                        {showLucidIcon('map-pin', "w-4 h-4")}
                         <span>{testimonial.location}</span>
                       </div>
                     )}
                     {testimonial.project && (
                       <div className="flex items-center gap-2">
-                        <Award className="w-4 h-4" />
+                        {showLucidIcon('award', "w-4 h-4")}
                         <span>{testimonial.project}</span>
                       </div>
                     )}
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
+                      {showLucidIcon('calendar', "w-4 h-4")}
                       <span>{formatDateShort(testimonial.date)}</span>
                     </div>
                   </div>
@@ -224,7 +211,7 @@ export default function TestimonialsPage() {
               >
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
-                    <Quote className="w-8 h-8 text-muted-foreground/20" />
+                    {showLucidIcon('quote', "w-8 h-8 text-muted-foreground/20")}
                     <div className="flex items-center gap-2">
                       <StarRating rating={testimonial.rating} />
                       {testimonial.verified && (
@@ -263,23 +250,23 @@ export default function TestimonialsPage() {
 
                   <div className="space-y-1.5 text-xs text-muted-foreground">
                     <div className="flex items-center gap-2">
-                      <Briefcase className="w-3 h-3" />
+                      {showLucidIcon('brief-case', "w-3 h-3")}
                       <span>{testimonial.company}</span>
                     </div>
                     {testimonial.location && (
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-3 h-3" />
+                        {showLucidIcon('map-pin', "w-3 h-3")}
                         <span>{testimonial.location}</span>
                       </div>
                     )}
                     {testimonial.project && (
                       <div className="flex items-center gap-2">
-                        <Award className="w-3 h-3" />
+                        {showLucidIcon('award', "w-3 h-3")}
                         <span>{testimonial.project}</span>
                       </div>
                     )}
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-3 h-3" />
+                      {showLucidIcon('Calendar', "w-3 h-3")}
                       <span>{formatDateShort(testimonial.date)}</span>
                     </div>
                   </div>
@@ -297,7 +284,7 @@ export default function TestimonialsPage() {
       {/* No Results */}
       {filteredTestimonials.length === 0 && (
         <div className="text-center py-12">
-          <Quote className="w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-30" />
+          {showLucidIcon('quote', "w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-30")}
           <h3 className="text-xl font-semibold mb-2">No testimonials found</h3>
           <p className="text-muted-foreground mb-4">
             Try selecting a different category.
