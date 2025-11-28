@@ -38,6 +38,7 @@ import {
   Experience,
   LanguageI18n,
   Photo,
+  PortfolioContextType,
   Project,
   Publication,
   Service,
@@ -47,33 +48,6 @@ import {
   Testimonial,
 } from "@/lib/types/portfolio";
 import { AboutContentData } from "@/lib/types/about.contract";
-
-interface PortfolioContextType {
-  appData: AppData;
-  contentData: ContentData;
-  staticContentData: StaticContentData;
-  aboutContentData: AboutContentData;
-  blogContentData: BlogPost[];
-  projectContentData: Project[];
-  experienceContentData: Experience[];
-  educationContentData: Education[];
-  serviceContentData: Service[];
-  certificateContentData: Certificate[];
-  skillContentData: Skills[];
-  testimonialContentData: Testimonial[];
-  publicationContentData: Publication[];
-  photoContentData: Photo[];
-  appConfig: AppConfig;
-  profileType: ProfileType;
-  setProfileType: (type: ProfileType) => void;
-  template: TemplateType;
-  setTemplate: (type: TemplateType) => void;
-  langI18n: LanguageI18n;
-  languageType: LanguageType;
-  setLanguageType: (type: LanguageType) => void;
-  theme: ThemeType;
-  setTheme: (theme: ThemeType) => void;
-}
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
