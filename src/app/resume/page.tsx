@@ -10,10 +10,6 @@ import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function ResumePage() {
   const {
-    experienceContentData,
-    educationContentData,
-    skillContentData,
-    certificateContentData,
     langI18n,
     contentData,
   } = usePortfolio();
@@ -37,10 +33,10 @@ export default function ResumePage() {
     aboutContent.intro ||
     "Passionate full-stack developer with 8+ years of experience building scalable web applications. Expert in React, Node.js, and cloud technologies. Strong focus on clean code, user experience, and continuous learning.";
 
-  const experiences = experienceContentData;
-  const education = educationContentData;
-  const skills = skillContentData;
-  const certificates = certificateContentData;
+  const experiences = contentData.experience_list;
+  const education = contentData.education_list;
+  const skills = contentData.skill_list;
+  const certificates = contentData.certificate_list;
 
   const resumePdfUrl = profile.resumeUrl || "/resume.pdf";
 

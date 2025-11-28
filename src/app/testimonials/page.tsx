@@ -23,11 +23,11 @@ const StarRating = ({ rating }: { rating: number }) => {
 };
 
 export default function TestimonialsPage() {
-  const { appData, testimonialContentData, langI18n } = usePortfolio();
+  const { appData, langI18n, contentData } = usePortfolio();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   // Use real data if available, otherwise use sample data
-  const testimonials = testimonialContentData;
+  const testimonials = contentData.testimonial_list;
 
   // Get unique categories
   const categories = ["all", ...new Set(testimonials.map((t) => t.category))];

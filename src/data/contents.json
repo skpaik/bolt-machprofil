@@ -9,7 +9,10 @@
         "date": "2024-11-28",
         "author": "John Doe",
         "excerpt": "A short summary for blog post 1 in DE.",
-        "tags": ["tech", "typescript"],
+        "tags": [
+          "tech",
+          "typescript"
+        ],
         "image": "/images/blog-1.jpg",
         "featured": false,
         "readTime": 6,
@@ -27,8 +30,14 @@
         "expirationDate": "2023-01",
         "credentialId": "CERT-1001",
         "credentialUrl": "https://example.com/certifications/1",
-        "skills": ["Skill A", "Skill B", "Skill C"],
-        "media": ["https://example.com/media/cert-1.jpg"],
+        "skills": [
+          "Skill A",
+          "Skill B",
+          "Skill C"
+        ],
+        "media": [
+          "https://example.com/media/cert-1.jpg"
+        ],
         "description": "Description of certification 1 in de",
         "content": "NA"
       }
@@ -61,7 +70,10 @@
         "startDate": "2020-01-01",
         "endDate": "2024-01-01",
         "website": "https://company1.com",
-        "technologies": ["Node.js", "React"],
+        "technologies": [
+          "Node.js",
+          "React"
+        ],
         "description": "🇩🇪 (DE) Led development team for Tech Corp 1.",
         "responsibilities": [
           "Responsibility 1 for experience 1",
@@ -143,7 +155,10 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": ["IELTS", "TOEFL"],
+              "tests": [
+                "IELTS",
+                "TOEFL"
+              ],
               "level": "C1"
             },
             {
@@ -152,7 +167,10 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": ["Goethe B2", "Telc B2"],
+              "tests": [
+                "Goethe B2",
+                "Telc B2"
+              ],
               "level": "B2"
             },
             {
@@ -200,23 +218,44 @@
           "skills": [
             {
               "category": "Programming",
-              "items": ["Python", "TypeScript", "Java", "C++"]
+              "items": [
+                "Python",
+                "TypeScript",
+                "Java",
+                "C++"
+              ]
             },
             {
               "category": "Tools & Cloud",
-              "items": ["AWS", "Docker", "Kubernetes"]
+              "items": [
+                "AWS",
+                "Docker",
+                "Kubernetes"
+              ]
             },
             {
               "category": "Soft Skills",
-              "items": ["Leadership", "Communication", "Mentoring"]
+              "items": [
+                "Leadership",
+                "Communication",
+                "Mentoring"
+              ]
             },
             {
               "category": "Design & Creative",
-              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+              "items": [
+                "Photoshop",
+                "Figma",
+                "Adobe Illustrator"
+              ]
             },
             {
               "category": "Languages",
-              "items": ["English", "German", "French"]
+              "items": [
+                "English",
+                "German",
+                "French"
+              ]
             }
           ],
           "content": "NA"
@@ -256,7 +295,10 @@
         "category": "Guide",
         "description": "Project 1 overview in DE.",
         "date": "2020-01-01",
-        "tags": ["tech", "javascript"],
+        "tags": [
+          "tech",
+          "javascript"
+        ],
         "featured": false,
         "content": "🇩🇪 (DE) Architecture Cloud TypeScript JavaScript Cloud Cloud Next.js Architecture React TypeScript.\n\n🇩🇪 (DE) Node.js React React Next.js JavaScript Cloud Next.js Cloud React Next.js.\n\n🇩🇪 (DE) Architecture Cloud React Cloud JavaScript React Next.js Cloud Cloud Next.js."
       }
@@ -267,7 +309,10 @@
         "order": 1,
         "title": "My Project 1 (DE)",
         "description": "Project 1 overview in DE.",
-        "technologies": ["TypeScript", "React"],
+        "technologies": [
+          "TypeScript",
+          "React"
+        ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
         "date": "2024-08-25",
@@ -282,14 +327,23 @@
         "slug": "1",
         "order": 1,
         "title": "Publication Title 1",
-        "authors": ["Author A1", "Author B1"],
+        "authors": [
+          "Author A1",
+          "Author B1"
+        ],
         "publisher": "Publisher 1",
         "date": "2021-06-01",
         "link": "https://example.com/publication/1",
         "doi": "10.1234/example-doi-1",
         "summary": "This is a brief summary of publication 1 in de.",
-        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
-        "media": ["https://example.com/media/pub-1.jpg"],
+        "keywords": [
+          "Keyword1",
+          "Keyword2",
+          "Keyword3"
+        ],
+        "media": [
+          "https://example.com/media/pub-1.jpg"
+        ],
         "content": "NA"
       }
     ]
@@ -303,7 +357,10 @@
         "date": "2024-02-23",
         "author": "John Doe",
         "excerpt": "A short summary for blog post 1 in EN.",
-        "tags": ["tech", "javascript"],
+        "tags": [
+          "tech",
+          "javascript"
+        ],
         "image": "/images/blog-1.jpg",
         "featured": false,
         "readTime": 3,
@@ -321,8 +378,14 @@
         "expirationDate": "2023-01",
         "credentialId": "CERT-1001",
         "credentialUrl": "https://example.com/certifications/1",
-        "skills": ["Skill A", "Skill B", "Skill C"],
-        "media": ["https://example.com/media/cert-1.jpg"],
+        "skills": [
+          "Skill A",
+          "Skill B",
+          "Skill C"
+        ],
+        "media": [
+          "https://example.com/media/cert-1.jpg"
+        ],
         "description": "Description of certification 1 in en",
         "content": "NA"
       }
@@ -355,7 +418,10 @@
         "startDate": "2020-01-01",
         "endDate": "2024-01-01",
         "website": "https://company1.com",
-        "technologies": ["Node.js", "React"],
+        "technologies": [
+          "Node.js",
+          "React"
+        ],
         "description": "Led development team for Tech Corp 1.",
         "responsibilities": [
           "Responsibility 1 for experience 1",
@@ -437,7 +503,10 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": ["IELTS", "TOEFL"],
+              "tests": [
+                "IELTS",
+                "TOEFL"
+              ],
               "level": "C1"
             },
             {
@@ -446,7 +515,10 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": ["Goethe B2", "Telc B2"],
+              "tests": [
+                "Goethe B2",
+                "Telc B2"
+              ],
               "level": "B2"
             },
             {
@@ -494,23 +566,44 @@
           "skills": [
             {
               "category": "Programming",
-              "items": ["Python", "TypeScript", "Java", "C++"]
+              "items": [
+                "Python",
+                "TypeScript",
+                "Java",
+                "C++"
+              ]
             },
             {
               "category": "Tools & Cloud",
-              "items": ["AWS", "Docker", "Kubernetes"]
+              "items": [
+                "AWS",
+                "Docker",
+                "Kubernetes"
+              ]
             },
             {
               "category": "Soft Skills",
-              "items": ["Leadership", "Communication", "Mentoring"]
+              "items": [
+                "Leadership",
+                "Communication",
+                "Mentoring"
+              ]
             },
             {
               "category": "Design & Creative",
-              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+              "items": [
+                "Photoshop",
+                "Figma",
+                "Adobe Illustrator"
+              ]
             },
             {
               "category": "Languages",
-              "items": ["English", "German", "French"]
+              "items": [
+                "English",
+                "German",
+                "French"
+              ]
             }
           ],
           "content": "NA"
@@ -550,7 +643,10 @@
         "category": "Guide",
         "description": "Project 1 overview in EN.",
         "date": "2020-01-01",
-        "tags": ["react", "javascript"],
+        "tags": [
+          "react",
+          "javascript"
+        ],
         "featured": true,
         "content": "Cloud TypeScript Node.js Cloud Cloud JavaScript Next.js TypeScript TypeScript Node.js.\n\nArchitecture Next.js Architecture React Node.js Node.js Architecture TypeScript React Node.js.\n\nNode.js Next.js TypeScript JavaScript React Architecture JavaScript Next.js Node.js JavaScript."
       }
@@ -561,7 +657,10 @@
         "order": 1,
         "title": "My Project 1 (EN)",
         "description": "Project 1 overview in EN.",
-        "technologies": ["Node.js", "Next.js"],
+        "technologies": [
+          "Node.js",
+          "Next.js"
+        ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
         "date": "2024-01-09",
@@ -576,14 +675,23 @@
         "slug": "1",
         "order": 1,
         "title": "Publication Title 1",
-        "authors": ["Author A1", "Author B1"],
+        "authors": [
+          "Author A1",
+          "Author B1"
+        ],
         "publisher": "Publisher 1",
         "date": "2021-06-01",
         "link": "https://example.com/publication/1",
         "doi": "10.1234/example-doi-1",
         "summary": "This is a brief summary of publication 1 in en.",
-        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
-        "media": ["https://example.com/media/pub-1.jpg"],
+        "keywords": [
+          "Keyword1",
+          "Keyword2",
+          "Keyword3"
+        ],
+        "media": [
+          "https://example.com/media/pub-1.jpg"
+        ],
         "content": "NA"
       }
     ],
@@ -599,7 +707,11 @@
             "proficiency": 95,
             "level": "Expert",
             "yearsOfExperience": 8,
-            "tags": ["Programming", "Frontend", "Backend"],
+            "tags": [
+              "Programming",
+              "Frontend",
+              "Backend"
+            ],
             "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
           },
           {
@@ -609,7 +721,11 @@
             "proficiency": 90,
             "level": "Expert",
             "yearsOfExperience": 6,
-            "tags": ["Frontend", "Framework", "UI"],
+            "tags": [
+              "Frontend",
+              "Framework",
+              "UI"
+            ],
             "description": "Building scalable web applications with React, hooks, and state management."
           }
         ],
@@ -626,7 +742,10 @@
         "date": "2024-01-23",
         "author": "Jane Smith",
         "excerpt": "A short summary for blog post 1 in ES.",
-        "tags": ["tech", "react"],
+        "tags": [
+          "tech",
+          "react"
+        ],
         "image": "/images/blog-1.jpg",
         "featured": true,
         "readTime": 4,
@@ -644,8 +763,14 @@
         "expirationDate": "2023-01",
         "credentialId": "CERT-1001",
         "credentialUrl": "https://example.com/certifications/1",
-        "skills": ["Skill A", "Skill B", "Skill C"],
-        "media": ["https://example.com/media/cert-1.jpg"],
+        "skills": [
+          "Skill A",
+          "Skill B",
+          "Skill C"
+        ],
+        "media": [
+          "https://example.com/media/cert-1.jpg"
+        ],
         "description": "Description of certification 1 in es",
         "content": "NA"
       }
@@ -678,7 +803,10 @@
         "startDate": "2020-01-01",
         "endDate": "2024-01-01",
         "website": "https://company1.com",
-        "technologies": ["Node.js", "React"],
+        "technologies": [
+          "Node.js",
+          "React"
+        ],
         "description": "Led development team for Tech Corp 1.",
         "responsibilities": [
           "Responsibility 1 for experience 1",
@@ -760,7 +888,10 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": ["IELTS", "TOEFL"],
+              "tests": [
+                "IELTS",
+                "TOEFL"
+              ],
               "level": "C1"
             },
             {
@@ -769,7 +900,10 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": ["Goethe B2", "Telc B2"],
+              "tests": [
+                "Goethe B2",
+                "Telc B2"
+              ],
               "level": "B2"
             },
             {
@@ -817,23 +951,44 @@
           "skills": [
             {
               "category": "Programming",
-              "items": ["Python", "TypeScript", "Java", "C++"]
+              "items": [
+                "Python",
+                "TypeScript",
+                "Java",
+                "C++"
+              ]
             },
             {
               "category": "Tools & Cloud",
-              "items": ["AWS", "Docker", "Kubernetes"]
+              "items": [
+                "AWS",
+                "Docker",
+                "Kubernetes"
+              ]
             },
             {
               "category": "Soft Skills",
-              "items": ["Leadership", "Communication", "Mentoring"]
+              "items": [
+                "Leadership",
+                "Communication",
+                "Mentoring"
+              ]
             },
             {
               "category": "Design & Creative",
-              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+              "items": [
+                "Photoshop",
+                "Figma",
+                "Adobe Illustrator"
+              ]
             },
             {
               "category": "Languages",
-              "items": ["English", "German", "French"]
+              "items": [
+                "English",
+                "German",
+                "French"
+              ]
             }
           ],
           "content": "NA"
@@ -873,7 +1028,10 @@
         "category": "Tutorial",
         "description": "Project 1 overview in ES.",
         "date": "2020-01-01",
-        "tags": ["typescript", "react"],
+        "tags": [
+          "typescript",
+          "react"
+        ],
         "featured": false,
         "content": "Architecture Architecture Node.js Node.js JavaScript Next.js JavaScript Architecture React Node.js.\n\nJavaScript TypeScript React JavaScript Architecture Architecture JavaScript Cloud TypeScript JavaScript.\n\nArchitecture React Architecture Cloud Cloud TypeScript Architecture Architecture JavaScript Next.js."
       }
@@ -884,7 +1042,10 @@
         "order": 1,
         "title": "My Project 1 (ES)",
         "description": "Project 1 overview in ES.",
-        "technologies": ["Next.js", "TypeScript"],
+        "technologies": [
+          "Next.js",
+          "TypeScript"
+        ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
         "date": "2024-09-09",
@@ -899,14 +1060,23 @@
         "slug": "1",
         "order": 1,
         "title": "Publication Title 1",
-        "authors": ["Author A1", "Author B1"],
+        "authors": [
+          "Author A1",
+          "Author B1"
+        ],
         "publisher": "Publisher 1",
         "date": "2021-06-01",
         "link": "https://example.com/publication/1",
         "doi": "10.1234/example-doi-1",
         "summary": "This is a brief summary of publication 1 in es.",
-        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
-        "media": ["https://example.com/media/pub-1.jpg"],
+        "keywords": [
+          "Keyword1",
+          "Keyword2",
+          "Keyword3"
+        ],
+        "media": [
+          "https://example.com/media/pub-1.jpg"
+        ],
         "content": "NA"
       }
     ]
@@ -920,7 +1090,10 @@
         "date": "2024-01-01",
         "author": "Jane Smith",
         "excerpt": "A short summary for blog post 1 in FR.",
-        "tags": ["tech", "javascript"],
+        "tags": [
+          "tech",
+          "javascript"
+        ],
         "image": "/images/blog-1.jpg",
         "featured": false,
         "readTime": 11,
@@ -938,8 +1111,14 @@
         "expirationDate": "2023-01",
         "credentialId": "CERT-1001",
         "credentialUrl": "https://example.com/certifications/1",
-        "skills": ["Skill A", "Skill B", "Skill C"],
-        "media": ["https://example.com/media/cert-1.jpg"],
+        "skills": [
+          "Skill A",
+          "Skill B",
+          "Skill C"
+        ],
+        "media": [
+          "https://example.com/media/cert-1.jpg"
+        ],
         "description": "Description of certification 1 in fr",
         "content": "NA"
       }
@@ -972,7 +1151,10 @@
         "startDate": "2020-01-01",
         "endDate": "2024-01-01",
         "website": "https://company1.com",
-        "technologies": ["Node.js", "React"],
+        "technologies": [
+          "Node.js",
+          "React"
+        ],
         "description": "🇫🇷 (FR) Led development team for Tech Corp 1.",
         "responsibilities": [
           "Responsibility 1 for experience 1",
@@ -1054,7 +1236,10 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": ["IELTS", "TOEFL"],
+              "tests": [
+                "IELTS",
+                "TOEFL"
+              ],
               "level": "C1"
             },
             {
@@ -1063,7 +1248,10 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": ["Goethe B2", "Telc B2"],
+              "tests": [
+                "Goethe B2",
+                "Telc B2"
+              ],
               "level": "B2"
             },
             {
@@ -1111,23 +1299,44 @@
           "skills": [
             {
               "category": "Programming",
-              "items": ["Python", "TypeScript", "Java", "C++"]
+              "items": [
+                "Python",
+                "TypeScript",
+                "Java",
+                "C++"
+              ]
             },
             {
               "category": "Tools & Cloud",
-              "items": ["AWS", "Docker", "Kubernetes"]
+              "items": [
+                "AWS",
+                "Docker",
+                "Kubernetes"
+              ]
             },
             {
               "category": "Soft Skills",
-              "items": ["Leadership", "Communication", "Mentoring"]
+              "items": [
+                "Leadership",
+                "Communication",
+                "Mentoring"
+              ]
             },
             {
               "category": "Design & Creative",
-              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+              "items": [
+                "Photoshop",
+                "Figma",
+                "Adobe Illustrator"
+              ]
             },
             {
               "category": "Languages",
-              "items": ["English", "German", "French"]
+              "items": [
+                "English",
+                "German",
+                "French"
+              ]
             }
           ],
           "content": "NA"
@@ -1167,7 +1376,10 @@
         "category": "Opinion",
         "description": "Project 1 overview in FR.",
         "date": "2020-01-01",
-        "tags": ["tech", "javascript"],
+        "tags": [
+          "tech",
+          "javascript"
+        ],
         "featured": false,
         "content": "🇫🇷 (FR) TypeScript Node.js TypeScript TypeScript TypeScript React React JavaScript Node.js Next.js.\n\n🇫🇷 (FR) TypeScript Cloud JavaScript Next.js JavaScript Node.js Cloud Node.js Next.js Architecture.\n\n🇫🇷 (FR) Node.js Node.js React Cloud Next.js Node.js Node.js TypeScript JavaScript JavaScript."
       }
@@ -1178,7 +1390,10 @@
         "order": 1,
         "title": "My Project 1 (FR)",
         "description": "Project 1 overview in FR.",
-        "technologies": ["Node.js", "Next.js"],
+        "technologies": [
+          "Node.js",
+          "Next.js"
+        ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
         "date": "2024-02-27",
@@ -1193,14 +1408,23 @@
         "slug": "1",
         "order": 1,
         "title": "Publication Title 1",
-        "authors": ["Author A1", "Author B1"],
+        "authors": [
+          "Author A1",
+          "Author B1"
+        ],
         "publisher": "Publisher 1",
         "date": "2021-06-01",
         "link": "https://example.com/publication/1",
         "doi": "10.1234/example-doi-1",
         "summary": "This is a brief summary of publication 1 in fr.",
-        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
-        "media": ["https://example.com/media/pub-1.jpg"],
+        "keywords": [
+          "Keyword1",
+          "Keyword2",
+          "Keyword3"
+        ],
+        "media": [
+          "https://example.com/media/pub-1.jpg"
+        ],
         "content": "NA"
       }
     ]
@@ -1214,7 +1438,10 @@
         "date": "2024-01-11",
         "author": "Jane Smith",
         "excerpt": "A short summary for blog post 1 in JP.",
-        "tags": ["tech", "javascript"],
+        "tags": [
+          "tech",
+          "javascript"
+        ],
         "image": "/images/blog-1.jpg",
         "featured": true,
         "readTime": 10,
@@ -1232,8 +1459,14 @@
         "expirationDate": "2023-01",
         "credentialId": "CERT-1001",
         "credentialUrl": "https://example.com/certifications/1",
-        "skills": ["Skill A", "Skill B", "Skill C"],
-        "media": ["https://example.com/media/cert-1.jpg"],
+        "skills": [
+          "Skill A",
+          "Skill B",
+          "Skill C"
+        ],
+        "media": [
+          "https://example.com/media/cert-1.jpg"
+        ],
         "description": "Description of certification 1 in jp",
         "content": "NA"
       }
@@ -1266,7 +1499,10 @@
         "startDate": "2020-01-01",
         "endDate": "2024-01-01",
         "website": "https://company1.com",
-        "technologies": ["Node.js", "React"],
+        "technologies": [
+          "Node.js",
+          "React"
+        ],
         "description": "Led development team for Tech Corp 1.",
         "responsibilities": [
           "Responsibility 1 for experience 1",
@@ -1348,7 +1584,10 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": ["IELTS", "TOEFL"],
+              "tests": [
+                "IELTS",
+                "TOEFL"
+              ],
               "level": "C1"
             },
             {
@@ -1357,7 +1596,10 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": ["Goethe B2", "Telc B2"],
+              "tests": [
+                "Goethe B2",
+                "Telc B2"
+              ],
               "level": "B2"
             },
             {
@@ -1405,23 +1647,44 @@
           "skills": [
             {
               "category": "Programming",
-              "items": ["Python", "TypeScript", "Java", "C++"]
+              "items": [
+                "Python",
+                "TypeScript",
+                "Java",
+                "C++"
+              ]
             },
             {
               "category": "Tools & Cloud",
-              "items": ["AWS", "Docker", "Kubernetes"]
+              "items": [
+                "AWS",
+                "Docker",
+                "Kubernetes"
+              ]
             },
             {
               "category": "Soft Skills",
-              "items": ["Leadership", "Communication", "Mentoring"]
+              "items": [
+                "Leadership",
+                "Communication",
+                "Mentoring"
+              ]
             },
             {
               "category": "Design & Creative",
-              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+              "items": [
+                "Photoshop",
+                "Figma",
+                "Adobe Illustrator"
+              ]
             },
             {
               "category": "Languages",
-              "items": ["English", "German", "French"]
+              "items": [
+                "English",
+                "German",
+                "French"
+              ]
             }
           ],
           "content": "NA"
@@ -1461,7 +1724,10 @@
         "category": "Guide",
         "description": "Project 1 overview in JP.",
         "date": "2020-01-01",
-        "tags": ["tech", "javascript"],
+        "tags": [
+          "tech",
+          "javascript"
+        ],
         "featured": false,
         "content": "React Cloud Node.js Node.js Architecture Next.js Cloud Node.js Next.js Node.js.\n\nNode.js Architecture TypeScript Architecture Architecture Node.js Cloud React React Node.js.\n\nTypeScript Architecture Node.js Node.js JavaScript React Cloud TypeScript Node.js Node.js."
       }
@@ -1472,7 +1738,10 @@
         "order": 1,
         "title": "My Project 1 (JP)",
         "description": "Project 1 overview in JP.",
-        "technologies": ["TypeScript", "Node.js"],
+        "technologies": [
+          "TypeScript",
+          "Node.js"
+        ],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
         "date": "2024-07-06",
@@ -1487,14 +1756,23 @@
         "slug": "1",
         "order": 1,
         "title": "Publication Title 1",
-        "authors": ["Author A1", "Author B1"],
+        "authors": [
+          "Author A1",
+          "Author B1"
+        ],
         "publisher": "Publisher 1",
         "date": "2021-06-01",
         "link": "https://example.com/publication/1",
         "doi": "10.1234/example-doi-1",
         "summary": "This is a brief summary of publication 1 in jp.",
-        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
-        "media": ["https://example.com/media/pub-1.jpg"],
+        "keywords": [
+          "Keyword1",
+          "Keyword2",
+          "Keyword3"
+        ],
+        "media": [
+          "https://example.com/media/pub-1.jpg"
+        ],
         "content": "NA"
       }
     ]

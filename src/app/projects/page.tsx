@@ -22,7 +22,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 
 export default function ProjectsPage() {
-  const { projectContentData, appConfig, langI18n, contentData } =
+  const { appConfig, langI18n, contentData } =
     usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
 
   // Use real data if available, otherwise use sample data
-  const projects = projectContentData;
+  const projects = contentData.project_list;
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search projects

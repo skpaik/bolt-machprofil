@@ -16,11 +16,6 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export default function HomePage() {
   const {
     appData,
-    projectContentData,
-    experienceContentData,
-    skillContentData,
-    serviceContentData,
-    testimonialContentData,
     langI18n,
     contentData,
   } = usePortfolio();
@@ -49,11 +44,11 @@ export default function HomePage() {
   const socialLinks = aboutContent.socialLinks.filter((link) => link.url);
 
   // Get experiences and calculate stats
-  const experiences = experienceContentData;
-  const projects = projectContentData;
-  const skills = skillContentData;
-  const testimonials = testimonialContentData;
-  const services = serviceContentData;
+  const experiences = contentData.experience_list;
+  const projects = contentData.project_list;
+  const skills = contentData.skill_list;
+  const testimonials = contentData.testimonial_list;
+  const services = contentData.service_list;
 
   // Calculate statistics
   const stats = useMemo(() => {

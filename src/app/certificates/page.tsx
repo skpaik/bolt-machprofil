@@ -21,7 +21,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 
 export default function CertificatesPage() {
-  const { appConfig, certificateContentData, langI18n, contentData } =
+  const { appConfig, langI18n, contentData } =
     usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
@@ -30,7 +30,7 @@ export default function CertificatesPage() {
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
 
   // Use real data if available, otherwise use sample data
-  const certificates = certificateContentData;
+  const certificates = contentData.certificate_list;
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search certificates

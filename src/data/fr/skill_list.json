@@ -6,7 +6,11 @@
     "proficiency": 95,
     "level": "Expert",
     "yearsOfExperience": 8,
-    "tags": ["Programming", "Frontend", "Backend"],
+    "tags": [
+      "Programming",
+      "Frontend",
+      "Backend"
+    ],
     "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
   }
 ]

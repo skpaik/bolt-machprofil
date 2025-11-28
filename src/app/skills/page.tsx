@@ -14,7 +14,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 
 export default function SkillPage() {
-  const { appData, skillContentData, appConfig, langI18n } = usePortfolio();
+  const { appData, appConfig, langI18n,contentData } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -22,7 +22,7 @@ export default function SkillPage() {
   const [sortBy, setSortBy] = useState<SortOption>("proficiency-desc");
 
   // Use real data if available, otherwise use sample data
-  const skills = skillContentData;
+  const skills = contentData.skill_list;
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search skills

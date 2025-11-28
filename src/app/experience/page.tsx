@@ -13,7 +13,7 @@ export default function ExperiencePage() {
   const { experienceContentData, langI18n, contentData } = usePortfolio();
 
   // Use real data if available, otherwise use sample data
-  const experiences = experienceContentData;
+  const experiences = contentData.experience_list;
 
   // Calculate total experience
   const totalYears = Math.floor(

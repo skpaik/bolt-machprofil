@@ -30,7 +30,13 @@
       },
       "duration": "4-8 weeks",
       "popular": true,
-      "tags": ["React", "Next.js", "TypeScript", "Node.js", "Full Stack"]
+      "tags": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Full Stack"
+      ]
     },
     {
       "id": 2,
@@ -62,7 +68,13 @@
       },
       "duration": "8-12 weeks",
       "popular": true,
-      "tags": ["React Native", "Flutter", "iOS", "Android", "Mobile"]
+      "tags": [
+        "React Native",
+        "Flutter",
+        "iOS",
+        "Android",
+        "Mobile"
+      ]
     },
     {
       "id": 3,
@@ -130,7 +142,13 @@
         "currency": "USD"
       },
       "duration": "3-6 months",
-      "tags": ["SEO", "Google Analytics", "Content", "Marketing", "Growth"]
+      "tags": [
+        "SEO",
+        "Google Analytics",
+        "Content",
+        "Marketing",
+        "Growth"
+      ]
     },
     {
       "id": 5,
@@ -161,7 +179,13 @@
         "currency": "USD"
       },
       "duration": "Ongoing",
-      "tags": ["AWS", "Azure", "GCP", "DevOps", "Infrastructure"]
+      "tags": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "DevOps",
+        "Infrastructure"
+      ]
     },
     {
       "id": 6,
@@ -192,7 +216,13 @@
         "currency": "USD"
       },
       "duration": "3-6 months",
-      "tags": ["Social Media", "PPC", "Email Marketing", "Content", "Analytics"]
+      "tags": [
+        "Social Media",
+        "PPC",
+        "Email Marketing",
+        "Content",
+        "Analytics"
+      ]
     },
     {
       "id": 7,
@@ -224,7 +254,13 @@
       },
       "duration": "6-10 weeks",
       "popular": true,
-      "tags": ["Shopify", "WooCommerce", "E-commerce", "Payments", "Inventory"]
+      "tags": [
+        "Shopify",
+        "WooCommerce",
+        "E-commerce",
+        "Payments",
+        "Inventory"
+      ]
     },
     {
       "id": 8,
@@ -255,7 +291,13 @@
         "currency": "USD"
       },
       "duration": "Per article",
-      "tags": ["Writing", "SEO", "Blogging", "Copywriting", "Content Strategy"]
+      "tags": [
+        "Writing",
+        "SEO",
+        "Blogging",
+        "Copywriting",
+        "Content Strategy"
+      ]
     },
     {
       "id": 9,
@@ -286,7 +328,13 @@
         "currency": "USD"
       },
       "duration": "3-6 weeks",
-      "tags": ["REST", "GraphQL", "Node.js", "API", "Backend"]
+      "tags": [
+        "REST",
+        "GraphQL",
+        "Node.js",
+        "API",
+        "Backend"
+      ]
     },
     {
       "id": 10,

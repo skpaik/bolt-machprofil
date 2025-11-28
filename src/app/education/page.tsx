@@ -9,10 +9,10 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 
 export default function EducationPage() {
-  const { educationContentData, langI18n } = usePortfolio();
+  const { langI18n, contentData } = usePortfolio();
 
   // Use real data if available, otherwise use sample data
-  const education = educationContentData;
+  const education = contentData.education_list;
 
   const getTypeColor = (type: string) => {
     const colorMap: { [key: string]: string } = {

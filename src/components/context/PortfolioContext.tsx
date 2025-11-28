@@ -162,16 +162,6 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     <PortfolioContext.Provider
       value={{
         appData,
-        blogContentData,
-        projectContentData,
-        experienceContentData,
-        educationContentData,
-        serviceContentData,
-        certificateContentData,
-        skillContentData,
-        testimonialContentData,
-        publicationContentData,
-        photoContentData,
         contentData,
         staticContentData,
         appConfig,

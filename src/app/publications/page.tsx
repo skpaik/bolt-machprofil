@@ -20,7 +20,7 @@ import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function PublicationsPage() {
-  const { appConfig, publicationContentData, langI18n, contentData } =
+  const { appConfig, langI18n, contentData } =
     usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
@@ -29,7 +29,7 @@ export default function PublicationsPage() {
   const [sortBy, setSortBy] = useState<SortOption>("year-desc");
 
   // Use real data if available, otherwise use sample data
-  const publications = publicationContentData;
+  const publications = contentData.publication_list;
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search publications

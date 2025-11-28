@@ -349,17 +349,6 @@ export interface PortfolioContextType {
   appData: AppData;
   contentData: ContentData;
   staticContentData: StaticContentData;
-  // aboutContent: AboutContent;
-  blogContentData: BlogPost[];
-  projectContentData: Project[];
-  experienceContentData: Experience[];
-  educationContentData: Education[];
-  serviceContentData: Service[];
-  certificateContentData: Certificate[];
-  skillContentData: Skills[];
-  testimonialContentData: Testimonial[];
-  publicationContentData: Publication[];
-  photoContentData: Photo[];
   appConfig: AppConfig;
   profileType: ProfileType;
   setProfileType: (type: ProfileType) => void;
