@@ -25,7 +25,6 @@ languages:
     speak: "Intermediate"
     listen: "Good"
     level: "B1"
-
 ---
 
 NA
