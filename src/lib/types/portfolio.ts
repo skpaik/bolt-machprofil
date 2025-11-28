@@ -4,7 +4,8 @@ import {
   TemplateType,
   ThemeType,
 } from "@/lib/types/type.config";
-import { AboutContentData } from "@/lib/types/about.contract";
+import { AboutContent } from "@/lib/types/about.contract";
+import { ContentData } from "@/lib/types/content.types";
 
 export interface BaseContent {
   id: number;
@@ -202,7 +203,7 @@ export interface Service extends BaseContent {
 export interface AppConfig {
   item_per_page: number;
 }
-
+/*
 export interface ContentData {
   about?: AboutContentData;
   blogs: BlogPost[];
@@ -219,6 +220,7 @@ export interface ContentData {
   skills: Skills[];
   testimonials: Testimonial[];
 }
+*/
 
 export interface TermsPrivacySection extends BaseContent {
   icon: string; // Icon name as string for dynamic lookup
@@ -347,7 +349,7 @@ export interface PortfolioContextType {
   appData: AppData;
   contentData: ContentData;
   staticContentData: StaticContentData;
-  aboutContentData: AboutContentData;
+  aboutContent: AboutContent;
   blogContentData: BlogPost[];
   projectContentData: Project[];
   experienceContentData: Experience[];

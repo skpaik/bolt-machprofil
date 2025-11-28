@@ -42,7 +42,7 @@ export interface CtaSection {
   secondaryButton: string;
 }
 
-export interface AboutContentData {
+export interface AboutContent {
   hero: HeroSection;
   intro: string;
   sections: AboutSection[];

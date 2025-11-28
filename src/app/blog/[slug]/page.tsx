@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,21 +10,15 @@ import { Card } from "@/components/ui/card";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
-interface BlogDetailPageProps {
-  slug: string;
-}
-
-export default async function BlogDetailPage({
-  params,
-}: {
-  params: Promise<BlogDetailPageProps>;
-}) {
-  const { appData, blogContentData } = usePortfolio();
+export default function BlogDetailPage() {
+  const { appData, contentData } = usePortfolio();
   const router = useRouter();
-  const { slug } = await params;
+
+  const params = useParams();
+  const slug = params.slug as string;
 
   // Use real data if available
-  const posts = blogContentData;
+  const posts = contentData?.blog_list;
   const post = posts.find((p) => p.id.toString() === slug);
 
   if (!post) {

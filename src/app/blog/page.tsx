@@ -23,7 +23,8 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { PageHeading } from "@/components/shared/PageHeading";
 
 export default function BlogPage() {
-  const { appData, appConfig, blogContentData, langI18n } = usePortfolio();
+  const { appData, appConfig, contentData, blogContentData, langI18n } =
+    usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;
@@ -34,7 +35,7 @@ export default function BlogPage() {
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
 
   // Use real data if available, otherwise use sample data
-  const posts = blogContentData;
+  const posts = contentData?.blog_list;
 
   // Get URL parameters
   const categoryParam = searchParams?.get("category");

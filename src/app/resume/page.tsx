@@ -28,7 +28,7 @@ import { formatDateShort } from "@/lib/helpers/date.helper";
 export default function ResumePage() {
   const {
     appData,
-    aboutContentData,
+    aboutContent,
     experienceContentData,
     educationContentData,
     skillContentData,
@@ -38,7 +38,7 @@ export default function ResumePage() {
   } = usePortfolio();
 
   // Aggregate data from different sources
-  const profile = aboutContentData.hero || {
+  const profile = aboutContent.hero || {
     name: "John Doe",
     title: "Full Stack Developer & Designer",
     email: "hello@johndoe.com",
@@ -52,7 +52,7 @@ export default function ResumePage() {
   };
 
   const summary =
-    aboutContentData.intro ||
+    aboutContent.intro ||
     "Passionate full-stack developer with 8+ years of experience building scalable web applications. Expert in React, Node.js, and cloud technologies. Strong focus on clean code, user experience, and continuous learning.";
 
   const experiences = experienceContentData;

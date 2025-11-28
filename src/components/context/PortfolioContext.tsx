@@ -33,7 +33,6 @@ import {
   AppData,
   BlogPost,
   Certificate,
-  ContentData,
   Education,
   Experience,
   LanguageI18n,
@@ -47,7 +46,9 @@ import {
   StaticContentData,
   Testimonial,
 } from "@/lib/types/portfolio";
-import { AboutContentData } from "@/lib/types/about.contract";
+import { AboutContent } from "@/lib/types/about.contract";
+import { loadAllContent } from "@/lib/services/loadContent";
+import { ContentData, emptyContent } from "@/lib/types/content.types";
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
@@ -73,6 +74,10 @@ function getInitialValue<T extends string>(
 
 export function PortfolioProvider({ children }: { children: ReactNode }) {
   const setting = settingData as SettingSchema;
+
+  const [blog, setBlog] = useState<BlogPost[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [experience, setExperience] = useState<Experience[]>([]);
 
   // ✅ Lazy initialization — runs once on first render in browser
   const [profileType, setProfileType] = useState<ProfileType>(() =>
@@ -125,18 +130,14 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
-  const contentData: ContentData = {
-    blogs: [],
-    certificates: [],
-    educations: [],
-    experience: [],
-    photos: [],
-    projects: [],
-    publications: [],
-    services: [],
-    skills: [],
-    testimonials: [],
-  };
+  const [contentData, setContentData] = useState<ContentData>(emptyContent);
+
+  useEffect(() => {
+    loadAllContent(languageType).then(setContentData);
+  }, [languageType]);
+
+  //if (!contentData) return null;
+
   // Derived data
   const appData: AppData = portfolioData.profiles[profileType];
   const staticContentData: StaticContentData = staticContentsData[languageType];
@@ -155,17 +156,17 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     publicationContentsData[languageType];
   const photoContentData: Photo[] = photoContentsData[languageType];
   const appConfig: AppConfig = portfolioData.app_config;
-  const aboutContentData: AboutContentData = aboutContentsData[languageType];
+  const aboutContent: AboutContent = aboutContentsData[languageType];
   const langI18n: LanguageI18n = languageData[languageType];
 
-  contentData.staticContent = staticContentData;
-  contentData.photos = photoContentData;
+  //contentData.staticContent = staticContentData;
+  //contentData.photos = photoContentData;
 
   return (
     <PortfolioContext.Provider
       value={{
         appData,
-        aboutContentData,
+        aboutContent,
         blogContentData,
         projectContentData,
         experienceContentData,

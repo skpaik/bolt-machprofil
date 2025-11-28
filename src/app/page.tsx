@@ -16,7 +16,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export default function HomePage() {
   const {
     appData,
-    aboutContentData,
+    aboutContent,
     projectContentData,
     experienceContentData,
     skillContentData,
@@ -26,7 +26,7 @@ export default function HomePage() {
     contentData,
   } = usePortfolio();
   // Aggregate data from existing sources
-  const profile = aboutContentData.hero || {
+  const profile = aboutContent.hero || {
     name: "John Doe",
     title: "Full Stack Developer & Designer",
     email: "hello@johndoe.com",
@@ -39,14 +39,14 @@ export default function HomePage() {
   };
 
   const intro =
-    aboutContentData.intro ||
+    aboutContent.intro ||
     "I create beautiful, functional, and user-centered digital experiences. Specializing in modern web technologies and creative problem-solving.";
 
   const tagline =
-    aboutContentData.hero.tagline || "Building Digital Experiences That Matter";
+    aboutContent.hero.tagline || "Building Digital Experiences That Matter";
 
   // Get social links from profile or about data
-  const socialLinks = aboutContentData.socialLinks.filter((link) => link.url);
+  const socialLinks = aboutContent.socialLinks.filter((link) => link.url);
 
   // Get experiences and calculate stats
   const experiences = experienceContentData;
