@@ -75,10 +75,6 @@ function getInitialValue<T extends string>(
 export function PortfolioProvider({ children }: { children: ReactNode }) {
   const setting = settingData as SettingSchema;
 
-  const [blog, setBlog] = useState<BlogPost[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [experience, setExperience] = useState<Experience[]>([]);
-
   // ✅ Lazy initialization — runs once on first render in browser
   const [profileType, setProfileType] = useState<ProfileType>(() =>
     getInitialValue(
@@ -166,7 +162,6 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     <PortfolioContext.Provider
       value={{
         appData,
-        aboutContent,
         blogContentData,
         projectContentData,
         experienceContentData,

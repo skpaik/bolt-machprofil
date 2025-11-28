@@ -58,10 +58,51 @@ import {
   ArrowLeft,
   Share2,
   Tag,
+  ChevronLeft,
+  Phone,
+  Send,
+  Instagram,
+  Facebook,
+  X,
+  Image as ImageIcon,
+  Grid3x3,
+  Layers,
+
+
+  Printer,
+
+  HeadphonesIcon,
+
+  ThumbsUp,
+  Monitor,
+  Moon,
+  Sun,
+
+  FileUser,
+  Home,
+
+  User,
 } from "lucide-react"; // Icon mapping
 
 // Icon mapping for dynamic lookup
 const ICON_MAP: { [key: string]: LucideIcon } = {
+  user: User,
+  home: Home,
+  'file-user': FileUser,
+  monitor: Monitor,
+  moon: Moon,
+  sun: Sun,
+  'thumbs-up': ThumbsUp,
+  'headphones-icon': HeadphonesIcon,
+  printer: Printer,
+  layers: Layers,
+  grid3x3: Grid3x3,
+  x: X,
+  'image-icon': ImageIcon,
+  phone: Phone,
+  send: Send,
+  instagram: Instagram,
+  facebook: Facebook,
   tag: Tag,
   share2: Share2,
   "arrow-left": ArrowLeft,
@@ -72,6 +113,7 @@ const ICON_MAP: { [key: string]: LucideIcon } = {
   "book-open": BookOpen,
   "trending-up": TrendingUp,
   "chevron-right": ChevronRight,
+  "chevron-left": ChevronLeft,
   sparkles: Sparkles,
   star: Star,
   building2: Building2,
@@ -110,7 +152,7 @@ const ICON_MAP: { [key: string]: LucideIcon } = {
   "check-circle": CheckCircle,
   download: Download,
   "arrow-right": ArrowRight,
-  briefcase: Briefcase,
+  "brief-case": Briefcase,
   target: Target,
   heart: Heart,
   award: Award,
@@ -130,8 +172,14 @@ const ICON_MAP: { [key: string]: LucideIcon } = {
 export const showLucidIcon = (
   icon: string,
   cssClass = "w-5 h-5 text-primary",
+  size?: string | number
 ) => {
   const IconComponent = ICON_MAP[icon.toLowerCase()];
   // console.log(icon, IconComponent)
-  return <IconComponent className={cssClass} />;
+  if (size){
+    return <IconComponent className={cssClass} size={size} />;
+  }
+  else {
+    return <IconComponent className={cssClass}/>;
+  }
 };

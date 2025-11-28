@@ -150,7 +150,7 @@ export interface LanguageItem {
 export interface PrimaryMenuItem {
   key: string;
   path: string;
-  icon?: any;
+  icon: string;
 }
 
 // Skill interface - adaptable for any profession
@@ -349,7 +349,7 @@ export interface PortfolioContextType {
   appData: AppData;
   contentData: ContentData;
   staticContentData: StaticContentData;
-  aboutContent: AboutContent;
+  // aboutContent: AboutContent;
   blogContentData: BlogPost[];
   projectContentData: Project[];
   experienceContentData: Experience[];

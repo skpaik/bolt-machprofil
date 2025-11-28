@@ -5,17 +5,6 @@ import { usePortfolio } from "@/components/context/PortfolioContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  X,
-  Image as ImageIcon,
-  Calendar,
-  MapPin,
-  Camera,
-  Eye,
-  Grid3x3,
-  Layers,
-  ArrowLeft,
-} from "lucide-react";
 import { FilterBar } from "@/components/shared/FilterBar";
 import { Pagination } from "@/components/shared/Pagination";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -23,6 +12,7 @@ import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { Photo } from "@/lib/types/portfolio";
 import { SortOption } from "@/lib/types/type.config";
 import { formatDateLong } from "@/lib/helpers/date.helper";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 type ViewMode = "gallery" | "albums";
 
@@ -280,7 +270,7 @@ export default function PhotoPage() {
               className="text-white hover:bg-white/10"
               onClick={handleClosePhoto}
             >
-              <ArrowLeft className="w-5 h-5 mr-2" />
+              {showLucidIcon('arrow-left', "w-5 h-5 mr-2")}
               Back to Gallery
             </Button>
             <Button
@@ -288,7 +278,7 @@ export default function PhotoPage() {
               className="text-white hover:bg-white/10"
               onClick={handleClosePhoto}
             >
-              <X className="w-5 h-5" />
+              {showLucidIcon('x', "w-5 h-5")}
             </Button>
           </div>
         </div>
@@ -320,19 +310,19 @@ export default function PhotoPage() {
             <div className="space-y-3 mb-4">
               {currentPhoto.date && (
                 <div className="flex items-center gap-2 text-sm">
-                  <Calendar className="w-4 h-4 text-muted-foreground" />
+                  {showLucidIcon('calendar', "w-4 h-4 text-muted-foreground")}
                   <span>{formatDateLong(currentPhoto.date)}</span>
                 </div>
               )}
               {currentPhoto.location && (
                 <div className="flex items-center gap-2 text-sm">
-                  <MapPin className="w-4 h-4 text-muted-foreground" />
+                  {showLucidIcon('map-pin', "w-4 h-4 text-muted-foreground")}
                   <span>{currentPhoto.location}</span>
                 </div>
               )}
               {currentPhoto.camera && (
                 <div className="flex items-center gap-2 text-sm">
-                  <Camera className="w-4 h-4 text-muted-foreground" />
+                  {showLucidIcon('camera', "w-4 h-4 text-muted-foreground")}
                   <span>{currentPhoto.camera}</span>
                 </div>
               )}
@@ -378,7 +368,7 @@ export default function PhotoPage() {
               size="sm"
               onClick={() => setViewMode("gallery")}
             >
-              <Grid3x3 className="w-4 h-4 mr-2" />
+              {showLucidIcon('grid3x3', "w-4 h-4 mr-2")}
               Gallery
             </Button>
             <Button
@@ -386,7 +376,7 @@ export default function PhotoPage() {
               size="sm"
               onClick={() => setViewMode("albums")}
             >
-              <Layers className="w-4 h-4 mr-2" />
+              {showLucidIcon('layers', "w-4 h-4 mr-2")}
               Albums
             </Button>
           </div>
@@ -420,7 +410,7 @@ export default function PhotoPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="flex items-center gap-2 text-sm">
-                        <ImageIcon className="w-4 h-4" />
+                        {showLucidIcon('image-icon', "w-4 h-4")}
                         <span>{albumPhotos.length} photos</span>
                       </div>
                     </div>
@@ -482,10 +472,7 @@ export default function PhotoPage() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <ImageIcon
-                size={48}
-                className="mx-auto mb-4 opacity-50 text-muted-foreground"
-              />
+              {showLucidIcon('image-icon', "mx-auto mb-4 opacity-50 text-muted-foreground", 48)}
               <h3 className="text-xl font-semibold mb-2">No photos found</h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">
                 Try adjusting your search terms or filters.

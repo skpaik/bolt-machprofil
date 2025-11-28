@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { MenuService } from "@/lib/services/menu.service";
 import { useIsMobile } from "@/lib/hooks/use-is-mobile";
+import {showLucidIcon} from "@/components/lucid-icon-map";
 
 export default function BottomNav() {
   const { langI18n } = usePortfolio();
@@ -60,7 +61,6 @@ export default function BottomNav() {
         <div className="flex justify-around items-center h-16">
           {primaryMenuItems.map((item) => {
             const active = isActive(item.path);
-            const Icon = item.icon;
 
             return (
               <Link
@@ -72,7 +72,7 @@ export default function BottomNav() {
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                <Icon size={24} />
+                {showLucidIcon(item.icon, "", 24)}
                 <span className="text-xs mt-1">
                   {langI18n[item.key as keyof typeof langI18n]}
                 </span>

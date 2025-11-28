@@ -16,7 +16,6 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export default function HomePage() {
   const {
     appData,
-    aboutContent,
     projectContentData,
     experienceContentData,
     skillContentData,
@@ -26,6 +25,7 @@ export default function HomePage() {
     contentData,
   } = usePortfolio();
   // Aggregate data from existing sources
+  const  aboutContent =contentData.about_content;
   const profile = aboutContent.hero || {
     name: "John Doe",
     title: "Full Stack Developer & Designer",

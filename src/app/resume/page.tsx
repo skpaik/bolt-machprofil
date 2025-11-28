@@ -27,8 +27,6 @@ import { formatDateShort } from "@/lib/helpers/date.helper";
 
 export default function ResumePage() {
   const {
-    appData,
-    aboutContent,
     experienceContentData,
     educationContentData,
     skillContentData,
@@ -36,6 +34,7 @@ export default function ResumePage() {
     langI18n,
     contentData,
   } = usePortfolio();
+const     aboutContent =contentData.about_content
 
   // Aggregate data from different sources
   const profile = aboutContent.hero || {

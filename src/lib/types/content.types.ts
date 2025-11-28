@@ -10,6 +10,7 @@ import {
   Skills,
   Testimonial,
 } from "@/lib/types/portfolio";
+import {AboutContent} from "@/lib/types/about.contract";
 
 export const contentFileMap = {
   about_content: "about_content",
@@ -28,7 +29,7 @@ export const contentFileMap = {
 export type ContentKey = keyof typeof contentFileMap;
 
 export type ContentData = {
-  about_content: BlogPost[];
+  about_content: AboutContent;
   blog_list: BlogPost[];
   certificate_list: Certificate[];
   education_list: Education[];
@@ -41,7 +42,7 @@ export type ContentData = {
   testimonial_list: Testimonial[];
 };
 export const emptyContent: ContentData = {
-  about_content: [],
+  about_content: {},
   blog_list: [],
   certificate_list: [],
   education_list: [],
