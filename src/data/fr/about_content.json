@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "name": "John Doe",
+    "title": "Full Stack Developer & Designer",
+    "tagline": "Crafting digital experiences that make a difference",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
+    "location": "San Francisco, CA",
+    "email": "hello@johndoe.com",
+    "resumeUrl": "/resume.pdf",
+    "available": true
+  },
+  "intro": "Hi there! 👋 I'm a passionate full-stack developer and designer with over 8 years of experience building beautiful, functional, and user-centered digital experiences. I love turning complex problems into simple, elegant solutions.",
+  "sections": [
+    {
+      "id": "background",
+      "title": "Background",
+      "icon": "briefcase",
+      "content": "I started my journey in tech back in 2015, teaching myself to code while working as a graphic designer. Since then, I've worked with startups, agencies, and enterprise companies, wearing many hats and learning something new every day. I believe in continuous learning and staying curious about emerging technologies."
+    },
+    {
+      "id": "approach",
+      "title": "My Approach",
+      "icon": "target",
+      "content": "I believe great products are built at the intersection of design, technology, and user needs. My approach combines technical expertise with design thinking to create solutions that not only work well but feel right. I'm all about clean code, intuitive interfaces, and smooth collaboration."
+    },
+    {
+      "id": "passion",
+      "title": "What Drives Me",
+      "icon": "heart",
+      "content": "I'm passionate about creating digital products that make people's lives easier and more enjoyable. Whether it's a sleek web app, a responsive website, or a complex system, I pour my heart into every project. I love the moment when users say \"wow, this just works!\" – that's what keeps me going."
+    }
+  ],
+  "stats": [
+    {
+      "label": "Years Experience",
+      "value": "8+",
+      "icon": "calendar"
+    },
+    {
+      "label": "Projects Completed",
+      "value": "150+",
+      "icon": "briefcase"
+    },
+    {
+      "label": "Happy Clients",
+      "value": "80+",
+      "icon": "heart"
+    },
+    {
+      "label": "Certifications",
+      "value": "12",
+      "icon": "award"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Coding",
+      "icon": "code"
+    },
+    {
+      "name": "Design",
+      "icon": "palette"
+    },
+    {
+      "name": "Music",
+      "icon": "music"
+    },
+    {
+      "name": "Photography",
+      "icon": "camera"
+    },
+    {
+      "name": "Reading",
+      "icon": "book"
+    },
+    {
+      "name": "Travel",
+      "icon": "plane"
+    },
+    {
+      "name": "Coffee",
+      "icon": "coffee"
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/johndoe",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/johndoe",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/johndoe",
+      "icon": "twitter"
+    },
+    {
+      "platform": "Website",
+      "url": "https://johndoe.com",
+      "icon": "globe"
+    }
+  ],
+  "cta": {
+    "title": "Let's Work Together",
+    "description": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    "primaryButton": "Get in Touch",
+    "secondaryButton": "Download Resume"
+  }
+}
