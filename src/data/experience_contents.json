@@ -119,11 +119,7 @@
         "Jest",
         "Cypress"
       ],
-      "projects": [
-        "SaaS Dashboard",
-        "Analytics Platform",
-        "Admin Panel"
-      ]
+      "projects": ["SaaS Dashboard", "Analytics Platform", "Admin Panel"]
     },
     {
       "id": "4",
@@ -198,11 +194,7 @@
         "PHP",
         "Git"
       ],
-      "projects": [
-        "Client Websites",
-        "Landing Pages",
-        "WordPress Themes"
-      ]
+      "projects": ["Client Websites", "Landing Pages", "WordPress Themes"]
     }
   ],
   "es": [],

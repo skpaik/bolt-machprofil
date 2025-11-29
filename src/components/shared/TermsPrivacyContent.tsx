@@ -24,7 +24,7 @@ export function TermsPrivacyContent({
       {/* Last Updated */}
       <div className="mb-8">
         <Badge variant="outline" className="text-sm">
-          {showLucidIcon('clock', 'w-4 h-4 mr-2')}
+          {showLucidIcon("clock", "w-4 h-4 mr-2")}
           {lastUpdatedTranslate}: {lastUpdated}
         </Badge>
       </div>
@@ -64,7 +64,10 @@ export function TermsPrivacyContent({
         <Card className="mt-8 bg-primary/5 border-primary/20">
           <CardContent className="p-6">
             <div className="flex gap-4">
-              {showLucidIcon('mail','w-5 h-5 text-primary flex-shrink-0 mt-0.5')}
+              {showLucidIcon(
+                "mail",
+                "w-5 h-5 text-primary flex-shrink-0 mt-0.5",
+              )}
               <div>
                 <h3 className="font-semibold mb-2">{contactTitle}</h3>
                 <p className="text-sm text-muted-foreground">{contactText}</p>

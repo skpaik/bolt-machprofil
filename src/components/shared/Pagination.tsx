@@ -1,6 +1,6 @@
 // components/shared/Pagination.tsx
 import { Button } from "@/components/ui/button";
-import {showLucidIcon} from "@/components/lucid-icon-map";
+import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export interface PaginationProps {
   currentPage: number;
@@ -70,7 +70,7 @@ export function Pagination({
         className="h-9 w-9"
         aria-label="Previous page"
       >
-        {showLucidIcon('chevron-left', '', 18)}
+        {showLucidIcon("chevron-left", "", 18)}
       </Button>
 
       {/* Page Numbers - Desktop */}
@@ -115,7 +115,7 @@ export function Pagination({
         className="h-9 w-9"
         aria-label="Next page"
       >
-        {showLucidIcon('chevron-right', '', 18)}
+        {showLucidIcon("chevron-right", "", 18)}
       </Button>
     </div>
   );

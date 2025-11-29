@@ -20,8 +20,7 @@ import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function PublicationsPage() {
-  const { appConfig, langI18n, contentData } =
-    usePortfolio();
+  const { appConfig, langI18n, contentData } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<string>("all");

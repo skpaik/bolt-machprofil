@@ -10,11 +10,7 @@
     "published": true,
     "category": "Cat 2",
     "published_at": "2024-10-15T10:00:00Z",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Web Development"
-    ],
+    "tags": ["React", "TypeScript", "Web Development"],
     "read_time": 5
   },
   {
@@ -28,11 +24,7 @@
     "published": true,
     "category": "Cat 1",
     "published_at": "2024-10-10T14:30:00Z",
-    "tags": [
-      "Node.js",
-      "API",
-      "Backend"
-    ],
+    "tags": ["Node.js", "API", "Backend"],
     "read_time": 8
   },
   {
@@ -46,11 +38,7 @@
     "published": true,
     "category": "Cat 3",
     "published_at": "2024-10-05T09:15:00Z",
-    "tags": [
-      "CSS",
-      "Frontend",
-      "Design"
-    ],
+    "tags": ["CSS", "Frontend", "Design"],
     "read_time": 6
   },
   {
@@ -64,11 +52,7 @@
     "published": true,
     "category": "Cat 4",
     "published_at": "2024-09-28T11:00:00Z",
-    "tags": [
-      "Database",
-      "SQL",
-      "Backend"
-    ],
+    "tags": ["Database", "SQL", "Backend"],
     "read_time": 7
   },
   {
@@ -82,11 +66,7 @@
     "published": true,
     "category": "Cat 3",
     "published_at": "2024-09-20T16:45:00Z",
-    "tags": [
-      "Performance",
-      "Web Development",
-      "Optimization"
-    ],
+    "tags": ["Performance", "Web Development", "Optimization"],
     "read_time": 6
   },
   {
@@ -100,11 +80,7 @@
     "published": true,
     "category": "Cat 5",
     "published_at": "2024-09-15T13:20:00Z",
-    "tags": [
-      "Git",
-      "Version Control",
-      "Development"
-    ],
+    "tags": ["Git", "Version Control", "Development"],
     "read_time": 5
   },
   {
@@ -118,11 +94,7 @@
     "published": true,
     "category": "Cat 4",
     "published_at": "2024-09-08T10:30:00Z",
-    "tags": [
-      "Docker",
-      "DevOps",
-      "Containers"
-    ],
+    "tags": ["Docker", "DevOps", "Containers"],
     "read_time": 9
   },
   {
@@ -136,11 +108,7 @@
     "published": true,
     "category": "Cat 5",
     "published_at": "2024-09-01T15:00:00Z",
-    "tags": [
-      "Testing",
-      "React",
-      "Quality Assurance"
-    ],
+    "tags": ["Testing", "React", "Quality Assurance"],
     "read_time": 10
   },
   {
@@ -154,11 +122,7 @@
     "published": true,
     "category": "Cat 2",
     "published_at": "2024-10-15T10:00:00Z",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Web Development"
-    ],
+    "tags": ["React", "TypeScript", "Web Development"],
     "read_time": 5
   },
   {
@@ -172,11 +136,7 @@
     "published": true,
     "category": "Cat 2",
     "published_at": "2024-10-15T10:00:00Z",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Web Development"
-    ],
+    "tags": ["React", "TypeScript", "Web Development"],
     "read_time": 5
   },
   {
@@ -190,11 +150,7 @@
     "published": true,
     "category": "Cat 2",
     "published_at": "2024-10-15T10:00:00Z",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Web Development"
-    ],
+    "tags": ["React", "TypeScript", "Web Development"],
     "read_time": 5
   },
   {
@@ -208,11 +164,7 @@
     "published": true,
     "category": "Cat 2",
     "published_at": "2024-10-15T10:00:00Z",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Web Development"
-    ],
+    "tags": ["React", "TypeScript", "Web Development"],
     "read_time": 5
   },
   {
@@ -226,11 +178,7 @@
     "published": true,
     "category": "Cat 2",
     "published_at": "2024-10-15T10:00:00Z",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Web Development"
-    ],
+    "tags": ["React", "TypeScript", "Web Development"],
     "read_time": 5
   },
   {
@@ -244,11 +192,7 @@
     "published": true,
     "category": "Cat 2",
     "published_at": "2024-10-15T10:00:00Z",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Web Development"
-    ],
+    "tags": ["React", "TypeScript", "Web Development"],
     "read_time": 5
   }
 ]

@@ -22,8 +22,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 
 export default function ProjectsPage() {
-  const { appConfig, langI18n, contentData } =
-    usePortfolio();
+  const { appConfig, langI18n, contentData } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");

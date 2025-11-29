@@ -21,8 +21,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 
 export default function CertificatesPage() {
-  const { appConfig, langI18n, contentData } =
-    usePortfolio();
+  const { appConfig, langI18n, contentData } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");

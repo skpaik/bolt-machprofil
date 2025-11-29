@@ -14,11 +14,7 @@ import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function HomePage() {
-  const {
-    appData,
-    langI18n,
-    contentData,
-  } = usePortfolio();
+  const { appData, langI18n, contentData } = usePortfolio();
   // Aggregate data from existing sources
   const aboutContent = contentData.about_content;
   const profile = aboutContent.hero || {

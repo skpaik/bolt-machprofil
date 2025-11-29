@@ -23,8 +23,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { PageHeading } from "@/components/shared/PageHeading";
 
 export default function BlogPage() {
-  const { appData, appConfig, contentData, langI18n } =
-    usePortfolio();
+  const { appData, appConfig, contentData, langI18n } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;

@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
-import {showLucidIcon} from "@/components/lucid-icon-map";
+import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export interface FilterBarProps {
   searchValue: string;
@@ -44,7 +44,11 @@ export function FilterBar({
     <div className="space-y-4 mb-8">
       {/* Search Bar - Full Width */}
       <div className="relative">
-        {showLucidIcon('search', "absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground", 20)}
+        {showLucidIcon(
+          "search",
+          "absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground",
+          20,
+        )}
         <Input
           placeholder={searchPlaceholder}
           value={searchValue}
@@ -57,7 +61,7 @@ export function FilterBar({
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Clear search"
           >
-            {showLucidIcon('x', "", 16)}
+            {showLucidIcon("x", "", 16)}
           </button>
         )}
       </div>
@@ -66,7 +70,7 @@ export function FilterBar({
       <div className="flex flex-col sm:flex-row sm:items-center gap-3">
         {/* Filter Label - Hidden on mobile */}
         <div className="hidden sm:flex items-center gap-2 text-sm font-medium whitespace-nowrap">
-          {showLucidIcon('filter', "", 16)}
+          {showLucidIcon("filter", "", 16)}
           <span>Filters:</span>
         </div>
 
@@ -93,7 +97,11 @@ export function FilterBar({
 
           {/* Sort */}
           <div className="flex items-center gap-2 w-full sm:w-auto">
-            {showLucidIcon('sort-asc', "hidden sm:block text-muted-foreground", 16)}
+            {showLucidIcon(
+              "sort-asc",
+              "hidden sm:block text-muted-foreground",
+              16,
+            )}
             <Select
               value={sortConfig.value}
               onValueChange={sortConfig.onChange}
@@ -127,7 +135,7 @@ export function FilterBar({
             onClick={onClearAll}
             className="h-8"
           >
-            {showLucidIcon('x', "mr-1", 14)}
+            {showLucidIcon("x", "mr-1", 14)}
             Clear filters
           </Button>
         )}

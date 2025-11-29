@@ -7,11 +7,7 @@
       "proficiency": 95,
       "level": "Expert",
       "yearsOfExperience": 8,
-      "tags": [
-        "Programming",
-        "Frontend",
-        "Backend"
-      ],
+      "tags": ["Programming", "Frontend", "Backend"],
       "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
     },
     {
@@ -21,11 +17,7 @@
       "proficiency": 90,
       "level": "Expert",
       "yearsOfExperience": 6,
-      "tags": [
-        "Frontend",
-        "Framework",
-        "UI"
-      ],
+      "tags": ["Frontend", "Framework", "UI"],
       "description": "Building scalable web applications with React, hooks, and state management."
     },
     {
@@ -35,10 +27,7 @@
       "proficiency": 88,
       "level": "Advanced",
       "yearsOfExperience": 5,
-      "tags": [
-        "Programming",
-        "Type Safety"
-      ],
+      "tags": ["Programming", "Type Safety"],
       "description": "Strong typing for JavaScript applications, interfaces, and generics."
     },
     {
@@ -48,11 +37,7 @@
       "proficiency": 85,
       "level": "Advanced",
       "yearsOfExperience": 6,
-      "tags": [
-        "Programming",
-        "Backend",
-        "Data Science"
-      ],
+      "tags": ["Programming", "Backend", "Data Science"],
       "description": "Backend development, automation, and data analysis."
     },
     {
@@ -62,11 +47,7 @@
       "proficiency": 87,
       "level": "Advanced",
       "yearsOfExperience": 7,
-      "tags": [
-        "Backend",
-        "API",
-        "Server"
-      ],
+      "tags": ["Backend", "API", "Server"],
       "description": "Server-side JavaScript with Express, RESTful APIs, and microservices."
     },
     {
@@ -76,11 +57,7 @@
       "proficiency": 80,
       "level": "Advanced",
       "yearsOfExperience": 5,
-      "tags": [
-        "Design",
-        "User Experience",
-        "Interface"
-      ],
+      "tags": ["Design", "User Experience", "Interface"],
       "description": "Creating intuitive and visually appealing user interfaces."
     },
     {
@@ -90,11 +67,7 @@
       "proficiency": 85,
       "level": "Advanced",
       "yearsOfExperience": 4,
-      "tags": [
-        "Design Tool",
-        "Prototyping",
-        "Collaboration"
-      ],
+      "tags": ["Design Tool", "Prototyping", "Collaboration"],
       "description": "Wireframing, prototyping, and design systems."
     },
     {
@@ -104,10 +77,7 @@
       "proficiency": 75,
       "level": "Advanced",
       "yearsOfExperience": 7,
-      "tags": [
-        "Image Editing",
-        "Graphics"
-      ],
+      "tags": ["Image Editing", "Graphics"],
       "description": "Photo editing, digital art, and graphic design."
     },
     {
@@ -117,11 +87,7 @@
       "proficiency": 70,
       "level": "Intermediate",
       "yearsOfExperience": 3,
-      "tags": [
-        "Art",
-        "Creative",
-        "Visual"
-      ],
+      "tags": ["Art", "Creative", "Visual"],
       "description": "Digital and traditional illustration techniques."
     },
     {
@@ -131,11 +97,7 @@
       "proficiency": 82,
       "level": "Advanced",
       "yearsOfExperience": 6,
-      "tags": [
-        "Management",
-        "Planning",
-        "Leadership"
-      ],
+      "tags": ["Management", "Planning", "Leadership"],
       "description": "Agile methodologies, Scrum, and team coordination."
     },
     {
@@ -145,11 +107,7 @@
       "proficiency": 78,
       "level": "Advanced",
       "yearsOfExperience": 5,
-      "tags": [
-        "Analysis",
-        "Strategy",
-        "Requirements"
-      ],
+      "tags": ["Analysis", "Strategy", "Requirements"],
       "description": "Requirements gathering, stakeholder management, and process improvement."
     },
     {
@@ -159,11 +117,7 @@
       "proficiency": 73,
       "level": "Intermediate",
       "yearsOfExperience": 4,
-      "tags": [
-        "Marketing",
-        "Strategy",
-        "Growth"
-      ],
+      "tags": ["Marketing", "Strategy", "Growth"],
       "description": "Digital marketing, SEO, and brand development."
     },
     {
@@ -173,10 +127,7 @@
       "proficiency": 90,
       "level": "Expert",
       "yearsOfExperience": 10,
-      "tags": [
-        "Interpersonal",
-        "Collaboration"
-      ],
+      "tags": ["Interpersonal", "Collaboration"],
       "description": "Clear verbal and written communication across teams and stakeholders."
     },
     {
@@ -186,10 +137,7 @@
       "proficiency": 88,
       "level": "Expert",
       "yearsOfExperience": 10,
-      "tags": [
-        "Critical Thinking",
-        "Analysis"
-      ],
+      "tags": ["Critical Thinking", "Analysis"],
       "description": "Analytical thinking and creative solution development."
     },
     {
@@ -199,11 +147,7 @@
       "proficiency": 80,
       "level": "Advanced",
       "yearsOfExperience": 7,
-      "tags": [
-        "Management",
-        "Mentoring",
-        "Team Building"
-      ],
+      "tags": ["Management", "Mentoring", "Team Building"],
       "description": "Team leadership, mentoring, and conflict resolution."
     },
     {
@@ -213,10 +157,7 @@
       "proficiency": 100,
       "level": "Expert",
       "yearsOfExperience": 20,
-      "tags": [
-        "Communication",
-        "Native"
-      ],
+      "tags": ["Communication", "Native"],
       "description": "Native speaker with excellent written and verbal skills."
     },
     {
@@ -226,10 +167,7 @@
       "proficiency": 75,
       "level": "Advanced",
       "yearsOfExperience": 8,
-      "tags": [
-        "Communication",
-        "Second Language"
-      ],
+      "tags": ["Communication", "Second Language"],
       "description": "Conversational and business proficiency."
     },
     {
@@ -239,10 +177,7 @@
       "proficiency": 60,
       "level": "Intermediate",
       "yearsOfExperience": 3,
-      "tags": [
-        "Communication",
-        "Learning"
-      ],
+      "tags": ["Communication", "Learning"],
       "description": "Intermediate conversational skills."
     },
     {
@@ -252,10 +187,7 @@
       "proficiency": 92,
       "level": "Expert",
       "yearsOfExperience": 8,
-      "tags": [
-        "Version Control",
-        "Collaboration"
-      ],
+      "tags": ["Version Control", "Collaboration"],
       "description": "Version control, branching strategies, and team collaboration."
     },
     {
@@ -265,10 +197,7 @@
       "proficiency": 80,
       "level": "Advanced",
       "yearsOfExperience": 4,
-      "tags": [
-        "DevOps",
-        "Containers"
-      ],
+      "tags": ["DevOps", "Containers"],
       "description": "Containerization and deployment workflows."
     },
     {
@@ -278,10 +207,7 @@
       "proficiency": 77,
       "level": "Advanced",
       "yearsOfExperience": 5,
-      "tags": [
-        "Cloud",
-        "Infrastructure"
-      ],
+      "tags": ["Cloud", "Infrastructure"],
       "description": "Cloud services, EC2, S3, Lambda, and serverless architecture."
     }
   ],
@@ -294,11 +220,7 @@
       "proficiency": 95,
       "level": "Expert",
       "yearsOfExperience": 8,
-      "tags": [
-        "Programming",
-        "Frontend",
-        "Backend"
-      ],
+      "tags": ["Programming", "Frontend", "Backend"],
       "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
     }
   ],
@@ -310,11 +232,7 @@
       "proficiency": 95,
       "level": "Expert",
       "yearsOfExperience": 8,
-      "tags": [
-        "Programming",
-        "Frontend",
-        "Backend"
-      ],
+      "tags": ["Programming", "Frontend", "Backend"],
       "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
     }
   ]

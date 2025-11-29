@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ConfigData } from "@/data/config-data";
 import { ThemeType } from "@/lib/types/type.config";
-import {showLucidIcon} from "@/components/lucid-icon-map";
+import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function ThemeSwitcher() {
   const { theme, setTheme, langI18n } = usePortfolio();
@@ -23,7 +23,7 @@ export default function ThemeSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
-            {showLucidIcon(currentTheme.icon, "", 16)}
+          {showLucidIcon(currentTheme.icon, "", 16)}
           <span className="hidden sm:inline">{langI18n.theme}</span>
         </Button>
       </DropdownMenuTrigger>
@@ -35,7 +35,7 @@ export default function ThemeSwitcher() {
               onClick={() => setTheme(t.value as ThemeType)}
               className="flex items-center gap-2 cursor-pointer"
             >
-                {showLucidIcon(t.icon, "", 16)}
+              {showLucidIcon(t.icon, "", 16)}
               <span className="font-medium">{t.label}</span>
               {theme === t.value && <span className="ml-auto text-xs">✓</span>}
             </DropdownMenuItem>

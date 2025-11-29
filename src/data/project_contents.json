@@ -8,11 +8,7 @@
       "shortDescription": "Full-stack online shopping platform with payment integration",
       "description": "A comprehensive e-commerce solution built with Next.js and Stripe, featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
       "category": "Web Development",
-      "tags": [
-        "E-commerce",
-        "Full Stack",
-        "Payment Gateway"
-      ],
+      "tags": ["E-commerce", "Full Stack", "Payment Gateway"],
       "thumbnail": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
       "startDate": "2024-01-15",
       "endDate": "2024-06-20",
@@ -48,11 +44,7 @@
       "shortDescription": "Patient management and appointment scheduling platform",
       "description": "Modern healthcare management system for clinics and hospitals, featuring appointment scheduling, patient records, and telemedicine capabilities.",
       "category": "Web Development",
-      "tags": [
-        "Healthcare",
-        "SaaS",
-        "Dashboard"
-      ],
+      "tags": ["Healthcare", "SaaS", "Dashboard"],
       "thumbnail": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
       "startDate": "2023-09-10",
       "endDate": "2024-02-15",
@@ -87,11 +79,7 @@
       "shortDescription": "Analytics dashboard for social media management",
       "description": "Comprehensive social media analytics platform that aggregates data from multiple platforms and provides actionable insights.",
       "category": "Web Development",
-      "tags": [
-        "Analytics",
-        "Dashboard",
-        "Social Media"
-      ],
+      "tags": ["Analytics", "Dashboard", "Social Media"],
       "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
       "startDate": "2023-07-01",
       "endDate": "2023-11-30",
@@ -125,11 +113,7 @@
       "shortDescription": "AI-powered content creation tool for marketers",
       "description": "Intelligent content generation platform leveraging GPT-4 to create blog posts, social media content, and marketing copy.",
       "category": "AI/ML",
-      "tags": [
-        "AI",
-        "Content",
-        "SaaS"
-      ],
+      "tags": ["AI", "Content", "SaaS"],
       "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
       "startDate": "2024-03-01",
       "endDate": "Ongoing",
@@ -163,11 +147,7 @@
       "shortDescription": "Cross-platform mobile app for workout and nutrition tracking",
       "description": "Comprehensive fitness application with workout tracking, meal planning, progress analytics, and social features.",
       "category": "Mobile Development",
-      "tags": [
-        "Fitness",
-        "Health",
-        "Mobile"
-      ],
+      "tags": ["Fitness", "Health", "Mobile"],
       "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
       "startDate": "2023-05-15",
       "endDate": "2023-12-20",
@@ -200,11 +180,7 @@
       "shortDescription": "Property listing and management platform",
       "description": "Modern real estate platform connecting buyers, sellers, and agents with advanced search, virtual tours, and scheduling.",
       "category": "Web Development",
-      "tags": [
-        "Real Estate",
-        "Marketplace",
-        "Geolocation"
-      ],
+      "tags": ["Real Estate", "Marketplace", "Geolocation"],
       "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
       "startDate": "2023-03-10",
       "endDate": "2023-09-05",
@@ -238,11 +214,7 @@
       "shortDescription": "Collaborative project management and team collaboration platform",
       "description": "Agile project management tool with kanban boards, time tracking, and team collaboration features.",
       "category": "Web Development",
-      "tags": [
-        "Productivity",
-        "Collaboration",
-        "SaaS"
-      ],
+      "tags": ["Productivity", "Collaboration", "SaaS"],
       "thumbnail": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
       "startDate": "2024-02-01",
       "endDate": "Ongoing",
@@ -276,11 +248,7 @@
       "shortDescription": "Real-time cryptocurrency tracking and portfolio management",
       "description": "Comprehensive crypto dashboard with real-time prices, portfolio tracking, and market analysis tools.",
       "category": "Web Development",
-      "tags": [
-        "Cryptocurrency",
-        "Finance",
-        "Dashboard"
-      ],
+      "tags": ["Cryptocurrency", "Finance", "Dashboard"],
       "thumbnail": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
       "startDate": "2023-11-01",
       "endDate": "2024-01-15",
@@ -313,11 +281,7 @@
       "shortDescription": "Interactive online education and course management system",
       "description": "Complete e-learning platform with video courses, quizzes, certificates, and student progress tracking.",
       "category": "Web Development",
-      "tags": [
-        "Education",
-        "Video",
-        "LMS"
-      ],
+      "tags": ["Education", "Video", "LMS"],
       "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
       "startDate": "2023-06-15",
       "endDate": "2024-03-30",

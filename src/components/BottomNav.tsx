@@ -88,7 +88,7 @@ export default function BottomNav() {
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {showLucidIcon('more-horizontal', "", 24)}
+                {showLucidIcon("more-horizontal", "", 24)}
                 <span className="text-xs mt-1">{langI18n.more}</span>
               </button>
             </DropdownMenuTrigger>

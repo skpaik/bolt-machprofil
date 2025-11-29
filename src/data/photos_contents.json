@@ -10,12 +10,7 @@
       "date": "2024-08-15",
       "location": "Rocky Mountains, Colorado",
       "camera": "Canon EOS R5",
-      "tags": [
-        "Landscape",
-        "Mountains",
-        "Sunrise",
-        "Nature"
-      ],
+      "tags": ["Landscape", "Mountains", "Sunrise", "Nature"],
       "views": 1234
     },
     {
@@ -27,12 +22,7 @@
       "date": "2024-08-10",
       "location": "Pacific Northwest",
       "camera": "Sony A7III",
-      "tags": [
-        "Forest",
-        "Trees",
-        "Path",
-        "Nature"
-      ],
+      "tags": ["Forest", "Trees", "Path", "Nature"],
       "views": 892
     },
     {
@@ -44,12 +34,7 @@
       "date": "2024-07-22",
       "location": "Big Sur, California",
       "camera": "Nikon Z6",
-      "tags": [
-        "Ocean",
-        "Waves",
-        "Seascape",
-        "Nature"
-      ],
+      "tags": ["Ocean", "Waves", "Seascape", "Nature"],
       "views": 1567
     },
     {
@@ -60,12 +45,7 @@
       "description": "Golden hour in the vast desert landscape with sand dunes.",
       "date": "2024-06-18",
       "location": "Sahara Desert",
-      "tags": [
-        "Desert",
-        "Sunset",
-        "Dunes",
-        "Landscape"
-      ],
+      "tags": ["Desert", "Sunset", "Dunes", "Landscape"],
       "views": 743
     },
     {
@@ -77,12 +57,7 @@
       "date": "2024-05-12",
       "location": "Paris, France",
       "camera": "Canon EOS R6",
-      "tags": [
-        "Paris",
-        "Architecture",
-        "Night",
-        "Travel"
-      ],
+      "tags": ["Paris", "Architecture", "Night", "Travel"],
       "views": 2134
     },
     {
@@ -94,12 +69,7 @@
       "date": "2024-04-08",
       "location": "Tokyo, Japan",
       "camera": "Fujifilm X-T4",
-      "tags": [
-        "Tokyo",
-        "Street",
-        "Urban",
-        "Travel"
-      ],
+      "tags": ["Tokyo", "Street", "Urban", "Travel"],
       "views": 1876
     },
     {
@@ -111,12 +81,7 @@
       "date": "2024-03-25",
       "location": "Venice, Italy",
       "camera": "Sony A7IV",
-      "tags": [
-        "Venice",
-        "Canals",
-        "Gondola",
-        "Travel"
-      ],
+      "tags": ["Venice", "Canals", "Gondola", "Travel"],
       "views": 1543
     },
     {
@@ -127,12 +92,7 @@
       "description": "Stunning sunset view over the white buildings of Santorini.",
       "date": "2024-02-14",
       "location": "Santorini, Greece",
-      "tags": [
-        "Santorini",
-        "Sunset",
-        "Greece",
-        "Travel"
-      ],
+      "tags": ["Santorini", "Sunset", "Greece", "Travel"],
       "views": 2456
     },
     {
@@ -144,12 +104,7 @@
       "date": "2024-09-05",
       "location": "New York City",
       "camera": "Nikon Z7",
-      "tags": [
-        "Skyscraper",
-        "Modern",
-        "Glass",
-        "Architecture"
-      ],
+      "tags": ["Skyscraper", "Modern", "Glass", "Architecture"],
       "views": 987
     },
     {
@@ -161,12 +116,7 @@
       "date": "2024-08-20",
       "location": "Barcelona, Spain",
       "camera": "Canon EOS 5D",
-      "tags": [
-        "Cathedral",
-        "Gothic",
-        "Historic",
-        "Architecture"
-      ],
+      "tags": ["Cathedral", "Gothic", "Historic", "Architecture"],
       "views": 1234
     },
     {
@@ -177,12 +127,7 @@
       "description": "Clean lines and minimalist design in modern interior space.",
       "date": "2024-07-10",
       "location": "Copenhagen, Denmark",
-      "tags": [
-        "Interior",
-        "Minimalist",
-        "Modern",
-        "Design"
-      ],
+      "tags": ["Interior", "Minimalist", "Modern", "Design"],
       "views": 756
     },
     {
@@ -194,12 +139,7 @@
       "date": "2024-10-01",
       "location": "New York City",
       "camera": "Leica Q2",
-      "tags": [
-        "Street",
-        "Urban",
-        "People",
-        "Candid"
-      ],
+      "tags": ["Street", "Urban", "People", "Candid"],
       "views": 1432
     },
     {
@@ -210,12 +150,7 @@
       "description": "Vibrant colors and textures at the local street market.",
       "date": "2024-09-18",
       "location": "Marrakech, Morocco",
-      "tags": [
-        "Market",
-        "Colors",
-        "Culture",
-        "Street"
-      ],
+      "tags": ["Market", "Colors", "Culture", "Street"],
       "views": 1098
     },
     {
@@ -227,12 +162,7 @@
       "date": "2024-08-30",
       "location": "London, UK",
       "camera": "Fujifilm X100V",
-      "tags": [
-        "Rain",
-        "Night",
-        "Reflections",
-        "Street"
-      ],
+      "tags": ["Rain", "Night", "Reflections", "Street"],
       "views": 1876
     },
     {
@@ -244,12 +174,7 @@
       "date": "2024-07-05",
       "location": "Serengeti, Tanzania",
       "camera": "Canon EOS-1D X Mark III",
-      "tags": [
-        "Lion",
-        "Safari",
-        "Africa",
-        "Wildlife"
-      ],
+      "tags": ["Lion", "Safari", "Africa", "Wildlife"],
       "views": 2345
     },
     {
@@ -261,12 +186,7 @@
       "date": "2024-06-22",
       "location": "Alaska, USA",
       "camera": "Nikon D850",
-      "tags": [
-        "Eagle",
-        "Bird",
-        "Flight",
-        "Wildlife"
-      ],
+      "tags": ["Eagle", "Bird", "Flight", "Wildlife"],
       "views": 1654
     }
   ],

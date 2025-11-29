@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
-            {showLucidIcon('globe', '', 16)}
+          {showLucidIcon("globe", "", 16)}
           <span className="hidden sm:inline">{langI18n.language}</span>
         </Button>
       </DropdownMenuTrigger>
