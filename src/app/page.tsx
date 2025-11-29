@@ -29,12 +29,9 @@ export default function HomePage() {
     socialLinks: [],
   };
 
-  const intro =
-    aboutContent.intro ||
-    "I create beautiful, functional, and user-centered digital experiences. Specializing in modern web technologies and creative problem-solving.";
+  const intro =    aboutContent.intro;
 
-  const tagline =
-    aboutContent.hero.tagline || "Building Digital Experiences That Matter";
+  const tagline =    aboutContent.hero.tagline;
 
   // Get social links from profile or about data
   const socialLinks = aboutContent.socialLinks.filter((link) => link.url);

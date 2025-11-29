@@ -12,9 +12,9 @@ export async function loadContentFile<T>(
 export async function loadAllContent(lang: LanguageType): Promise<ContentData> {
   const entries = await Promise.all(
     Object.entries(contentFileMap).map(async ([key, fileName]) => {
-      console.log(key, fileName);
+      //console.log(key, fileName);
       const data = await loadContentFile<any>(lang, fileName);
-      console.log(data);
+      //console.log(data);
       return [key, data];
     }),
   );

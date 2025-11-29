@@ -11,6 +11,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export default function ResumePage() {
   const { langI18n, contentData } = usePortfolio();
   const aboutContent = contentData.about_content;
+  const socialLinks = aboutContent.socialLinks;
 
   // Aggregate data from different sources
   const profile = aboutContent.hero || {
@@ -149,33 +150,21 @@ export default function ResumePage() {
                       </a>
                     </div>
                   )}
-                  {profile.linkedin && (
-                    <div className="flex items-center gap-2">
-                      {showLucidIcon(
-                        "linkedin",
-                        "w-4 h-4 text-muted-foreground",
-                      )}
-                      <a
-                        href={`https://${profile.linkedin}`}
-                        className="hover:text-primary"
-                        target="_blank"
-                      >
-                        {profile.linkedin}
-                      </a>
-                    </div>
-                  )}
-                  {profile.github && (
-                    <div className="flex items-center gap-2">
-                      {showLucidIcon("github", "w-4 h-4 text-muted-foreground")}
-                      <a
-                        href={`https://${profile.github}`}
-                        className="hover:text-primary"
-                        target="_blank"
-                      >
-                        {profile.github}
-                      </a>
-                    </div>
-                  )}
+                  {socialLinks.map((socialLink) => (
+                      <div className="flex items-center gap-2">
+                        {showLucidIcon(
+                            socialLink.icon,
+                            "w-4 h-4 text-muted-foreground",
+                        )}
+                        <a
+                            href={`https://${socialLink.url}`}
+                            className="hover:text-primary"
+                            target="_blank"
+                        >
+                          {socialLink.url}
+                        </a>
+                      </div>
+                  ))}
                 </div>
               </div>
             </div>
