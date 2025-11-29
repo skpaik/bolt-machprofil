@@ -151,19 +151,19 @@ export default function ResumePage() {
                     </div>
                   )}
                   {socialLinks.map((socialLink) => (
-                      <div className="flex items-center gap-2">
-                        {showLucidIcon(
-                            socialLink.icon,
-                            "w-4 h-4 text-muted-foreground",
-                        )}
-                        <a
-                            href={`https://${socialLink.url}`}
-                            className="hover:text-primary"
-                            target="_blank"
-                        >
-                          {socialLink.url}
-                        </a>
-                      </div>
+                    <div className="flex items-center gap-2">
+                      {showLucidIcon(
+                        socialLink.icon,
+                        "w-4 h-4 text-muted-foreground",
+                      )}
+                      <a
+                        href={`https://${socialLink.url}`}
+                        className="hover:text-primary"
+                        target="_blank"
+                      >
+                        {socialLink.url}
+                      </a>
+                    </div>
                   ))}
                 </div>
               </div>

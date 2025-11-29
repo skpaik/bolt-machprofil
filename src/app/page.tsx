@@ -29,9 +29,9 @@ export default function HomePage() {
     socialLinks: [],
   };
 
-  const intro =    aboutContent.intro;
+  const intro = aboutContent.intro;
 
-  const tagline =    aboutContent.hero.tagline;
+  const tagline = aboutContent.hero.tagline;
 
   // Get social links from profile or about data
   const socialLinks = aboutContent.socialLinks.filter((link) => link.url);
