@@ -5,6 +5,8 @@
     "tagline": "Crafting digital experiences that make a difference",
     "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
     "location": "San Francisco, CA",
+    "phone": "+4915222131484",
+    "website": "https://johndoe.com",
     "email": "hello@johndoe.com",
     "resumeUrl": "/resume.pdf",
     "available": true

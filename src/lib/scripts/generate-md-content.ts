@@ -194,7 +194,7 @@ image: "${image}"
 album: "${category}"
 category: "${category}"
 description: "${description}"
-published_at: "${date}"
+publishedAt: "${date}"
 tags: [${tags.map((t) => `"${t}"`).join(", ")}]
 featured: ${featured}
 ---
