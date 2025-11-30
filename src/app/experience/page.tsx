@@ -10,7 +10,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 
 export default function ExperiencePage() {
-  const { experienceContentData, langI18n, contentData } = usePortfolio();
+  const { langI18n, contentData } = usePortfolio();
 
   // Use real data if available, otherwise use sample data
   const experiences = contentData.experience_list;
