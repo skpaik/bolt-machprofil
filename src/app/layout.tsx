@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BottomNav from "@/components/BottomNav";
 import { Toaster } from "@/components/ui/toaster";
-
+import AnimatedLayout from "@/components/AnimatedLayout";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,6 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PortfolioProvider>
+          <AnimatedLayout>
           <TemplateWrapper>
             <div className="flex flex-col min-h-screen pb-16">
               <Header />
@@ -48,6 +49,7 @@ export default function RootLayout({
             <BottomNav />
           </TemplateWrapper>
           <Toaster />
+          </AnimatedLayout>
         </PortfolioProvider>
       </body>
     </html>
