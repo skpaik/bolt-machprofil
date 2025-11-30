@@ -43,9 +43,9 @@ export default function CertificatesPage() {
       // Status filter (valid/expired)
       if (selectedStatus !== "all") {
         const isExpired =
-            cert.expiryDate && cert.expiryDate !== "No Expiry"
-                ? new Date(cert.expiryDate) < new Date()
-                : false;
+          cert.expiryDate && cert.expiryDate !== "No Expiry"
+            ? new Date(cert.expiryDate) < new Date()
+            : false;
         if (selectedStatus === "valid" && isExpired) return false;
         if (selectedStatus === "expired" && !isExpired) return false;
       }

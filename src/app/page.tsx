@@ -19,9 +19,9 @@ export default function HomePage() {
   const aboutContent = contentData.about_content;
   const profile = aboutContent.hero || {
     name: "Mofiz Rahman",
-    title: "Full Stack Developer & Designer",
-    email: "hello@johndoe.com",
-    location: "San Francisco, CA",
+    title: "Scientist @ Environment",
+    email: "mofiz@rahman.com",
+    location: "Cottbus-Ströbitz, Brandenburg, Germany",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
     available: true,
@@ -125,7 +125,7 @@ export default function HomePage() {
   const topTestimonials = testimonials.slice(0, 2);
 
   return (
-    <div className="w-full">
+    <div className="">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/5">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>

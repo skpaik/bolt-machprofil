@@ -16,10 +16,10 @@ export default function ResumePage() {
   // Aggregate data from different sources
   const profile = aboutContent.hero || {
     name: "Mofiz Rahman",
-    title: "Full Stack Developer & Designer",
-    email: "hello@johndoe.com",
+    title: "Scientist @ Environment",
+    email: "mofiz@rahman.com",
     phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
+    location: "Cottbus-Ströbitz, Brandenburg, Germany",
     website: "https://johndoe.com",
     linkedin: "linkedin.com/in/johndoe",
     github: "github.com/johndoe",
