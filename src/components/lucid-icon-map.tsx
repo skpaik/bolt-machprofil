@@ -1,5 +1,5 @@
 "use client";
-import { nanoid } from 'nanoid';
+import { nanoid } from "nanoid";
 import {
   AlertCircle,
   ArrowLeft,
@@ -210,5 +210,7 @@ export const showLucidIcon = (
   cssClass = "w-5 h-5 text-primary",
   size?: string | number,
 ) => {
-  return <ShowIcon key={nanoid()} icon={icon} className={cssClass} size={size} />;
+  return (
+    <ShowIcon key={nanoid()} icon={icon} className={cssClass} size={size} />
+  );
 };

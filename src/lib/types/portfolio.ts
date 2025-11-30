@@ -4,7 +4,6 @@ import {
   TemplateType,
   ThemeType,
 } from "@/lib/types/type.config";
-import { AboutContent } from "@/lib/types/about.contract";
 import { ContentData } from "@/lib/types/content.types";
 
 export interface BaseContent {
@@ -359,4 +358,51 @@ export interface PortfolioContextType {
   setLanguageType: (type: LanguageType) => void;
   theme: ThemeType;
   setTheme: (theme: ThemeType) => void;
+}
+
+export interface SiteConfig {
+  // Site Settings
+  siteTitle: string;
+  // tagline: string;
+  // author: string;
+  description: string;
+  // keywords: string[];
+  // baseUrl: string;
+  // language: string;
+  // locale: string;
+  // timezone: string;
+
+  // // Theme Settings
+  // layout: 'classic' | 'modern' | 'creative';
+  // colorScheme: string;
+  // fontFamily: string;
+  // theme: 'light' | 'dark' | 'system';
+  //
+  // // Assets
+  // favicon: string;
+  // ogImage: string;
+  // showHeaderImage: boolean;
+  //
+  // // Contact & Social
+  // email: string;
+  // github: string;
+  // linkedin: string;
+  // twitter: string;
+  //
+  // // Analytics & SEO
+  // googleAnalyticsId: string;
+  // googleSiteVerification: string;
+  //
+  // // Version
+  // version: string;
+  // generator: string;
+}
+
+export interface PageMetaParams {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: "website" | "article";
+  author?: string;
 }

@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import BottomNav from "@/components/BottomNav";
 import { Toaster } from "@/components/ui/toaster";
 import AnimatedLayout from "@/components/AnimatedLayout";
+import { MetadataHelper } from "@/lib/helpers/metadata.helper";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,11 +19,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Portfolio Website",
+export const metadata: Metadata = MetadataHelper.generateMetaData({
+  siteTitle: "Portfolio Website",
   description:
     "Professional portfolio website showcasing work, skills, and experience",
-};
+});
 
 export default function RootLayout({
   children,
@@ -36,19 +37,19 @@ export default function RootLayout({
       >
         <PortfolioProvider>
           <AnimatedLayout>
-          <TemplateWrapper>
-            <div className="flex flex-col min-h-screen pb-16">
-              <Header />
-              <main className="flex-1">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-                  {children}
-                </div>
-              </main>
-              <Footer />
-            </div>
-            <BottomNav />
-          </TemplateWrapper>
-          <Toaster />
+            <TemplateWrapper>
+              <div className="flex flex-col min-h-screen pb-16">
+                <Header />
+                <main className="flex-1">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+                    {children}
+                  </div>
+                </main>
+                <Footer />
+              </div>
+              <BottomNav />
+            </TemplateWrapper>
+            <Toaster />
           </AnimatedLayout>
         </PortfolioProvider>
       </body>
