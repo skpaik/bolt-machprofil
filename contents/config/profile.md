@@ -1,6 +1,6 @@
 # Profile
 
-**Name:** John Doe
+**Name:** Mofiz Rahman
 **Title:** Full-stack Developer
 **Email:** john@example.com
 **Location:** Berlin, Germany

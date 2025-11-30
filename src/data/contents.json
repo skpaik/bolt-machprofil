@@ -7,7 +7,7 @@
         "order": 1,
         "title": "My Blog Post 1 (DE)",
         "date": "2024-11-28",
-        "author": "John Doe",
+        "author": "Mofiz Rahman",
         "excerpt": "A short summary for blog post 1 in DE.",
         "tags": ["tech", "typescript"],
         "image": "/images/blog-1.jpg",
@@ -77,7 +77,7 @@
         {
           "slug": "bio",
           "order": 0,
-          "fullName": "Alex Johnson",
+          "fullName": "Mofiz Rahman",
           "title": "Software Engineer",
           "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
           "location": "Berlin, Germany",
@@ -182,7 +182,7 @@
               "relation": "Manager at TechCorp"
             },
             {
-              "name": "Prof. John Doe",
+              "name": "Prof. Mofiz Rahman",
               "position": "Professor of Computer Science",
               "organization": "University of Hamburg",
               "email": "j.doe@uni-hamburg.de",
@@ -301,7 +301,7 @@
         "order": 1,
         "title": "My Blog Post 1 (EN)",
         "date": "2024-02-23",
-        "author": "John Doe",
+        "author": "Mofiz Rahman",
         "excerpt": "A short summary for blog post 1 in EN.",
         "tags": ["tech", "javascript"],
         "image": "/images/blog-1.jpg",
@@ -371,7 +371,7 @@
         {
           "slug": "bio",
           "order": 0,
-          "fullName": "Alex Johnson",
+          "fullName": "Mofiz Rahman",
           "title": "Software Engineer",
           "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
           "location": "Berlin, Germany",
@@ -476,7 +476,7 @@
               "relation": "Manager at TechCorp"
             },
             {
-              "name": "Prof. John Doe",
+              "name": "Prof. Mofiz Rahman",
               "position": "Professor of Computer Science",
               "organization": "University of Hamburg",
               "email": "j.doe@uni-hamburg.de",
@@ -694,7 +694,7 @@
         {
           "slug": "bio",
           "order": 0,
-          "fullName": "Alex Johnson",
+          "fullName": "Mofiz Rahman",
           "title": "Software Engineer",
           "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
           "location": "Berlin, Germany",
@@ -799,7 +799,7 @@
               "relation": "Manager at TechCorp"
             },
             {
-              "name": "Prof. John Doe",
+              "name": "Prof. Mofiz Rahman",
               "position": "Professor of Computer Science",
               "organization": "University of Hamburg",
               "email": "j.doe@uni-hamburg.de",
@@ -988,7 +988,7 @@
         {
           "slug": "bio",
           "order": 0,
-          "fullName": "Alex Johnson",
+          "fullName": "Mofiz Rahman",
           "title": "Software Engineer",
           "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
           "location": "Berlin, Germany",
@@ -1093,7 +1093,7 @@
               "relation": "Manager at TechCorp"
             },
             {
-              "name": "Prof. John Doe",
+              "name": "Prof. Mofiz Rahman",
               "position": "Professor of Computer Science",
               "organization": "University of Hamburg",
               "email": "j.doe@uni-hamburg.de",
@@ -1282,7 +1282,7 @@
         {
           "slug": "bio",
           "order": 0,
-          "fullName": "Alex Johnson",
+          "fullName": "Mofiz Rahman",
           "title": "Software Engineer",
           "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
           "location": "Berlin, Germany",
@@ -1387,7 +1387,7 @@
               "relation": "Manager at TechCorp"
             },
             {
-              "name": "Prof. John Doe",
+              "name": "Prof. Mofiz Rahman",
               "position": "Professor of Computer Science",
               "organization": "University of Hamburg",
               "email": "j.doe@uni-hamburg.de",

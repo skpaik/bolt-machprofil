@@ -7,7 +7,7 @@ references:
     email: "laura.schmidt@techcorp.de"
     phone: "+49 1522 111222"
     relation: "Manager at TechCorp"
-  - name: "Prof. John Doe"
+  - name: "Prof. Mofiz Rahman"
     position: "Professor of Computer Science"
     organization: "University of Hamburg"
     email: "j.doe@uni-hamburg.de"

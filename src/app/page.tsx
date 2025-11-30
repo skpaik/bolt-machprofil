@@ -18,7 +18,7 @@ export default function HomePage() {
   // Aggregate data from existing sources
   const aboutContent = contentData.about_content;
   const profile = aboutContent.hero || {
-    name: "John Doe",
+    name: "Mofiz Rahman",
     title: "Full Stack Developer & Designer",
     email: "hello@johndoe.com",
     location: "San Francisco, CA",

@@ -70,7 +70,7 @@ function generateParagraphs(count: number, lang: string): string {
 function generateBlog(id: number, lang: string): string {
   const title = `My Blog Post ${id} (${lang.toUpperCase()})`;
   const date = randomDate();
-  const author = randomFrom(["John Doe", "Jane Smith", "Alex Johnson"]);
+  const author = randomFrom(["Mofiz Rahman", "Jane Smith", "Mofiz Rahman"]);
   const excerpt = `A short summary for blog post ${id} in ${lang.toUpperCase()}.`;
   const tags = ["tech", "javascript", "typescript", "react"]
     .sort(() => 0.5 - Math.random())
@@ -449,7 +449,7 @@ function generateReferences(lang: string): string {
       relation: "Manager at TechCorp",
     },
     {
-      name: "Prof. John Doe",
+      name: "Prof. Mofiz Rahman",
       position: "Professor of Computer Science",
       organization: "University of Hamburg",
       email: "j.doe@uni-hamburg.de",
@@ -555,7 +555,7 @@ NA
 
 function generateBio(lang: string): string {
   const bio: BioSchema = {
-    fullName: "Alex Johnson",
+    fullName: "Mofiz Rahman",
     title: "Software Engineer",
     summary:
       "Experienced developer passionate about building scalable systems and mentoring others.",

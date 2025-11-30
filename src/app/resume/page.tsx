@@ -15,7 +15,7 @@ export default function ResumePage() {
 
   // Aggregate data from different sources
   const profile = aboutContent.hero || {
-    name: "John Doe",
+    name: "Mofiz Rahman",
     title: "Full Stack Developer & Designer",
     email: "hello@johndoe.com",
     phone: "+1 (555) 123-4567",

@@ -4,7 +4,7 @@
   },
   "profiles": {
     "developer": {
-      "name": "Alex Johnson",
+      "name": "Mofiz Rahman",
       "title": "Full Stack Developer",
       "email": "alex.johnson@email.com",
       "phone": "+1 (555) 123-4567",
@@ -30,7 +30,7 @@
       ]
     },
     "photographer": {
-      "name": "Emma Martinez",
+      "name": "Mofiz Rahman",
       "title": "Professional Photographer",
       "email": "emma.martinez@email.com",
       "phone": "+1 (555) 987-6543",
@@ -43,7 +43,7 @@
       }
     },
     "teacher": {
-      "name": "Dr. Sarah Williams",
+      "name": "Mofiz Rahman",
       "title": "Mathematics Teacher",
       "email": "sarah.williams@email.com",
       "phone": "+1 (555) 234-5678",
@@ -58,7 +58,7 @@
       }
     },
     "student": {
-      "name": "Dr. Sarah Williams",
+      "name": "Mofiz Rahman",
       "title": "Mathematics Teacher",
       "email": "sarah.williams@email.com",
       "phone": "+1 (555) 234-5678",

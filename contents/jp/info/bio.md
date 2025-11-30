@@ -1,6 +1,6 @@
 ---
 # Bio for language: jp
-fullName: "Alex Johnson"
+fullName: "Mofiz Rahman"
 title: "Software Engineer"
 summary: "Experienced developer passionate about building scalable systems and mentoring others."
 location: "Berlin, Germany"
