@@ -421,6 +421,22 @@ export interface LanguageI18n {
   category: string;
   all_categories: string;
 
+  testimonials_show_all: string;
+  testimonials_selecting_different_category: string;
+  no_testimonials_found: string;
+  more_testimonials: string;
+  featured_testimonials: string;
+  testimonials_all: string;
+  verified_reviews: string;
+  happy_clients: string;
+  average_rating: string;
+  five_star_reviews: string;
+  verified: string;
+  testimonials_sub_title: string;
+  cta_start_your_project: string;
+  cta_title: string;
+  cta_descriptions: string;
+
   //SortConfig Start
   proficiency_high_to_low: string;
   proficiency_low_to_high: string;

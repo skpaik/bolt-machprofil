@@ -187,6 +187,21 @@
     "category_a_z": "Category (A-Z)",
     "category_z_a": "Category (Z-A)",
     "experience_most_to_least": "Experience (Most to Least)",
-    "experience_least_to_most": "Experience (Least to Most)"
+    "experience_least_to_most": "Experience (Least to Most)",
+    "cta_start_your_project": "Start Your Project",
+    "cta_title": "Want to Work Together?",
+    "cta_descriptions": "Join these satisfied clients and let's create something amazing together. I'm committed to delivering exceptional results that exceed your expectations.",
+    "testimonials_show_all": "Show All Testimonials",
+    "testimonials_all": "All Testimonials",
+    "testimonials_selecting_different_category": "Try selecting a different category.",
+    "no_testimonials_found": "No testimonials found",
+    "more_testimonials": "More Testimonials",
+    "featured_testimonials": "Featured Testimonials",
+    "verified_reviews": "Verified Reviews",
+    "five_star_reviews": "5-Star Reviews",
+    "happy_clients": "Happy Clients",
+    "average_rating": "Average Rating",
+    "testimonials_sub_title": "Real feedback from real clients. Discover what people are saying about working with me and the results we've achieved together.",
+    "verified": "Verified"
   }
 }

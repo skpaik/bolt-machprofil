@@ -65,8 +65,8 @@ export default function TestimonialsPage() {
   return (
     <>
       <PageHeading
-        title={langI18n.testimonials || "Testimonials"}
-        subTitle="Real feedback from real clients. Discover what people are saying about working with me and the results we've achieved together."
+        title={langI18n.testimonials}
+        subTitle={langI18n.testimonials_sub_title}
       />
 
       {/* Statistics Section */}
@@ -76,7 +76,9 @@ export default function TestimonialsPage() {
             {showLucidIcon("star", "w-8 h-8 text-yellow-500 fill-yellow-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{averageRating}</div>
-          <div className="text-sm text-muted-foreground">Average Rating</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.average_rating}
+          </div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900 border-blue-200 dark:border-blue-800">
@@ -84,7 +86,9 @@ export default function TestimonialsPage() {
             {showLucidIcon("users", "w-8 h-8 text-blue-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{totalTestimonials}</div>
-          <div className="text-sm text-muted-foreground">Happy Clients</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.happy_clients}
+          </div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 border-green-200 dark:border-green-800">
@@ -92,7 +96,9 @@ export default function TestimonialsPage() {
             {showLucidIcon("award", "w-8 h-8 text-green-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{fiveStarCount}</div>
-          <div className="text-sm text-muted-foreground">5-Star Reviews</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.five_star_reviews}
+          </div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900 border-purple-200 dark:border-purple-800">
@@ -100,7 +106,9 @@ export default function TestimonialsPage() {
             {showLucidIcon("thumbs-up", "w-8 h-8 text-purple-500")}
           </div>
           <div className="text-3xl font-bold mb-1">{verifiedCount}</div>
-          <div className="text-sm text-muted-foreground">Verified Reviews</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.verified_reviews}
+          </div>
         </Card>
       </div>
 
@@ -113,7 +121,7 @@ export default function TestimonialsPage() {
             onClick={() => setSelectedCategory(category)}
             className="capitalize"
           >
-            {category === "all" ? "All Testimonials" : category}
+            {category === "all" ? langI18n.testimonials_all : category}
           </Button>
         ))}
       </div>
@@ -123,7 +131,9 @@ export default function TestimonialsPage() {
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-6">
             {showLucidIcon("trending-up", "w-5 h-5 text-primary")}
-            <h2 className="text-2xl font-bold">Featured Testimonials</h2>
+            <h2 className="text-2xl font-bold">
+              {langI18n.featured_testimonials}
+            </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredTestimonials.map((testimonial) => (
@@ -138,7 +148,7 @@ export default function TestimonialsPage() {
                       <StarRating rating={testimonial.rating} />
                       {testimonial.verified && (
                         <Badge variant="secondary" className="text-xs">
-                          ✓ Verified
+                          ✓ {langI18n.verified}
                         </Badge>
                       )}
                     </div>
@@ -205,7 +215,9 @@ export default function TestimonialsPage() {
       {regularTestimonials.length > 0 && (
         <div>
           {featuredTestimonials.length > 0 && (
-            <h2 className="text-2xl font-bold mb-6">More Testimonials</h2>
+            <h2 className="text-2xl font-bold mb-6">
+              {langI18n.more_testimonials}
+            </h2>
           )}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {regularTestimonials.map((testimonial) => (
@@ -220,7 +232,7 @@ export default function TestimonialsPage() {
                       <StarRating rating={testimonial.rating} />
                       {testimonial.verified && (
                         <Badge variant="secondary" className="text-xs">
-                          ✓ Verified
+                          ✓ {langI18n.verified}
                         </Badge>
                       )}
                     </div>
@@ -292,12 +304,15 @@ export default function TestimonialsPage() {
             "quote",
             "w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-30",
           )}
-          <h3 className="text-xl font-semibold mb-2">No testimonials found</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            {" "}
+            {langI18n.no_testimonials_found}
+          </h3>
           <p className="text-muted-foreground mb-4">
-            Try selecting a different category.
+            {langI18n.testimonials_selecting_different_category}
           </p>
           <Button variant="outline" onClick={() => setSelectedCategory("all")}>
-            Show All Testimonials
+            {langI18n.testimonials_show_all}
           </Button>
         </div>
       )}
@@ -305,13 +320,11 @@ export default function TestimonialsPage() {
       {/* CTA Section */}
       <Card className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
         <CardContent className="text-center p-8">
-          <h2 className="text-2xl font-bold mb-3">Want to Work Together?</h2>
+          <h2 className="text-2xl font-bold mb-3"> {langI18n.cta_title}</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Join these satisfied clients and let's create something amazing
-            together. I'm committed to delivering exceptional results that
-            exceed your expectations.
+            {langI18n.cta_descriptions}
           </p>
-          <Button size="lg">Start Your Project</Button>
+          <Button size="lg">{langI18n.cta_start_your_project}</Button>
         </CardContent>
       </Card>
     </>
