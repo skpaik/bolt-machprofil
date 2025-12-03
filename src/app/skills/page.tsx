@@ -117,21 +117,21 @@ export default function SkillPage() {
   const filterConfigs: FilterConfig[] = [
     {
       name: "category",
-      label: "Category",
+      label: langI18n.category,
       value: selectedCategory,
       onChange: setSelectedCategory,
       options: [
-        { value: "all", label: "All Categories" },
+        { value: "all", label:  langI18n.all_categories },
         ...categories.map((cat) => ({ value: cat, label: cat })),
       ],
     },
     {
       name: "level",
-      label: "Level",
+      label: langI18n.level,
       value: selectedLevel,
       onChange: setSelectedLevel,
       options: [
-        { value: "all", label: "All Levels" },
+        { value: "all", label: langI18n.all_levels },
         ...levels.map((level) => ({ value: level, label: level })),
       ],
     },
@@ -141,14 +141,14 @@ export default function SkillPage() {
     value: sortBy,
     onChange: (value: string) => setSortBy(value as SortOption),
     options: [
-      { value: "proficiency-desc", label: "Proficiency (High to Low)" },
-      { value: "proficiency-asc", label: "Proficiency (Low to High)" },
-      { value: "name-asc", label: "Name (A-Z)" },
-      { value: "name-desc", label: "Name (Z-A)" },
-      { value: "category-asc", label: "Category (A-Z)" },
-      { value: "category-desc", label: "Category (Z-A)" },
-      { value: "experience-desc", label: "Experience (Most to Least)" },
-      { value: "experience-asc", label: "Experience (Least to Most)" },
+      { value: "proficiency-desc", label: langI18n.proficiency_high_to_low },
+      { value: "proficiency-asc", label:langI18n.proficiency_low_to_high },
+      { value: "name-asc", label: langI18n.name_a_z },
+      { value: "name-desc", label: langI18n.name_z_a },
+      { value: "category-asc", label: langI18n.category_a_z },
+      { value: "category-desc", label:langI18n.category_z_a },
+      { value: "experience-desc", label: langI18n.experience_most_to_least },
+      { value: "experience-asc", label: langI18n.experience_least_to_most },
     ],
   };
 
@@ -162,19 +162,19 @@ export default function SkillPage() {
   return (
     <>
       <PageHeading
-        title={langI18n.skills || "Skills & Expertise"}
-        subTitle="A comprehensive overview of my professional skills, competencies, and areas of expertise across various domains."
+        title={langI18n.skills}
+        subTitle={langI18n.skillsSubTitle}
       />
 
       {/* Filter Bar */}
       <FilterBar
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
-        searchPlaceholder="Search skills by name, category, level, or tags..."
+        searchPlaceholder={langI18n.skillsSearchPlaceholder}
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalSkills}
-        resultsLabel={totalSkills === 1 ? "skill" : "skills"}
+        resultsLabel={totalSkills === 1 ? langI18n.skill : langI18n.skills}
         onClearAll={handleClearAll}
       />
 
@@ -225,7 +225,7 @@ export default function SkillPage() {
                     {showLucidIcon("award", "w-4 h-4")}
                     <span>
                       {skill.yearsOfExperience}{" "}
-                      {skill.yearsOfExperience === 1 ? "year" : "years"} of
+                      {skill.yearsOfExperience === 1 ? langI18n.year : langI18n.years} of
                       experience
                     </span>
                   </div>
@@ -252,10 +252,8 @@ export default function SkillPage() {
         </div>
       ) : (
         <ListEmptyDisplay
-          title={"No skills found"}
-          message={
-            "Try adjusting your search terms or filters to find what you're looking for."
-          }
+          title={langI18n.skillsNotFound}
+          message={            langI18n.skillsNotFoundMessage          }
           handleClearAll={handleClearAll}
         />
       )}

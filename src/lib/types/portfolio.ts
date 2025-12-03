@@ -254,55 +254,6 @@ export interface AppData {
   social: SocialLinks;
 }
 
-export interface LanguageI18n {
-  name: string;
-
-  //primaryMenuItems Start
-  home: string;
-  about: string;
-  projects: string;
-  experience: string;
-  blog: string;
-  resume: string;
-  contact: string;
-  more: string;
-  //primaryMenuItems End
-
-  //moreMenuItems Start
-  education: string;
-  skills: string;
-  services: string;
-  testimonials: string;
-  publications: string;
-  certificates: string;
-  photos: string;
-  privacy: string;
-  terms: string;
-  //moreMenuItems End
-
-  viewMore: string;
-  getInTouch: string;
-  sendMessage: string;
-  downloadCV: string;
-  language: string;
-  template: string;
-  profile: string;
-  theme: string;
-  contactInfo: string;
-  email: string;
-  phone: string;
-  location: string;
-  connectWithMe: string;
-  allSkills: string;
-  professionalHighlights: string;
-  yearsExperience: string;
-  projectsCompleted: string;
-  skillsMastered: string;
-  readMore: string;
-  latestPosts: string;
-  allPosts: string;
-  lastUpdated: string;
-}
 
 export interface SettingSchema {
   portfolioProfile: string;
@@ -405,4 +356,77 @@ export interface PageMetaParams {
   url?: string;
   type?: "website" | "article";
   author?: string;
+}
+
+export interface LanguageI18n {
+  name: string;
+
+  //primaryMenuItems Start
+  home: string;
+  about: string;
+  projects: string;
+  experience: string;
+  blog: string;
+  resume: string;
+  contact: string;
+  more: string;
+  //primaryMenuItems End
+
+  //moreMenuItems Start
+  education: string;
+  skills: string;
+  services: string;
+  testimonials: string;
+  publications: string;
+  certificates: string;
+  photos: string;
+  privacy: string;
+  terms: string;
+  //moreMenuItems End
+
+  viewMore: string;
+  getInTouch: string;
+  sendMessage: string;
+  downloadCV: string;
+  language: string;
+  template: string;
+  profile: string;
+  theme: string;
+  contactInfo: string;
+  email: string;
+  phone: string;
+  location: string;
+  connectWithMe: string;
+  allSkills: string;
+  professionalHighlights: string;
+  yearsExperience: string;
+  projectsCompleted: string;
+  skillsMastered: string;
+  readMore: string;
+  latestPosts: string;
+  allPosts: string;
+  lastUpdated: string;
+
+  skillsSubTitle: string;
+  skillsSearchPlaceholder: string;
+  skillsNotFound: string;
+  skillsNotFoundMessage: string;
+  skill: string;
+  year: string;
+  years: string;
+  level: string;
+  all_levels: string;
+  category: string;
+  all_categories: string;
+
+  //SortConfig Start
+  proficiency_high_to_low: string;
+  proficiency_low_to_high: string;
+  name_a_z: string;
+  name_z_a: string;
+  category_a_z: string;
+  category_z_a: string;
+  experience_most_to_least: string;
+  experience_least_to_most: string;
+  //SortConfig End
 }

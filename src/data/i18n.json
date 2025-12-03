@@ -166,5 +166,26 @@
     "latestPosts": "Neueste Beiträge",
     "allPosts": "Alle Beiträge",
     "lastUpdated": "Last Updated"
+  },
+  "_new": {
+    "skillsSubTitle": "A comprehensive overview of my professional skills, competencies, and areas of expertise across various domains.",
+    "skillsSearchPlaceholder": "Search skills by name, category, level, or tags...",
+    "skillsNotFound": "No skills found",
+    "skillsNotFoundMessage": "Try adjusting your search terms or filters to find what you're looking for.",
+    "year": "year",
+    "years": "years",
+    "skill": "skill",
+    "level": "Level",
+    "all_levels": "All Levels",
+    "category": "Category",
+    "all_categories": "All Categories",
+    "proficiency_high_to_low": "Proficiency (High to Low)",
+    "proficiency_low_to_high": "Proficiency (Low to High)",
+    "name_a_z": "Name (A-Z)",
+    "name_z_a": "Name (Z-A)",
+    "category_a_z": "Category (A-Z)",
+    "category_z_a": "Category (Z-A)",
+    "experience_most_to_least": "Experience (Most to Least)",
+    "experience_least_to_most": "Experience (Least to Most)"
   }
 }
