@@ -202,6 +202,7 @@ export interface Service extends BaseContent {
 export interface AppConfig {
   item_per_page: number;
 }
+
 /*
 export interface ContentData {
   about?: AboutContentData;
@@ -254,7 +255,6 @@ export interface AppData {
   social: SocialLinks;
 }
 
-
 export interface SettingSchema {
   portfolioProfile: string;
   portfolioTemplate: string;
@@ -295,6 +295,7 @@ export interface PortfolioData {
     [key: string]: LanguageI18n;
   };
 }
+
 export interface PortfolioContextType {
   appData: AppData;
   contentData: ContentData;
@@ -414,6 +415,7 @@ export interface LanguageI18n {
   skill: string;
   year: string;
   years: string;
+  of_experience: string;
   level: string;
   all_levels: string;
   category: string;

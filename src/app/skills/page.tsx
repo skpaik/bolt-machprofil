@@ -121,7 +121,7 @@ export default function SkillPage() {
       value: selectedCategory,
       onChange: setSelectedCategory,
       options: [
-        { value: "all", label:  langI18n.all_categories },
+        { value: "all", label: langI18n.all_categories },
         ...categories.map((cat) => ({ value: cat, label: cat })),
       ],
     },
@@ -142,11 +142,11 @@ export default function SkillPage() {
     onChange: (value: string) => setSortBy(value as SortOption),
     options: [
       { value: "proficiency-desc", label: langI18n.proficiency_high_to_low },
-      { value: "proficiency-asc", label:langI18n.proficiency_low_to_high },
+      { value: "proficiency-asc", label: langI18n.proficiency_low_to_high },
       { value: "name-asc", label: langI18n.name_a_z },
       { value: "name-desc", label: langI18n.name_z_a },
       { value: "category-asc", label: langI18n.category_a_z },
-      { value: "category-desc", label:langI18n.category_z_a },
+      { value: "category-desc", label: langI18n.category_z_a },
       { value: "experience-desc", label: langI18n.experience_most_to_least },
       { value: "experience-asc", label: langI18n.experience_least_to_most },
     ],
@@ -161,10 +161,7 @@ export default function SkillPage() {
 
   return (
     <>
-      <PageHeading
-        title={langI18n.skills}
-        subTitle={langI18n.skillsSubTitle}
-      />
+      <PageHeading title={langI18n.skills} subTitle={langI18n.skillsSubTitle} />
 
       {/* Filter Bar */}
       <FilterBar
@@ -225,8 +222,10 @@ export default function SkillPage() {
                     {showLucidIcon("award", "w-4 h-4")}
                     <span>
                       {skill.yearsOfExperience}{" "}
-                      {skill.yearsOfExperience === 1 ? langI18n.year : langI18n.years} of
-                      experience
+                      {skill.yearsOfExperience === 1
+                        ? langI18n.year
+                        : langI18n.years}{" "}
+                      {langI18n.of_experience}
                     </span>
                   </div>
                 )}
@@ -253,7 +252,7 @@ export default function SkillPage() {
       ) : (
         <ListEmptyDisplay
           title={langI18n.skillsNotFound}
-          message={            langI18n.skillsNotFoundMessage          }
+          message={langI18n.skillsNotFoundMessage}
           handleClearAll={handleClearAll}
         />
       )}
