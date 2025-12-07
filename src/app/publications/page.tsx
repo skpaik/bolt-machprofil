@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import { PageHeading } from "@/components/shared/PageHeading";
 import {
@@ -132,11 +132,11 @@ export default function PublicationsPage() {
   const filterConfigs: FilterConfig[] = [
     {
       name: "type",
-      label: "Type",
+      label: langI18n.type,
       value: selectedType,
       onChange: setSelectedType,
       options: [
-        { value: "all", label: "All Types" },
+        { value: "all", label: langI18n.all_types },
         ...types.map((type: string) => ({ value: type, label: type })),
       ],
     },
@@ -145,11 +145,11 @@ export default function PublicationsPage() {
   if (statuses.length > 0) {
     filterConfigs.push({
       name: "status",
-      label: "Status",
+      label: langI18n.status,
       value: selectedStatus,
       onChange: setSelectedStatus,
       options: [
-        { value: "all", label: "All Status" },
+        { value: "all", label: langI18n.status_all },
         ...statuses.map((status: string) => ({ value: status, label: status })),
       ],
     });
@@ -159,12 +159,12 @@ export default function PublicationsPage() {
     value: sortBy,
     onChange: (value: string) => setSortBy(value as SortOption),
     options: [
-      { value: "year-desc", label: "Year (Newest)" },
-      { value: "year-asc", label: "Year (Oldest)" },
-      { value: "title-asc", label: "Title (A-Z)" },
-      { value: "title-desc", label: "Title (Z-A)" },
-      { value: "citations-desc", label: "Most Cited" },
-      { value: "type-asc", label: "Type (A-Z)" },
+      { value: "year-desc", label: langI18n.year_newest },
+      { value: "year-asc", label: langI18n.year_oldest },
+      { value: "title-asc", label: langI18n.title_a_z },
+      { value: "title-desc", label: langI18n.title_z_a },
+      { value: "citations-desc", label: langI18n.most_cited },
+      { value: "type-asc", label: langI18n.type_a_z },
     ],
   };
 
@@ -218,7 +218,7 @@ export default function PublicationsPage() {
       {pub.featured && (
         <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 px-4 text-center flex items-center justify-center gap-1">
           {showLucidIcon("star", "w-3 h-3 fill-current")}
-          FEATURED
+          {langI18n.featured.toUpperCase()}
         </div>
       )}
 
@@ -291,7 +291,7 @@ export default function PublicationsPage() {
 
         {pub.doi && (
           <div className="text-xs text-muted-foreground mb-2">
-            <span className="font-semibold">DOI:</span> {pub.doi}
+            <span className="font-semibold">{langI18n.doi}:</span> {pub.doi}
           </div>
         )}
       </CardContent>
@@ -301,7 +301,7 @@ export default function PublicationsPage() {
           <Button variant="outline" size="sm" className="flex-1" asChild>
             <a href={pub.url} target="_blank" rel="noopener noreferrer">
               {showLucidIcon("external-link", "w-3 h-3 mr-1")}
-              View
+              {langI18n.view}
             </a>
           </Button>
         )}
@@ -309,13 +309,13 @@ export default function PublicationsPage() {
           <Button variant="default" size="sm" className="flex-1" asChild>
             <a href={pub.pdfUrl} target="_blank" rel="noopener noreferrer">
               {showLucidIcon("download", "w-3 h-3 mr-1")}
-              PDF
+              {langI18n.pdf}
             </a>
           </Button>
         )}
         {!pub.url && !pub.pdfUrl && (
           <div className="text-xs text-muted-foreground text-center w-full py-2">
-            Contact for access
+            {langI18n.contact_for_access}
           </div>
         )}
       </CardFooter>
@@ -325,8 +325,8 @@ export default function PublicationsPage() {
   return (
     <>
       <PageHeading
-        title={langI18n.publications || "Publications"}
-        subTitle="Research papers, articles, and academic contributions in computer science and related fields."
+        title={langI18n.publications}
+        subTitle={langI18n.publications_sub_title}
       />
 
       {/* Summary Stats */}
@@ -335,7 +335,7 @@ export default function PublicationsPage() {
           {showLucidIcon("file-text", "w-6 h-6 mx-auto mb-2 text-primary")}
           <div className="text-2xl font-bold">{publications.length}</div>
           <div className="text-xs text-muted-foreground">
-            Total Publications
+            {langI18n.total_publications}
           </div>
         </Card>
         <Card className="text-center p-4">
@@ -346,27 +346,29 @@ export default function PublicationsPage() {
               0,
             )}
           </div>
-          <div className="text-xs text-muted-foreground">Total Citations</div>
+          <div className="text-xs text-muted-foreground">
+            {langI18n.total_citations}
+          </div>
         </Card>
         <Card className="text-center p-4">
           {showLucidIcon("building2", "w-6 h-6 mx-auto mb-2 text-primary")}
           <div className="text-2xl font-bold">
             {
-              new Set(
-                publications
-                  .map((p: Publication) => p.publisher)
-                  .filter(Boolean),
-              ).size
+              new Set(publications.map((p: Publication) => p.publisher).filter(Boolean),).size
             }
           </div>
-          <div className="text-xs text-muted-foreground">Publishers</div>
+          <div className="text-xs text-muted-foreground">
+            {langI18n.publishers}
+          </div>
         </Card>
         <Card className="text-center p-4">
           {showLucidIcon("star", "w-6 h-6 mx-auto mb-2 text-primary")}
           <div className="text-2xl font-bold">
             {publications.filter((p: Publication) => p.featured).length}
           </div>
-          <div className="text-xs text-muted-foreground">Featured</div>
+          <div className="text-xs text-muted-foreground">
+            {langI18n.featured}
+          </div>
         </Card>
       </div>
 
@@ -374,11 +376,13 @@ export default function PublicationsPage() {
       <FilterBar
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
-        searchPlaceholder="Search publications by title, author, keywords, or abstract..."
+        searchPlaceholder={langI18n.publications_search_placeholder}
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalPublications}
-        resultsLabel={totalPublications === 1 ? "publication" : "publications"}
+        resultsLabel={
+          totalPublications === 1 ? langI18n.publication : langI18n.publications
+        }
         onClearAll={handleClearAll}
       />
 
@@ -390,7 +394,9 @@ export default function PublicationsPage() {
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
                 {showLucidIcon("award", "w-5 h-5 text-primary")}
-                <h2 className="text-2xl font-bold">Featured Publications</h2>
+                <h2 className="text-2xl font-bold">
+                  {langI18n.featured_publications}
+                </h2>
               </div>
               <div className="space-y-6">
                 {featuredPublications.map((pub: Publication) => (
@@ -404,7 +410,9 @@ export default function PublicationsPage() {
           {regularPublications.length > 0 && (
             <div>
               {featuredPublications.length > 0 && (
-                <h2 className="text-2xl font-bold mb-6">All Publications</h2>
+                <h2 className="text-2xl font-bold mb-6">
+                  {langI18n.all_publications}
+                </h2>
               )}
               <div className="space-y-6">
                 {regularPublications.map((pub: Publication) => (
@@ -416,8 +424,8 @@ export default function PublicationsPage() {
         </>
       ) : (
         <ListEmptyDisplay
-          title={"No publications found"}
-          message={"Try adjusting your search terms or filters."}
+          title={langI18n.publications_not_found}
+          message={langI18n.publications_not_found_message}
           handleClearAll={handleClearAll}
         />
       )}

@@ -186,21 +186,21 @@ export default function PhotoPage() {
   const filterConfigs: FilterConfig[] = [
     {
       name: "album",
-      label: "Album",
+      label: langI18n.album,
       value: selectedAlbum,
       onChange: handleAlbumChange,
       options: [
-        { value: "all", label: "All Albums" },
+        { value: "all", label: langI18n.album_all },
         ...albums.map((album: string) => ({ value: album, label: album })),
       ],
     },
     {
       name: "tag",
-      label: "Tag",
+      label: langI18n.tag,
       value: selectedTag,
       onChange: setSelectedTag,
       options: [
-        { value: "all", label: "All Tags" },
+        { value: "all", label: langI18n.tag_all },
         ...tags.map((tag: string) => ({ value: tag, label: tag })),
       ],
     },
@@ -210,12 +210,12 @@ export default function PhotoPage() {
     value: sortBy,
     onChange: (value: string) => setSortBy(value as SortOption),
     options: [
-      { value: "date-desc", label: "Date (Newest)" },
-      { value: "date-asc", label: "Date (Oldest)" },
-      { value: "title-asc", label: "Title (A-Z)" },
-      { value: "title-desc", label: "Title (Z-A)" },
-      { value: "album-asc", label: "Album (A-Z)" },
-      { value: "views-desc", label: "Most Viewed" },
+      { value: "date-desc", label: langI18n.date_newest },
+      { value: "date-asc", label: langI18n.date_oldest },
+      { value: "title-asc", label: langI18n.title_a_z },
+      { value: "title-desc", label: langI18n. title_z_a },
+      { value: "album-asc", label: langI18n.album_a_z },
+      { value: "views-desc", label:langI18n.most_viewed},
     ],
   };
 
@@ -353,12 +353,12 @@ export default function PhotoPage() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
-              {selectedAlbum !== "all" ? selectedAlbum : "Photos"}
+              {selectedAlbum !== "all" ? selectedAlbum : langI18n.photos}
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground">
               {selectedAlbum !== "all"
-                ? `Viewing album: ${selectedAlbum}`
-                : "A visual journey through projects, events, and memorable moments."}
+                ? `${langI18n.viewing_album}: ${selectedAlbum}`
+                : langI18n.viewing_album_detail}
             </p>
           </div>
           {/* View Mode Toggle */}
@@ -387,9 +387,9 @@ export default function PhotoPage() {
       {viewMode === "albums" ? (
         <div className="space-y-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2">Photo Albums</h2>
+            <h2 className="text-2xl font-bold mb-2">{langI18n.photo_albums}</h2>
             <p className="text-muted-foreground">
-              Browse photos organized by albums
+              {langI18n.photo_albums_detail}
             </p>
           </div>
 
@@ -411,7 +411,7 @@ export default function PhotoPage() {
                     <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="flex items-center gap-2 text-sm">
                         {showLucidIcon("image-icon", "w-4 h-4")}
-                        <span>{albumPhotos.length} photos</span>
+                        <span>{albumPhotos.length} {langI18n.photos.toLowerCase()}</span>
                       </div>
                     </div>
                   </div>
@@ -421,7 +421,7 @@ export default function PhotoPage() {
                     </h3>
                     <p className="text-sm text-muted-foreground">
                       {albumPhotos.length}{" "}
-                      {albumPhotos.length === 1 ? "photo" : "photos"}
+                      {albumPhotos.length === 1 ? langI18n.photo.toLowerCase() : langI18n.photos.toLowerCase()}
                     </p>
                   </CardContent>
                 </Card>
@@ -435,11 +435,11 @@ export default function PhotoPage() {
           <FilterBar
             searchValue={searchQuery}
             onSearchChange={setSearchQuery}
-            searchPlaceholder="Search photos by title, album, tags, or description..."
+            searchPlaceholder={langI18n.photos_search_placeholder}
             filters={filterConfigs}
             sortConfig={sortConfig}
             resultsCount={totalPhotos}
-            resultsLabel={totalPhotos === 1 ? "photo" : "photos"}
+            resultsLabel={totalPhotos === 1 ? langI18n.photo.toLowerCase() : langI18n.photos.toLowerCase()}
             onClearAll={handleClearAll}
           />
 
@@ -477,12 +477,12 @@ export default function PhotoPage() {
                 "mx-auto mb-4 opacity-50 text-muted-foreground",
                 48,
               )}
-              <h3 className="text-xl font-semibold mb-2">No photos found</h3>
+              <h3 className="text-xl font-semibold mb-2">{langI18n.photo_not_found}</h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                Try adjusting your search terms or filters.
+                {langI18n.photo_not_found_detail}
               </p>
               <Button variant="outline" onClick={handleClearAll}>
-                Clear all filters
+                {langI18n.clear_all_filters}
               </Button>
             </div>
           )}

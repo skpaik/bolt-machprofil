@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         subTitle={staticContentData.privacy.subtitle}
       />
       <TermsPrivacyContent
-        lastUpdatedTranslate={langI18n.lastUpdated}
+        lastUpdatedTranslate={langI18n.last_updated}
         termsPrivacy={staticContentData.privacy}
       />
     </>

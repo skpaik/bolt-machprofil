@@ -133,23 +133,23 @@ export default function CertificatesPage() {
   const filterConfigs: FilterConfig[] = [
     {
       name: "category",
-      label: "Category",
+      label: langI18n.category,
       value: selectedCategory,
       onChange: setSelectedCategory,
       options: [
-        { value: "all", label: "All Categories" },
+        { value: "all", label: langI18n.all_categories },
         ...categories.map((cat) => ({ value: cat, label: cat })),
       ],
     },
     {
       name: "status",
-      label: "Status",
+      label: langI18n.status,
       value: selectedStatus,
       onChange: setSelectedStatus,
       options: [
-        { value: "all", label: "All Status" },
-        { value: "valid", label: "Valid" },
-        { value: "expired", label: "Expired" },
+        { value: "all", label: langI18n.status_all },
+        { value: "valid", label: langI18n.valid },
+        { value: "expired", label: langI18n.expired },
       ],
     },
   ];
@@ -158,12 +158,12 @@ export default function CertificatesPage() {
     value: sortBy,
     onChange: (value: string) => setSortBy(value as SortOption),
     options: [
-      { value: "date-desc", label: "Issue Date (Newest)" },
-      { value: "date-asc", label: "Issue Date (Oldest)" },
-      { value: "name-asc", label: "Name (A-Z)" },
-      { value: "name-desc", label: "Name (Z-A)" },
-      { value: "issuer-asc", label: "Issuer (A-Z)" },
-      { value: "issuer-desc", label: "Issuer (Z-A)" },
+      { value: "date-desc", label: langI18n.issue_date_newest },
+      { value: "date-asc", label: langI18n.issue_date_oldest },
+      { value: "name-asc", label: langI18n.name_a_z },
+      { value: "name-desc", label: langI18n.name_z_a },
+      { value: "issuer-asc", label: langI18n.issuer_a_z },
+      { value: "issuer-desc", label: langI18n.issuer_z_a },
     ],
   };
 
@@ -188,7 +188,7 @@ export default function CertificatesPage() {
       >
         {cert.featured && (
           <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 px-4 text-center">
-            ⭐ FEATURED
+            ⭐ {langI18n.featured.toUpperCase()}
           </div>
         )}
 
@@ -207,12 +207,12 @@ export default function CertificatesPage() {
               {cert.verified && (
                 <Badge variant="secondary" className="text-xs">
                   {showLucidIcon("check-circle", "w-3 h-3 mr-1")}
-                  Verified
+                  {langI18n.verified}
                 </Badge>
               )}
               {expired && (
                 <Badge variant="destructive" className="text-xs">
-                  Expired
+                  {langI18n.expired}
                 </Badge>
               )}
             </div>
@@ -245,8 +245,8 @@ export default function CertificatesPage() {
                 {showLucidIcon("clock", "w-3 h-3 mr-1")}
                 <span>
                   {cert.expiryDate === "No Expiry"
-                    ? "No Expiry"
-                    : `Expires: ${formatDateLong(cert.expiryDate)}`}
+                    ? langI18n.no_expiry
+                    : `${langI18n.expires}: ${formatDateLong(cert.expiryDate)}`}
                 </span>
               </div>
             )}
@@ -288,19 +288,19 @@ export default function CertificatesPage() {
   return (
     <>
       <PageHeading
-        title={langI18n.certificates || "Certificates & Achievements"}
-        subTitle="Professional certifications and achievements demonstrating expertise and continuous learning."
+        title={langI18n.certificates}
+        subTitle={langI18n.certificates_sub_title}
       />
 
       {/* Filter Bar */}
       <FilterBar
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
-        searchPlaceholder="Search certificates by name, issuer, category, or skills..."
+        searchPlaceholder={langI18n.certificates_search_placeholder}
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalCertificates}
-        resultsLabel={totalCertificates === 1 ? "certificate" : "certificates"}
+        resultsLabel={totalCertificates === 1 ? langI18n.certificate.toLowerCase() : langI18n.certificates.toLowerCase()}
         onClearAll={handleClearAll}
       />
 
@@ -312,7 +312,7 @@ export default function CertificatesPage() {
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
                 {showLucidIcon("trophy", "w-5 h-5 text-primary")}
-                <h2 className="text-2xl font-bold">Featured Certifications</h2>
+                <h2 className="text-2xl font-bold">{langI18n.featured_certifications}</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {featuredCertificates.map((cert) => (
@@ -326,7 +326,7 @@ export default function CertificatesPage() {
           {regularCertificates.length > 0 && (
             <div>
               {featuredCertificates.length > 0 && (
-                <h2 className="text-2xl font-bold mb-6">All Certifications</h2>
+                <h2 className="text-2xl font-bold mb-6">{langI18n.certifications_all}</h2>
               )}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {regularCertificates.map((cert) => (
@@ -338,8 +338,8 @@ export default function CertificatesPage() {
         </>
       ) : (
         <ListEmptyDisplay
-          title={"No certificates found"}
-          message={"Try adjusting your search terms or filters."}
+          title={langI18n.certifications_not_found}
+          message={langI18n.certifications_not_found_detail}
           handleClearAll={handleClearAll}
         />
       )}

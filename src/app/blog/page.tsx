@@ -201,21 +201,21 @@ export default function BlogPage() {
   const filterConfigs: FilterConfig[] = [
     {
       name: "category",
-      label: "Category",
+      label: langI18n.category,
       value: selectedCategory,
       onChange: handleCategoryChange,
       options: [
-        { value: "all", label: "All Categories" },
+        { value: "all", label: langI18n.all_categories },
         ...categories.map((cat: string) => ({ value: cat, label: cat })),
       ],
     },
     {
       name: "tag",
-      label: "Tag",
+      label: langI18n.tag,
       value: selectedTag,
       onChange: handleTagChange,
       options: [
-        { value: "all", label: "All Tags" },
+        { value: "all", label: langI18n.tag_all },
         ...tags.map((tag: string) => ({ value: tag, label: tag })),
       ],
     },
@@ -226,12 +226,12 @@ export default function BlogPage() {
     value: sortBy,
     onChange: handleSortChange,
     options: [
-      { value: "date-desc", label: "Latest First" },
-      { value: "date-asc", label: "Oldest First" },
-      { value: "title-asc", label: "Title (A-Z)" },
-      { value: "title-desc", label: "Title (Z-A)" },
-      { value: "category-asc", label: "Category (A-Z)" },
-      { value: "category-desc", label: "Category (Z-A)" },
+      { value: "date-desc", label: langI18n.latest_first },
+      { value: "date-asc", label: langI18n.oldest_first },
+      { value: "title-asc", label: langI18n.title_a_z },
+      { value: "title-desc", label: langI18n.title_z_a },
+      { value: "category-asc", label: langI18n.category_a_z },
+      { value: "category-desc", label: langI18n.category_z_a },
     ],
   };
 
@@ -239,18 +239,18 @@ export default function BlogPage() {
     <>
       <PageHeading
         title={langI18n.blog}
-        subTitle="Latest articles, tutorials, and insights on web development and technology."
+        subTitle={langI18n.blog_sub_title}
       />
 
       {/* Filter Bar */}
       <FilterBar
         searchValue={searchQuery}
         onSearchChange={handleSearchChange}
-        searchPlaceholder="Search posts by title, content, or tags..."
+        searchPlaceholder={langI18n.blog_search_placeholder}
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalPosts}
-        resultsLabel={totalPosts === 1 ? "post" : "posts"}
+        resultsLabel={totalPosts === 1 ? langI18n.post.toLowerCase() : langI18n.posts.toLowerCase()}
         onClearAll={handleClearAll}
       />
 
@@ -318,10 +318,8 @@ export default function BlogPage() {
         </div>
       ) : (
         <ListEmptyDisplay
-          title={"No posts found"}
-          message={
-            "Try adjusting your search terms or filters to find what you're looking for."
-          }
+          title={langI18n.posts_not_found}
+          message={langI18n.posts_not_found_detail}
           handleClearAll={handleClearAll}
         />
       )}

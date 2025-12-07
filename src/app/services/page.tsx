@@ -34,8 +34,8 @@ export default function ServicePage() {
   return (
     <>
       <PageHeading
-        title={langI18n.services || "Services"}
-        subTitle="Comprehensive professional services tailored to meet your unique needs and drive your success forward."
+        title={langI18n.services}
+        subTitle={langI18n.services_sub_title}
       />
 
       {/* Category Filter Tabs */}
@@ -47,7 +47,7 @@ export default function ServicePage() {
             onClick={() => setSelectedCategory(category)}
             className="capitalize"
           >
-            {category === "all" ? "All Services" : category}
+            {category === "all" ? langI18n.services_all : category}
           </Button>
         ))}
       </div>
@@ -63,7 +63,7 @@ export default function ServicePage() {
           >
             {service.popular && (
               <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 px-4 text-center">
-                MOST POPULAR
+                {langI18n.most_popular.toUpperCase()}
               </div>
             )}
 
@@ -87,7 +87,7 @@ export default function ServicePage() {
                   <div>
                     {service.pricing.type === "Contact" ? (
                       <span className="text-lg font-semibold">
-                        Contact for pricing
+                        {langI18n.contact_for_pricing}
                       </span>
                     ) : (
                       <>
@@ -125,7 +125,7 @@ export default function ServicePage() {
               <div className="space-y-2 mb-4">
                 <h4 className="font-semibold text-sm flex items-center gap-2">
                   {showLucidIcon("check-circle", "w-4 h-4 text-primary")}
-                  Key Features
+                  {langI18n.key_features}
                 </h4>
                 <ul className="space-y-1.5 ml-6">
                   {service.features.slice(0, 4).map((feature, idx) => (
@@ -140,7 +140,7 @@ export default function ServicePage() {
                 </ul>
                 {service.features.length > 4 && (
                   <p className="text-xs text-muted-foreground ml-6">
-                    +{service.features.length - 4} more features
+                    +{service.features.length - 4} {langI18n.more_features.toLowerCase()}
                   </p>
                 )}
               </div>
@@ -159,7 +159,7 @@ export default function ServicePage() {
 
             <CardFooter className="flex gap-2">
               <Button className="flex-1">
-                Get Started
+                {langI18n.get_started}
                 {showLucidIcon("arrow-right", "w-4 h-4 ml-2")}
               </Button>
             </CardFooter>
@@ -171,10 +171,10 @@ export default function ServicePage() {
       <Card className="bg-primary/5 border-primary/20">
         <CardHeader>
           <h2 className="text-2xl font-bold text-center mb-2">
-            Why Choose My Services?
+            {langI18n.why_choose_my_services}
           </h2>
           <p className="text-center text-muted-foreground">
-            Committed to delivering excellence and exceeding expectations
+            {langI18n.why_choose_my_services_details}
           </p>
         </CardHeader>
         <CardContent>
@@ -183,36 +183,38 @@ export default function ServicePage() {
               <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-3">
                 {showLucidIcon("zap", "w-6 h-6")}
               </div>
-              <h3 className="font-semibold mb-2">Fast Delivery</h3>
+              <h3 className="font-semibold mb-2">{langI18n.fast_delivery}</h3>
               <p className="text-sm text-muted-foreground">
-                Quick turnaround without compromising quality
+                {langI18n.fast_delivery_details}
               </p>
             </div>
             <div className="text-center">
               <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-3">
                 {showLucidIcon("shield", "w-6 h-6")}
               </div>
-              <h3 className="font-semibold mb-2">Quality Assured</h3>
+              <h3 className="font-semibold mb-2">{langI18n.quality_assured}</h3>
               <p className="text-sm text-muted-foreground">
-                Rigorous testing and quality control processes
+                {langI18n.quality_assured_details}
               </p>
             </div>
             <div className="text-center">
               <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-3">
                 {showLucidIcon("headphones-icon", "w-6 h-6")}
               </div>
-              <h3 className="font-semibold mb-2">24/7 Support</h3>
+              <h3 className="font-semibold mb-2">
+                {langI18n.twenty_4_support}
+              </h3>
               <p className="text-sm text-muted-foreground">
-                Always available to assist and address concerns
+                {langI18n.twenty_4_support_detail}
               </p>
             </div>
             <div className="text-center">
               <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-3">
                 {showLucidIcon("globe", "w-6 h-6")}
               </div>
-              <h3 className="font-semibold mb-2">Global Reach</h3>
+              <h3 className="font-semibold mb-2">{langI18n.global_reach}</h3>
               <p className="text-sm text-muted-foreground">
-                Working with clients worldwide across time zones
+                {langI18n.global_reach_detail}
               </p>
             </div>
           </div>
@@ -221,13 +223,14 @@ export default function ServicePage() {
 
       {/* CTA Section */}
       <div className="text-center mt-12 p-8 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg">
-        <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          {langI18n.ready_to_get_started}
+        </h2>
         <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-          Let's discuss your project and create something amazing together.
-          Contact me today for a free consultation.
+          {langI18n.ready_to_get_started_details}
         </p>
         <Button size="lg" className="text-lg px-8">
-          Contact Me Now
+          {langI18n.contact_me_now}
           {showLucidIcon("arrow-right", "w-5 h-5 ml-2")}
         </Button>
       </div>

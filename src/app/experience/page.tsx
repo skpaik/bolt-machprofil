@@ -46,8 +46,8 @@ export default function ExperiencePage() {
   return (
     <>
       <PageHeading
-        title={langI18n.experience || "Work Experience"}
-        subTitle="My professional journey and career milestones, showcasing growth and accomplishments."
+        title={langI18n.experience}
+        subTitle={langI18n.experience_sub_title}
       />
 
       {/* Summary Stats */}
@@ -55,7 +55,7 @@ export default function ExperiencePage() {
         <Card className="text-center p-6 bg-gradient-to-br from-primary/10 to-primary/5">
           {showLucidIcon("trending-up", "w-8 h-8 mx-auto mb-3 text-primary")}
           <div className="text-3xl font-bold mb-1">{totalYears}+</div>
-          <div className="text-sm text-muted-foreground">Years Experience</div>
+          <div className="text-sm text-muted-foreground">{langI18n.years_experience}</div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900">
@@ -64,7 +64,7 @@ export default function ExperiencePage() {
             "w-8 h-8 mx-auto mb-3 text-blue-600 dark:text-blue-400",
           )}
           <div className="text-3xl font-bold mb-1">{experiences.length}</div>
-          <div className="text-sm text-muted-foreground">Companies</div>
+          <div className="text-sm text-muted-foreground">{langI18n.companies}</div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900">
@@ -78,7 +78,7 @@ export default function ExperiencePage() {
               0,
             )}
           </div>
-          <div className="text-sm text-muted-foreground">Achievements</div>
+          <div className="text-sm text-muted-foreground">{langI18n.achievements}</div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900">
@@ -93,7 +93,7 @@ export default function ExperiencePage() {
             )}
             +
           </div>
-          <div className="text-sm text-muted-foreground">Projects</div>
+          <div className="text-sm text-muted-foreground">{langI18n.projects}</div>
         </Card>
       </div>
 
@@ -122,7 +122,7 @@ export default function ExperiencePage() {
                 {exp.current && (
                   <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 px-4 text-center flex items-center justify-center gap-1">
                     {showLucidIcon("sparkles", "w-3 h-3")}
-                    CURRENT POSITION
+                    {langI18n.current_position}
                   </div>
                 )}
 
@@ -203,7 +203,7 @@ export default function ExperiencePage() {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       {showLucidIcon("briefcase", "w-5 h-5 text-primary")}
-                      <h4 className="font-semibold">Key Responsibilities</h4>
+                      <h4 className="font-semibold">{langI18n.key_responsibilities}</h4>
                     </div>
                     <ul className="space-y-2 ml-7">
                       {exp.responsibilities.map((resp, idx) => (
@@ -226,7 +226,7 @@ export default function ExperiencePage() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         {showLucidIcon("award", "w-5 h-5 text-primary")}
-                        <h4 className="font-semibold">Key Achievements</h4>
+                        <h4 className="font-semibold">{langI18n.key_achievements}</h4>
                       </div>
                       <ul className="space-y-2 ml-7">
                         {exp.achievements.map((achievement, idx) => (
@@ -249,7 +249,7 @@ export default function ExperiencePage() {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       {showLucidIcon("target", "w-5 h-5 text-primary")}
-                      <h4 className="font-semibold">Technologies Used</h4>
+                      <h4 className="font-semibold">{langI18n.technologies_used}</h4>
                     </div>
                     <div className="flex flex-wrap gap-2 ml-7">
                       {exp.technologies.map((tech) => (
@@ -265,7 +265,7 @@ export default function ExperiencePage() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         {showLucidIcon("users", "w-5 h-5 text-primary")}
-                        <h4 className="font-semibold">Notable Projects</h4>
+                        <h4 className="font-semibold">{langI18n.notable_projects}</h4>
                       </div>
                       <div className="flex flex-wrap gap-2 ml-7">
                         {exp.projects.map((project) => (
@@ -286,10 +286,9 @@ export default function ExperiencePage() {
       {/* CTA Section */}
       <Card className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
         <CardContent className="p-8 text-center">
-          <h2 className="text-2xl font-bold mb-3">Want to Work Together?</h2>
+          <h2 className="text-2xl font-bold mb-3">{langI18n.cta_title}</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, interesting
-            projects, or potential collaborations.
+            {langI18n.cta_descriptions_experience}
           </p>
           <Button size="lg">
             Get in Touch

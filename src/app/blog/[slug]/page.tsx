@@ -11,7 +11,7 @@ import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function BlogDetailPage() {
-  const { appData, contentData } = usePortfolio();
+  const { appData,langI18n, contentData } = usePortfolio();
   const router = useRouter();
 
   const params = useParams();
@@ -25,14 +25,14 @@ export default function BlogDetailPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center py-20">
-          <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+          <h1 className="text-4xl font-bold mb-4">{langI18n.post_not_found}</h1>
           <p className="text-muted-foreground mb-8">
-            The blog post you're looking for doesn't exist.
+            {langI18n.post_not_found_detail}
           </p>
           <Button asChild>
             <Link href="/blog">
               {showLucidIcon("arrow-left", "w-4 h-4 mr-2")}
-              Back to Blog
+              {langI18n.back_to_blog}
             </Link>
           </Button>
         </div>
@@ -74,7 +74,7 @@ export default function BlogDetailPage() {
             className="mb-6"
           >
             {showLucidIcon("arrow-left", "w-4 h-4 mr-2")}
-            Back to Blog
+            {langI18n.back_to_blog}
           </Button>
 
           <div className="space-y-4">
@@ -96,7 +96,7 @@ export default function BlogDetailPage() {
               <span>•</span>
               <div className="flex items-center gap-2">
                 {showLucidIcon("clock", "w-4 h-4")}
-                <span>{post.readTime} min read</span>
+                <span>{post.readTime} {langI18n.min_read}</span>
               </div>
               <Button
                 variant="ghost"
@@ -166,7 +166,7 @@ export default function BlogDetailPage() {
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="mt-16">
-            <h2 className="text-2xl font-bold mb-6">Related Posts</h2>
+            <h2 className="text-2xl font-bold mb-6">{langI18n.related_posts}</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost: any) => (
                 <Link key={relatedPost.id} href={`/blog/${relatedPost.id}`}>
@@ -205,7 +205,7 @@ export default function BlogDetailPage() {
           <Button asChild>
             <Link href="/blog">
               {showLucidIcon("arrow-left", "w-4 h-4 mr-2")}
-              Back to All Posts
+              {langI18n.back_to_all_posts}
             </Link>
           </Button>
         </div>

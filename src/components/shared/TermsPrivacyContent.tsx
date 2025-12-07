@@ -12,7 +12,7 @@ export interface TermsPrivacyContentProps {
 export function TermsPrivacyContent({
   lastUpdatedTranslate,
   termsPrivacy: {
-    lastUpdated,
+    last_updated,
     sections,
     contactTitle,
     contactText,
@@ -25,7 +25,7 @@ export function TermsPrivacyContent({
       <div className="mb-8">
         <Badge variant="outline" className="text-sm">
           {showLucidIcon("clock", "w-4 h-4 mr-2")}
-          {lastUpdatedTranslate}: {lastUpdated}
+          {lastUpdatedTranslate}: {last_updated}
         </Badge>
       </div>
 

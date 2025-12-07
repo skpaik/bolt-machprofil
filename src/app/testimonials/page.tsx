@@ -55,11 +55,7 @@ export default function TestimonialsPage() {
   const verifiedCount = testimonials.filter((t) => t.verified).length;
 
   const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase();
+    return name      .split(" ")      .map((n) => n[0])      .join("")      .toUpperCase();
   };
 
   return (

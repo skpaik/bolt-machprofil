@@ -110,14 +110,7 @@ export default function HomePage() {
       id: `service-${idx}`,
       title: `${category}`,
       description: `Professional ${category.toLowerCase()} services tailored to your needs.`,
-      icon:
-        idx === 0
-          ? "code"
-          : idx === 1
-            ? "palette"
-            : idx === 2
-              ? "smartphone"
-              : "users",
+      icon:        idx === 0          ? "code"          : idx === 1            ? "palette"            : idx === 2              ? "smartphone"              : "users",
     }));
   }, [services, skills]);
 

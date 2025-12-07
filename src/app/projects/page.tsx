@@ -155,21 +155,21 @@ export default function ProjectsPage() {
   const filterConfigs: FilterConfig[] = [
     {
       name: "category",
-      label: "Category",
+      label: langI18n.category,
       value: selectedCategory,
       onChange: setSelectedCategory,
       options: [
-        { value: "all", label: "All Categories" },
+        { value: "all", label: langI18n.all_categories },
         ...categories.map((cat) => ({ value: cat, label: cat })),
       ],
     },
     {
       name: "technology",
-      label: "Technology",
+      label: langI18n.technology,
       value: selectedTechnology,
       onChange: setSelectedTechnology,
       options: [
-        { value: "all", label: "All Technology" },
+        { value: "all", label: langI18n.all_technology },
         ...technologies.map((technology) => ({
           value: technology,
           label: technology,
@@ -178,14 +178,14 @@ export default function ProjectsPage() {
     },
     {
       name: "status",
-      label: "Status",
+      label: langI18n.status,
       value: selectedStatus,
       onChange: setSelectedStatus,
       options: [
-        { value: "all", label: "All Status" },
-        { value: "Completed", label: "Completed" },
-        { value: "In Progress", label: "In Progress" },
-        { value: "Ongoing", label: "Ongoing" },
+        { value: "all", label: langI18n.status_all },
+        { value: "Completed", label: langI18n.completed },
+        { value: "In Progress", label: langI18n.in_progress },
+        { value: "Ongoing", label: langI18n.ongoing },
       ],
     },
   ];
@@ -194,12 +194,12 @@ export default function ProjectsPage() {
     value: sortBy,
     onChange: (value: string) => setSortBy(value as SortOption),
     options: [
-      { value: "date-desc", label: "Date (Newest)" },
-      { value: "date-asc", label: "Date (Oldest)" },
-      { value: "title-asc", label: "Title (A-Z)" },
-      { value: "title-desc", label: "Title (Z-A)" },
-      { value: "likes-desc", label: "Most Liked" },
-      { value: "views-desc", label: "Most Viewed" },
+      { value: "date-desc", label: langI18n.date_newest },
+      { value: "date-asc", label: langI18n.date_oldest },
+      { value: "title-asc", label: langI18n.title_a_z },
+      { value: "title-desc", label: langI18n.title_z_a },
+      { value: "likes-desc", label: langI18n.most_liked },
+      { value: "views-desc", label: langI18n.most_viewed },
     ],
   };
 
@@ -233,7 +233,7 @@ export default function ProjectsPage() {
       {project.featured && (
         <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 px-4 text-center flex items-center justify-center gap-1">
           {showLucidIcon("star", "w-3 h-3 fill-current")}
-          FEATURED
+          {langI18n.featured.toUpperCase()}
         </div>
       )}
 
@@ -299,7 +299,7 @@ export default function ProjectsPage() {
         <div className="mb-4">
           <div className="flex items-center gap-2 text-xs font-semibold mb-2 text-muted-foreground">
             {showLucidIcon("code", "w-3 h-3")}
-            <span>Technologies</span>
+            <span>{langI18n.technologies}</span>
           </div>
           <div className="flex flex-wrap gap-1.5">
             {project.technologies.slice(0, 4).map((tech) => (
@@ -349,7 +349,7 @@ export default function ProjectsPage() {
         )}
         {!project.liveUrl && !project.githubUrl && (
           <Button variant="ghost" size="sm" className="flex-1" asChild>
-            <Link href={`/projects/${project.slug}`}>View Details</Link>
+            <Link href={`/projects/${project.slug}`}>{langI18n.view_details}</Link>
           </Button>
         )}
       </CardFooter>
@@ -359,19 +359,19 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHeading
-        title={langI18n.projects || "Projects"}
-        subTitle="A showcase of my work, from web applications to mobile apps and everything in between."
+        title={langI18n.projects}
+        subTitle={langI18n.projects_sub_title}
       />
 
       {/* Filter Bar */}
       <FilterBar
         searchValue={searchQuery}
         onSearchChange={setSearchQuery}
-        searchPlaceholder="Search projects by title, technology, category, or tags..."
+        searchPlaceholder={langI18n.projects_search_placeholder}
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalProjects}
-        resultsLabel={totalProjects === 1 ? "project" : "projects"}
+        resultsLabel={totalProjects === 1 ? langI18n.project : langI18n.projects}
         onClearAll={handleClearAll}
       />
 
@@ -383,7 +383,7 @@ export default function ProjectsPage() {
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
                 {showLucidIcon("award", "w-5 h-5 text-primary")}
-                <h2 className="text-2xl font-bold">Featured Projects</h2>
+                <h2 className="text-2xl font-bold">{langI18n.featured} {langI18n.project}</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {featuredProjects.map((project) => (
@@ -397,7 +397,7 @@ export default function ProjectsPage() {
           {regularProjects.length > 0 && (
             <div>
               {featuredProjects.length > 0 && (
-                <h2 className="text-2xl font-bold mb-6">All Projects</h2>
+                <h2 className="text-2xl font-bold mb-6">{langI18n.project_all}</h2>
               )}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {regularProjects.map((project) => (
@@ -409,8 +409,8 @@ export default function ProjectsPage() {
         </>
       ) : (
         <ListEmptyDisplay
-          title={"No projects found"}
-          message={"Try adjusting your search terms or filters."}
+          title={langI18n.project_not_found}
+          message={langI18n.project_not_found_detail}
           handleClearAll={handleClearAll}
         />
       )}

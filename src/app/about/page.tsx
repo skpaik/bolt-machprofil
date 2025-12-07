@@ -147,7 +147,7 @@ export default function AboutPage() {
           <CardContent className="p-6 sm:p-8">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               {showLucidIcon("heart", "w-6 h-6 text-primary")}
-              Interests & Hobbies
+              {langI18n.interests_hobbies}
             </h2>
             <div className="flex flex-wrap gap-3">
               {interests.map((interest) => {
