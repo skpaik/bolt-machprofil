@@ -198,7 +198,11 @@ export default function SkillPage() {
                   </div>
                   <Badge
                     variant={
-                      skill.level === "Expert"                        ? "default"                        : skill.level === "Advanced"                          ? "secondary"                          : "outline"
+                      skill.level === "Expert"
+                        ? "default"
+                        : skill.level === "Advanced"
+                          ? "secondary"
+                          : "outline"
                     }
                   >
                     {skill.level}
@@ -208,7 +212,9 @@ export default function SkillPage() {
                 {/* Proficiency Bar */}
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">{langI18n.proficiency}</span>
+                    <span className="text-muted-foreground">
+                      {langI18n.proficiency}
+                    </span>
                     <span className="font-semibold">{skill.proficiency}%</span>
                   </div>
                   <Progress value={skill.proficiency} className="h-2" />
@@ -221,7 +227,9 @@ export default function SkillPage() {
                     {showLucidIcon("award", "w-4 h-4")}
                     <span>
                       {skill.yearsOfExperience}{" "}
-                      {skill.yearsOfExperience === 1                        ? langI18n.year                        : langI18n.years}{" "}
+                      {skill.yearsOfExperience === 1
+                        ? langI18n.year
+                        : langI18n.years}{" "}
                       {langI18n.of_experience}
                     </span>
                   </div>

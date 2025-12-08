@@ -583,4 +583,26 @@ export interface LanguageI18n {
   interests_hobbies: string;
   technologies: string;
   proficiency: string;
+  professional: string;
+  services_tailored: string;
+  available_for_work: string;
+  view_projects: string;
+  satisfaction_rate: string;
+  what_i_do: string;
+  what_i_do_detail: string;
+  featured_projects: string;
+  some_of_my_recent_work: string;
+  view_all: string;
+  client_testimonials: string;
+  client_testimonials_detail: string;
+  cta_something_amazing: string;
+  cta_something_amazing_detail: string;
+  view_my_work: string;
+  professional_cv_portfolio: string;
+  print: string;
+  download_pdf: string;
+  professional_summary: string;
+  work_experience: string;
+  skills_technologies: string;
+  up_to_date_information: string;
 }

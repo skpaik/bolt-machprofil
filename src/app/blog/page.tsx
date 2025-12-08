@@ -237,10 +237,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <PageHeading
-        title={langI18n.blog}
-        subTitle={langI18n.blog_sub_title}
-      />
+      <PageHeading title={langI18n.blog} subTitle={langI18n.blog_sub_title} />
 
       {/* Filter Bar */}
       <FilterBar
@@ -250,7 +247,11 @@ export default function BlogPage() {
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalPosts}
-        resultsLabel={totalPosts === 1 ? langI18n.post.toLowerCase() : langI18n.posts.toLowerCase()}
+        resultsLabel={
+          totalPosts === 1
+            ? langI18n.post.toLowerCase()
+            : langI18n.posts.toLowerCase()
+        }
         onClearAll={handleClearAll}
       />
 

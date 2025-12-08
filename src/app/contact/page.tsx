@@ -14,12 +14,12 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export default function ContactPage() {
   const { appData, langI18n } = usePortfolio();
   const { toast } = useToast();
-  const emptyForm={
+  const emptyForm = {
     name: "",
     email: "",
     subject: "",
     message: "",
-  }
+  };
   const [formData, setFormData] = useState(emptyForm);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,20 +41,24 @@ export default function ContactPage() {
     <>
       <PageHeading
         title={langI18n.contact}
-        subTitle={ langI18n.contact_sub_title }
+        subTitle={langI18n.contact_sub_title}
       />
 
       <div className="grid lg:grid-cols-2 gap-12">
         <div className="space-y-8">
           <Card className="p-6">
-            <h2 className="text-2xl font-semibold mb-6">{langI18n.contact_info}</h2>
+            <h2 className="text-2xl font-semibold mb-6">
+              {langI18n.contact_info}
+            </h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="p-2 bg-primary/10 rounded-lg mt-1">
                   {showLucidIcon("mail", "text-primary", 20)}
                 </div>
                 <div>
-                  <p className="font-medium text-foreground mb-1">{langI18n.email}</p>
+                  <p className="font-medium text-foreground mb-1">
+                    {langI18n.email}
+                  </p>
                   <a
                     href={`mailto:${appData.email}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -69,7 +73,9 @@ export default function ContactPage() {
                   {showLucidIcon("phone", "text-primary", 20)}
                 </div>
                 <div>
-                  <p className="font-medium text-foreground mb-1">{langI18n.phone}</p>
+                  <p className="font-medium text-foreground mb-1">
+                    {langI18n.phone}
+                  </p>
                   <a
                     href={`tel:${appData.phone}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -84,7 +90,9 @@ export default function ContactPage() {
                   {showLucidIcon("map-pin", "text-primary", 20)}
                 </div>
                 <div>
-                  <p className="font-medium text-foreground mb-1">{langI18n.location}</p>
+                  <p className="font-medium text-foreground mb-1">
+                    {langI18n.location}
+                  </p>
                   <p className="text-muted-foreground">{appData.location}</p>
                 </div>
               </div>
@@ -92,7 +100,9 @@ export default function ContactPage() {
           </Card>
 
           <Card className="p-6">
-            <h2 className="text-2xl font-semibold mb-6">{langI18n.connect_with_me}</h2>
+            <h2 className="text-2xl font-semibold mb-6">
+              {langI18n.connect_with_me}
+            </h2>
             <div className="flex flex-wrap gap-3">
               {Object.entries(appData.social).map(([platform, url]) => (
                 <Button
@@ -112,7 +122,9 @@ export default function ContactPage() {
 
           <Card className="p-6 bg-primary/5">
             <h3 className="font-semibold mb-2">{langI18n.quick_response}</h3>
-            <p className="text-sm text-muted-foreground">{langI18n.quick_response_detail}</p>
+            <p className="text-sm text-muted-foreground">
+              {langI18n.quick_response_detail}
+            </p>
           </Card>
         </div>
 

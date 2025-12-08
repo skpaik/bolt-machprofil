@@ -11,7 +11,7 @@ import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function BlogDetailPage() {
-  const { appData,langI18n, contentData } = usePortfolio();
+  const { appData, langI18n, contentData } = usePortfolio();
   const router = useRouter();
 
   const params = useParams();
@@ -96,7 +96,9 @@ export default function BlogDetailPage() {
               <span>•</span>
               <div className="flex items-center gap-2">
                 {showLucidIcon("clock", "w-4 h-4")}
-                <span>{post.readTime} {langI18n.min_read}</span>
+                <span>
+                  {post.readTime} {langI18n.min_read}
+                </span>
               </div>
               <Button
                 variant="ghost"
@@ -166,7 +168,9 @@ export default function BlogDetailPage() {
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="mt-16">
-            <h2 className="text-2xl font-bold mb-6">{langI18n.related_posts}</h2>
+            <h2 className="text-2xl font-bold mb-6">
+              {langI18n.related_posts}
+            </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost: any) => (
                 <Link key={relatedPost.id} href={`/blog/${relatedPost.id}`}>

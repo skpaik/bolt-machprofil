@@ -63,19 +63,19 @@ export default function ResumePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold">Resume</h1>
+              <h1 className="text-2xl font-bold">{langI18n.resume}</h1>
               <p className="text-sm text-muted-foreground">
-                Professional CV & Portfolio
+                {langI18n.professional_cv_portfolio}
               </p>
             </div>
             <div className="flex gap-2">
               <Button variant="outline" onClick={handlePrint}>
                 {showLucidIcon("printer", "w-4 h-4 mr-2")}
-                Print
+                {langI18n.print}
               </Button>
               <Button onClick={handleDownload}>
                 {showLucidIcon("download", "w-4 h-4 mr-2")}
-                Download PDF
+                {langI18n.download_pdf}
               </Button>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function ResumePage() {
             <div>
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                 {showLucidIcon("file-text", "w-5 h-5 text-primary")}
-                Professional Summary
+                {langI18n.professional_summary}
               </h3>
               <p className="text-muted-foreground leading-relaxed">{summary}</p>
             </div>
@@ -187,7 +187,7 @@ export default function ResumePage() {
               <div className="print:break-inside-avoid">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                   {showLucidIcon("brief-case", "w-5 h-5 text-primary")}
-                  Work Experience
+                  {langI18n.work_experience}
                 </h3>
                 <div className="space-y-6">
                   {experiences.map((exp: any) => (
@@ -257,7 +257,7 @@ export default function ResumePage() {
               <div className="print:break-inside-avoid">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                   {showLucidIcon("graduation-cap", "w-5 h-5 text-primary")}
-                  Education
+                  {langI18n.education}
                 </h3>
                 <div className="space-y-4">
                   {education.map((edu: any) => (
@@ -278,7 +278,9 @@ export default function ResumePage() {
                             {formatDateShort(edu.endDate)}
                           </div>
                           {edu.gpa && (
-                            <div className="font-semibold">GPA: {edu.gpa}</div>
+                            <div className="font-semibold">
+                              {langI18n.gpa}: {edu.gpa}
+                            </div>
                           )}
                         </div>
                       </div>
@@ -297,7 +299,7 @@ export default function ResumePage() {
               <div className="print:break-inside-avoid">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                   {showLucidIcon("code", "w-5 h-5 text-primary")}
-                  Skills & Technologies
+                  {langI18n.skills_technologies}
                 </h3>
                 <div className="space-y-4">
                   {Object.entries(groupedSkills).map(
@@ -367,7 +369,8 @@ export default function ResumePage() {
                         <div>{formatDateShort(cert.issueDate)}</div>
                         {cert.expiryDate && cert.expiryDate !== "No Expiry" && (
                           <div className="text-xs">
-                            Expires: {formatDateShort(cert.expiryDate)}
+                            {langI18n.expires}:{" "}
+                            {formatDateShort(cert.expiryDate)}
                           </div>
                         )}
                       </div>
@@ -382,16 +385,14 @@ export default function ResumePage() {
         {/* Footer Note - Hidden in Print */}
         <div className="print:hidden text-center text-sm text-muted-foreground mt-8 mb-4">
           <p>
-            Last updated:{" "}
+            {langI18n.last_updated}:{" "}
             {new Date().toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
               day: "numeric",
             })}
           </p>
-          <p className="mt-2">
-            For the most up-to-date information, visit my website
-          </p>
+          <p className="mt-2">{langI18n.up_to_date_information}</p>
         </div>
       </div>
 

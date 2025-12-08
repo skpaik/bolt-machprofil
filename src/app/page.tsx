@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function HomePage() {
-  const { appData, langI18n, contentData } = usePortfolio();
+  const { langI18n, contentData } = usePortfolio();
   // Aggregate data from existing sources
   const aboutContent = contentData.about_content;
   const profile = aboutContent.hero || {
@@ -109,8 +109,15 @@ export default function HomePage() {
     return skillCategories.map((category: string, idx: number) => ({
       id: `service-${idx}`,
       title: `${category}`,
-      description: `Professional ${category.toLowerCase()} services tailored to your needs.`,
-      icon:        idx === 0          ? "code"          : idx === 1            ? "palette"            : idx === 2              ? "smartphone"              : "users",
+      description: `${langI18n.professional} ${category.toLowerCase()} ${langI18n.services_tailored}`,
+      icon:
+        idx === 0
+          ? "code"
+          : idx === 1
+            ? "palette"
+            : idx === 2
+              ? "smartphone"
+              : "users",
     }));
   }, [services, skills]);
 
@@ -129,7 +136,7 @@ export default function HomePage() {
               {profile.available && (
                 <Badge className="bg-green-500 hover:bg-green-600 text-white">
                   <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
-                  Available for Work
+                  {langI18n.available_for_work}
                 </Badge>
               )}
 
@@ -174,7 +181,7 @@ export default function HomePage() {
                 <Button size="lg" className="text-lg px-8" asChild>
                   <Link href="/contact">
                     {showLucidIcon("mail", "w-5 h-5 mr-2")}
-                    Get in Touch
+                    {langI18n.get_in_touch}
                   </Link>
                 </Button>
                 <Button
@@ -185,7 +192,7 @@ export default function HomePage() {
                 >
                   <Link href="/projects">
                     {showLucidIcon("eye", "w-5 h-5 mr-2")}
-                    View Projects
+                    {langI18n.view_projects}
                   </Link>
                 </Button>
                 {profile.resumeUrl && (
@@ -197,7 +204,7 @@ export default function HomePage() {
                   >
                     <Link href="/resume">
                       {showLucidIcon("download", "w-5 h-5 mr-2")}
-                      Resume
+                      {langI18n.resume}
                     </Link>
                   </Button>
                 )}
@@ -248,7 +255,7 @@ export default function HomePage() {
                 {stats.experience}
               </div>
               <div className="text-sm text-muted-foreground">
-                Years Experience
+                {langI18n.years_experience}
               </div>
             </div>
             <div className="text-center">
@@ -256,21 +263,23 @@ export default function HomePage() {
                 {stats.projects}
               </div>
               <div className="text-sm text-muted-foreground">
-                Projects Completed
+                {langI18n.projects_completed}
               </div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">
                 {stats.clients}
               </div>
-              <div className="text-sm text-muted-foreground">Happy Clients</div>
+              <div className="text-sm text-muted-foreground">
+                {langI18n.happy_clients}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">
                 {stats.satisfaction}
               </div>
               <div className="text-sm text-muted-foreground">
-                Satisfaction Rate
+                {langI18n.satisfaction_rate}
               </div>
             </div>
           </div>
@@ -282,9 +291,9 @@ export default function HomePage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">What I Do</h2>
+              <h2 className="text-4xl font-bold mb-4">{langI18n.what_i_do}</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Specialized services to help bring your digital vision to life
+                {langI18n.what_i_do_detail}
               </p>
             </div>
 
@@ -320,15 +329,17 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-12">
               <div>
-                <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+                <h2 className="text-4xl font-bold mb-4">
+                  {langI18n.featured_projects}
+                </h2>
                 <p className="text-lg text-muted-foreground">
-                  Some of my recent work
+                  {langI18n.some_of_my_recent_work}
                 </p>
               </div>
               {projects.length > 3 && (
                 <Button variant="outline" asChild>
                   <Link href="/projects">
-                    View All
+                    {langI18n.view_all}
                     {showLucidIcon("arrow-right", "w-4 h-4 ml-2")}
                   </Link>
                 </Button>
@@ -381,9 +392,11 @@ export default function HomePage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Client Testimonials</h2>
+              <h2 className="text-4xl font-bold mb-4">
+                {langI18n.client_testimonials}
+              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                What people say about working with me
+                {langI18n.client_testimonials_detail}
               </p>
             </div>
 
@@ -427,11 +440,10 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">
-            Let's Build Something Amazing Together
+            {langI18n.cta_something_amazing}
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Have a project in mind? Let's discuss how I can help bring your
-            ideas to life.
+            {langI18n.cta_something_amazing_detail}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8" asChild>
@@ -446,7 +458,7 @@ export default function HomePage() {
               className="text-lg px-8"
               asChild
             >
-              <Link href="/projects">View My Work</Link>
+              <Link href="/projects">{langI18n.view_my_work}</Link>
             </Button>
           </div>
         </div>

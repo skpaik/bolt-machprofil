@@ -349,7 +349,9 @@ export default function ProjectsPage() {
         )}
         {!project.liveUrl && !project.githubUrl && (
           <Button variant="ghost" size="sm" className="flex-1" asChild>
-            <Link href={`/projects/${project.slug}`}>{langI18n.view_details}</Link>
+            <Link href={`/projects/${project.slug}`}>
+              {langI18n.view_details}
+            </Link>
           </Button>
         )}
       </CardFooter>
@@ -371,7 +373,9 @@ export default function ProjectsPage() {
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalProjects}
-        resultsLabel={totalProjects === 1 ? langI18n.project : langI18n.projects}
+        resultsLabel={
+          totalProjects === 1 ? langI18n.project : langI18n.projects
+        }
         onClearAll={handleClearAll}
       />
 
@@ -383,7 +387,9 @@ export default function ProjectsPage() {
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
                 {showLucidIcon("award", "w-5 h-5 text-primary")}
-                <h2 className="text-2xl font-bold">{langI18n.featured} {langI18n.project}</h2>
+                <h2 className="text-2xl font-bold">
+                  {langI18n.featured} {langI18n.project}
+                </h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {featuredProjects.map((project) => (
@@ -397,7 +403,9 @@ export default function ProjectsPage() {
           {regularProjects.length > 0 && (
             <div>
               {featuredProjects.length > 0 && (
-                <h2 className="text-2xl font-bold mb-6">{langI18n.project_all}</h2>
+                <h2 className="text-2xl font-bold mb-6">
+                  {langI18n.project_all}
+                </h2>
               )}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {regularProjects.map((project) => (

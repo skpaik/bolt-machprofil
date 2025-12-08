@@ -354,7 +354,11 @@ export default function PublicationsPage() {
           {showLucidIcon("building2", "w-6 h-6 mx-auto mb-2 text-primary")}
           <div className="text-2xl font-bold">
             {
-              new Set(publications.map((p: Publication) => p.publisher).filter(Boolean),).size
+              new Set(
+                publications
+                  .map((p: Publication) => p.publisher)
+                  .filter(Boolean),
+              ).size
             }
           </div>
           <div className="text-xs text-muted-foreground">

@@ -140,7 +140,8 @@ export default function ServicePage() {
                 </ul>
                 {service.features.length > 4 && (
                   <p className="text-xs text-muted-foreground ml-6">
-                    +{service.features.length - 4} {langI18n.more_features.toLowerCase()}
+                    +{service.features.length - 4}{" "}
+                    {langI18n.more_features.toLowerCase()}
                   </p>
                 )}
               </div>

@@ -213,9 +213,9 @@ export default function PhotoPage() {
       { value: "date-desc", label: langI18n.date_newest },
       { value: "date-asc", label: langI18n.date_oldest },
       { value: "title-asc", label: langI18n.title_a_z },
-      { value: "title-desc", label: langI18n. title_z_a },
+      { value: "title-desc", label: langI18n.title_z_a },
       { value: "album-asc", label: langI18n.album_a_z },
-      { value: "views-desc", label:langI18n.most_viewed},
+      { value: "views-desc", label: langI18n.most_viewed },
     ],
   };
 
@@ -411,7 +411,9 @@ export default function PhotoPage() {
                     <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="flex items-center gap-2 text-sm">
                         {showLucidIcon("image-icon", "w-4 h-4")}
-                        <span>{albumPhotos.length} {langI18n.photos.toLowerCase()}</span>
+                        <span>
+                          {albumPhotos.length} {langI18n.photos.toLowerCase()}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -421,7 +423,9 @@ export default function PhotoPage() {
                     </h3>
                     <p className="text-sm text-muted-foreground">
                       {albumPhotos.length}{" "}
-                      {albumPhotos.length === 1 ? langI18n.photo.toLowerCase() : langI18n.photos.toLowerCase()}
+                      {albumPhotos.length === 1
+                        ? langI18n.photo.toLowerCase()
+                        : langI18n.photos.toLowerCase()}
                     </p>
                   </CardContent>
                 </Card>
@@ -439,7 +443,11 @@ export default function PhotoPage() {
             filters={filterConfigs}
             sortConfig={sortConfig}
             resultsCount={totalPhotos}
-            resultsLabel={totalPhotos === 1 ? langI18n.photo.toLowerCase() : langI18n.photos.toLowerCase()}
+            resultsLabel={
+              totalPhotos === 1
+                ? langI18n.photo.toLowerCase()
+                : langI18n.photos.toLowerCase()
+            }
             onClearAll={handleClearAll}
           />
 
@@ -477,7 +485,9 @@ export default function PhotoPage() {
                 "mx-auto mb-4 opacity-50 text-muted-foreground",
                 48,
               )}
-              <h3 className="text-xl font-semibold mb-2">{langI18n.photo_not_found}</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                {langI18n.photo_not_found}
+              </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-4">
                 {langI18n.photo_not_found_detail}
               </p>

@@ -55,7 +55,9 @@ export default function ExperiencePage() {
         <Card className="text-center p-6 bg-gradient-to-br from-primary/10 to-primary/5">
           {showLucidIcon("trending-up", "w-8 h-8 mx-auto mb-3 text-primary")}
           <div className="text-3xl font-bold mb-1">{totalYears}+</div>
-          <div className="text-sm text-muted-foreground">{langI18n.years_experience}</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.years_experience}
+          </div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900">
@@ -64,7 +66,9 @@ export default function ExperiencePage() {
             "w-8 h-8 mx-auto mb-3 text-blue-600 dark:text-blue-400",
           )}
           <div className="text-3xl font-bold mb-1">{experiences.length}</div>
-          <div className="text-sm text-muted-foreground">{langI18n.companies}</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.companies}
+          </div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900">
@@ -78,7 +82,9 @@ export default function ExperiencePage() {
               0,
             )}
           </div>
-          <div className="text-sm text-muted-foreground">{langI18n.achievements}</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.achievements}
+          </div>
         </Card>
 
         <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900">
@@ -93,7 +99,9 @@ export default function ExperiencePage() {
             )}
             +
           </div>
-          <div className="text-sm text-muted-foreground">{langI18n.projects}</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.projects}
+          </div>
         </Card>
       </div>
 
@@ -203,7 +211,9 @@ export default function ExperiencePage() {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       {showLucidIcon("briefcase", "w-5 h-5 text-primary")}
-                      <h4 className="font-semibold">{langI18n.key_responsibilities}</h4>
+                      <h4 className="font-semibold">
+                        {langI18n.key_responsibilities}
+                      </h4>
                     </div>
                     <ul className="space-y-2 ml-7">
                       {exp.responsibilities.map((resp, idx) => (
@@ -226,7 +236,9 @@ export default function ExperiencePage() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         {showLucidIcon("award", "w-5 h-5 text-primary")}
-                        <h4 className="font-semibold">{langI18n.key_achievements}</h4>
+                        <h4 className="font-semibold">
+                          {langI18n.key_achievements}
+                        </h4>
                       </div>
                       <ul className="space-y-2 ml-7">
                         {exp.achievements.map((achievement, idx) => (
@@ -249,7 +261,9 @@ export default function ExperiencePage() {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       {showLucidIcon("target", "w-5 h-5 text-primary")}
-                      <h4 className="font-semibold">{langI18n.technologies_used}</h4>
+                      <h4 className="font-semibold">
+                        {langI18n.technologies_used}
+                      </h4>
                     </div>
                     <div className="flex flex-wrap gap-2 ml-7">
                       {exp.technologies.map((tech) => (
@@ -265,7 +279,9 @@ export default function ExperiencePage() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         {showLucidIcon("users", "w-5 h-5 text-primary")}
-                        <h4 className="font-semibold">{langI18n.notable_projects}</h4>
+                        <h4 className="font-semibold">
+                          {langI18n.notable_projects}
+                        </h4>
                       </div>
                       <div className="flex flex-wrap gap-2 ml-7">
                         {exp.projects.map((project) => (

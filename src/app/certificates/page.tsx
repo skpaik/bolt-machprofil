@@ -300,7 +300,11 @@ export default function CertificatesPage() {
         filters={filterConfigs}
         sortConfig={sortConfig}
         resultsCount={totalCertificates}
-        resultsLabel={totalCertificates === 1 ? langI18n.certificate.toLowerCase() : langI18n.certificates.toLowerCase()}
+        resultsLabel={
+          totalCertificates === 1
+            ? langI18n.certificate.toLowerCase()
+            : langI18n.certificates.toLowerCase()
+        }
         onClearAll={handleClearAll}
       />
 
@@ -312,7 +316,9 @@ export default function CertificatesPage() {
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
                 {showLucidIcon("trophy", "w-5 h-5 text-primary")}
-                <h2 className="text-2xl font-bold">{langI18n.featured_certifications}</h2>
+                <h2 className="text-2xl font-bold">
+                  {langI18n.featured_certifications}
+                </h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {featuredCertificates.map((cert) => (
@@ -326,7 +332,9 @@ export default function CertificatesPage() {
           {regularCertificates.length > 0 && (
             <div>
               {featuredCertificates.length > 0 && (
-                <h2 className="text-2xl font-bold mb-6">{langI18n.certifications_all}</h2>
+                <h2 className="text-2xl font-bold mb-6">
+                  {langI18n.certifications_all}
+                </h2>
               )}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {regularCertificates.map((cert) => (

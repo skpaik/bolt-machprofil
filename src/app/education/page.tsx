@@ -86,13 +86,17 @@ export default function EducationPage() {
                     {edu.gpa && (
                       <div className="flex items-center gap-2">
                         {showLucidIcon("star", "w-4 h-4")}
-                        <span>{langI18n.gpa}: {edu.gpa}</span>
+                        <span>
+                          {langI18n.gpa}: {edu.gpa}
+                        </span>
                       </div>
                     )}
                     {edu.grade && (
                       <div className="flex items-center gap-2">
                         {showLucidIcon("trophy", "w-4 h-4")}
-                        <span>{langI18n.grade}: {edu.grade}</span>
+                        <span>
+                          {langI18n.grade}: {edu.grade}
+                        </span>
                       </div>
                     )}
                   </div>
@@ -111,7 +115,9 @@ export default function EducationPage() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         {showLucidIcon("award", "w-5 h-5 text-primary")}
-                        <h4 className="font-semibold">{langI18n.achievements}</h4>
+                        <h4 className="font-semibold">
+                          {langI18n.achievements}
+                        </h4>
                       </div>
                       <ul className="space-y-2 ml-7">
                         {edu.achievements.map((achievement, idx) => (
@@ -132,7 +138,9 @@ export default function EducationPage() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         {showLucidIcon("book-open", "w-5 h-5 text-primary")}
-                        <h4 className="font-semibold">{langI18n.relevant_coursework}</h4>
+                        <h4 className="font-semibold">
+                          {langI18n.relevant_coursework}
+                        </h4>
                       </div>
                       <div className="flex flex-wrap gap-2 ml-7">
                         {edu.coursework.map((course, idx) => (
@@ -183,19 +191,25 @@ export default function EducationPage() {
           <div className="text-3xl font-bold text-primary mb-2">
             {education.filter((e) => e.type === "Degree").length}
           </div>
-          <div className="text-sm text-muted-foreground">{langI18n.degrees}</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.degrees}
+          </div>
         </Card>
         <Card className="text-center p-6">
           <div className="text-3xl font-bold text-primary mb-2">
             {education.filter((e) => e.type === "Certificate").length}
           </div>
-          <div className="text-sm text-muted-foreground">{langI18n.certificates}</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.certificates}
+          </div>
         </Card>
         <Card className="text-center p-6">
           <div className="text-3xl font-bold text-primary mb-2">
             {education.filter((e) => e.type === "Bootcamp").length}
           </div>
-          <div className="text-sm text-muted-foreground">{langI18n.bootcamps}</div>
+          <div className="text-sm text-muted-foreground">
+            {langI18n.bootcamps}
+          </div>
         </Card>
         <Card className="text-center p-6">
           <div className="text-3xl font-bold text-primary mb-2">
