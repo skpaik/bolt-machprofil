@@ -27,9 +27,7 @@ export default function ResumePage() {
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
   };
 
-  const summary =
-    aboutContent.intro ||
-    "Passionate full-stack developer with 8+ years of experience building scalable web applications. Expert in React, Node.js, and cloud technologies. Strong focus on clean code, user experience, and continuous learning.";
+  const summary = aboutContent.intro;
 
   const experiences = contentData.experience_list;
   const education = contentData.education_list;
