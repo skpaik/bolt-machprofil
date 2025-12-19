@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # or '20' if you prefer
+          node-version: '24'  # or '20' if you prefer
           cache: 'npm'
 
       - name: Install dependencies
