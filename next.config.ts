@@ -5,7 +5,7 @@ const repoName = process.env.REPO_NAME || "";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: "standalone",
+  output: "export",
   distDir: "out",
   basePath: isProd && repoName ? `/${repoName}` : "",
   assetPrefix: isProd && repoName ? `/${repoName}/` : "",
