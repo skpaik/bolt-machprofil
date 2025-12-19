@@ -1,5 +1,16 @@
 export const blogPosts = [
-    { slug: 'post-1' },
-    { slug: 'post-2' },
-    // Add all your blog post slugs here
+  { slug: "1" },
+  { slug: "2" },
+  { slug: "3" },
+  { slug: "4" },
+  { slug: "5" },
+  { slug: "6" },
+  { slug: "7" },
+  { slug: "8" },
+  { slug: "9" },
+  { slug: "10" },
+  { slug: "11" },
+  { slug: "12" },
+  { slug: "13" },
+  { slug: "14" },
 ];
