@@ -9,10 +9,14 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogDetailPage({
+export default async function BlogDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: number|string };
 }) {
-  return <BlogDetailClient slug={params.slug} />;
+  const { slug } = await params;
+
+  console.log(slug);
+
+  return <BlogDetailClient slug={slug.toString()} />;
 }
