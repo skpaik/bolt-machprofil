@@ -160,3 +160,11 @@ export interface ResumeSchema {
   icon?: string;
   order?: number;
 }
+
+export interface TestimonialSchema {
+  title: string;
+  type: string;
+  description?: string;
+  icon?: string;
+  order?: number;
+}

@@ -9,6 +9,8 @@ import {
   PhotoSchema,
   ProjectSchema,
   PublicationSchema,
+  SkillCategorySchema,
+  TestimonialSchema,
 } from "@/lib/types/contract";
 
 // Schema Interfaces for each content type
@@ -26,6 +28,8 @@ type SchemaMap = {
   info: Record<string, any>; // Info section is flexible
   project_list: ProjectSchema;
   publication_list: PublicationSchema;
+  skill_list: SkillCategorySchema;
+  testimonial_list: TestimonialSchema;
 };
 
 interface ContentItem extends Record<string, any> {
@@ -76,6 +80,8 @@ const FILENAME_PATTERNS: Record<string, RegExp> = {
   info: /^[a-z-]+\.md$/,
   project_list: /^\d+\.md$/,
   publication_list: /^\d+\.md$/,
+  skill_list: /^\d+\.md$/,
+  testimonial_list: /^\d+\.md$/,
 };
 
 const validationErrors: ValidationError[] = [];
@@ -173,6 +179,28 @@ const TYPE_METADATA: Record<
     featured: { type: "boolean", required: false },
   },
   publication_list: {
+    title: { type: "string", required: true },
+    authors: { type: "array", required: true },
+    publisher: { type: "string", required: true },
+    date: { type: "date", required: false },
+    link: { type: "string", required: false },
+    doi: { type: "string", required: false },
+    summary: { type: "string", required: false },
+    keywords: { type: "array", required: false },
+    media: { type: "array", required: false },
+  },
+  skill_list: {
+    title: { type: "string", required: true },
+    authors: { type: "array", required: true },
+    publisher: { type: "string", required: true },
+    date: { type: "date", required: false },
+    link: { type: "string", required: false },
+    doi: { type: "string", required: false },
+    summary: { type: "string", required: false },
+    keywords: { type: "array", required: false },
+    media: { type: "array", required: false },
+  },
+  testimonial_list: {
     title: { type: "string", required: true },
     authors: { type: "array", required: true },
     publisher: { type: "string", required: true },
