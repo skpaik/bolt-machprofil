@@ -1,4 +1,4 @@
-import {generateBlogSlug} from "@/lib/scripts/generate-blog-slug";
+import {generateBlogPostsSlug} from "@/lib/scripts/generate-blog-slug";
 
 const fs = require("fs");
 const path = require("path");
@@ -68,7 +68,7 @@ async function main() {
     // generateSitemap();
     // optimizeImages();
 
-    generateBlogSlug();
+    generateBlogPostsSlug();
 
     console.log("✨ Content preparation completed successfully!");
   } catch (error) {

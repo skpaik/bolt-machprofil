@@ -18,6 +18,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    name: Build and Deploy App
     runs-on: ubuntu-latest
 
     steps:

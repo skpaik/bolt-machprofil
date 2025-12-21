@@ -9,14 +9,20 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {BlogPost} from "@/lib/types/portfolio";
 
-export default function BlogDetailClient({ slug }: { slug: string }) {
-  const { langI18n, contentData } = usePortfolio();
+type PageProps = {
+  lang: string;
+  id: string;
+};
+
+export default function BlogDetailClient({ lang, id }: PageProps) {
+  const { langI18n, contentData, languageType } = usePortfolio();
   const router = useRouter();
 
   // Use real data if available
   const posts = contentData?.blog_list;
-  const post = posts?.find((p) => p.id.toString() === slug);
+  const post = posts?.find((p) => p.id.toString() === id);
 
   if (!post) {
     return (
@@ -54,11 +60,14 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
       alert("Link copied to clipboard!");
     }
   };
-
+  const createBlogDetailUrl = (post: BlogPost) => {
+    return `/blog/${languageType}/${post.id}`
+    // return `/blog/${post.id}`
+  };
   // Get related posts (same category, excluding current post)
   const relatedPosts =
     posts
-      ?.filter((p: any) => p.id !== slug && p.category === post.category)
+      ?.filter((p: any) => p.id !== id && p.category === post.category)
       .slice(0, 3) || [];
 
   return (
@@ -171,7 +180,7 @@ export default function BlogDetailClient({ slug }: { slug: string }) {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost: any) => (
-                <Link key={relatedPost.id} href={`/blog/${relatedPost.id}`}>
+                  <Link key={relatedPost.id} href={createBlogDetailUrl(post)}>
                   <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full group">
                     <div className="aspect-video overflow-hidden">
                       <img

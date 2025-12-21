@@ -23,7 +23,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { PageHeading } from "@/components/shared/PageHeading";
 
 export default function BlogPage() {
-  const { appData, appConfig, contentData, langI18n } = usePortfolio();
+  const { appData, appConfig, contentData, langI18n,languageType } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;
@@ -197,6 +197,11 @@ export default function BlogPage() {
     router.push("/blog", { scroll: false });
   };
 
+  const createBlogDetailUrl = (post: BlogPost) => {
+   return `/blog/${languageType}/${post.id}`
+   // return `/blog/${post.id}`
+  };
+
   // Configure filters
   const filterConfigs: FilterConfig[] = [
     {
@@ -263,7 +268,7 @@ export default function BlogPage() {
               key={post.id}
               className="overflow-hidden group hover:shadow-lg transition-shadow"
             >
-              <Link href={`/blog/${post.id}`}>
+              <Link key={`${languageType}-${post.id}`} href={createBlogDetailUrl(post)}>
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={post.coverImage}
@@ -280,7 +285,7 @@ export default function BlogPage() {
                   {showLucidIcon("clock", "w-4 h-4")}
                   <span>{post.readTime} min read</span>
                 </div>
-                <Link href={`/blog/${post.id}`}>
+                <Link key={`${languageType}-${post.id}`} href={createBlogDetailUrl(post)}>
                   <h2 className="text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </h2>
@@ -308,7 +313,7 @@ export default function BlogPage() {
               </CardContent>
               <CardFooter>
                 <Button variant="ghost" size="sm" className="w-full" asChild>
-                  <Link href={`/blog/${post.id}`}>
+                  <Link key={`${languageType}-${post.id}`} href={createBlogDetailUrl(post)}>
                     Read More
                     {showLucidIcon("arrow-right", "w-4 h-4 ml-1")}
                   </Link>
