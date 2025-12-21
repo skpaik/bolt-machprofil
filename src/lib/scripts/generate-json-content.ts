@@ -18,14 +18,14 @@ import {
 
 // Section to Schema mapping
 type SchemaMap = {
-  blogs: BlogSchema;
-  certificates: CertificationSchema;
-  educations: EducationSchema;
-  experiences: ExperienceSchema;
-  photos: PhotoSchema;
+  blog_list: BlogSchema;
+  certificate_list: CertificationSchema;
+  education_list: EducationSchema;
+  experience_list: ExperienceSchema;
+  photo_list: PhotoSchema;
   info: Record<string, any>; // Info section is flexible
-  projects: ProjectSchema;
-  publications: PublicationSchema;
+  project_list: ProjectSchema;
+  publication_list: PublicationSchema;
 };
 
 interface ContentItem extends Record<string, any> {
@@ -68,14 +68,14 @@ const NAMED_SECTIONS = ["info"];
 
 // Allowed filename patterns for each section
 const FILENAME_PATTERNS: Record<string, RegExp> = {
-  blogs: /^\d+\.md$/,
-  certificates: /^\d+\.md$/,
-  educations: /^\d+\.md$/,
-  experiences: /^\d+\.md$/,
-  gallerys: /^\d+\.md$/,
+  blog_list: /^\d+\.md$/,
+  certificate_list: /^\d+\.md$/,
+  education_list: /^\d+\.md$/,
+  experience_list: /^\d+\.md$/,
+  photo_list: /^\d+\.md$/,
   info: /^[a-z-]+\.md$/,
-  projects: /^\d+\.md$/,
-  publications: /^\d+\.md$/,
+  project_list: /^\d+\.md$/,
+  publication_list: /^\d+\.md$/,
 };
 
 const validationErrors: ValidationError[] = [];
@@ -102,7 +102,7 @@ const TYPE_METADATA: Record<
   keyof SchemaMap,
   Record<string, { type: string; required: boolean }>
 > = {
-  blogs: {
+  blog_list: {
     title: { type: "string", required: true },
     date: { type: "date", required: true },
     author: { type: "string", required: true },
@@ -113,7 +113,7 @@ const TYPE_METADATA: Record<
     readTime: { type: "number", required: false },
     category: { type: "string", required: false },
   },
-  certificates: {
+  certificate_list: {
     name: { type: "string", required: true },
     organization: { type: "string", required: true },
     issueDate: { type: "date", required: true },
@@ -124,7 +124,7 @@ const TYPE_METADATA: Record<
     media: { type: "array", required: true },
     description: { type: "string", required: false },
   },
-  educations: {
+  education_list: {
     title: { type: "string", required: true },
     institution: { type: "string", required: true },
     location: { type: "string", required: true },
@@ -138,7 +138,7 @@ const TYPE_METADATA: Record<
     featured: { type: "boolean", required: false },
     body: { type: "string", required: false },
   },
-  experiences: {
+  experience_list: {
     title: { type: "string", required: true },
     organization: { type: "string", required: true },
     location: { type: "string", required: true },
@@ -151,7 +151,7 @@ const TYPE_METADATA: Record<
     technologies: { type: "array", required: false },
     current: { type: "boolean", required: false },
   },
-  photos: {
+  photo_list: {
     title: { type: "string", required: true },
     image: { type: "string", required: true },
     category: { type: "string", required: true },
@@ -161,7 +161,7 @@ const TYPE_METADATA: Record<
     featured: { type: "boolean", required: false },
   },
   info: {},
-  projects: {
+  project_list: {
     title: { type: "string", required: true },
     description: { type: "string", required: true },
     technologies: { type: "array", required: true },
@@ -172,7 +172,7 @@ const TYPE_METADATA: Record<
     status: { type: "string", required: false },
     featured: { type: "boolean", required: false },
   },
-  publications: {
+  publication_list: {
     title: { type: "string", required: true },
     authors: { type: "array", required: true },
     publisher: { type: "string", required: true },
