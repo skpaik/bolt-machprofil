@@ -11,7 +11,7 @@ type BlogPost = {
 };
 
 const DATA_DIR = path.join(process.cwd(), "src/data");
-const OUTPUT_FILE = path.join(DATA_DIR, "blog-posts-slugs.ts");
+const OUTPUT_FILE = path.join(DATA_DIR, "configs/blog-posts-slugs.ts");
 
 /**
  * Reads all src/data/<lang>/blog_list.json
