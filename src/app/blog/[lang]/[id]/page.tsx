@@ -1,5 +1,5 @@
 
-import { blogPosts } from "@/data/blog-posts";
+import { blogPostsSlugs } from "@/data/blog-posts-slugs";
 import BlogDetailClient from "./BlogDetailClient";
 
 export const dynamicParams = false;
@@ -12,7 +12,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-    return blogPosts.map(({ lang, id }) => ({
+    return blogPostsSlugs.map(({ lang, id }) => ({
         lang,
         id,
     }));

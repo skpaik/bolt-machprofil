@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import {blogPosts} from "@/data/blog-posts";
+import {blogPostsSlugs} from "@/data/blog-posts-slugs";
 
 type PageProps = {
     params: {
@@ -8,7 +8,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-    const langs = Array.from(new Set(blogPosts.map((p) => p.lang)));
+    const langs = Array.from(new Set(blogPostsSlugs.map((p) => p.lang)));
     return langs.map((lang) => ({ lang }));
 }
 
