@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePortfolio } from "@/components/context/PortfolioContext";
-import TemplateSwitcher from "@/components/TemplateSwitcher";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import ProfileSwitcher from "@/components/ProfileSwitcher";
+import TemplateSwitcher from "@/components/switcher/TemplateSwitcher";
+import LanguageSwitcher from "@/components/switcher/LanguageSwitcher";
+import ProfileSwitcher from "@/components/switcher/ProfileSwitcher";
 
 export default function Header() {
   const { appData } = usePortfolio();
