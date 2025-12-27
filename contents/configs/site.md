@@ -1,8 +1,9 @@
+---
 siteTitle: "Sudipta Paik Portfolio"
 tagline: "Engineer. Creator. Problem Solver."
 author: "Sudipta Kumar Paik"
 baseUrl: "https://skpaik.github.io"
-language: "en"
 theme: "light"
 favicon: "/favicon.ico"
 socialPreview: "/images/social-card.png"
+---

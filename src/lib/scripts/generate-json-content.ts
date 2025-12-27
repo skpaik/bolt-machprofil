@@ -30,6 +30,7 @@ type SchemaMap = {
   publication_list: PublicationSchema;
   skill_list: SkillCategorySchema;
   testimonial_list: TestimonialSchema;
+  static_contents: TestimonialSchema;
 };
 
 interface ContentItem extends Record<string, any> {
@@ -82,6 +83,7 @@ const FILENAME_PATTERNS: Record<string, RegExp> = {
   publication_list: /^\d+\.md$/,
   skill_list: /^\d+\.md$/,
   testimonial_list: /^\d+\.md$/,
+  static_contents: /^\d+\.md$/,
 };
 
 const validationErrors: ValidationError[] = [];
@@ -210,6 +212,10 @@ const TYPE_METADATA: Record<
     summary: { type: "string", required: false },
     keywords: { type: "array", required: false },
     media: { type: "array", required: false },
+  },
+  static_contents: {
+    terms: { type: "string", required: true },
+    privacy: { type: "string", required: true }
   },
 };
 

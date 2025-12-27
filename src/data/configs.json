@@ -1,0 +1,41 @@
+{
+  "languages": {
+    "defaultLanguage": "en",
+    "allowedLanguages": [
+      "en",
+      "de",
+      "fr",
+      "jp",
+      "es"
+    ],
+    "content": "\nNA\n"
+  },
+  "profile": {
+    "name": "Mofiz Rahman",
+    "title": "Full-stack Developer",
+    "email": "john@example.com",
+    "location": "Berlin, Germany",
+    "languages": "English, German",
+    "website": "https://johndoe.dev",
+    "content": "No Profile\n"
+  },
+  "settings": {
+    "siteName": "GoribProfile",
+    "defaultTemplate": "modern",
+    "siteDescription": "A markdown-powered portfolio and blog",
+    "content": "\nNA\n"
+  },
+  "site": {
+    "siteTitle": "Sudipta Paik Portfolio",
+    "tagline": "Engineer. Creator. Problem Solver.",
+    "author": "Sudipta Kumar Paik",
+    "baseUrl": "https://skpaik.github.io",
+    "theme": "light",
+    "favicon": "/favicon.ico",
+    "socialPreview": "/images/social-card.png",
+    "content": ""
+  },
+  "theme": {
+    "content": "layout: \"classic\" # classic, modern, creative\ncolorScheme: \"blue\"\nfontFamily: \"Inter\"\ndarkMode: true\nshowHeaderImage: true\n"
+  }
+}
