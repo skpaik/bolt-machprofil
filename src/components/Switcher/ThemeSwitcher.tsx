@@ -24,7 +24,7 @@ export default function ThemeSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
           {showLucidIcon(currentTheme.icon, "", 16)}
-          <span className="hidden sm:inline">{langI18n.theme}</span>
+          <span className="hidden sm:inline">{currentTheme.label}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

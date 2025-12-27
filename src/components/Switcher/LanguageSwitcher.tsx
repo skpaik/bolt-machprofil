@@ -14,13 +14,15 @@ import { ConfigData } from "@/data/config-data";
 
 export default function LanguageSwitcher() {
   const { langI18n, languageType, setLanguageType } = usePortfolio();
-
+  const current = ConfigData.languages.find(
+      (t) => t.value === languageType,
+  );
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
           {showLucidIcon("globe", "", 16)}
-          <span className="hidden sm:inline">{langI18n.language}</span>
+          <span className="hidden sm:inline">{current?.label}</span>
         </Button>
       </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
