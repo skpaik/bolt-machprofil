@@ -23,17 +23,21 @@ export default function ProfileSwitcher() {
           <span className="hidden sm:inline">{langI18n.profile}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {ConfigData.profiles.map((prof) => (
-          <DropdownMenuItem
-            key={prof.code}
-            onClick={() => setProfileType(prof.code)}
-            className={profileType === prof.code ? "bg-accent" : ""}
-          >
-            {prof.name}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
+        <DropdownMenuContent align="end">
+            {ConfigData.profiles.map((t) => (
+                <DropdownMenuItem
+                    key={t.value}
+                    onClick={() => setProfileType(t.value)}
+                    className="flex flex-col items-start gap-1 cursor-pointer"
+                >
+                    <div className="flex items-center gap-2">
+                        <span className="font-medium">{t.label}</span>
+                        {profileType === t.value && <span className="text-xs">✓</span>}
+                    </div>
+                    {t.description && <span className="text-xs text-muted-foreground">{t.description}</span>}
+                </DropdownMenuItem>
+            ))}
+        </DropdownMenuContent>
     </DropdownMenu>
   );
 }

@@ -2,9 +2,21 @@ import { LanguageItem, ProfileItem, TemplateItem } from "@/lib/types/portfolio";
 
 export class ConfigData {
   static themes = [
-    { value: "light", label: "Light", icon: "sun" },
-    { value: "dark", label: "Dark", icon: "moon" },
-    { value: "system", label: "System", icon: "monitor" },
+    {
+      value: "light",
+      label: "Light",
+      icon: "sun"
+    },
+    {
+      value: "dark",
+      label: "Dark",
+      icon: "moon"
+    },
+    {
+      value: "system",
+      label: "System",
+      icon: "monitor"
+    }
   ];
 
   static templates: TemplateItem[] = [
@@ -26,16 +38,47 @@ export class ConfigData {
   ];
 
   static profiles: ProfileItem[] = [
-    { code: "developer", name: "Developer" },
-    { code: "photographer", name: "Photographer" },
-    { code: "teacher", name: "Teacher" },
-    { code: "student", name: "Student" },
+    {
+      value: "developer",
+      label: "Developer" ,
+      description: "Clean & simple"
+    },
+    {
+      value: "photographer",
+      label: "Photographer",
+      description: "Clean & simple"
+    },
+    {
+      value: "teacher",
+      label: "Teacher"
+    },
+    {
+      value: "student",
+      label: "Student",
+      description: "Clean & simple"
+    },
   ];
 
   static languages: LanguageItem[] = [
-    { code: "en", name: "English" },
-    { code: "de", name: "German" },
-    { code: "es", name: "Español" },
-    { code: "fr", name: "Français" },
+    {
+      value: "en",
+      label: "English",
+      description: "Clean & simple"
+    },
+    {
+      value: "de",
+      label: "German",
+      description: "Clean & simple"
+    },
+    {
+      value: "es",
+      label: "Español",
+      description: "Clean & simple"
+    },
+    {
+      value: "fr",
+      label: "Français",
+      description: "Clean & simple"
+    },
   ];
 }

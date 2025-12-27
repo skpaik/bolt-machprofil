@@ -130,20 +130,21 @@ export interface Education {
     | "Self-Study";
 }
 
-export interface TemplateItem {
-  value: TemplateType;
+export interface WebUIItem {
   label: string;
-  description: string;
+  description?: string;
 }
 
-export interface ProfileItem {
-  code: ProfileType;
-  name: string;
+export interface TemplateItem extends WebUIItem {
+  value: TemplateType;
 }
 
-export interface LanguageItem {
-  code: LanguageType;
-  name: string;
+export interface ProfileItem  extends WebUIItem{
+  value: ProfileType;
+}
+
+export interface LanguageItem  extends WebUIItem{
+  value: LanguageType;
 }
 
 export interface PrimaryMenuItem {

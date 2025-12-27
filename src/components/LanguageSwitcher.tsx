@@ -23,17 +23,21 @@ export default function LanguageSwitcher() {
           <span className="hidden sm:inline">{langI18n.language}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {ConfigData.languages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            onClick={() => setLanguageType(lang.code)}
-            className={languageType === lang.code ? "bg-accent" : ""}
-          >
-            {lang.name}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
+        <DropdownMenuContent align="end">
+            {ConfigData.languages.map((t) => (
+                <DropdownMenuItem
+                    key={t.value}
+                    onClick={() => setLanguageType(t.value)}
+                    className="flex flex-col items-start gap-1 cursor-pointer"
+                >
+                    <div className="flex items-center gap-2">
+                        <span className="font-medium">{t.label}</span>
+                        {languageType === t.value && <span className="text-xs">✓</span>}
+                    </div>
+                    {t.description && <span className="text-xs text-muted-foreground">{t.description}</span>}
+                </DropdownMenuItem>
+            ))}
+        </DropdownMenuContent>
     </DropdownMenu>
   );
 }
