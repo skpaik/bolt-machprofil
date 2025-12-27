@@ -17,7 +17,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 type ViewMode = "gallery" | "albums";
 
 export default function PhotoPage() {
-  const { appData, appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, contentData } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
 

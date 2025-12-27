@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function AboutPage() {
-  const { appData, langI18n, contentData } = usePortfolio();
+  const { langI18n, contentData } = usePortfolio();
 
   const {
     hero,

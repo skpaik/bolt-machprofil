@@ -245,15 +245,23 @@ export interface StaticContentData {
 }
 
 export interface AppData {
-  name: string;
-  title: string;
-  email: string;
-  phone: string;
-  location: string;
   bio: string;
   avatar: string;
   //configData: ConfigData;
   social: SocialLinks;
+
+  // new Fields
+
+  name: string;
+  title: string;
+  tagline: string;
+  image: string;
+  location: string;
+  email: string;
+  phone: string;
+  website: string;
+  resumeUrl: string;
+  available: boolean;
 }
 
 export interface SettingSchema {

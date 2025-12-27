@@ -14,7 +14,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 
 export default function SkillPage() {
-  const { appData, appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, contentData } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");

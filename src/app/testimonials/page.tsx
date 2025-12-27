@@ -27,7 +27,7 @@ const StarRating = ({ rating }: { rating: number }) => {
 };
 
 export default function TestimonialsPage() {
-  const { appData, langI18n, contentData } = usePortfolio();
+  const { langI18n, contentData } = usePortfolio();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   // Use real data if available, otherwise use sample data

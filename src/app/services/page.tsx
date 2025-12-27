@@ -16,7 +16,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 // Sample services data - covers various professional services
 
 export default function ServicePage() {
-  const { appData, contentData, langI18n } = usePortfolio();
+  const { contentData, langI18n } = usePortfolio();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   // Use real data if available, otherwise use sample data

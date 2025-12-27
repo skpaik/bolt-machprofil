@@ -23,7 +23,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { PageHeading } from "@/components/shared/PageHeading";
 
 export default function BlogPage() {
-  const { appData, appConfig, contentData, langI18n,languageType } = usePortfolio();
+  const { appConfig, contentData, langI18n, profileType, languageType } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;
@@ -53,7 +53,7 @@ export default function BlogPage() {
       const page = parseInt(pageParam);
       if (!isNaN(page) && page > 0) setCurrentPage(page);
     }
-  }, []);
+  }, [searchParams]);
 
   // Filter and search posts
   const filteredPosts = useMemo(() => {
