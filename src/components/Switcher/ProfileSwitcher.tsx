@@ -15,12 +15,16 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export default function ProfileSwitcher() {
   const { langI18n, profileType, setProfileType } = usePortfolio();
 
+  const current = ConfigData.profiles.find(
+      (t) => t.value === profileType,
+  );
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="gap-2">
           {showLucidIcon("globe", "", 16)}
-          <span className="hidden sm:inline">{langI18n.profile}</span>
+          <span className="hidden sm:inline">{current?.label}</span>
         </Button>
       </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
