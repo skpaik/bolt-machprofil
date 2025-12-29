@@ -13,7 +13,7 @@ import { ConfigData } from "@/data/config-data";
 import { ThemeType } from "@/lib/types/type.config";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
-export default function ThemeSwitcher() {
+export function ThemeSwitcher() {
   const { theme, setTheme, langI18n } = usePortfolio();
 
   const currentTheme =

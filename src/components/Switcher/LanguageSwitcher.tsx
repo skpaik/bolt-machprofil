@@ -12,7 +12,7 @@ import {
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ConfigData } from "@/data/config-data";
 
-export default function LanguageSwitcher() {
+export function LanguageSwitcher() {
   const { langI18n, languageType, setLanguageType } = usePortfolio();
   const current = ConfigData.languages.find(
       (t) => t.value === languageType,

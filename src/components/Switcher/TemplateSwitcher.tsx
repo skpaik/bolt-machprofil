@@ -12,7 +12,7 @@ import {
 import { ConfigData } from "@/data/config-data";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
-export default function TemplateSwitcher() {
+export function TemplateSwitcher() {
   const { template, setTemplate } = usePortfolio();
 
   const currentTemplate = ConfigData.templates.find(

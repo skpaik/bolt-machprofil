@@ -12,7 +12,7 @@ import {
 import { ConfigData } from "@/data/config-data";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
-export default function ProfileSwitcher() {
+export function ProfileSwitcher() {
   const { langI18n, profileType, setProfileType } = usePortfolio();
 
   const current = ConfigData.profiles.find(
