@@ -2,10 +2,10 @@
 
 import React from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
-import { TemplateSwitcher } from "@/components/switcher/TemplateSwitcher";
-import { LanguageSwitcher } from "@/components/switcher/LanguageSwitcher";
-import { ProfileSwitcher } from "@/components/switcher/ProfileSwitcher";
-import { ThemeSwitcher } from "@/components/switcher/ThemeSwitcher";
+import { TemplateSwitcher } from "@/components/switcher/template-switcher";
+import { LanguageSwitcher } from "@/components/switcher/language-switcher";
+import { ProfileSwitcher } from "@/components/switcher/profile-switcher";
+import { ThemeSwitcher } from "@/components/switcher/theme-switcher";
 
 export default function Footer() {
   const { appData, langI18n, theme, setTheme } = usePortfolio();
