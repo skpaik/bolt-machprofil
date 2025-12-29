@@ -823,37 +823,36 @@
       {
         "slug": "1",
         "order": 1,
-        "skills": [
-          {
-            "id": 1,
-            "title": "JavaScript",
-            "category": "Technical",
-            "proficiency": 95,
-            "level": "Expert",
-            "yearsOfExperience": 8,
-            "tags": [
-              "Programming",
-              "Frontend",
-              "Backend"
-            ],
-            "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
-          },
-          {
-            "id": 2,
-            "title": "React",
-            "category": "Technical",
-            "proficiency": 90,
-            "level": "Expert",
-            "yearsOfExperience": 6,
-            "tags": [
-              "Frontend",
-              "Framework",
-              "UI"
-            ],
-            "description": "Building scalable web applications with React, hooks, and state management."
-          }
-        ],
-        "content": "This file contains a list of technical skills with detailed metadata for each."
+        "name": "Sarah Johnson",
+        "role": "CEO & Founder",
+        "company": "TechStart Inc.",
+        "location": "Cottbus-Ströbitz, Brandenburg, Germany",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+        "rating": 5,
+        "testimonial": "Absolutely exceptional work! The web application exceeded all our expectations. The attention to detail, clean code, and professional communication throughout the project made this a seamless experience. I highly recommend their services to anyone looking for top-tier development work.",
+        "date": "2024-10-15",
+        "project": "E-commerce Platform",
+        "category": "Web Development",
+        "featured": true,
+        "verified": true,
+        "content": "NA"
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "name": "Michael Chen",
+        "role": "Product Manager",
+        "company": "Digital Solutions Ltd",
+        "location": "New York, NY",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
+        "rating": 5,
+        "testimonial": "Working with this developer was a game-changer for our project. They brought creative solutions to complex problems and delivered a mobile app that our users absolutely love. The performance is outstanding and the UI is intuitive. Highly professional!",
+        "date": "2024-09-22",
+        "project": "Mobile Fitness App",
+        "category": "Mobile Development",
+        "featured": true,
+        "verified": true,
+        "content": "NA"
       }
     ]
   },
