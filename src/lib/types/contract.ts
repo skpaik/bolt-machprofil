@@ -1,8 +1,3 @@
-export interface SkillCategorySchema {
-  category: string;
-  items: string[];
-}
-
 export interface CertificationSchema {
   name: string;
   organization: string;

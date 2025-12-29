@@ -5,11 +5,11 @@ import {
   ReferenceSchema,
   LanguageProficiencySchema,
   PublicationSchema,
-  SkillCategorySchema,
   SocialLinkSchema,
   ContactSchema,
   BioSchema,
 } from "@/lib/types/contract";
+import {Skills} from "@/lib/types/portfolio";
 
 // =======================
 // CONFIGURATION
@@ -258,27 +258,34 @@ ${body}
 }
 
 function generateSkills(lang: string): string {
-  const categories: SkillCategorySchema[] = [
-    { category: "Programming", items: ["Python", "TypeScript", "Java", "C++"] },
-    { category: "Tools & Cloud", items: ["AWS", "Docker", "Kubernetes"] },
+  const categories: Skills[] = [
     {
-      category: "Soft Skills",
-      items: ["Leadership", "Communication", "Mentoring"],
+      id: 1,
+      title: "JavaScript",
+      category: "Technical",
+      proficiency: 95,
+      level: "Expert",
+      yearsOfExperience: 8,
+      tags: ["Programming", "Frontend", "Backend"],
+      description: "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
     },
     {
-      category: "Design & Creative",
-      items: ["Photoshop", "Figma", "Adobe Illustrator"],
-    },
-    { category: "Languages", items: ["English", "German", "French"] },
+      id: 2,
+      title: "React",
+      category: "Technical",
+      proficiency: 90,
+      level: "Expert",
+      yearsOfExperience: 6,
+      tags: ["Frontend", "Framework", "UI"],
+      description: "Building scalable web applications with React, hooks, and state management."
+    }
   ];
 
   // Convert categories to properly indented YAML under skills
   const yamlSkillList = categories
     .map(
       (cat) =>
-        `  - category: "${cat.category}"\n    items:\n${cat.items
-          .map((item) => `      - "${item}"`)
-          .join("\n")}`,
+        `category: "${cat.category}"\nproficiency:\n${cat.proficiency}`
     )
     .join("\n");
 

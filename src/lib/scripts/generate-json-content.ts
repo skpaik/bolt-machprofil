@@ -9,9 +9,9 @@ import {
   PhotoSchema,
   ProjectSchema,
   PublicationSchema,
-  SkillCategorySchema,
   TestimonialSchema,
 } from "@/lib/types/contract";
+import {Skills} from "@/lib/types/portfolio";
 
 // Schema Interfaces for each content type
 // =======================
@@ -28,7 +28,7 @@ type SchemaMap = {
   info: Record<string, any>; // Info section is flexible
   project_list: ProjectSchema;
   publication_list: PublicationSchema;
-  skill_list: SkillCategorySchema;
+  skill_list: Skills;
   testimonial_list: TestimonialSchema;
   static_contents: TestimonialSchema;
 };
@@ -83,7 +83,7 @@ const FILENAME_PATTERNS: Record<string, RegExp> = {
   publication_list: /^\d+\.md$/,
   skill_list: /^\d+\.md$/,
   testimonial_list: /^\d+\.md$/,
-  static_contents: /^\d+\.md$/,
+  static_contents: /^[a-z-]+\.md$/,
 };
 
 const validationErrors: ValidationError[] = [];
@@ -120,6 +120,7 @@ const TYPE_METADATA: Record<
     featured: { type: "boolean", required: false },
     readTime: { type: "number", required: false },
     category: { type: "string", required: false },
+    content: { type: "string", required: false },
   },
   certificate_list: {
     name: { type: "string", required: true },
@@ -193,29 +194,32 @@ const TYPE_METADATA: Record<
   },
   skill_list: {
     title: { type: "string", required: true },
-    authors: { type: "array", required: true },
-    publisher: { type: "string", required: true },
-    date: { type: "date", required: false },
-    link: { type: "string", required: false },
-    doi: { type: "string", required: false },
-    summary: { type: "string", required: false },
-    keywords: { type: "array", required: false },
-    media: { type: "array", required: false },
+    category: { type: "string", required: true },
+    proficiency: { type: "number", required: true },
+    level: { type: "string", required: false },
+    yearsOfExperience: { type: "number", required: false },
+    tags: { type: "array", required: false },
+    description: { type: "string", required: false },
   },
   testimonial_list: {
-    title: { type: "string", required: true },
-    authors: { type: "array", required: true },
-    publisher: { type: "string", required: true },
+    name: { type: "string", required: true },
+    role: { type: "string", required: true },
+    company: { type: "string", required: true },
+    location: { type: "string", required: true },
+    avatar: { type: "string", required: true },
+    rating: { type: "number", required: true },
+    testimonial: { type: "string", required: true },
     date: { type: "date", required: false },
-    link: { type: "string", required: false },
-    doi: { type: "string", required: false },
-    summary: { type: "string", required: false },
-    keywords: { type: "array", required: false },
-    media: { type: "array", required: false },
+    project: { type: "string", required: false },
+    category: { type: "string", required: false },
+    featured: { type: "boolean", required: false },
+    verified: { type: "boolean", required: false },
   },
   static_contents: {
-    terms: { type: "string", required: true },
-    privacy: { type: "string", required: true }
+    title: { type: "string", required: true },
+    subtitle: { type: "string", required: true },
+    last_updated: { type: "string", required: true },
+    content: { type: "string", required: false },
   },
 };
 
@@ -489,8 +493,7 @@ function printValidationResults(): ValidationResult {
     warnings: validationWarnings,
   };
 }
-
-function generateContent(): void {
+export function generateContent(): void {
   console.log("🚀 Starting content generation...");
 
   const languages = getLanguages();
@@ -545,10 +548,10 @@ function generateContent(): void {
   }
 }
 
-// Run the generator
-try {
-  generateContent();
-} catch (error) {
-  console.error("❌ Error generating content:", error);
-  process.exit(1);
-}
+// // Run the generator
+// try {
+//   generateContent();
+// } catch (error) {
+//   console.error("❌ Error generating content:", error);
+//   process.exit(1);
+// }
