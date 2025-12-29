@@ -265,10 +265,11 @@ export interface AppData {
 }
 
 export interface SettingSchema {
-  portfolioProfile: string;
-  portfolioTemplate: string;
-  portfolioLanguage: string;
-  portfolioTheme: string;
+  activeProfile: string;
+  activeTemplate: string;
+  activeLanguage: string;
+  activeTheme: string;
+  allowedProfile: string[];
 }
 
 export interface Publication extends BaseContent {

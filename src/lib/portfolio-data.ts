@@ -14,8 +14,8 @@
 //     const setting = settingData as SettingSchema;
 //
 //     // Use defaults from settings if not specified
-//     const profile = profileType || (setting.portfolioProfile as ProfileType);
-//     const language = languageType || (setting.portfolioLanguage as LanguageType);
+//     const profile = profileType || (setting.activeProfile as ProfileType);
+//     const language = languageType || (setting.activeLanguage as LanguageType);
 //
 //     const appData = portfolioData.profiles[profile] as AppData;
 //     const langI18n = languageData[language] as LanguageI18n;

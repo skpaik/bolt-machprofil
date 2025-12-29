@@ -7,7 +7,6 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import portfolioData from "@/data/portfolio.json";
 import staticContentsData from "@/data/static_contents.json";
 import blogContentsData from "@/data/blog_contents.json";
 import projectContentsData from "@/data/project_contents.json";
@@ -78,29 +77,29 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   // ✅ Lazy initialization — runs once on first render in browser
   const [profileType, setProfileType] = useState<ProfileType>(() =>
     getInitialValue(
-      "portfolioProfile",
-      setting.portfolioProfile as ProfileType,
-      Object.keys(portfolioData.profiles) as ProfileType[],
+      "activeProfile",
+      setting.activeProfile as ProfileType,
+      Object.keys(setting.allowedProfile) as ProfileType[],
     ),
   );
 
   const [template, setTemplate] = useState<TemplateType>(() =>
     getInitialValue(
-      "portfolioTemplate",
-      setting.portfolioTemplate as TemplateType,
+      "activeTemplate",
+      setting.activeTemplate as TemplateType,
     ),
   );
 
   const [languageType, setLanguageType] = useState<LanguageType>(() =>
     getInitialValue(
-      "portfolioLanguage",
-      setting.portfolioLanguage as LanguageType,
+      "activeLanguage",
+      setting.activeLanguage as LanguageType,
       Object.keys(languageData) as LanguageType[],
     ),
   );
 
   const [theme, setTheme] = useState<ThemeType>(() =>
-    getInitialValue("portfolioTheme", setting.portfolioTheme as ThemeType),
+    getInitialValue("activeTheme", setting.activeTheme as ThemeType),
   );
 
   // Keep theme synced to DOM
@@ -110,19 +109,19 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
 
   // Persist on change
   useEffect(() => {
-    localStorage.setItem("portfolioProfile", profileType);
+    localStorage.setItem("activeProfile", profileType);
   }, [profileType]);
 
   useEffect(() => {
-    localStorage.setItem("portfolioTemplate", template);
+    localStorage.setItem("activeTemplate", template);
   }, [template]);
 
   useEffect(() => {
-    localStorage.setItem("portfolioLanguage", languageType);
+    localStorage.setItem("activeLanguage", languageType);
   }, [languageType]);
 
   useEffect(() => {
-    localStorage.setItem("portfolioTheme", theme);
+    localStorage.setItem("activeTheme", theme);
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 

@@ -1,6 +1,12 @@
 {
-  "portfolioProfile": "developer",
-  "portfolioTemplate": "classic",
-  "portfolioLanguage": "es",
-  "portfolioTheme": "dark"
+  "activeProfile": "developer",
+  "activeTemplate": "classic",
+  "activeLanguage": "es",
+  "activeTheme": "dark",
+  "allowedProfile": [
+    "developer",
+    "photographer",
+    "teacher",
+    "student"
+  ]
 }
