@@ -3,10 +3,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePortfolio } from "@/components/context/PortfolioContext";
-import { TemplateSwitcher } from "@/components/switcher/template-switcher";
-import { LanguageSwitcher } from "@/components/switcher/language-switcher";
-import { ProfileSwitcher } from "@/components/switcher/profile-switcher";
-import { ThemeSwitcher } from "@/components/switcher/theme-switcher";
+// import { TemplateSwitcher } from "@/components/switcher/template-switcher";
+// import { LanguageSwitcher } from "@/components/switcher/language-switcher";
+// import { ProfileSwitcher } from "@/components/switcher/profile-switcher";
+// import { ThemeSwitcher } from "@/components/switcher/theme-switcher";
 
 export default function Header() {
   const { appData } = usePortfolio();
@@ -49,10 +49,10 @@ export default function Header() {
             </span>
           </Link>
 
-          <LanguageSwitcher />
-          <TemplateSwitcher />
-          <ProfileSwitcher />
-          <ThemeSwitcher />
+          {/*<LanguageSwitcher />*/}
+          {/*<TemplateSwitcher />*/}
+          {/*<ProfileSwitcher />*/}
+          {/*<ThemeSwitcher />*/}
         </div>
       </div>
     </header>
