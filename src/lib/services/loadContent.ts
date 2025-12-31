@@ -1,5 +1,6 @@
 import { ContentData, contentFileMap } from "@/lib/types/content.types";
 import { LanguageType } from "@/lib/types/type.config";
+// import {registry} from "@/data/registry";
 
 export async function loadContentFile<T>(
   lang: string,
@@ -21,3 +22,18 @@ export async function loadAllContent(lang: LanguageType): Promise<ContentData> {
 
   return Object.fromEntries(entries) as ContentData;
 }
+// export function loadContent<T>(
+//     profile: string,
+//     lang: string,
+//     pageType: string,
+// ): T[] {
+//     console.log("profile> ", profile);
+//     console.log("lang> ", lang);
+//     console.log("pageType> ", pageType);
+//     //alert("lang> "+ lang);
+//     // @ts-ignore
+//     const loader = registry?.[profile]?.[lang]?.[pageType];
+//     console.log("loader> ", JSON.stringify(loader));
+//     if (!loader) return [];
+//     return loader().default as T[];
+// }
