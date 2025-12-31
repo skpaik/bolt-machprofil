@@ -2,10 +2,10 @@
 
 import React from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
-// import { TemplateSwitcher } from "@/components/switcher/template-switcher";
-// import { LanguageSwitcher } from "@/components/switcher/language-switcher";
-// import { ProfileSwitcher } from "@/components/switcher/profile-switcher";
-// import { ThemeSwitcher } from "@/components/switcher/theme-switcher";
+import { TemplateSwitcher } from "@/components/switcher/template-switcher";
+import { LanguageSwitcher } from "@/components/switcher/language-switcher";
+import { ProfileSwitcher } from "@/components/switcher/profile-switcher";
+import { ThemeSwitcher } from "@/components/switcher/theme-switcher";
 
 export default function Footer() {
   const { appData, langI18n, theme, setTheme } = usePortfolio();
@@ -21,10 +21,10 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            {/*<LanguageSwitcher />*/}
-            {/*<TemplateSwitcher />*/}
-            {/*<ProfileSwitcher />*/}
-            {/*<ThemeSwitcher />*/}
+            <LanguageSwitcher />
+            <TemplateSwitcher />
+            <ProfileSwitcher />
+            <ThemeSwitcher />
           </div>
         </div>
       </div>

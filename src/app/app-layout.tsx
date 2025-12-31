@@ -3,11 +3,11 @@
 import { Suspense } from "react";
 import { usePathname } from "next/navigation";
 
-import AnimatedLayout from "@/components/AnimatedLayout";
-import TemplateWrapper from "@/components/TemplateWrapper";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import BottomNav from "@/components/BottomNav";
+import AnimatedLayout from "@/components/layouts/AnimatedLayout";
+import TemplateWrapper from "@/components/layouts/TemplateWrapper";
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
+import BottomNav from "@/components/layouts/BottomNav";
 import { Toaster } from "@/components/ui/toaster";
 import { PortfolioProvider } from "@/components/context/PortfolioContext";
 import { suspenseFallbacks } from "@/components/suspense/suspense-registry";
