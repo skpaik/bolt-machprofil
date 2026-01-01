@@ -21,9 +21,9 @@ export function generateBlogPostsSlugsSlug(): void {
   console.log("🚀 Starting Blog Posts generation...");
 
   const languages = fs
-      .readdirSync(DATA_DIR, { withFileTypes: true })
-      .filter((dir) => dir.isDirectory())
-      .map((dir) => dir.name);
+    .readdirSync(DATA_DIR, { withFileTypes: true })
+    .filter((dir) => dir.isDirectory())
+    .map((dir) => dir.name);
 
   if (languages.length === 0) {
     console.error("❌ No language directories found in src/data/");

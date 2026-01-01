@@ -44,4 +44,3 @@ export type ContentData = {
   testimonial_list: Testimonial[];
   static_contents: StaticContentData;
 };
-

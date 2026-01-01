@@ -7,10 +7,11 @@ import {
   Education,
   Experience,
   Photo,
-  Project, Publication,
+  Project,
+  Publication,
   Skills,
   TermsPrivacy,
-  Testimonial
+  Testimonial,
 } from "@/lib/types/portfolio";
 
 // Schema Interfaces for each content type

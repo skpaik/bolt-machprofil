@@ -47,8 +47,8 @@ import {
 import { AboutContent } from "@/lib/types/about.contract";
 import { loadAllContent } from "@/lib/services/loadContent";
 import { ContentData } from "@/lib/types/content.types";
-import {LanguageI18n} from "@/lib/types/lang.i18n";
-import {emptyContent} from "@/data/configs/empty.data";
+import { LanguageI18n } from "@/lib/types/lang.i18n";
+import { emptyContent } from "@/data/configs/empty.data";
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
@@ -85,10 +85,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   );
 
   const [template, setTemplate] = useState<TemplateType>(() =>
-    getInitialValue(
-      "activeTemplate",
-      setting.activeTemplate as TemplateType,
-    ),
+    getInitialValue("activeTemplate", setting.activeTemplate as TemplateType),
   );
 
   const [languageType, setLanguageType] = useState<LanguageType>(() =>
@@ -152,7 +149,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   const publicationContentData: Publication[] =
     publicationContentsData[languageType];
   const photoContentData: Photo[] = photoContentsData[languageType];
-  const appConfig: AppConfig = { "item_per_page": 4 };
+  const appConfig: AppConfig = { item_per_page: 4 };
   const aboutContent: AboutContent = aboutContentsData[languageType];
   const langI18n: LanguageI18n = languageData[languageType];
 

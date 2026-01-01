@@ -5,18 +5,18 @@ export class ConfigData {
     {
       value: "light",
       label: "Light",
-      icon: "sun"
+      icon: "sun",
     },
     {
       value: "dark",
       label: "Dark",
-      icon: "moon"
+      icon: "moon",
     },
     {
       value: "system",
       label: "System",
-      icon: "monitor"
-    }
+      icon: "monitor",
+    },
   ];
 
   static templates: TemplateItem[] = [
@@ -40,22 +40,22 @@ export class ConfigData {
   static profiles: ProfileItem[] = [
     {
       value: "developer",
-      label: "Developer" ,
-      description: "Clean & simple"
+      label: "Developer",
+      description: "Clean & simple",
     },
     {
       value: "photographer",
       label: "Photographer",
-      description: "Clean & simple"
+      description: "Clean & simple",
     },
     {
       value: "teacher",
-      label: "Teacher"
+      label: "Teacher",
     },
     {
       value: "student",
       label: "Student",
-      description: "Clean & simple"
+      description: "Clean & simple",
     },
   ];
 
@@ -63,22 +63,22 @@ export class ConfigData {
     {
       value: "en",
       label: "English",
-      description: "Clean & simple"
+      description: "Clean & simple",
     },
     {
       value: "de",
       label: "German",
-      description: "Clean & simple"
+      description: "Clean & simple",
     },
     {
       value: "es",
       label: "Español",
-      description: "Clean & simple"
+      description: "Clean & simple",
     },
     {
       value: "fr",
       label: "Français",
-      description: "Clean & simple"
+      description: "Clean & simple",
     },
   ];
 }

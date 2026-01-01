@@ -3,10 +3,5 @@
   "activeTemplate": "classic",
   "activeLanguage": "en",
   "activeTheme": "dark",
-  "allowedProfile": [
-    "developer",
-    "photographer",
-    "teacher",
-    "student"
-  ]
+  "allowedProfile": ["developer", "photographer", "teacher", "student"]
 }

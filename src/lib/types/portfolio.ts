@@ -5,8 +5,8 @@ import {
   ThemeType,
 } from "@/lib/types/type.config";
 import { ContentData } from "@/lib/types/content.types";
-import {LanguageI18n} from "@/lib/types/lang.i18n";
-import {ProfileBio} from "@/lib/types/about.contract";
+import { LanguageI18n } from "@/lib/types/lang.i18n";
+import { ProfileBio } from "@/lib/types/about.contract";
 
 export interface BaseContent {
   id: number;
@@ -51,13 +51,10 @@ export interface Certificate extends BaseContent {
   verified?: boolean;
   featured?: boolean;
 
-
-
   name: string;
   organization: string;
 
   expirationDate?: string;
-
 
   media?: string[];
 }
@@ -93,14 +90,13 @@ export interface Project extends BaseContent {
   views?: number;
   status: string | "Completed" | "In Progress" | "Ongoing";
 
-
   image: string;
   link?: string;
   github?: string;
   date?: string;
 }
 
-export interface Experience extends BaseContent{
+export interface Experience extends BaseContent {
   company: string;
   companyUrl?: string;
   logo?: string;
@@ -147,7 +143,6 @@ export interface Education {
     | "Bootcamp"
     | "Self-Study";
 
-
   /** Name of the institution, e.g. "Technical University Berlin" */
   institution: string;
 
@@ -188,11 +183,11 @@ export interface TemplateItem extends WebUIItem {
   value: TemplateType;
 }
 
-export interface ProfileItem  extends WebUIItem{
+export interface ProfileItem extends WebUIItem {
   value: ProfileType;
 }
 
-export interface LanguageItem  extends WebUIItem{
+export interface LanguageItem extends WebUIItem {
   value: LanguageType;
 }
 
@@ -229,7 +224,6 @@ export interface Testimonial {
   category: string;
   featured?: boolean;
   verified?: boolean;
-
 
   type: string;
   description?: string;
@@ -338,7 +332,6 @@ export interface Publication extends BaseContent {
   citations?: number;
   featured?: boolean;
   status: string | "Published" | "In Press" | "Under Review" | "Preprint";
-
 
   date: string;
   link?: string;

@@ -5,8 +5,8 @@ import {
   LanguageProficiencySchema,
   ContactSchema,
 } from "@/lib/types/contract";
-import {Certificate, Publication, Skills} from "@/lib/types/portfolio";
-import {ProfileBio, SocialLink} from "@/lib/types/about.contract";
+import { Certificate, Publication, Skills } from "@/lib/types/portfolio";
+import { ProfileBio, SocialLink } from "@/lib/types/about.contract";
 
 // =======================
 // CONFIGURATION
@@ -264,7 +264,8 @@ function generateSkills(lang: string): string {
       level: "Expert",
       yearsOfExperience: 8,
       tags: ["Programming", "Frontend", "Backend"],
-      description: "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
+      description:
+        "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
     },
     {
       id: 2,
@@ -274,15 +275,15 @@ function generateSkills(lang: string): string {
       level: "Expert",
       yearsOfExperience: 6,
       tags: ["Frontend", "Framework", "UI"],
-      description: "Building scalable web applications with React, hooks, and state management."
-    }
+      description:
+        "Building scalable web applications with React, hooks, and state management.",
+    },
   ];
 
   // Convert categories to properly indented YAML under skills
   const yamlSkillList = categories
     .map(
-      (cat) =>
-        `category: "${cat.category}"\nproficiency:\n${cat.proficiency}`
+      (cat) => `category: "${cat.category}"\nproficiency:\n${cat.proficiency}`,
     )
     .join("\n");
 
@@ -299,7 +300,10 @@ NA
 
 function generateCertification(i: number, lang: string): string {
   const cert: Certificate = {
-    category: "", id: 0, issuer: "", title: "",
+    category: "",
+    id: 0,
+    issuer: "",
+    title: "",
     name: `Certification ${i}`,
     organization: `Organization ${i}`,
     issueDate: `202${i}-01`,
@@ -308,7 +312,7 @@ function generateCertification(i: number, lang: string): string {
     credentialUrl: `https://example.com/certifications/${i}`,
     skills: ["Skill A", "Skill B", "Skill C"],
     media: [`https://example.com/media/cert-${i}.jpg`],
-    description: `Description of certification ${i} in ${lang}`
+    description: `Description of certification ${i} in ${lang}`,
   };
 
   // Convert skills and media arrays to YAML
@@ -333,7 +337,12 @@ NA
 
 function generatePublication(i: number, lang: string): string {
   const pub: Publication = {
-    abstract: "", id: 0, publishedIn: "", status: 'Published', type: 'Journal', year: "",
+    abstract: "",
+    id: 0,
+    publishedIn: "",
+    status: "Published",
+    type: "Journal",
+    year: "",
     title: `Publication Title ${i}`,
     authors: [`Author A${i}`, `Author B${i}`],
     publisher: `Publisher ${i}`,
@@ -342,7 +351,7 @@ function generatePublication(i: number, lang: string): string {
     doi: `10.1234/example-doi-${i}`,
     summary: `This is a brief summary of publication ${i} in ${lang}.`,
     keywords: ["Keyword1", "Keyword2", "Keyword3"],
-    media: [`https://example.com/media/pub-${i}.jpg`]
+    media: [`https://example.com/media/pub-${i}.jpg`],
   };
 
   const authorsYaml = pub.authors.map((a) => `  - "${a}"`).join("\n");
@@ -494,18 +503,18 @@ function generateSocialLinks(lang: string): string {
       platform: "LinkedIn",
       url: "https://linkedin.com/in/alexjohnson",
       username: "alexjohnson",
-      icon: ""
+      icon: "",
     },
     {
       platform: "GitHub",
       url: "https://github.com/alexjohnson",
       username: "alexjohnson",
-      icon: ""
+      icon: "",
     },
     {
       platform: "Twitter",
       url: "https://twitter.com/alexjohnson",
-      icon: ""
+      icon: "",
     },
   ];
 
@@ -567,14 +576,21 @@ NA
 
 function generateBio(lang: string): string {
   const bio: ProfileBio = {
-    available: false, email: "", image: "", name: "", phone: "", resumeUrl: "", tagline: "", website: "",
+    available: false,
+    email: "",
+    image: "",
+    name: "",
+    phone: "",
+    resumeUrl: "",
+    tagline: "",
+    website: "",
     fullName: "Mofiz Rahman",
     title: "Software Engineer",
     summary:
       "Experienced developer passionate about building scalable systems and mentoring others.",
     location: "Berlin, Germany",
     dob: "1990-05-12",
-    photo: "https://example.com/photos/alex.jpg"
+    photo: "https://example.com/photos/alex.jpg",
   };
 
   return `---

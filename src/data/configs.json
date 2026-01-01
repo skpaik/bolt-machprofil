@@ -1,13 +1,7 @@
 {
   "languages": {
     "defaultLanguage": "en",
-    "allowedLanguages": [
-      "en",
-      "de",
-      "fr",
-      "jp",
-      "es"
-    ],
+    "allowedLanguages": ["en", "de", "fr", "jp", "es"],
     "content": "\nNA\n"
   },
   "profile": {

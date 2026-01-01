@@ -1,63 +1,62 @@
-import {AboutContent} from "@/lib/types/about.contract";
-import {ContentData} from "@/lib/types/content.types";
-import {StaticContentData, TermsPrivacy} from "@/lib/types/portfolio";
-
+import { AboutContent } from "@/lib/types/about.contract";
+import { ContentData } from "@/lib/types/content.types";
+import { StaticContentData, TermsPrivacy } from "@/lib/types/portfolio";
 
 export const emptyAboutContent: AboutContent = {
-    bio: {
-        name: "",
-        title: "",
-        tagline: "",
-        image: "",
-        location: "",
-        email: "",
-        phone: "",
-        website: "",
-        resumeUrl: "",
-        available: true,
-        fullName: "",
-        summary: ""
-    },
-    intro: "",
-    sections: [],
-    stats: [],
-    interests: [],
-    socialLinks: [],
-    cta: {
-        title: "",
-        description: "",
-        primaryButton: "",
-        secondaryButton: "",
-    },
+  bio: {
+    name: "",
+    title: "",
+    tagline: "",
+    image: "",
+    location: "",
+    email: "",
+    phone: "",
+    website: "",
+    resumeUrl: "",
+    available: true,
+    fullName: "",
+    summary: "",
+  },
+  intro: "",
+  sections: [],
+  stats: [],
+  interests: [],
+  socialLinks: [],
+  cta: {
+    title: "",
+    description: "",
+    primaryButton: "",
+    secondaryButton: "",
+  },
 };
 
 export const emptyStaticContentObj: TermsPrivacy = {
-    subtitle: "",
-    last_updated: "",
-    sections: [],
-    contactTitle: "",
-    contactText: "",
-    footerText: "",
-    id: 0,
-    title: ""
+  subtitle: "",
+  last_updated: "",
+  sections: [],
+  contactTitle: "",
+  contactText: "",
+  footerText: "",
+  id: 0,
+  title: "",
 };
 
 export const emptyStaticContent: StaticContentData = {
-    terms: emptyStaticContentObj,
-    privacy: emptyStaticContentObj
+  terms: emptyStaticContentObj,
+  privacy: emptyStaticContentObj,
 };
 
 export const emptyContent: ContentData = {
-    about_content: emptyAboutContent,
-    blog_list: [],
-    certificate_list: [],
-    education_list: [],
-    experience_list: [],
-    photos_list: [],
-    project_list: [],
-    publication_list: [],
-    service_list: [],
-    skill_list: [],
-    testimonial_list: [],
-    static_contents: emptyStaticContent,
+  about_content: emptyAboutContent,
+  blog_list: [],
+  certificate_list: [],
+  education_list: [],
+  experience_list: [],
+  photos_list: [],
+  project_list: [],
+  publication_list: [],
+  service_list: [],
+  skill_list: [],
+  testimonial_list: [],
+  static_contents: emptyStaticContent,
 };

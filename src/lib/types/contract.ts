@@ -46,7 +46,6 @@ export interface BioSchema {
   photo?: string;
 }
 
-
 export interface ResumeSchema {
   title: string;
   type: string;

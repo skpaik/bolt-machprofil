@@ -15,9 +15,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export function ProfileSwitcher() {
   const { langI18n, profileType, setProfileType } = usePortfolio();
 
-  const current = ConfigData.profiles.find(
-      (t) => t.value === profileType,
-  );
+  const current = ConfigData.profiles.find((t) => t.value === profileType);
 
   return (
     <DropdownMenu>
@@ -27,21 +25,25 @@ export function ProfileSwitcher() {
           <span className="hidden sm:inline">{current?.label}</span>
         </Button>
       </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-            {ConfigData.profiles.map((t) => (
-                <DropdownMenuItem
-                    key={t.value}
-                    onClick={() => setProfileType(t.value)}
-                    className="flex flex-col items-start gap-1 cursor-pointer"
-                >
-                    <div className="flex items-center gap-2">
-                        <span className="font-medium">{t.label}</span>
-                        {profileType === t.value && <span className="text-xs">✓</span>}
-                    </div>
-                    {t.description && <span className="text-xs text-muted-foreground">{t.description}</span>}
-                </DropdownMenuItem>
-            ))}
-        </DropdownMenuContent>
+      <DropdownMenuContent align="end">
+        {ConfigData.profiles.map((t) => (
+          <DropdownMenuItem
+            key={t.value}
+            onClick={() => setProfileType(t.value)}
+            className="flex flex-col items-start gap-1 cursor-pointer"
+          >
+            <div className="flex items-center gap-2">
+              <span className="font-medium">{t.label}</span>
+              {profileType === t.value && <span className="text-xs">✓</span>}
+            </div>
+            {t.description && (
+              <span className="text-xs text-muted-foreground">
+                {t.description}
+              </span>
+            )}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
     </DropdownMenu>
   );
 }
