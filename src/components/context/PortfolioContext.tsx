@@ -34,7 +34,6 @@ import {
   Certificate,
   Education,
   Experience,
-  LanguageI18n,
   Photo,
   PortfolioContextType,
   Project,
@@ -48,6 +47,7 @@ import {
 import { AboutContent } from "@/lib/types/about.contract";
 import { loadAllContent } from "@/lib/services/loadContent";
 import { ContentData, emptyContent } from "@/lib/types/content.types";
+import {LanguageI18n} from "@/lib/types/lang.i18n";
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
@@ -135,7 +135,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
 
   // Derived data
   //const appData: AppData = portfolioData.profiles[profileType];
-  const appData = contentData.about_content.hero as AppData;
+  const appData = contentData.about_content.bio as AppData;
   const staticContentData: StaticContentData = staticContentsData[languageType];
   const blogContentData: BlogPost[] = blogContentsData[languageType];
   const projectContentData: Project[] = projectContentsData[languageType];
@@ -151,9 +151,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   const publicationContentData: Publication[] =
     publicationContentsData[languageType];
   const photoContentData: Photo[] = photoContentsData[languageType];
-  const appConfig: AppConfig = {
-    "item_per_page": 4
-  };
+  const appConfig: AppConfig = { "item_per_page": 4 };
   const aboutContent: AboutContent = aboutContentsData[languageType];
   const langI18n: LanguageI18n = languageData[languageType];
 

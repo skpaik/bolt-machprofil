@@ -1,4 +1,4 @@
-export interface HeroSection {
+export interface ProfileBio {
   name: string;
   title: string;
   tagline: string;
@@ -9,6 +9,11 @@ export interface HeroSection {
   website: string;
   resumeUrl: string;
   available: boolean;
+
+  fullName: string;
+  summary: string;
+  dob?: string;
+  photo?: string;
 }
 
 export interface AboutSection {
@@ -33,6 +38,8 @@ export interface SocialLink {
   platform: string;
   url: string;
   icon: string;
+  username?: string;
+  description?: string;
 }
 
 export interface CtaSection {
@@ -43,7 +50,7 @@ export interface CtaSection {
 }
 
 export interface AboutContent {
-  hero: HeroSection;
+  bio: ProfileBio;
   intro: string;
   sections: AboutSection[];
   stats: Stat[];

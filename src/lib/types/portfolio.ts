@@ -5,6 +5,7 @@ import {
   ThemeType,
 } from "@/lib/types/type.config";
 import { ContentData } from "@/lib/types/content.types";
+import {LanguageI18n} from "@/lib/types/lang.i18n";
 
 export interface BaseContent {
   id: number;
@@ -32,6 +33,8 @@ export interface Photo extends BaseContent {
   camera?: string;
   tags?: string[];
   // views?: number;
+  category: string;
+  featured?: boolean;
 }
 
 export interface Certificate extends BaseContent {
@@ -46,6 +49,16 @@ export interface Certificate extends BaseContent {
   logo?: string;
   verified?: boolean;
   featured?: boolean;
+
+
+
+  name: string;
+  organization: string;
+
+  expirationDate?: string;
+
+
+  media?: string[];
 }
 
 export interface SocialLinks {
@@ -78,10 +91,15 @@ export interface Project extends BaseContent {
   likes?: number;
   views?: number;
   status: string | "Completed" | "In Progress" | "Ongoing";
+
+
+  image: string;
+  link?: string;
+  github?: string;
+  date?: string;
 }
 
-export interface Experience {
-  id: string;
+export interface Experience extends BaseContent{
   company: string;
   companyUrl?: string;
   logo?: string;
@@ -104,23 +122,22 @@ export interface Experience {
   technologies: string[];
   projects?: string[];
   current?: boolean;
+
+  organization: string;
+  website?: string;
 }
 
 export interface Education {
   id: number;
-  institution: string;
-  degree: string;
+
   field: string;
-  startDate: string;
-  endDate: string | "Present";
-  location: string;
+
   gpa?: string;
-  grade?: string;
-  description?: string;
+
   achievements?: string[];
   coursework?: string[];
   activities?: string[];
-  logo?: string;
+
   type:
     | string
     | "Degree"
@@ -128,6 +145,37 @@ export interface Education {
     | "Course"
     | "Bootcamp"
     | "Self-Study";
+
+
+  /** Name of the institution, e.g. "Technical University Berlin" */
+  institution: string;
+
+  /** Location of the institution, e.g. "Berlin, Germany" */
+  location: string;
+
+  /** Start date in ISO format, e.g. "2018-10-01" */
+  startDate: string;
+
+  /** End date in ISO format, e.g. "2020-09-30" */
+  endDate: string;
+
+  /** Short description of the education or major */
+  description: string;
+
+  /** Optional institution logo path */
+  logo?: string;
+
+  /** Degree type, e.g. "Bachelor's", "Master's", "PhD" */
+  degree?: string;
+
+  /** Final grade or GPA, e.g. "1.7" */
+  grade?: string;
+
+  /** Whether this should be featured on the website */
+  featured?: boolean;
+
+  /** Optional full markdown body content */
+  body?: string;
 }
 
 export interface WebUIItem {
@@ -180,6 +228,12 @@ export interface Testimonial {
   category: string;
   featured?: boolean;
   verified?: boolean;
+
+
+  type: string;
+  description?: string;
+  icon?: string;
+  order?: number;
 }
 
 // Service interface - adaptable for any professional service
@@ -295,6 +349,12 @@ export interface Publication extends BaseContent {
   citations?: number;
   featured?: boolean;
   status: string | "Published" | "In Press" | "Under Review" | "Preprint";
+
+
+  date: string;
+  link?: string;
+  summary?: string;
+  media?: string[];
 }
 
 export interface PortfolioData {
@@ -367,288 +427,4 @@ export interface PageMetaParams {
   url?: string;
   type?: "website" | "article";
   author?: string;
-}
-
-export interface LanguageI18n {
-  name: string;
-
-  // Primary Navigation
-  home: string;
-  about: string;
-  blog: string;
-  contact: string;
-  education: string;
-  experience: string;
-  more: string;
-  project: string;
-  projects: string;
-  resume: string;
-
-  // Secondary Navigation (More Menu)
-  certificates: string;
-  photos: string;
-  privacy: string;
-  publications: string;
-  services: string;
-  skills: string;
-  terms: string;
-  testimonials: string;
-
-  // Common Actions
-  back_to_all_posts: string;
-  back_to_blog: string;
-  clear_all_filters: string;
-  contact_me_now: string;
-  download_cv: string;
-  download_pdf: string;
-  get_in_touch: string;
-  get_started: string;
-  print: string;
-  read_more: string;
-  send_message: string;
-  view_all: string;
-  view_details: string;
-  view_more: string;
-  view_my_work: string;
-  view_projects: string;
-
-  // Settings & Preferences
-  language: string;
-  profile: string;
-  template: string;
-  theme: string;
-
-  // Contact Information
-  connect_with_me: string;
-  contact_info: string;
-  email: string;
-  location: string;
-  phone: string;
-
-  // Time & Status
-  completed: string;
-  current_position: string;
-  expired: string;
-  expires: string;
-  in_progress: string;
-  last_updated: string;
-  no_expiry: string;
-  ongoing: string;
-  valid: string;
-
-  // Measurements & Quantities
-  min_read: string;
-  of_experience: string;
-  total: string;
-  year: string;
-  years: string;
-  years_experience: string;
-
-  // Filters & Categories
-  all_categories: string;
-  all_levels: string;
-  all_technology: string;
-  all_types: string;
-  category: string;
-  level: string;
-  status: string;
-  status_all: string;
-  technology: string;
-  type: string;
-
-  // Sort Options
-  album_a_z: string;
-  category_a_z: string;
-  category_z_a: string;
-  date_newest: string;
-  date_oldest: string;
-  experience_least_to_most: string;
-  experience_most_to_least: string;
-  issue_date_newest: string;
-  issue_date_oldest: string;
-  issuer_a_z: string;
-  issuer_z_a: string;
-  latest_first: string;
-  most_cited: string;
-  most_liked: string;
-  most_viewed: string;
-  name_a_z: string;
-  name_z_a: string;
-  oldest_first: string;
-  proficiency_high_to_low: string;
-  proficiency_low_to_high: string;
-  title_a_z: string;
-  title_z_a: string;
-  type_a_z: string;
-  year_newest: string;
-  year_oldest: string;
-
-  // About Section
-  available_for_work: string;
-  interests_hobbies: string;
-  professional: string;
-  professional_highlights: string;
-  professional_summary: string;
-  proficiency: string;
-  satisfaction_rate: string;
-  services_tailored: string;
-  technologies: string;
-
-  // Projects Section
-  featured_projects: string;
-  project_all: string;
-  project_not_found: string;
-  project_not_found_detail: string;
-  projects_completed: string;
-  projects_search_placeholder: string;
-  projects_sub_title: string;
-  some_of_my_recent_work: string;
-  what_i_do: string;
-  what_i_do_detail: string;
-
-  // Skills Section
-  skill: string;
-  skills_all: string;
-  skills_mastered: string;
-  skills_not_found: string;
-  skills_not_found_message: string;
-  skills_search_placeholder: string;
-  skills_sub_title: string;
-  skills_technologies: string;
-
-  // Experience Section
-  achievements: string;
-  companies: string;
-  experience_sub_title: string;
-  key_achievements: string;
-  key_responsibilities: string;
-  notable_projects: string;
-  technologies_used: string;
-  work_experience: string;
-
-  // Education Section
-  activities_leadership: string;
-  bootcamps: string;
-  degrees: string;
-  education_sub_title: string;
-  gpa: string;
-  grade: string;
-  relevant_coursework: string;
-
-  // Services Section
-  contact_for_pricing: string;
-  fast_delivery: string;
-  fast_delivery_details: string;
-  global_reach: string;
-  global_reach_detail: string;
-  key_features: string;
-  more_features: string;
-  most_popular: string;
-  quality_assured: string;
-  quality_assured_details: string;
-  ready_to_get_started: string;
-  ready_to_get_started_details: string;
-  services_all: string;
-  services_sub_title: string;
-  twenty_4_support: string;
-  twenty_4_support_detail: string;
-  why_choose_my_services: string;
-  why_choose_my_services_details: string;
-
-  // Testimonials Section
-  average_rating: string;
-  client_testimonials: string;
-  client_testimonials_detail: string;
-  featured_testimonials: string;
-  five_star_reviews: string;
-  happy_clients: string;
-  more_testimonials: string;
-  no_testimonials_found: string;
-  testimonials_all: string;
-  testimonials_selecting_different_category: string;
-  testimonials_show_all: string;
-  testimonials_sub_title: string;
-  verified: string;
-  verified_reviews: string;
-
-  // Publications Section
-  all_publications: string;
-  contact_for_access: string;
-  doi: string;
-  featured_publications: string;
-  pdf: string;
-  publication: string;
-  publications_not_found: string;
-  publications_not_found_message: string;
-  publications_search_placeholder: string;
-  publications_sub_title: string;
-  publishers: string;
-  total_citations: string;
-  total_publications: string;
-  view: string;
-
-  // Certificates Section
-  certificate: string;
-  certificates_search_placeholder: string;
-  certificates_sub_title: string;
-  certifications_all: string;
-  certifications_not_found: string;
-  certifications_not_found_detail: string;
-  featured_certifications: string;
-
-  // Photos Section
-  album: string;
-  album_all: string;
-  photo: string;
-  photo_albums: string;
-  photo_albums_detail: string;
-  photo_not_found: string;
-  photo_not_found_detail: string;
-  photos_search_placeholder: string;
-  tag: string;
-  tag_all: string;
-  viewing_album: string;
-  viewing_album_detail: string;
-
-  // Blog Section
-  blog_search_placeholder: string;
-  blog_sub_title: string;
-  latest_posts: string;
-  post: string;
-  post_not_found: string;
-  post_not_found_detail: string;
-  posts: string;
-  posts_all: string;
-  posts_not_found: string;
-  posts_not_found_detail: string;
-  related_posts: string;
-
-  // Contact Section
-  contact_message: string;
-  contact_message_placeholder: string;
-  contact_sub_title: string;
-  message_sent: string;
-  message_sent_description: string;
-  name_star: string;
-  quick_response: string;
-  quick_response_detail: string;
-  subject: string;
-  whats_this_about: string;
-  your_email: string;
-  your_name: string;
-
-  // Resume Section
-  professional_cv_portfolio: string;
-  up_to_date_information: string;
-
-  // Call to Action
-  cta_descriptions: string;
-  cta_descriptions_experience: string;
-  cta_something_amazing: string;
-  cta_something_amazing_detail: string;
-  cta_start_your_project: string;
-  cta_title: string;
-
-  // Featured Badge
-  featured: string;
 }

@@ -14,7 +14,7 @@ export default function ResumePage() {
   const socialLinks = aboutContent.socialLinks;
 
   // Aggregate data from different sources
-  const profile = aboutContent.hero || {
+  const profile = aboutContent.bio || {
     name: "Mofiz Rahman",
     title: "Scientist @ Environment",
     email: "mofiz@rahman.com",

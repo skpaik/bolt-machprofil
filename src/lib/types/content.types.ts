@@ -43,7 +43,7 @@ export type ContentData = {
 };
 
 export const emptyAboutContent: AboutContent = {
-  hero: {
+  bio: {
     name: "",
     title: "",
     tagline: "",
@@ -54,6 +54,8 @@ export const emptyAboutContent: AboutContent = {
     website: "",
     resumeUrl: "",
     available: true,
+    fullName: "",
+    summary: ""
   },
   intro: "",
   sections: [],

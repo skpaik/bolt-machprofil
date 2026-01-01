@@ -2,16 +2,16 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import {
-  BlogSchema,
-  CertificationSchema,
-  EducationSchema,
-  ExperienceSchema,
-  PhotoSchema,
-  ProjectSchema,
-  PublicationSchema,
-  TestimonialSchema,
-} from "@/lib/types/contract";
-import {Skills} from "@/lib/types/portfolio";
+  BlogPost,
+  Certificate,
+  Education,
+  Experience,
+  Photo,
+  Project, Publication,
+  Skills,
+  TermsPrivacy,
+  Testimonial
+} from "@/lib/types/portfolio";
 
 // Schema Interfaces for each content type
 // =======================
@@ -20,17 +20,17 @@ import {Skills} from "@/lib/types/portfolio";
 
 // Section to Schema mapping
 type SchemaMap = {
-  blog_list: BlogSchema;
-  certificate_list: CertificationSchema;
-  education_list: EducationSchema;
-  experience_list: ExperienceSchema;
-  photo_list: PhotoSchema;
+  blog_list: BlogPost;
+  certificate_list: Certificate;
+  education_list: Education;
+  experience_list: Experience;
+  photo_list: Photo;
   info: Record<string, any>; // Info section is flexible
-  project_list: ProjectSchema;
-  publication_list: PublicationSchema;
+  project_list: Project;
+  publication_list: Publication;
   skill_list: Skills;
-  testimonial_list: TestimonialSchema;
-  static_contents: TestimonialSchema;
+  testimonial_list: Testimonial;
+  static_contents: TermsPrivacy;
 };
 
 interface ContentItem extends Record<string, any> {
@@ -111,12 +111,13 @@ const TYPE_METADATA: Record<
   Record<string, { type: string; required: boolean }>
 > = {
   blog_list: {
+    id: { type: "number", required: true },
     title: { type: "string", required: true },
-    date: { type: "date", required: true },
+    publishedAt: { type: "date", required: true },
     author: { type: "string", required: true },
     excerpt: { type: "string", required: true },
     tags: { type: "array", required: true },
-    image: { type: "string", required: false },
+    coverImage: { type: "string", required: false },
     featured: { type: "boolean", required: false },
     readTime: { type: "number", required: false },
     category: { type: "string", required: false },

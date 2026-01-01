@@ -1,15 +1,12 @@
 import fs from "fs";
 import path from "path";
 import {
-  CertificationSchema,
   ReferenceSchema,
   LanguageProficiencySchema,
-  PublicationSchema,
-  SocialLinkSchema,
   ContactSchema,
-  BioSchema,
 } from "@/lib/types/contract";
-import {Skills} from "@/lib/types/portfolio";
+import {Certificate, Publication, Skills} from "@/lib/types/portfolio";
+import {ProfileBio, SocialLink} from "@/lib/types/about.contract";
 
 // =======================
 // CONFIGURATION
@@ -301,7 +298,8 @@ NA
 }
 
 function generateCertification(i: number, lang: string): string {
-  const cert: CertificationSchema = {
+  const cert: Certificate = {
+    category: "", id: 0, issuer: "", title: "",
     name: `Certification ${i}`,
     organization: `Organization ${i}`,
     issueDate: `202${i}-01`,
@@ -310,7 +308,7 @@ function generateCertification(i: number, lang: string): string {
     credentialUrl: `https://example.com/certifications/${i}`,
     skills: ["Skill A", "Skill B", "Skill C"],
     media: [`https://example.com/media/cert-${i}.jpg`],
-    description: `Description of certification ${i} in ${lang}`,
+    description: `Description of certification ${i} in ${lang}`
   };
 
   // Convert skills and media arrays to YAML
@@ -334,7 +332,8 @@ NA
 }
 
 function generatePublication(i: number, lang: string): string {
-  const pub: PublicationSchema = {
+  const pub: Publication = {
+    abstract: "", id: 0, publishedIn: "", status: 'Published', type: 'Journal', year: "",
     title: `Publication Title ${i}`,
     authors: [`Author A${i}`, `Author B${i}`],
     publisher: `Publisher ${i}`,
@@ -343,7 +342,7 @@ function generatePublication(i: number, lang: string): string {
     doi: `10.1234/example-doi-${i}`,
     summary: `This is a brief summary of publication ${i} in ${lang}.`,
     keywords: ["Keyword1", "Keyword2", "Keyword3"],
-    media: [`https://example.com/media/pub-${i}.jpg`],
+    media: [`https://example.com/media/pub-${i}.jpg`]
   };
 
   const authorsYaml = pub.authors.map((a) => `  - "${a}"`).join("\n");
@@ -490,18 +489,24 @@ NA
 }
 
 function generateSocialLinks(lang: string): string {
-  const links: SocialLinkSchema[] = [
+  const links: SocialLink[] = [
     {
       platform: "LinkedIn",
       url: "https://linkedin.com/in/alexjohnson",
       username: "alexjohnson",
+      icon: ""
     },
     {
       platform: "GitHub",
       url: "https://github.com/alexjohnson",
       username: "alexjohnson",
+      icon: ""
     },
-    { platform: "Twitter", url: "https://twitter.com/alexjohnson" },
+    {
+      platform: "Twitter",
+      url: "https://twitter.com/alexjohnson",
+      icon: ""
+    },
   ];
 
   const yamlLinks = links
@@ -561,14 +566,15 @@ NA
 }
 
 function generateBio(lang: string): string {
-  const bio: BioSchema = {
+  const bio: ProfileBio = {
+    available: false, email: "", image: "", name: "", phone: "", resumeUrl: "", tagline: "", website: "",
     fullName: "Mofiz Rahman",
     title: "Software Engineer",
     summary:
       "Experienced developer passionate about building scalable systems and mentoring others.",
     location: "Berlin, Germany",
     dob: "1990-05-12",
-    photo: "https://example.com/photos/alex.jpg",
+    photo: "https://example.com/photos/alex.jpg"
   };
 
   return `---

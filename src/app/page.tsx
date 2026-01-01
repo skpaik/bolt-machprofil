@@ -17,7 +17,7 @@ export default function HomePage() {
   const { langI18n, contentData } = usePortfolio();
   // Aggregate data from existing sources
   const aboutContent = contentData.about_content;
-  const profile = aboutContent.hero || {
+  const profile = aboutContent.bio || {
     name: "Mofiz Rahman",
     title: "Scientist @ Environment",
     email: "mofiz@rahman.com",
@@ -31,7 +31,7 @@ export default function HomePage() {
 
   const intro = aboutContent.intro;
 
-  const tagline = aboutContent.hero.tagline;
+  const tagline = aboutContent.bio.tagline;
 
   // Get social links from profile or about data
   const socialLinks = aboutContent.socialLinks.filter((link) => link.url);

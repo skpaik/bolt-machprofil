@@ -11,7 +11,7 @@ export default function AboutPage() {
   const { langI18n, contentData } = usePortfolio();
 
   const {
-    hero,
+    bio,
     intro,
     sections = [],
     stats = [],
@@ -29,12 +29,12 @@ export default function AboutPage() {
           <div className="relative">
             <div className="w-48 h-48 rounded-full overflow-hidden ring-4 ring-primary/20">
               <img
-                src={hero.image}
-                alt={hero.name}
+                src={bio.image}
+                alt={bio.name}
                 className="w-full h-full object-cover"
               />
             </div>
-            {hero.available && (
+            {bio.available && (
               <div className="absolute bottom-2 right-2 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
                 <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                 Available
@@ -44,24 +44,24 @@ export default function AboutPage() {
 
           {/* Hero Text */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-2">{hero.name}</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-2">{bio.name}</h1>
             <p className="text-2xl text-primary font-semibold mb-3">
-              {hero.title}
+              {bio.title}
             </p>
-            <p className="text-lg text-muted-foreground mb-4">{hero.tagline}</p>
+            <p className="text-lg text-muted-foreground mb-4">{bio.tagline}</p>
 
             <div className="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-muted-foreground mb-6">
               <div className="flex items-center gap-2">
                 {showLucidIcon("map-pin", "w-4 h-4")}
-                <span>{hero.location}</span>
+                <span>{bio.location}</span>
               </div>
               <div className="flex items-center gap-2">
                 {showLucidIcon("mail", "w-4 h-4")}
                 <a
-                  href={`mailto:${hero.email}`}
+                  href={`mailto:${bio.email}`}
                   className="hover:text-primary transition-colors"
                 >
-                  {hero.email}
+                  {bio.email}
                 </a>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 {cta.primaryButton}
                 {showLucidIcon("arrow-right", "w-5 h-5 ml-2")}
               </Button>
-              {hero.resumeUrl && (
+              {bio.resumeUrl && (
                 <Button size="lg" variant="outline" className="text-lg px-8">
                   {showLucidIcon("download", "w-5 h-5 mr-2")}
                   {cta.secondaryButton}

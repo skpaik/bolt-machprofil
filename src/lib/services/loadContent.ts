@@ -15,7 +15,8 @@ export async function loadAllContent(lang: LanguageType): Promise<ContentData> {
     Object.entries(contentFileMap).map(async ([key, fileName]) => {
       //console.log(key, fileName);
       const data = await loadContentFile<any>(lang, fileName);
-      //console.log(data);
+      // console.log('loadAllContent fileName>> ',fileName);
+      // console.log('loadAllContent data>> ',data);
       return [key, data];
     }),
   );
