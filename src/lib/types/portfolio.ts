@@ -6,6 +6,7 @@ import {
 } from "@/lib/types/type.config";
 import { ContentData } from "@/lib/types/content.types";
 import {LanguageI18n} from "@/lib/types/lang.i18n";
+import {ProfileBio} from "@/lib/types/about.contract";
 
 export interface BaseContent {
   id: number;
@@ -298,24 +299,12 @@ export interface StaticContentData {
   privacy: TermsPrivacy;
 }
 
-export interface AppData {
+export interface AppData extends ProfileBio {
   bio: string;
   avatar: string;
+
   //configData: ConfigData;
   social: SocialLinks;
-
-  // new Fields
-
-  name: string;
-  title: string;
-  tagline: string;
-  image: string;
-  location: string;
-  email: string;
-  phone: string;
-  website: string;
-  resumeUrl: string;
-  available: boolean;
 }
 
 export interface SettingSchema {
@@ -355,15 +344,6 @@ export interface Publication extends BaseContent {
   link?: string;
   summary?: string;
   media?: string[];
-}
-
-export interface PortfolioData {
-  profiles: {
-    [key: string]: AppData;
-  };
-  languages: {
-    [key: string]: LanguageI18n;
-  };
 }
 
 export interface PortfolioContextType {

@@ -46,8 +46,9 @@ import {
 } from "@/lib/types/portfolio";
 import { AboutContent } from "@/lib/types/about.contract";
 import { loadAllContent } from "@/lib/services/loadContent";
-import { ContentData, emptyContent } from "@/lib/types/content.types";
+import { ContentData } from "@/lib/types/content.types";
 import {LanguageI18n} from "@/lib/types/lang.i18n";
+import {emptyContent} from "@/data/configs/empty.data";
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,

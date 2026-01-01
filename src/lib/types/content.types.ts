@@ -8,6 +8,7 @@ import {
   Publication,
   Service,
   Skills,
+  StaticContentData,
   Testimonial,
 } from "@/lib/types/portfolio";
 import { AboutContent } from "@/lib/types/about.contract";
@@ -24,9 +25,10 @@ export const contentFileMap = {
   service_list: "service_list",
   skill_list: "skill_list",
   testimonial_list: "testimonial_list",
+  static_contents: "static_contents",
 } as const;
 
-export type ContentKey = keyof typeof contentFileMap;
+// export type ContentKey = keyof typeof contentFileMap;
 
 export type ContentData = {
   about_content: AboutContent;
@@ -40,46 +42,6 @@ export type ContentData = {
   service_list: Service[];
   skill_list: Skills[];
   testimonial_list: Testimonial[];
+  static_contents: StaticContentData;
 };
 
-export const emptyAboutContent: AboutContent = {
-  bio: {
-    name: "",
-    title: "",
-    tagline: "",
-    image: "",
-    location: "",
-    email: "",
-    phone: "",
-    website: "",
-    resumeUrl: "",
-    available: true,
-    fullName: "",
-    summary: ""
-  },
-  intro: "",
-  sections: [],
-  stats: [],
-  interests: [],
-  socialLinks: [],
-  cta: {
-    title: "",
-    description: "",
-    primaryButton: "",
-    secondaryButton: "",
-  },
-};
-
-export const emptyContent: ContentData = {
-  about_content: emptyAboutContent,
-  blog_list: [],
-  certificate_list: [],
-  education_list: [],
-  experience_list: [],
-  photos_list: [],
-  project_list: [],
-  publication_list: [],
-  service_list: [],
-  skill_list: [],
-  testimonial_list: [],
-};

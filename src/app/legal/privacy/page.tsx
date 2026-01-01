@@ -6,7 +6,9 @@ import { PageHeading } from "@/components/shared/PageHeading";
 import { TermsPrivacyContent } from "@/components/shared/TermsPrivacyContent";
 
 export default function PrivacyPage() {
-  const { langI18n, staticContentData } = usePortfolio();
+  const { langI18n, contentData} = usePortfolio();
+
+  const staticContentData=contentData.static_contents;
 
   return (
     <>
