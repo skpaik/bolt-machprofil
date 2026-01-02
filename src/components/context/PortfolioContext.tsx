@@ -7,7 +7,6 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import staticContentsData from "@/data/static_contents.json";
 import blogContentsData from "@/data/blog_contents.json";
 import projectContentsData from "@/data/project_contents.json";
 import experienceContentsData from "@/data/experience_contents.json";
@@ -84,7 +83,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     ),
   );
 
-  const [template, setTemplate] = useState<TemplateType>(() =>
+  const [templateType, setTemplateType] = useState<TemplateType>(() =>
     getInitialValue("activeTemplate", setting.activeTemplate as TemplateType),
   );
 
@@ -96,14 +95,14 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     ),
   );
 
-  const [theme, setTheme] = useState<ThemeType>(() =>
+  const [themeType, setThemeType] = useState<ThemeType>(() =>
     getInitialValue("activeTheme", setting.activeTheme as ThemeType),
   );
 
   // Keep theme synced to DOM
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
+    document.documentElement.classList.toggle("dark", themeType === "dark");
+  }, [themeType]);
 
   // Persist on change
   useEffect(() => {
@@ -111,17 +110,17 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   }, [profileType]);
 
   useEffect(() => {
-    localStorage.setItem("activeTemplate", template);
-  }, [template]);
+    localStorage.setItem("activeTemplate", templateType);
+  }, [templateType]);
 
   useEffect(() => {
     localStorage.setItem("activeLanguage", languageType);
   }, [languageType]);
 
   useEffect(() => {
-    localStorage.setItem("activeTheme", theme);
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
+    localStorage.setItem("activeTheme", themeType);
+    document.documentElement.classList.toggle("dark", themeType === "dark");
+  }, [themeType]);
 
   const [contentData, setContentData] = useState<ContentData>(emptyContent);
 
@@ -134,7 +133,6 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   // Derived data
   //const appData: AppData = portfolioData.profiles[profileType];
   const appData = contentData.about_content.bio as AppData;
-  const staticContentData: StaticContentData = staticContentsData[languageType];
   const blogContentData: BlogPost[] = blogContentsData[languageType];
   const projectContentData: Project[] = projectContentsData[languageType];
   const experienceContentData: Experience[] =
@@ -161,17 +159,16 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
       value={{
         appData,
         contentData,
-        staticContentData,
         appConfig,
         profileType,
         setProfileType,
-        template,
-        setTemplate,
+        templateType,
+        setTemplateType,
         langI18n,
         languageType,
         setLanguageType,
-        theme,
-        setTheme,
+        themeType,
+        setThemeType,
       }}
     >
       {children}

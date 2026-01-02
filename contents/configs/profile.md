@@ -6,4 +6,5 @@ location: Berlin, Germany
 languages: English, German
 website: https://johndoe.dev
 ---
+
 No Profile

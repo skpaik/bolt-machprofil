@@ -8,7 +8,7 @@ import { ProfileSwitcher } from "@/components/switcher/profile-switcher";
 import { ThemeSwitcher } from "@/components/switcher/theme-switcher";
 
 export default function Footer() {
-  const { appData, langI18n, theme, setTheme } = usePortfolio();
+  const { appData } = usePortfolio();
 
   return (
     <footer className="border-t bg-background">

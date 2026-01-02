@@ -10,7 +10,6 @@ items:
     value: 80+
     icon: heart
   - label: Certifications
-    value: '12'
+    value: "12"
     icon: award
 ---
-

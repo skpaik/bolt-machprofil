@@ -342,17 +342,16 @@ export interface Publication extends BaseContent {
 export interface PortfolioContextType {
   appData: AppData;
   contentData: ContentData;
-  staticContentData: StaticContentData;
   appConfig: AppConfig;
   profileType: ProfileType;
   setProfileType: (type: ProfileType) => void;
-  template: TemplateType;
-  setTemplate: (type: TemplateType) => void;
+  templateType: TemplateType;
+  setTemplateType: (type: TemplateType) => void;
   langI18n: LanguageI18n;
   languageType: LanguageType;
   setLanguageType: (type: LanguageType) => void;
-  theme: ThemeType;
-  setTheme: (theme: ThemeType) => void;
+  themeType: ThemeType;
+  setThemeType: (theme: ThemeType) => void;
 }
 
 export interface SiteConfig {

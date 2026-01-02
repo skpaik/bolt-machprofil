@@ -14,10 +14,10 @@ import { ThemeType } from "@/lib/types/type.config";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export function ThemeSwitcher() {
-  const { theme, setTheme, langI18n } = usePortfolio();
+  const { themeType, setThemeType } = usePortfolio();
 
   const currentTheme =
-    ConfigData.themes.find((t) => t.value === theme) || ConfigData.themes[2];
+    ConfigData.themes.find((t) => t.value === themeType) || ConfigData.themes[2];
 
   return (
     <DropdownMenu>
@@ -32,12 +32,12 @@ export function ThemeSwitcher() {
           return (
             <DropdownMenuItem
               key={t.value}
-              onClick={() => setTheme(t.value as ThemeType)}
+              onClick={() => setThemeType(t.value as ThemeType)}
               className="flex items-center gap-2 cursor-pointer"
             >
               {showLucidIcon(t.icon, "", 16)}
               <span className="font-medium">{t.label}</span>
-              {theme === t.value && <span className="ml-auto text-xs">✓</span>}
+              {themeType === t.value && <span className="ml-auto text-xs">✓</span>}
             </DropdownMenuItem>
           );
         })}

@@ -13,10 +13,10 @@ import { ConfigData } from "@/data/config-data";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export function TemplateSwitcher() {
-  const { template, setTemplate } = usePortfolio();
+  const { templateType, setTemplateType } = usePortfolio();
 
   const currentTemplate = ConfigData.templates.find(
-    (t) => t.value === template,
+    (t) => t.value === templateType,
   );
 
   return (
@@ -31,12 +31,12 @@ export function TemplateSwitcher() {
         {ConfigData.templates.map((t) => (
           <DropdownMenuItem
             key={t.value}
-            onClick={() => setTemplate(t.value)}
+            onClick={() => setTemplateType(t.value)}
             className="flex flex-col items-start gap-1 cursor-pointer"
           >
             <div className="flex items-center gap-2">
               <span className="font-medium">{t.label}</span>
-              {template === t.value && <span className="text-xs">✓</span>}
+              {templateType === t.value && <span className="text-xs">✓</span>}
             </div>
             <span className="text-xs text-muted-foreground">
               {t.description}

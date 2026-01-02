@@ -2,7 +2,7 @@
 id: 1
 title: Terms of Service
 subtitle: Simple and straightforward terms for working together.
-last_updated: 'November 2, 2024'
+last_updated: "November 2, 2024"
 sections:
   - id: 1
     title: 1. Services 5
@@ -14,7 +14,7 @@ sections:
   - id: 2
     title: 2. Payment
     icon: dollar-sign
-    content: 'Payment terms will be agreed upon per project. Typically:'
+    content: "Payment terms will be agreed upon per project. Typically:"
     list:
       - 50% deposit before starting work
       - 50% upon completion
@@ -55,4 +55,3 @@ footerText: >-
   By working with me, you agree to these terms. Let's create something great
   together! ✨
 ---
-

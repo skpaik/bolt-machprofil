@@ -3,7 +3,7 @@ terms:
   id: 1
   title: Terms of Service
   subtitle: Simple and straightforward terms for working together.
-  last_updated: 'November 2, 2024'
+  last_updated: "November 2, 2024"
   sections:
     - id: 1
       title: 1. Services 5
@@ -15,7 +15,7 @@ terms:
     - id: 2
       title: 2. Payment
       icon: dollar-sign
-      content: 'Payment terms will be agreed upon per project. Typically:'
+      content: "Payment terms will be agreed upon per project. Typically:"
       list:
         - 50% deposit before starting work
         - 50% upon completion
@@ -59,23 +59,23 @@ privacy:
   id: 1
   title: Privacy Policy
   subtitle: How I handle and protect your information. 3
-  last_updated: 'November 2, 2024'
+  last_updated: "November 2, 2024"
   sections:
     - id: 1
       title: 1. Information I Collect
       icon: eye
-      content: 'When you visit my website or work with me, I may collect:'
+      content: "When you visit my website or work with me, I may collect:"
       list:
-        - 'Contact information: Name, email, phone number (when you reach out)'
-        - 'Project details: Information you share about your project needs'
+        - "Contact information: Name, email, phone number (when you reach out)"
+        - "Project details: Information you share about your project needs"
         - >-
           Website analytics: Basic usage data like pages visited and time spent
           (via Google Analytics or similar)
-        - 'Technical data: IP address, browser type, device information'
+        - "Technical data: IP address, browser type, device information"
     - id: 2
       title: 2. How I Use Your Information
       icon: database
-      content: 'I use your information to:'
+      content: "I use your information to:"
       list:
         - Respond to your inquiries and communicate about projects
         - Provide the services you've requested
@@ -87,7 +87,7 @@ privacy:
     - id: 3
       title: 3. Cookies & Tracking
       icon: cookie
-      content: 'This website may use cookies and similar technologies to:'
+      content: "This website may use cookies and similar technologies to:"
       list:
         - Remember your preferences
         - Understand how you use the site (via analytics tools)
@@ -106,24 +106,24 @@ privacy:
     - id: 5
       title: 5. Third-Party Services
       icon: shield
-      content: 'This website may use third-party services that collect information:'
+      content: "This website may use third-party services that collect information:"
       list:
-        - 'Google Analytics: For website analytics'
-        - 'Contact forms: May use services like Formspree, Google Forms, etc.'
-        - 'Hosting provider: Your data is stored on secure hosting servers'
+        - "Google Analytics: For website analytics"
+        - "Contact forms: May use services like Formspree, Google Forms, etc."
+        - "Hosting provider: Your data is stored on secure hosting servers"
       note: >-
         These services have their own privacy policies. I choose reputable
         providers that respect user privacy.
     - id: 6
       title: 6. Your Rights
       icon: user-check
-      content: 'You have the right to:'
+      content: "You have the right to:"
       list:
         - Request a copy of the information I have about you
         - Ask me to update or delete your information
         - Opt out of any communications from me
         - Withdraw consent for data processing
-      note: 'Just reach out, and I''ll be happy to help with any of these requests.'
+      note: "Just reach out, and I'll be happy to help with any of these requests."
     - id: 7
       title: 7. Data Retention
       icon: clock
@@ -153,4 +153,3 @@ privacy:
     being transparent about data practices.
   footerText: "Your privacy matters. I only collect what's necessary and handle it responsibly. \U0001F512"
 ---
-

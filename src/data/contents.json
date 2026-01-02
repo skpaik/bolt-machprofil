@@ -158,12 +158,7 @@
         "author": "Abul Mal",
         "readTime": 8,
         "category": "Web Development",
-        "tags": [
-          "React",
-          "JavaScript",
-          "Hooks",
-          "Frontend"
-        ],
+        "tags": ["React", "JavaScript", "Hooks", "Frontend"],
         "featured": true,
         "content": "<h2>Introduction</h2><p>React and TypeScript are a powerful combination for building robust web applications. In this article, we'll explore how to get started with both technologies.</p><h2>Setting Up Your Project</h2><p>First, create a new React app with TypeScript support using Create React App...</p><h2>TypeScript Basics</h2><p>TypeScript adds static typing to JavaScript, which helps catch errors early in development...</p><h2>Conclusion</h2><p>Combining React with TypeScript creates a more maintainable and scalable codebase.</p>"
       },
@@ -178,12 +173,7 @@
         "author": "Abul Mal",
         "readTime": 10,
         "category": "Programming",
-        "tags": [
-          "TypeScript",
-          "JavaScript",
-          "Best Practices",
-          "Code Quality"
-        ],
+        "tags": ["TypeScript", "JavaScript", "Best Practices", "Code Quality"],
         "featured": true,
         "content": "<h2>Why Scalability Matters</h2><p>Building APIs that can handle growth is crucial for long-term success...</p><h2>Architecture Patterns</h2><p>We'll explore microservices, modular monoliths, and when to use each...</p><h2>Performance Optimization</h2><p>Learn about caching strategies, database optimization, and load balancing...</p>"
       },
@@ -198,12 +188,7 @@
         "author": "Abul Mal",
         "readTime": 12,
         "category": "Web Development",
-        "tags": [
-          "Next.js",
-          "React",
-          "App Router",
-          "SSR"
-        ],
+        "tags": ["Next.js", "React", "App Router", "SSR"],
         "featured": true,
         "content": "<h2>The Evolution of CSS</h2><p>CSS continues to evolve with powerful new features that make styling easier...</p><h2>Container Queries</h2><p>Container queries allow components to adapt based on their container size...</p><h2>Cascade Layers</h2><p>Manage CSS specificity and organization with cascade layers...</p>"
       },
@@ -218,12 +203,7 @@
         "author": "Abul Mal",
         "readTime": 6,
         "category": "CSS & Design",
-        "tags": [
-          "CSS",
-          "Grid",
-          "Flexbox",
-          "Layout"
-        ],
+        "tags": ["CSS", "Grid", "Flexbox", "Layout"],
         "content": "<h2>Normalization vs Denormalization</h2><p>Understanding when to normalize and when to denormalize your data...</p><h2>Indexing Strategies</h2><p>Proper indexing can dramatically improve query performance...</p><h2>Schema Evolution</h2><p>Plan for changes and migrations from the start...</p>"
       },
       {
@@ -237,13 +217,7 @@
         "author": "Abul Mal",
         "readTime": 15,
         "category": "Backend Development",
-        "tags": [
-          "Node.js",
-          "Express",
-          "API",
-          "REST",
-          "MongoDB"
-        ],
+        "tags": ["Node.js", "Express", "API", "REST", "MongoDB"],
         "content": "<h2>Why Performance Matters</h2><p>Faster websites lead to better user engagement and higher conversion rates...</p><h2>Core Web Vitals</h2><p>Understanding LCP, FID, and CLS metrics...</p><h2>Optimization Techniques</h2><p>Image optimization, code splitting, and lazy loading...</p>"
       },
       {
@@ -257,12 +231,7 @@
         "author": "Abul Mal",
         "readTime": 7,
         "category": "CSS & Design",
-        "tags": [
-          "Responsive Design",
-          "CSS",
-          "Mobile First",
-          "Web Design"
-        ],
+        "tags": ["Responsive Design", "CSS", "Mobile First", "Web Design"],
         "content": "<h2>Git Flow vs GitHub Flow</h2><p>Compare different branching strategies and their use cases...</p><h2>Merge vs Rebase</h2><p>When to use each approach and their trade-offs...</p><h2>Collaboration Best Practices</h2><p>Code reviews, commit messages, and conflict resolution...</p>"
       },
       {
@@ -276,12 +245,7 @@
         "author": "Abul Mal",
         "readTime": 14,
         "category": "DevOps",
-        "tags": [
-          "Docker",
-          "Kubernetes",
-          "Containers",
-          "DevOps"
-        ],
+        "tags": ["Docker", "Kubernetes", "Containers", "DevOps"],
         "content": "<h2>What is Docker?</h2><p>Docker enables you to package applications with their dependencies...</p><h2>Images and Containers</h2><p>Understanding the difference and how to create efficient images...</p><h2>Docker Compose</h2><p>Orchestrating multi-container applications...</p>"
       },
       {
@@ -314,12 +278,7 @@
         "author": "Abul Mal",
         "readTime": 9,
         "category": "CSS & Design",
-        "tags": [
-          "Tailwind CSS",
-          "CSS",
-          "Utility-First",
-          "Styling"
-        ],
+        "tags": ["Tailwind CSS", "CSS", "Utility-First", "Styling"],
         "content": "Full blog post content here..."
       },
       {
@@ -333,12 +292,7 @@
         "author": "Abul Mal",
         "readTime": 13,
         "category": "Backend Development",
-        "tags": [
-          "GraphQL",
-          "REST",
-          "API",
-          "Backend"
-        ],
+        "tags": ["GraphQL", "REST", "API", "Backend"],
         "content": "Full blog post content here..."
       },
       {
@@ -352,12 +306,7 @@
         "author": "Abul Mal",
         "readTime": 16,
         "category": "Database",
-        "tags": [
-          "MongoDB",
-          "Database",
-          "NoSQL",
-          "Aggregation"
-        ],
+        "tags": ["MongoDB", "Database", "NoSQL", "Aggregation"],
         "content": "Full blog post content here..."
       },
       {
@@ -371,12 +320,7 @@
         "author": "Abul Mal",
         "readTime": 10,
         "category": "Web Development",
-        "tags": [
-          "React",
-          "Performance",
-          "Optimization",
-          "JavaScript"
-        ],
+        "tags": ["React", "Performance", "Optimization", "JavaScript"],
         "content": "Full blog post content here..."
       }
     ],
@@ -392,12 +336,7 @@
         "credentialId": "AWS-PSA-12345",
         "credentialUrl": "https://aws.amazon.com/verification",
         "category": "Cloud Computing",
-        "skills": [
-          "AWS",
-          "Cloud Architecture",
-          "Infrastructure",
-          "Security"
-        ],
+        "skills": ["AWS", "Cloud Architecture", "Infrastructure", "Security"],
         "description": "Advanced AWS certification demonstrating expertise in designing and deploying dynamically scalable, highly available, fault-tolerant, and reliable applications on AWS.",
         "logo": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=400&h=400&fit=crop",
         "verified": true,
@@ -415,12 +354,7 @@
         "credentialId": "GCP-PCA-67890",
         "credentialUrl": "https://cloud.google.com/certification",
         "category": "Cloud Computing",
-        "skills": [
-          "GCP",
-          "Cloud Architecture",
-          "Kubernetes",
-          "DevOps"
-        ],
+        "skills": ["GCP", "Cloud Architecture", "Kubernetes", "DevOps"],
         "description": "Professional certification validating ability to design, develop, and manage robust, secure, scalable, and dynamic solutions on Google Cloud.",
         "logo": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=400&fit=crop",
         "verified": true,
@@ -438,12 +372,7 @@
         "credentialId": "META-FED-11223",
         "credentialUrl": "https://coursera.org/verify/professional-cert/xyz",
         "category": "Web Development",
-        "skills": [
-          "React",
-          "JavaScript",
-          "HTML/CSS",
-          "UI/UX"
-        ],
+        "skills": ["React", "JavaScript", "HTML/CSS", "UI/UX"],
         "description": "Comprehensive program covering React, JavaScript, HTML/CSS, and modern front-end development practices.",
         "logo": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop",
         "verified": true,
@@ -460,12 +389,7 @@
         "credentialId": "CNCF-CKA-44556",
         "credentialUrl": "https://www.cncf.io/certification/cka/",
         "category": "DevOps",
-        "skills": [
-          "Kubernetes",
-          "Docker",
-          "Container Orchestration",
-          "Linux"
-        ],
+        "skills": ["Kubernetes", "Docker", "Container Orchestration", "Linux"],
         "description": "Validates skills in deploying, managing, and troubleshooting Kubernetes clusters.",
         "logo": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=400&fit=crop",
         "verified": true,
@@ -483,12 +407,7 @@
         "credentialId": "MS-AZ-204-78901",
         "credentialUrl": "https://learn.microsoft.com/credentials",
         "category": "Cloud Computing",
-        "skills": [
-          "Azure",
-          "Cloud Development",
-          "APIs",
-          "Security"
-        ],
+        "skills": ["Azure", "Cloud Development", "APIs", "Security"],
         "description": "Demonstrates expertise in designing, building, testing, and maintaining cloud applications on Microsoft Azure.",
         "logo": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=400&fit=crop",
         "verified": true,
@@ -505,12 +424,7 @@
         "credentialId": "CSM-123456",
         "credentialUrl": "https://www.scrumalliance.org/get-certified/verify",
         "category": "Project Management",
-        "skills": [
-          "Scrum",
-          "Agile",
-          "Team Leadership",
-          "Project Management"
-        ],
+        "skills": ["Scrum", "Agile", "Team Leadership", "Project Management"],
         "description": "Validates understanding of Scrum framework and ability to apply it in real-world scenarios.",
         "logo": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
         "verified": true,
@@ -527,12 +441,7 @@
         "credentialId": "DL-SPEC-99887",
         "credentialUrl": "https://coursera.org/verify/specialization/abc123",
         "category": "Machine Learning",
-        "skills": [
-          "Deep Learning",
-          "Neural Networks",
-          "TensorFlow",
-          "Python"
-        ],
+        "skills": ["Deep Learning", "Neural Networks", "TensorFlow", "Python"],
         "description": "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
         "logo": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=400&fit=crop",
         "verified": true,
@@ -549,12 +458,7 @@
         "credentialId": "ADOBE-VD-55443",
         "credentialUrl": "https://www.adobe.com/certification",
         "category": "Design",
-        "skills": [
-          "Photoshop",
-          "Illustrator",
-          "InDesign",
-          "Visual Design"
-        ],
+        "skills": ["Photoshop", "Illustrator", "InDesign", "Visual Design"],
         "description": "Demonstrates proficiency in Adobe Creative Suite for professional visual design work.",
         "logo": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=400&fit=crop",
         "verified": true,
@@ -571,12 +475,7 @@
         "credentialId": "GA-IQ-22334",
         "credentialUrl": "https://skillshop.exceedlms.com/student/catalog",
         "category": "Marketing",
-        "skills": [
-          "Google Analytics",
-          "Data Analysis",
-          "Marketing",
-          "SEO"
-        ],
+        "skills": ["Google Analytics", "Data Analysis", "Marketing", "SEO"],
         "description": "Demonstrates proficiency in Google Analytics, including setup, collection, configuration, and reporting.",
         "logo": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop",
         "verified": true,
@@ -637,12 +536,7 @@
         "credentialId": "MONGO-DEV-33445",
         "credentialUrl": "https://university.mongodb.com/certification",
         "category": "Database",
-        "skills": [
-          "MongoDB",
-          "NoSQL",
-          "Database Design",
-          "Node.js"
-        ],
+        "skills": ["MongoDB", "NoSQL", "Database Design", "Node.js"],
         "description": "Demonstrates ability to build applications using MongoDB and understanding of core MongoDB concepts.",
         "logo": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=400&fit=crop",
         "verified": true,
@@ -937,11 +831,7 @@
           "Jest",
           "Cypress"
         ],
-        "projects": [
-          "SaaS Dashboard",
-          "Analytics Platform",
-          "Admin Panel"
-        ],
+        "projects": ["SaaS Dashboard", "Analytics Platform", "Admin Panel"],
         "content": ""
       },
       {
@@ -1022,11 +912,7 @@
           "PHP",
           "Git"
         ],
-        "projects": [
-          "Client Websites",
-          "Landing Pages",
-          "WordPress Themes"
-        ],
+        "projects": ["Client Websites", "Landing Pages", "WordPress Themes"],
         "content": ""
       }
     ],
@@ -1101,10 +987,7 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
-              ],
+              "tests": ["IELTS", "TOEFL"],
               "level": "C1"
             },
             {
@@ -1113,10 +996,7 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
-              ],
+              "tests": ["Goethe B2", "Telc B2"],
               "level": "B2"
             },
             {
@@ -1164,44 +1044,23 @@
           "skills": [
             {
               "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
+              "items": ["Python", "TypeScript", "Java", "C++"]
             },
             {
               "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
+              "items": ["AWS", "Docker", "Kubernetes"]
             },
             {
               "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
+              "items": ["Leadership", "Communication", "Mentoring"]
             },
             {
               "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
+              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
             },
             {
               "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
+              "items": ["English", "German", "French"]
             }
           ],
           "content": "NA"
@@ -1241,12 +1100,7 @@
         "date": "2024-08-15",
         "location": "Rocky Mountains, Colorado",
         "camera": "Canon EOS R5",
-        "tags": [
-          "Landscape",
-          "Mountains",
-          "Sunrise",
-          "Nature"
-        ],
+        "tags": ["Landscape", "Mountains", "Sunrise", "Nature"],
         "views": 1234,
         "content": ""
       },
@@ -1261,12 +1115,7 @@
         "date": "2024-08-10",
         "location": "Pacific Northwest",
         "camera": "Sony A7III",
-        "tags": [
-          "Forest",
-          "Trees",
-          "Path",
-          "Nature"
-        ],
+        "tags": ["Forest", "Trees", "Path", "Nature"],
         "views": 892,
         "content": ""
       },
@@ -1281,12 +1130,7 @@
         "date": "2024-07-22",
         "location": "Big Sur, California",
         "camera": "Nikon Z6",
-        "tags": [
-          "Ocean",
-          "Waves",
-          "Seascape",
-          "Nature"
-        ],
+        "tags": ["Ocean", "Waves", "Seascape", "Nature"],
         "views": 1567,
         "content": ""
       },
@@ -1300,12 +1144,7 @@
         "description": "Golden hour in the vast desert landscape with sand dunes.",
         "date": "2024-06-18",
         "location": "Sahara Desert",
-        "tags": [
-          "Desert",
-          "Sunset",
-          "Dunes",
-          "Landscape"
-        ],
+        "tags": ["Desert", "Sunset", "Dunes", "Landscape"],
         "views": 743,
         "content": ""
       },
@@ -1320,12 +1159,7 @@
         "date": "2024-05-12",
         "location": "Paris, France",
         "camera": "Canon EOS R6",
-        "tags": [
-          "Paris",
-          "Architecture",
-          "Night",
-          "Travel"
-        ],
+        "tags": ["Paris", "Architecture", "Night", "Travel"],
         "views": 2134,
         "content": ""
       },
@@ -1340,12 +1174,7 @@
         "date": "2024-04-08",
         "location": "Tokyo, Japan",
         "camera": "Fujifilm X-T4",
-        "tags": [
-          "Tokyo",
-          "Street",
-          "Urban",
-          "Travel"
-        ],
+        "tags": ["Tokyo", "Street", "Urban", "Travel"],
         "views": 1876,
         "content": ""
       },
@@ -1360,12 +1189,7 @@
         "date": "2024-03-25",
         "location": "Venice, Italy",
         "camera": "Sony A7IV",
-        "tags": [
-          "Venice",
-          "Canals",
-          "Gondola",
-          "Travel"
-        ],
+        "tags": ["Venice", "Canals", "Gondola", "Travel"],
         "views": 1543,
         "content": ""
       },
@@ -1379,12 +1203,7 @@
         "description": "Stunning sunset view over the white buildings of Santorini.",
         "date": "2024-02-14",
         "location": "Santorini, Greece",
-        "tags": [
-          "Santorini",
-          "Sunset",
-          "Greece",
-          "Travel"
-        ],
+        "tags": ["Santorini", "Sunset", "Greece", "Travel"],
         "views": 2456,
         "content": ""
       },
@@ -1399,12 +1218,7 @@
         "date": "2024-09-05",
         "location": "New York City",
         "camera": "Nikon Z7",
-        "tags": [
-          "Skyscraper",
-          "Modern",
-          "Glass",
-          "Architecture"
-        ],
+        "tags": ["Skyscraper", "Modern", "Glass", "Architecture"],
         "views": 987,
         "content": ""
       },
@@ -1419,12 +1233,7 @@
         "date": "2024-08-20",
         "location": "Barcelona, Spain",
         "camera": "Canon EOS 5D",
-        "tags": [
-          "Cathedral",
-          "Gothic",
-          "Historic",
-          "Architecture"
-        ],
+        "tags": ["Cathedral", "Gothic", "Historic", "Architecture"],
         "views": 1234,
         "content": ""
       },
@@ -1438,12 +1247,7 @@
         "description": "Clean lines and minimalist design in modern interior space.",
         "date": "2024-07-10",
         "location": "Copenhagen, Denmark",
-        "tags": [
-          "Interior",
-          "Minimalist",
-          "Modern",
-          "Design"
-        ],
+        "tags": ["Interior", "Minimalist", "Modern", "Design"],
         "views": 756,
         "content": ""
       },
@@ -1458,12 +1262,7 @@
         "date": "2024-10-01",
         "location": "New York City",
         "camera": "Leica Q2",
-        "tags": [
-          "Street",
-          "Urban",
-          "People",
-          "Candid"
-        ],
+        "tags": ["Street", "Urban", "People", "Candid"],
         "views": 1432,
         "content": ""
       },
@@ -1477,12 +1276,7 @@
         "description": "Vibrant colors and textures at the local street market.",
         "date": "2024-09-18",
         "location": "Marrakech, Morocco",
-        "tags": [
-          "Market",
-          "Colors",
-          "Culture",
-          "Street"
-        ],
+        "tags": ["Market", "Colors", "Culture", "Street"],
         "views": 1098,
         "content": ""
       },
@@ -1497,12 +1291,7 @@
         "date": "2024-08-30",
         "location": "London, UK",
         "camera": "Fujifilm X100V",
-        "tags": [
-          "Rain",
-          "Night",
-          "Reflections",
-          "Street"
-        ],
+        "tags": ["Rain", "Night", "Reflections", "Street"],
         "views": 1876,
         "content": ""
       },
@@ -1517,12 +1306,7 @@
         "date": "2024-07-05",
         "location": "Serengeti, Tanzania",
         "camera": "Canon EOS-1D X Mark III",
-        "tags": [
-          "Lion",
-          "Safari",
-          "Africa",
-          "Wildlife"
-        ],
+        "tags": ["Lion", "Safari", "Africa", "Wildlife"],
         "views": 2345,
         "content": ""
       },
@@ -1537,12 +1321,7 @@
         "date": "2024-06-22",
         "location": "Alaska, USA",
         "camera": "Nikon D850",
-        "tags": [
-          "Eagle",
-          "Bird",
-          "Flight",
-          "Wildlife"
-        ],
+        "tags": ["Eagle", "Bird", "Flight", "Wildlife"],
         "views": 1654,
         "content": ""
       }
@@ -1556,11 +1335,7 @@
         "shortDescription": "Full-stack online shopping platform with payment integration",
         "description": "A comprehensive e-commerce solution built with Next.js and Stripe, featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
         "category": "Web Development",
-        "tags": [
-          "E-commerce",
-          "Full Stack",
-          "Payment Gateway"
-        ],
+        "tags": ["E-commerce", "Full Stack", "Payment Gateway"],
         "thumbnail": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
         "startDate": "2024-01-15",
         "endDate": "2024-06-20",
@@ -1598,11 +1373,7 @@
         "shortDescription": "Patient management and appointment scheduling platform",
         "description": "Modern healthcare management system for clinics and hospitals, featuring appointment scheduling, patient records, and telemedicine capabilities.",
         "category": "Web Development",
-        "tags": [
-          "Healthcare",
-          "SaaS",
-          "Dashboard"
-        ],
+        "tags": ["Healthcare", "SaaS", "Dashboard"],
         "thumbnail": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
         "startDate": "2023-09-10",
         "endDate": "2024-02-15",
@@ -1639,11 +1410,7 @@
         "shortDescription": "Analytics dashboard for social media management",
         "description": "Comprehensive social media analytics platform that aggregates data from multiple platforms and provides actionable insights.",
         "category": "Web Development",
-        "tags": [
-          "Analytics",
-          "Dashboard",
-          "Social Media"
-        ],
+        "tags": ["Analytics", "Dashboard", "Social Media"],
         "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
         "startDate": "2023-07-01",
         "endDate": "2023-11-30",
@@ -1679,11 +1446,7 @@
         "shortDescription": "AI-powered content creation tool for marketers",
         "description": "Intelligent content generation platform leveraging GPT-4 to create blog posts, social media content, and marketing copy.",
         "category": "AI/ML",
-        "tags": [
-          "AI",
-          "Content",
-          "SaaS"
-        ],
+        "tags": ["AI", "Content", "SaaS"],
         "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
         "startDate": "2024-03-01",
         "endDate": "Ongoing",
@@ -1719,11 +1482,7 @@
         "shortDescription": "Cross-platform mobile app for workout and nutrition tracking",
         "description": "Comprehensive fitness application with workout tracking, meal planning, progress analytics, and social features.",
         "category": "Mobile Development",
-        "tags": [
-          "Fitness",
-          "Health",
-          "Mobile"
-        ],
+        "tags": ["Fitness", "Health", "Mobile"],
         "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
         "startDate": "2023-05-15",
         "endDate": "2023-12-20",
@@ -1758,11 +1517,7 @@
         "shortDescription": "Property listing and management platform",
         "description": "Modern real estate platform connecting buyers, sellers, and agents with advanced search, virtual tours, and scheduling.",
         "category": "Web Development",
-        "tags": [
-          "Real Estate",
-          "Marketplace",
-          "Geolocation"
-        ],
+        "tags": ["Real Estate", "Marketplace", "Geolocation"],
         "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
         "startDate": "2023-03-10",
         "endDate": "2023-09-05",
@@ -1798,11 +1553,7 @@
         "shortDescription": "Collaborative project management and team collaboration platform",
         "description": "Agile project management tool with kanban boards, time tracking, and team collaboration features.",
         "category": "Web Development",
-        "tags": [
-          "Productivity",
-          "Collaboration",
-          "SaaS"
-        ],
+        "tags": ["Productivity", "Collaboration", "SaaS"],
         "thumbnail": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
         "startDate": "2024-02-01",
         "endDate": "Ongoing",
@@ -1838,11 +1589,7 @@
         "shortDescription": "Real-time cryptocurrency tracking and portfolio management",
         "description": "Comprehensive crypto dashboard with real-time prices, portfolio tracking, and market analysis tools.",
         "category": "Web Development",
-        "tags": [
-          "Cryptocurrency",
-          "Finance",
-          "Dashboard"
-        ],
+        "tags": ["Cryptocurrency", "Finance", "Dashboard"],
         "thumbnail": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
         "startDate": "2023-11-01",
         "endDate": "2024-01-15",
@@ -1877,11 +1624,7 @@
         "shortDescription": "Interactive online education and course management system",
         "description": "Complete e-learning platform with video courses, quizzes, certificates, and student progress tracking.",
         "category": "Web Development",
-        "tags": [
-          "Education",
-          "Video",
-          "LMS"
-        ],
+        "tags": ["Education", "Video", "LMS"],
         "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
         "startDate": "2023-06-15",
         "endDate": "2024-03-30",
@@ -1916,11 +1659,7 @@
         "order": 1,
         "id": 1,
         "title": "Deep Learning Approaches for Natural Language Processing: A Comprehensive Survey",
-        "authors": [
-          "Mofiz Rahman",
-          "Jane Smith",
-          "Robert Johnson"
-        ],
+        "authors": ["Mofiz Rahman", "Jane Smith", "Robert Johnson"],
         "publishedIn": "IEEE Transactions on Neural Networks and Learning Systems",
         "publisher": "IEEE",
         "year": "2024",
@@ -1947,11 +1686,7 @@
         "order": 2,
         "id": 2,
         "title": "Efficient Training of Large-Scale Neural Networks Using Mixed Precision Techniques",
-        "authors": [
-          "Mofiz Rahman",
-          "Alice Brown",
-          "Michael Chen"
-        ],
+        "authors": ["Mofiz Rahman", "Alice Brown", "Michael Chen"],
         "publishedIn": "Proceedings of the 38th International Conference on Machine Learning (ICML)",
         "publisher": "PMLR",
         "year": "2024",
@@ -1977,10 +1712,7 @@
         "order": 3,
         "id": 3,
         "title": "Automated Code Review Using Machine Learning: Techniques and Applications",
-        "authors": [
-          "Mofiz Rahman",
-          "Sarah Wilson"
-        ],
+        "authors": ["Mofiz Rahman", "Sarah Wilson"],
         "publishedIn": "ACM Transactions on Software Engineering and Methodology",
         "publisher": "ACM",
         "year": "2023",
@@ -2005,12 +1737,7 @@
         "order": 4,
         "id": 4,
         "title": "Blockchain-Based Secure Data Sharing in Healthcare Systems",
-        "authors": [
-          "Mofiz Rahman",
-          "Emily Davis",
-          "David Lee",
-          "Maria Garcia"
-        ],
+        "authors": ["Mofiz Rahman", "Emily Davis", "David Lee", "Maria Garcia"],
         "publishedIn": "IEEE International Conference on Healthcare Informatics",
         "publisher": "IEEE",
         "year": "2023",
@@ -2036,10 +1763,7 @@
         "order": 5,
         "id": 5,
         "title": "Optimizing Web Performance: A Study of Modern JavaScript Frameworks",
-        "authors": [
-          "Mofiz Rahman",
-          "Tom Anderson"
-        ],
+        "authors": ["Mofiz Rahman", "Tom Anderson"],
         "publishedIn": "Handbook of Modern Web Development",
         "publisher": "Springer",
         "year": "2023",
@@ -2065,11 +1789,7 @@
         "order": 6,
         "id": 6,
         "title": "Federated Learning for Privacy-Preserving Machine Learning in IoT Networks",
-        "authors": [
-          "Mofiz Rahman",
-          "Lisa Martinez",
-          "Kevin Zhang"
-        ],
+        "authors": ["Mofiz Rahman", "Lisa Martinez", "Kevin Zhang"],
         "publishedIn": "IoT Workshop at NeurIPS 2023",
         "publisher": "NeurIPS",
         "year": "2023",
@@ -2094,11 +1814,7 @@
         "order": 7,
         "id": 7,
         "title": "Explainable AI for Medical Diagnosis: A Clinical Perspective",
-        "authors": [
-          "Mofiz Rahman",
-          "Dr. Rachel Kim",
-          "Dr. James Wilson"
-        ],
+        "authors": ["Mofiz Rahman", "Dr. Rachel Kim", "Dr. James Wilson"],
         "publishedIn": "Nature Machine Intelligence",
         "publisher": "Nature Publishing Group",
         "year": "2024",
@@ -2123,10 +1839,7 @@
         "order": 8,
         "id": 8,
         "title": "Real-Time Object Detection Using Edge Computing and Neural Networks",
-        "authors": [
-          "Mofiz Rahman",
-          "Chris Brown"
-        ],
+        "authors": ["Mofiz Rahman", "Chris Brown"],
         "publishedIn": "arXiv preprint",
         "year": "2024",
         "month": "April",
@@ -2150,11 +1863,7 @@
         "order": 9,
         "id": 9,
         "title": "Graph Neural Networks for Social Network Analysis",
-        "authors": [
-          "Mofiz Rahman",
-          "Anna Lee",
-          "Peter Johnson"
-        ],
+        "authors": ["Mofiz Rahman", "Anna Lee", "Peter Johnson"],
         "publishedIn": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
         "publisher": "ACM",
         "year": "2023",
@@ -2207,13 +1916,7 @@
         },
         "duration": "4-8 weeks",
         "popular": true,
-        "tags": [
-          "React",
-          "Next.js",
-          "TypeScript",
-          "Node.js",
-          "Full Stack"
-        ],
+        "tags": ["React", "Next.js", "TypeScript", "Node.js", "Full Stack"],
         "content": ""
       },
       {
@@ -2248,13 +1951,7 @@
         },
         "duration": "8-12 weeks",
         "popular": true,
-        "tags": [
-          "React Native",
-          "Flutter",
-          "iOS",
-          "Android",
-          "Mobile"
-        ],
+        "tags": ["React Native", "Flutter", "iOS", "Android", "Mobile"],
         "content": ""
       },
       {
@@ -2328,13 +2025,7 @@
           "currency": "USD"
         },
         "duration": "3-6 months",
-        "tags": [
-          "SEO",
-          "Google Analytics",
-          "Content",
-          "Marketing",
-          "Growth"
-        ],
+        "tags": ["SEO", "Google Analytics", "Content", "Marketing", "Growth"],
         "content": ""
       },
       {
@@ -2368,13 +2059,7 @@
           "currency": "USD"
         },
         "duration": "Ongoing",
-        "tags": [
-          "AWS",
-          "Azure",
-          "GCP",
-          "DevOps",
-          "Infrastructure"
-        ],
+        "tags": ["AWS", "Azure", "GCP", "DevOps", "Infrastructure"],
         "content": ""
       },
       {
@@ -2529,13 +2214,7 @@
           "currency": "USD"
         },
         "duration": "3-6 weeks",
-        "tags": [
-          "REST",
-          "GraphQL",
-          "Node.js",
-          "API",
-          "Backend"
-        ],
+        "tags": ["REST", "GraphQL", "Node.js", "API", "Backend"],
         "content": ""
       },
       {
@@ -2589,11 +2268,7 @@
         "proficiency": 95,
         "level": "Expert",
         "yearsOfExperience": 8,
-        "tags": [
-          "Programming",
-          "Frontend",
-          "Backend"
-        ],
+        "tags": ["Programming", "Frontend", "Backend"],
         "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
         "content": ""
       },
@@ -2606,11 +2281,7 @@
         "proficiency": 90,
         "level": "Expert",
         "yearsOfExperience": 6,
-        "tags": [
-          "Frontend",
-          "Framework",
-          "UI"
-        ],
+        "tags": ["Frontend", "Framework", "UI"],
         "description": "Building scalable web applications with React, hooks, and state management.",
         "content": ""
       },
@@ -2623,10 +2294,7 @@
         "proficiency": 88,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Programming",
-          "Type Safety"
-        ],
+        "tags": ["Programming", "Type Safety"],
         "description": "Strong typing for JavaScript applications, interfaces, and generics.",
         "content": ""
       },
@@ -2639,11 +2307,7 @@
         "proficiency": 85,
         "level": "Advanced",
         "yearsOfExperience": 6,
-        "tags": [
-          "Programming",
-          "Backend",
-          "Data Science"
-        ],
+        "tags": ["Programming", "Backend", "Data Science"],
         "description": "Backend development, automation, and data analysis.",
         "content": ""
       },
@@ -2656,11 +2320,7 @@
         "proficiency": 87,
         "level": "Advanced",
         "yearsOfExperience": 7,
-        "tags": [
-          "Backend",
-          "API",
-          "Server"
-        ],
+        "tags": ["Backend", "API", "Server"],
         "description": "Server-side JavaScript with Express, RESTful APIs, and microservices.",
         "content": ""
       },
@@ -2673,11 +2333,7 @@
         "proficiency": 80,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Design",
-          "User Experience",
-          "Interface"
-        ],
+        "tags": ["Design", "User Experience", "Interface"],
         "description": "Creating intuitive and visually appealing user interfaces.",
         "content": ""
       },
@@ -2690,11 +2346,7 @@
         "proficiency": 85,
         "level": "Advanced",
         "yearsOfExperience": 4,
-        "tags": [
-          "Design Tool",
-          "Prototyping",
-          "Collaboration"
-        ],
+        "tags": ["Design Tool", "Prototyping", "Collaboration"],
         "description": "Wireframing, prototyping, and design systems.",
         "content": ""
       },
@@ -2707,10 +2359,7 @@
         "proficiency": 75,
         "level": "Advanced",
         "yearsOfExperience": 7,
-        "tags": [
-          "Image Editing",
-          "Graphics"
-        ],
+        "tags": ["Image Editing", "Graphics"],
         "description": "Photo editing, digital art, and graphic design.",
         "content": ""
       },
@@ -2723,11 +2372,7 @@
         "proficiency": 70,
         "level": "Intermediate",
         "yearsOfExperience": 3,
-        "tags": [
-          "Art",
-          "Creative",
-          "Visual"
-        ],
+        "tags": ["Art", "Creative", "Visual"],
         "description": "Digital and traditional illustration techniques.",
         "content": ""
       },
@@ -2740,11 +2385,7 @@
         "proficiency": 82,
         "level": "Advanced",
         "yearsOfExperience": 6,
-        "tags": [
-          "Management",
-          "Planning",
-          "Leadership"
-        ],
+        "tags": ["Management", "Planning", "Leadership"],
         "description": "Agile methodologies, Scrum, and team coordination.",
         "content": ""
       },
@@ -2757,11 +2398,7 @@
         "proficiency": 78,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Analysis",
-          "Strategy",
-          "Requirements"
-        ],
+        "tags": ["Analysis", "Strategy", "Requirements"],
         "description": "Requirements gathering, stakeholder management, and process improvement.",
         "content": ""
       },
@@ -2774,11 +2411,7 @@
         "proficiency": 73,
         "level": "Intermediate",
         "yearsOfExperience": 4,
-        "tags": [
-          "Marketing",
-          "Strategy",
-          "Growth"
-        ],
+        "tags": ["Marketing", "Strategy", "Growth"],
         "description": "Digital marketing, SEO, and brand development.",
         "content": ""
       },
@@ -2791,10 +2424,7 @@
         "proficiency": 90,
         "level": "Expert",
         "yearsOfExperience": 10,
-        "tags": [
-          "Interpersonal",
-          "Collaboration"
-        ],
+        "tags": ["Interpersonal", "Collaboration"],
         "description": "Clear verbal and written communication across teams and stakeholders.",
         "content": ""
       },
@@ -2807,10 +2437,7 @@
         "proficiency": 88,
         "level": "Expert",
         "yearsOfExperience": 10,
-        "tags": [
-          "Critical Thinking",
-          "Analysis"
-        ],
+        "tags": ["Critical Thinking", "Analysis"],
         "description": "Analytical thinking and creative solution development.",
         "content": ""
       },
@@ -2823,11 +2450,7 @@
         "proficiency": 80,
         "level": "Advanced",
         "yearsOfExperience": 7,
-        "tags": [
-          "Management",
-          "Mentoring",
-          "Team Building"
-        ],
+        "tags": ["Management", "Mentoring", "Team Building"],
         "description": "Team leadership, mentoring, and conflict resolution.",
         "content": ""
       },
@@ -2840,10 +2463,7 @@
         "proficiency": 100,
         "level": "Expert",
         "yearsOfExperience": 20,
-        "tags": [
-          "Communication",
-          "Native"
-        ],
+        "tags": ["Communication", "Native"],
         "description": "Native speaker with excellent written and verbal skills.",
         "content": ""
       },
@@ -2856,10 +2476,7 @@
         "proficiency": 75,
         "level": "Advanced",
         "yearsOfExperience": 8,
-        "tags": [
-          "Communication",
-          "Second Language"
-        ],
+        "tags": ["Communication", "Second Language"],
         "description": "Conversational and business proficiency.",
         "content": ""
       },
@@ -2872,10 +2489,7 @@
         "proficiency": 60,
         "level": "Intermediate",
         "yearsOfExperience": 3,
-        "tags": [
-          "Communication",
-          "Learning"
-        ],
+        "tags": ["Communication", "Learning"],
         "description": "Intermediate conversational skills.",
         "content": ""
       },
@@ -2888,10 +2502,7 @@
         "proficiency": 92,
         "level": "Expert",
         "yearsOfExperience": 8,
-        "tags": [
-          "Version Control",
-          "Collaboration"
-        ],
+        "tags": ["Version Control", "Collaboration"],
         "description": "Version control, branching strategies, and team collaboration.",
         "content": ""
       },
@@ -2904,10 +2515,7 @@
         "proficiency": 80,
         "level": "Advanced",
         "yearsOfExperience": 4,
-        "tags": [
-          "DevOps",
-          "Containers"
-        ],
+        "tags": ["DevOps", "Containers"],
         "description": "Containerization and deployment workflows.",
         "content": ""
       },
@@ -2920,10 +2528,7 @@
         "proficiency": 77,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Cloud",
-          "Infrastructure"
-        ],
+        "tags": ["Cloud", "Infrastructure"],
         "description": "Cloud services, EC2, S3, Lambda, and serverless architecture.",
         "content": ""
       }
@@ -3305,10 +2910,7 @@
         "publishedAt": "2024-11-01",
         "author": "Mofiz Rahman",
         "excerpt": "A short summary for blog post 1 in EN.",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
+        "tags": ["tech", "javascript"],
         "image": "/images/blog-1.jpg",
         "featured": false,
         "readTime": 3,
@@ -3322,10 +2924,7 @@
         "date": "2024-02-23",
         "author": "Mofiz Rahman",
         "excerpt": "A short summary for blog post 1 in EN.",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
+        "tags": ["tech", "javascript"],
         "image": "/images/blog-1.jpg",
         "featured": false,
         "readTime": 3,
@@ -3343,14 +2942,8 @@
         "expirationDate": "2023-01",
         "credentialId": "CERT-1001",
         "credentialUrl": "https://example.com/certifications/1",
-        "skills": [
-          "Skill A",
-          "Skill B",
-          "Skill C"
-        ],
-        "media": [
-          "https://example.com/media/cert-1.jpg"
-        ],
+        "skills": ["Skill A", "Skill B", "Skill C"],
+        "media": ["https://example.com/media/cert-1.jpg"],
         "description": "Description of certification 1 in en",
         "content": "NA"
       }
@@ -3383,10 +2976,7 @@
         "startDate": "2020-01-01",
         "endDate": "2024-01-01",
         "website": "https://company1.com",
-        "technologies": [
-          "Node.js",
-          "React"
-        ],
+        "technologies": ["Node.js", "React"],
         "description": "Led development team for Tech Corp 1.",
         "responsibilities": [
           "Responsibility 1 for experience 1",
@@ -3468,10 +3058,7 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
-              ],
+              "tests": ["IELTS", "TOEFL"],
               "level": "C1"
             },
             {
@@ -3480,10 +3067,7 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
-              ],
+              "tests": ["Goethe B2", "Telc B2"],
               "level": "B2"
             },
             {
@@ -3531,44 +3115,23 @@
           "skills": [
             {
               "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
+              "items": ["Python", "TypeScript", "Java", "C++"]
             },
             {
               "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
+              "items": ["AWS", "Docker", "Kubernetes"]
             },
             {
               "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
+              "items": ["Leadership", "Communication", "Mentoring"]
             },
             {
               "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
+              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
             },
             {
               "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
+              "items": ["English", "German", "French"]
             }
           ],
           "content": "NA"
@@ -3605,10 +3168,7 @@
         "category": "Guide",
         "description": "Project 1 overview in EN.",
         "date": "2020-01-01",
-        "tags": [
-          "react",
-          "javascript"
-        ],
+        "tags": ["react", "javascript"],
         "featured": true,
         "content": "Cloud TypeScript Node.js Cloud Cloud JavaScript Next.js TypeScript TypeScript Node.js.\n\nArchitecture Next.js Architecture React Node.js Node.js Architecture TypeScript React Node.js.\n\nNode.js Next.js TypeScript JavaScript React Architecture JavaScript Next.js Node.js JavaScript."
       }
@@ -3619,10 +3179,7 @@
         "order": 1,
         "title": "My Project 1 (EN)",
         "description": "Project 1 overview in EN.",
-        "technologies": [
-          "Node.js",
-          "Next.js"
-        ],
+        "technologies": ["Node.js", "Next.js"],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
         "date": "2024-01-09",
@@ -3637,23 +3194,14 @@
         "slug": "1",
         "order": 1,
         "title": "Publication Title 1",
-        "authors": [
-          "Author A1",
-          "Author B1"
-        ],
+        "authors": ["Author A1", "Author B1"],
         "publisher": "Publisher 1",
         "date": "2021-06-01",
         "link": "https://example.com/publication/1",
         "doi": "10.1234/example-doi-1",
         "summary": "This is a brief summary of publication 1 in en.",
-        "keywords": [
-          "Keyword1",
-          "Keyword2",
-          "Keyword3"
-        ],
-        "media": [
-          "https://example.com/media/pub-1.jpg"
-        ],
+        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
+        "media": ["https://example.com/media/pub-1.jpg"],
         "content": "NA"
       }
     ],
@@ -3669,11 +3217,7 @@
             "proficiency": 95,
             "level": "Expert",
             "yearsOfExperience": 8,
-            "tags": [
-              "Programming",
-              "Frontend",
-              "Backend"
-            ],
+            "tags": ["Programming", "Frontend", "Backend"],
             "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
           },
           {
@@ -3683,11 +3227,7 @@
             "proficiency": 90,
             "level": "Expert",
             "yearsOfExperience": 6,
-            "tags": [
-              "Frontend",
-              "Framework",
-              "UI"
-            ],
+            "tags": ["Frontend", "Framework", "UI"],
             "description": "Building scalable web applications with React, hooks, and state management."
           }
         ],
@@ -3703,11 +3243,7 @@
         "proficiency": 95,
         "level": "Expert",
         "yearsOfExperience": 8,
-        "tags": [
-          "Programming",
-          "Frontend",
-          "Backend"
-        ],
+        "tags": ["Programming", "Frontend", "Backend"],
         "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
         "content": "This file contains a list of technical skills with detailed metadata for each."
       },
@@ -3719,11 +3255,7 @@
         "proficiency": 90,
         "level": "Expert",
         "yearsOfExperience": 6,
-        "tags": [
-          "Frontend",
-          "Framework",
-          "UI"
-        ],
+        "tags": ["Frontend", "Framework", "UI"],
         "description": "Building scalable web applications with React, hooks, and state management.",
         "content": "This file contains a list of technical skills with detailed metadata for each."
       }

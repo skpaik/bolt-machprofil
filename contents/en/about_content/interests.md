@@ -15,4 +15,3 @@ items:
   - name: Coffee
     icon: coffee
 ---
-
