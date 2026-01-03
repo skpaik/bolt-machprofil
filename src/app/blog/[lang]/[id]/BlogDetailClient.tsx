@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
-import {BlogPost} from "@/lib/types/portfolio";
+import { BlogPost } from "@/lib/types/portfolio";
 
 type PageProps = {
   lang: string;
@@ -61,7 +61,7 @@ export default function BlogDetailClient({ lang, id }: PageProps) {
     }
   };
   const createBlogDetailUrl = (post: BlogPost) => {
-    return `/blog/${languageType}/${post.id}`
+    return `/blog/${languageType}/${post.id}`;
     // return `/blog/${post.id}`
   };
   // Get related posts (same category, excluding current post)
@@ -180,7 +180,7 @@ export default function BlogDetailClient({ lang, id }: PageProps) {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost: any) => (
-                  <Link key={relatedPost.id} href={createBlogDetailUrl(post)}>
+                <Link key={relatedPost.id} href={createBlogDetailUrl(post)}>
                   <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full group">
                     <div className="aspect-video overflow-hidden">
                       <img
