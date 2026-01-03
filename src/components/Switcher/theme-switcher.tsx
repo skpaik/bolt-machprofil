@@ -17,7 +17,8 @@ export function ThemeSwitcher() {
   const { themeType, setThemeType } = usePortfolio();
 
   const currentTheme =
-    ConfigData.themes.find((t) => t.value === themeType) || ConfigData.themes[2];
+    ConfigData.themes.find((t) => t.value === themeType) ||
+    ConfigData.themes[2];
 
   return (
     <DropdownMenu>
@@ -37,7 +38,9 @@ export function ThemeSwitcher() {
             >
               {showLucidIcon(t.icon, "", 16)}
               <span className="font-medium">{t.label}</span>
-              {themeType === t.value && <span className="ml-auto text-xs">✓</span>}
+              {themeType === t.value && (
+                <span className="ml-auto text-xs">✓</span>
+              )}
             </DropdownMenuItem>
           );
         })}
