@@ -22,6 +22,7 @@ export default function ContactPage() {
     subject: "",
     message: "",
   };
+
   const [formData, setFormData] = useState(emptyForm);
 
   const handleSubmit = (e: React.FormEvent) => {
