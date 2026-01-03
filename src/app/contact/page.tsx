@@ -13,7 +13,9 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function ContactPage() {
   const { appData, langI18n } = usePortfolio();
+
   const { toast } = useToast();
+
   const emptyForm = {
     name: "",
     email: "",

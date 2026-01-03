@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { showLucidIcon } from "@/components/lucid-icon-map";
-import { ConfigData } from "@/data/config-data";
+import { ConfigData } from "@/data/configs/config-data";
 
 export function LanguageSwitcher() {
   const { langI18n, languageType, setLanguageType } = usePortfolio();

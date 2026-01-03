@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ConfigData } from "@/data/config-data";
+import { ConfigData } from "@/data/configs/config-data";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export function ProfileSwitcher() {
