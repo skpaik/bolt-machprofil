@@ -307,7 +307,7 @@ export interface Publication extends BaseContent {
   authors: string[];
   publishedIn: string; // Journal, Conference, Book, etc.
   publisher?: string;
-  year: string;
+  year: number;
   month?: string;
   type:
     | string
@@ -327,10 +327,10 @@ export interface Publication extends BaseContent {
   featured?: boolean;
   status: string | "Published" | "In Press" | "Under Review" | "Preprint";
 
-  date: string;
-  link?: string;
-  summary?: string;
-  media?: string[];
+  // date: string;
+  // link?: string;
+  // summary?: string;
+  // media?: string[];
 }
 
 export interface PortfolioContextType {
