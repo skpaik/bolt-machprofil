@@ -266,7 +266,10 @@ const TYPE_METADATA: Record<
     title: { type: "string", required: true },
     subtitle: { type: "string", required: true },
     last_updated: { type: "string", required: true },
-    content: { type: "string", required: false },
+    sections: { type: "array", required: false },
+    contactTitle: { type: "string", required: false },
+    contactText: { type: "string", required: false },
+    footerText: { type: "string", required: false },
   },
 };
 
