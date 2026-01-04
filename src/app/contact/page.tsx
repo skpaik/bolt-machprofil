@@ -102,7 +102,7 @@ export default function ContactPage() {
             </div>
           </Card>
 
-          <Card className="p-6">
+          {/*<Card className="p-6">
             <h2 className="text-2xl font-semibold mb-6">
               {langI18n.connect_with_me}
             </h2>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                 </Button>
               ))}
             </div>
-          </Card>
+          </Card>*/}
 
           <Card className="p-6 bg-primary/5">
             <h3 className="font-semibold mb-2">{langI18n.quick_response}</h3>
