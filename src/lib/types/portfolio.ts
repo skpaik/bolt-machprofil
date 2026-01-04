@@ -28,13 +28,13 @@ export interface BlogPost extends BaseContent {
 export interface Photo extends BaseContent {
   image: string;
   album: string;
+  category?: string;
   description?: string;
   date?: string;
   location?: string;
   camera?: string;
   tags?: string[];
-  // views?: number;
-  category: string;
+  views?: number;
   featured?: boolean;
 }
 
@@ -69,12 +69,11 @@ export interface SocialLinks {
 
 export interface Project extends BaseContent {
   slug: string;
-  description: string;
   shortDescription: string;
+  description: string;
   category: string;
   tags: string[];
   thumbnail: string;
-  images?: string[];
   startDate: string;
   endDate?: string | "Ongoing";
   client?: string;
@@ -89,10 +88,7 @@ export interface Project extends BaseContent {
   views?: number;
   status: string | "Completed" | "In Progress" | "Ongoing";
 
-  image: string;
-  link?: string;
-  github?: string;
-  date?: string;
+  images?: string[];
 }
 
 export interface Experience extends BaseContent {
