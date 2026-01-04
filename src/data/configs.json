@@ -1,7 +1,13 @@
 {
   "languages": {
     "defaultLanguage": "en",
-    "allowedLanguages": ["en", "de", "fr", "jp", "es"],
+    "allowedLanguages": [
+      "en",
+      "de",
+      "fr",
+      "jp",
+      "es"
+    ],
     "content": "\nNA\n"
   },
   "profile": {
@@ -11,7 +17,7 @@
     "location": "Berlin, Germany",
     "languages": "English, German",
     "website": "https://johndoe.dev",
-    "content": "No Profile\n"
+    "content": "\nNo Profile\n"
   },
   "settings": {
     "siteName": "GoribProfile",

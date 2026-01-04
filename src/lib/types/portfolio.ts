@@ -51,12 +51,11 @@ export interface Certificate extends BaseContent {
   verified?: boolean;
   featured?: boolean;
 
-  name: string;
-  organization: string;
-
-  expirationDate?: string;
-
-  media?: string[];
+  // OLD Fields
+  // name: string;
+  // organization: string;
+  // expirationDate?: string;
+  // media?: string[];
 }
 
 export interface SocialLinks {
@@ -120,34 +119,20 @@ export interface Experience extends BaseContent {
   projects?: string[];
   current?: boolean;
 
-  organization: string;
-  website?: string;
+  // organization: string;
+  // website?: string;
 }
 
 export interface Education {
   id: number;
 
-  field: string;
-
-  gpa?: string;
-
-  achievements?: string[];
-  coursework?: string[];
-  activities?: string[];
-
-  type:
-    | string
-    | "Degree"
-    | "Certificate"
-    | "Course"
-    | "Bootcamp"
-    | "Self-Study";
-
   /** Name of the institution, e.g. "Technical University Berlin" */
   institution: string;
 
-  /** Location of the institution, e.g. "Berlin, Germany" */
-  location: string;
+  /** Degree type, e.g. "Bachelor's", "Master's", "PhD" */
+  degree?: string;
+
+  field: string;
 
   /** Start date in ISO format, e.g. "2018-10-01" */
   startDate: string;
@@ -155,23 +140,36 @@ export interface Education {
   /** End date in ISO format, e.g. "2020-09-30" */
   endDate: string;
 
+  /** Location of the institution, e.g. "Berlin, Germany" */
+  location: string;
+
+  gpa?: string;
+  /** Final grade or GPA, e.g. "1.7" */
+  grade?: string;
+
+  type:
+      | string
+      | "Degree"
+      | "Certificate"
+      | "Course"
+      | "Bootcamp"
+      | "Self-Study";
+
   /** Short description of the education or major */
   description: string;
+
+  achievements?: string[];
+  coursework?: string[];
+  activities?: string[];
 
   /** Optional institution logo path */
   logo?: string;
 
-  /** Degree type, e.g. "Bachelor's", "Master's", "PhD" */
-  degree?: string;
-
-  /** Final grade or GPA, e.g. "1.7" */
-  grade?: string;
-
-  /** Whether this should be featured on the website */
-  featured?: boolean;
-
-  /** Optional full markdown body content */
-  body?: string;
+  // /** Whether this should be featured on the website */
+  // featured?: boolean;
+  //
+  // /** Optional full markdown body content */
+  // body?: string;
 }
 
 export interface WebUIItem {

@@ -302,32 +302,29 @@ function generateCertification(i: number, lang: string): string {
   const cert: Certificate = {
     category: "",
     id: 0,
-    issuer: "",
-    title: "",
-    name: `Certification ${i}`,
-    organization: `Organization ${i}`,
+    title: `Certification ${i}`,
+    issuer: `Organization ${i}`,
     issueDate: `202${i}-01`,
-    expirationDate: `202${i + 2}-01`,
+    expiryDate: `202${i + 2}-01`,
     credentialId: `CERT-${1000 + i}`,
     credentialUrl: `https://example.com/certifications/${i}`,
     skills: ["Skill A", "Skill B", "Skill C"],
-    media: [`https://example.com/media/cert-${i}.jpg`],
+    logo: `https://example.com/media/cert-${i}.jpg`,
     description: `Description of certification ${i} in ${lang}`,
   };
 
   // Convert skills and media arrays to YAML
   const skillsYaml = cert.skills?.map((s) => `  - "${s}"`).join("\n") ?? "";
-  const mediaYaml = cert.media?.map((m) => `  - "${m}"`).join("\n") ?? "";
+  // const mediaYaml = cert.logo?.map((m) => `  - "${m}"`).join("\n") ?? "";
 
   return `---
-name: "${cert.name}"
-organization: "${cert.organization}"
+name: "${cert.logo}"
+organization: "${cert.issuer}"
 issueDate: "${cert.issueDate}"
-expirationDate: "${cert.expirationDate ?? ""}"
+expiryDate: "${cert.expiryDate ?? ""}"
 credentialId: "${cert.credentialId ?? ""}"
 credentialUrl: "${cert.credentialUrl ?? ""}"
 ${skillsYaml ? `skills:\n${skillsYaml}` : ""}
-${mediaYaml ? `media:\n${mediaYaml}` : ""}
 description: "${cert.description ?? ""}"
 ---
 

@@ -6,9 +6,9 @@ import { generateMDF } from "@/lib/scripts/json-to-md";
 
 try {
   generateMDF();
-  //buildConfigsJson();
+  buildConfigsJson();
   // generateRegistry();
-  // convertMdToTs();
+  convertMdToTs();
   generateContent();
 } catch (error) {
   console.error("❌ Error generating content:", error);

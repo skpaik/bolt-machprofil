@@ -821,7 +821,7 @@
       {
         "slug": "1",
         "order": 1,
-        "id": "1",
+        "id": 1,
         "company": "TechCorp Inc.",
         "companyUrl": "https://techcorp.com",
         "logo": "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=200&h=200&fit=crop",
@@ -830,7 +830,6 @@
         "location": "Cottbus-Ströbitz, Brandenburg, Germany",
         "locationType": "Hybrid",
         "startDate": "2022-03-01",
-        "endDate": "Present",
         "duration": "2 years 8 months",
         "description": "Leading development of enterprise web applications and mentoring junior developers. Responsible for architecture decisions and implementation of scalable solutions.",
         "responsibilities": [
@@ -866,7 +865,7 @@
       {
         "slug": "2",
         "order": 2,
-        "id": "2",
+        "id": 2,
         "company": "Digital Solutions Ltd",
         "companyUrl": "https://digitalsolutions.com",
         "logo": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&h=200&fit=crop",
@@ -910,7 +909,7 @@
       {
         "slug": "3",
         "order": 3,
-        "id": "3",
+        "id": 3,
         "company": "StartupHub",
         "companyUrl": "https://startuphub.io",
         "logo": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=200&h=200&fit=crop",
@@ -954,8 +953,9 @@
       {
         "slug": "4",
         "order": 4,
-        "id": "4",
+        "id": 4,
         "company": "Freelance",
+        "companyUrl": "https://upwork.com",
         "position": "Full Stack Developer",
         "employmentType": "Freelance",
         "location": "Remote",
@@ -995,7 +995,7 @@
       {
         "slug": "5",
         "order": 5,
-        "id": "5",
+        "id": 5,
         "company": "WebAgency Pro",
         "companyUrl": "https://webagencypro.com",
         "logo": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&h=200&fit=crop",
