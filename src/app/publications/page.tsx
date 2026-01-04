@@ -70,9 +70,9 @@ export default function PublicationsPage() {
     filtered.sort((a: Publication, b: Publication) => {
       switch (sortBy) {
         case "year-desc":
-          return parseInt(b.year) - parseInt(a.year);
+          return b.year - a.year;
         case "year-asc":
-          return parseInt(a.year) - parseInt(b.year);
+          return a.year - b.year;
         case "title-asc":
           return a.title.localeCompare(b.title);
         case "title-desc":

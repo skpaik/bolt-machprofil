@@ -235,6 +235,7 @@ const TYPE_METADATA: Record<
     citations: { type: "number", required: false },
     featured: { type: "boolean", required: false },
     status: { type: "string", required: false },
+    images: { type: "array", required: false },
   },
   skill_list: {
     id: { type: "number", required: false },

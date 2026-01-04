@@ -144,12 +144,12 @@ export interface Education {
   grade?: string;
 
   type:
-      | string
-      | "Degree"
-      | "Certificate"
-      | "Course"
-      | "Bootcamp"
-      | "Self-Study";
+    | string
+    | "Degree"
+    | "Certificate"
+    | "Course"
+    | "Bootcamp"
+    | "Self-Study";
 
   /** Short description of the education or major */
   description: string;
@@ -330,7 +330,7 @@ export interface Publication extends BaseContent {
   // date: string;
   // link?: string;
   // summary?: string;
-  // media?: string[];
+  images?: string[];
 }
 
 export interface PortfolioContextType {

@@ -334,38 +334,30 @@ NA
 
 function generatePublication(i: number, lang: string): string {
   const pub: Publication = {
-    abstract: "",
     id: 0,
     publishedIn: "",
     status: "Published",
     type: "Journal",
-    year: "",
+    year: 2026,
     title: `Publication Title ${i}`,
     authors: [`Author A${i}`, `Author B${i}`],
     publisher: `Publisher ${i}`,
-    date: `202${i}-06-01`,
-    link: `https://example.com/publication/${i}`,
+    //date: `202${i}-06-01`,
+    //link: `https://example.com/publication/${i}`,
     doi: `10.1234/example-doi-${i}`,
-    summary: `This is a brief summary of publication ${i} in ${lang}.`,
+    abstract: `This is a brief summary of publication ${i} in ${lang}.`,
     keywords: ["Keyword1", "Keyword2", "Keyword3"],
-    media: [`https://example.com/media/pub-${i}.jpg`],
+    images: [`https://example.com/media/pub-${i}.jpg`],
   };
 
   const authorsYaml = pub.authors.map((a) => `  - "${a}"`).join("\n");
   const keywordsYaml = pub.keywords?.map((k) => `  - "${k}"`).join("\n") ?? "";
-  const mediaYaml = pub.media?.map((m) => `  - "${m}"`).join("\n") ?? "";
 
   return `---
 title: "${pub.title}"
 authors:
 ${authorsYaml}
 publisher: "${pub.publisher}"
-date: "${pub.date}"
-link: "${pub.link ?? ""}"
-doi: "${pub.doi ?? ""}"
-summary: "${pub.summary ?? ""}"
-${keywordsYaml ? `keywords:\n${keywordsYaml}` : ""}
-${mediaYaml ? `media:\n${mediaYaml}` : ""}
 ---
 
 NA

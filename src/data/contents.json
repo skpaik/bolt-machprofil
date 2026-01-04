@@ -1,5 +1,267 @@
 {
   "configs": {},
+  "de": {
+    "blogs": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "My Blog Post 1 (DE)",
+        "date": "2024-11-28",
+        "author": "Mofiz Rahman",
+        "excerpt": "A short summary for blog post 1 in DE.",
+        "tags": ["tech", "typescript"],
+        "image": "/images/blog-1.jpg",
+        "featured": false,
+        "readTime": 6,
+        "category": "Guide",
+        "content": "🇩🇪 (DE) React React React Next.js Cloud Cloud React Node.js JavaScript TypeScript.\n\n🇩🇪 (DE) TypeScript React Cloud Cloud React Cloud React Cloud Cloud JavaScript.\n\n🇩🇪 (DE) Architecture Next.js Architecture TypeScript Architecture TypeScript TypeScript React Architecture Next.js.\n\n🇩🇪 (DE) React JavaScript Node.js TypeScript React Architecture TypeScript TypeScript TypeScript React.\n\n🇩🇪 (DE) Architecture Next.js TypeScript React JavaScript Architecture TypeScript Cloud TypeScript TypeScript."
+      }
+    ],
+    "educations": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Education 1 (DE)",
+        "institution": "RWTH Aachen",
+        "location": "Munich, Germany",
+        "startDate": "2016-10-01",
+        "endDate": "2018-09-30",
+        "description": "Completed a degree in Computer Science with focus on Artificial Intelligence.",
+        "logo": "/images/education-1.png",
+        "degree": "Master's",
+        "grade": "1.3",
+        "featured": true,
+        "content": "🇩🇪 (DE) React TypeScript Node.js Node.js TypeScript React Cloud Architecture Architecture Architecture.\n\n🇩🇪 (DE) JavaScript Next.js JavaScript JavaScript Next.js React Next.js Next.js Node.js TypeScript.\n\n🇩🇪 (DE) Architecture Cloud Architecture JavaScript Node.js JavaScript Next.js Architecture JavaScript Node.js."
+      }
+    ],
+    "experiences": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (DE)",
+        "organization": "Tech Corp 1",
+        "location": "Berlin, Germany",
+        "current": false,
+        "startDate": "2020-01-01",
+        "endDate": "2024-01-01",
+        "website": "https://company1.com",
+        "technologies": ["Node.js", "React"],
+        "description": "🇩🇪 (DE) Led development team for Tech Corp 1.",
+        "responsibilities": [
+          "Responsibility 1 for experience 1",
+          "Responsibility 2 for experience 1",
+          "Responsibility 3 for experience 1"
+        ],
+        "logo": "/images/organization-logo-1.png",
+        "content": "🇩🇪 (DE) Cloud Cloud Next.js Architecture Cloud Node.js TypeScript JavaScript Next.js Next.js.\n\n🇩🇪 (DE) TypeScript TypeScript JavaScript Cloud JavaScript Next.js Cloud Node.js Architecture Next.js.\n\n🇩🇪 (DE) React Cloud Next.js JavaScript TypeScript Node.js Architecture JavaScript JavaScript TypeScript."
+      }
+    ],
+    "info": {
+      "bio": [
+        {
+          "slug": "bio",
+          "order": 0,
+          "fullName": "Mofiz Rahman",
+          "title": "Software Engineer",
+          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
+          "location": "Berlin, Germany",
+          "dob": "1990-05-12",
+          "photo": "https://example.com/photos/alex.jpg",
+          "content": "NA"
+        }
+      ],
+      "contact": [
+        {
+          "slug": "contact",
+          "order": 0,
+          "title": "Contacts for language: de",
+          "contacts": [
+            {
+              "type": "Email",
+              "value": "alex@example.com",
+              "label": "Work"
+            },
+            {
+              "type": "Phone",
+              "value": "+49 1522 1234567",
+              "label": "Mobile"
+            },
+            {
+              "type": "Website",
+              "value": "https://alexjohnson.dev",
+              "label": "Website"
+            },
+            {
+              "type": "Address",
+              "value": "Berlin, Germany",
+              "description": "Current residence"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "interest": [
+        {
+          "slug": "interest",
+          "order": 0,
+          "items": [
+            "Photography",
+            "Traveling",
+            "Open-source projects",
+            "Reading",
+            "Music",
+            "Sports"
+          ],
+          "content": "NA"
+        }
+      ],
+      "languages": [
+        {
+          "slug": "languages",
+          "order": 0,
+          "title": "Languages for language: de",
+          "languages": [
+            {
+              "name": "English",
+              "read": "Fluent",
+              "write": "Fluent",
+              "speak": "Fluent",
+              "listen": "Fluent",
+              "tests": ["IELTS", "TOEFL"],
+              "level": "C1"
+            },
+            {
+              "name": "German",
+              "read": "Intermediate",
+              "write": "Intermediate",
+              "speak": "Intermediate",
+              "listen": "Intermediate",
+              "tests": ["Goethe B2", "Telc B2"],
+              "level": "B2"
+            },
+            {
+              "name": "French",
+              "read": "Good",
+              "write": "Good",
+              "speak": "Intermediate",
+              "listen": "Good",
+              "level": "B1"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "reference": [
+        {
+          "slug": "reference",
+          "order": 0,
+          "title": "References for language: de",
+          "references": [
+            {
+              "name": "Dr. Laura Schmidt",
+              "position": "Engineering Manager",
+              "organization": "TechCorp GmbH",
+              "email": "laura.schmidt@techcorp.de",
+              "phone": "+49 1522 111222",
+              "relation": "Manager at TechCorp"
+            },
+            {
+              "name": "Prof. Mofiz Rahman",
+              "position": "Professor of Computer Science",
+              "organization": "University of Hamburg",
+              "email": "j.doe@uni-hamburg.de",
+              "relation": "Thesis Supervisor"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "skills": [
+        {
+          "slug": "skills",
+          "order": 0,
+          "title": "Skills for language: de",
+          "skills": [
+            {
+              "category": "Programming",
+              "items": ["Python", "TypeScript", "Java", "C++"]
+            },
+            {
+              "category": "Tools & Cloud",
+              "items": ["AWS", "Docker", "Kubernetes"]
+            },
+            {
+              "category": "Soft Skills",
+              "items": ["Leadership", "Communication", "Mentoring"]
+            },
+            {
+              "category": "Design & Creative",
+              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+            },
+            {
+              "category": "Languages",
+              "items": ["English", "German", "French"]
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "social": [
+        {
+          "slug": "social",
+          "order": 0,
+          "title": "Social Links for language: de",
+          "social_links": [
+            {
+              "platform": "LinkedIn",
+              "url": "https://linkedin.com/in/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "GitHub",
+              "url": "https://github.com/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "Twitter",
+              "url": "https://twitter.com/alexjohnson"
+            }
+          ],
+          "content": "NA"
+        }
+      ]
+    },
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (DE)",
+        "image": "/images/photo-1.jpg",
+        "category": "Guide",
+        "description": "Project 1 overview in DE.",
+        "date": "2020-01-01",
+        "tags": ["tech", "javascript"],
+        "featured": false,
+        "content": "🇩🇪 (DE) Architecture Cloud TypeScript JavaScript Cloud Cloud Next.js Architecture React TypeScript.\n\n🇩🇪 (DE) Node.js React React Next.js JavaScript Cloud Next.js Cloud React Next.js.\n\n🇩🇪 (DE) Architecture Cloud React Cloud JavaScript React Next.js Cloud Cloud Next.js."
+      }
+    ],
+    "projects": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "My Project 1 (DE)",
+        "description": "Project 1 overview in DE.",
+        "technologies": ["TypeScript", "React"],
+        "link": "https://example.com/projects/1",
+        "github": "https://github.com/user/project-1",
+        "date": "2024-08-25",
+        "image": "/images/project-1.jpg",
+        "status": "planned",
+        "featured": false,
+        "content": "🇩🇪 (DE) Architecture Node.js Architecture Architecture TypeScript TypeScript JavaScript React TypeScript JavaScript.\n\n🇩🇪 (DE) TypeScript TypeScript TypeScript TypeScript JavaScript Architecture React Cloud TypeScript Cloud.\n\n🇩🇪 (DE) Cloud React Node.js Node.js Architecture JavaScript Architecture Node.js Node.js Architecture.\n\n🇩🇪 (DE) React Cloud Architecture Next.js Cloud Next.js JavaScript JavaScript TypeScript Architecture."
+      }
+    ]
+  },
   "en": {
     "about_content": [
       {
@@ -165,12 +427,7 @@
         "author": "Abul Mal",
         "readTime": 8,
         "category": "Web Development",
-        "tags": [
-          "React",
-          "JavaScript",
-          "Hooks",
-          "Frontend"
-        ],
+        "tags": ["React", "JavaScript", "Hooks", "Frontend"],
         "featured": true,
         "content": "<h2>Introduction</h2><p>React and TypeScript are a powerful combination for building robust web applications. In this article, we'll explore how to get started with both technologies.</p><h2>Setting Up Your Project</h2><p>First, create a new React app with TypeScript support using Create React App...</p><h2>TypeScript Basics</h2><p>TypeScript adds static typing to JavaScript, which helps catch errors early in development...</p><h2>Conclusion</h2><p>Combining React with TypeScript creates a more maintainable and scalable codebase.</p>"
       },
@@ -185,12 +442,7 @@
         "author": "Abul Mal",
         "readTime": 10,
         "category": "Programming",
-        "tags": [
-          "TypeScript",
-          "JavaScript",
-          "Best Practices",
-          "Code Quality"
-        ],
+        "tags": ["TypeScript", "JavaScript", "Best Practices", "Code Quality"],
         "featured": true,
         "content": "<h2>Why Scalability Matters</h2><p>Building APIs that can handle growth is crucial for long-term success...</p><h2>Architecture Patterns</h2><p>We'll explore microservices, modular monoliths, and when to use each...</p><h2>Performance Optimization</h2><p>Learn about caching strategies, database optimization, and load balancing...</p>"
       },
@@ -205,12 +457,7 @@
         "author": "Abul Mal",
         "readTime": 12,
         "category": "Web Development",
-        "tags": [
-          "Next.js",
-          "React",
-          "App Router",
-          "SSR"
-        ],
+        "tags": ["Next.js", "React", "App Router", "SSR"],
         "featured": true,
         "content": "<h2>The Evolution of CSS</h2><p>CSS continues to evolve with powerful new features that make styling easier...</p><h2>Container Queries</h2><p>Container queries allow components to adapt based on their container size...</p><h2>Cascade Layers</h2><p>Manage CSS specificity and organization with cascade layers...</p>"
       },
@@ -225,12 +472,7 @@
         "author": "Abul Mal",
         "readTime": 6,
         "category": "CSS & Design",
-        "tags": [
-          "CSS",
-          "Grid",
-          "Flexbox",
-          "Layout"
-        ],
+        "tags": ["CSS", "Grid", "Flexbox", "Layout"],
         "content": "<h2>Normalization vs Denormalization</h2><p>Understanding when to normalize and when to denormalize your data...</p><h2>Indexing Strategies</h2><p>Proper indexing can dramatically improve query performance...</p><h2>Schema Evolution</h2><p>Plan for changes and migrations from the start...</p>"
       },
       {
@@ -244,13 +486,7 @@
         "author": "Abul Mal",
         "readTime": 15,
         "category": "Backend Development",
-        "tags": [
-          "Node.js",
-          "Express",
-          "API",
-          "REST",
-          "MongoDB"
-        ],
+        "tags": ["Node.js", "Express", "API", "REST", "MongoDB"],
         "content": "<h2>Why Performance Matters</h2><p>Faster websites lead to better user engagement and higher conversion rates...</p><h2>Core Web Vitals</h2><p>Understanding LCP, FID, and CLS metrics...</p><h2>Optimization Techniques</h2><p>Image optimization, code splitting, and lazy loading...</p>"
       },
       {
@@ -264,12 +500,7 @@
         "author": "Abul Mal",
         "readTime": 7,
         "category": "CSS & Design",
-        "tags": [
-          "Responsive Design",
-          "CSS",
-          "Mobile First",
-          "Web Design"
-        ],
+        "tags": ["Responsive Design", "CSS", "Mobile First", "Web Design"],
         "content": "<h2>Git Flow vs GitHub Flow</h2><p>Compare different branching strategies and their use cases...</p><h2>Merge vs Rebase</h2><p>When to use each approach and their trade-offs...</p><h2>Collaboration Best Practices</h2><p>Code reviews, commit messages, and conflict resolution...</p>"
       },
       {
@@ -283,12 +514,7 @@
         "author": "Abul Mal",
         "readTime": 14,
         "category": "DevOps",
-        "tags": [
-          "Docker",
-          "Kubernetes",
-          "Containers",
-          "DevOps"
-        ],
+        "tags": ["Docker", "Kubernetes", "Containers", "DevOps"],
         "content": "<h2>What is Docker?</h2><p>Docker enables you to package applications with their dependencies...</p><h2>Images and Containers</h2><p>Understanding the difference and how to create efficient images...</p><h2>Docker Compose</h2><p>Orchestrating multi-container applications...</p>"
       },
       {
@@ -321,12 +547,7 @@
         "author": "Abul Mal",
         "readTime": 9,
         "category": "CSS & Design",
-        "tags": [
-          "Tailwind CSS",
-          "CSS",
-          "Utility-First",
-          "Styling"
-        ],
+        "tags": ["Tailwind CSS", "CSS", "Utility-First", "Styling"],
         "content": "Full blog post content here..."
       },
       {
@@ -340,12 +561,7 @@
         "author": "Abul Mal",
         "readTime": 13,
         "category": "Backend Development",
-        "tags": [
-          "GraphQL",
-          "REST",
-          "API",
-          "Backend"
-        ],
+        "tags": ["GraphQL", "REST", "API", "Backend"],
         "content": "Full blog post content here..."
       },
       {
@@ -359,12 +575,7 @@
         "author": "Abul Mal",
         "readTime": 16,
         "category": "Database",
-        "tags": [
-          "MongoDB",
-          "Database",
-          "NoSQL",
-          "Aggregation"
-        ],
+        "tags": ["MongoDB", "Database", "NoSQL", "Aggregation"],
         "content": "Full blog post content here..."
       },
       {
@@ -378,12 +589,7 @@
         "author": "Abul Mal",
         "readTime": 10,
         "category": "Web Development",
-        "tags": [
-          "React",
-          "Performance",
-          "Optimization",
-          "JavaScript"
-        ],
+        "tags": ["React", "Performance", "Optimization", "JavaScript"],
         "content": "Full blog post content here..."
       }
     ],
@@ -399,12 +605,7 @@
         "credentialId": "AWS-PSA-12345",
         "credentialUrl": "https://aws.amazon.com/verification",
         "category": "Cloud Computing",
-        "skills": [
-          "AWS",
-          "Cloud Architecture",
-          "Infrastructure",
-          "Security"
-        ],
+        "skills": ["AWS", "Cloud Architecture", "Infrastructure", "Security"],
         "description": "Advanced AWS certification demonstrating expertise in designing and deploying dynamically scalable, highly available, fault-tolerant, and reliable applications on AWS.",
         "logo": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=400&h=400&fit=crop",
         "verified": true,
@@ -422,12 +623,7 @@
         "credentialId": "GCP-PCA-67890",
         "credentialUrl": "https://cloud.google.com/certification",
         "category": "Cloud Computing",
-        "skills": [
-          "GCP",
-          "Cloud Architecture",
-          "Kubernetes",
-          "DevOps"
-        ],
+        "skills": ["GCP", "Cloud Architecture", "Kubernetes", "DevOps"],
         "description": "Professional certification validating ability to design, develop, and manage robust, secure, scalable, and dynamic solutions on Google Cloud.",
         "logo": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=400&fit=crop",
         "verified": true,
@@ -445,12 +641,7 @@
         "credentialId": "META-FED-11223",
         "credentialUrl": "https://coursera.org/verify/professional-cert/xyz",
         "category": "Web Development",
-        "skills": [
-          "React",
-          "JavaScript",
-          "HTML/CSS",
-          "UI/UX"
-        ],
+        "skills": ["React", "JavaScript", "HTML/CSS", "UI/UX"],
         "description": "Comprehensive program covering React, JavaScript, HTML/CSS, and modern front-end development practices.",
         "logo": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop",
         "verified": true,
@@ -467,12 +658,7 @@
         "credentialId": "CNCF-CKA-44556",
         "credentialUrl": "https://www.cncf.io/certification/cka/",
         "category": "DevOps",
-        "skills": [
-          "Kubernetes",
-          "Docker",
-          "Container Orchestration",
-          "Linux"
-        ],
+        "skills": ["Kubernetes", "Docker", "Container Orchestration", "Linux"],
         "description": "Validates skills in deploying, managing, and troubleshooting Kubernetes clusters.",
         "logo": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=400&fit=crop",
         "verified": true,
@@ -490,12 +676,7 @@
         "credentialId": "MS-AZ-204-78901",
         "credentialUrl": "https://learn.microsoft.com/credentials",
         "category": "Cloud Computing",
-        "skills": [
-          "Azure",
-          "Cloud Development",
-          "APIs",
-          "Security"
-        ],
+        "skills": ["Azure", "Cloud Development", "APIs", "Security"],
         "description": "Demonstrates expertise in designing, building, testing, and maintaining cloud applications on Microsoft Azure.",
         "logo": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=400&fit=crop",
         "verified": true,
@@ -512,12 +693,7 @@
         "credentialId": "CSM-123456",
         "credentialUrl": "https://www.scrumalliance.org/get-certified/verify",
         "category": "Project Management",
-        "skills": [
-          "Scrum",
-          "Agile",
-          "Team Leadership",
-          "Project Management"
-        ],
+        "skills": ["Scrum", "Agile", "Team Leadership", "Project Management"],
         "description": "Validates understanding of Scrum framework and ability to apply it in real-world scenarios.",
         "logo": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
         "verified": true,
@@ -534,12 +710,7 @@
         "credentialId": "DL-SPEC-99887",
         "credentialUrl": "https://coursera.org/verify/specialization/abc123",
         "category": "Machine Learning",
-        "skills": [
-          "Deep Learning",
-          "Neural Networks",
-          "TensorFlow",
-          "Python"
-        ],
+        "skills": ["Deep Learning", "Neural Networks", "TensorFlow", "Python"],
         "description": "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
         "logo": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=400&fit=crop",
         "verified": true,
@@ -556,12 +727,7 @@
         "credentialId": "ADOBE-VD-55443",
         "credentialUrl": "https://www.adobe.com/certification",
         "category": "Design",
-        "skills": [
-          "Photoshop",
-          "Illustrator",
-          "InDesign",
-          "Visual Design"
-        ],
+        "skills": ["Photoshop", "Illustrator", "InDesign", "Visual Design"],
         "description": "Demonstrates proficiency in Adobe Creative Suite for professional visual design work.",
         "logo": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=400&fit=crop",
         "verified": true,
@@ -578,12 +744,7 @@
         "credentialId": "GA-IQ-22334",
         "credentialUrl": "https://skillshop.exceedlms.com/student/catalog",
         "category": "Marketing",
-        "skills": [
-          "Google Analytics",
-          "Data Analysis",
-          "Marketing",
-          "SEO"
-        ],
+        "skills": ["Google Analytics", "Data Analysis", "Marketing", "SEO"],
         "description": "Demonstrates proficiency in Google Analytics, including setup, collection, configuration, and reporting.",
         "logo": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop",
         "verified": true,
@@ -644,12 +805,7 @@
         "credentialId": "MONGO-DEV-33445",
         "credentialUrl": "https://university.mongodb.com/certification",
         "category": "Database",
-        "skills": [
-          "MongoDB",
-          "NoSQL",
-          "Database Design",
-          "Node.js"
-        ],
+        "skills": ["MongoDB", "NoSQL", "Database Design", "Node.js"],
         "description": "Demonstrates ability to build applications using MongoDB and understanding of core MongoDB concepts.",
         "logo": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=400&fit=crop",
         "verified": true,
@@ -943,11 +1099,7 @@
           "Jest",
           "Cypress"
         ],
-        "projects": [
-          "SaaS Dashboard",
-          "Analytics Platform",
-          "Admin Panel"
-        ],
+        "projects": ["SaaS Dashboard", "Analytics Platform", "Admin Panel"],
         "content": ""
       },
       {
@@ -1029,11 +1181,7 @@
           "PHP",
           "Git"
         ],
-        "projects": [
-          "Client Websites",
-          "Landing Pages",
-          "WordPress Themes"
-        ],
+        "projects": ["Client Websites", "Landing Pages", "WordPress Themes"],
         "content": ""
       }
     ],
@@ -1108,10 +1256,7 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
-              ],
+              "tests": ["IELTS", "TOEFL"],
               "level": "C1"
             },
             {
@@ -1120,10 +1265,7 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
-              ],
+              "tests": ["Goethe B2", "Telc B2"],
               "level": "B2"
             },
             {
@@ -1171,44 +1313,23 @@
           "skills": [
             {
               "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
+              "items": ["Python", "TypeScript", "Java", "C++"]
             },
             {
               "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
+              "items": ["AWS", "Docker", "Kubernetes"]
             },
             {
               "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
+              "items": ["Leadership", "Communication", "Mentoring"]
             },
             {
               "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
+              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
             },
             {
               "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
+              "items": ["English", "German", "French"]
             }
           ],
           "content": "NA"
@@ -1249,12 +1370,7 @@
         "date": "2024-08-15",
         "location": "Rocky Mountains, Colorado",
         "camera": "Canon EOS R5",
-        "tags": [
-          "Landscape",
-          "Mountains",
-          "Sunrise",
-          "Nature"
-        ],
+        "tags": ["Landscape", "Mountains", "Sunrise", "Nature"],
         "views": 1234,
         "content": ""
       },
@@ -1270,12 +1386,7 @@
         "date": "2024-08-10",
         "location": "Pacific Northwest",
         "camera": "Sony A7III",
-        "tags": [
-          "Forest",
-          "Trees",
-          "Path",
-          "Nature"
-        ],
+        "tags": ["Forest", "Trees", "Path", "Nature"],
         "views": 892,
         "content": ""
       },
@@ -1291,12 +1402,7 @@
         "date": "2024-07-22",
         "location": "Big Sur, California",
         "camera": "Nikon Z6",
-        "tags": [
-          "Ocean",
-          "Waves",
-          "Seascape",
-          "Nature"
-        ],
+        "tags": ["Ocean", "Waves", "Seascape", "Nature"],
         "views": 1567,
         "content": ""
       },
@@ -1311,12 +1417,7 @@
         "description": "Golden hour in the vast desert landscape with sand dunes.",
         "date": "2024-06-18",
         "location": "Sahara Desert",
-        "tags": [
-          "Desert",
-          "Sunset",
-          "Dunes",
-          "Landscape"
-        ],
+        "tags": ["Desert", "Sunset", "Dunes", "Landscape"],
         "views": 743,
         "content": ""
       },
@@ -1332,12 +1433,7 @@
         "date": "2024-05-12",
         "location": "Paris, France",
         "camera": "Canon EOS R6",
-        "tags": [
-          "Paris",
-          "Architecture",
-          "Night",
-          "Travel"
-        ],
+        "tags": ["Paris", "Architecture", "Night", "Travel"],
         "views": 2134,
         "content": ""
       },
@@ -1353,12 +1449,7 @@
         "date": "2024-04-08",
         "location": "Tokyo, Japan",
         "camera": "Fujifilm X-T4",
-        "tags": [
-          "Tokyo",
-          "Street",
-          "Urban",
-          "Travel"
-        ],
+        "tags": ["Tokyo", "Street", "Urban", "Travel"],
         "views": 1876,
         "content": ""
       },
@@ -1374,12 +1465,7 @@
         "date": "2024-03-25",
         "location": "Venice, Italy",
         "camera": "Sony A7IV",
-        "tags": [
-          "Venice",
-          "Canals",
-          "Gondola",
-          "Travel"
-        ],
+        "tags": ["Venice", "Canals", "Gondola", "Travel"],
         "views": 1543,
         "featured": true,
         "content": ""
@@ -1395,12 +1481,7 @@
         "description": "Stunning sunset view over the white buildings of Santorini.",
         "date": "2024-02-14",
         "location": "Santorini, Greece",
-        "tags": [
-          "Santorini",
-          "Sunset",
-          "Greece",
-          "Travel"
-        ],
+        "tags": ["Santorini", "Sunset", "Greece", "Travel"],
         "views": 2456,
         "featured": true,
         "content": ""
@@ -1417,12 +1498,7 @@
         "date": "2024-09-05",
         "location": "New York City",
         "camera": "Nikon Z7",
-        "tags": [
-          "Skyscraper",
-          "Modern",
-          "Glass",
-          "Architecture"
-        ],
+        "tags": ["Skyscraper", "Modern", "Glass", "Architecture"],
         "views": 987,
         "content": ""
       },
@@ -1438,12 +1514,7 @@
         "date": "2024-08-20",
         "location": "Barcelona, Spain",
         "camera": "Canon EOS 5D",
-        "tags": [
-          "Cathedral",
-          "Gothic",
-          "Historic",
-          "Architecture"
-        ],
+        "tags": ["Cathedral", "Gothic", "Historic", "Architecture"],
         "views": 1234,
         "featured": true,
         "content": ""
@@ -1459,12 +1530,7 @@
         "description": "Clean lines and minimalist design in modern interior space.",
         "date": "2024-07-10",
         "location": "Copenhagen, Denmark",
-        "tags": [
-          "Interior",
-          "Minimalist",
-          "Modern",
-          "Design"
-        ],
+        "tags": ["Interior", "Minimalist", "Modern", "Design"],
         "views": 756,
         "content": ""
       },
@@ -1480,12 +1546,7 @@
         "date": "2024-10-01",
         "location": "New York City",
         "camera": "Leica Q2",
-        "tags": [
-          "Street",
-          "Urban",
-          "People",
-          "Candid"
-        ],
+        "tags": ["Street", "Urban", "People", "Candid"],
         "views": 1432,
         "content": ""
       },
@@ -1500,12 +1561,7 @@
         "description": "Vibrant colors and textures at the local street market.",
         "date": "2024-09-18",
         "location": "Marrakech, Morocco",
-        "tags": [
-          "Market",
-          "Colors",
-          "Culture",
-          "Street"
-        ],
+        "tags": ["Market", "Colors", "Culture", "Street"],
         "views": 1098,
         "content": ""
       },
@@ -1521,12 +1577,7 @@
         "date": "2024-08-30",
         "location": "London, UK",
         "camera": "Fujifilm X100V",
-        "tags": [
-          "Rain",
-          "Night",
-          "Reflections",
-          "Street"
-        ],
+        "tags": ["Rain", "Night", "Reflections", "Street"],
         "views": 1876,
         "content": ""
       },
@@ -1542,12 +1593,7 @@
         "date": "2024-07-05",
         "location": "Serengeti, Tanzania",
         "camera": "Canon EOS-1D X Mark III",
-        "tags": [
-          "Lion",
-          "Safari",
-          "Africa",
-          "Wildlife"
-        ],
+        "tags": ["Lion", "Safari", "Africa", "Wildlife"],
         "views": 2345,
         "content": ""
       },
@@ -1563,12 +1609,7 @@
         "date": "2024-06-22",
         "location": "Alaska, USA",
         "camera": "Nikon D850",
-        "tags": [
-          "Eagle",
-          "Bird",
-          "Flight",
-          "Wildlife"
-        ],
+        "tags": ["Eagle", "Bird", "Flight", "Wildlife"],
         "views": 1654,
         "content": ""
       }
@@ -1582,11 +1623,7 @@
         "shortDescription": "Full-stack online shopping platform with payment integration",
         "description": "A comprehensive e-commerce solution built with Next.js and Stripe, featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
         "category": "Web Development",
-        "tags": [
-          "E-commerce",
-          "Full Stack",
-          "Payment Gateway"
-        ],
+        "tags": ["E-commerce", "Full Stack", "Payment Gateway"],
         "thumbnail": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
         "startDate": "2024-01-15",
         "endDate": "2024-06-20",
@@ -1624,11 +1661,7 @@
         "shortDescription": "Patient management and appointment scheduling platform",
         "description": "Modern healthcare management system for clinics and hospitals, featuring appointment scheduling, patient records, and telemedicine capabilities.",
         "category": "Web Development",
-        "tags": [
-          "Healthcare",
-          "SaaS",
-          "Dashboard"
-        ],
+        "tags": ["Healthcare", "SaaS", "Dashboard"],
         "thumbnail": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
         "startDate": "2023-09-10",
         "endDate": "2024-02-15",
@@ -1665,11 +1698,7 @@
         "shortDescription": "Analytics dashboard for social media management",
         "description": "Comprehensive social media analytics platform that aggregates data from multiple platforms and provides actionable insights.",
         "category": "Web Development",
-        "tags": [
-          "Analytics",
-          "Dashboard",
-          "Social Media"
-        ],
+        "tags": ["Analytics", "Dashboard", "Social Media"],
         "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
         "startDate": "2023-07-01",
         "endDate": "2023-11-30",
@@ -1705,11 +1734,7 @@
         "shortDescription": "AI-powered content creation tool for marketers",
         "description": "Intelligent content generation platform leveraging GPT-4 to create blog posts, social media content, and marketing copy.",
         "category": "AI/ML",
-        "tags": [
-          "AI",
-          "Content",
-          "SaaS"
-        ],
+        "tags": ["AI", "Content", "SaaS"],
         "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
         "startDate": "2024-03-01",
         "endDate": "Ongoing",
@@ -1745,11 +1770,7 @@
         "shortDescription": "Cross-platform mobile app for workout and nutrition tracking",
         "description": "Comprehensive fitness application with workout tracking, meal planning, progress analytics, and social features.",
         "category": "Mobile Development",
-        "tags": [
-          "Fitness",
-          "Health",
-          "Mobile"
-        ],
+        "tags": ["Fitness", "Health", "Mobile"],
         "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
         "startDate": "2023-05-15",
         "endDate": "2023-12-20",
@@ -1784,11 +1805,7 @@
         "shortDescription": "Property listing and management platform",
         "description": "Modern real estate platform connecting buyers, sellers, and agents with advanced search, virtual tours, and scheduling.",
         "category": "Web Development",
-        "tags": [
-          "Real Estate",
-          "Marketplace",
-          "Geolocation"
-        ],
+        "tags": ["Real Estate", "Marketplace", "Geolocation"],
         "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
         "startDate": "2023-03-10",
         "endDate": "2023-09-05",
@@ -1824,11 +1841,7 @@
         "shortDescription": "Collaborative project management and team collaboration platform",
         "description": "Agile project management tool with kanban boards, time tracking, and team collaboration features.",
         "category": "Web Development",
-        "tags": [
-          "Productivity",
-          "Collaboration",
-          "SaaS"
-        ],
+        "tags": ["Productivity", "Collaboration", "SaaS"],
         "thumbnail": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
         "startDate": "2024-02-01",
         "endDate": "Ongoing",
@@ -1864,11 +1877,7 @@
         "shortDescription": "Real-time cryptocurrency tracking and portfolio management",
         "description": "Comprehensive crypto dashboard with real-time prices, portfolio tracking, and market analysis tools.",
         "category": "Web Development",
-        "tags": [
-          "Cryptocurrency",
-          "Finance",
-          "Dashboard"
-        ],
+        "tags": ["Cryptocurrency", "Finance", "Dashboard"],
         "thumbnail": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
         "startDate": "2023-11-01",
         "endDate": "2024-01-15",
@@ -1903,11 +1912,7 @@
         "shortDescription": "Interactive online education and course management system",
         "description": "Complete e-learning platform with video courses, quizzes, certificates, and student progress tracking.",
         "category": "Web Development",
-        "tags": [
-          "Education",
-          "Video",
-          "LMS"
-        ],
+        "tags": ["Education", "Video", "LMS"],
         "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
         "startDate": "2023-06-15",
         "endDate": "2024-03-30",
@@ -1942,11 +1947,7 @@
         "order": 1,
         "id": 1,
         "title": "Deep Learning Approaches for Natural Language Processing: A Comprehensive Survey",
-        "authors": [
-          "Mofiz Rahman",
-          "Jane Smith",
-          "Robert Johnson"
-        ],
+        "authors": ["Mofiz Rahman", "Jane Smith", "Robert Johnson"],
         "publishedIn": "IEEE Transactions on Neural Networks and Learning Systems",
         "publisher": "IEEE",
         "year": 2024,
@@ -1973,11 +1974,7 @@
         "order": 2,
         "id": 2,
         "title": "Efficient Training of Large-Scale Neural Networks Using Mixed Precision Techniques",
-        "authors": [
-          "Mofiz Rahman",
-          "Alice Brown",
-          "Michael Chen"
-        ],
+        "authors": ["Mofiz Rahman", "Alice Brown", "Michael Chen"],
         "publishedIn": "Proceedings of the 38th International Conference on Machine Learning (ICML)",
         "publisher": "PMLR",
         "year": 2024,
@@ -2003,10 +2000,7 @@
         "order": 3,
         "id": 3,
         "title": "Automated Code Review Using Machine Learning: Techniques and Applications",
-        "authors": [
-          "Mofiz Rahman",
-          "Sarah Wilson"
-        ],
+        "authors": ["Mofiz Rahman", "Sarah Wilson"],
         "publishedIn": "ACM Transactions on Software Engineering and Methodology",
         "publisher": "ACM",
         "year": 2023,
@@ -2031,12 +2025,7 @@
         "order": 4,
         "id": 4,
         "title": "Blockchain-Based Secure Data Sharing in Healthcare Systems",
-        "authors": [
-          "Mofiz Rahman",
-          "Emily Davis",
-          "David Lee",
-          "Maria Garcia"
-        ],
+        "authors": ["Mofiz Rahman", "Emily Davis", "David Lee", "Maria Garcia"],
         "publishedIn": "IEEE International Conference on Healthcare Informatics",
         "publisher": "IEEE",
         "year": 2023,
@@ -2062,10 +2051,7 @@
         "order": 5,
         "id": 5,
         "title": "Optimizing Web Performance: A Study of Modern JavaScript Frameworks",
-        "authors": [
-          "Mofiz Rahman",
-          "Tom Anderson"
-        ],
+        "authors": ["Mofiz Rahman", "Tom Anderson"],
         "publishedIn": "Handbook of Modern Web Development",
         "publisher": "Springer",
         "year": 2023,
@@ -2091,11 +2077,7 @@
         "order": 6,
         "id": 6,
         "title": "Federated Learning for Privacy-Preserving Machine Learning in IoT Networks",
-        "authors": [
-          "Mofiz Rahman",
-          "Lisa Martinez",
-          "Kevin Zhang"
-        ],
+        "authors": ["Mofiz Rahman", "Lisa Martinez", "Kevin Zhang"],
         "publishedIn": "IoT Workshop at NeurIPS 2023",
         "publisher": "NeurIPS",
         "year": 2023,
@@ -2120,11 +2102,7 @@
         "order": 7,
         "id": 7,
         "title": "Explainable AI for Medical Diagnosis: A Clinical Perspective",
-        "authors": [
-          "Mofiz Rahman",
-          "Dr. Rachel Kim",
-          "Dr. James Wilson"
-        ],
+        "authors": ["Mofiz Rahman", "Dr. Rachel Kim", "Dr. James Wilson"],
         "publishedIn": "Nature Machine Intelligence",
         "publisher": "Nature Publishing Group",
         "year": 2024,
@@ -2149,10 +2127,7 @@
         "order": 8,
         "id": 8,
         "title": "Real-Time Object Detection Using Edge Computing and Neural Networks",
-        "authors": [
-          "Mofiz Rahman",
-          "Chris Brown"
-        ],
+        "authors": ["Mofiz Rahman", "Chris Brown"],
         "publishedIn": "arXiv preprint",
         "year": 2024,
         "month": "April",
@@ -2176,11 +2151,7 @@
         "order": 9,
         "id": 9,
         "title": "Graph Neural Networks for Social Network Analysis",
-        "authors": [
-          "Mofiz Rahman",
-          "Anna Lee",
-          "Peter Johnson"
-        ],
+        "authors": ["Mofiz Rahman", "Anna Lee", "Peter Johnson"],
         "publishedIn": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
         "publisher": "ACM",
         "year": 2023,
@@ -2233,13 +2204,7 @@
         },
         "duration": "4-8 weeks",
         "popular": true,
-        "tags": [
-          "React",
-          "Next.js",
-          "TypeScript",
-          "Node.js",
-          "Full Stack"
-        ],
+        "tags": ["React", "Next.js", "TypeScript", "Node.js", "Full Stack"],
         "content": ""
       },
       {
@@ -2274,13 +2239,7 @@
         },
         "duration": "8-12 weeks",
         "popular": true,
-        "tags": [
-          "React Native",
-          "Flutter",
-          "iOS",
-          "Android",
-          "Mobile"
-        ],
+        "tags": ["React Native", "Flutter", "iOS", "Android", "Mobile"],
         "content": ""
       },
       {
@@ -2354,13 +2313,7 @@
           "currency": "USD"
         },
         "duration": "3-6 months",
-        "tags": [
-          "SEO",
-          "Google Analytics",
-          "Content",
-          "Marketing",
-          "Growth"
-        ],
+        "tags": ["SEO", "Google Analytics", "Content", "Marketing", "Growth"],
         "content": ""
       },
       {
@@ -2394,13 +2347,7 @@
           "currency": "USD"
         },
         "duration": "Ongoing",
-        "tags": [
-          "AWS",
-          "Azure",
-          "GCP",
-          "DevOps",
-          "Infrastructure"
-        ],
+        "tags": ["AWS", "Azure", "GCP", "DevOps", "Infrastructure"],
         "content": ""
       },
       {
@@ -2555,13 +2502,7 @@
           "currency": "USD"
         },
         "duration": "3-6 weeks",
-        "tags": [
-          "REST",
-          "GraphQL",
-          "Node.js",
-          "API",
-          "Backend"
-        ],
+        "tags": ["REST", "GraphQL", "Node.js", "API", "Backend"],
         "content": ""
       },
       {
@@ -2615,11 +2556,7 @@
         "proficiency": 95,
         "level": "Expert",
         "yearsOfExperience": 8,
-        "tags": [
-          "Programming",
-          "Frontend",
-          "Backend"
-        ],
+        "tags": ["Programming", "Frontend", "Backend"],
         "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
         "content": ""
       },
@@ -2632,11 +2569,7 @@
         "proficiency": 90,
         "level": "Expert",
         "yearsOfExperience": 6,
-        "tags": [
-          "Frontend",
-          "Framework",
-          "UI"
-        ],
+        "tags": ["Frontend", "Framework", "UI"],
         "description": "Building scalable web applications with React, hooks, and state management.",
         "content": ""
       },
@@ -2649,10 +2582,7 @@
         "proficiency": 88,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Programming",
-          "Type Safety"
-        ],
+        "tags": ["Programming", "Type Safety"],
         "description": "Strong typing for JavaScript applications, interfaces, and generics.",
         "content": ""
       },
@@ -2665,11 +2595,7 @@
         "proficiency": 85,
         "level": "Advanced",
         "yearsOfExperience": 6,
-        "tags": [
-          "Programming",
-          "Backend",
-          "Data Science"
-        ],
+        "tags": ["Programming", "Backend", "Data Science"],
         "description": "Backend development, automation, and data analysis.",
         "content": ""
       },
@@ -2682,11 +2608,7 @@
         "proficiency": 87,
         "level": "Advanced",
         "yearsOfExperience": 7,
-        "tags": [
-          "Backend",
-          "API",
-          "Server"
-        ],
+        "tags": ["Backend", "API", "Server"],
         "description": "Server-side JavaScript with Express, RESTful APIs, and microservices.",
         "content": ""
       },
@@ -2699,11 +2621,7 @@
         "proficiency": 80,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Design",
-          "User Experience",
-          "Interface"
-        ],
+        "tags": ["Design", "User Experience", "Interface"],
         "description": "Creating intuitive and visually appealing user interfaces.",
         "content": ""
       },
@@ -2716,11 +2634,7 @@
         "proficiency": 85,
         "level": "Advanced",
         "yearsOfExperience": 4,
-        "tags": [
-          "Design Tool",
-          "Prototyping",
-          "Collaboration"
-        ],
+        "tags": ["Design Tool", "Prototyping", "Collaboration"],
         "description": "Wireframing, prototyping, and design systems.",
         "content": ""
       },
@@ -2733,10 +2647,7 @@
         "proficiency": 75,
         "level": "Advanced",
         "yearsOfExperience": 7,
-        "tags": [
-          "Image Editing",
-          "Graphics"
-        ],
+        "tags": ["Image Editing", "Graphics"],
         "description": "Photo editing, digital art, and graphic design.",
         "content": ""
       },
@@ -2749,11 +2660,7 @@
         "proficiency": 70,
         "level": "Intermediate",
         "yearsOfExperience": 3,
-        "tags": [
-          "Art",
-          "Creative",
-          "Visual"
-        ],
+        "tags": ["Art", "Creative", "Visual"],
         "description": "Digital and traditional illustration techniques.",
         "content": ""
       },
@@ -2766,11 +2673,7 @@
         "proficiency": 82,
         "level": "Advanced",
         "yearsOfExperience": 6,
-        "tags": [
-          "Management",
-          "Planning",
-          "Leadership"
-        ],
+        "tags": ["Management", "Planning", "Leadership"],
         "description": "Agile methodologies, Scrum, and team coordination.",
         "content": ""
       },
@@ -2783,11 +2686,7 @@
         "proficiency": 78,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Analysis",
-          "Strategy",
-          "Requirements"
-        ],
+        "tags": ["Analysis", "Strategy", "Requirements"],
         "description": "Requirements gathering, stakeholder management, and process improvement.",
         "content": ""
       },
@@ -2800,11 +2699,7 @@
         "proficiency": 73,
         "level": "Intermediate",
         "yearsOfExperience": 4,
-        "tags": [
-          "Marketing",
-          "Strategy",
-          "Growth"
-        ],
+        "tags": ["Marketing", "Strategy", "Growth"],
         "description": "Digital marketing, SEO, and brand development.",
         "content": ""
       },
@@ -2817,10 +2712,7 @@
         "proficiency": 90,
         "level": "Expert",
         "yearsOfExperience": 10,
-        "tags": [
-          "Interpersonal",
-          "Collaboration"
-        ],
+        "tags": ["Interpersonal", "Collaboration"],
         "description": "Clear verbal and written communication across teams and stakeholders.",
         "content": ""
       },
@@ -2833,10 +2725,7 @@
         "proficiency": 88,
         "level": "Expert",
         "yearsOfExperience": 10,
-        "tags": [
-          "Critical Thinking",
-          "Analysis"
-        ],
+        "tags": ["Critical Thinking", "Analysis"],
         "description": "Analytical thinking and creative solution development.",
         "content": ""
       },
@@ -2849,11 +2738,7 @@
         "proficiency": 80,
         "level": "Advanced",
         "yearsOfExperience": 7,
-        "tags": [
-          "Management",
-          "Mentoring",
-          "Team Building"
-        ],
+        "tags": ["Management", "Mentoring", "Team Building"],
         "description": "Team leadership, mentoring, and conflict resolution.",
         "content": ""
       },
@@ -2866,10 +2751,7 @@
         "proficiency": 100,
         "level": "Expert",
         "yearsOfExperience": 20,
-        "tags": [
-          "Communication",
-          "Native"
-        ],
+        "tags": ["Communication", "Native"],
         "description": "Native speaker with excellent written and verbal skills.",
         "content": ""
       },
@@ -2882,10 +2764,7 @@
         "proficiency": 75,
         "level": "Advanced",
         "yearsOfExperience": 8,
-        "tags": [
-          "Communication",
-          "Second Language"
-        ],
+        "tags": ["Communication", "Second Language"],
         "description": "Conversational and business proficiency.",
         "content": ""
       },
@@ -2898,10 +2777,7 @@
         "proficiency": 60,
         "level": "Intermediate",
         "yearsOfExperience": 3,
-        "tags": [
-          "Communication",
-          "Learning"
-        ],
+        "tags": ["Communication", "Learning"],
         "description": "Intermediate conversational skills.",
         "content": ""
       },
@@ -2914,10 +2790,7 @@
         "proficiency": 92,
         "level": "Expert",
         "yearsOfExperience": 8,
-        "tags": [
-          "Version Control",
-          "Collaboration"
-        ],
+        "tags": ["Version Control", "Collaboration"],
         "description": "Version control, branching strategies, and team collaboration.",
         "content": ""
       },
@@ -2930,10 +2803,7 @@
         "proficiency": 80,
         "level": "Advanced",
         "yearsOfExperience": 4,
-        "tags": [
-          "DevOps",
-          "Containers"
-        ],
+        "tags": ["DevOps", "Containers"],
         "description": "Containerization and deployment workflows.",
         "content": ""
       },
@@ -2946,10 +2816,7 @@
         "proficiency": 77,
         "level": "Advanced",
         "yearsOfExperience": 5,
-        "tags": [
-          "Cloud",
-          "Infrastructure"
-        ],
+        "tags": ["Cloud", "Infrastructure"],
         "description": "Cloud services, EC2, S3, Lambda, and serverless architecture.",
         "content": ""
       }
@@ -3322,44 +3189,25 @@
       }
     ]
   },
-  "en_old": {
-    "blog_list": [
+  "en_old": {},
+  "es": {
+    "blogs": [
       {
         "slug": "1",
         "order": 1,
-        "title": "EN Getting Started with React Hooks: A Complete Guide",
-        "publishedAt": "2024-11-01",
-        "author": "Mofiz Rahman",
-        "excerpt": "A short summary for blog post 1 in EN.",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
+        "title": "My Blog Post 1 (ES)",
+        "date": "2024-01-23",
+        "author": "Jane Smith",
+        "excerpt": "A short summary for blog post 1 in ES.",
+        "tags": ["tech", "react"],
         "image": "/images/blog-1.jpg",
-        "featured": false,
-        "readTime": 3,
-        "category": "Guide",
-        "content": "Architecture TypeScript Node.js Next.js Next.js Cloud Cloud React TypeScript Architecture.\n\nReact Node.js Cloud Architecture Next.js Next.js JavaScript Node.js Next.js Next.js.\n\nArchitecture Node.js React Architecture Next.js Node.js TypeScript React Node.js Next.js.\n\nJavaScript React Next.js Cloud Next.js React Node.js Cloud TypeScript Cloud.\n\nArchitecture Cloud React Architecture Architecture Architecture React JavaScript React Node.js."
-      },
-      {
-        "slug": "2",
-        "order": 2,
-        "title": "My Blog Post 1 (EN) One",
-        "date": "2024-02-23",
-        "author": "Mofiz Rahman",
-        "excerpt": "A short summary for blog post 1 in EN.",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
-        "image": "/images/blog-1.jpg",
-        "featured": false,
-        "readTime": 3,
-        "category": "Guide",
-        "content": "Architecture TypeScript Node.js Next.js Next.js Cloud Cloud React TypeScript Architecture.\n\nReact Node.js Cloud Architecture Next.js Next.js JavaScript Node.js Next.js Next.js.\n\nArchitecture Node.js React Architecture Next.js Node.js TypeScript React Node.js Next.js.\n\nJavaScript React Next.js Cloud Next.js React Node.js Cloud TypeScript Cloud.\n\nArchitecture Cloud React Architecture Architecture Architecture React JavaScript React Node.js."
+        "featured": true,
+        "readTime": 4,
+        "category": "Tutorial",
+        "content": "TypeScript TypeScript React Cloud Node.js TypeScript JavaScript Cloud React TypeScript.\n\nNode.js JavaScript TypeScript Next.js Architecture JavaScript React React React Next.js.\n\nReact JavaScript Cloud Node.js Cloud JavaScript Architecture React TypeScript Next.js.\n\nJavaScript Next.js JavaScript Architecture Cloud Node.js Next.js Node.js TypeScript React.\n\nNext.js Next.js TypeScript React React Next.js Node.js Next.js JavaScript Architecture."
       }
     ],
-    "certificate_list": [
+    "certificates": [
       {
         "slug": "1",
         "order": 1,
@@ -3369,50 +3217,41 @@
         "expirationDate": "2023-01",
         "credentialId": "CERT-1001",
         "credentialUrl": "https://example.com/certifications/1",
-        "skills": [
-          "Skill A",
-          "Skill B",
-          "Skill C"
-        ],
-        "media": [
-          "https://example.com/media/cert-1.jpg"
-        ],
-        "description": "Description of certification 1 in en",
+        "skills": ["Skill A", "Skill B", "Skill C"],
+        "media": ["https://example.com/media/cert-1.jpg"],
+        "description": "Description of certification 1 in es",
         "content": "NA"
       }
     ],
-    "education_list": [
+    "educations": [
       {
         "slug": "1",
         "order": 1,
-        "title": "Education 1 (EN)",
-        "institution": "Humboldt University",
-        "location": "Hamburg, Germany",
+        "title": "Education 1 (ES)",
+        "institution": "University of Hamburg",
+        "location": "Munich, Germany",
         "startDate": "2016-10-01",
         "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Software Engineering.",
+        "description": "Completed a degree in Computer Science with focus on Cloud Computing.",
         "logo": "/images/education-1.png",
-        "degree": "Bachelor's",
-        "grade": "1.7",
-        "featured": false,
-        "content": "JavaScript Architecture JavaScript Next.js React JavaScript Architecture Next.js TypeScript Architecture.\n\nTypeScript JavaScript React Architecture Next.js JavaScript TypeScript JavaScript Architecture React.\n\nArchitecture Cloud Architecture React Cloud Node.js Node.js TypeScript Next.js Cloud."
+        "degree": "Master's",
+        "grade": "2.0",
+        "featured": true,
+        "content": "Node.js Cloud Next.js JavaScript JavaScript JavaScript TypeScript React Cloud JavaScript.\n\nReact Next.js React Cloud TypeScript TypeScript Next.js Node.js Cloud Next.js.\n\nJavaScript TypeScript JavaScript Architecture Cloud TypeScript Next.js Next.js React React."
       }
     ],
-    "experience_list": [
+    "experiences": [
       {
         "slug": "1",
         "order": 1,
-        "title": "Senior Developer 1 (EN)",
+        "title": "Senior Developer 1 (ES)",
         "organization": "Tech Corp 1",
         "location": "Berlin, Germany",
         "current": false,
         "startDate": "2020-01-01",
         "endDate": "2024-01-01",
         "website": "https://company1.com",
-        "technologies": [
-          "Node.js",
-          "React"
-        ],
+        "technologies": ["Node.js", "React"],
         "description": "Led development team for Tech Corp 1.",
         "responsibilities": [
           "Responsibility 1 for experience 1",
@@ -3420,7 +3259,7 @@
           "Responsibility 3 for experience 1"
         ],
         "logo": "/images/organization-logo-1.png",
-        "content": "Cloud Cloud Node.js Node.js React Cloud React Cloud Architecture JavaScript.\n\nNext.js TypeScript JavaScript Next.js Cloud JavaScript Architecture React JavaScript React.\n\nArchitecture JavaScript Node.js Next.js Architecture Node.js Cloud Cloud Cloud Cloud."
+        "content": "Architecture Architecture JavaScript TypeScript React Next.js Next.js React Architecture React.\n\nArchitecture Architecture React Cloud TypeScript Architecture React React Cloud JavaScript.\n\nCloud JavaScript Architecture React React Node.js TypeScript Architecture Next.js Next.js."
       }
     ],
     "info": {
@@ -3441,7 +3280,7 @@
         {
           "slug": "contact",
           "order": 0,
-          "title": "Contacts for language: en",
+          "title": "Contacts for language: es",
           "contacts": [
             {
               "type": "Email",
@@ -3486,7 +3325,7 @@
         {
           "slug": "languages",
           "order": 0,
-          "title": "Languages for language: en",
+          "title": "Languages for language: es",
           "languages": [
             {
               "name": "English",
@@ -3494,10 +3333,7 @@
               "write": "Fluent",
               "speak": "Fluent",
               "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
-              ],
+              "tests": ["IELTS", "TOEFL"],
               "level": "C1"
             },
             {
@@ -3506,10 +3342,7 @@
               "write": "Intermediate",
               "speak": "Intermediate",
               "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
-              ],
+              "tests": ["Goethe B2", "Telc B2"],
               "level": "B2"
             },
             {
@@ -3528,7 +3361,7 @@
         {
           "slug": "reference",
           "order": 0,
-          "title": "References for language: en",
+          "title": "References for language: es",
           "references": [
             {
               "name": "Dr. Laura Schmidt",
@@ -3553,48 +3386,27 @@
         {
           "slug": "skills",
           "order": 0,
-          "title": "Skills for language: en",
+          "title": "Skills for language: es",
           "skills": [
             {
               "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
+              "items": ["Python", "TypeScript", "Java", "C++"]
             },
             {
               "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
+              "items": ["AWS", "Docker", "Kubernetes"]
             },
             {
               "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
+              "items": ["Leadership", "Communication", "Mentoring"]
             },
             {
               "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
+              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
             },
             {
               "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
+              "items": ["English", "German", "French"]
             }
           ],
           "content": "NA"
@@ -3602,209 +3414,660 @@
       ],
       "social": [
         {
-          "0": {
-            "platform": "LinkedIn",
-            "url": "https://linkedin.com/in/alexjohnson",
-            "username": "alexjohnson"
-          },
-          "1": {
-            "platform": "GitHub",
-            "url": "https://github.com/alexjohnson",
-            "username": "alexjohnson"
-          },
-          "2": {
-            "platform": "Twitter",
-            "url": "https://twitter.com/alexjohnson"
-          },
           "slug": "social",
           "order": 0,
+          "title": "Social Links for language: es",
+          "social_links": [
+            {
+              "platform": "LinkedIn",
+              "url": "https://linkedin.com/in/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "GitHub",
+              "url": "https://github.com/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "Twitter",
+              "url": "https://twitter.com/alexjohnson"
+            }
+          ],
           "content": "NA"
         }
       ]
     },
-    "photo_list": [
+    "photos": [
       {
         "slug": "1",
         "order": 1,
-        "title": "Senior Developer 1 (EN)",
+        "title": "Senior Developer 1 (ES)",
         "image": "/images/photo-1.jpg",
-        "category": "Guide",
-        "description": "Project 1 overview in EN.",
+        "category": "Tutorial",
+        "description": "Project 1 overview in ES.",
         "date": "2020-01-01",
-        "tags": [
-          "react",
-          "javascript"
-        ],
-        "featured": true,
-        "content": "Cloud TypeScript Node.js Cloud Cloud JavaScript Next.js TypeScript TypeScript Node.js.\n\nArchitecture Next.js Architecture React Node.js Node.js Architecture TypeScript React Node.js.\n\nNode.js Next.js TypeScript JavaScript React Architecture JavaScript Next.js Node.js JavaScript."
+        "tags": ["typescript", "react"],
+        "featured": false,
+        "content": "Architecture Architecture Node.js Node.js JavaScript Next.js JavaScript Architecture React Node.js.\n\nJavaScript TypeScript React JavaScript Architecture Architecture JavaScript Cloud TypeScript JavaScript.\n\nArchitecture React Architecture Cloud Cloud TypeScript Architecture Architecture JavaScript Next.js."
       }
     ],
-    "project_list": [
+    "projects": [
       {
         "slug": "1",
         "order": 1,
-        "title": "My Project 1 (EN)",
-        "description": "Project 1 overview in EN.",
-        "technologies": [
-          "Node.js",
-          "Next.js"
-        ],
+        "title": "My Project 1 (ES)",
+        "description": "Project 1 overview in ES.",
+        "technologies": ["Next.js", "TypeScript"],
         "link": "https://example.com/projects/1",
         "github": "https://github.com/user/project-1",
-        "date": "2024-01-09",
+        "date": "2024-09-09",
         "image": "/images/project-1.jpg",
         "status": "in-progress",
         "featured": false,
-        "content": "JavaScript React Node.js TypeScript TypeScript Node.js TypeScript React Next.js React.\n\nJavaScript TypeScript Next.js Architecture Node.js Node.js Node.js Cloud Architecture Architecture.\n\nCloud Architecture Node.js Architecture React TypeScript Architecture Node.js Cloud Architecture.\n\nNext.js TypeScript Node.js React JavaScript Next.js React Next.js React TypeScript."
+        "content": "Next.js React Cloud Cloud Next.js TypeScript Node.js Next.js TypeScript Architecture.\n\nJavaScript Architecture Architecture Next.js Node.js Node.js TypeScript React Node.js React.\n\nArchitecture TypeScript React TypeScript React TypeScript JavaScript Cloud Next.js Cloud.\n\nNode.js Architecture Architecture Next.js Node.js TypeScript Next.js JavaScript React Next.js."
       }
     ],
-    "publication_list": [
+    "publications": [
       {
         "slug": "1",
         "order": 1,
         "title": "Publication Title 1",
-        "authors": [
-          "Author A1",
-          "Author B1"
-        ],
+        "authors": ["Author A1", "Author B1"],
         "publisher": "Publisher 1",
         "date": "2021-06-01",
         "link": "https://example.com/publication/1",
         "doi": "10.1234/example-doi-1",
-        "summary": "This is a brief summary of publication 1 in en.",
-        "keywords": [
-          "Keyword1",
-          "Keyword2",
-          "Keyword3"
-        ],
-        "media": [
-          "https://example.com/media/pub-1.jpg"
-        ],
+        "summary": "This is a brief summary of publication 1 in es.",
+        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
+        "media": ["https://example.com/media/pub-1.jpg"],
         "content": "NA"
       }
-    ],
-    "service_list": [
-      {
-        "slug": "technical",
-        "order": 0,
-        "skills": [
-          {
-            "id": 1,
-            "title": "JavaScript",
-            "category": "Technical",
-            "proficiency": 95,
-            "level": "Expert",
-            "yearsOfExperience": 8,
-            "tags": [
-              "Programming",
-              "Frontend",
-              "Backend"
-            ],
-            "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks."
-          },
-          {
-            "id": 2,
-            "title": "React",
-            "category": "Technical",
-            "proficiency": 90,
-            "level": "Expert",
-            "yearsOfExperience": 6,
-            "tags": [
-              "Frontend",
-              "Framework",
-              "UI"
-            ],
-            "description": "Building scalable web applications with React, hooks, and state management."
-          }
-        ],
-        "content": "This file contains a list of technical skills with detailed metadata for each."
-      }
-    ],
-    "skill_list": [
+    ]
+  },
+  "fr": {
+    "blogs": [
       {
         "slug": "1",
         "order": 1,
-        "title": "JavaScript",
-        "category": "Technical",
-        "proficiency": 95,
-        "level": "Expert",
-        "yearsOfExperience": 8,
-        "tags": [
-          "Programming",
-          "Frontend",
-          "Backend"
-        ],
-        "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
-        "content": "This file contains a list of technical skills with detailed metadata for each."
-      },
-      {
-        "slug": "2",
-        "order": 2,
-        "title": "React",
-        "category": "Technical",
-        "proficiency": 90,
-        "level": "Expert",
-        "yearsOfExperience": 6,
-        "tags": [
-          "Frontend",
-          "Framework",
-          "UI"
-        ],
-        "description": "Building scalable web applications with React, hooks, and state management.",
-        "content": "This file contains a list of technical skills with detailed metadata for each."
+        "title": "My Blog Post 1 (FR)",
+        "date": "2024-01-01",
+        "author": "Jane Smith",
+        "excerpt": "A short summary for blog post 1 in FR.",
+        "tags": ["tech", "javascript"],
+        "image": "/images/blog-1.jpg",
+        "featured": false,
+        "readTime": 11,
+        "category": "Opinion",
+        "content": "🇫🇷 (FR) Node.js JavaScript Node.js Cloud JavaScript Architecture React JavaScript TypeScript Cloud.\n\n🇫🇷 (FR) JavaScript Next.js TypeScript JavaScript Node.js Cloud JavaScript JavaScript Node.js Node.js.\n\n🇫🇷 (FR) Node.js Next.js React Cloud Next.js React JavaScript Next.js React Node.js.\n\n🇫🇷 (FR) JavaScript TypeScript JavaScript Next.js Node.js React Architecture Cloud TypeScript JavaScript.\n\n🇫🇷 (FR) React Cloud Architecture JavaScript TypeScript React Architecture React JavaScript Next.js."
       }
     ],
-    "static_contents": [
-      {
-        "slug": "privacy",
-        "order": 0,
-        "title": "Privacy Policy",
-        "subtitle": "How I handle and protect your information.",
-        "last_updated": "November 2, 2024",
-        "content": "## 1. Information I Collect 👁️\n\nWhen you visit my website or work with me, I may collect:\n\n- **Contact information:** Name, email, phone number (when you reach out)\n- **Project details:** Information you share about your project needs\n- **Website analytics:** Basic usage data like pages visited and time spent (via Google Analytics or similar)\n- **Technical data:** IP address, browser type, device information\n\n---\n\n## 2. How I Use Your Information 🗄️\n\nI use your information to:\n\n- Respond to your inquiries and communicate about projects\n- Provide the services you've requested\n- Improve my website and services\n- Send occasional updates (only if you've opted in)\n\n> **Note:** I do not sell, rent, or share your personal information with third parties for marketing purposes.\n\n---\n\n## 3. Cookies & Tracking 🍪\n\nThis website may use cookies and similar technologies to:\n\n- Remember your preferences\n- Understand how you use the site (via analytics tools)\n- Improve your browsing experience\n\n> **Note:** You can control cookies through your browser settings. Disabling cookies may affect website functionality.\n\n---\n\n## 4. Data Security 🔒\n\nI take reasonable measures to protect your information from unauthorized access, loss, or misuse.\nHowever, no method of transmission over the internet is 100% secure.\nIf you're sharing sensitive information, please use secure channels.\n\n---\n\n## 5. Third-Party Services 🛡️\n\nThis website may use third-party services that collect information:\n\n- **Google Analytics:** For website analytics\n- **Contact forms:** Services like Formspree, Google Forms, etc.\n- **Hosting provider:** Data is stored on secure hosting servers\n\n> **Note:** These services have their own privacy policies. I choose reputable providers that respect user privacy.\n\n---\n\n## 6. Your Rights 👤✅\n\nYou have the right to:\n\n- Request a copy of the information I have about you\n- Ask me to update or delete your information\n- Opt out of any communications from me\n- Withdraw consent for data processing\n\n> **Note:** Just reach out, and I’ll be happy to help with any of these requests.\n\n---\n\n## 7. Data Retention ⏳\n\nI keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy.\nProject-related information is typically retained for a reasonable period after project completion for reference and support purposes.\n\n---\n\n## 8. Children’s Privacy 🧒🛡️\n\nThis website is not intended for children under 13.\nI do not knowingly collect information from children.\nIf you believe I have collected information from a child, please contact me immediately.\n\n---\n\n## 9. Changes to This Policy ✉️\n\nI may update this privacy policy from time to time.\nAny changes will be posted on this page with an updated date.\nContinued use of the website after changes means you accept the updated policy.\n\n---\n\n## Privacy Questions?\n\nIf you have any questions about this privacy policy or how I handle your data, feel free to contact me.\nI’m committed to protecting your privacy and being transparent about data practices.\n\n---\n\n**Your privacy matters.**\nI only collect what’s necessary and handle it responsibly. 🔒"
-      },
-      {
-        "slug": "terms",
-        "order": 0,
-        "title": "Terms of Service",
-        "subtitle": "Simple and straightforward terms for working together.",
-        "last_updated": "November 2, 2024",
-        "content": "## 1. Services 📄\n\nI provide freelance services including web development, design, and consulting.  \nSpecific project details, deliverables, and timelines will be discussed and agreed upon before starting work.\n\n---\n\n## 2. Payment 💲\n\nPayment terms will be agreed upon per project. Typically:\n\n- **50% deposit** before starting work\n- **50% upon completion**\n- **Hourly projects** billed monthly\n\n---\n\n## 3. Ownership & Rights 🛡️\n\nOnce you’ve paid in full, you own the final work I create for your project.  \nI may showcase the work in my portfolio.\n\nAny pre-existing code or third-party assets are subject to their respective licenses.\n\n---\n\n## 4. Timeline & Revisions ⏳\n\nProject timelines are estimates.  \nMost projects include **2–3 rounds of revisions**.\n\nDelays may occur if feedback or required content is delayed.  \nMajor changes to the project scope may require additional time and cost.\n\n---\n\n## 5. Cancellation ⚠️\n\nEither of us may cancel the project with notice.  \nYou are responsible for paying for work completed up to the cancellation date.\n\nDeposits are generally **non-refundable** once work has started.\n\n---\n\n## 6. Disclaimer 🛡️\n\nI will always aim to deliver high-quality work, but I cannot guarantee specific outcomes such as traffic, sales, or rankings.\n\nAfter launch, you are responsible for maintaining your website or application and keeping backups.\n\n---\n\n## Have Questions?\n\nIf anything is unclear or you’d like to discuss terms for your project, feel free to reach out.\n\n---\n\n**By working with me, you agree to these terms.**  \nLet’s create something great together!"
-      }
-    ],
-    "testimonial_list": [
+    "certificates": [
       {
         "slug": "1",
         "order": 1,
-        "name": "Sarah Johnson",
-        "role": "CEO & Founder",
-        "company": "TechStart Inc.",
-        "location": "Cottbus-Ströbitz, Brandenburg, Germany",
-        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-        "rating": 5,
-        "testimonial": "Absolutely exceptional work! The web application exceeded all our expectations. The attention to detail, clean code, and professional communication throughout the project made this a seamless experience. I highly recommend their services to anyone looking for top-tier development work.",
-        "date": "2024-10-15",
-        "project": "E-commerce Platform",
-        "category": "Web Development",
-        "featured": true,
-        "verified": true,
+        "name": "Certification 1",
+        "organization": "Organization 1",
+        "issueDate": "2021-01",
+        "expirationDate": "2023-01",
+        "credentialId": "CERT-1001",
+        "credentialUrl": "https://example.com/certifications/1",
+        "skills": ["Skill A", "Skill B", "Skill C"],
+        "media": ["https://example.com/media/cert-1.jpg"],
+        "description": "Description of certification 1 in fr",
         "content": "NA"
-      },
+      }
+    ],
+    "educations": [
       {
-        "slug": "2",
-        "order": 2,
-        "name": "Michael Chen",
-        "role": "Product Manager",
-        "company": "Digital Solutions Ltd",
-        "location": "New York, NY",
-        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
-        "rating": 5,
-        "testimonial": "Working with this developer was a game-changer for our project. They brought creative solutions to complex problems and delivered a mobile app that our users absolutely love. The performance is outstanding and the UI is intuitive. Highly professional!",
-        "date": "2024-09-22",
-        "project": "Mobile Fitness App",
-        "category": "Mobile Development",
+        "slug": "1",
+        "order": 1,
+        "title": "Education 1 (FR)",
+        "institution": "Humboldt University",
+        "location": "Munich, Germany",
+        "startDate": "2016-10-01",
+        "endDate": "2018-09-30",
+        "description": "Completed a degree in Computer Science with focus on Software Engineering.",
+        "logo": "/images/education-1.png",
+        "degree": "PhD",
+        "grade": "1.7",
+        "featured": false,
+        "content": "🇫🇷 (FR) JavaScript Next.js Cloud Node.js Architecture React React Architecture JavaScript Cloud.\n\n🇫🇷 (FR) Next.js JavaScript TypeScript Node.js Next.js Node.js JavaScript React Architecture JavaScript.\n\n🇫🇷 (FR) Next.js Next.js Architecture Node.js Architecture TypeScript Architecture Node.js Architecture Next.js."
+      }
+    ],
+    "experiences": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (FR)",
+        "organization": "Tech Corp 1",
+        "location": "Berlin, Germany",
+        "current": false,
+        "startDate": "2020-01-01",
+        "endDate": "2024-01-01",
+        "website": "https://company1.com",
+        "technologies": ["Node.js", "React"],
+        "description": "🇫🇷 (FR) Led development team for Tech Corp 1.",
+        "responsibilities": [
+          "Responsibility 1 for experience 1",
+          "Responsibility 2 for experience 1",
+          "Responsibility 3 for experience 1"
+        ],
+        "logo": "/images/organization-logo-1.png",
+        "content": "🇫🇷 (FR) JavaScript Architecture Cloud Cloud Next.js React Architecture React React Cloud.\n\n🇫🇷 (FR) JavaScript TypeScript Next.js Cloud React Next.js Cloud TypeScript Next.js React.\n\n🇫🇷 (FR) Cloud JavaScript Architecture Architecture Node.js TypeScript TypeScript Cloud Node.js TypeScript."
+      }
+    ],
+    "info": {
+      "bio": [
+        {
+          "slug": "bio",
+          "order": 0,
+          "fullName": "Mofiz Rahman",
+          "title": "Software Engineer",
+          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
+          "location": "Berlin, Germany",
+          "dob": "1990-05-12",
+          "photo": "https://example.com/photos/alex.jpg",
+          "content": "NA"
+        }
+      ],
+      "contact": [
+        {
+          "slug": "contact",
+          "order": 0,
+          "title": "Contacts for language: fr",
+          "contacts": [
+            {
+              "type": "Email",
+              "value": "alex@example.com",
+              "label": "Work"
+            },
+            {
+              "type": "Phone",
+              "value": "+49 1522 1234567",
+              "label": "Mobile"
+            },
+            {
+              "type": "Website",
+              "value": "https://alexjohnson.dev",
+              "label": "Website"
+            },
+            {
+              "type": "Address",
+              "value": "Berlin, Germany",
+              "description": "Current residence"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "interest": [
+        {
+          "slug": "interest",
+          "order": 0,
+          "items": [
+            "Photography",
+            "Traveling",
+            "Open-source projects",
+            "Reading",
+            "Music",
+            "Sports"
+          ],
+          "content": "NA"
+        }
+      ],
+      "languages": [
+        {
+          "slug": "languages",
+          "order": 0,
+          "title": "Languages for language: fr",
+          "languages": [
+            {
+              "name": "English",
+              "read": "Fluent",
+              "write": "Fluent",
+              "speak": "Fluent",
+              "listen": "Fluent",
+              "tests": ["IELTS", "TOEFL"],
+              "level": "C1"
+            },
+            {
+              "name": "German",
+              "read": "Intermediate",
+              "write": "Intermediate",
+              "speak": "Intermediate",
+              "listen": "Intermediate",
+              "tests": ["Goethe B2", "Telc B2"],
+              "level": "B2"
+            },
+            {
+              "name": "French",
+              "read": "Good",
+              "write": "Good",
+              "speak": "Intermediate",
+              "listen": "Good",
+              "level": "B1"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "reference": [
+        {
+          "slug": "reference",
+          "order": 0,
+          "title": "References for language: fr",
+          "references": [
+            {
+              "name": "Dr. Laura Schmidt",
+              "position": "Engineering Manager",
+              "organization": "TechCorp GmbH",
+              "email": "laura.schmidt@techcorp.de",
+              "phone": "+49 1522 111222",
+              "relation": "Manager at TechCorp"
+            },
+            {
+              "name": "Prof. Mofiz Rahman",
+              "position": "Professor of Computer Science",
+              "organization": "University of Hamburg",
+              "email": "j.doe@uni-hamburg.de",
+              "relation": "Thesis Supervisor"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "skills": [
+        {
+          "slug": "skills",
+          "order": 0,
+          "title": "Skills for language: fr",
+          "skills": [
+            {
+              "category": "Programming",
+              "items": ["Python", "TypeScript", "Java", "C++"]
+            },
+            {
+              "category": "Tools & Cloud",
+              "items": ["AWS", "Docker", "Kubernetes"]
+            },
+            {
+              "category": "Soft Skills",
+              "items": ["Leadership", "Communication", "Mentoring"]
+            },
+            {
+              "category": "Design & Creative",
+              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+            },
+            {
+              "category": "Languages",
+              "items": ["English", "German", "French"]
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "social": [
+        {
+          "slug": "social",
+          "order": 0,
+          "title": "Social Links for language: fr",
+          "social_links": [
+            {
+              "platform": "LinkedIn",
+              "url": "https://linkedin.com/in/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "GitHub",
+              "url": "https://github.com/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "Twitter",
+              "url": "https://twitter.com/alexjohnson"
+            }
+          ],
+          "content": "NA"
+        }
+      ]
+    },
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (FR)",
+        "image": "/images/photo-1.jpg",
+        "category": "Opinion",
+        "description": "Project 1 overview in FR.",
+        "date": "2020-01-01",
+        "tags": ["tech", "javascript"],
+        "featured": false,
+        "content": "🇫🇷 (FR) TypeScript Node.js TypeScript TypeScript TypeScript React React JavaScript Node.js Next.js.\n\n🇫🇷 (FR) TypeScript Cloud JavaScript Next.js JavaScript Node.js Cloud Node.js Next.js Architecture.\n\n🇫🇷 (FR) Node.js Node.js React Cloud Next.js Node.js Node.js TypeScript JavaScript JavaScript."
+      }
+    ],
+    "projects": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "My Project 1 (FR)",
+        "description": "Project 1 overview in FR.",
+        "technologies": ["Node.js", "Next.js"],
+        "link": "https://example.com/projects/1",
+        "github": "https://github.com/user/project-1",
+        "date": "2024-02-27",
+        "image": "/images/project-1.jpg",
+        "status": "planned",
+        "featured": false,
+        "content": "🇫🇷 (FR) JavaScript TypeScript React TypeScript JavaScript React Architecture JavaScript Node.js TypeScript.\n\n🇫🇷 (FR) Next.js Node.js Architecture JavaScript Node.js Next.js React Architecture JavaScript Next.js.\n\n🇫🇷 (FR) TypeScript Node.js JavaScript Cloud Node.js Next.js TypeScript Cloud Architecture Cloud.\n\n🇫🇷 (FR) Node.js Node.js Node.js Cloud React JavaScript TypeScript JavaScript Node.js Cloud."
+      }
+    ],
+    "publications": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Publication Title 1",
+        "authors": ["Author A1", "Author B1"],
+        "publisher": "Publisher 1",
+        "date": "2021-06-01",
+        "link": "https://example.com/publication/1",
+        "doi": "10.1234/example-doi-1",
+        "summary": "This is a brief summary of publication 1 in fr.",
+        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
+        "media": ["https://example.com/media/pub-1.jpg"],
+        "content": "NA"
+      }
+    ]
+  },
+  "jp": {
+    "blogs": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "My Blog Post 1 (JP)",
+        "date": "2024-01-11",
+        "author": "Jane Smith",
+        "excerpt": "A short summary for blog post 1 in JP.",
+        "tags": ["tech", "javascript"],
+        "image": "/images/blog-1.jpg",
         "featured": true,
-        "verified": true,
+        "readTime": 10,
+        "category": "Opinion",
+        "content": "Node.js Node.js Next.js Cloud React Node.js JavaScript React JavaScript Node.js.\n\nReact Next.js Architecture TypeScript TypeScript Cloud JavaScript React JavaScript Node.js.\n\nJavaScript Node.js React TypeScript Next.js Next.js Node.js JavaScript Architecture JavaScript.\n\nReact Node.js React JavaScript React Node.js JavaScript Next.js JavaScript TypeScript.\n\nNode.js TypeScript TypeScript Node.js Node.js Architecture TypeScript JavaScript Next.js TypeScript."
+      }
+    ],
+    "certificates": [
+      {
+        "slug": "1",
+        "order": 1,
+        "name": "Certification 1",
+        "organization": "Organization 1",
+        "issueDate": "2021-01",
+        "expirationDate": "2023-01",
+        "credentialId": "CERT-1001",
+        "credentialUrl": "https://example.com/certifications/1",
+        "skills": ["Skill A", "Skill B", "Skill C"],
+        "media": ["https://example.com/media/cert-1.jpg"],
+        "description": "Description of certification 1 in jp",
+        "content": "NA"
+      }
+    ],
+    "educations": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Education 1 (JP)",
+        "institution": "Humboldt University",
+        "location": "Munich, Germany",
+        "startDate": "2016-10-01",
+        "endDate": "2018-09-30",
+        "description": "Completed a degree in Computer Science with focus on Cybersecurity.",
+        "logo": "/images/education-1.png",
+        "degree": "Diploma",
+        "grade": "2.3",
+        "featured": false,
+        "content": "Cloud Architecture React Next.js TypeScript JavaScript React React Node.js Node.js.\n\nTypeScript JavaScript React Architecture Node.js Cloud Next.js React JavaScript Next.js.\n\nArchitecture React Next.js Architecture Node.js TypeScript JavaScript Architecture Next.js Next.js."
+      }
+    ],
+    "experiences": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (JP)",
+        "organization": "Tech Corp 1",
+        "location": "Berlin, Germany",
+        "current": false,
+        "startDate": "2020-01-01",
+        "endDate": "2024-01-01",
+        "website": "https://company1.com",
+        "technologies": ["Node.js", "React"],
+        "description": "Led development team for Tech Corp 1.",
+        "responsibilities": [
+          "Responsibility 1 for experience 1",
+          "Responsibility 2 for experience 1",
+          "Responsibility 3 for experience 1"
+        ],
+        "logo": "/images/organization-logo-1.png",
+        "content": "Architecture React TypeScript React Node.js TypeScript Next.js JavaScript JavaScript JavaScript.\n\nTypeScript JavaScript Cloud Architecture Architecture TypeScript JavaScript React Cloud TypeScript.\n\nCloud React React Architecture Architecture Architecture JavaScript Next.js Cloud Architecture."
+      }
+    ],
+    "info": {
+      "bio": [
+        {
+          "slug": "bio",
+          "order": 0,
+          "fullName": "Mofiz Rahman",
+          "title": "Software Engineer",
+          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
+          "location": "Berlin, Germany",
+          "dob": "1990-05-12",
+          "photo": "https://example.com/photos/alex.jpg",
+          "content": "NA"
+        }
+      ],
+      "contact": [
+        {
+          "slug": "contact",
+          "order": 0,
+          "title": "Contacts for language: jp",
+          "contacts": [
+            {
+              "type": "Email",
+              "value": "alex@example.com",
+              "label": "Work"
+            },
+            {
+              "type": "Phone",
+              "value": "+49 1522 1234567",
+              "label": "Mobile"
+            },
+            {
+              "type": "Website",
+              "value": "https://alexjohnson.dev",
+              "label": "Website"
+            },
+            {
+              "type": "Address",
+              "value": "Berlin, Germany",
+              "description": "Current residence"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "interest": [
+        {
+          "slug": "interest",
+          "order": 0,
+          "items": [
+            "Photography",
+            "Traveling",
+            "Open-source projects",
+            "Reading",
+            "Music",
+            "Sports"
+          ],
+          "content": "NA"
+        }
+      ],
+      "languages": [
+        {
+          "slug": "languages",
+          "order": 0,
+          "title": "Languages for language: jp",
+          "languages": [
+            {
+              "name": "English",
+              "read": "Fluent",
+              "write": "Fluent",
+              "speak": "Fluent",
+              "listen": "Fluent",
+              "tests": ["IELTS", "TOEFL"],
+              "level": "C1"
+            },
+            {
+              "name": "German",
+              "read": "Intermediate",
+              "write": "Intermediate",
+              "speak": "Intermediate",
+              "listen": "Intermediate",
+              "tests": ["Goethe B2", "Telc B2"],
+              "level": "B2"
+            },
+            {
+              "name": "French",
+              "read": "Good",
+              "write": "Good",
+              "speak": "Intermediate",
+              "listen": "Good",
+              "level": "B1"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "reference": [
+        {
+          "slug": "reference",
+          "order": 0,
+          "title": "References for language: jp",
+          "references": [
+            {
+              "name": "Dr. Laura Schmidt",
+              "position": "Engineering Manager",
+              "organization": "TechCorp GmbH",
+              "email": "laura.schmidt@techcorp.de",
+              "phone": "+49 1522 111222",
+              "relation": "Manager at TechCorp"
+            },
+            {
+              "name": "Prof. Mofiz Rahman",
+              "position": "Professor of Computer Science",
+              "organization": "University of Hamburg",
+              "email": "j.doe@uni-hamburg.de",
+              "relation": "Thesis Supervisor"
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "skills": [
+        {
+          "slug": "skills",
+          "order": 0,
+          "title": "Skills for language: jp",
+          "skills": [
+            {
+              "category": "Programming",
+              "items": ["Python", "TypeScript", "Java", "C++"]
+            },
+            {
+              "category": "Tools & Cloud",
+              "items": ["AWS", "Docker", "Kubernetes"]
+            },
+            {
+              "category": "Soft Skills",
+              "items": ["Leadership", "Communication", "Mentoring"]
+            },
+            {
+              "category": "Design & Creative",
+              "items": ["Photoshop", "Figma", "Adobe Illustrator"]
+            },
+            {
+              "category": "Languages",
+              "items": ["English", "German", "French"]
+            }
+          ],
+          "content": "NA"
+        }
+      ],
+      "social": [
+        {
+          "slug": "social",
+          "order": 0,
+          "title": "Social Links for language: jp",
+          "social_links": [
+            {
+              "platform": "LinkedIn",
+              "url": "https://linkedin.com/in/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "GitHub",
+              "url": "https://github.com/alexjohnson",
+              "username": "alexjohnson"
+            },
+            {
+              "platform": "Twitter",
+              "url": "https://twitter.com/alexjohnson"
+            }
+          ],
+          "content": "NA"
+        }
+      ]
+    },
+    "photos": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Senior Developer 1 (JP)",
+        "image": "/images/photo-1.jpg",
+        "category": "Guide",
+        "description": "Project 1 overview in JP.",
+        "date": "2020-01-01",
+        "tags": ["tech", "javascript"],
+        "featured": false,
+        "content": "React Cloud Node.js Node.js Architecture Next.js Cloud Node.js Next.js Node.js.\n\nNode.js Architecture TypeScript Architecture Architecture Node.js Cloud React React Node.js.\n\nTypeScript Architecture Node.js Node.js JavaScript React Cloud TypeScript Node.js Node.js."
+      }
+    ],
+    "projects": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "My Project 1 (JP)",
+        "description": "Project 1 overview in JP.",
+        "technologies": ["TypeScript", "Node.js"],
+        "link": "https://example.com/projects/1",
+        "github": "https://github.com/user/project-1",
+        "date": "2024-07-06",
+        "image": "/images/project-1.jpg",
+        "status": "in-progress",
+        "featured": false,
+        "content": "TypeScript Cloud Cloud JavaScript Architecture Cloud TypeScript Cloud Node.js React.\n\nJavaScript TypeScript JavaScript React JavaScript Node.js JavaScript React React React.\n\nTypeScript JavaScript JavaScript Next.js JavaScript Cloud Next.js Cloud Next.js Architecture.\n\nNext.js Architecture Architecture JavaScript JavaScript Node.js Node.js React Cloud TypeScript."
+      }
+    ],
+    "publications": [
+      {
+        "slug": "1",
+        "order": 1,
+        "title": "Publication Title 1",
+        "authors": ["Author A1", "Author B1"],
+        "publisher": "Publisher 1",
+        "date": "2021-06-01",
+        "link": "https://example.com/publication/1",
+        "doi": "10.1234/example-doi-1",
+        "summary": "This is a brief summary of publication 1 in jp.",
+        "keywords": ["Keyword1", "Keyword2", "Keyword3"],
+        "media": ["https://example.com/media/pub-1.jpg"],
         "content": "NA"
       }
     ]
