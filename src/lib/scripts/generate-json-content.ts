@@ -184,7 +184,7 @@ const TYPE_METADATA: Record<
     title: { type: "string", required: true },
     image: { type: "string", required: true },
     album: { type: "string", required: false },
-    category: { type: "string", required: false },
+    category: { type: "string", required: true },
     description: { type: "string", required: false },
     date: { type: "date", required: false },
     location: { type: "string", required: false },
@@ -544,7 +544,7 @@ function printValidationResults(): ValidationResult {
     warnings: validationWarnings,
   };
 }
-export function generateContent(): void {
+export function main(): void {
   console.log("🚀 Starting content generation...");
 
   const languages = getLanguages();
@@ -599,10 +599,7 @@ export function generateContent(): void {
   }
 }
 
-// // Run the generator
-// try {
-//   generateContent();
-// } catch (error) {
-//   console.error("❌ Error generating content:", error);
-//   process.exit(1);
-// }
+
+export function generateJSONContent(): void {
+  main();
+}

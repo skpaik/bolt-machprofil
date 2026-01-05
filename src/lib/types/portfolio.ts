@@ -28,7 +28,7 @@ export interface BlogPost extends BaseContent {
 export interface Photo extends BaseContent {
   image: string;
   album: string;
-  category?: string;
+  category: string;
   description?: string;
   date?: string;
   location?: string;
