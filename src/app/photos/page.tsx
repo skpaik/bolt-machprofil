@@ -54,14 +54,6 @@ export default function PhotoPage() {
     return uniqueAlbums.sort();
   }, [photos]);
 
-  // Get unique categories
-  const categories = useMemo(() => {
-    const uniqueCategories = [
-      ...new Set(photos.map((photo) => photo.category)),
-    ];
-    return uniqueCategories.sort();
-  }, [photos]);
-
   const tags = useMemo(() => {
     const allTags = photos.flatMap((photo: Photo) => photo.tags || []);
     const uniqueTags = [...new Set(allTags)];
@@ -206,16 +198,6 @@ export default function PhotoPage() {
       options: [
         { value: "all", label: langI18n.album_all },
         ...albums.map((album: string) => ({ value: album, label: album })),
-      ],
-    },
-    {
-      name: "category",
-      label: langI18n.category,
-      value: selectedCategory,
-      onChange: setSelectedCategory,
-      options: [
-        { value: "all", label: langI18n.all_categories },
-        ...categories.map((cat) => ({ value: cat, label: cat })),
       ],
     },
     {
