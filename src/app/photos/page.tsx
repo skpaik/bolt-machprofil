@@ -141,7 +141,7 @@ export default function PhotoPage() {
     });
 
     return filtered;
-  }, [photos, selectedAlbum,selectedCategory, selectedTag, searchQuery, sortBy]);
+  }, [photos, selectedAlbum, selectedTag, searchQuery, sortBy]);
 
   const totalPhotos = filteredPhotos.length;
   const totalPages = Math.ceil(totalPhotos / (appConfig?.item_per_page || 12));
@@ -175,7 +175,7 @@ export default function PhotoPage() {
     } else {
       router.push("/photos", { scroll: false });
     }
-  }, [searchQuery, selectedAlbum, selectedCategory, selectedTag, sortBy]);
+  }, [searchQuery, selectedAlbum, selectedTag, sortBy]);
 
   // Find current photo for detail view
   const currentPhoto = photoParam
