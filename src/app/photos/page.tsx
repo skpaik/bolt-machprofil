@@ -17,7 +17,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 type ViewMode = "gallery" | "albums";
 
 export default function PhotoPage() {
-  const { appData, appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, contentData } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -25,6 +25,7 @@ export default function PhotoPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedAlbum, setSelectedAlbum] = useState<string>("all");
   const [selectedTag, setSelectedTag] = useState<string>("all");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
   const [viewMode, setViewMode] = useState<ViewMode>("gallery");
 
@@ -53,6 +54,14 @@ export default function PhotoPage() {
     return uniqueAlbums.sort();
   }, [photos]);
 
+  // Get unique categories
+  const categories = useMemo(() => {
+    const uniqueCategories = [
+      ...new Set(photos.map((photo) => photo.category)),
+    ];
+    return uniqueCategories.sort();
+  }, [photos]);
+
   const tags = useMemo(() => {
     const allTags = photos.flatMap((photo: Photo) => photo.tags || []);
     const uniqueTags = [...new Set(allTags)];
@@ -76,6 +85,11 @@ export default function PhotoPage() {
     let filtered = photos.filter((photo: Photo) => {
       // Album filter
       if (selectedAlbum !== "all" && photo.album !== selectedAlbum) {
+        return false;
+      }
+
+      // Category filter
+      if (selectedCategory !== "all" && photo.category !== selectedCategory) {
         return false;
       }
 
@@ -127,7 +141,7 @@ export default function PhotoPage() {
     });
 
     return filtered;
-  }, [photos, selectedAlbum, selectedTag, searchQuery, sortBy]);
+  }, [photos, selectedAlbum,selectedCategory, selectedTag, searchQuery, sortBy]);
 
   const totalPhotos = filteredPhotos.length;
   const totalPages = Math.ceil(totalPhotos / (appConfig?.item_per_page || 12));
@@ -161,7 +175,7 @@ export default function PhotoPage() {
     } else {
       router.push("/photos", { scroll: false });
     }
-  }, [searchQuery, selectedAlbum, selectedTag, sortBy]);
+  }, [searchQuery, selectedAlbum, selectedCategory, selectedTag, sortBy]);
 
   // Find current photo for detail view
   const currentPhoto = photoParam
@@ -192,6 +206,16 @@ export default function PhotoPage() {
       options: [
         { value: "all", label: langI18n.album_all },
         ...albums.map((album: string) => ({ value: album, label: album })),
+      ],
+    },
+    {
+      name: "category",
+      label: langI18n.category,
+      value: selectedCategory,
+      onChange: setSelectedCategory,
+      options: [
+        { value: "all", label: langI18n.all_categories },
+        ...categories.map((cat) => ({ value: cat, label: cat })),
       ],
     },
     {
