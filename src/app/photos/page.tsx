@@ -17,7 +17,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 type ViewMode = "gallery" | "albums";
 
 export default function PhotoPage() {
-  const { appConfig, langI18n, contentData } = usePortfolio();
+  const { appData, appConfig, langI18n, contentData } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -25,7 +25,6 @@ export default function PhotoPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedAlbum, setSelectedAlbum] = useState<string>("all");
   const [selectedTag, setSelectedTag] = useState<string>("all");
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
   const [viewMode, setViewMode] = useState<ViewMode>("gallery");
 
@@ -77,11 +76,6 @@ export default function PhotoPage() {
     let filtered = photos.filter((photo: Photo) => {
       // Album filter
       if (selectedAlbum !== "all" && photo.album !== selectedAlbum) {
-        return false;
-      }
-
-      // Category filter
-      if (selectedCategory !== "all" && photo.category !== selectedCategory) {
         return false;
       }
 
