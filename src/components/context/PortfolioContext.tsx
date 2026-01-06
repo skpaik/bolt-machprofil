@@ -34,7 +34,7 @@ import { AboutContent } from "@/lib/types/about.contract";
 import { loadAllContent } from "@/lib/services/loadContent";
 import { ContentData } from "@/lib/types/content.types";
 import { LanguageI18n } from "@/lib/types/lang.i18n";
-import { emptyContent } from "@/data/configs/empty.data";
+import { emptyContent } from "@/data/configs/constants/empty.data";
 // import blogContentsData from "@/data/blog_contents.json";
 // import projectContentsData from "@/data/project_contents.json";
 // import experienceContentsData from "@/data/experience_contents.json";
@@ -46,8 +46,9 @@ import { emptyContent } from "@/data/configs/empty.data";
 // import publicationContentsData from "@/data/publication_contents.json";
 // import photoContentsData from "@/data/photos_contents.json";
 // import aboutContentsData from "@/data/about_contents.json";
-import languageData from "@/data/configs/i18n.json";
-import settingData from "@/data/configs/settings.json";
+import languageData from "@/data/configs/constants/i18n.json";
+import {ConfigData} from "@/data/configs/config-data";
+import {settings_const} from "@/data/configs/generated/settings";
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
@@ -72,31 +73,32 @@ function getInitialValue<T extends string>(
 }
 
 export function PortfolioProvider({ children }: { children: ReactNode }) {
-  const setting = settingData as SettingSchema;
+  const allowedProfiles= ConfigData.profilesList.map(profile => profile.value);
+  console.log('allowedProfiles>  ', allowedProfiles);
 
   // ✅ Lazy initialization — runs once on first render in browser
   const [profileType, setProfileType] = useState<ProfileType>(() =>
     getInitialValue(
       "activeProfile",
-      setting.activeProfile as ProfileType,
-      Object.keys(setting.allowedProfile) as ProfileType[],
+        settings_const.activeProfile as ProfileType,
+      Object.keys(allowedProfiles) as ProfileType[],
     ),
   );
 
   const [templateType, setTemplateType] = useState<TemplateType>(() =>
-    getInitialValue("activeTemplate", setting.activeTemplate as TemplateType),
+    getInitialValue("activeTemplate", settings_const.activeTemplate as TemplateType),
   );
 
   const [languageType, setLanguageType] = useState<LanguageType>(() =>
     getInitialValue(
       "activeLanguage",
-      setting.activeLanguage as LanguageType,
+        settings_const.activeLanguage as LanguageType,
       Object.keys(languageData) as LanguageType[],
     ),
   );
 
   const [themeType, setThemeType] = useState<ThemeType>(() =>
-    getInitialValue("activeTheme", setting.activeTheme as ThemeType),
+    getInitialValue("activeTheme", settings_const.activeTheme as ThemeType),
   );
 
   // Keep theme synced to DOM

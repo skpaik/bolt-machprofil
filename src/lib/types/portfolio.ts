@@ -300,7 +300,7 @@ export interface SettingSchema {
   activeTemplate: string;
   activeLanguage: string;
   activeTheme: string;
-  allowedProfile: string[];
+  allowedProfiles: string[];
 }
 
 export interface Publication extends BaseContent {

@@ -14,7 +14,7 @@ function parseConfigFile(filePath: string) {
 }
 
 // Read all md files in configs folder
-export function buildConfigsJson() {
+export function main () {
   if (!fs.existsSync(CONFIG_DIR)) {
     throw new Error("Configs folder not found: " + CONFIG_DIR);
   }
@@ -35,5 +35,6 @@ export function buildConfigsJson() {
   console.log("Config JSON generated at:", OUTPUT_FILE);
 }
 
-// Run converter
-//buildConfigsJson();
+export function buildConfigsJson(): void {
+  main();
+}

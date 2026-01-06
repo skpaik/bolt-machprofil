@@ -1,4 +1,6 @@
 ---
+siteName: GoribProfile
+siteDescription: A markdown-powered portfolio and blog
 siteTitle: "Sudipta Paik Portfolio"
 tagline: "Engineer. Creator. Problem Solver."
 author: "Sudipta Kumar Paik"

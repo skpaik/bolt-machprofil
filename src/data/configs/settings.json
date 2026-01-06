@@ -1,7 +1,0 @@
-{
-  "activeProfile": "developer",
-  "activeTemplate": "classic",
-  "activeLanguage": "en",
-  "activeTheme": "dark",
-  "allowedProfile": ["developer", "photographer", "teacher", "student"]
-}

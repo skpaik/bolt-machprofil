@@ -1,4 +1,4 @@
-import { blogPostsSlugs } from "@/data/configs/blog-posts-slugs";
+import { blogPostsSlugs } from "@/data/configs/generated/blog-posts-slugs";
 import BlogDetailClient from "./BlogDetailClient";
 
 export const dynamicParams = false;

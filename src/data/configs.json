@@ -1,15 +1,4 @@
 {
-  "languages": {
-    "defaultLanguage": "en",
-    "allowedLanguages": [
-      "en",
-      "de",
-      "fr",
-      "jp",
-      "es"
-    ],
-    "content": "\nNA\n"
-  },
   "profile": {
     "name": "Mofiz Rahman",
     "title": "Full-stack Developer",
@@ -20,12 +9,15 @@
     "content": "\nNo Profile\n"
   },
   "settings": {
-    "siteName": "GoribProfile",
-    "defaultTemplate": "modern",
-    "siteDescription": "A markdown-powered portfolio and blog",
-    "content": "\nNA\n"
+    "activeProfile": "developer",
+    "activeLanguage": "en",
+    "activeTheme": "light",
+    "activeTemplate": "modern",
+    "content": "NA"
   },
   "site": {
+    "siteName": "GoribProfile",
+    "siteDescription": "A markdown-powered portfolio and blog",
     "siteTitle": "Sudipta Paik Portfolio",
     "tagline": "Engineer. Creator. Problem Solver.",
     "author": "Sudipta Kumar Paik",
@@ -36,6 +28,11 @@
     "content": ""
   },
   "theme": {
-    "content": "layout: \"classic\" # classic, modern, creative\ncolorScheme: \"blue\"\nfontFamily: \"Inter\"\ndarkMode: true\nshowHeaderImage: true\n"
+    "layout": "classic",
+    "colorScheme": "blue",
+    "fontFamily": "Inter",
+    "darkMode": true,
+    "showHeaderImage": true,
+    "content": ""
   }
 }

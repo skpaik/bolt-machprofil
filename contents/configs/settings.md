@@ -1,7 +1,7 @@
 ---
-siteName: GoribProfile
-defaultTemplate: modern
-siteDescription: A markdown-powered portfolio and blog
+activeProfile: developer
+activeLanguage: en
+activeTheme: light
+activeTemplate: modern
 ---
-
 NA

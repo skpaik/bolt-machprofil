@@ -14,7 +14,7 @@ import { ConfigData } from "@/data/configs/config-data";
 
 export function LanguageSwitcher() {
   const { langI18n, languageType, setLanguageType } = usePortfolio();
-  const current = ConfigData.languages.find((t) => t.value === languageType);
+  const current = ConfigData.languageList.find((t) => t.value === languageType);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -24,7 +24,7 @@ export function LanguageSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {ConfigData.languages.map((t) => (
+        {ConfigData.languageList.map((t) => (
           <DropdownMenuItem
             key={t.value}
             onClick={() => setLanguageType(t.value)}

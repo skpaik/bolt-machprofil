@@ -15,7 +15,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 export function ProfileSwitcher() {
   const { langI18n, profileType, setProfileType } = usePortfolio();
 
-  const current = ConfigData.profiles.find((t) => t.value === profileType);
+  const current = ConfigData.profilesList.find((t) => t.value === profileType);
 
   return (
     <DropdownMenu>
@@ -26,7 +26,7 @@ export function ProfileSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {ConfigData.profiles.map((t) => (
+        {ConfigData.profilesList.map((t) => (
           <DropdownMenuItem
             key={t.value}
             onClick={() => setProfileType(t.value)}
