@@ -599,7 +599,6 @@ export function main(): void {
   }
 }
 
-
 export function generateJSONContent(): void {
   main();
 }

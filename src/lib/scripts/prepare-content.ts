@@ -1,5 +1,5 @@
 import { generateBlogPostsSlugsSlug } from "@/lib/scripts/generate-blog-slug";
-import {generateContent} from "@/lib/scripts/generate-contents";
+import { generateContent } from "@/lib/scripts/generate-contents";
 
 // Run all preparation tasks
 function main() {

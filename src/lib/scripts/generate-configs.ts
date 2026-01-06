@@ -14,7 +14,7 @@ function parseConfigFile(filePath: string) {
 }
 
 // Read all md files in configs folder
-export function main () {
+export function main() {
   if (!fs.existsSync(CONFIG_DIR)) {
     throw new Error("Configs folder not found: " + CONFIG_DIR);
   }

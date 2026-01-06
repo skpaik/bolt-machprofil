@@ -47,8 +47,8 @@ import { emptyContent } from "@/data/configs/constants/empty.data";
 // import photoContentsData from "@/data/photos_contents.json";
 // import aboutContentsData from "@/data/about_contents.json";
 import languageData from "@/data/configs/constants/i18n.json";
-import {ConfigData} from "@/data/configs/config-data";
-import {settings_const} from "@/data/configs/generated/settings";
+import { ConfigData } from "@/data/configs/config-data";
+import { settings_const } from "@/data/configs/generated/settings";
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
@@ -73,26 +73,31 @@ function getInitialValue<T extends string>(
 }
 
 export function PortfolioProvider({ children }: { children: ReactNode }) {
-  const allowedProfiles= ConfigData.profilesList.map(profile => profile.value);
-  console.log('allowedProfiles>  ', allowedProfiles);
+  const allowedProfiles = ConfigData.profilesList.map(
+    (profile) => profile.value,
+  );
+  //console.log('allowedProfiles>  ', allowedProfiles);
 
   // ✅ Lazy initialization — runs once on first render in browser
   const [profileType, setProfileType] = useState<ProfileType>(() =>
     getInitialValue(
       "activeProfile",
-        settings_const.activeProfile as ProfileType,
+      settings_const.activeProfile as ProfileType,
       Object.keys(allowedProfiles) as ProfileType[],
     ),
   );
 
   const [templateType, setTemplateType] = useState<TemplateType>(() =>
-    getInitialValue("activeTemplate", settings_const.activeTemplate as TemplateType),
+    getInitialValue(
+      "activeTemplate",
+      settings_const.activeTemplate as TemplateType,
+    ),
   );
 
   const [languageType, setLanguageType] = useState<LanguageType>(() =>
     getInitialValue(
       "activeLanguage",
-        settings_const.activeLanguage as LanguageType,
+      settings_const.activeLanguage as LanguageType,
       Object.keys(languageData) as LanguageType[],
     ),
   );

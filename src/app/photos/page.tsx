@@ -141,7 +141,14 @@ export default function PhotoPage() {
     });
 
     return filtered;
-  }, [photos, selectedAlbum,selectedCategory, selectedTag, searchQuery, sortBy]);
+  }, [
+    photos,
+    selectedAlbum,
+    selectedCategory,
+    selectedTag,
+    searchQuery,
+    sortBy,
+  ]);
 
   const totalPhotos = filteredPhotos.length;
   const totalPages = Math.ceil(totalPhotos / (appConfig?.item_per_page || 12));
