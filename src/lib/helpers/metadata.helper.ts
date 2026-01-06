@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import type { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
 import { PageMetaParams, SiteConfig } from "@/lib/types/portfolio";
+import { site_const } from "@/data/configs/generated/site";
 
 export class MetadataHelper {
-  public static generateMetaData(siteConfigData: SiteConfig): Metadata {
+  public static generateMetaData(): Metadata {
+    const siteConfigData: SiteConfig = site_const;
     return {
       title: siteConfigData.siteTitle,
-      description: siteConfigData.description,
+      description: siteConfigData.siteDescription,
       // authors: {name: siteConfigData.author},
       // generator: siteConfigData.generator,
       // keywords: siteConfigData.keywords,

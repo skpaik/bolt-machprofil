@@ -8,4 +8,11 @@ baseUrl: "https://skpaik.github.io"
 theme: "light"
 favicon: "/favicon.ico"
 socialPreview: "/images/social-card.png"
+keywords:
+  - portfolio
+  - developer
+  - react
+  - nextjs
+  - typescript
+  - "software engineer"
 ---

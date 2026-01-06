@@ -6,11 +6,7 @@ import AppLayout from "@/app/app-layout";
 import "../assets/styles/globals.css";
 import { geistSans, geistMono } from "@/assets/fonts";
 
-export const metadata: Metadata = MetadataHelper.generateMetaData({
-  siteTitle: "Portfolio Website",
-  description:
-    "Professional portfolio website showcasing work, skills, and experience",
-});
+export const metadata: Metadata = MetadataHelper.generateMetaData();
 
 export default function RootLayout({
   children,

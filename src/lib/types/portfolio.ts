@@ -353,7 +353,7 @@ export interface SiteConfig {
   siteTitle: string;
   // tagline: string;
   // author: string;
-  description: string;
+  siteDescription: string;
   // keywords: string[];
   // baseUrl: string;
   // language: string;
