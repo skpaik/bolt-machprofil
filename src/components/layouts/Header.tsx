@@ -7,6 +7,7 @@ import { TemplateSwitcher } from "@/components/switchers/template-switcher";
 import { LanguageSwitcher } from "@/components/switchers/language-switcher";
 import { ProfileSwitcher } from "@/components/switchers/profile-switcher";
 import { ThemeSwitcher } from "@/components/switchers/theme-switcher";
+import { settings_const } from "@/data/configs/generated/settings";
 
 export default function Header() {
   const { appData } = usePortfolio();
@@ -48,11 +49,10 @@ export default function Header() {
               {appData.name}
             </span>
           </Link>
-
-          <LanguageSwitcher />
-          <TemplateSwitcher />
-          <ProfileSwitcher />
-          <ThemeSwitcher />
+          {settings_const.showLanguageChangeButton&&<LanguageSwitcher />}
+          {settings_const.showProfileChangeButton&&<ProfileSwitcher />}
+          {settings_const.showTemplateChangeButton&&<TemplateSwitcher />}
+          {settings_const.showThemeChangeButton&&<ThemeSwitcher />}
         </div>
       </div>
     </header>

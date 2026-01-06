@@ -4,5 +4,9 @@ export const settings_const = {
   activeLanguage: "en",
   activeTheme: "light",
   activeTemplate: "modern",
+  showLanguageChangeButton: true,
+  showProfileChangeButton: false,
+  showTemplateChangeButton: false,
+  showThemeChangeButton: true,
   content: "NA"
 } as const;

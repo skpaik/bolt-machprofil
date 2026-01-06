@@ -13,6 +13,10 @@
     "activeLanguage": "en",
     "activeTheme": "light",
     "activeTemplate": "modern",
+    "showLanguageChangeButton": true,
+    "showProfileChangeButton": false,
+    "showTemplateChangeButton": false,
+    "showThemeChangeButton": true,
     "content": "NA"
   },
   "site": {
