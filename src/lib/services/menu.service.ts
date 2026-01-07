@@ -1,5 +1,5 @@
 import { PrimaryMenuItem } from "@/lib/types/portfolio";
-import { MenuConfig } from "@/lib/configs/menu-config";
+import { MenuConfig } from "@/data/configs/generated/menu-config";
 
 export class MenuService {
   /**

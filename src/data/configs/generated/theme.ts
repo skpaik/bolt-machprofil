@@ -5,5 +5,5 @@ export const theme_const = {
   fontFamily: "Inter",
   darkMode: true,
   showHeaderImage: true,
-  content: "",
+  content: ""
 } as const;
