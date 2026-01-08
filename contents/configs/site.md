@@ -14,5 +14,5 @@ keywords:
   - react
   - nextjs
   - typescript
-  - "software engineer"
+  - software engineer
 ---

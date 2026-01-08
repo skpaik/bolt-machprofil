@@ -15,9 +15,9 @@ import { useIsMobile } from "@/lib/hooks/use-is-mobile";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function BottomNav() {
-  const { langI18n } = usePortfolio();
+  const { langI18n, languageType } = usePortfolio();
   const isMobile = useIsMobile();
-  const { primaryMenuItems, moreMenuItems } = MenuService.getMenu(isMobile);
+  const { primaryMenuItems, moreMenuItems } = MenuService.getMenu(languageType, isMobile);
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -79,35 +79,37 @@ export default function BottomNav() {
             );
           })}
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
-                  isMoreActive
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {showLucidIcon("more-horizontal", "", 24)}
-                <span className="text-xs mt-1">{langI18n.more}</span>
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" side="top" className="mb-2">
-              {moreMenuItems.map((item) => {
-                const active = isActive(item.path);
-                return (
-                  <DropdownMenuItem key={item.key} asChild>
-                    <Link
-                      href={item.path}
-                      className={`cursor-pointer ${active ? "bg-accent" : ""}`}
-                    >
-                      {langI18n[item.key as keyof typeof langI18n]}
-                    </Link>
-                  </DropdownMenuItem>
-                );
-              })}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {moreMenuItems.length > 0 &&
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                      className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
+                          isMoreActive
+                              ? "text-primary"
+                              : "text-muted-foreground hover:text-foreground"
+                      }`}
+                  >
+                    {showLucidIcon("more-horizontal", "", 24)}
+                    <span className="text-xs mt-1">{langI18n.more}</span>
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" side="top" className="mb-2">
+                  {moreMenuItems.map((item) => {
+                    const active = isActive(item.path);
+                    return (
+                        <DropdownMenuItem key={item.key} asChild>
+                          <Link
+                              href={item.path}
+                              className={`cursor-pointer ${active ? "bg-accent" : ""}`}
+                          >
+                            {langI18n[item.key as keyof typeof langI18n]}
+                          </Link>
+                        </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
+          }
         </div>
       </div>
     </nav>
