@@ -46,7 +46,7 @@ export const ${key}_const = ${objectToTs(value, 2)} as const;
 }
 
 // Main function to convert each markdown file into separate TS files
-export function mainToTs() {
+export function mainToConfigTs() {
   if (!fs.existsSync(CONFIG_DIR)) {
     throw new Error("Configs folder not found: " + CONFIG_DIR);
   }
