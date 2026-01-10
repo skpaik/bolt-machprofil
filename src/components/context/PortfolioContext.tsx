@@ -49,6 +49,7 @@ import { emptyContent } from "@/data/configs/constants/empty.data";
 import languageData from "@/data/configs/constants/i18n.json";
 import { ConfigData } from "@/data/configs/config-data";
 import { settings_const } from "@/data/configs/generated/settings";
+import { LocalStorageService } from "@/lib/services/local.s.service";
 
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
@@ -62,7 +63,7 @@ function getInitialValue<T extends string>(
 ): T {
   if (typeof window === "undefined") return fallback;
   try {
-    const stored = localStorage.getItem(key) as T | null;
+    const stored = LocalStorageService.get<T>(key);
     if (stored && (!validValues || validValues.includes(stored))) {
       return stored;
     }
@@ -113,19 +114,19 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
 
   // Persist on change
   useEffect(() => {
-    localStorage.setItem("activeProfile", profileType);
+    LocalStorageService.set("activeProfile", profileType);
   }, [profileType]);
 
   useEffect(() => {
-    localStorage.setItem("activeTemplate", templateType);
+    LocalStorageService.set("activeTemplate", templateType);
   }, [templateType]);
 
   useEffect(() => {
-    localStorage.setItem("activeLanguage", languageType);
+    LocalStorageService.set("activeLanguage", languageType);
   }, [languageType]);
 
   useEffect(() => {
-    localStorage.setItem("activeTheme", themeType);
+    LocalStorageService.set("activeTheme", themeType);
     document.documentElement.classList.toggle("dark", themeType === "dark");
   }, [themeType]);
 
