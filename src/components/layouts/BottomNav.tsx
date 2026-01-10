@@ -102,6 +102,7 @@ export default function BottomNav() {
                   return (
                     <DropdownMenuItem key={item.key} asChild>
                       <Link
+                        key={item.key}
                         href={item.path}
                         className={`cursor-pointer ${active ? "bg-accent" : ""}`}
                       >

@@ -185,7 +185,7 @@ export interface LanguageItem extends WebUIItem {
   value: LanguageType;
 }
 
-export interface PrimaryMenuItem {
+export interface BottomMenuItem {
   key: string;
   path: string;
   icon: string;

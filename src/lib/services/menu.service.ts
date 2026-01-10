@@ -1,6 +1,7 @@
 //src/lib/services/menu.service.ts
-import { PrimaryMenuItem } from "@/lib/types/portfolio";
+import { BottomMenuItem } from "@/lib/types/portfolio";
 import { MenuConfig } from "@/data/configs/generated/menu-config";
+import {settings_const} from "@/data/configs/generated/settings";
 
 type SupportedLang = keyof typeof MenuConfig.menuList;
 
@@ -13,26 +14,30 @@ export class MenuService {
    * @param desktopLimit number of primary items to show on desktop
    */
   static getMenu(
-    lang: SupportedLang = "en",
-    isMobile: boolean,
-    mobileLimit = 4,
-    desktopLimit = 5,
+      lang: SupportedLang = settings_const.activeLanguage,
+      isMobile: boolean,
+      mobileLimit = 4,
+      desktopLimit = 5,
   ) {
-    let primaryMenuItems: PrimaryMenuItem[] = [];
-
     const langWiseMenuList =
-      MenuConfig.menuList[lang] ?? MenuConfig.menuList.en;
+        MenuConfig.menuList[lang] ?? MenuConfig.menuList.en;
 
-    let moreMenuItems: PrimaryMenuItem[] = [...langWiseMenuList.primary];
+    let primaryMenuItems: BottomMenuItem[] = [];
+    let moreMenuItems: BottomMenuItem[] = [];
 
     if (isMobile) {
       primaryMenuItems = langWiseMenuList.primary.slice(0, mobileLimit);
+
       const overflow = langWiseMenuList.primary.slice(mobileLimit);
-      moreMenuItems = [...overflow, ...moreMenuItems];
+
+      moreMenuItems = [
+        ...overflow,
+        ...langWiseMenuList.more,
+      ];
     } else {
       primaryMenuItems = langWiseMenuList.primary.slice(0, desktopLimit);
-      const overflow = langWiseMenuList.more.slice(desktopLimit);
-      moreMenuItems = [...overflow, ...moreMenuItems];
+
+      moreMenuItems = [...langWiseMenuList.more];
     }
 
     return { primaryMenuItems, moreMenuItems };

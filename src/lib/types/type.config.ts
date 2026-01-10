@@ -1,6 +1,9 @@
+import { MenuConfig } from "@/data/configs/generated/menu-config";
+
 export type ProfileType = "developer" | "photographer" | "teacher" | "student";
 export type TemplateType = "modern" | "classic" | "minimal";
-export type LanguageType = "en" | "de" | "es" | "fr";
+export type LanguageTypeOld = "en" | "de" | "es" | "fr";
+export type LanguageType = keyof typeof MenuConfig.menuList;
 export type ThemeType = "light" | "dark" | "system";
 
 export type SortOption =
