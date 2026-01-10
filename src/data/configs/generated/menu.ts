@@ -1,18 +1,7 @@
 // This file is auto-generated from markdown
 export const menu_const = {
   show: ["home", "about", "experience", "projects", "blog", "resume"],
-  optional: [
-    "education",
-    "skills",
-    "services",
-    "publications",
-    "certificates",
-    "photos",
-    "contact",
-    "privacy",
-    "terms",
-  ],
+  optional: ["education", "skills", "services", "publications", "certificates", "photos", "contact", "privacy", "terms"],
   hide: ["testimonials"],
-  content:
-    "\n# Menu Configuration Instructions\n\nThis file controls which menus appear on the site and where they appear.\n\n## How it works\n\n- **show**\n    - Add menu keys here to display them as **primary menus**\n    - These appear directly in the main navigation bar\n    - The order you write is the order they appear\n    - These are primary menus and appear only if space is available\n\n- **optional**\n    - Add menu keys here to display them under the **More** menu\n    - These are secondary menus and appear only in **More** menu \n\n- **hide**\n    - Add menu keys here to **never show them**\n    - This overrides both `show` and `optional`\n\n## Important rules\n\n- If a menu is **not listed** in `show`, `optional`, or `hide`, it will **not appear**, even if content exists.\n- If a menu is listed but **no content exists** for that menu (in the current language), it will be **automatically hidden**.\n- Menu availability is **language-dependent**. A menu may appear in one language and be hidden in another.\n- Only predefined menu keys are allowed. Invalid keys will cause a build error.\n\n## Supported menu keys\n\nhome  \nabout  \nexperience  \nprojects  \nblog  \nresume  \neducation  \nskills  \nservices  \npublications  \ncertificates  \nphotos  \ntestimonials  \ncontact  \nprivacy  \nterms\n",
+  content: "\n# Menu Configuration Instructions\n\nThis file controls which menus appear on the site and where they appear.\n\n## How it works\n\n- **show**\n  - Add menu keys here to display them as **primary menus**\n  - These appear directly in the main navigation bar\n  - The order you write is the order they appear\n  - These are primary menus and appear only if space is available\n\n- **optional**\n  - Add menu keys here to display them under the **More** menu\n  - These are secondary menus and appear only in **More** menu\n\n- **hide**\n  - Add menu keys here to **never show them**\n  - This overrides both `show` and `optional`\n\n## Important rules\n\n- If a menu is **not listed** in `show`, `optional`, or `hide`, it will **not appear**, even if content exists.\n- If a menu is listed but **no content exists** for that menu (in the current language), it will be **automatically hidden**.\n- Menu availability is **language-dependent**. A menu may appear in one language and be hidden in another.\n- Only predefined menu keys are allowed. Invalid keys will cause a build error.\n\n## Supported menu keys\n\nhome  \nabout  \nexperience  \nprojects  \nblog  \nresume  \neducation  \nskills  \nservices  \npublications  \ncertificates  \nphotos  \ntestimonials  \ncontact  \nprivacy  \nterms\n"
 } as const;

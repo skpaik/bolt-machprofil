@@ -3,51 +3,51 @@
 
 export const blogPostsSlugs = [
   {
-    lang: "en",
-    id: "1",
+    "lang": "en",
+    "id": "1"
   },
   {
-    lang: "en",
-    id: "2",
+    "lang": "en",
+    "id": "2"
   },
   {
-    lang: "en",
-    id: "3",
+    "lang": "en",
+    "id": "3"
   },
   {
-    lang: "en",
-    id: "4",
+    "lang": "en",
+    "id": "4"
   },
   {
-    lang: "en",
-    id: "5",
+    "lang": "en",
+    "id": "5"
   },
   {
-    lang: "en",
-    id: "6",
+    "lang": "en",
+    "id": "6"
   },
   {
-    lang: "en",
-    id: "7",
+    "lang": "en",
+    "id": "7"
   },
   {
-    lang: "en",
-    id: "8",
+    "lang": "en",
+    "id": "8"
   },
   {
-    lang: "en",
-    id: "9",
+    "lang": "en",
+    "id": "9"
   },
   {
-    lang: "en",
-    id: "10",
+    "lang": "en",
+    "id": "10"
   },
   {
-    lang: "en",
-    id: "11",
+    "lang": "en",
+    "id": "11"
   },
   {
-    lang: "en",
-    id: "12",
-  },
+    "lang": "en",
+    "id": "12"
+  }
 ] as const;
