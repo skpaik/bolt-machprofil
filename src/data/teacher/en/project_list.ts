@@ -1,0 +1,355 @@
+export const data = [
+  {
+    "id": 1,
+    "title": "E-Commerce Platform",
+    "slug": "ecommerce-platform",
+    "shortDescription": "Full-stack online shopping platform with payment integration",
+    "description": "A comprehensive e-commerce solution built with Next.js and Stripe, featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
+    "category": "Web Development",
+    "tags": [
+      "E-commerce",
+      "Full Stack",
+      "Payment Gateway"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
+    "startDate": "2024-01-15",
+    "endDate": "2024-06-20",
+    "client": "RetailCo Inc.",
+    "role": "Full Stack Developer",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Stripe",
+      "Tailwind CSS"
+    ],
+    "features": [
+      "Product catalog with search and filters",
+      "Shopping cart and checkout flow",
+      "Stripe payment integration",
+      "Order management system",
+      "User authentication and profiles",
+      "Admin dashboard"
+    ],
+    "liveUrl": "https://example-shop.com",
+    "githubUrl": "https://github.com/username/ecommerce",
+    "featured": true,
+    "likes": 342,
+    "views": 5420,
+    "status": "Completed",
+    "content": ""
+  },
+  {
+    "id": 2,
+    "title": "Healthcare Management System",
+    "slug": "healthcare-management",
+    "shortDescription": "Patient management and appointment scheduling platform",
+    "description": "Modern healthcare management system for clinics and hospitals, featuring appointment scheduling, patient records, and telemedicine capabilities.",
+    "category": "Web Development",
+    "tags": [
+      "Healthcare",
+      "SaaS",
+      "Dashboard"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+    "startDate": "2023-09-10",
+    "endDate": "2024-02-15",
+    "client": "HealthTech Solutions",
+    "role": "Lead Developer",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Express",
+      "Socket.io",
+      "Docker"
+    ],
+    "features": [
+      "Appointment scheduling",
+      "Patient records management",
+      "Video consultation integration",
+      "Prescription management",
+      "Billing and insurance",
+      "Analytics dashboard"
+    ],
+    "liveUrl": "https://healthcare-demo.com",
+    "featured": true,
+    "likes": 289,
+    "views": 4130,
+    "status": "Completed",
+    "content": ""
+  },
+  {
+    "id": 3,
+    "title": "Social Media Dashboard",
+    "slug": "social-media-dashboard",
+    "shortDescription": "Analytics dashboard for social media management",
+    "description": "Comprehensive social media analytics platform that aggregates data from multiple platforms and provides actionable insights.",
+    "category": "Web Development",
+    "tags": [
+      "Analytics",
+      "Dashboard",
+      "Social Media"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    "startDate": "2023-07-01",
+    "endDate": "2023-11-30",
+    "role": "Frontend Developer",
+    "technologies": [
+      "Vue.js",
+      "D3.js",
+      "Chart.js",
+      "Node.js",
+      "Redis",
+      "AWS"
+    ],
+    "features": [
+      "Multi-platform integration",
+      "Real-time analytics",
+      "Custom reports",
+      "Engagement metrics",
+      "Post scheduling",
+      "Team collaboration"
+    ],
+    "liveUrl": "https://social-dash.com",
+    "githubUrl": "https://github.com/username/social-dashboard",
+    "likes": 215,
+    "views": 3280,
+    "status": "Completed",
+    "content": ""
+  },
+  {
+    "id": 4,
+    "title": "AI Content Generator",
+    "slug": "ai-content-generator",
+    "shortDescription": "AI-powered content creation tool for marketers",
+    "description": "Intelligent content generation platform leveraging GPT-4 to create blog posts, social media content, and marketing copy.",
+    "category": "AI/ML",
+    "tags": [
+      "AI",
+      "Content",
+      "SaaS"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+    "startDate": "2024-03-01",
+    "endDate": "Ongoing",
+    "role": "Full Stack Developer",
+    "technologies": [
+      "Next.js",
+      "OpenAI API",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Vercel"
+    ],
+    "features": [
+      "AI-powered content generation",
+      "Multiple content types",
+      "SEO optimization suggestions",
+      "Plagiarism checking",
+      "Content calendar",
+      "Team workspaces"
+    ],
+    "liveUrl": "https://ai-writer.com",
+    "featured": true,
+    "likes": 456,
+    "views": 6890,
+    "status": "Ongoing",
+    "content": ""
+  },
+  {
+    "id": 5,
+    "title": "Fitness Tracking Mobile App",
+    "slug": "fitness-tracker-app",
+    "shortDescription": "Cross-platform mobile app for workout and nutrition tracking",
+    "description": "Comprehensive fitness application with workout tracking, meal planning, progress analytics, and social features.",
+    "category": "Mobile Development",
+    "tags": [
+      "Fitness",
+      "Health",
+      "Mobile"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+    "startDate": "2023-05-15",
+    "endDate": "2023-12-20",
+    "client": "FitLife App",
+    "role": "Mobile Developer",
+    "technologies": [
+      "React Native",
+      "Firebase",
+      "Node.js",
+      "MongoDB",
+      "Stripe"
+    ],
+    "features": [
+      "Workout tracking",
+      "Nutrition logging",
+      "Progress analytics",
+      "Social challenges",
+      "Personal trainer chat",
+      "Premium subscription"
+    ],
+    "liveUrl": "https://fitlife-app.com",
+    "likes": 378,
+    "views": 5210,
+    "status": "Completed",
+    "content": ""
+  },
+  {
+    "id": 6,
+    "title": "Real Estate Listing Platform",
+    "slug": "real-estate-platform",
+    "shortDescription": "Property listing and management platform",
+    "description": "Modern real estate platform connecting buyers, sellers, and agents with advanced search, virtual tours, and scheduling.",
+    "category": "Web Development",
+    "tags": [
+      "Real Estate",
+      "Marketplace",
+      "Geolocation"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+    "startDate": "2023-03-10",
+    "endDate": "2023-09-05",
+    "client": "HomeFinder",
+    "role": "Full Stack Developer",
+    "technologies": [
+      "Next.js",
+      "Mapbox",
+      "PostgreSQL",
+      "Prisma",
+      "AWS S3",
+      "Tailwind CSS"
+    ],
+    "features": [
+      "Advanced property search",
+      "Interactive maps",
+      "Virtual 3D tours",
+      "Appointment scheduling",
+      "Mortgage calculator",
+      "Agent dashboard"
+    ],
+    "liveUrl": "https://homefinder-demo.com",
+    "likes": 267,
+    "views": 4560,
+    "status": "Completed",
+    "content": ""
+  },
+  {
+    "id": 7,
+    "title": "Project Management Tool",
+    "slug": "project-management-tool",
+    "shortDescription": "Collaborative project management and team collaboration platform",
+    "description": "Agile project management tool with kanban boards, time tracking, and team collaboration features.",
+    "category": "Web Development",
+    "tags": [
+      "Productivity",
+      "Collaboration",
+      "SaaS"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
+    "startDate": "2024-02-01",
+    "endDate": "Ongoing",
+    "role": "Tech Lead",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Apollo",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "features": [
+      "Kanban and Gantt views",
+      "Time tracking",
+      "Resource management",
+      "Custom workflows",
+      "Real-time collaboration",
+      "Reporting and analytics"
+    ],
+    "githubUrl": "https://github.com/username/pm-tool",
+    "featured": true,
+    "likes": 423,
+    "views": 6120,
+    "status": "In Progress",
+    "content": ""
+  },
+  {
+    "id": 8,
+    "title": "Cryptocurrency Dashboard",
+    "slug": "crypto-dashboard",
+    "shortDescription": "Real-time cryptocurrency tracking and portfolio management",
+    "description": "Comprehensive crypto dashboard with real-time prices, portfolio tracking, and market analysis tools.",
+    "category": "Web Development",
+    "tags": [
+      "Cryptocurrency",
+      "Finance",
+      "Dashboard"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
+    "startDate": "2023-11-01",
+    "endDate": "2024-01-15",
+    "role": "Full Stack Developer",
+    "technologies": [
+      "Next.js",
+      "WebSocket",
+      "Redis",
+      "Chart.js",
+      "CoinGecko API"
+    ],
+    "features": [
+      "Real-time price tracking",
+      "Portfolio management",
+      "Price alerts",
+      "Market analysis",
+      "News aggregation",
+      "Tax reporting"
+    ],
+    "liveUrl": "https://crypto-dash.com",
+    "githubUrl": "https://github.com/username/crypto-dashboard",
+    "likes": 312,
+    "views": 4890,
+    "status": "Completed",
+    "content": ""
+  },
+  {
+    "id": 9,
+    "title": "Online Learning Platform",
+    "slug": "learning-platform",
+    "shortDescription": "Interactive online education and course management system",
+    "description": "Complete e-learning platform with video courses, quizzes, certificates, and student progress tracking.",
+    "category": "Web Development",
+    "tags": [
+      "Education",
+      "Video",
+      "LMS"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+    "startDate": "2023-06-15",
+    "endDate": "2024-03-30",
+    "client": "EduTech Academy",
+    "role": "Lead Developer",
+    "technologies": [
+      "Next.js",
+      "Vimeo API",
+      "PostgreSQL",
+      "Stripe",
+      "AWS",
+      "Redis"
+    ],
+    "features": [
+      "Video course player",
+      "Interactive quizzes",
+      "Progress tracking",
+      "Certificates",
+      "Discussion forums",
+      "Instructor dashboard"
+    ],
+    "liveUrl": "https://edutech-demo.com",
+    "likes": 398,
+    "views": 5670,
+    "status": "Completed",
+    "content": ""
+  }
+] as const;
+export default data;

@@ -1,303 +1,160 @@
 {
   "configs": {},
-  "de": {
-    "blogs": [
+  "developer": {
+    "en": [
       {
-        "slug": "1",
-        "order": 1,
-        "title": "My Blog Post 1 (DE)",
-        "date": "2024-11-28",
-        "author": "Mofiz Rahman",
-        "excerpt": "A short summary for blog post 1 in DE.",
-        "tags": [
-          "tech",
-          "typescript"
-        ],
-        "image": "/images/blog-1.jpg",
-        "featured": false,
-        "readTime": 6,
-        "category": "Guide",
-        "content": "🇩🇪 (DE) React React React Next.js Cloud Cloud React Node.js JavaScript TypeScript.\n\n🇩🇪 (DE) TypeScript React Cloud Cloud React Cloud React Cloud Cloud JavaScript.\n\n🇩🇪 (DE) Architecture Next.js Architecture TypeScript Architecture TypeScript TypeScript React Architecture Next.js.\n\n🇩🇪 (DE) React JavaScript Node.js TypeScript React Architecture TypeScript TypeScript TypeScript React.\n\n🇩🇪 (DE) Architecture Next.js TypeScript React JavaScript Architecture TypeScript Cloud TypeScript TypeScript."
-      }
-    ],
-    "educations": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Education 1 (DE)",
-        "institution": "RWTH Aachen",
-        "location": "Munich, Germany",
-        "startDate": "2016-10-01",
-        "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Artificial Intelligence.",
-        "logo": "/images/education-1.png",
-        "degree": "Master's",
-        "grade": "1.3",
-        "featured": true,
-        "content": "🇩🇪 (DE) React TypeScript Node.js Node.js TypeScript React Cloud Architecture Architecture Architecture.\n\n🇩🇪 (DE) JavaScript Next.js JavaScript JavaScript Next.js React Next.js Next.js Node.js TypeScript.\n\n🇩🇪 (DE) Architecture Cloud Architecture JavaScript Node.js JavaScript Next.js Architecture JavaScript Node.js."
-      }
-    ],
-    "experiences": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (DE)",
-        "organization": "Tech Corp 1",
-        "location": "Berlin, Germany",
-        "current": false,
-        "startDate": "2020-01-01",
-        "endDate": "2024-01-01",
-        "website": "https://company1.com",
-        "technologies": [
-          "Node.js",
-          "React"
-        ],
-        "description": "🇩🇪 (DE) Led development team for Tech Corp 1.",
-        "responsibilities": [
-          "Responsibility 1 for experience 1",
-          "Responsibility 2 for experience 1",
-          "Responsibility 3 for experience 1"
-        ],
-        "logo": "/images/organization-logo-1.png",
-        "content": "🇩🇪 (DE) Cloud Cloud Next.js Architecture Cloud Node.js TypeScript JavaScript Next.js Next.js.\n\n🇩🇪 (DE) TypeScript TypeScript JavaScript Cloud JavaScript Next.js Cloud Node.js Architecture Next.js.\n\n🇩🇪 (DE) React Cloud Next.js JavaScript TypeScript Node.js Architecture JavaScript JavaScript TypeScript."
-      }
-    ],
-    "info": {
-      "bio": [
-        {
-          "slug": "bio",
-          "order": 0,
-          "fullName": "Mofiz Rahman",
-          "title": "Software Engineer",
-          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
-          "location": "Berlin, Germany",
-          "dob": "1990-05-12",
-          "photo": "https://example.com/photos/alex.jpg",
-          "content": "NA"
-        }
-      ],
-      "contact": [
-        {
-          "slug": "contact",
-          "order": 0,
-          "title": "Contacts for language: de",
-          "contacts": [
+        "slug": "static_contents",
+        "order": 0,
+        "terms": {
+          "id": 1,
+          "title": "Terms of Service",
+          "subtitle": "Simple and straightforward terms for working together.",
+          "last_updated": "November 2, 2024",
+          "sections": [
             {
-              "type": "Email",
-              "value": "alex@example.com",
-              "label": "Work"
+              "id": 1,
+              "title": "1. Services 5",
+              "icon": "file-text",
+              "content": "I provide freelance services including web development, design, and consulting. Specific project details, deliverables, and timelines will be discussed and agreed upon before starting work."
             },
             {
-              "type": "Phone",
-              "value": "+49 1522 1234567",
-              "label": "Mobile"
+              "id": 2,
+              "title": "2. Payment",
+              "icon": "dollar-sign",
+              "content": "Payment terms will be agreed upon per project. Typically:",
+              "list": [
+                "50% deposit before starting work",
+                "50% upon completion",
+                "Hourly projects billed monthly"
+              ]
             },
             {
-              "type": "Website",
-              "value": "https://alexjohnson.dev",
-              "label": "Website"
+              "id": 3,
+              "title": "3. Ownership & Rights",
+              "icon": "shield",
+              "content": "Once you've paid in full, you own the final work I create for your project. I may showcase the work in my portfolio. Any pre-existing code or third-party assets have their own licenses."
             },
             {
-              "type": "Address",
-              "value": "Berlin, Germany",
-              "description": "Current residence"
+              "id": 4,
+              "title": "4. Timeline & Revisions",
+              "icon": "clock",
+              "content": "Project timelines are estimates. Most projects include 2-3 rounds of revisions. Delays can happen if feedback or content is delayed. Major changes to the project scope may require additional time and cost."
+            },
+            {
+              "id": 5,
+              "title": "5. Cancellation",
+              "icon": "alert-circle",
+              "content": "Either of us can cancel the project with notice. You'll need to pay for work completed up to that point. Deposits are generally non-refundable once work has started."
+            },
+            {
+              "id": 6,
+              "title": "6. Disclaimer",
+              "icon": "shield",
+              "content": "I'll do my best work, but I can't guarantee specific results like traffic, sales, or rankings. You're responsible for maintaining your site/app and keeping backups after launch."
             }
           ],
-          "content": "NA"
-        }
-      ],
-      "interest": [
-        {
-          "slug": "interest",
-          "order": 0,
-          "items": [
-            "Photography",
-            "Traveling",
-            "Open-source projects",
-            "Reading",
-            "Music",
-            "Sports"
-          ],
-          "content": "NA"
-        }
-      ],
-      "languages": [
-        {
-          "slug": "languages",
-          "order": 0,
-          "title": "Languages for language: de",
-          "languages": [
+          "contactTitle": "Have Questions?",
+          "contactText": "If anything is unclear or you'd like to discuss terms for your project, feel free to reach out.",
+          "footerText": "By working with me, you agree to these terms. Let's create something great together! ✨"
+        },
+        "privacy": {
+          "id": 1,
+          "title": "Privacy Policy",
+          "subtitle": "How I handle and protect your information. 3",
+          "last_updated": "November 2, 2024",
+          "sections": [
             {
-              "name": "English",
-              "read": "Fluent",
-              "write": "Fluent",
-              "speak": "Fluent",
-              "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
+              "id": 1,
+              "title": "1. Information I Collect",
+              "icon": "eye",
+              "content": "When you visit my website or work with me, I may collect:",
+              "list": [
+                "Contact information: Name, email, phone number (when you reach out)",
+                "Project details: Information you share about your project needs",
+                "Website analytics: Basic usage data like pages visited and time spent (via Google Analytics or similar)",
+                "Technical data: IP address, browser type, device information"
+              ]
+            },
+            {
+              "id": 2,
+              "title": "2. How I Use Your Information",
+              "icon": "database",
+              "content": "I use your information to:",
+              "list": [
+                "Respond to your inquiries and communicate about projects",
+                "Provide the services you've requested",
+                "Improve my website and services",
+                "Send occasional updates (only if you've opted in)"
               ],
-              "level": "C1"
+              "note": "I do not sell, rent, or share your personal information with third parties for marketing purposes."
             },
             {
-              "name": "German",
-              "read": "Intermediate",
-              "write": "Intermediate",
-              "speak": "Intermediate",
-              "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
+              "id": 3,
+              "title": "3. Cookies & Tracking",
+              "icon": "cookie",
+              "content": "This website may use cookies and similar technologies to:",
+              "list": [
+                "Remember your preferences",
+                "Understand how you use the site (via analytics tools)",
+                "Improve your browsing experience"
               ],
-              "level": "B2"
+              "note": "You can control cookies through your browser settings. Note that disabling cookies may affect website functionality."
             },
             {
-              "name": "French",
-              "read": "Good",
-              "write": "Good",
-              "speak": "Intermediate",
-              "listen": "Good",
-              "level": "B1"
+              "id": 4,
+              "title": "4. Data Security",
+              "icon": "lock",
+              "content": "I take reasonable measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is 100% secure. If you're sharing sensitive information, please use secure channels."
+            },
+            {
+              "id": 5,
+              "title": "5. Third-Party Services",
+              "icon": "shield",
+              "content": "This website may use third-party services that collect information:",
+              "list": [
+                "Google Analytics: For website analytics",
+                "Contact forms: May use services like Formspree, Google Forms, etc.",
+                "Hosting provider: Your data is stored on secure hosting servers"
+              ],
+              "note": "These services have their own privacy policies. I choose reputable providers that respect user privacy."
+            },
+            {
+              "id": 6,
+              "title": "6. Your Rights",
+              "icon": "user-check",
+              "content": "You have the right to:",
+              "list": [
+                "Request a copy of the information I have about you",
+                "Ask me to update or delete your information",
+                "Opt out of any communications from me",
+                "Withdraw consent for data processing"
+              ],
+              "note": "Just reach out, and I'll be happy to help with any of these requests."
+            },
+            {
+              "id": 7,
+              "title": "7. Data Retention",
+              "icon": "clock",
+              "content": "I keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy. Project-related information is typically retained for a reasonable period after project completion for reference and support purposes."
+            },
+            {
+              "id": 8,
+              "title": "8. Children's Privacy",
+              "icon": "shield",
+              "content": "This website is not intended for children under 13. I do not knowingly collect information from children. If you believe I have collected information from a child, please contact me immediately."
+            },
+            {
+              "id": 9,
+              "title": "9. Changes to This Policy",
+              "icon": "mail",
+              "content": "I may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the website after changes means you accept the updated policy."
             }
           ],
-          "content": "NA"
-        }
-      ],
-      "reference": [
-        {
-          "slug": "reference",
-          "order": 0,
-          "title": "References for language: de",
-          "references": [
-            {
-              "name": "Dr. Laura Schmidt",
-              "position": "Engineering Manager",
-              "organization": "TechCorp GmbH",
-              "email": "laura.schmidt@techcorp.de",
-              "phone": "+49 1522 111222",
-              "relation": "Manager at TechCorp"
-            },
-            {
-              "name": "Prof. Mofiz Rahman",
-              "position": "Professor of Computer Science",
-              "organization": "University of Hamburg",
-              "email": "j.doe@uni-hamburg.de",
-              "relation": "Thesis Supervisor"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "skills": [
-        {
-          "slug": "skills",
-          "order": 0,
-          "title": "Skills for language: de",
-          "skills": [
-            {
-              "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
-            },
-            {
-              "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
-            },
-            {
-              "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
-            },
-            {
-              "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
-            },
-            {
-              "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "social": [
-        {
-          "slug": "social",
-          "order": 0,
-          "title": "Social Links for language: de",
-          "social_links": [
-            {
-              "platform": "LinkedIn",
-              "url": "https://linkedin.com/in/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "GitHub",
-              "url": "https://github.com/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "Twitter",
-              "url": "https://twitter.com/alexjohnson"
-            }
-          ],
-          "content": "NA"
-        }
-      ]
-    },
-    "photos": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (DE)",
-        "image": "/images/photo-1.jpg",
-        "category": "Guide",
-        "description": "Project 1 overview in DE.",
-        "date": "2020-01-01",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
-        "featured": false,
-        "content": "🇩🇪 (DE) Architecture Cloud TypeScript JavaScript Cloud Cloud Next.js Architecture React TypeScript.\n\n🇩🇪 (DE) Node.js React React Next.js JavaScript Cloud Next.js Cloud React Next.js.\n\n🇩🇪 (DE) Architecture Cloud React Cloud JavaScript React Next.js Cloud Cloud Next.js."
-      }
-    ],
-    "projects": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "My Project 1 (DE)",
-        "description": "Project 1 overview in DE.",
-        "technologies": [
-          "TypeScript",
-          "React"
-        ],
-        "link": "https://example.com/projects/1",
-        "github": "https://github.com/user/project-1",
-        "date": "2024-08-25",
-        "image": "/images/project-1.jpg",
-        "status": "planned",
-        "featured": false,
-        "content": "🇩🇪 (DE) Architecture Node.js Architecture Architecture TypeScript TypeScript JavaScript React TypeScript JavaScript.\n\n🇩🇪 (DE) TypeScript TypeScript TypeScript TypeScript JavaScript Architecture React Cloud TypeScript Cloud.\n\n🇩🇪 (DE) Cloud React Node.js Node.js Architecture JavaScript Architecture Node.js Node.js Architecture.\n\n🇩🇪 (DE) React Cloud Architecture Next.js Cloud Next.js JavaScript JavaScript TypeScript Architecture."
+          "contactTitle": "Privacy Questions?",
+          "contactText": "If you have any questions about this privacy policy or how I handle your data, feel free to contact me. I'm committed to protecting your privacy and being transparent about data practices.",
+          "footerText": "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒"
+        },
+        "content": ""
       }
     ]
   },
@@ -1338,205 +1195,6 @@
         "content": ""
       }
     ],
-    "info": {
-      "bio": [
-        {
-          "slug": "bio",
-          "order": 0,
-          "fullName": "Mofiz Rahman",
-          "title": "Software Engineer",
-          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
-          "location": "Berlin, Germany",
-          "dob": "1990-05-12",
-          "photo": "https://example.com/photos/alex.jpg",
-          "content": "NA"
-        }
-      ],
-      "contact": [
-        {
-          "slug": "contact",
-          "order": 0,
-          "title": "Contacts for language: en",
-          "contacts": [
-            {
-              "type": "Email",
-              "value": "alex@example.com",
-              "label": "Work"
-            },
-            {
-              "type": "Phone",
-              "value": "+49 1522 1234567",
-              "label": "Mobile"
-            },
-            {
-              "type": "Website",
-              "value": "https://alexjohnson.dev",
-              "label": "Website"
-            },
-            {
-              "type": "Address",
-              "value": "Berlin, Germany",
-              "description": "Current residence"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "interest": [
-        {
-          "slug": "interest",
-          "order": 0,
-          "items": [
-            "Photography",
-            "Traveling",
-            "Open-source projects",
-            "Reading",
-            "Music",
-            "Sports"
-          ],
-          "content": "NA"
-        }
-      ],
-      "languages": [
-        {
-          "slug": "languages",
-          "order": 0,
-          "title": "Languages for language: en",
-          "languages": [
-            {
-              "name": "English",
-              "read": "Fluent",
-              "write": "Fluent",
-              "speak": "Fluent",
-              "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
-              ],
-              "level": "C1"
-            },
-            {
-              "name": "German",
-              "read": "Intermediate",
-              "write": "Intermediate",
-              "speak": "Intermediate",
-              "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
-              ],
-              "level": "B2"
-            },
-            {
-              "name": "French",
-              "read": "Good",
-              "write": "Good",
-              "speak": "Intermediate",
-              "listen": "Good",
-              "level": "B1"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "reference": [
-        {
-          "slug": "reference",
-          "order": 0,
-          "title": "References for language: en",
-          "references": [
-            {
-              "name": "Dr. Laura Schmidt",
-              "position": "Engineering Manager",
-              "organization": "TechCorp GmbH",
-              "email": "laura.schmidt@techcorp.de",
-              "phone": "+49 1522 111222",
-              "relation": "Manager at TechCorp"
-            },
-            {
-              "name": "Prof. Mofiz Rahman",
-              "position": "Professor of Computer Science",
-              "organization": "University of Hamburg",
-              "email": "j.doe@uni-hamburg.de",
-              "relation": "Thesis Supervisor"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "skills": [
-        {
-          "slug": "skills",
-          "order": 0,
-          "title": "Skills for language: en",
-          "skills": [
-            {
-              "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
-            },
-            {
-              "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
-            },
-            {
-              "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
-            },
-            {
-              "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
-            },
-            {
-              "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "social": [
-        {
-          "0": {
-            "platform": "LinkedIn",
-            "url": "https://linkedin.com/in/alexjohnson",
-            "username": "alexjohnson"
-          },
-          "1": {
-            "platform": "GitHub",
-            "url": "https://github.com/alexjohnson",
-            "username": "alexjohnson"
-          },
-          "2": {
-            "platform": "Twitter",
-            "url": "https://twitter.com/alexjohnson"
-          },
-          "slug": "social",
-          "order": 0,
-          "content": "NA"
-        }
-      ]
-    },
     "photo_list": [
       {
         "slug": "1",
@@ -3255,163 +2913,6 @@
         "content": ""
       }
     ],
-    "static_contents": [
-      {
-        "slug": "privacy",
-        "order": 0,
-        "id": 1,
-        "title": "Privacy Policy",
-        "subtitle": "How I handle and protect your information. 3",
-        "last_updated": "November 2, 2024",
-        "sections": [
-          {
-            "id": 1,
-            "title": "1. Information I Collect",
-            "icon": "eye",
-            "content": "When you visit my website or work with me, I may collect:",
-            "list": [
-              "Contact information: Name, email, phone number (when you reach out)",
-              "Project details: Information you share about your project needs",
-              "Website analytics: Basic usage data like pages visited and time spent (via Google Analytics or similar)",
-              "Technical data: IP address, browser type, device information"
-            ]
-          },
-          {
-            "id": 2,
-            "title": "2. How I Use Your Information",
-            "icon": "database",
-            "content": "I use your information to:",
-            "list": [
-              "Respond to your inquiries and communicate about projects",
-              "Provide the services you've requested",
-              "Improve my website and services",
-              "Send occasional updates (only if you've opted in)"
-            ],
-            "note": "I do not sell, rent, or share your personal information with third parties for marketing purposes."
-          },
-          {
-            "id": 3,
-            "title": "3. Cookies & Tracking",
-            "icon": "cookie",
-            "content": "This website may use cookies and similar technologies to:",
-            "list": [
-              "Remember your preferences",
-              "Understand how you use the site (via analytics tools)",
-              "Improve your browsing experience"
-            ],
-            "note": "You can control cookies through your browser settings. Note that disabling cookies may affect website functionality."
-          },
-          {
-            "id": 4,
-            "title": "4. Data Security",
-            "icon": "lock",
-            "content": "I take reasonable measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is 100% secure. If you're sharing sensitive information, please use secure channels."
-          },
-          {
-            "id": 5,
-            "title": "5. Third-Party Services",
-            "icon": "shield",
-            "content": "This website may use third-party services that collect information:",
-            "list": [
-              "Google Analytics: For website analytics",
-              "Contact forms: May use services like Formspree, Google Forms, etc.",
-              "Hosting provider: Your data is stored on secure hosting servers"
-            ],
-            "note": "These services have their own privacy policies. I choose reputable providers that respect user privacy."
-          },
-          {
-            "id": 6,
-            "title": "6. Your Rights",
-            "icon": "user-check",
-            "content": "You have the right to:",
-            "list": [
-              "Request a copy of the information I have about you",
-              "Ask me to update or delete your information",
-              "Opt out of any communications from me",
-              "Withdraw consent for data processing"
-            ],
-            "note": "Just reach out, and I'll be happy to help with any of these requests."
-          },
-          {
-            "id": 7,
-            "title": "7. Data Retention",
-            "icon": "clock",
-            "content": "I keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy. Project-related information is typically retained for a reasonable period after project completion for reference and support purposes."
-          },
-          {
-            "id": 8,
-            "title": "8. Children's Privacy",
-            "icon": "shield",
-            "content": "This website is not intended for children under 13. I do not knowingly collect information from children. If you believe I have collected information from a child, please contact me immediately."
-          },
-          {
-            "id": 9,
-            "title": "9. Changes to This Policy",
-            "icon": "mail",
-            "content": "I may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the website after changes means you accept the updated policy."
-          }
-        ],
-        "contactTitle": "Privacy Questions?",
-        "contactText": "If you have any questions about this privacy policy or how I handle your data, feel free to contact me. I'm committed to protecting your privacy and being transparent about data practices.",
-        "footerText": "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒",
-        "content": ""
-      },
-      {
-        "slug": "terms",
-        "order": 0,
-        "id": 1,
-        "title": "Terms of Service",
-        "subtitle": "Simple and straightforward terms for working together.",
-        "last_updated": "November 2, 2024",
-        "sections": [
-          {
-            "id": 1,
-            "title": "1. Services 5",
-            "icon": "file-text",
-            "content": "I provide freelance services including web development, design, and consulting. Specific project details, deliverables, and timelines will be discussed and agreed upon before starting work."
-          },
-          {
-            "id": 2,
-            "title": "2. Payment",
-            "icon": "dollar-sign",
-            "content": "Payment terms will be agreed upon per project. Typically:",
-            "list": [
-              "50% deposit before starting work",
-              "50% upon completion",
-              "Hourly projects billed monthly"
-            ]
-          },
-          {
-            "id": 3,
-            "title": "3. Ownership & Rights",
-            "icon": "shield",
-            "content": "Once you've paid in full, you own the final work I create for your project. I may showcase the work in my portfolio. Any pre-existing code or third-party assets have their own licenses."
-          },
-          {
-            "id": 4,
-            "title": "4. Timeline & Revisions",
-            "icon": "clock",
-            "content": "Project timelines are estimates. Most projects include 2-3 rounds of revisions. Delays can happen if feedback or content is delayed. Major changes to the project scope may require additional time and cost."
-          },
-          {
-            "id": 5,
-            "title": "5. Cancellation",
-            "icon": "alert-circle",
-            "content": "Either of us can cancel the project with notice. You'll need to pay for work completed up to that point. Deposits are generally non-refundable once work has started."
-          },
-          {
-            "id": 6,
-            "title": "6. Disclaimer",
-            "icon": "shield",
-            "content": "I'll do my best work, but I can't guarantee specific results like traffic, sales, or rankings. You're responsible for maintaining your site/app and keeping backups after launch."
-          }
-        ],
-        "contactTitle": "Have Questions?",
-        "contactText": "If anything is unclear or you'd like to discuss terms for your project, feel free to reach out.",
-        "footerText": "By working with me, you agree to these terms. Let's create something great together! ✨",
-        "content": ""
-      }
-    ],
     "testimonial_list": [
       {
         "slug": "1",
@@ -3623,1047 +3124,161 @@
       }
     ]
   },
-  "es": {
-    "blogs": [
+  "teacher": {
+    "en": [
       {
-        "slug": "1",
-        "order": 1,
-        "title": "My Blog Post 1 (ES)",
-        "date": "2024-01-23",
-        "author": "Jane Smith",
-        "excerpt": "A short summary for blog post 1 in ES.",
-        "tags": [
-          "tech",
-          "react"
-        ],
-        "image": "/images/blog-1.jpg",
-        "featured": true,
-        "readTime": 4,
-        "category": "Tutorial",
-        "content": "TypeScript TypeScript React Cloud Node.js TypeScript JavaScript Cloud React TypeScript.\n\nNode.js JavaScript TypeScript Next.js Architecture JavaScript React React React Next.js.\n\nReact JavaScript Cloud Node.js Cloud JavaScript Architecture React TypeScript Next.js.\n\nJavaScript Next.js JavaScript Architecture Cloud Node.js Next.js Node.js TypeScript React.\n\nNext.js Next.js TypeScript React React Next.js Node.js Next.js JavaScript Architecture."
-      }
-    ],
-    "certificates": [
-      {
-        "slug": "1",
-        "order": 1,
-        "name": "Certification 1",
-        "organization": "Organization 1",
-        "issueDate": "2021-01",
-        "expirationDate": "2023-01",
-        "credentialId": "CERT-1001",
-        "credentialUrl": "https://example.com/certifications/1",
-        "skills": [
-          "Skill A",
-          "Skill B",
-          "Skill C"
-        ],
-        "media": [
-          "https://example.com/media/cert-1.jpg"
-        ],
-        "description": "Description of certification 1 in es",
-        "content": "NA"
-      }
-    ],
-    "educations": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Education 1 (ES)",
-        "institution": "University of Hamburg",
-        "location": "Munich, Germany",
-        "startDate": "2016-10-01",
-        "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Cloud Computing.",
-        "logo": "/images/education-1.png",
-        "degree": "Master's",
-        "grade": "2.0",
-        "featured": true,
-        "content": "Node.js Cloud Next.js JavaScript JavaScript JavaScript TypeScript React Cloud JavaScript.\n\nReact Next.js React Cloud TypeScript TypeScript Next.js Node.js Cloud Next.js.\n\nJavaScript TypeScript JavaScript Architecture Cloud TypeScript Next.js Next.js React React."
-      }
-    ],
-    "experiences": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (ES)",
-        "organization": "Tech Corp 1",
-        "location": "Berlin, Germany",
-        "current": false,
-        "startDate": "2020-01-01",
-        "endDate": "2024-01-01",
-        "website": "https://company1.com",
-        "technologies": [
-          "Node.js",
-          "React"
-        ],
-        "description": "Led development team for Tech Corp 1.",
-        "responsibilities": [
-          "Responsibility 1 for experience 1",
-          "Responsibility 2 for experience 1",
-          "Responsibility 3 for experience 1"
-        ],
-        "logo": "/images/organization-logo-1.png",
-        "content": "Architecture Architecture JavaScript TypeScript React Next.js Next.js React Architecture React.\n\nArchitecture Architecture React Cloud TypeScript Architecture React React Cloud JavaScript.\n\nCloud JavaScript Architecture React React Node.js TypeScript Architecture Next.js Next.js."
-      }
-    ],
-    "info": {
-      "bio": [
-        {
-          "slug": "bio",
-          "order": 0,
-          "fullName": "Mofiz Rahman",
-          "title": "Software Engineer",
-          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
-          "location": "Berlin, Germany",
-          "dob": "1990-05-12",
-          "photo": "https://example.com/photos/alex.jpg",
-          "content": "NA"
-        }
-      ],
-      "contact": [
-        {
-          "slug": "contact",
-          "order": 0,
-          "title": "Contacts for language: es",
-          "contacts": [
+        "slug": "static_contents",
+        "order": 0,
+        "terms": {
+          "id": 1,
+          "title": "Terms of Service",
+          "subtitle": "Simple and straightforward terms for working together.",
+          "last_updated": "November 2, 2024",
+          "sections": [
             {
-              "type": "Email",
-              "value": "alex@example.com",
-              "label": "Work"
+              "id": 1,
+              "title": "1. Services 5",
+              "icon": "file-text",
+              "content": "I provide freelance services including web development, design, and consulting. Specific project details, deliverables, and timelines will be discussed and agreed upon before starting work."
             },
             {
-              "type": "Phone",
-              "value": "+49 1522 1234567",
-              "label": "Mobile"
+              "id": 2,
+              "title": "2. Payment",
+              "icon": "dollar-sign",
+              "content": "Payment terms will be agreed upon per project. Typically:",
+              "list": [
+                "50% deposit before starting work",
+                "50% upon completion",
+                "Hourly projects billed monthly"
+              ]
             },
             {
-              "type": "Website",
-              "value": "https://alexjohnson.dev",
-              "label": "Website"
+              "id": 3,
+              "title": "3. Ownership & Rights",
+              "icon": "shield",
+              "content": "Once you've paid in full, you own the final work I create for your project. I may showcase the work in my portfolio. Any pre-existing code or third-party assets have their own licenses."
             },
             {
-              "type": "Address",
-              "value": "Berlin, Germany",
-              "description": "Current residence"
+              "id": 4,
+              "title": "4. Timeline & Revisions",
+              "icon": "clock",
+              "content": "Project timelines are estimates. Most projects include 2-3 rounds of revisions. Delays can happen if feedback or content is delayed. Major changes to the project scope may require additional time and cost."
+            },
+            {
+              "id": 5,
+              "title": "5. Cancellation",
+              "icon": "alert-circle",
+              "content": "Either of us can cancel the project with notice. You'll need to pay for work completed up to that point. Deposits are generally non-refundable once work has started."
+            },
+            {
+              "id": 6,
+              "title": "6. Disclaimer",
+              "icon": "shield",
+              "content": "I'll do my best work, but I can't guarantee specific results like traffic, sales, or rankings. You're responsible for maintaining your site/app and keeping backups after launch."
             }
           ],
-          "content": "NA"
-        }
-      ],
-      "interest": [
-        {
-          "slug": "interest",
-          "order": 0,
-          "items": [
-            "Photography",
-            "Traveling",
-            "Open-source projects",
-            "Reading",
-            "Music",
-            "Sports"
-          ],
-          "content": "NA"
-        }
-      ],
-      "languages": [
-        {
-          "slug": "languages",
-          "order": 0,
-          "title": "Languages for language: es",
-          "languages": [
+          "contactTitle": "Have Questions?",
+          "contactText": "If anything is unclear or you'd like to discuss terms for your project, feel free to reach out.",
+          "footerText": "By working with me, you agree to these terms. Let's create something great together! ✨"
+        },
+        "privacy": {
+          "id": 1,
+          "title": "Privacy Policy",
+          "subtitle": "How I handle and protect your information. 3",
+          "last_updated": "November 2, 2024",
+          "sections": [
             {
-              "name": "English",
-              "read": "Fluent",
-              "write": "Fluent",
-              "speak": "Fluent",
-              "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
+              "id": 1,
+              "title": "1. Information I Collect",
+              "icon": "eye",
+              "content": "When you visit my website or work with me, I may collect:",
+              "list": [
+                "Contact information: Name, email, phone number (when you reach out)",
+                "Project details: Information you share about your project needs",
+                "Website analytics: Basic usage data like pages visited and time spent (via Google Analytics or similar)",
+                "Technical data: IP address, browser type, device information"
+              ]
+            },
+            {
+              "id": 2,
+              "title": "2. How I Use Your Information",
+              "icon": "database",
+              "content": "I use your information to:",
+              "list": [
+                "Respond to your inquiries and communicate about projects",
+                "Provide the services you've requested",
+                "Improve my website and services",
+                "Send occasional updates (only if you've opted in)"
               ],
-              "level": "C1"
+              "note": "I do not sell, rent, or share your personal information with third parties for marketing purposes."
             },
             {
-              "name": "German",
-              "read": "Intermediate",
-              "write": "Intermediate",
-              "speak": "Intermediate",
-              "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
+              "id": 3,
+              "title": "3. Cookies & Tracking",
+              "icon": "cookie",
+              "content": "This website may use cookies and similar technologies to:",
+              "list": [
+                "Remember your preferences",
+                "Understand how you use the site (via analytics tools)",
+                "Improve your browsing experience"
               ],
-              "level": "B2"
+              "note": "You can control cookies through your browser settings. Note that disabling cookies may affect website functionality."
             },
             {
-              "name": "French",
-              "read": "Good",
-              "write": "Good",
-              "speak": "Intermediate",
-              "listen": "Good",
-              "level": "B1"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "reference": [
-        {
-          "slug": "reference",
-          "order": 0,
-          "title": "References for language: es",
-          "references": [
-            {
-              "name": "Dr. Laura Schmidt",
-              "position": "Engineering Manager",
-              "organization": "TechCorp GmbH",
-              "email": "laura.schmidt@techcorp.de",
-              "phone": "+49 1522 111222",
-              "relation": "Manager at TechCorp"
+              "id": 4,
+              "title": "4. Data Security",
+              "icon": "lock",
+              "content": "I take reasonable measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is 100% secure. If you're sharing sensitive information, please use secure channels."
             },
             {
-              "name": "Prof. Mofiz Rahman",
-              "position": "Professor of Computer Science",
-              "organization": "University of Hamburg",
-              "email": "j.doe@uni-hamburg.de",
-              "relation": "Thesis Supervisor"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "skills": [
-        {
-          "slug": "skills",
-          "order": 0,
-          "title": "Skills for language: es",
-          "skills": [
-            {
-              "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
-            },
-            {
-              "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
-            },
-            {
-              "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
-            },
-            {
-              "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
-            },
-            {
-              "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "social": [
-        {
-          "slug": "social",
-          "order": 0,
-          "title": "Social Links for language: es",
-          "social_links": [
-            {
-              "platform": "LinkedIn",
-              "url": "https://linkedin.com/in/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "GitHub",
-              "url": "https://github.com/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "Twitter",
-              "url": "https://twitter.com/alexjohnson"
-            }
-          ],
-          "content": "NA"
-        }
-      ]
-    },
-    "photos": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (ES)",
-        "image": "/images/photo-1.jpg",
-        "category": "Tutorial",
-        "description": "Project 1 overview in ES.",
-        "date": "2020-01-01",
-        "tags": [
-          "typescript",
-          "react"
-        ],
-        "featured": false,
-        "content": "Architecture Architecture Node.js Node.js JavaScript Next.js JavaScript Architecture React Node.js.\n\nJavaScript TypeScript React JavaScript Architecture Architecture JavaScript Cloud TypeScript JavaScript.\n\nArchitecture React Architecture Cloud Cloud TypeScript Architecture Architecture JavaScript Next.js."
-      }
-    ],
-    "projects": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "My Project 1 (ES)",
-        "description": "Project 1 overview in ES.",
-        "technologies": [
-          "Next.js",
-          "TypeScript"
-        ],
-        "link": "https://example.com/projects/1",
-        "github": "https://github.com/user/project-1",
-        "date": "2024-09-09",
-        "image": "/images/project-1.jpg",
-        "status": "in-progress",
-        "featured": false,
-        "content": "Next.js React Cloud Cloud Next.js TypeScript Node.js Next.js TypeScript Architecture.\n\nJavaScript Architecture Architecture Next.js Node.js Node.js TypeScript React Node.js React.\n\nArchitecture TypeScript React TypeScript React TypeScript JavaScript Cloud Next.js Cloud.\n\nNode.js Architecture Architecture Next.js Node.js TypeScript Next.js JavaScript React Next.js."
-      }
-    ],
-    "publications": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Publication Title 1",
-        "authors": [
-          "Author A1",
-          "Author B1"
-        ],
-        "publisher": "Publisher 1",
-        "date": "2021-06-01",
-        "link": "https://example.com/publication/1",
-        "doi": "10.1234/example-doi-1",
-        "summary": "This is a brief summary of publication 1 in es.",
-        "keywords": [
-          "Keyword1",
-          "Keyword2",
-          "Keyword3"
-        ],
-        "media": [
-          "https://example.com/media/pub-1.jpg"
-        ],
-        "content": "NA"
-      }
-    ]
-  },
-  "fr": {
-    "blogs": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "My Blog Post 1 (FR)",
-        "date": "2024-01-01",
-        "author": "Jane Smith",
-        "excerpt": "A short summary for blog post 1 in FR.",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
-        "image": "/images/blog-1.jpg",
-        "featured": false,
-        "readTime": 11,
-        "category": "Opinion",
-        "content": "🇫🇷 (FR) Node.js JavaScript Node.js Cloud JavaScript Architecture React JavaScript TypeScript Cloud.\n\n🇫🇷 (FR) JavaScript Next.js TypeScript JavaScript Node.js Cloud JavaScript JavaScript Node.js Node.js.\n\n🇫🇷 (FR) Node.js Next.js React Cloud Next.js React JavaScript Next.js React Node.js.\n\n🇫🇷 (FR) JavaScript TypeScript JavaScript Next.js Node.js React Architecture Cloud TypeScript JavaScript.\n\n🇫🇷 (FR) React Cloud Architecture JavaScript TypeScript React Architecture React JavaScript Next.js."
-      }
-    ],
-    "certificates": [
-      {
-        "slug": "1",
-        "order": 1,
-        "name": "Certification 1",
-        "organization": "Organization 1",
-        "issueDate": "2021-01",
-        "expirationDate": "2023-01",
-        "credentialId": "CERT-1001",
-        "credentialUrl": "https://example.com/certifications/1",
-        "skills": [
-          "Skill A",
-          "Skill B",
-          "Skill C"
-        ],
-        "media": [
-          "https://example.com/media/cert-1.jpg"
-        ],
-        "description": "Description of certification 1 in fr",
-        "content": "NA"
-      }
-    ],
-    "educations": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Education 1 (FR)",
-        "institution": "Humboldt University",
-        "location": "Munich, Germany",
-        "startDate": "2016-10-01",
-        "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Software Engineering.",
-        "logo": "/images/education-1.png",
-        "degree": "PhD",
-        "grade": "1.7",
-        "featured": false,
-        "content": "🇫🇷 (FR) JavaScript Next.js Cloud Node.js Architecture React React Architecture JavaScript Cloud.\n\n🇫🇷 (FR) Next.js JavaScript TypeScript Node.js Next.js Node.js JavaScript React Architecture JavaScript.\n\n🇫🇷 (FR) Next.js Next.js Architecture Node.js Architecture TypeScript Architecture Node.js Architecture Next.js."
-      }
-    ],
-    "experiences": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (FR)",
-        "organization": "Tech Corp 1",
-        "location": "Berlin, Germany",
-        "current": false,
-        "startDate": "2020-01-01",
-        "endDate": "2024-01-01",
-        "website": "https://company1.com",
-        "technologies": [
-          "Node.js",
-          "React"
-        ],
-        "description": "🇫🇷 (FR) Led development team for Tech Corp 1.",
-        "responsibilities": [
-          "Responsibility 1 for experience 1",
-          "Responsibility 2 for experience 1",
-          "Responsibility 3 for experience 1"
-        ],
-        "logo": "/images/organization-logo-1.png",
-        "content": "🇫🇷 (FR) JavaScript Architecture Cloud Cloud Next.js React Architecture React React Cloud.\n\n🇫🇷 (FR) JavaScript TypeScript Next.js Cloud React Next.js Cloud TypeScript Next.js React.\n\n🇫🇷 (FR) Cloud JavaScript Architecture Architecture Node.js TypeScript TypeScript Cloud Node.js TypeScript."
-      }
-    ],
-    "info": {
-      "bio": [
-        {
-          "slug": "bio",
-          "order": 0,
-          "fullName": "Mofiz Rahman",
-          "title": "Software Engineer",
-          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
-          "location": "Berlin, Germany",
-          "dob": "1990-05-12",
-          "photo": "https://example.com/photos/alex.jpg",
-          "content": "NA"
-        }
-      ],
-      "contact": [
-        {
-          "slug": "contact",
-          "order": 0,
-          "title": "Contacts for language: fr",
-          "contacts": [
-            {
-              "type": "Email",
-              "value": "alex@example.com",
-              "label": "Work"
-            },
-            {
-              "type": "Phone",
-              "value": "+49 1522 1234567",
-              "label": "Mobile"
-            },
-            {
-              "type": "Website",
-              "value": "https://alexjohnson.dev",
-              "label": "Website"
-            },
-            {
-              "type": "Address",
-              "value": "Berlin, Germany",
-              "description": "Current residence"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "interest": [
-        {
-          "slug": "interest",
-          "order": 0,
-          "items": [
-            "Photography",
-            "Traveling",
-            "Open-source projects",
-            "Reading",
-            "Music",
-            "Sports"
-          ],
-          "content": "NA"
-        }
-      ],
-      "languages": [
-        {
-          "slug": "languages",
-          "order": 0,
-          "title": "Languages for language: fr",
-          "languages": [
-            {
-              "name": "English",
-              "read": "Fluent",
-              "write": "Fluent",
-              "speak": "Fluent",
-              "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
+              "id": 5,
+              "title": "5. Third-Party Services",
+              "icon": "shield",
+              "content": "This website may use third-party services that collect information:",
+              "list": [
+                "Google Analytics: For website analytics",
+                "Contact forms: May use services like Formspree, Google Forms, etc.",
+                "Hosting provider: Your data is stored on secure hosting servers"
               ],
-              "level": "C1"
+              "note": "These services have their own privacy policies. I choose reputable providers that respect user privacy."
             },
             {
-              "name": "German",
-              "read": "Intermediate",
-              "write": "Intermediate",
-              "speak": "Intermediate",
-              "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
+              "id": 6,
+              "title": "6. Your Rights",
+              "icon": "user-check",
+              "content": "You have the right to:",
+              "list": [
+                "Request a copy of the information I have about you",
+                "Ask me to update or delete your information",
+                "Opt out of any communications from me",
+                "Withdraw consent for data processing"
               ],
-              "level": "B2"
+              "note": "Just reach out, and I'll be happy to help with any of these requests."
             },
             {
-              "name": "French",
-              "read": "Good",
-              "write": "Good",
-              "speak": "Intermediate",
-              "listen": "Good",
-              "level": "B1"
+              "id": 7,
+              "title": "7. Data Retention",
+              "icon": "clock",
+              "content": "I keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy. Project-related information is typically retained for a reasonable period after project completion for reference and support purposes."
+            },
+            {
+              "id": 8,
+              "title": "8. Children's Privacy",
+              "icon": "shield",
+              "content": "This website is not intended for children under 13. I do not knowingly collect information from children. If you believe I have collected information from a child, please contact me immediately."
+            },
+            {
+              "id": 9,
+              "title": "9. Changes to This Policy",
+              "icon": "mail",
+              "content": "I may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the website after changes means you accept the updated policy."
             }
           ],
-          "content": "NA"
-        }
-      ],
-      "reference": [
-        {
-          "slug": "reference",
-          "order": 0,
-          "title": "References for language: fr",
-          "references": [
-            {
-              "name": "Dr. Laura Schmidt",
-              "position": "Engineering Manager",
-              "organization": "TechCorp GmbH",
-              "email": "laura.schmidt@techcorp.de",
-              "phone": "+49 1522 111222",
-              "relation": "Manager at TechCorp"
-            },
-            {
-              "name": "Prof. Mofiz Rahman",
-              "position": "Professor of Computer Science",
-              "organization": "University of Hamburg",
-              "email": "j.doe@uni-hamburg.de",
-              "relation": "Thesis Supervisor"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "skills": [
-        {
-          "slug": "skills",
-          "order": 0,
-          "title": "Skills for language: fr",
-          "skills": [
-            {
-              "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
-            },
-            {
-              "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
-            },
-            {
-              "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
-            },
-            {
-              "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
-            },
-            {
-              "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "social": [
-        {
-          "slug": "social",
-          "order": 0,
-          "title": "Social Links for language: fr",
-          "social_links": [
-            {
-              "platform": "LinkedIn",
-              "url": "https://linkedin.com/in/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "GitHub",
-              "url": "https://github.com/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "Twitter",
-              "url": "https://twitter.com/alexjohnson"
-            }
-          ],
-          "content": "NA"
-        }
-      ]
-    },
-    "photos": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (FR)",
-        "image": "/images/photo-1.jpg",
-        "category": "Opinion",
-        "description": "Project 1 overview in FR.",
-        "date": "2020-01-01",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
-        "featured": false,
-        "content": "🇫🇷 (FR) TypeScript Node.js TypeScript TypeScript TypeScript React React JavaScript Node.js Next.js.\n\n🇫🇷 (FR) TypeScript Cloud JavaScript Next.js JavaScript Node.js Cloud Node.js Next.js Architecture.\n\n🇫🇷 (FR) Node.js Node.js React Cloud Next.js Node.js Node.js TypeScript JavaScript JavaScript."
-      }
-    ],
-    "projects": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "My Project 1 (FR)",
-        "description": "Project 1 overview in FR.",
-        "technologies": [
-          "Node.js",
-          "Next.js"
-        ],
-        "link": "https://example.com/projects/1",
-        "github": "https://github.com/user/project-1",
-        "date": "2024-02-27",
-        "image": "/images/project-1.jpg",
-        "status": "planned",
-        "featured": false,
-        "content": "🇫🇷 (FR) JavaScript TypeScript React TypeScript JavaScript React Architecture JavaScript Node.js TypeScript.\n\n🇫🇷 (FR) Next.js Node.js Architecture JavaScript Node.js Next.js React Architecture JavaScript Next.js.\n\n🇫🇷 (FR) TypeScript Node.js JavaScript Cloud Node.js Next.js TypeScript Cloud Architecture Cloud.\n\n🇫🇷 (FR) Node.js Node.js Node.js Cloud React JavaScript TypeScript JavaScript Node.js Cloud."
-      }
-    ],
-    "publications": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Publication Title 1",
-        "authors": [
-          "Author A1",
-          "Author B1"
-        ],
-        "publisher": "Publisher 1",
-        "date": "2021-06-01",
-        "link": "https://example.com/publication/1",
-        "doi": "10.1234/example-doi-1",
-        "summary": "This is a brief summary of publication 1 in fr.",
-        "keywords": [
-          "Keyword1",
-          "Keyword2",
-          "Keyword3"
-        ],
-        "media": [
-          "https://example.com/media/pub-1.jpg"
-        ],
-        "content": "NA"
-      }
-    ]
-  },
-  "jp": {
-    "blogs": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "My Blog Post 1 (JP)",
-        "date": "2024-01-11",
-        "author": "Jane Smith",
-        "excerpt": "A short summary for blog post 1 in JP.",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
-        "image": "/images/blog-1.jpg",
-        "featured": true,
-        "readTime": 10,
-        "category": "Opinion",
-        "content": "Node.js Node.js Next.js Cloud React Node.js JavaScript React JavaScript Node.js.\n\nReact Next.js Architecture TypeScript TypeScript Cloud JavaScript React JavaScript Node.js.\n\nJavaScript Node.js React TypeScript Next.js Next.js Node.js JavaScript Architecture JavaScript.\n\nReact Node.js React JavaScript React Node.js JavaScript Next.js JavaScript TypeScript.\n\nNode.js TypeScript TypeScript Node.js Node.js Architecture TypeScript JavaScript Next.js TypeScript."
-      }
-    ],
-    "certificates": [
-      {
-        "slug": "1",
-        "order": 1,
-        "name": "Certification 1",
-        "organization": "Organization 1",
-        "issueDate": "2021-01",
-        "expirationDate": "2023-01",
-        "credentialId": "CERT-1001",
-        "credentialUrl": "https://example.com/certifications/1",
-        "skills": [
-          "Skill A",
-          "Skill B",
-          "Skill C"
-        ],
-        "media": [
-          "https://example.com/media/cert-1.jpg"
-        ],
-        "description": "Description of certification 1 in jp",
-        "content": "NA"
-      }
-    ],
-    "educations": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Education 1 (JP)",
-        "institution": "Humboldt University",
-        "location": "Munich, Germany",
-        "startDate": "2016-10-01",
-        "endDate": "2018-09-30",
-        "description": "Completed a degree in Computer Science with focus on Cybersecurity.",
-        "logo": "/images/education-1.png",
-        "degree": "Diploma",
-        "grade": "2.3",
-        "featured": false,
-        "content": "Cloud Architecture React Next.js TypeScript JavaScript React React Node.js Node.js.\n\nTypeScript JavaScript React Architecture Node.js Cloud Next.js React JavaScript Next.js.\n\nArchitecture React Next.js Architecture Node.js TypeScript JavaScript Architecture Next.js Next.js."
-      }
-    ],
-    "experiences": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (JP)",
-        "organization": "Tech Corp 1",
-        "location": "Berlin, Germany",
-        "current": false,
-        "startDate": "2020-01-01",
-        "endDate": "2024-01-01",
-        "website": "https://company1.com",
-        "technologies": [
-          "Node.js",
-          "React"
-        ],
-        "description": "Led development team for Tech Corp 1.",
-        "responsibilities": [
-          "Responsibility 1 for experience 1",
-          "Responsibility 2 for experience 1",
-          "Responsibility 3 for experience 1"
-        ],
-        "logo": "/images/organization-logo-1.png",
-        "content": "Architecture React TypeScript React Node.js TypeScript Next.js JavaScript JavaScript JavaScript.\n\nTypeScript JavaScript Cloud Architecture Architecture TypeScript JavaScript React Cloud TypeScript.\n\nCloud React React Architecture Architecture Architecture JavaScript Next.js Cloud Architecture."
-      }
-    ],
-    "info": {
-      "bio": [
-        {
-          "slug": "bio",
-          "order": 0,
-          "fullName": "Mofiz Rahman",
-          "title": "Software Engineer",
-          "summary": "Experienced developer passionate about building scalable systems and mentoring others.",
-          "location": "Berlin, Germany",
-          "dob": "1990-05-12",
-          "photo": "https://example.com/photos/alex.jpg",
-          "content": "NA"
-        }
-      ],
-      "contact": [
-        {
-          "slug": "contact",
-          "order": 0,
-          "title": "Contacts for language: jp",
-          "contacts": [
-            {
-              "type": "Email",
-              "value": "alex@example.com",
-              "label": "Work"
-            },
-            {
-              "type": "Phone",
-              "value": "+49 1522 1234567",
-              "label": "Mobile"
-            },
-            {
-              "type": "Website",
-              "value": "https://alexjohnson.dev",
-              "label": "Website"
-            },
-            {
-              "type": "Address",
-              "value": "Berlin, Germany",
-              "description": "Current residence"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "interest": [
-        {
-          "slug": "interest",
-          "order": 0,
-          "items": [
-            "Photography",
-            "Traveling",
-            "Open-source projects",
-            "Reading",
-            "Music",
-            "Sports"
-          ],
-          "content": "NA"
-        }
-      ],
-      "languages": [
-        {
-          "slug": "languages",
-          "order": 0,
-          "title": "Languages for language: jp",
-          "languages": [
-            {
-              "name": "English",
-              "read": "Fluent",
-              "write": "Fluent",
-              "speak": "Fluent",
-              "listen": "Fluent",
-              "tests": [
-                "IELTS",
-                "TOEFL"
-              ],
-              "level": "C1"
-            },
-            {
-              "name": "German",
-              "read": "Intermediate",
-              "write": "Intermediate",
-              "speak": "Intermediate",
-              "listen": "Intermediate",
-              "tests": [
-                "Goethe B2",
-                "Telc B2"
-              ],
-              "level": "B2"
-            },
-            {
-              "name": "French",
-              "read": "Good",
-              "write": "Good",
-              "speak": "Intermediate",
-              "listen": "Good",
-              "level": "B1"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "reference": [
-        {
-          "slug": "reference",
-          "order": 0,
-          "title": "References for language: jp",
-          "references": [
-            {
-              "name": "Dr. Laura Schmidt",
-              "position": "Engineering Manager",
-              "organization": "TechCorp GmbH",
-              "email": "laura.schmidt@techcorp.de",
-              "phone": "+49 1522 111222",
-              "relation": "Manager at TechCorp"
-            },
-            {
-              "name": "Prof. Mofiz Rahman",
-              "position": "Professor of Computer Science",
-              "organization": "University of Hamburg",
-              "email": "j.doe@uni-hamburg.de",
-              "relation": "Thesis Supervisor"
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "skills": [
-        {
-          "slug": "skills",
-          "order": 0,
-          "title": "Skills for language: jp",
-          "skills": [
-            {
-              "category": "Programming",
-              "items": [
-                "Python",
-                "TypeScript",
-                "Java",
-                "C++"
-              ]
-            },
-            {
-              "category": "Tools & Cloud",
-              "items": [
-                "AWS",
-                "Docker",
-                "Kubernetes"
-              ]
-            },
-            {
-              "category": "Soft Skills",
-              "items": [
-                "Leadership",
-                "Communication",
-                "Mentoring"
-              ]
-            },
-            {
-              "category": "Design & Creative",
-              "items": [
-                "Photoshop",
-                "Figma",
-                "Adobe Illustrator"
-              ]
-            },
-            {
-              "category": "Languages",
-              "items": [
-                "English",
-                "German",
-                "French"
-              ]
-            }
-          ],
-          "content": "NA"
-        }
-      ],
-      "social": [
-        {
-          "slug": "social",
-          "order": 0,
-          "title": "Social Links for language: jp",
-          "social_links": [
-            {
-              "platform": "LinkedIn",
-              "url": "https://linkedin.com/in/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "GitHub",
-              "url": "https://github.com/alexjohnson",
-              "username": "alexjohnson"
-            },
-            {
-              "platform": "Twitter",
-              "url": "https://twitter.com/alexjohnson"
-            }
-          ],
-          "content": "NA"
-        }
-      ]
-    },
-    "photos": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Senior Developer 1 (JP)",
-        "image": "/images/photo-1.jpg",
-        "category": "Guide",
-        "description": "Project 1 overview in JP.",
-        "date": "2020-01-01",
-        "tags": [
-          "tech",
-          "javascript"
-        ],
-        "featured": false,
-        "content": "React Cloud Node.js Node.js Architecture Next.js Cloud Node.js Next.js Node.js.\n\nNode.js Architecture TypeScript Architecture Architecture Node.js Cloud React React Node.js.\n\nTypeScript Architecture Node.js Node.js JavaScript React Cloud TypeScript Node.js Node.js."
-      }
-    ],
-    "projects": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "My Project 1 (JP)",
-        "description": "Project 1 overview in JP.",
-        "technologies": [
-          "TypeScript",
-          "Node.js"
-        ],
-        "link": "https://example.com/projects/1",
-        "github": "https://github.com/user/project-1",
-        "date": "2024-07-06",
-        "image": "/images/project-1.jpg",
-        "status": "in-progress",
-        "featured": false,
-        "content": "TypeScript Cloud Cloud JavaScript Architecture Cloud TypeScript Cloud Node.js React.\n\nJavaScript TypeScript JavaScript React JavaScript Node.js JavaScript React React React.\n\nTypeScript JavaScript JavaScript Next.js JavaScript Cloud Next.js Cloud Next.js Architecture.\n\nNext.js Architecture Architecture JavaScript JavaScript Node.js Node.js React Cloud TypeScript."
-      }
-    ],
-    "publications": [
-      {
-        "slug": "1",
-        "order": 1,
-        "title": "Publication Title 1",
-        "authors": [
-          "Author A1",
-          "Author B1"
-        ],
-        "publisher": "Publisher 1",
-        "date": "2021-06-01",
-        "link": "https://example.com/publication/1",
-        "doi": "10.1234/example-doi-1",
-        "summary": "This is a brief summary of publication 1 in jp.",
-        "keywords": [
-          "Keyword1",
-          "Keyword2",
-          "Keyword3"
-        ],
-        "media": [
-          "https://example.com/media/pub-1.jpg"
-        ],
-        "content": "NA"
+          "contactTitle": "Privacy Questions?",
+          "contactText": "If you have any questions about this privacy policy or how I handle your data, feel free to contact me. I'm committed to protecting your privacy and being transparent about data practices.",
+          "footerText": "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒"
+        },
+        "content": ""
       }
     ]
   }

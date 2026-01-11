@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { cache }  from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePortfolio } from "@/components/context/PortfolioContext";
@@ -10,19 +10,23 @@ import { Card } from "@/components/ui/card";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { BlogPost } from "@/lib/types/portfolio";
+import { ContentsService } from "@/lib/services/contents.service";
+import { LanguageType, ProfileType } from "@/lib/types/type.config";
 
 type PageProps = {
   lang: string;
   id: string;
 };
 
-export default function BlogDetailClient({ lang, id }: PageProps) {
-  const { langI18n, contentData, languageType } = usePortfolio();
-  const router = useRouter();
+export const getContent = cache(
+  async (profile: ProfileType, lang: LanguageType, id: string) =>
+    await ContentsService.loadContentOfBlogDetail(profile, lang, id),
+);
 
-  // Use real data if available
-  const posts = contentData?.blog_list;
-  const post = posts?.find((p) => p.id.toString() === id);
+export default async function BlogDetailClient({ lang, id }: PageProps) {
+  const { langI18n, profileType, languageType } = usePortfolio();
+  const router = useRouter();
+  const { post, relatedPosts } = await getContent(profileType, lang, id);
 
   if (!post) {
     return (
@@ -65,10 +69,6 @@ export default function BlogDetailClient({ lang, id }: PageProps) {
     // return `/blog/${post.id}`
   };
   // Get related posts (same category, excluding current post)
-  const relatedPosts =
-    posts
-      ?.filter((p: any) => p.id !== id && p.category === post.category)
-      .slice(0, 3) || [];
 
   return (
     <div className="min-h-screen">
