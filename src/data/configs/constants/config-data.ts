@@ -9,7 +9,7 @@ export class ConfigData {
 
   static templateList = allowed_templates;
 
-  static profilesList: ProfileItem[] = allowed_profiles as ProfileItem[];
+  static profileList: ProfileItem[] = allowed_profiles as ProfileItem[];
 
   static languageList: LanguageItem[] = allowed_languages as LanguageItem[];
 }
