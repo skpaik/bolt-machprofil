@@ -173,6 +173,11 @@ export interface WebUIItem {
   description?: string;
 }
 
+export interface ThemeItem extends WebUIItem {
+  value: ThemeType;
+  icon: string;
+}
+
 export interface TemplateItem extends WebUIItem {
   value: TemplateType;
 }

@@ -29,87 +29,70 @@ export default function BlogPageClient() {
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;
   // const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [selectedTag, setSelectedTag] = useState<string>("all");
-  const [sortBy, setSortBy] = useState<SortOption>("date-desc");
+  // const [searchQuery, setSearchQuery] = useState("");
+  // const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  // const [selectedTag, setSelectedTag] = useState<string>("all");
+  // const [sortBy, setSortBy] = useState<SortOption>("date-desc");
   const [posts, setPosts] = useState<BlogPost[]>([]);
   // Use real data if available, otherwise use sample data
   //const posts = contentData?.blog_list;
 
   // Get URL parameters
-  const categoryParam = searchParams?.get("category");
-  const tagParam = searchParams?.get("tag");
-  const sortParam = searchParams?.get("sort");
-  const pageParam = searchParams?.get("page");
-  const searchParam = searchParams?.get("search");
-  const currentPage = Number(pageParam ?? 1);
+  // const categoryParam = searchParams?.get("category");
+  // const tagParam = searchParams?.get("tag");
+  // const sortParam = searchParams?.get("sort");
+  // const pageParam = searchParams?.get("page");
+  // const searchParam = searchParams?.get("search");
 
   useEffect(() => {
-    if (!profileType || !languageType) return;
-
     async function loadBlogPost() {
       const data = await ContentsService.loadContentOf<BlogPost[]>(profileType, languageType, "blog_list");
       setPosts(data);
     }
+    console.log('useEffect > profileType', profileType)
+    console.log('useEffect > languageType', languageType)
     loadBlogPost();
   }, [profileType, languageType]);
 
   // Sync state with URL parameters
-  useEffect(() => {
-    if (categoryParam) setSelectedCategory(decodeURIComponent(categoryParam));
-    if (tagParam) setSelectedTag(decodeURIComponent(tagParam));
-    if (sortParam) setSortBy(sortParam as SortOption);
-    if (searchParam) setSearchQuery(decodeURIComponent(searchParam));
-  }, [searchParams]);
+  const query = useMemo(() => ({
+    page: Math.max(1, Number(searchParams?.get("page") ?? 1)),
+    category: searchParams?.get("category") ?? "all",
+    tag: searchParams?.get("tag") ?? "all",
+    search: searchParams?.get("search") ?? "",
+    sort: (searchParams?.get("sort") as SortOption) ?? "date-desc",
+  }), [searchParams]);
+  const currentPage = query.page;
+
 
   // Filter and search posts
   const filteredPosts = useMemo(() => {
-    let filtered = posts.filter((post: BlogPost) => {
-      // Category filter
-      if (selectedCategory !== "all" && post.category !== selectedCategory) {
-        return false;
-      }
+    let filtered = posts.filter(post => {
+      if (query.category !== "all" && post.category !== query.category) return false;
+      if (query.tag !== "all" && !post.tags?.includes(query.tag)) return false;
 
-      // Tag filter
-      if (selectedTag !== "all" && !post.tags?.includes(selectedTag)) {
-        return false;
-      }
-
-      // Search filter
-      if (searchQuery) {
-        const query = searchQuery.toLowerCase();
+      if (query.search) {
+        const q = query.search.toLowerCase();
         const searchableText = [
           post.title,
           post.excerpt,
           post.content,
           post.category,
           ...(post.tags || []),
-        ]
-            .join(" ")
-            .toLowerCase();
+        ].join(" ").toLowerCase();
 
-        if (!searchableText.includes(query)) {
-          return false;
-        }
+        if (!searchableText.includes(q)) return false;
       }
 
       return true;
     });
 
-    // Sort posts
-    filtered.sort((a: BlogPost, b: BlogPost) => {
-      switch (sortBy) {
+    filtered.sort((a, b) => {
+      switch (query.sort) {
         case "date-desc":
-          return (
-              new Date(b.publishedAt).getTime() -
-              new Date(a.publishedAt).getTime()
-          );
+          return +new Date(b.publishedAt) - +new Date(a.publishedAt);
         case "date-asc":
-          return (
-              new Date(a.publishedAt).getTime() -
-              new Date(b.publishedAt).getTime()
-          );
+          return +new Date(a.publishedAt) - +new Date(b.publishedAt);
         case "title-asc":
           return a.title.localeCompare(b.title);
         case "title-desc":
@@ -124,7 +107,7 @@ export default function BlogPageClient() {
     });
 
     return filtered;
-  }, [posts, selectedCategory, selectedTag, searchQuery, sortBy]);
+  }, [posts, query]);
 
   // Get unique categories and tags
   const categories = useMemo(() => {
@@ -150,19 +133,6 @@ export default function BlogPageClient() {
   }, [filteredPosts, currentPage]);
 
   // Update URL with all parameters
-  const updateURL2 = (updates: Record<string, string | null>) => {
-    const params = new URLSearchParams(searchParams?.toString());
-
-    Object.entries(updates).forEach(([key, value]) => {
-      if (value && value !== "all" && value !== "") {
-        params.set(key, value);
-      } else {
-        params.delete(key);
-      }
-    });
-
-    router.push(`/blog?${params.toString()}`, { scroll: false });
-  };
   const updateURL = (updates: Record<string, string | null>) => {
     const params = new URLSearchParams(searchParams?.toString());
 
@@ -174,60 +144,33 @@ export default function BlogPageClient() {
       }
     });
 
-    router.replace(`/blog?${params.toString()}`, { scroll: false });
+    const query = params.toString();
+    router.replace(query ? `/blog?${query}` : "/blog", { scroll: false });
   };
 
-  const isFirstRender = React.useRef(true);
-  // Reset to first page when filters change
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-    //setCurrentPage(1);
-    updateURL({ page: null });
-  }, [searchQuery, selectedCategory, selectedTag, sortBy]);
-
   const handleSearchChange = (value: string) => {
-    setSearchQuery(value);
     updateURL({ search: value || null, page: null });
   };
 
   const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category);
     updateURL({ category: category === "all" ? null : category, page: null });
   };
 
   const handleTagChange = (tag: string) => {
-    setSelectedTag(tag);
     updateURL({ tag: tag === "all" ? null : tag, page: null });
   };
 
   const handleSortChange = (sort: string) => {
-    setSortBy(sort as SortOption);
     updateURL({ sort: sort === "date-desc" ? null : sort, page: null });
   };
 
-  const handlePageChange2 = (page: number) => {
-    //setCurrentPage(page);
-    updateURL({ page: page > 1 ? page.toString() : null });
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
   const handlePageChange = (page: number) => {
-    //setCurrentPage(page);
-    updateURL({ page: page > 1 ? page.toString() : null });
-
-    // Optional UX enhancement
+    updateURL({ page: page > 1 ? String(page) : null });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleClearAll = () => {
-    setSearchQuery("");
-    setSelectedCategory("all");
-    setSelectedTag("all");
-    setSortBy("date-desc");
-    //setCurrentPage(1);
-    router.push("/blog", { scroll: false });
+    router.replace("/blog", { scroll: false });
   };
 
   const createBlogDetailUrl = (post: BlogPost) => {
@@ -240,7 +183,7 @@ export default function BlogPageClient() {
     {
       name: "category",
       label: langI18n.category,
-      value: selectedCategory,
+      value: query.category,
       onChange: handleCategoryChange,
       options: [
         { value: "all", label: langI18n.all_categories },
@@ -250,7 +193,7 @@ export default function BlogPageClient() {
     {
       name: "tag",
       label: langI18n.tag,
-      value: selectedTag,
+      value: query.tag,
       onChange: handleTagChange,
       options: [
         { value: "all", label: langI18n.tag_all },
@@ -261,7 +204,7 @@ export default function BlogPageClient() {
 
   // Configure sort options
   const sortConfig: SortConfig = {
-    value: sortBy,
+    value: query.sort,
     onChange: handleSortChange,
     options: [
       { value: "date-desc", label: langI18n.latest_first },
@@ -279,7 +222,7 @@ export default function BlogPageClient() {
 
         {/* Filter Bar */}
         <FilterBar
-            searchValue={searchQuery}
+            searchValue={query.search}
             onSearchChange={handleSearchChange}
             searchPlaceholder={langI18n.blog_search_placeholder}
             filters={filterConfigs}

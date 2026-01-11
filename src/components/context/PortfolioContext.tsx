@@ -47,7 +47,7 @@ import { emptyContent } from "@/data/configs/constants/empty.data";
 // import photoContentsData from "@/data/photos_contents.json";
 // import aboutContentsData from "@/data/about_contents.json";
 import languageData from "@/data/configs/constants/i18n.json";
-import { ConfigData } from "@/data/configs/config-data";
+import { ConfigData } from "@/data/configs/constants/config-data";
 import { settings_const } from "@/data/configs/generated/settings";
 import { LocalStorageService } from "@/lib/services/local.s.service";
 
@@ -74,7 +74,7 @@ function getInitialValue<T extends string>(
 }
 
 export function PortfolioProvider({ children }: { children: ReactNode }) {
-  const allowedProfiles = ConfigData.profilesList.map(
+  const allowedProfiles = ConfigData.profileList.map(
     (profile) => profile.value,
   );
   //console.log('allowedProfiles>  ', allowedProfiles);
@@ -133,7 +133,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   const [contentData, setContentData] = useState<ContentData>(emptyContent);
 
   useEffect(() => {
-    loadAllContent(languageType).then(setContentData);
+    // loadAllContent(languageType).then(setContentData);
   }, [languageType]);
 
   //if (!contentData) return null;

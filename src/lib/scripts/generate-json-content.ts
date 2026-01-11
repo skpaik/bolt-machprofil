@@ -396,7 +396,7 @@ function validateMarkdownFile(
 
   // Validate content exists
   if (!item.content || item.content.trim() === "") {
-    warnings.push("Content is empty");
+    // warnings.push("Content is empty");
   }
 
   // Store validation results

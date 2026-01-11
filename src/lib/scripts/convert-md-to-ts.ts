@@ -7,7 +7,7 @@ import { marked } from "marked";
  * CONFIG
  */
 const CONTENT_DIR = path.resolve("contents");
-const DATA_DIR = path.resolve("src/data");
+const DATA_DIR = path.resolve("src/data/contents");
 
 /**
  * HELPERS

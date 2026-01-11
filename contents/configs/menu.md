@@ -29,18 +29,18 @@ This file controls which menus appear on the site and where they appear.
 ## How it works
 
 - **show**
-    - Add menu keys here to display them as **primary menus**
-    - These appear directly in the main navigation bar
-    - The order you write is the order they appear
-    - These are primary menus and appear only if space is available
+  - Add menu keys here to display them as **primary menus**
+  - These appear directly in the main navigation bar
+  - The order you write is the order they appear
+  - These are primary menus and appear only if space is available
 
 - **optional**
-    - Add menu keys here to display them under the **More** menu
-    - These are secondary menus and appear only in **More** menu 
+  - Add menu keys here to display them under the **More** menu
+  - These are secondary menus and appear only in **More** menu
 
 - **hide**
-    - Add menu keys here to **never show them**
-    - This overrides both `show` and `optional`
+  - Add menu keys here to **never show them**
+  - This overrides both `show` and `optional`
 
 ## Important rules
 

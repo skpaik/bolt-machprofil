@@ -9,13 +9,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ConfigData } from "@/data/configs/config-data";
+import { ConfigData } from "@/data/configs/constants/config-data";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export function TemplateSwitcher() {
   const { templateType, setTemplateType } = usePortfolio();
 
-  const currentTemplate = ConfigData.templates.find(
+  const currentTemplate = ConfigData.templateList.find(
     (t) => t.value === templateType,
   );
 
@@ -28,7 +28,7 @@ export function TemplateSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {ConfigData.templates.map((t) => (
+        {ConfigData.templateList.map((t) => (
           <DropdownMenuItem
             key={t.value}
             onClick={() => setTemplateType(t.value)}

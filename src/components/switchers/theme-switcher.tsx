@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ConfigData } from "@/data/configs/config-data";
+import { ConfigData } from "@/data/configs/constants/config-data";
 import { ThemeType } from "@/lib/types/type.config";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
@@ -17,8 +17,8 @@ export function ThemeSwitcher() {
   const { themeType, setThemeType } = usePortfolio();
 
   const currentTheme =
-    ConfigData.themes.find((t) => t.value === themeType) ||
-    ConfigData.themes[2];
+    ConfigData.themeList.find((t) => t.value === themeType) ||
+    ConfigData.themeList[2];
 
   return (
     <DropdownMenu>
@@ -29,7 +29,7 @@ export function ThemeSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {ConfigData.themes.map((t) => {
+        {ConfigData.themeList.map((t) => {
           return (
             <DropdownMenuItem
               key={t.value}
