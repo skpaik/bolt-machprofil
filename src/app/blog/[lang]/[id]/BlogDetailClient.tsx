@@ -14,7 +14,7 @@ import { ContentsService } from "@/lib/services/contents.service";
 import { LanguageType, ProfileType } from "@/lib/types/type.config";
 
 type PageProps = {
-  lang: string;
+  lang: LanguageType;
   id: string;
 };
 

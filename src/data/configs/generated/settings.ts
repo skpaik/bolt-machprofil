@@ -5,8 +5,8 @@ export const settings_const = {
   activeTheme: "light",
   activeTemplate: "modern",
   showLanguageChangeButton: true,
-  showProfileChangeButton: false,
-  showTemplateChangeButton: false,
+  showProfileChangeButton: true,
+  showTemplateChangeButton: true,
   showThemeChangeButton: true,
   content: "\nNA\n"
 } as const;

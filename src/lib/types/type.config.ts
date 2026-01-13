@@ -1,9 +1,13 @@
 import { MenuConfig } from "@/data/configs/generated/menu-config";
+import {allowed_profiles} from "@/data/configs/generated/allowed_profile_list";
 
-export type ProfileType = "developer" | "photographer" | "teacher" | "student";
+// export type ProfileType = "developer" | "photographer" | "teacher" | "student";
+export type ProfileType = typeof allowed_profiles[number]["value"];
+export type LanguageType = typeof allowed_profiles[number]["allowed_languages"][number]["value"];
+
 export type TemplateType = "modern" | "classic" | "minimal";
 export type LanguageTypeOld = "en" | "de" | "es" | "fr";
-export type LanguageType = keyof typeof MenuConfig.menuList;
+// export type LanguageType = keyof typeof MenuConfig.menuList;
 export type ThemeType = "light" | "dark" | "system";
 
 export type SortOption =

@@ -49,8 +49,8 @@ export default function Header() {
               {appData.name}
             </span>
           </Link>
-          {settings_const.showLanguageChangeButton && <LanguageSwitcher />}
           {settings_const.showProfileChangeButton && <ProfileSwitcher />}
+          {settings_const.showLanguageChangeButton && <LanguageSwitcher />}
           {settings_const.showTemplateChangeButton && <TemplateSwitcher />}
           {settings_const.showThemeChangeButton && <ThemeSwitcher />}
         </div>

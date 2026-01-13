@@ -13,22 +13,29 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FilterBar } from "@/components/shared/FilterBar";
 import { Pagination } from "@/components/shared/Pagination";
-import { Publication } from "@/lib/types/portfolio";
+import {Experience, Publication} from "@/lib/types/portfolio";
 import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
 
 export default function PublicationsPage() {
-  const { appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, profileType, languageType} = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<string>("all");
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortOption>("year-desc");
 
+  const { data: publications, loading, error } = useContentLoader<Publication[]>(
+      profileType,
+      languageType,
+      "publication_list",
+      []
+  );
+
   // Use real data if available, otherwise use sample data
-  const publications = contentData.publication_list;
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search publications

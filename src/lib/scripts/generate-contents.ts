@@ -4,6 +4,7 @@ import { convertMdToTs } from "@/lib/scripts/convert-md-to-ts";
 import { generateJSONContent } from "@/lib/scripts/generate-json-content";
 import { generateMDF } from "@/lib/scripts/json-to-md";
 import { mainToConfigTs } from "@/lib/scripts/generate-config-ts";
+import {generateAllowedProfiles} from "@/lib/scripts/generate-allowed-profiles";
 
 // Run all preparation tasks
 function main() {
@@ -13,7 +14,7 @@ function main() {
     mainToConfigTs();
     // generateRegistry();
     convertMdToTs();
-    generateJSONContent();
+    // generateJSONContent();
   } catch (error) {
     console.error("❌ Error generating content:", error);
     process.exit(1);

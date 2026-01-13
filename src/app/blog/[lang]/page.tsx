@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { blogPostsSlugs } from "@/data/configs/generated/blog-posts-slugs";
+import {blogPostsSlugsProfile} from "@/data/configs/generated/blog-posts-slugs-profile";
 
 type PageProps = {
   params: {
@@ -8,7 +9,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  const langs = Array.from(new Set(blogPostsSlugs.map((p) => p.lang)));
+  const langs = Array.from(new Set(blogPostsSlugsProfile.map((p) => p.lang)));
   return langs.map((lang) => ({ lang }));
 }
 

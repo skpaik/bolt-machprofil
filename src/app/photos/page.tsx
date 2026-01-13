@@ -13,11 +13,12 @@ import { Photo } from "@/lib/types/portfolio";
 import { SortOption } from "@/lib/types/type.config";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
 
 type ViewMode = "gallery" | "albums";
 
 export default function PhotoPage() {
-  const { appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, profileType, languageType } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -29,8 +30,12 @@ export default function PhotoPage() {
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
   const [viewMode, setViewMode] = useState<ViewMode>("gallery");
 
-  // Use real data if available, otherwise use sample data
-  const photos = contentData.photos_list;
+  const { data: photos, loading, error } = useContentLoader<Photo[]>(
+      profileType,
+      languageType,
+      "photo_list",
+      []
+  );
 
   // Get URL parameters
   const albumParam = searchParams?.get("album");

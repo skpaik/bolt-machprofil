@@ -12,15 +12,21 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import { Service } from "@/lib/types/portfolio";
 
 // Sample services data - covers various professional services
 
 export default function ServicePage() {
-  const { contentData, langI18n } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  // Use real data if available, otherwise use sample data
-  const services = contentData.service_list;
+  const { data: services, loading, error } = useContentLoader<Service[]>(
+      profileType,
+      languageType,
+      "service_list",
+      []
+  );
 
   // Get unique categories
   const categories = ["all", ...new Set(services.map((s) => s.category))];

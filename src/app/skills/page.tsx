@@ -12,17 +12,24 @@ import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { SortOption } from "@/lib/types/type.config";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {Service, Skills} from "@/lib/types/portfolio";
 
 export default function SkillPage() {
-  const { appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, profileType, languageType } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedLevel, setSelectedLevel] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortOption>("proficiency-desc");
 
-  // Use real data if available, otherwise use sample data
-  const skills = contentData.skill_list;
+  const { data: skills, loading, error } = useContentLoader<Skills[]>(
+      profileType,
+      languageType,
+      "skill_list",
+      []
+  );
+
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search skills

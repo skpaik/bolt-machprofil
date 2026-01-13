@@ -1,0 +1,17 @@
+export const data = {
+  id: "1",
+  title: "Senior Developer 1 (JP)",
+  organization: "Tech Corp 1",
+  location: "Berlin, Germany",
+  current: false,
+  startDate: "2020-01-01",
+  endDate: "2024-01-01",
+  website: "https://company1.com",
+  technologies: ["Node.js","React"],
+  description: "Led development team for Tech Corp 1.",
+  responsibilities: ["Responsibility 1 for experience 1","Responsibility 2 for experience 1","Responsibility 3 for experience 1"],
+  logo: "/images/organization-logo-1.png",
+  content: "<p>Architecture React TypeScript React Node.js TypeScript Next.js JavaScript JavaScript JavaScript.</p>\n<p>TypeScript JavaScript Cloud Architecture Architecture TypeScript JavaScript React Cloud TypeScript.</p>\n<p>Cloud React React Architecture Architecture Architecture JavaScript Next.js Cloud Architecture.</p>\n",
+} as const;
+
+export default data;

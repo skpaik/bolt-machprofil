@@ -6,8 +6,8 @@ activeTemplate: modern
 
 # Optional
 showLanguageChangeButton: true
-showProfileChangeButton: false
-showTemplateChangeButton: false
+showProfileChangeButton: true
+showTemplateChangeButton: true
 showThemeChangeButton: true
 ---
 

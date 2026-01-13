@@ -51,6 +51,12 @@ import { ConfigData } from "@/data/configs/constants/config-data";
 import { settings_const } from "@/data/configs/generated/settings";
 import { LocalStorageService } from "@/lib/services/local.s.service";
 
+type AvailableI18nLanguage = keyof typeof languageData;
+
+function isI18nLanguageKeyAvailable(lang: LanguageType): lang is AvailableI18nLanguage {
+  return lang in languageData;
+}
+
 const PortfolioContext = createContext<PortfolioContextType | undefined>(
   undefined,
 );
@@ -152,7 +158,8 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   // const publicationContentData: Publication[] =    publicationContentsData[languageType];
   // const photoContentData: Photo[] = photoContentsData[languageType];
   // const aboutContent: AboutContent = aboutContentsData[languageType];
-  const langI18n: LanguageI18n = languageData[languageType];
+  //const langI18n: LanguageI18n = languageData[languageType];
+  const langI18n: LanguageI18n = isI18nLanguageKeyAvailable(languageType) ? languageData[languageType] : languageData.en;
   const appConfig: AppConfig = { item_per_page: 4 };
   //contentData.staticContent = staticContentData;
   //contentData.photos = photoContentData;

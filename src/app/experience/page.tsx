@@ -8,12 +8,19 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {BlogPost, Experience} from "@/lib/types/portfolio";
 
 export default function ExperiencePage() {
-  const { langI18n, contentData } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
 
   // Use real data if available, otherwise use sample data
-  const experiences = contentData.experience_list;
+  const { data: experiences, loading, error } = useContentLoader<Experience[]>(
+      profileType,
+      languageType,
+      "experience_list",
+      []
+  );
 
   // Calculate total experience
   const totalYears = Math.floor(

@@ -10,11 +10,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { showLucidIcon } from "@/components/lucid-icon-map";
-import { ConfigData } from "@/data/configs/constants/config-data";
+import {profileLanguageMap} from "@/data/configs/profileLanguageMap";
 
 export function LanguageSwitcher() {
-  const { langI18n, languageType, setLanguageType } = usePortfolio();
-  const current = ConfigData.languageList.find((t) => t.value === languageType);
+  const { profileType, languageType, setLanguageType } = usePortfolio();
+  const languageList = profileLanguageMap[profileType]
+
+  const current = languageList.find((t) => t.value === languageType);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -24,7 +27,7 @@ export function LanguageSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {ConfigData.languageList.map((t) => (
+        {languageList.map((t) => (
           <DropdownMenuItem
             key={t.value}
             onClick={() => setLanguageType(t.value)}
@@ -34,11 +37,11 @@ export function LanguageSwitcher() {
               <span className="font-medium">{t.label}</span>
               {languageType === t.value && <span className="text-xs">✓</span>}
             </div>
-            {t.description && (
-              <span className="text-xs text-muted-foreground">
-                {t.description}
-              </span>
-            )}
+            {/*{t.description && (*/}
+            {/*  <span className="text-xs text-muted-foreground">*/}
+            {/*    {t.description}*/}
+            {/*  </span>*/}
+            {/*)}*/}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

@@ -4,6 +4,7 @@ export class LocalStorageService {
   }
 
   static get<T = string>(key: string) {
+    if (typeof window === "undefined") return null;
     return localStorage.getItem(key) as T | null;
   }
 }

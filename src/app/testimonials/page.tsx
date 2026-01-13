@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { ShowIcon, showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {Testimonial} from "@/lib/types/portfolio";
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (
@@ -27,11 +29,15 @@ const StarRating = ({ rating }: { rating: number }) => {
 };
 
 export default function TestimonialsPage() {
-  const { langI18n, contentData } = usePortfolio();
+  const { langI18n,  profileType, languageType } = usePortfolio();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  // Use real data if available, otherwise use sample data
-  const testimonials = contentData.testimonial_list;
+  const { data: testimonials, loading, error } = useContentLoader<Testimonial[]>(
+      profileType,
+      languageType,
+      "testimonial_list",
+      []
+  );
 
   // Get unique categories
   const categories = ["all", ...new Set(testimonials.map((t) => t.category))];

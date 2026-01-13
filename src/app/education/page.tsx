@@ -7,12 +7,19 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {Education, Project} from "@/lib/types/portfolio";
 
 export default function EducationPage() {
-  const { langI18n, contentData } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
 
   // Use real data if available, otherwise use sample data
-  const education = contentData.education_list;
+  const { data: education, loading, error } = useContentLoader<Education[]>(
+      profileType,
+      languageType,
+      "education_list",
+      []
+  );
 
   const getTypeColor = (type: string) => {
     const colorMap: { [key: string]: string } = {

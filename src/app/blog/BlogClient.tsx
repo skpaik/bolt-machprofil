@@ -20,7 +20,7 @@ import { SortOption} from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { PageHeading } from "@/components/shared/PageHeading";
-import {ContentsService} from "@/lib/services/contents.service";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
 
 export default function BlogPageClient() {
   const { appConfig, langI18n, profileType, languageType} =
@@ -28,31 +28,13 @@ export default function BlogPageClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [searchQuery, setSearchQuery] = useState("");
-  // const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  // const [selectedTag, setSelectedTag] = useState<string>("all");
-  // const [sortBy, setSortBy] = useState<SortOption>("date-desc");
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  // Use real data if available, otherwise use sample data
-  //const posts = contentData?.blog_list;
 
-  // Get URL parameters
-  // const categoryParam = searchParams?.get("category");
-  // const tagParam = searchParams?.get("tag");
-  // const sortParam = searchParams?.get("sort");
-  // const pageParam = searchParams?.get("page");
-  // const searchParam = searchParams?.get("search");
-
-  useEffect(() => {
-    async function loadBlogPost() {
-      const data = await ContentsService.loadContentOf<BlogPost[]>(profileType, languageType, "blog_list");
-      setPosts(data);
-    }
-    console.log('useEffect > profileType', profileType)
-    console.log('useEffect > languageType', languageType)
-    loadBlogPost();
-  }, [profileType, languageType]);
+  const { data: posts, loading, error } = useContentLoader<BlogPost[]>(
+      profileType,
+      languageType,
+      "blog_list",
+      []
+  );
 
   // Sync state with URL parameters
   const query = useMemo(() => ({

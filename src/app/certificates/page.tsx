@@ -19,17 +19,23 @@ import { Certificate } from "@/lib/types/portfolio";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateLong } from "@/lib/helpers/date.helper";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
 
 export default function CertificatesPage() {
-  const { appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, contentData, profileType, languageType } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
 
+  const { data: certificates, loading, error } = useContentLoader<Certificate[]>(
+      profileType,
+      languageType,
+      "certificate_list",
+      []
+  );
   // Use real data if available, otherwise use sample data
-  const certificates = contentData.certificate_list;
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search certificates

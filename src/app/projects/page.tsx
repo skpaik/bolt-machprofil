@@ -14,15 +14,17 @@ import { Button } from "@/components/ui/button";
 import { FilterBar } from "@/components/shared/FilterBar";
 import { Pagination } from "@/components/shared/Pagination";
 import Link from "next/link";
-import { Project } from "@/lib/types/portfolio";
+import {BlogPost, Project} from "@/lib/types/portfolio";
 import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
+import {ContentsService} from "@/lib/services/contents.service";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
 
 export default function ProjectsPage() {
-  const { appConfig, langI18n, contentData } = usePortfolio();
+  const { appConfig, langI18n, profileType, languageType } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -30,8 +32,12 @@ export default function ProjectsPage() {
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
 
-  // Use real data if available, otherwise use sample data
-  const projects = contentData.project_list;
+  const { data: projects, loading, error } = useContentLoader<Project[]>(
+      profileType,
+      languageType,
+      "project_list",
+      []
+  );
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
   // Filter and search projects

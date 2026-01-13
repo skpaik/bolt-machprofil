@@ -15,11 +15,12 @@ import { useIsMobile } from "@/lib/hooks/use-is-mobile";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 
 export default function BottomNav() {
-  const { langI18n, languageType } = usePortfolio();
+  const { langI18n, profileType, languageType} = usePortfolio();
   const isMobile = useIsMobile();
-  const { primaryMenuItems, moreMenuItems } = MenuService.getMenu(
-    languageType,
-    isMobile,
+  const { primaryMenuItems, moreMenuItems} = MenuService.getMenu(
+      profileType,
+      languageType,
+      isMobile,
   );
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
