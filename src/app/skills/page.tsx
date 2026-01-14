@@ -183,9 +183,6 @@ export default function SkillPage() {
         resultsCount={totalSkills}
         resultsLabel={totalSkills === 1 ? langI18n.skill : langI18n.skills}
         onClearAll={handleClearAll}
-        collapsible={true}
-        defaultExpanded={false}
-        showSearch={true}
       />
 
       {/* Skills Grid or Empty State */}

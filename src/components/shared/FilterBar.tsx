@@ -40,9 +40,9 @@ export function FilterBar({
   resultsLabel = "items",
   onClearAll,
   showClearButton = true,
-  showSearch = true,
-  collapsible = false,
-  defaultExpanded = true,
+  showSearch = false,
+  collapsible = true,
+  defaultExpanded = false,
 }: FilterBarProps) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
@@ -55,10 +55,13 @@ export function FilterBar({
     setIsExpanded(!isExpanded);
   };
 
+  // Show search if showSearch is true OR filters are expanded
+  const shouldShowSearch = showSearch || isExpanded;
+
   return (
     <div className="space-y-4 mb-8">
-      {/* Search Bar - Always Visible */}
-      {showSearch && (
+      {/* Search Bar - Visible when showSearch=true or filters expanded */}
+      {shouldShowSearch && (
         <div className="relative">
           {showLucidIcon(
             "search",

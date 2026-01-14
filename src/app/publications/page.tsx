@@ -395,9 +395,6 @@ export default function PublicationsPage() {
           totalPublications === 1 ? langI18n.publication : langI18n.publications
         }
         onClearAll={handleClearAll}
-        collapsible={true}
-        defaultExpanded={false}
-        showSearch={true}
       />
 
       {/* Publications List or Empty State */}

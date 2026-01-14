@@ -485,9 +485,6 @@ export default function PhotoPage() {
                 : langI18n.photos.toLowerCase()
             }
             onClearAll={handleClearAll}
-            collapsible={true}
-            defaultExpanded={false}
-            showSearch={true}
           />
 
           {/* Photos Grid or Empty State */}

@@ -215,9 +215,6 @@ export default function BlogPageClient() {
                   : langI18n.posts.toLowerCase()
             }
             onClearAll={handleClearAll}
-            collapsible={true}
-            defaultExpanded={false}
-            showSearch={false}
         />
 
         {/* Posts Grid or Empty State */}
