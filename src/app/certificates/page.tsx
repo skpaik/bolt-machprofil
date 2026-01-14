@@ -312,6 +312,9 @@ export default function CertificatesPage() {
             : langI18n.certificates.toLowerCase()
         }
         onClearAll={handleClearAll}
+        collapsible={true}
+        defaultExpanded={false}
+        showSearch={true}
       />
 
       {/* Certificates Grid or Empty State */}
