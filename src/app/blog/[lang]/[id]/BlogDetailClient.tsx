@@ -1,6 +1,6 @@
 "use client";
 
-import React, { cache }  from "react";
+import React, { useEffect, useState }  from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePortfolio } from "@/components/context/PortfolioContext";
@@ -11,22 +11,45 @@ import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { BlogPost } from "@/lib/types/portfolio";
 import { ContentsService } from "@/lib/services/contents.service";
-import { LanguageType, ProfileType } from "@/lib/types/type.config";
+import { LanguageType } from "@/lib/types/type.config";
 
 type PageProps = {
   lang: LanguageType;
   id: string;
 };
 
-export const getContent = cache(
-  async (profile: ProfileType, lang: LanguageType, id: string) =>
-    await ContentsService.loadContentOfBlogDetail(profile, lang, id),
-);
-
-export default async function BlogDetailClient({ lang, id }: PageProps) {
+export default function BlogDetailClient({ lang, id }: PageProps) {
   const { langI18n, profileType, languageType } = usePortfolio();
   const router = useRouter();
-  const { post, relatedPosts } = await getContent(profileType, lang, id);
+  const [post, setPost] = useState<BlogPost | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadContent = async () => {
+      try {
+        const { post: loadedPost, relatedPosts: loadedRelated } =
+          await ContentsService.loadContentOfBlogDetail(profileType, lang, id);
+        setPost(loadedPost || null);
+        setRelatedPosts(loadedRelated);
+      } catch (error) {
+        console.error("Error loading blog content:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadContent();
+  }, [profileType, lang, id]);
+
+  if (loading) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center py-20">
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!post) {
     return (

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { blogPostsSlugs } from "@/data/configs/generated/blog-posts-slugs";
 import BlogDetailClient from "./BlogDetailClient";
 import {blogPostsSlugsProfile} from "@/data/configs/generated/blog-posts-slugs-profile";
@@ -22,5 +23,15 @@ export function generateStaticParams() {
 export default async function BlogDetailPage({ params }: PageProps) {
   const { lang, id } = await params;
 
-  return <BlogDetailClient lang={lang} id={id} />;
+  return (
+    <Suspense fallback={
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center py-20">
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    }>
+      <BlogDetailClient lang={lang} id={id} />
+    </Suspense>
+  );
 }

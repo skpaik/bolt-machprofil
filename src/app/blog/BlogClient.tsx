@@ -23,8 +23,7 @@ import { PageHeading } from "@/components/shared/PageHeading";
 import {useContentLoader} from "@/components/hooks/use-content-loader";
 
 export default function BlogPageClient() {
-  const { appConfig, langI18n, profileType, languageType} =
-      usePortfolio();
+  const { appConfig, langI18n, profileType, languageType} = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;
