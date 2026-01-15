@@ -5,191 +5,181 @@ export const blogPostsSlugsProfile = [
   {
     profile: "developer",
     lang: "de",
-    id: "1",
+    id: 1
   },
   {
     profile: "developer",
     lang: "de",
-    id: "2",
+    id: 2
   },
   {
     profile: "developer",
     lang: "de",
-    id: "3",
-  },
-  {
-    profile: "teacher",
-    lang: "de",
-    id: "4",
-  },
-  {
-    profile: "teacher",
-    lang: "de",
-    id: "5",
+    id: 3
   },
   {
     profile: "developer",
     lang: "de",
-    id: "6",
+    id: 4
   },
   {
     profile: "developer",
     lang: "de",
-    id: "7",
-  },
-  {
-    profile: "teacher",
-    lang: "de",
-    id: "8",
-  },
-  {
-    profile: "teacher",
-    lang: "de",
-    id: "9",
+    id: 5
   },
   {
     profile: "developer",
     lang: "de",
-    id: "10",
-  },
-  {
-    profile: "teacher",
-    lang: "de",
-    id: "11",
+    id: 6
   },
   {
     profile: "developer",
     lang: "de",
-    id: "12",
+    id: 7
   },
   {
-    profile: "teacher",
-    lang: "en",
-    id: "1",
+    profile: "developer",
+    lang: "de",
+    id: 8
+  },
+  {
+    profile: "developer",
+    lang: "de",
+    id: 9
+  },
+  {
+    profile: "developer",
+    lang: "de",
+    id: 10
+  },
+  {
+    profile: "developer",
+    lang: "de",
+    id: 11
+  },
+  {
+    profile: "developer",
+    lang: "de",
+    id: 12
   },
   {
     profile: "developer",
     lang: "en",
-    id: "2",
-  },
-  {
-    profile: "teacher",
-    lang: "en",
-    id: "3",
+    id: 1
   },
   {
     profile: "developer",
     lang: "en",
-    id: "4",
+    id: 2
   },
   {
     profile: "developer",
     lang: "en",
-    id: "5",
+    id: 3
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 4
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 5
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 6
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 7
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 8
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 9
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 10
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 11
+  },
+  {
+    profile: "developer",
+    lang: "en",
+    id: 12
   },
   {
     profile: "teacher",
     lang: "en",
-    id: "6",
+    id: 1
   },
   {
     profile: "teacher",
     lang: "en",
-    id: "7",
+    id: 2
   },
   {
     profile: "teacher",
     lang: "en",
-    id: "8",
+    id: 3
   },
   {
     profile: "teacher",
     lang: "en",
-    id: "9",
+    id: 4
   },
   {
     profile: "teacher",
     lang: "en",
-    id: "10",
+    id: 5
   },
   {
     profile: "teacher",
     lang: "en",
-    id: "11",
+    id: 6
   },
   {
     profile: "teacher",
     lang: "en",
-    id: "12",
+    id: 7
   },
   {
     profile: "teacher",
-    lang: "fr",
-    id: "15",
+    lang: "en",
+    id: 8
   },
   {
     profile: "teacher",
-    lang: "fr",
-    id: "2",
+    lang: "en",
+    id: 9
   },
   {
     profile: "teacher",
-    lang: "fr",
-    id: "3",
+    lang: "en",
+    id: 10
   },
   {
     profile: "teacher",
-    lang: "fr",
-    id: "4",
+    lang: "en",
+    id: 11
   },
   {
     profile: "teacher",
-    lang: "fr",
-    id: "5",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "6",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "7",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "8",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "9",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "10",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "11",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "12",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "13",
-  },
-  {
-    profile: "teacher",
-    lang: "fr",
-    id: "15",
-  },
+    lang: "en",
+    id: 12
+  }
 ] as const;
