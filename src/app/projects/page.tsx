@@ -383,6 +383,7 @@ export default function ProjectsPage() {
           totalProjects === 1 ? langI18n.project : langI18n.projects
         }
         onClearAll={handleClearAll}
+        showSearch={true}
       />
 
       {/* Projects Grid or Empty State */}
