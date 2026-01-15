@@ -12,6 +12,8 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { BlogPost } from "@/lib/types/portfolio";
 import { ContentsService } from "@/lib/services/contents.service";
 import { LanguageType } from "@/lib/types/type.config";
+import { MetadataHelper } from "@/lib/helpers/metadata.helper";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 type PageProps = {
   lang: LanguageType;
@@ -93,8 +95,32 @@ export default function BlogDetailClient({ lang, id }: PageProps) {
   };
   // Get related posts (same category, excluding current post)
 
+
   return (
-    <div className="min-h-screen">
+    <>
+      {post && (
+        <>
+          <StructuredData
+            data={MetadataHelper.generateBlogPostStructuredData({
+              title: post.title,
+              description: post.excerpt || "",
+              image: post.coverImage,
+              publishedTime: post.publishedAt,
+              modifiedTime: post.publishedAt,
+              author: post.author,
+              url: `/blog/${lang}/${id}`,
+            })}
+          />
+          <StructuredData
+            data={MetadataHelper.generateBreadcrumbStructuredData([
+              { name: "Home", url: "/" },
+              { name: "Blog", url: "/blog" },
+              { name: post.title, url: `/blog/${lang}/${id}` },
+            ])}
+          />
+        </>
+      )}
+      <div className="min-h-screen">
       {/* Header */}
       <div className="bg-muted/30 border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -244,6 +270,7 @@ export default function BlogDetailClient({ lang, id }: PageProps) {
           </Button>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

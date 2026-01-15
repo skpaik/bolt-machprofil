@@ -407,4 +407,7 @@ export interface PageMetaParams {
   url?: string;
   type?: "website" | "article";
   author?: string;
+  keywords?: string[];
+  publishedTime?: string;
+  modifiedTime?: string;
 }

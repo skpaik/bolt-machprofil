@@ -5,16 +5,44 @@ import { site_const } from "@/data/configs/generated/site";
 
 export class MetadataHelper {
   public static generateMetaData(): Metadata {
-    const siteConfigData: SiteConfig = site_const;
     return {
-      title: siteConfigData.siteTitle,
-      description: siteConfigData.siteDescription,
-      // authors: {name: siteConfigData.author},
-      // generator: siteConfigData.generator,
-      // keywords: siteConfigData.keywords,
-      // creator: siteConfigData.author,
-      // icons: siteConfigData.favicon,
-      // openGraph: this.generateOpenGraphData(siteConfigData)
+      metadataBase: new URL(site_const.baseUrl),
+      title: {
+        default: site_const.siteTitle,
+        template: `%s | ${site_const.siteName}`,
+      },
+      description: site_const.siteDescription,
+      keywords: [...site_const.keywords],
+      authors: [{ name: site_const.author }],
+      creator: site_const.author,
+      publisher: site_const.author,
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
+      icons: {
+        icon: site_const.favicon,
+        shortcut: site_const.favicon,
+        apple: site_const.favicon,
+      },
+      openGraph: this.generateOpenGraphData(),
+      twitter: {
+        card: "summary_large_image",
+        title: site_const.siteTitle,
+        description: site_const.siteDescription,
+        creator: `@${site_const.author.replace(/\s+/g, "")}`,
+        images: [site_const.socialPreview],
+      },
+      verification: {
+        google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      },
     };
   }
 
@@ -25,42 +53,181 @@ export class MetadataHelper {
     url,
     type = "website",
     author,
+    keywords,
+    publishedTime,
+    modifiedTime,
   }: PageMetaParams): Metadata {
-    const siteName = "My Portfolio"; // Change to your site name
-    const defaultDescription =
-      "Check out my portfolio and blog about web development, programming, and design.";
-    const defaultImage = "/og-default.png";
-    const baseUrl = "https://yourdomain.com";
+    const siteName = site_const.siteName;
+    const defaultDescription = site_const.siteDescription;
+    const defaultImage = site_const.socialPreview;
+    const baseUrl = site_const.baseUrl;
+
+    const pageUrl = url ? `${baseUrl}${url}` : baseUrl;
+    const pageImage = image ?? defaultImage;
+    const pageDescription = description ?? defaultDescription;
+    const pageTitle = title ?? site_const.siteTitle;
 
     return {
-      title: title ? `${title} | ${siteName}` : siteName,
-      description: description ?? defaultDescription,
+      title,
+      description: pageDescription,
+      keywords: keywords ?? [...site_const.keywords],
+      authors: author ? [{ name: author }] : [{ name: site_const.author }],
+      creator: author ?? site_const.author,
+      publisher: site_const.author,
       openGraph: {
-        title: title ?? siteName,
-        description: description ?? defaultDescription,
-        url: url ?? baseUrl,
+        title: pageTitle,
+        description: pageDescription,
+        url: pageUrl,
         siteName,
         type,
         images: [
           {
-            url: image ?? defaultImage,
+            url: pageImage,
+            width: 1200,
+            height: 630,
+            alt: pageTitle,
           },
         ],
+        ...(publishedTime && { publishedTime }),
+        ...(modifiedTime && { modifiedTime }),
       },
       twitter: {
         card: "summary_large_image",
-        title: title ?? siteName,
-        description: description ?? defaultDescription,
-        images: [image ?? defaultImage],
+        title: pageTitle,
+        description: pageDescription,
+        creator: `@${site_const.author.replace(/\s+/g, "")}`,
+        images: [pageImage],
       },
-      metadataBase: new URL(baseUrl),
-      authors: author ? [{ name: author }] : undefined,
+      alternates: {
+        canonical: pageUrl,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
     };
   }
 
-  private static generateOpenGraphData(siteConfigData: SiteConfig): OpenGraph {
+  private static generateOpenGraphData(): OpenGraph {
     return {
-      siteName: siteConfigData.siteTitle,
+      type: "website",
+      locale: "en_US",
+      url: site_const.baseUrl,
+      siteName: site_const.siteTitle,
+      title: site_const.siteTitle,
+      description: site_const.siteDescription,
+      images: [
+        {
+          url: site_const.socialPreview,
+          width: 1200,
+          height: 630,
+          alt: site_const.siteTitle,
+        },
+      ],
+    };
+  }
+
+  // Generate JSON-LD structured data for Person/Organization
+  public static generatePersonStructuredData() {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: site_const.author,
+      url: site_const.baseUrl,
+      image: site_const.socialPreview,
+      description: site_const.siteDescription,
+      jobTitle: "Software Engineer",
+      sameAs: [
+        // Add social media links here
+        // "https://twitter.com/username",
+        // "https://linkedin.com/in/username",
+        // "https://github.com/username"
+      ],
+    };
+  }
+
+  // Generate JSON-LD for Blog Post
+  public static generateBlogPostStructuredData({
+    title,
+    description,
+    image,
+    publishedTime,
+    modifiedTime,
+    author,
+    url,
+  }: {
+    title: string;
+    description: string;
+    image?: string;
+    publishedTime: string;
+    modifiedTime?: string;
+    author?: string;
+    url: string;
+  }) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: title,
+      description: description,
+      image: image ?? site_const.socialPreview,
+      datePublished: publishedTime,
+      dateModified: modifiedTime ?? publishedTime,
+      author: {
+        "@type": "Person",
+        name: author ?? site_const.author,
+      },
+      publisher: {
+        "@type": "Person",
+        name: site_const.author,
+      },
+      url: `${site_const.baseUrl}${url}`,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${site_const.baseUrl}${url}`,
+      },
+    };
+  }
+
+  // Generate JSON-LD for Website
+  public static generateWebsiteStructuredData() {
+    return {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: site_const.siteTitle,
+      description: site_const.siteDescription,
+      url: site_const.baseUrl,
+      author: {
+        "@type": "Person",
+        name: site_const.author,
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${site_const.baseUrl}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    };
+  }
+
+  // Generate JSON-LD for BreadcrumbList
+  public static generateBreadcrumbStructuredData(
+    items: Array<{ name: string; url: string }>
+  ) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: `${site_const.baseUrl}${item.url}`,
+      })),
     };
   }
 }
