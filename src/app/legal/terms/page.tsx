@@ -1,25 +1,14 @@
-"use client";
-
 import React from "react";
-import { usePortfolio } from "@/components/context/PortfolioContext";
-import { PageHeading } from "@/components/shared/PageHeading";
-import { TermsPrivacyContent } from "@/components/shared/TermsPrivacyContent";
+import { Metadata } from "next";
+import ClientPage from "./client-page";
+import { pagesMetadata } from "@/lib/config/seo.config";
+
+export const metadata: Metadata = pagesMetadata.static_contents;
 
 export default function TermsPage() {
-  const { langI18n, contentData } = usePortfolio();
-
-  const staticContentData = contentData.static_contents;
-
-  return (
-    <>
-      <PageHeading
-        title={langI18n.terms}
-        subTitle={staticContentData.terms.subtitle}
-      />
-      <TermsPrivacyContent
-        lastUpdatedTranslate={langI18n.last_updated}
-        termsPrivacy={staticContentData.terms}
-      />
-    </>
-  );
+    return (
+        <>
+            <ClientPage/>
+        </>
+    );
 }

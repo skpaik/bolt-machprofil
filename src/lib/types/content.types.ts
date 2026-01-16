@@ -31,7 +31,10 @@ export const contentFileMap = {
 // export type ContentKey = keyof typeof contentFileMap;
 
 export type ContentData = {
+  home_content: AboutContent;
   about_content: AboutContent;
+  contact_content: AboutContent;
+  resume_content: AboutContent;
   blog_list: BlogPost[];
   certificate_list: Certificate[];
   education_list: Education[];
