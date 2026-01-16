@@ -36,6 +36,10 @@ export const allowed_profiles = [
         label: "English"
       },
       {
+        value: "fr",
+        label: "French"
+      },
+      {
         value: "ja",
         label: "Japanese"
       }
