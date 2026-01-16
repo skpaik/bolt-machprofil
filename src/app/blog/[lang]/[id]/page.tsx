@@ -1,9 +1,8 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
-import { blogPostsSlugs } from "@/data/configs/generated/blog-posts-slugs";
-import BlogDetailClient from "./BlogDetailClient";
-import {blogPostsSlugsProfile} from "@/data/configs/generated/blog-posts-slugs-profile";
-import {LanguageType, ProfileType} from "@/lib/types/type.config";
+import ClientPage from "./client-page";
+import { blogPostsSlugsProfile } from "@/data/configs/generated/blog-posts-slugs-profile";
+import { LanguageType, ProfileType } from "@/lib/types/type.config";
 import { ContentsService } from "@/lib/services/contents.service";
 import { MetadataHelper } from "@/lib/helpers/metadata.helper";
 import { settings_const } from "@/data/configs/generated/settings";
@@ -74,7 +73,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
         </div>
       </div>
     }>
-      <BlogDetailClient lang={lang} id={id} />
+      <ClientPage lang={lang} id={id} />
     </Suspense>
   );
 }
