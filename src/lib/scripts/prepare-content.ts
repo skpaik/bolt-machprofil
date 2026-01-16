@@ -1,21 +1,19 @@
-import { generateBlogPostsSlugsSlug } from "@/lib/scripts/generate-blog-slug";
-import { generateContent } from "@/lib/scripts/generate-contents";
-import {generateAllowedProfiles} from "@/lib/scripts/generate-allowed-profiles";
+import {generateBlogPostsSlugsSlug} from "@/lib/scripts/generate-blog-slug";
 
 // Run all preparation tasks
 function main() {
-  try {
-    generateBlogPostsSlugsSlug();
-
-    console.log("✨ Content preparation completed successfully!");
-  } catch (error) {
-    console.error("❌ Error during content preparation:", error);
-    process.exit(1);
-  }
+    generateBlogPostsSlugsSlug()
+        .then(r => {
+            console.log("✨ Content preparation completed successfully!");
+        })
+        .catch((error) => {
+            console.error("❌ Error during content preparation:", error);
+            process.exit(1);
+        });
 }
 
-// main();
+main();
 // generateContent();
 
 
-generateAllowedProfiles();
+// generateAllowedProfiles();

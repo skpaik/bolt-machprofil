@@ -20,7 +20,7 @@ type PageProps = {
 export function generateStaticParams() {
   return blogPostsSlugsProfile.map(({ lang, id }) => ({
     lang,
-    id,
+    id: id.toString(),
   }));
 }
 
