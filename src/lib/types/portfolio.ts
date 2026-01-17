@@ -181,6 +181,7 @@ export interface ThemeItem extends WebUIItem {
 export interface TemplateItem extends WebUIItem {
   value: TemplateType;
 }
+
 export type AllowedProfile = {
   readonly value: ProfileType;
   readonly label: string;

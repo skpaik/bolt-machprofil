@@ -3,8 +3,6 @@ import { MenuConfig } from "@/data/configs/generated/menu-config";
 import { BlogPost } from "@/lib/types/portfolio";
 //import {loadContentFile} from "@/lib/services/loadContent";
 
-type SupportedLang = keyof typeof MenuConfig.menuList;
-
 export class ContentsService {
     private static async loadContentFile(
         profileType: string | null,

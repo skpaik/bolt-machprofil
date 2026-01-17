@@ -47,6 +47,9 @@ export const emptyStaticContent: StaticContentData = {
 };
 
 export const emptyContent: ContentData = {
+  contact_content: emptyAboutContent,
+  home_content: emptyAboutContent,
+  resume_content: emptyAboutContent,
   about_content: emptyAboutContent,
   blog_list: [],
   certificate_list: [],
@@ -58,5 +61,5 @@ export const emptyContent: ContentData = {
   service_list: [],
   skill_list: [],
   testimonial_list: [],
-  static_contents: emptyStaticContent,
+  static_contents: emptyStaticContent
 };

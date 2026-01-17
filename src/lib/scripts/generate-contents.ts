@@ -10,7 +10,7 @@ import {generateAllowedProfiles} from "@/lib/scripts/generate-allowed-profiles";
 function main() {
   try {
     generateMDF();
-    buildConfigsJson();
+    // buildConfigsJson();
     mainToConfigTs();
     // generateRegistry();
     convertMdToTs();

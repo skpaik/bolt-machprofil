@@ -14,6 +14,6 @@ function main() {
         });
 }
 
+generateAllowedProfiles();
 main();
 generateContent();
-generateAllowedProfiles();

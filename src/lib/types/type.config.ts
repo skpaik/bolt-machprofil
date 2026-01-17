@@ -1,5 +1,12 @@
-import { MenuConfig } from "@/data/configs/generated/menu-config";
-import {allowed_profiles} from "@/data/configs/generated/allowed_profile_list";
+import { allowed_profiles } from "@/data/configs/generated/allowed_profile_list";
+
+export const profileLanguageMap = Object.fromEntries(
+    allowed_profiles.map(p => [p.value, p.allowed_languages])
+) as Record<
+    typeof allowed_profiles[number]["value"],
+    typeof allowed_profiles[number]["allowed_languages"]
+>;
+
 
 // export type ProfileType = "developer" | "photographer" | "teacher" | "student";
 export type ProfileType = typeof allowed_profiles[number]["value"];
