@@ -3,10 +3,11 @@ import path from "path";
 import {toTsObject} from "@/lib/scripts/helpers/to-ts-helper";
 
 export const FILE_MAP = {
-    "info.ts": "personal-info.ts",
+    "info.ts": "personal_info.ts",
     "home.ts": "personal-home.ts",
     "profile.ts": "personal-profile.ts",
     "static_contents.ts": "static_contents-1.ts",
+    "about_me.ts": "about_content.ts",
 } as const;
 
 export type InputFileName = keyof typeof FILE_MAP;

@@ -1,6 +1,5 @@
-export const data = [
-  {
-    id: "bio",
+export const data = {
+  bio: {
     name: "Mofiz Rahman",
     title: "Scientist @ Environment",
     tagline: "Climate & Sustainability | Reader | Traveller | Storyteller | Teacher| Mentor",
@@ -20,16 +19,14 @@ export const data = [
     },
     content: ""
   },
-  {
-    id: "cta",
+  cta: {
     title: "Let's Work Together",
     description: "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
     primaryButton: "Get in Touch",
     secondaryButton: "Download Resume",
     content: ""
   },
-  {
-    id: "interests",
+  interests: {
     items: [
       {
         name: "Coding",
@@ -62,12 +59,10 @@ export const data = [
     ],
     content: ""
   },
-  {
-    id: "intro",
+  intro: {
     content: "<p>Hi there! 👋 I&#39;m a passionate full-stack developer and designer with over 8 years of experience building beautiful, functional, and user-centered digital experiences. I love turning complex problems into simple, elegant solutions.</p>\n"
   },
-  {
-    id: "sections",
+  sections: {
     items: [
       {
         id: "background",
@@ -90,8 +85,7 @@ export const data = [
     ],
     content: ""
   },
-  {
-    id: "socialLinks",
+  socialLinks: {
     items: [
       {
         platform: "GitHub",
@@ -116,8 +110,7 @@ export const data = [
     ],
     content: ""
   },
-  {
-    id: "stats",
+  stats: {
     items: [
       {
         label: "Years Experience",
@@ -142,5 +135,5 @@ export const data = [
     ],
     content: ""
   }
-] as const;
+} as const;
 export default data;
