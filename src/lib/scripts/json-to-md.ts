@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const SRC_BASE = path.join(process.cwd(), "src/data/contents/en");
+const SRC_BASE = path.join(process.cwd(), "src/data/en");
 const OUT_BASE = path.join(process.cwd(), "contents/en");
 
 /* ----------------------------- Utils ----------------------------- */
