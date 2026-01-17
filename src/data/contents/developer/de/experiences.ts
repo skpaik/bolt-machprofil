@@ -7,11 +7,17 @@ export const data = {
   startDate: "2020-01-01",
   endDate: "2024-01-01",
   website: "https://company1.com",
-  technologies: ["Node.js","React"],
+  technologies: [
+    "Node.js",
+    "React"
+  ],
   description: "🇩🇪 (DE) Led development team for Tech Corp 1.",
-  responsibilities: ["Responsibility 1 for experience 1","Responsibility 2 for experience 1","Responsibility 3 for experience 1"],
+  responsibilities: [
+    "Responsibility 1 for experience 1",
+    "Responsibility 2 for experience 1",
+    "Responsibility 3 for experience 1"
+  ],
   logo: "/images/organization-logo-1.png",
-  content: "<p>🇩🇪 (DE) Cloud Cloud Next.js Architecture Cloud Node.js TypeScript JavaScript Next.js Next.js.</p>\n<p>🇩🇪 (DE) TypeScript TypeScript JavaScript Cloud JavaScript Next.js Cloud Node.js Architecture Next.js.</p>\n<p>🇩🇪 (DE) React Cloud Next.js JavaScript TypeScript Node.js Architecture JavaScript JavaScript TypeScript.</p>\n",
+  content: "<p>🇩🇪 (DE) Cloud Cloud Next.js Architecture Cloud Node.js TypeScript JavaScript Next.js Next.js.</p>\n<p>🇩🇪 (DE) TypeScript TypeScript JavaScript Cloud JavaScript Next.js Cloud Node.js Architecture Next.js.</p>\n<p>🇩🇪 (DE) React Cloud Next.js JavaScript TypeScript Node.js Architecture JavaScript JavaScript TypeScript.</p>\n"
 } as const;
-
 export default data;

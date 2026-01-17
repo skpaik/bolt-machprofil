@@ -10,7 +10,6 @@ export const data = {
   degree: "Master's",
   grade: "2.0",
   featured: true,
-  content: "<p>Node.js Cloud Next.js JavaScript JavaScript JavaScript TypeScript React Cloud JavaScript.</p>\n<p>React Next.js React Cloud TypeScript TypeScript Next.js Node.js Cloud Next.js.</p>\n<p>JavaScript TypeScript JavaScript Architecture Cloud TypeScript Next.js Next.js React React.</p>\n",
+  content: "<p>Node.js Cloud Next.js JavaScript JavaScript JavaScript TypeScript React Cloud JavaScript.</p>\n<p>React Next.js React Cloud TypeScript TypeScript Next.js Node.js Cloud Next.js.</p>\n<p>JavaScript TypeScript JavaScript Architecture Cloud TypeScript Next.js Next.js React React.</p>\n"
 } as const;
-
 export default data;

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import {toTsObject} from "@/lib/scripts/helpers/to-ts-helper";
 
 export const FILE_MAP = {
     "info.ts": "personal-info.ts",
@@ -45,36 +46,6 @@ function arrayToObjectById(array: readonly DataItem[]) {
     return result;
 }
 
-/**
- * Converts JS values to valid TypeScript literals
- * with unquoted object keys
- */
-function toTs(value: unknown, indent = 2, depth = 0): string {
-    const pad = " ".repeat(indent * depth);
-    const nextPad = " ".repeat(indent * (depth + 1));
-
-    if (Array.isArray(value)) {
-        if (value.length === 0) return "[]";
-        return `[\n${value
-            .map((v) => `${nextPad}${toTs(v, indent, depth + 1)}`)
-            .join(",\n")}\n${pad}]`;
-    }
-
-    if (value && typeof value === "object") {
-        const entries = Object.entries(value);
-        if (entries.length === 0) return "{}";
-
-        return `{\n${entries
-            .map(([k, v]) => `${nextPad}${k}: ${toTs(v, indent, depth + 1)}`)
-            .join(",\n")}\n${pad}}`;
-    }
-
-    if (typeof value === "string") {
-        return JSON.stringify(value);
-    }
-
-    return String(value);
-}
 
 function processFile(filePath: string) {
     const fileName = path.basename(filePath) as InputFileName;
@@ -87,7 +58,7 @@ function processFile(filePath: string) {
 
     const objectData = arrayToObjectById(arrayData);
 
-    const output = `export const data = ${toTs(objectData)} as const;
+    const output = `export const data = ${toTsObject(objectData)} as const;
 export default data;
 `;
 

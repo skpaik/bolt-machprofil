@@ -1,12 +1,12 @@
 export const data = [
   {
-    "id": 1,
-    "title": "Web Development",
-    "category": "Development",
-    "icon": "code",
-    "shortDescription": "Custom websites and web applications built with modern technologies",
-    "description": "Full-stack web development services using cutting-edge technologies like React, Next.js, Node.js, and more. I create responsive, performant, and scalable web applications tailored to your business needs.",
-    "features": [
+    id: 1,
+    title: "Web Development",
+    category: "Development",
+    icon: "code",
+    shortDescription: "Custom websites and web applications built with modern technologies",
+    description: "Full-stack web development services using cutting-edge technologies like React, Next.js, Node.js, and more. I create responsive, performant, and scalable web applications tailored to your business needs.",
+    features: [
       "Responsive design for all devices",
       "Modern tech stack (React, Next.js, TypeScript)",
       "SEO optimization",
@@ -16,36 +16,36 @@ export const data = [
       "Database design and implementation",
       "Ongoing maintenance and support"
     ],
-    "deliverables": [
+    deliverables: [
       "Fully functional website/application",
       "Source code with documentation",
       "Deployment on hosting platform",
       "30 days of post-launch support"
     ],
-    "pricing": {
-      "type": "Project-based",
-      "amount": "3,000",
-      "currency": "USD"
+    pricing: {
+      type: "Project-based",
+      amount: "3,000",
+      currency: "USD"
     },
-    "duration": "4-8 weeks",
-    "popular": true,
-    "tags": [
+    duration: "4-8 weeks",
+    popular: true,
+    tags: [
       "React",
       "Next.js",
       "TypeScript",
       "Node.js",
       "Full Stack"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 10,
-    "title": "Consulting & Strategy",
-    "category": "Consulting",
-    "icon": "users",
-    "shortDescription": "Expert guidance for your digital transformation journey",
-    "description": "Strategic technology consulting to help you make informed decisions. From technology stack selection to digital transformation roadmaps.",
-    "features": [
+    id: 10,
+    title: "Consulting & Strategy",
+    category: "Consulting",
+    icon: "users",
+    shortDescription: "Expert guidance for your digital transformation journey",
+    description: "Strategic technology consulting to help you make informed decisions. From technology stack selection to digital transformation roadmaps.",
+    features: [
       "Technology assessment",
       "Architecture review",
       "Technology stack recommendations",
@@ -55,35 +55,35 @@ export const data = [
       "Performance optimization",
       "Scalability planning"
     ],
-    "deliverables": [
+    deliverables: [
       "Assessment reports",
       "Recommendation documents",
       "Implementation roadmap",
       "Training sessions"
     ],
-    "pricing": {
-      "type": "Hourly",
-      "amount": "150",
-      "currency": "USD"
+    pricing: {
+      type: "Hourly",
+      amount: "150",
+      currency: "USD"
     },
-    "duration": "As needed",
-    "tags": [
+    duration: "As needed",
+    tags: [
       "Consulting",
       "Strategy",
       "Architecture",
       "Training",
       "Mentorship"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 2,
-    "title": "Mobile App Development",
-    "category": "Development",
-    "icon": "smartphone",
-    "shortDescription": "Native and cross-platform mobile applications for iOS and Android",
-    "description": "Create stunning mobile applications that work seamlessly on both iOS and Android platforms. Using React Native and Flutter, I deliver high-performance apps with native-like experiences.",
-    "features": [
+    id: 2,
+    title: "Mobile App Development",
+    category: "Development",
+    icon: "smartphone",
+    shortDescription: "Native and cross-platform mobile applications for iOS and Android",
+    description: "Create stunning mobile applications that work seamlessly on both iOS and Android platforms. Using React Native and Flutter, I deliver high-performance apps with native-like experiences.",
+    features: [
       "Cross-platform development (iOS & Android)",
       "Native performance and feel",
       "Push notifications",
@@ -93,36 +93,36 @@ export const data = [
       "App store submission assistance",
       "Regular updates and maintenance"
     ],
-    "deliverables": [
+    deliverables: [
       "iOS and Android applications",
       "App store assets and descriptions",
       "Backend API (if required)",
       "Technical documentation"
     ],
-    "pricing": {
-      "type": "Project-based",
-      "amount": "5,000",
-      "currency": "USD"
+    pricing: {
+      type: "Project-based",
+      amount: "5,000",
+      currency: "USD"
     },
-    "duration": "8-12 weeks",
-    "popular": true,
-    "tags": [
+    duration: "8-12 weeks",
+    popular: true,
+    tags: [
       "React Native",
       "Flutter",
       "iOS",
       "Android",
       "Mobile"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 3,
-    "title": "UI/UX Design",
-    "category": "Design",
-    "icon": "palette",
-    "shortDescription": "User-centered design that combines aesthetics with functionality",
-    "description": "Design beautiful and intuitive user interfaces that enhance user experience. From wireframes to high-fidelity mockups, I create designs that not only look great but also solve real user problems.",
-    "features": [
+    id: 3,
+    title: "UI/UX Design",
+    category: "Design",
+    icon: "palette",
+    shortDescription: "User-centered design that combines aesthetics with functionality",
+    description: "Design beautiful and intuitive user interfaces that enhance user experience. From wireframes to high-fidelity mockups, I create designs that not only look great but also solve real user problems.",
+    features: [
       "User research and personas",
       "Wireframing and prototyping",
       "Visual design and branding",
@@ -132,35 +132,35 @@ export const data = [
       "Responsive design",
       "Handoff to developers"
     ],
-    "deliverables": [
+    deliverables: [
       "Figma/Sketch design files",
       "Interactive prototypes",
       "Design system documentation",
       "Asset exports for development"
     ],
-    "pricing": {
-      "type": "Hourly",
-      "amount": "75",
-      "currency": "USD"
+    pricing: {
+      type: "Hourly",
+      amount: "75",
+      currency: "USD"
     },
-    "duration": "2-6 weeks",
-    "tags": [
+    duration: "2-6 weeks",
+    tags: [
       "Figma",
       "UI/UX",
       "Prototyping",
       "User Research",
       "Design Systems"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 4,
-    "title": "SEO Optimization",
-    "category": "Marketing",
-    "icon": "search",
-    "shortDescription": "Improve your search engine rankings and drive organic traffic",
-    "description": "Comprehensive SEO services to help your website rank higher in search results. From technical SEO to content optimization, I implement strategies that drive long-term organic growth.",
-    "features": [
+    id: 4,
+    title: "SEO Optimization",
+    category: "Marketing",
+    icon: "search",
+    shortDescription: "Improve your search engine rankings and drive organic traffic",
+    description: "Comprehensive SEO services to help your website rank higher in search results. From technical SEO to content optimization, I implement strategies that drive long-term organic growth.",
+    features: [
       "Technical SEO audit",
       "Keyword research and strategy",
       "On-page optimization",
@@ -170,35 +170,35 @@ export const data = [
       "Performance monitoring",
       "Monthly reports and analytics"
     ],
-    "deliverables": [
+    deliverables: [
       "SEO audit report",
       "Keyword strategy document",
       "Optimized content",
       "Monthly performance reports"
     ],
-    "pricing": {
-      "type": "Project-based",
-      "amount": "1,500",
-      "currency": "USD"
+    pricing: {
+      type: "Project-based",
+      amount: "1,500",
+      currency: "USD"
     },
-    "duration": "3-6 months",
-    "tags": [
+    duration: "3-6 months",
+    tags: [
       "SEO",
       "Google Analytics",
       "Content",
       "Marketing",
       "Growth"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 5,
-    "title": "Cloud Solutions",
-    "category": "Infrastructure",
-    "icon": "cloud",
-    "shortDescription": "Scalable cloud infrastructure and deployment solutions",
-    "description": "Design and implement cloud infrastructure on AWS, Azure, or Google Cloud. From migration to optimization, I help businesses leverage cloud technology for scalability and cost efficiency.",
-    "features": [
+    id: 5,
+    title: "Cloud Solutions",
+    category: "Infrastructure",
+    icon: "cloud",
+    shortDescription: "Scalable cloud infrastructure and deployment solutions",
+    description: "Design and implement cloud infrastructure on AWS, Azure, or Google Cloud. From migration to optimization, I help businesses leverage cloud technology for scalability and cost efficiency.",
+    features: [
       "Cloud architecture design",
       "Migration from on-premise to cloud",
       "Auto-scaling configuration",
@@ -208,35 +208,35 @@ export const data = [
       "Cost optimization",
       "24/7 monitoring and alerts"
     ],
-    "deliverables": [
+    deliverables: [
       "Cloud infrastructure setup",
       "Architecture documentation",
       "Deployment pipelines",
       "Monitoring dashboards"
     ],
-    "pricing": {
-      "type": "Hourly",
-      "amount": "100",
-      "currency": "USD"
+    pricing: {
+      type: "Hourly",
+      amount: "100",
+      currency: "USD"
     },
-    "duration": "Ongoing",
-    "tags": [
+    duration: "Ongoing",
+    tags: [
       "AWS",
       "Azure",
       "GCP",
       "DevOps",
       "Infrastructure"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 6,
-    "title": "Digital Marketing",
-    "category": "Marketing",
-    "icon": "megaphone",
-    "shortDescription": "Strategic marketing campaigns to grow your online presence",
-    "description": "Full-service digital marketing including social media management, PPC campaigns, email marketing, and content strategy. Drive engagement and conversions with data-driven marketing.",
-    "features": [
+    id: 6,
+    title: "Digital Marketing",
+    category: "Marketing",
+    icon: "megaphone",
+    shortDescription: "Strategic marketing campaigns to grow your online presence",
+    description: "Full-service digital marketing including social media management, PPC campaigns, email marketing, and content strategy. Drive engagement and conversions with data-driven marketing.",
+    features: [
       "Social media management",
       "PPC campaign management (Google Ads, Facebook Ads)",
       "Email marketing campaigns",
@@ -246,35 +246,35 @@ export const data = [
       "Analytics and reporting",
       "Brand strategy consulting"
     ],
-    "deliverables": [
+    deliverables: [
       "Campaign strategy documents",
       "Ad creatives and copy",
       "Performance reports",
       "Optimization recommendations"
     ],
-    "pricing": {
-      "type": "Project-based",
-      "amount": "2,000",
-      "currency": "USD"
+    pricing: {
+      type: "Project-based",
+      amount: "2,000",
+      currency: "USD"
     },
-    "duration": "3-6 months",
-    "tags": [
+    duration: "3-6 months",
+    tags: [
       "Social Media",
       "PPC",
       "Email Marketing",
       "Content",
       "Analytics"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 7,
-    "title": "E-commerce Solutions",
-    "category": "Development",
-    "icon": "shopping-cart",
-    "shortDescription": "Complete e-commerce platforms for online businesses",
-    "description": "Build powerful e-commerce stores with Shopify, WooCommerce, or custom solutions. From product catalogs to payment processing, I create seamless shopping experiences.",
-    "features": [
+    id: 7,
+    title: "E-commerce Solutions",
+    category: "Development",
+    icon: "shopping-cart",
+    shortDescription: "Complete e-commerce platforms for online businesses",
+    description: "Build powerful e-commerce stores with Shopify, WooCommerce, or custom solutions. From product catalogs to payment processing, I create seamless shopping experiences.",
+    features: [
       "Platform setup (Shopify, WooCommerce, Custom)",
       "Product catalog management",
       "Payment gateway integration",
@@ -284,36 +284,36 @@ export const data = [
       "Analytics and reporting",
       "Mobile-responsive design"
     ],
-    "deliverables": [
+    deliverables: [
       "Fully functional online store",
       "Admin panel training",
       "Integration with shipping providers",
       "Security and compliance setup"
     ],
-    "pricing": {
-      "type": "Project-based",
-      "amount": "4,000",
-      "currency": "USD"
+    pricing: {
+      type: "Project-based",
+      amount: "4,000",
+      currency: "USD"
     },
-    "duration": "6-10 weeks",
-    "popular": true,
-    "tags": [
+    duration: "6-10 weeks",
+    popular: true,
+    tags: [
       "Shopify",
       "WooCommerce",
       "E-commerce",
       "Payments",
       "Inventory"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 8,
-    "title": "Content Writing",
-    "category": "Content",
-    "icon": "pen",
-    "shortDescription": "Engaging content that resonates with your audience",
-    "description": "Professional content writing services including blog posts, website copy, technical documentation, and more. I create SEO-optimized content that engages and converts.",
-    "features": [
+    id: 8,
+    title: "Content Writing",
+    category: "Content",
+    icon: "pen",
+    shortDescription: "Engaging content that resonates with your audience",
+    description: "Professional content writing services including blog posts, website copy, technical documentation, and more. I create SEO-optimized content that engages and converts.",
+    features: [
       "Blog post writing",
       "Website copywriting",
       "Technical documentation",
@@ -323,35 +323,35 @@ export const data = [
       "Editing and proofreading",
       "Content calendar planning"
     ],
-    "deliverables": [
+    deliverables: [
       "Published articles/content",
       "SEO-optimized copy",
       "Content calendar",
       "Style guide documentation"
     ],
-    "pricing": {
-      "type": "Fixed",
-      "amount": "150",
-      "currency": "USD"
+    pricing: {
+      type: "Fixed",
+      amount: "150",
+      currency: "USD"
     },
-    "duration": "Per article",
-    "tags": [
+    duration: "Per article",
+    tags: [
       "Writing",
       "SEO",
       "Blogging",
       "Copywriting",
       "Content Strategy"
     ],
-    "content": ""
+    content: ""
   },
   {
-    "id": 9,
-    "title": "API Development",
-    "category": "Development",
-    "icon": "database",
-    "shortDescription": "RESTful and GraphQL APIs for modern applications",
-    "description": "Design and develop robust, scalable APIs that power your applications. Whether REST or GraphQL, I create secure and well-documented APIs.",
-    "features": [
+    id: 9,
+    title: "API Development",
+    category: "Development",
+    icon: "database",
+    shortDescription: "RESTful and GraphQL APIs for modern applications",
+    description: "Design and develop robust, scalable APIs that power your applications. Whether REST or GraphQL, I create secure and well-documented APIs.",
+    features: [
       "RESTful API design",
       "GraphQL implementation",
       "Authentication and authorization",
@@ -361,26 +361,26 @@ export const data = [
       "Webhook integrations",
       "API testing and monitoring"
     ],
-    "deliverables": [
+    deliverables: [
       "Fully functional API",
       "Comprehensive documentation",
       "Postman collection",
       "Security implementation"
     ],
-    "pricing": {
-      "type": "Project-based",
-      "amount": "2,500",
-      "currency": "USD"
+    pricing: {
+      type: "Project-based",
+      amount: "2,500",
+      currency: "USD"
     },
-    "duration": "3-6 weeks",
-    "tags": [
+    duration: "3-6 weeks",
+    tags: [
       "REST",
       "GraphQL",
       "Node.js",
       "API",
       "Backend"
     ],
-    "content": ""
+    content: ""
   }
 ] as const;
 export default data;

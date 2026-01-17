@@ -6,10 +6,15 @@ export const data = {
   expirationDate: "2023-01",
   credentialId: "CERT-1001",
   credentialUrl: "https://example.com/certifications/1",
-  skills: ["Skill A","Skill B","Skill C"],
-  media: ["https://example.com/media/cert-1.jpg"],
+  skills: [
+    "Skill A",
+    "Skill B",
+    "Skill C"
+  ],
+  media: [
+    "https://example.com/media/cert-1.jpg"
+  ],
   description: "Description of certification 1 in fr",
-  content: "<p>NA</p>\n",
+  content: "<p>NA</p>\n"
 } as const;
-
 export default data;

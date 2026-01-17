@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import {toTsObject} from "@/lib/scripts/helpers/to-ts-helper";
 
 /**
  * CONFIG
@@ -43,15 +44,14 @@ function processContentType(inputDir: string, outputFile: string) {
     const id = path.basename(file, ".md");
     const { meta, html } = readMarkdown(path.join(inputDir, file));
 
-    const ts = `
-export const data = {
-  id: "${id}",
-  ${Object.entries(meta)
-    .map(([k, v]) => `${k}: ${JSON.stringify(v)},`)
-    .join("\n  ")}
-  content: ${JSON.stringify(html)},
-} as const;
+    const data = {
+      id,
+      ...meta,
+      content: html,
+    };
 
+    const ts = `
+export const data = ${toTsObject(data)} as const;
 export default data;
 `.trim();
 
@@ -63,16 +63,21 @@ export default data;
   const items = mdFiles.map((file) => {
     const id = path.basename(file, ".md");
     const { meta, html } = readMarkdown(path.join(inputDir, file));
-    return { id, ...meta, content: html };
+    return {
+      id,
+      ...meta,
+      content: html,
+    };
   });
 
   const ts = `
-export const data = ${JSON.stringify(items, null, 2)} as const;
+export const data = ${toTsObject(items)} as const;
 export default data;
 `.trim();
 
   fs.writeFileSync(outputFile, ts, "utf-8");
 }
+
 
 /**
  * MAIN WALKER

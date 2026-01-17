@@ -1,308 +1,308 @@
 export const data = [
   {
-    "id": 1,
-    "title": "JavaScript",
-    "category": "Technical",
-    "proficiency": 95,
-    "level": "Expert",
-    "yearsOfExperience": 8,
-    "tags": [
+    id: 1,
+    title: "JavaScript",
+    category: "Technical",
+    proficiency: 95,
+    level: "Expert",
+    yearsOfExperience: 8,
+    tags: [
       "Programming",
       "Frontend",
       "Backend"
     ],
-    "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
-    "content": ""
+    description: "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
+    content: ""
   },
   {
-    "id": 10,
-    "title": "Project Management",
-    "category": "Business",
-    "proficiency": 82,
-    "level": "Advanced",
-    "yearsOfExperience": 6,
-    "tags": [
+    id: 10,
+    title: "Project Management",
+    category: "Business",
+    proficiency: 82,
+    level: "Advanced",
+    yearsOfExperience: 6,
+    tags: [
       "Management",
       "Planning",
       "Leadership"
     ],
-    "description": "Agile methodologies, Scrum, and team coordination.",
-    "content": ""
+    description: "Agile methodologies, Scrum, and team coordination.",
+    content: ""
   },
   {
-    "id": 11,
-    "title": "Business Analysis",
-    "category": "Business",
-    "proficiency": 78,
-    "level": "Advanced",
-    "yearsOfExperience": 5,
-    "tags": [
+    id: 11,
+    title: "Business Analysis",
+    category: "Business",
+    proficiency: 78,
+    level: "Advanced",
+    yearsOfExperience: 5,
+    tags: [
       "Analysis",
       "Strategy",
       "Requirements"
     ],
-    "description": "Requirements gathering, stakeholder management, and process improvement.",
-    "content": ""
+    description: "Requirements gathering, stakeholder management, and process improvement.",
+    content: ""
   },
   {
-    "id": 12,
-    "title": "Marketing Strategy",
-    "category": "Business",
-    "proficiency": 73,
-    "level": "Intermediate",
-    "yearsOfExperience": 4,
-    "tags": [
+    id: 12,
+    title: "Marketing Strategy",
+    category: "Business",
+    proficiency: 73,
+    level: "Intermediate",
+    yearsOfExperience: 4,
+    tags: [
       "Marketing",
       "Strategy",
       "Growth"
     ],
-    "description": "Digital marketing, SEO, and brand development.",
-    "content": ""
+    description: "Digital marketing, SEO, and brand development.",
+    content: ""
   },
   {
-    "id": 13,
-    "title": "Communication",
-    "category": "Soft Skills",
-    "proficiency": 90,
-    "level": "Expert",
-    "yearsOfExperience": 10,
-    "tags": [
+    id: 13,
+    title: "Communication",
+    category: "Soft Skills",
+    proficiency: 90,
+    level: "Expert",
+    yearsOfExperience: 10,
+    tags: [
       "Interpersonal",
       "Collaboration"
     ],
-    "description": "Clear verbal and written communication across teams and stakeholders.",
-    "content": ""
+    description: "Clear verbal and written communication across teams and stakeholders.",
+    content: ""
   },
   {
-    "id": 14,
-    "title": "Problem Solving",
-    "category": "Soft Skills",
-    "proficiency": 88,
-    "level": "Expert",
-    "yearsOfExperience": 10,
-    "tags": [
+    id: 14,
+    title: "Problem Solving",
+    category: "Soft Skills",
+    proficiency: 88,
+    level: "Expert",
+    yearsOfExperience: 10,
+    tags: [
       "Critical Thinking",
       "Analysis"
     ],
-    "description": "Analytical thinking and creative solution development.",
-    "content": ""
+    description: "Analytical thinking and creative solution development.",
+    content: ""
   },
   {
-    "id": 15,
-    "title": "Leadership",
-    "category": "Soft Skills",
-    "proficiency": 80,
-    "level": "Advanced",
-    "yearsOfExperience": 7,
-    "tags": [
+    id: 15,
+    title: "Leadership",
+    category: "Soft Skills",
+    proficiency: 80,
+    level: "Advanced",
+    yearsOfExperience: 7,
+    tags: [
       "Management",
       "Mentoring",
       "Team Building"
     ],
-    "description": "Team leadership, mentoring, and conflict resolution.",
-    "content": ""
+    description: "Team leadership, mentoring, and conflict resolution.",
+    content: ""
   },
   {
-    "id": 16,
-    "title": "English",
-    "category": "Languages",
-    "proficiency": 100,
-    "level": "Expert",
-    "yearsOfExperience": 20,
-    "tags": [
+    id: 16,
+    title: "English",
+    category: "Languages",
+    proficiency: 100,
+    level: "Expert",
+    yearsOfExperience: 20,
+    tags: [
       "Communication",
       "Native"
     ],
-    "description": "Native speaker with excellent written and verbal skills.",
-    "content": ""
+    description: "Native speaker with excellent written and verbal skills.",
+    content: ""
   },
   {
-    "id": 17,
-    "title": "Spanish",
-    "category": "Languages",
-    "proficiency": 75,
-    "level": "Advanced",
-    "yearsOfExperience": 8,
-    "tags": [
+    id: 17,
+    title: "Spanish",
+    category: "Languages",
+    proficiency: 75,
+    level: "Advanced",
+    yearsOfExperience: 8,
+    tags: [
       "Communication",
       "Second Language"
     ],
-    "description": "Conversational and business proficiency.",
-    "content": ""
+    description: "Conversational and business proficiency.",
+    content: ""
   },
   {
-    "id": 18,
-    "title": "German",
-    "category": "Languages",
-    "proficiency": 60,
-    "level": "Intermediate",
-    "yearsOfExperience": 3,
-    "tags": [
+    id: 18,
+    title: "German",
+    category: "Languages",
+    proficiency: 60,
+    level: "Intermediate",
+    yearsOfExperience: 3,
+    tags: [
       "Communication",
       "Learning"
     ],
-    "description": "Intermediate conversational skills.",
-    "content": ""
+    description: "Intermediate conversational skills.",
+    content: ""
   },
   {
-    "id": 19,
-    "title": "Git",
-    "category": "Tools",
-    "proficiency": 92,
-    "level": "Expert",
-    "yearsOfExperience": 8,
-    "tags": [
+    id: 19,
+    title: "Git",
+    category: "Tools",
+    proficiency: 92,
+    level: "Expert",
+    yearsOfExperience: 8,
+    tags: [
       "Version Control",
       "Collaboration"
     ],
-    "description": "Version control, branching strategies, and team collaboration.",
-    "content": ""
+    description: "Version control, branching strategies, and team collaboration.",
+    content: ""
   },
   {
-    "id": 2,
-    "title": "React",
-    "category": "Technical",
-    "proficiency": 90,
-    "level": "Expert",
-    "yearsOfExperience": 6,
-    "tags": [
+    id: 2,
+    title: "React",
+    category: "Technical",
+    proficiency: 90,
+    level: "Expert",
+    yearsOfExperience: 6,
+    tags: [
       "Frontend",
       "Framework",
       "UI"
     ],
-    "description": "Building scalable web applications with React, hooks, and state management.",
-    "content": ""
+    description: "Building scalable web applications with React, hooks, and state management.",
+    content: ""
   },
   {
-    "id": 20,
-    "title": "Docker",
-    "category": "Tools",
-    "proficiency": 80,
-    "level": "Advanced",
-    "yearsOfExperience": 4,
-    "tags": [
+    id: 20,
+    title: "Docker",
+    category: "Tools",
+    proficiency: 80,
+    level: "Advanced",
+    yearsOfExperience: 4,
+    tags: [
       "DevOps",
       "Containers"
     ],
-    "description": "Containerization and deployment workflows.",
-    "content": ""
+    description: "Containerization and deployment workflows.",
+    content: ""
   },
   {
-    "id": 21,
-    "title": "AWS",
-    "category": "Tools",
-    "proficiency": 77,
-    "level": "Advanced",
-    "yearsOfExperience": 5,
-    "tags": [
+    id: 21,
+    title: "AWS",
+    category: "Tools",
+    proficiency: 77,
+    level: "Advanced",
+    yearsOfExperience: 5,
+    tags: [
       "Cloud",
       "Infrastructure"
     ],
-    "description": "Cloud services, EC2, S3, Lambda, and serverless architecture.",
-    "content": ""
+    description: "Cloud services, EC2, S3, Lambda, and serverless architecture.",
+    content: ""
   },
   {
-    "id": 3,
-    "title": "TypeScript",
-    "category": "Technical",
-    "proficiency": 88,
-    "level": "Advanced",
-    "yearsOfExperience": 5,
-    "tags": [
+    id: 3,
+    title: "TypeScript",
+    category: "Technical",
+    proficiency: 88,
+    level: "Advanced",
+    yearsOfExperience: 5,
+    tags: [
       "Programming",
       "Type Safety"
     ],
-    "description": "Strong typing for JavaScript applications, interfaces, and generics.",
-    "content": ""
+    description: "Strong typing for JavaScript applications, interfaces, and generics.",
+    content: ""
   },
   {
-    "id": 4,
-    "title": "Python",
-    "category": "Technical",
-    "proficiency": 85,
-    "level": "Advanced",
-    "yearsOfExperience": 6,
-    "tags": [
+    id: 4,
+    title: "Python",
+    category: "Technical",
+    proficiency: 85,
+    level: "Advanced",
+    yearsOfExperience: 6,
+    tags: [
       "Programming",
       "Backend",
       "Data Science"
     ],
-    "description": "Backend development, automation, and data analysis.",
-    "content": ""
+    description: "Backend development, automation, and data analysis.",
+    content: ""
   },
   {
-    "id": 5,
-    "title": "Node.js",
-    "category": "Technical",
-    "proficiency": 87,
-    "level": "Advanced",
-    "yearsOfExperience": 7,
-    "tags": [
+    id: 5,
+    title: "Node.js",
+    category: "Technical",
+    proficiency: 87,
+    level: "Advanced",
+    yearsOfExperience: 7,
+    tags: [
       "Backend",
       "API",
       "Server"
     ],
-    "description": "Server-side JavaScript with Express, RESTful APIs, and microservices.",
-    "content": ""
+    description: "Server-side JavaScript with Express, RESTful APIs, and microservices.",
+    content: ""
   },
   {
-    "id": 6,
-    "title": "UI/UX Design",
-    "category": "Design",
-    "proficiency": 80,
-    "level": "Advanced",
-    "yearsOfExperience": 5,
-    "tags": [
+    id: 6,
+    title: "UI/UX Design",
+    category: "Design",
+    proficiency: 80,
+    level: "Advanced",
+    yearsOfExperience: 5,
+    tags: [
       "Design",
       "User Experience",
       "Interface"
     ],
-    "description": "Creating intuitive and visually appealing user interfaces.",
-    "content": ""
+    description: "Creating intuitive and visually appealing user interfaces.",
+    content: ""
   },
   {
-    "id": 7,
-    "title": "Figma",
-    "category": "Design",
-    "proficiency": 85,
-    "level": "Advanced",
-    "yearsOfExperience": 4,
-    "tags": [
+    id: 7,
+    title: "Figma",
+    category: "Design",
+    proficiency: 85,
+    level: "Advanced",
+    yearsOfExperience: 4,
+    tags: [
       "Design Tool",
       "Prototyping",
       "Collaboration"
     ],
-    "description": "Wireframing, prototyping, and design systems.",
-    "content": ""
+    description: "Wireframing, prototyping, and design systems.",
+    content: ""
   },
   {
-    "id": 8,
-    "title": "Adobe Photoshop",
-    "category": "Design",
-    "proficiency": 75,
-    "level": "Advanced",
-    "yearsOfExperience": 7,
-    "tags": [
+    id: 8,
+    title: "Adobe Photoshop",
+    category: "Design",
+    proficiency: 75,
+    level: "Advanced",
+    yearsOfExperience: 7,
+    tags: [
       "Image Editing",
       "Graphics"
     ],
-    "description": "Photo editing, digital art, and graphic design.",
-    "content": ""
+    description: "Photo editing, digital art, and graphic design.",
+    content: ""
   },
   {
-    "id": 9,
-    "title": "Illustration",
-    "category": "Design",
-    "proficiency": 70,
-    "level": "Intermediate",
-    "yearsOfExperience": 3,
-    "tags": [
+    id: 9,
+    title: "Illustration",
+    category: "Design",
+    proficiency: 70,
+    level: "Intermediate",
+    yearsOfExperience: 3,
+    tags: [
       "Art",
       "Creative",
       "Visual"
     ],
-    "description": "Digital and traditional illustration techniques.",
-    "content": ""
+    description: "Digital and traditional illustration techniques.",
+    content: ""
   }
 ] as const;
 export default data;
