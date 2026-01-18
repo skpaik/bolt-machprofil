@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import { blogPostsSlugs } from "@/data/configs/generated/blog-posts-slugs";
 import { blogPostsSlugsProfile } from "@/data/configs/generated/blog-posts-slugs-profile";
 
 type PageProps = {
