@@ -217,7 +217,7 @@ export class MetadataHelper {
 
   // Generate JSON-LD for BreadcrumbList
   public static generateBreadcrumbStructuredData(
-    items: Array<{ name: string; url: string }>
+    items: Array<{ name: string; url: string }>,
   ) {
     return {
       "@context": "https://schema.org",

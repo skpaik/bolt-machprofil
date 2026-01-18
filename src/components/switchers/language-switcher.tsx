@@ -14,7 +14,7 @@ import { profileLanguageMap } from "@/lib/types/type.config";
 
 export function LanguageSwitcher() {
   const { profileType, languageType, setLanguageType } = usePortfolio();
-  const languageList = profileLanguageMap[profileType]
+  const languageList = profileLanguageMap[profileType];
 
   const current = languageList.find((t) => t.value === languageType);
 

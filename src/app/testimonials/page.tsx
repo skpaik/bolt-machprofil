@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.testimonial_list;
 
 export default function TestimonialsPage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

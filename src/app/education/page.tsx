@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.education_list;
 
 export default function EducationPage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

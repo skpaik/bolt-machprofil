@@ -8,5 +8,5 @@ export class ConfigData {
 
   static templateList = allowed_templates;
 
-  static  profileList: AllowedProfile[] = allowed_profiles;
+  static profileList: AllowedProfile[] = allowed_profiles;
 }

@@ -23,7 +23,9 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { lang, id } = await params;
   const profileType = settings_const.activeProfile as ProfileType;
 
@@ -31,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const { post } = await ContentsService.loadContentOfBlogDetail(
       profileType,
       lang,
-      id
+      id,
     );
 
     if (!post) {
@@ -66,13 +68,15 @@ export default async function BlogDetailPage({ params }: PageProps) {
   const { lang, id } = await params;
 
   return (
-    <Suspense fallback={
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center py-20">
-          <p className="text-muted-foreground">Loading...</p>
+    <Suspense
+      fallback={
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center py-20">
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
         </div>
-      </div>
-    }>
+      }
+    >
       <ClientPage lang={lang} id={id} />
     </Suspense>
   );

@@ -16,40 +16,42 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { BlogPost } from "@/lib/types/portfolio";
 import { formatDateLong } from "@/lib/helpers/date.helper";
-import { SortOption} from "@/lib/types/type.config";
+import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { PageHeading } from "@/components/shared/PageHeading";
-import {useContentLoader} from "@/components/hooks/use-content-loader";
+import { useContentLoader } from "@/components/hooks/use-content-loader";
 
 export default function ClientPage() {
-  const { appConfig, langI18n, profileType, languageType} = usePortfolio();
+  const { appConfig, langI18n, profileType, languageType } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
   const POSTS_PER_PAGE = appConfig.item_per_page;
 
-  const { data: posts, loading, error } = useContentLoader<BlogPost[]>(
-      profileType,
-      languageType,
-      "blog_list",
-      []
-  );
+  const {
+    data: posts,
+    loading,
+    error,
+  } = useContentLoader<BlogPost[]>(profileType, languageType, "blog_list", []);
 
   // Sync state with URL parameters
-  const query = useMemo(() => ({
-    page: Math.max(1, Number(searchParams?.get("page") ?? 1)),
-    category: searchParams?.get("category") ?? "all",
-    tag: searchParams?.get("tag") ?? "all",
-    search: searchParams?.get("search") ?? "",
-    sort: (searchParams?.get("sort") as SortOption) ?? "date-desc",
-  }), [searchParams]);
+  const query = useMemo(
+    () => ({
+      page: Math.max(1, Number(searchParams?.get("page") ?? 1)),
+      category: searchParams?.get("category") ?? "all",
+      tag: searchParams?.get("tag") ?? "all",
+      search: searchParams?.get("search") ?? "",
+      sort: (searchParams?.get("sort") as SortOption) ?? "date-desc",
+    }),
+    [searchParams],
+  );
   const currentPage = query.page;
-
 
   // Filter and search posts
   const filteredPosts = useMemo(() => {
-    let filtered = posts.filter(post => {
-      if (query.category !== "all" && post.category !== query.category) return false;
+    let filtered = posts.filter((post) => {
+      if (query.category !== "all" && post.category !== query.category)
+        return false;
       if (query.tag !== "all" && !post.tags?.includes(query.tag)) return false;
 
       if (query.search) {
@@ -60,7 +62,9 @@ export default function ClientPage() {
           post.content,
           post.category,
           ...(post.tags || []),
-        ].join(" ").toLowerCase();
+        ]
+          .join(" ")
+          .toLowerCase();
 
         if (!searchableText.includes(q)) return false;
       }
@@ -198,110 +202,110 @@ export default function ClientPage() {
   };
 
   return (
-      <>
-        <PageHeading title={langI18n.blog} subTitle={langI18n.blog_sub_title} />
+    <>
+      <PageHeading title={langI18n.blog} subTitle={langI18n.blog_sub_title} />
 
-        {/* Filter Bar */}
-        <FilterBar
-            searchValue={query.search}
-            onSearchChange={handleSearchChange}
-            searchPlaceholder={langI18n.blog_search_placeholder}
-            filters={filterConfigs}
-            sortConfig={sortConfig}
-            resultsCount={totalPosts}
-            resultsLabel={
-              totalPosts === 1
-                  ? langI18n.post.toLowerCase()
-                  : langI18n.posts.toLowerCase()
-            }
-            onClearAll={handleClearAll}
-        />
+      {/* Filter Bar */}
+      <FilterBar
+        searchValue={query.search}
+        onSearchChange={handleSearchChange}
+        searchPlaceholder={langI18n.blog_search_placeholder}
+        filters={filterConfigs}
+        sortConfig={sortConfig}
+        resultsCount={totalPosts}
+        resultsLabel={
+          totalPosts === 1
+            ? langI18n.post.toLowerCase()
+            : langI18n.posts.toLowerCase()
+        }
+        onClearAll={handleClearAll}
+      />
 
-        {/* Posts Grid or Empty State */}
-        {currentPosts.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentPosts.map((post: BlogPost) => (
-                  <Card
-                      key={post.id}
-                      className="overflow-hidden group hover:shadow-lg transition-shadow"
+      {/* Posts Grid or Empty State */}
+      {currentPosts.length > 0 ? (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {currentPosts.map((post: BlogPost) => (
+            <Card
+              key={post.id}
+              className="overflow-hidden group hover:shadow-lg transition-shadow"
+            >
+              <Link
+                key={`${languageType}-${post.id}`}
+                href={createBlogDetailUrl(post)}
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={post.coverImage}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </Link>
+              <CardHeader>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                  {showLucidIcon("calendar", "w-4 h-4")}
+                  <span>{formatDateLong(post.publishedAt)}</span>
+                  <span>•</span>
+                  {showLucidIcon("clock", "w-4 h-4")}
+                  <span>{post.readTime} min read</span>
+                </div>
+                <Link
+                  key={`${languageType}-${post.id}`}
+                  href={createBlogDetailUrl(post)}
+                >
+                  <h2 className="text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">
+                    {post.title}
+                  </h2>
+                </Link>
+                {post.category && (
+                  <Badge variant="outline" className="mt-2 w-fit">
+                    {post.category}
+                  </Badge>
+                )}
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground line-clamp-3 mb-4">
+                  {post.excerpt}
+                </p>
+
+                {post.tags && post.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.slice(0, 3).map((tag: string) => (
+                      <Badge key={tag} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+              <CardFooter>
+                <Button variant="ghost" size="sm" className="w-full" asChild>
+                  <Link
+                    key={`${languageType}-${post.id}`}
+                    href={createBlogDetailUrl(post)}
                   >
-                    <Link
-                        key={`${languageType}-${post.id}`}
-                        href={createBlogDetailUrl(post)}
-                    >
-                      <div className="aspect-video overflow-hidden">
-                        <img
-                            src={post.coverImage}
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </Link>
-                    <CardHeader>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                        {showLucidIcon("calendar", "w-4 h-4")}
-                        <span>{formatDateLong(post.publishedAt)}</span>
-                        <span>•</span>
-                        {showLucidIcon("clock", "w-4 h-4")}
-                        <span>{post.readTime} min read</span>
-                      </div>
-                      <Link
-                          key={`${languageType}-${post.id}`}
-                          href={createBlogDetailUrl(post)}
-                      >
-                        <h2 className="text-2xl font-bold group-hover:text-primary transition-colors line-clamp-2">
-                          {post.title}
-                        </h2>
-                      </Link>
-                      {post.category && (
-                          <Badge variant="outline" className="mt-2 w-fit">
-                            {post.category}
-                          </Badge>
-                      )}
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground line-clamp-3 mb-4">
-                        {post.excerpt}
-                      </p>
-
-                      {post.tags && post.tags.length > 0 && (
-                          <div className="flex flex-wrap gap-2">
-                            {post.tags.slice(0, 3).map((tag: string) => (
-                                <Badge key={tag} variant="secondary" className="text-xs">
-                                  {tag}
-                                </Badge>
-                            ))}
-                          </div>
-                      )}
-                    </CardContent>
-                    <CardFooter>
-                      <Button variant="ghost" size="sm" className="w-full" asChild>
-                        <Link
-                            key={`${languageType}-${post.id}`}
-                            href={createBlogDetailUrl(post)}
-                        >
-                          Read More
-                          {showLucidIcon("arrow-right", "w-4 h-4 ml-1")}
-                        </Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-              ))}
-            </div>
-        ) : (
-            <ListEmptyDisplay
-                title={langI18n.posts_not_found}
-                message={langI18n.posts_not_found_detail}
-                handleClearAll={handleClearAll}
-            />
-        )}
-
-        {/* Pagination */}
-        <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
+                    Read More
+                    {showLucidIcon("arrow-right", "w-4 h-4 ml-1")}
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      ) : (
+        <ListEmptyDisplay
+          title={langI18n.posts_not_found}
+          message={langI18n.posts_not_found_detail}
+          handleClearAll={handleClearAll}
         />
-      </>
+      )}
+
+      {/* Pagination */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
+    </>
   );
 }

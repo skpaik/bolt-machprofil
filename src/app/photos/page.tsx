@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.photos_list;
 
 export default function PhotoPage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

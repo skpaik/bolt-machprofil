@@ -1,4 +1,4 @@
-import {TemplateItem} from "@/lib/types/portfolio";
+import { TemplateItem } from "@/lib/types/portfolio";
 
 export const allowed_templates: TemplateItem[] = [
   {

@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.skill_list;
 
 export default function SkillPage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

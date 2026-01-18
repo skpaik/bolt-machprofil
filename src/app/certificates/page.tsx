@@ -6,9 +6,9 @@ import { pagesMetadata } from "@/lib/config/seo.config";
 export const metadata: Metadata = pagesMetadata.certificate_list;
 
 export default function CertificatesPage() {
-    return (
-        <>
-            <ClientPage/>
-        </>
-    );
+  return (
+    <>
+      <ClientPage />
+    </>
+  );
 }

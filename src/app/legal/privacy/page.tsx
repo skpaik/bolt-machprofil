@@ -6,9 +6,9 @@ import { pagesMetadata } from "@/lib/config/seo.config";
 export const metadata: Metadata = pagesMetadata.static_contents;
 
 export default function PrivacyPage() {
-    return (
-        <>
-            <ClientPage/>
-        </>
-    );
+  return (
+    <>
+      <ClientPage />
+    </>
+  );
 }

@@ -19,7 +19,7 @@ export const emptyAboutContent: AboutContent = {
   },
   intro: {
     tagline: "",
-    summary: ""
+    summary: "",
   },
   sections: [],
   stats: [],
@@ -64,5 +64,5 @@ export const emptyContent: ContentData = {
   service_list: [],
   skill_list: [],
   testimonial_list: [],
-  static_contents: emptyStaticContent
+  static_contents: emptyStaticContent,
 };

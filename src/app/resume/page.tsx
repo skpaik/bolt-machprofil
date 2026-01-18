@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.resume_content;
 
 export default function ResumePage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

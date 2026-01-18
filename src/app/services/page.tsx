@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.service_list;
 
 export default function ServicePage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

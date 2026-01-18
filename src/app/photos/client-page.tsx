@@ -13,7 +13,7 @@ import { Photo } from "@/lib/types/portfolio";
 import { SortOption } from "@/lib/types/type.config";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
-import {useContentLoader} from "@/components/hooks/use-content-loader";
+import { useContentLoader } from "@/components/hooks/use-content-loader";
 
 type ViewMode = "gallery" | "albums";
 
@@ -30,12 +30,11 @@ export default function ClientPage() {
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
   const [viewMode, setViewMode] = useState<ViewMode>("gallery");
 
-  const { data: photos, loading, error } = useContentLoader<Photo[]>(
-      profileType,
-      languageType,
-      "photo_list",
-      []
-  );
+  const {
+    data: photos,
+    loading,
+    error,
+  } = useContentLoader<Photo[]>(profileType, languageType, "photo_list", []);
 
   // Get URL parameters
   const albumParam = searchParams?.get("album");
@@ -112,8 +111,8 @@ export default function ClientPage() {
           photo.description || "",
           ...(photo.tags || []),
         ]
-            .join(" ")
-            .toLowerCase();
+          .join(" ")
+          .toLowerCase();
 
         if (!searchableText.includes(query)) {
           return false;
@@ -128,11 +127,11 @@ export default function ClientPage() {
       switch (sortBy) {
         case "date-desc":
           return (
-              new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime()
+            new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime()
           );
         case "date-asc":
           return (
-              new Date(a.date || 0).getTime() - new Date(b.date || 0).getTime()
+            new Date(a.date || 0).getTime() - new Date(b.date || 0).getTime()
           );
         case "title-asc":
           return a.title.localeCompare(b.title);
@@ -191,8 +190,8 @@ export default function ClientPage() {
 
   // Find current photo for detail view
   const currentPhoto = photoParam
-      ? photos.find((p: Photo) => p.id.toString() === photoParam)
-      : null;
+    ? photos.find((p: Photo) => p.id.toString() === photoParam)
+    : null;
 
   // Handle album selection from filter
   const handleAlbumChange = (album: string) => {
@@ -297,250 +296,250 @@ export default function ClientPage() {
   // If photo detail is open, show full-screen view
   if (currentPhoto) {
     return (
-        <div className="fixed inset-0 z-50 bg-black">
-          {/* Header */}
-          <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-4">
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
-              <Button
-                  variant="ghost"
-                  className="text-white hover:bg-white/10"
-                  onClick={handleClosePhoto}
-              >
-                {showLucidIcon("arrow-left", "w-5 h-5 mr-2")}
-                Back to Gallery
-              </Button>
-              <Button
-                  variant="ghost"
-                  className="text-white hover:bg-white/10"
-                  onClick={handleClosePhoto}
-              >
-                {showLucidIcon("x", "w-5 h-5")}
-              </Button>
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="h-full flex flex-col lg:flex-row">
-            {/* Image Container */}
-            <div className="flex-1 flex items-center justify-center p-4 lg:p-8">
-              <img
-                  src={currentPhoto.image}
-                  alt={currentPhoto.title}
-                  className="max-w-full max-h-full object-contain"
-              />
-            </div>
-
-            {/* Details Sidebar */}
-            <div className="w-full lg:w-96 bg-background p-6 overflow-y-auto border-t lg:border-t-0 lg:border-l border-border">
-              <h2 className="text-2xl font-bold mb-2">{currentPhoto.title}</h2>
-              <Badge variant="secondary" className="mb-4">
-                {currentPhoto.album}
-              </Badge>
-
-              {currentPhoto.description && (
-                  <p className="text-muted-foreground mb-4">
-                    {currentPhoto.description}
-                  </p>
-              )}
-
-              <div className="space-y-3 mb-4">
-                {currentPhoto.date && (
-                    <div className="flex items-center gap-2 text-sm">
-                      {showLucidIcon("calendar", "w-4 h-4 text-muted-foreground")}
-                      <span>{formatDateLong(currentPhoto.date)}</span>
-                    </div>
-                )}
-                {currentPhoto.location && (
-                    <div className="flex items-center gap-2 text-sm">
-                      {showLucidIcon("map-pin", "w-4 h-4 text-muted-foreground")}
-                      <span>{currentPhoto.location}</span>
-                    </div>
-                )}
-                {currentPhoto.camera && (
-                    <div className="flex items-center gap-2 text-sm">
-                      {showLucidIcon("camera", "w-4 h-4 text-muted-foreground")}
-                      <span>{currentPhoto.camera}</span>
-                    </div>
-                )}
-              </div>
-
-              {currentPhoto.tags && currentPhoto.tags.length > 0 && (
-                  <div>
-                    <h3 className="font-semibold text-sm mb-2">Tags</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {currentPhoto.tags.map((tag: string) => (
-                          <Badge key={tag} variant="outline" className="text-xs">
-                            {tag}
-                          </Badge>
-                      ))}
-                    </div>
-                  </div>
-              )}
-            </div>
+      <div className="fixed inset-0 z-50 bg-black">
+        {/* Header */}
+        <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-4">
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <Button
+              variant="ghost"
+              className="text-white hover:bg-white/10"
+              onClick={handleClosePhoto}
+            >
+              {showLucidIcon("arrow-left", "w-5 h-5 mr-2")}
+              Back to Gallery
+            </Button>
+            <Button
+              variant="ghost"
+              className="text-white hover:bg-white/10"
+              onClick={handleClosePhoto}
+            >
+              {showLucidIcon("x", "w-5 h-5")}
+            </Button>
           </div>
         </div>
+
+        {/* Main Content */}
+        <div className="h-full flex flex-col lg:flex-row">
+          {/* Image Container */}
+          <div className="flex-1 flex items-center justify-center p-4 lg:p-8">
+            <img
+              src={currentPhoto.image}
+              alt={currentPhoto.title}
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+
+          {/* Details Sidebar */}
+          <div className="w-full lg:w-96 bg-background p-6 overflow-y-auto border-t lg:border-t-0 lg:border-l border-border">
+            <h2 className="text-2xl font-bold mb-2">{currentPhoto.title}</h2>
+            <Badge variant="secondary" className="mb-4">
+              {currentPhoto.album}
+            </Badge>
+
+            {currentPhoto.description && (
+              <p className="text-muted-foreground mb-4">
+                {currentPhoto.description}
+              </p>
+            )}
+
+            <div className="space-y-3 mb-4">
+              {currentPhoto.date && (
+                <div className="flex items-center gap-2 text-sm">
+                  {showLucidIcon("calendar", "w-4 h-4 text-muted-foreground")}
+                  <span>{formatDateLong(currentPhoto.date)}</span>
+                </div>
+              )}
+              {currentPhoto.location && (
+                <div className="flex items-center gap-2 text-sm">
+                  {showLucidIcon("map-pin", "w-4 h-4 text-muted-foreground")}
+                  <span>{currentPhoto.location}</span>
+                </div>
+              )}
+              {currentPhoto.camera && (
+                <div className="flex items-center gap-2 text-sm">
+                  {showLucidIcon("camera", "w-4 h-4 text-muted-foreground")}
+                  <span>{currentPhoto.camera}</span>
+                </div>
+              )}
+            </div>
+
+            {currentPhoto.tags && currentPhoto.tags.length > 0 && (
+              <div>
+                <h3 className="font-semibold text-sm mb-2">Tags</h3>
+                <div className="flex flex-wrap gap-2">
+                  {currentPhoto.tags.map((tag: string) => (
+                    <Badge key={tag} variant="outline" className="text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     );
   }
 
   return (
-      <>
-        {/* Header */}
-        <div className="mb-8 sm:mb-12">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-            <div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
-                {selectedAlbum !== "all" ? selectedAlbum : langI18n.photos}
-              </h1>
-              <p className="text-base sm:text-lg text-muted-foreground">
-                {selectedAlbum !== "all"
-                    ? `${langI18n.viewing_album}: ${selectedAlbum}`
-                    : langI18n.viewing_album_detail}
-              </p>
-            </div>
-            {/* View Mode Toggle */}
-            <div className="flex gap-2">
-              <Button
-                  variant={viewMode === "gallery" ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setViewMode("gallery")}
-              >
-                {showLucidIcon("grid3x3", "w-4 h-4 mr-2")}
-                Gallery
-              </Button>
-              <Button
-                  variant={viewMode === "albums" ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setViewMode("albums")}
-              >
-                {showLucidIcon("layers", "w-4 h-4 mr-2")}
-                Albums
-              </Button>
-            </div>
+    <>
+      {/* Header */}
+      <div className="mb-8 sm:mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
+              {selectedAlbum !== "all" ? selectedAlbum : langI18n.photos}
+            </h1>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              {selectedAlbum !== "all"
+                ? `${langI18n.viewing_album}: ${selectedAlbum}`
+                : langI18n.viewing_album_detail}
+            </p>
+          </div>
+          {/* View Mode Toggle */}
+          <div className="flex gap-2">
+            <Button
+              variant={viewMode === "gallery" ? "default" : "outline"}
+              size="sm"
+              onClick={() => setViewMode("gallery")}
+            >
+              {showLucidIcon("grid3x3", "w-4 h-4 mr-2")}
+              Gallery
+            </Button>
+            <Button
+              variant={viewMode === "albums" ? "default" : "outline"}
+              size="sm"
+              onClick={() => setViewMode("albums")}
+            >
+              {showLucidIcon("layers", "w-4 h-4 mr-2")}
+              Albums
+            </Button>
           </div>
         </div>
+      </div>
 
-        {/* Albums View */}
-        {viewMode === "albums" ? (
-            <div className="space-y-8">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold mb-2">{langI18n.photo_albums}</h2>
-                <p className="text-muted-foreground">
-                  {langI18n.photo_albums_detail}
-                </p>
-              </div>
+      {/* Albums View */}
+      {viewMode === "albums" ? (
+        <div className="space-y-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold mb-2">{langI18n.photo_albums}</h2>
+            <p className="text-muted-foreground">
+              {langI18n.photo_albums_detail}
+            </p>
+          </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(albumGroups).map(
-                    ([albumName, albumPhotos]: [string, any]) => (
-                        <Card
-                            key={albumName}
-                            className="overflow-hidden hover:shadow-xl transition-all cursor-pointer group"
-                            onClick={() => handleAlbumCardClick(albumName)}
-                        >
-                          <div className="aspect-video overflow-hidden relative">
-                            <img
-                                src={albumPhotos[0].image}
-                                alt={albumName}
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                              <div className="flex items-center gap-2 text-sm">
-                                {showLucidIcon("image-icon", "w-4 h-4")}
-                                <span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(albumGroups).map(
+              ([albumName, albumPhotos]: [string, any]) => (
+                <Card
+                  key={albumName}
+                  className="overflow-hidden hover:shadow-xl transition-all cursor-pointer group"
+                  onClick={() => handleAlbumCardClick(albumName)}
+                >
+                  <div className="aspect-video overflow-hidden relative">
+                    <img
+                      src={albumPhotos[0].image}
+                      alt={albumName}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="flex items-center gap-2 text-sm">
+                        {showLucidIcon("image-icon", "w-4 h-4")}
+                        <span>
                           {albumPhotos.length} {langI18n.photos.toLowerCase()}
                         </span>
-                              </div>
-                            </div>
-                          </div>
-                          <CardContent className="p-4">
-                            <h3 className="font-bold text-lg group-hover:text-primary transition-colors">
-                              {albumName}
-                            </h3>
-                            <p className="text-sm text-muted-foreground">
-                              {albumPhotos.length}{" "}
-                              {albumPhotos.length === 1
-                                  ? langI18n.photo.toLowerCase()
-                                  : langI18n.photos.toLowerCase()}
-                            </p>
-                          </CardContent>
-                        </Card>
-                    ),
-                )}
-              </div>
-            </div>
-        ) : (
-            <>
-              {/* Gallery View with Filters */}
-              <FilterBar
-                  searchValue={searchQuery}
-                  onSearchChange={setSearchQuery}
-                  searchPlaceholder={langI18n.photos_search_placeholder}
-                  filters={filterConfigs}
-                  sortConfig={sortConfig}
-                  resultsCount={totalPhotos}
-                  resultsLabel={
-                    totalPhotos === 1
-                        ? langI18n.photo.toLowerCase()
-                        : langI18n.photos.toLowerCase()
-                  }
-                  onClearAll={handleClearAll}
-              />
-
-              {/* Photos Grid or Empty State */}
-              {currentPhotos.length > 0 ? (
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                    {currentPhotos.map((item: Photo) => (
-                        <Card
-                            key={item.id}
-                            className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow"
-                            onClick={() => handlePhotoClick(item)}
-                        >
-                          <div className="aspect-square overflow-hidden relative">
-                            <img
-                                src={item.image}
-                                alt={item.title}
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                            />
-                          </div>
-                          <div className="p-3">
-                            <h3 className="font-semibold text-sm mb-1 line-clamp-1">
-                              {item.title}
-                            </h3>
-                            <Badge variant="secondary" className="text-xs">
-                              {item.album}
-                            </Badge>
-                          </div>
-                        </Card>
-                    ))}
+                      </div>
+                    </div>
                   </div>
-              ) : (
-                  <div className="text-center py-12">
-                    {showLucidIcon(
-                        "image-icon",
-                        "mx-auto mb-4 opacity-50 text-muted-foreground",
-                        48,
-                    )}
-                    <h3 className="text-xl font-semibold mb-2">
-                      {langI18n.photo_not_found}
+                  <CardContent className="p-4">
+                    <h3 className="font-bold text-lg group-hover:text-primary transition-colors">
+                      {albumName}
                     </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                      {langI18n.photo_not_found_detail}
+                    <p className="text-sm text-muted-foreground">
+                      {albumPhotos.length}{" "}
+                      {albumPhotos.length === 1
+                        ? langI18n.photo.toLowerCase()
+                        : langI18n.photos.toLowerCase()}
                     </p>
-                    <Button variant="outline" onClick={handleClearAll}>
-                      {langI18n.clear_all_filters}
-                    </Button>
-                  </div>
-              )}
+                  </CardContent>
+                </Card>
+              ),
+            )}
+          </div>
+        </div>
+      ) : (
+        <>
+          {/* Gallery View with Filters */}
+          <FilterBar
+            searchValue={searchQuery}
+            onSearchChange={setSearchQuery}
+            searchPlaceholder={langI18n.photos_search_placeholder}
+            filters={filterConfigs}
+            sortConfig={sortConfig}
+            resultsCount={totalPhotos}
+            resultsLabel={
+              totalPhotos === 1
+                ? langI18n.photo.toLowerCase()
+                : langI18n.photos.toLowerCase()
+            }
+            onClearAll={handleClearAll}
+          />
 
-              {/* Pagination */}
-              <Pagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  onPageChange={handlePageChange}
-              />
-            </>
-        )}
-      </>
+          {/* Photos Grid or Empty State */}
+          {currentPhotos.length > 0 ? (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {currentPhotos.map((item: Photo) => (
+                <Card
+                  key={item.id}
+                  className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow"
+                  onClick={() => handlePhotoClick(item)}
+                >
+                  <div className="aspect-square overflow-hidden relative">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-semibold text-sm mb-1 line-clamp-1">
+                      {item.title}
+                    </h3>
+                    <Badge variant="secondary" className="text-xs">
+                      {item.album}
+                    </Badge>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              {showLucidIcon(
+                "image-icon",
+                "mx-auto mb-4 opacity-50 text-muted-foreground",
+                48,
+              )}
+              <h3 className="text-xl font-semibold mb-2">
+                {langI18n.photo_not_found}
+              </h3>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4">
+                {langI18n.photo_not_found_detail}
+              </p>
+              <Button variant="outline" onClick={handleClearAll}>
+                {langI18n.clear_all_filters}
+              </Button>
+            </div>
+          )}
+
+          {/* Pagination */}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        </>
+      )}
+    </>
   );
 }

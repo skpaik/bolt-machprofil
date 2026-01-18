@@ -32,8 +32,8 @@ function isDir(p: string): boolean {
 
 function readDirs(p: string): string[] {
   return fs.existsSync(p)
-      ? fs.readdirSync(p).filter((d) => isDir(path.join(p, d)))
-      : [];
+    ? fs.readdirSync(p).filter((d) => isDir(path.join(p, d)))
+    : [];
 }
 
 function readMarkdown(filePath: string) {
@@ -122,9 +122,9 @@ export default data;
  * DISPATCHER
  */
 function processContentType(
-    inputDir: string,
-    type: string,
-    outputFile: string
+  inputDir: string,
+  type: string,
+  outputFile: string,
 ) {
   if (OBJECT_BY_FILENAME_FOLDERS.has(type)) {
     processObjectByFilename(inputDir, outputFile);

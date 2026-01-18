@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.about_content;
 
 export default function AboutPage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

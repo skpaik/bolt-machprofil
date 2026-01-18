@@ -53,19 +53,19 @@ This file controls which menus appear on the site and where they appear.
 
 ## Supported menu keys
 
-- home  
-- about  
-- experience  
-- projects  
-- blog  
-- resume  
-- education  
-- skills  
-- services  
-- publications  
-- certificates  
-- testimonials  
-- photos  
-- contact  
-- privacy  
+- home
+- about
+- experience
+- projects
+- blog
+- resume
+- education
+- skills
+- services
+- publications
+- certificates
+- testimonials
+- photos
+- contact
+- privacy
 - terms

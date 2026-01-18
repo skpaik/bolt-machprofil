@@ -53,7 +53,9 @@ import { LocalStorageService } from "@/lib/services/local.s.service";
 
 type AvailableI18nLanguage = keyof typeof languageData;
 
-function isI18nLanguageKeyAvailable(lang: LanguageType): lang is AvailableI18nLanguage {
+function isI18nLanguageKeyAvailable(
+  lang: LanguageType,
+): lang is AvailableI18nLanguage {
   return lang in languageData;
 }
 
@@ -157,9 +159,11 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   // const testimonialContentData: Testimonial[] =    testimonialContentsData[languageType];
   // const publicationContentData: Publication[] =    publicationContentsData[languageType];
   // const photoContentData: Photo[] = photoContentsData[languageType];
- // const aboutContent: AboutContent = aboutContentsData;
+  // const aboutContent: AboutContent = aboutContentsData;
   //const langI18n: LanguageI18n = languageData[languageType];
-  const langI18n: LanguageI18n = isI18nLanguageKeyAvailable(languageType) ? languageData[languageType] : languageData.en;
+  const langI18n: LanguageI18n = isI18nLanguageKeyAvailable(languageType)
+    ? languageData[languageType]
+    : languageData.en;
   const appConfig: AppConfig = { item_per_page: 4 };
   //contentData.staticContent = staticContentData;
   //contentData.photos = photoContentData;

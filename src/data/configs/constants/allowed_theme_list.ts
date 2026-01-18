@@ -1,6 +1,6 @@
 import { ThemeItem } from "@/lib/types/portfolio";
 
-export const allowed_themes: ThemeItem[]= [
+export const allowed_themes: ThemeItem[] = [
   {
     value: "light",
     label: "Light",

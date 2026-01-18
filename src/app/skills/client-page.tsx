@@ -12,8 +12,8 @@ import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { SortOption } from "@/lib/types/type.config";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
-import {useContentLoader} from "@/components/hooks/use-content-loader";
-import {Service, Skills} from "@/lib/types/portfolio";
+import { useContentLoader } from "@/components/hooks/use-content-loader";
+import { Skills } from "@/lib/types/portfolio";
 
 export default function ClientPage() {
   const { appConfig, langI18n, profileType, languageType } = usePortfolio();
@@ -23,12 +23,11 @@ export default function ClientPage() {
   const [selectedLevel, setSelectedLevel] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortOption>("proficiency-desc");
 
-  const { data: skills, loading, error } = useContentLoader<Skills[]>(
-      profileType,
-      languageType,
-      "skill_list",
-      []
-  );
+  const {
+    data: skills,
+    loading,
+    error,
+  } = useContentLoader<Skills[]>(profileType, languageType, "skill_list", []);
 
   const ITEMS_PER_PAGE = appConfig.item_per_page;
 
@@ -55,8 +54,8 @@ export default function ClientPage() {
           skill.description || "",
           ...(skill.tags || []),
         ]
-            .join(" ")
-            .toLowerCase();
+          .join(" ")
+          .toLowerCase();
 
         if (!searchableText.includes(query)) {
           return false;
@@ -167,114 +166,114 @@ export default function ClientPage() {
   };
 
   return (
-      <>
-        <PageHeading
-            title={langI18n.skills}
-            subTitle={langI18n.skills_sub_title}
-        />
+    <>
+      <PageHeading
+        title={langI18n.skills}
+        subTitle={langI18n.skills_sub_title}
+      />
 
-        {/* Filter Bar */}
-        <FilterBar
-            searchValue={searchQuery}
-            onSearchChange={setSearchQuery}
-            searchPlaceholder={langI18n.skills_search_placeholder}
-            filters={filterConfigs}
-            sortConfig={sortConfig}
-            resultsCount={totalSkills}
-            resultsLabel={totalSkills === 1 ? langI18n.skill : langI18n.skills}
-            onClearAll={handleClearAll}
-        />
+      {/* Filter Bar */}
+      <FilterBar
+        searchValue={searchQuery}
+        onSearchChange={setSearchQuery}
+        searchPlaceholder={langI18n.skills_search_placeholder}
+        filters={filterConfigs}
+        sortConfig={sortConfig}
+        resultsCount={totalSkills}
+        resultsLabel={totalSkills === 1 ? langI18n.skill : langI18n.skills}
+        onClearAll={handleClearAll}
+      />
 
-        {/* Skills Grid or Empty State */}
-        {currentSkills.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {currentSkills.map((skill) => (
-                  <Card key={skill.id} className="hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="flex items-center gap-3">
-                          <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                            {showLucidIcon(skill.category)}
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-lg">{skill.title}</h3>
-                            <p className="text-sm text-muted-foreground">
-                              {skill.category}
-                            </p>
-                          </div>
-                        </div>
-                        <Badge
-                            variant={
-                              skill.level === "Expert"
-                                  ? "default"
-                                  : skill.level === "Advanced"
-                                      ? "secondary"
-                                      : "outline"
-                            }
-                        >
-                          {skill.level}
-                        </Badge>
-                      </div>
+      {/* Skills Grid or Empty State */}
+      {currentSkills.length > 0 ? (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {currentSkills.map((skill) => (
+            <Card key={skill.id} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                      {showLucidIcon(skill.category)}
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg">{skill.title}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {skill.category}
+                      </p>
+                    </div>
+                  </div>
+                  <Badge
+                    variant={
+                      skill.level === "Expert"
+                        ? "default"
+                        : skill.level === "Advanced"
+                          ? "secondary"
+                          : "outline"
+                    }
+                  >
+                    {skill.level}
+                  </Badge>
+                </div>
 
-                      {/* Proficiency Bar */}
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-sm">
+                {/* Proficiency Bar */}
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">
                       {langI18n.proficiency}
                     </span>
-                          <span className="font-semibold">{skill.proficiency}%</span>
-                        </div>
-                        <Progress value={skill.proficiency} className="h-2" />
-                      </div>
-                    </CardHeader>
+                    <span className="font-semibold">{skill.proficiency}%</span>
+                  </div>
+                  <Progress value={skill.proficiency} className="h-2" />
+                </div>
+              </CardHeader>
 
-                    <CardContent>
-                      {skill.yearsOfExperience && (
-                          <div className="flex items-center gap-2 mb-3 text-sm text-muted-foreground">
-                            {showLucidIcon("award", "w-4 h-4")}
-                            <span>
+              <CardContent>
+                {skill.yearsOfExperience && (
+                  <div className="flex items-center gap-2 mb-3 text-sm text-muted-foreground">
+                    {showLucidIcon("award", "w-4 h-4")}
+                    <span>
                       {skill.yearsOfExperience}{" "}
-                              {skill.yearsOfExperience === 1
-                                  ? langI18n.year
-                                  : langI18n.years}{" "}
-                              {langI18n.of_experience}
+                      {skill.yearsOfExperience === 1
+                        ? langI18n.year
+                        : langI18n.years}{" "}
+                      {langI18n.of_experience}
                     </span>
-                          </div>
-                      )}
+                  </div>
+                )}
 
-                      {skill.description && (
-                          <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
-                            {skill.description}
-                          </p>
-                      )}
+                {skill.description && (
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                    {skill.description}
+                  </p>
+                )}
 
-                      {skill.tags && skill.tags.length > 0 && (
-                          <div className="flex flex-wrap gap-1.5">
-                            {skill.tags.slice(0, 3).map((tag) => (
-                                <Badge key={tag} variant="outline" className="text-xs">
-                                  {tag}
-                                </Badge>
-                            ))}
-                          </div>
-                      )}
-                    </CardContent>
-                  </Card>
-              ))}
-            </div>
-        ) : (
-            <ListEmptyDisplay
-                title={langI18n.skills_not_found}
-                message={langI18n.skills_not_found_message}
-                handleClearAll={handleClearAll}
-            />
-        )}
-
-        {/* Pagination */}
-        <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
+                {skill.tags && skill.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {skill.tags.slice(0, 3).map((tag) => (
+                      <Badge key={tag} variant="outline" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      ) : (
+        <ListEmptyDisplay
+          title={langI18n.skills_not_found}
+          message={langI18n.skills_not_found_message}
+          handleClearAll={handleClearAll}
         />
-      </>
+      )}
+
+      {/* Pagination */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
+    </>
   );
 }

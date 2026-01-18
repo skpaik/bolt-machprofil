@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.contact_content;
 
 export default function ContactPage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }

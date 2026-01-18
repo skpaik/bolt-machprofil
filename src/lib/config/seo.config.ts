@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { MetadataHelper } from "@/lib/helpers/metadata.helper";
-import {ContentData} from "@/lib/types/content.types";
+import { ContentData } from "@/lib/types/content.types";
 
 // SEO metadata for all static pages
 export const pagesMetadata: Record<keyof ContentData, Metadata> = {

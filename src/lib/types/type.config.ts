@@ -1,16 +1,16 @@
 import { allowed_profiles } from "@/data/configs/generated/allowed_profile_list";
 
 export const profileLanguageMap = Object.fromEntries(
-    allowed_profiles.map(p => [p.value, p.allowed_languages])
+  allowed_profiles.map((p) => [p.value, p.allowed_languages]),
 ) as Record<
-    typeof allowed_profiles[number]["value"],
-    typeof allowed_profiles[number]["allowed_languages"]
+  (typeof allowed_profiles)[number]["value"],
+  (typeof allowed_profiles)[number]["allowed_languages"]
 >;
 
-
 // export type ProfileType = "developer" | "photographer" | "teacher" | "student";
-export type ProfileType = typeof allowed_profiles[number]["value"];
-export type LanguageType = typeof allowed_profiles[number]["allowed_languages"][number]["value"];
+export type ProfileType = (typeof allowed_profiles)[number]["value"];
+export type LanguageType =
+  (typeof allowed_profiles)[number]["allowed_languages"][number]["value"];
 
 export type TemplateType = "modern" | "classic" | "minimal";
 export type LanguageTypeOld = "en" | "de" | "es" | "fr";

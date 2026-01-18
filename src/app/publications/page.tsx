@@ -7,8 +7,8 @@ export const metadata: Metadata = pagesMetadata.publication_list;
 
 export default function PublicationsPage() {
   return (
-      <>
-        <ClientPage/>
-      </>
+    <>
+      <ClientPage />
+    </>
   );
 }
