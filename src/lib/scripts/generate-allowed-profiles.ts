@@ -110,7 +110,7 @@ function main(): void {
 
   const output = `export const allowed_profiles = ${serializeTS(
     allowedProfiles,
-  )} as const;\n`;
+  )};\n`;
 
   fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
   fs.writeFileSync(OUTPUT_FILE, output, "utf-8");
