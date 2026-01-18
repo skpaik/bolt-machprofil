@@ -12,29 +12,23 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {AboutContent} from "@/lib/types/about.contract";
+import {emptyAboutContent} from "@/data/configs/constants/empty.data";
 
 export default function ClientPage() {
-  const { langI18n, contentData } = usePortfolio();
+  const { langI18n, contentData, profileType, languageType } = usePortfolio();
+
+  const { data: about_content, loading, error } = useContentLoader<AboutContent>(
+      profileType,
+      languageType,
+      "about_content",
+      emptyAboutContent
+  );
   // Aggregate data from existing sources
-  const aboutContent = contentData.about_content;
-  const profile = aboutContent.bio || {
-    name: "Mofiz Rahman",
-    title: "Scientist @ Environment",
-    email: "mofiz@rahman.com",
-    location: "Cottbus-Ströbitz, Brandenburg, Germany",
-    image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-    available: true,
-    resumeUrl: "/resume.pdf",
-    socialLinks: [],
-  };
-
-  const intro = aboutContent.intro;
-
-  const tagline = aboutContent.bio.tagline;
-
+  const profile = about_content.bio;
   // Get social links from profile or about data
-  const socialLinks = aboutContent.socialLinks.filter((link) => link.url);
+  const socialLinks = about_content.socialLinks.filter((link) => link.url);
 
   // Get experiences and calculate stats
   const experiences = contentData.experience_list;
@@ -148,10 +142,10 @@ export default function ClientPage() {
                     {profile.title}
                   </h2>
                   <p className="text-xl text-primary font-medium mb-6">
-                    {tagline}
+                    {profile.tagline}
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    {intro.tagline}
+                    {about_content.intro.tagline}
                   </p>
                 </div>
 
@@ -211,7 +205,7 @@ export default function ClientPage() {
                 </div>
 
                 {/* Social Links */}
-                {socialLinks.length > 0 && (
+                {socialLinks?.length > 0 && (
                     <div className="flex gap-3">
                       {socialLinks.map((social: any) => {
                         return (

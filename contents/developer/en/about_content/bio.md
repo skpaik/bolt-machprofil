@@ -5,7 +5,7 @@ title: Scientist @ Environment
 tagline: Climate & Sustainability | Reader | Traveller | Storyteller | Teacher| Mentor
 summary: Climate & Sustainability | Reader | Traveller | Storyteller | Teacher| Mentor
 image: >-
-  https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/461483911_10161361397073876_8347231399863771840_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=6NLEIrXflWYQ7kNvwG8zsph&_nc_oc=Admi-sjQS4A6SHr46YbW4ynF7oJegsWld5Ui0ebX6sAHKdmuS-wdoFe76Gc4PZz620c&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=A7NZnUwmhHZsK6jo69r_qQ&oh=00_AfqChnMTH5LLzlBza0pUfA6_J7D3Qa853Stpai0ftbImNw&oe=696098F1
+  https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/461483911_10161361397073876_8347231399863771840_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GQjRMxbenrYQ7kNvwEMLWSY&_nc_oc=AdnyFke2dEUA-CY4fBcmFULFFRuTa-4oy-Hfov5Z8H7wd3Q8uIMDIV_q0CEqgo5YXozEREiXIC5pOgtegL1u-q8i&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=7qUwwnglfnae5GSWiLCwng&oh=00_AfojfBYLznj8meNAFpNbKT7Qq74li1sfNKCG-vBh038krA&oe=69734631
 location: "Cottbus-Ströbitz, Brandenburg, Germany"
 phone: "+4915222131484"
 website: "https://mofizsunshine.com"
