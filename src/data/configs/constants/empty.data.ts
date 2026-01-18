@@ -17,7 +17,10 @@ export const emptyAboutContent: AboutContent = {
     fullName: "",
     summary: "",
   },
-  intro: "",
+  intro: {
+    tagline: "",
+    summary: ""
+  },
   sections: [],
   stats: [],
   interests: [],

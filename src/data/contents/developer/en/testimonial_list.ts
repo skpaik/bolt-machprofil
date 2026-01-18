@@ -183,5 +183,5 @@ export const data = [
     verified: true,
     content: ""
   }
-] as const;
+] as const satisfies unknown;
 export default data;

@@ -243,5 +243,5 @@ export const data = [
     status: "Published",
     content: ""
   }
-] as const;
+] as const satisfies unknown;
 export default data;

@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import {LanguageItem} from "@/lib/types/portfolio";
+import { AllowedProfile, LanguageItem } from "@/lib/types/portfolio";
 import {LanguageType} from "@/lib/types/type.config";
 
 /* ============================
@@ -20,12 +20,6 @@ const OUTPUT_FILE = path.join(
  * Types
  * ============================ */
 
-type AllowedProfile = {
-    value: string;
-    label: string;
-    description: string;
-    allowed_languages: LanguageItem[];
-};
 
 /* ============================
  * Helpers

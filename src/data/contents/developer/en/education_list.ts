@@ -146,5 +146,5 @@ export const data = [
     ],
     content: ""
   }
-] as const;
+] as const satisfies unknown;
 export default data;

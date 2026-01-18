@@ -35,7 +35,7 @@ import { loadAllContent } from "@/lib/services/loadContent";
 import { ContentData } from "@/lib/types/content.types";
 import { LanguageI18n } from "@/lib/types/lang.i18n";
 import { emptyContent } from "@/data/configs/constants/empty.data";
-// import blogContentsData from "@/data/blog_contents.json";
+// import blogContentsData from "@/data/contents/developer/en/blog_list";
 // import projectContentsData from "@/data/project_contents.json";
 // import experienceContentsData from "@/data/experience_contents.json";
 // import educationContentsData from "@/data/education_contents.json";
@@ -45,7 +45,7 @@ import { emptyContent } from "@/data/configs/constants/empty.data";
 // import testimonialContentsData from "@/data/testimonial_contents.json";
 // import publicationContentsData from "@/data/publication_contents.json";
 // import photoContentsData from "@/data/photos_contents.json";
-// import aboutContentsData from "@/data/about_contents.json";
+// import aboutContentsData from "@/data/contents/developer/en/about_content";
 import languageData from "@/data/configs/constants/i18n.json";
 import { ConfigData } from "@/data/configs/constants/config-data";
 import { settings_const } from "@/data/configs/generated/settings";
@@ -147,7 +147,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   // Derived data
   //const appData: AppData = portfolioData.profiles[profileType];
   const appData = contentData.about_content.bio as AppData;
-  // const blogContentData: BlogPost[] = blogContentsData[languageType];
+  //const blogContentData: BlogPost[] = blogContentsData;
   // const projectContentData: Project[] = projectContentsData[languageType];
   // const experienceContentData: Experience[] =    experienceContentsData[languageType];
   // const educationContentData: Education[] = educationContentsData[languageType];
@@ -157,7 +157,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   // const testimonialContentData: Testimonial[] =    testimonialContentsData[languageType];
   // const publicationContentData: Publication[] =    publicationContentsData[languageType];
   // const photoContentData: Photo[] = photoContentsData[languageType];
-  // const aboutContent: AboutContent = aboutContentsData[languageType];
+ // const aboutContent: AboutContent = aboutContentsData;
   //const langI18n: LanguageI18n = languageData[languageType];
   const langI18n: LanguageI18n = isI18nLanguageKeyAvailable(languageType) ? languageData[languageType] : languageData.en;
   const appConfig: AppConfig = { item_per_page: 4 };

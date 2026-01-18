@@ -304,5 +304,5 @@ export const data = [
     description: "Digital and traditional illustration techniques.",
     content: ""
   }
-] as const;
+] as const satisfies unknown;
 export default data;

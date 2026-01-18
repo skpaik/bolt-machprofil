@@ -151,7 +151,7 @@ export default function ClientPage() {
                     {tagline}
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    {intro}
+                    {intro.tagline}
                   </p>
                 </div>
 

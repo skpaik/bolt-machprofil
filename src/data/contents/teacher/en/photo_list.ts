@@ -302,5 +302,5 @@ export const data = [
     views: 987,
     content: ""
   }
-] as const;
+] as const satisfies unknown;
 export default data;

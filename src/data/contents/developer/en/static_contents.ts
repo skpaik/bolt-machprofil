@@ -1,5 +1,5 @@
-export const data = [
-  {
+export const data = {
+  privacy: {
     id: 1,
     title: "Privacy Policy",
     subtitle: "How I handle and protect your information. 3",
@@ -97,7 +97,7 @@ export const data = [
     footerText: "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒",
     content: ""
   },
-  {
+  terms: {
     id: 1,
     title: "Terms of Service",
     subtitle: "Simple and straightforward terms for working together.",
@@ -150,5 +150,5 @@ export const data = [
     footerText: "By working with me, you agree to these terms. Let's create something great together! ✨",
     content: ""
   }
-] as const;
+} as const satisfies unknown;
 export default data;

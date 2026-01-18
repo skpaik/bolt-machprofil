@@ -26,114 +26,102 @@ export const data = {
     secondaryButton: "Download Resume",
     content: ""
   },
-  interests: {
-    items: [
-      {
-        name: "Coding",
-        icon: "code"
-      },
-      {
-        name: "Design",
-        icon: "palette"
-      },
-      {
-        name: "Music",
-        icon: "music"
-      },
-      {
-        name: "Photography",
-        icon: "camera"
-      },
-      {
-        name: "Reading",
-        icon: "book"
-      },
-      {
-        name: "Travel",
-        icon: "plane"
-      },
-      {
-        name: "Coffee",
-        icon: "coffee"
-      }
-    ],
-    content: ""
-  },
+  interests: [
+    {
+      name: "Coding",
+      icon: "code"
+    },
+    {
+      name: "Design",
+      icon: "palette"
+    },
+    {
+      name: "Music",
+      icon: "music"
+    },
+    {
+      name: "Photography",
+      icon: "camera"
+    },
+    {
+      name: "Reading",
+      icon: "book"
+    },
+    {
+      name: "Travel",
+      icon: "plane"
+    },
+    {
+      name: "Coffee",
+      icon: "coffee"
+    }
+  ],
   intro: {
     content: "<p>Hi there! 👋 I&#39;m a passionate full-stack developer and designer with over 8 years of experience building beautiful, functional, and user-centered digital experiences. I love turning complex problems into simple, elegant solutions.</p>\n"
   },
-  sections: {
-    items: [
-      {
-        id: "background",
-        title: "Background",
-        icon: "briefcase",
-        content: "I started my journey in tech back in 2015, teaching myself to code while working as a graphic designer. Since then, I've worked with startups, agencies, and enterprise companies, wearing many hats and learning something new every day. I believe in continuous learning and staying curious about emerging technologies."
-      },
-      {
-        id: "approach",
-        title: "My Approach",
-        icon: "target",
-        content: "I believe great products are built at the intersection of design, technology, and user needs. My approach combines technical expertise with design thinking to create solutions that not only work well but feel right. I'm all about clean code, intuitive interfaces, and smooth collaboration."
-      },
-      {
-        id: "passion",
-        title: "What Drives Me",
-        icon: "heart",
-        content: "I'm passionate about creating digital products that make people's lives easier and more enjoyable. Whether it's a sleek web app, a responsive website, or a complex system, I pour my heart into every project. I love the moment when users say \"wow, this just works!\" – that's what keeps me going."
-      }
-    ],
-    content: ""
-  },
-  socialLinks: {
-    items: [
-      {
-        platform: "GitHub",
-        url: "https://github.com/johndoe",
-        icon: "github"
-      },
-      {
-        platform: "LinkedIn",
-        url: "https://linkedin.com/in/johndoe",
-        icon: "linkedin"
-      },
-      {
-        platform: "Twitter",
-        url: "https://twitter.com/johndoe",
-        icon: "twitter"
-      },
-      {
-        platform: "Website",
-        url: "https://johndoe.com",
-        icon: "globe"
-      }
-    ],
-    content: ""
-  },
-  stats: {
-    items: [
-      {
-        label: "Years Experience",
-        value: "8+",
-        icon: "calendar"
-      },
-      {
-        label: "Projects Completed",
-        value: "150+",
-        icon: "briefcase"
-      },
-      {
-        label: "Happy Clients",
-        value: "80+",
-        icon: "heart"
-      },
-      {
-        label: "Certifications",
-        value: "12",
-        icon: "award"
-      }
-    ],
-    content: ""
-  }
-} as const;
+  sections: [
+    {
+      id: "background",
+      title: "Background",
+      icon: "briefcase",
+      content: "I started my journey in tech back in 2015, teaching myself to code while working as a graphic designer. Since then, I've worked with startups, agencies, and enterprise companies, wearing many hats and learning something new every day. I believe in continuous learning and staying curious about emerging technologies."
+    },
+    {
+      id: "approach",
+      title: "My Approach",
+      icon: "target",
+      content: "I believe great products are built at the intersection of design, technology, and user needs. My approach combines technical expertise with design thinking to create solutions that not only work well but feel right. I'm all about clean code, intuitive interfaces, and smooth collaboration."
+    },
+    {
+      id: "passion",
+      title: "What Drives Me",
+      icon: "heart",
+      content: "I'm passionate about creating digital products that make people's lives easier and more enjoyable. Whether it's a sleek web app, a responsive website, or a complex system, I pour my heart into every project. I love the moment when users say \"wow, this just works!\" – that's what keeps me going."
+    }
+  ],
+  socialLinks: [
+    {
+      platform: "GitHub",
+      url: "https://github.com/johndoe",
+      icon: "github"
+    },
+    {
+      platform: "LinkedIn",
+      url: "https://linkedin.com/in/johndoe",
+      icon: "linkedin"
+    },
+    {
+      platform: "Twitter",
+      url: "https://twitter.com/johndoe",
+      icon: "twitter"
+    },
+    {
+      platform: "Website",
+      url: "https://johndoe.com",
+      icon: "globe"
+    }
+  ],
+  stats: [
+    {
+      label: "Years Experience",
+      value: "8+",
+      icon: "calendar"
+    },
+    {
+      label: "Projects Completed",
+      value: "150+",
+      icon: "briefcase"
+    },
+    {
+      label: "Happy Clients",
+      value: "80+",
+      icon: "heart"
+    },
+    {
+      label: "Certifications",
+      value: "12",
+      icon: "award"
+    }
+  ]
+} as const satisfies unknown;
 export default data;

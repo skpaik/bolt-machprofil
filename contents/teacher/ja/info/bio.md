@@ -1,5 +1,5 @@
 ---
-# Bio for language: jp
+# Bio for language: en
 fullName: "Mofiz Rahman"
 title: "Software Engineer"
 summary: "Experienced developer passionate about building scalable systems and mentoring others."

@@ -27,8 +27,6 @@ export default function ClientPage() {
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
   };
 
-  const summary = aboutContent.intro;
-
   const experiences = contentData.experience_list;
   const education = contentData.education_list;
   const skills = contentData.skill_list;
@@ -175,7 +173,7 @@ export default function ClientPage() {
                   {showLucidIcon("file-text", "w-5 h-5 text-primary")}
                   {langI18n.professional_summary}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">{summary}</p>
+                <p className="text-muted-foreground leading-relaxed">{aboutContent.intro.tagline}</p>
               </div>
 
               <hr className="border-border print:hidden" />

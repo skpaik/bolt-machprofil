@@ -6,9 +6,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {AboutContent} from "@/lib/types/about.contract";
+import {emptyAboutContent} from "@/data/configs/constants/empty.data";
 
 export default function ClientPage() {
-  const { langI18n, contentData } = usePortfolio();
+  const { langI18n, contentData, profileType, languageType } = usePortfolio();
+
+  const { data: about_content, loading, error } = useContentLoader<AboutContent>(
+      profileType,
+      languageType,
+      "about_content",
+      emptyAboutContent
+  );
 
   const {
     bio,
@@ -16,9 +26,9 @@ export default function ClientPage() {
     sections = [],
     stats = [],
     interests = [],
-    socialLinks = [],
+    socialLinks,
     cta,
-  } = contentData.about_content;
+  } = about_content;
 
   return (
       <>
@@ -67,7 +77,8 @@ export default function ClientPage() {
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-3 justify-center md:justify-start">
+              {socialLinks&&
+                  <div className="flex gap-3 justify-center md:justify-start">
                 {socialLinks.map((social) => {
                   return (
                       <a
@@ -83,6 +94,7 @@ export default function ClientPage() {
                   );
                 })}
               </div>
+          }
             </div>
           </div>
         </div>
@@ -91,7 +103,7 @@ export default function ClientPage() {
         {intro && (
             <Card className="mb-12 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
               <CardContent className="p-6 sm:p-8">
-                <p className="text-lg leading-relaxed">{intro}</p>
+                <p className="text-lg leading-relaxed">{intro.tagline}</p>
               </CardContent>
             </Card>
         )}

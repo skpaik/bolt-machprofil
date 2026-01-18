@@ -207,5 +207,5 @@ export const data = [
     ],
     content: "<p>Full blog post content here...</p>\n"
   }
-] as const;
+] as const satisfies unknown;
 export default data;

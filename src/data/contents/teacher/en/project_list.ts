@@ -351,5 +351,5 @@ export const data = [
     status: "Completed",
     content: ""
   }
-] as const;
+] as const satisfies unknown;
 export default data;
