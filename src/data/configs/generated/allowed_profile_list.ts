@@ -45,4 +45,4 @@ export const allowed_profiles = [
       }
     ]
   }
-];
+] as const;
