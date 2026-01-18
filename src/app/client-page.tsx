@@ -15,27 +15,57 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import {useContentLoader} from "@/components/hooks/use-content-loader";
 import {AboutContent} from "@/lib/types/about.contract";
 import {emptyAboutContent} from "@/data/configs/constants/empty.data";
+import {Experience, Project, Service, Skills, Testimonial} from "@/lib/types/portfolio";
 
 export default function ClientPage() {
-  const { langI18n, contentData, profileType, languageType } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
 
-  const { data: about_content, loading, error } = useContentLoader<AboutContent>(
+  const {data: about_content, loading, error} = useContentLoader<AboutContent>(
       profileType,
       languageType,
       "about_content",
       emptyAboutContent
   );
+
+  const {data: experiences} = useContentLoader<Experience[]>(
+      profileType,
+      languageType,
+      "experience_list",
+      []
+  );
+
+  const {data: projects} = useContentLoader<Project[]>(
+      profileType,
+      languageType,
+      "project_list",
+      []
+  );
+
+  const {data: skills} = useContentLoader<Skills[]>(
+      profileType,
+      languageType,
+      "skill_list",
+      []
+  );
+
+  const {data: testimonials} = useContentLoader<Testimonial[]>(
+      profileType,
+      languageType,
+      "testimonial_list",
+      []
+  );
+
+  const {data: services} = useContentLoader<Service[]>(
+      profileType,
+      languageType,
+      "service_list",
+      []
+  );
+
   // Aggregate data from existing sources
   const profile = about_content.bio;
   // Get social links from profile or about data
   const socialLinks = about_content.socialLinks.filter((link) => link.url);
-
-  // Get experiences and calculate stats
-  const experiences = contentData.experience_list;
-  const projects = contentData.project_list;
-  const skills = contentData.skill_list;
-  const testimonials = contentData.testimonial_list;
-  const services = contentData.service_list;
 
   // Calculate statistics
   const stats = useMemo(() => {

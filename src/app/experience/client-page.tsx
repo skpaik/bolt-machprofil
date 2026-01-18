@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import {useContentLoader} from "@/components/hooks/use-content-loader";
-import {BlogPost, Experience} from "@/lib/types/portfolio";
+import { Experience } from "@/lib/types/portfolio";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
