@@ -16,7 +16,7 @@ function main() {
     // generateRegistry();
     convertMdToTs();
     // generateJSONContent();
-    convertContentListToObject();
+    // convertContentListToObject();
   } catch (error) {
     console.error("❌ Error generating content:", error);
     process.exit(1);

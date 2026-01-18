@@ -4,9 +4,6 @@ import {toTsObject} from "@/lib/scripts/helpers/to-ts-helper";
 
 export const FILE_MAP = {
     "info.ts": "personal_info.ts",
-    "home.ts": "personal-home.ts",
-    "profile.ts": "personal-profile.ts",
-    "static_contents.ts": "static_contents-1.ts",
     "about_me.ts": "about_content.ts",
 } as const;
 
@@ -54,6 +51,7 @@ function processFile(filePath: string) {
     if (!outputFileName) return;
 
     const source = fs.readFileSync(filePath, "utf-8");
+
     const arrayData = extractArrayData(source);
     if (!arrayData) return;
 
@@ -68,9 +66,6 @@ export default data;
 
     console.log(`✔ ${fileName} → ${outputFileName}`);
 }
-
-walk(ROOT).forEach(processFile);
-
 
 function main() {
     walk(ROOT).forEach(processFile);

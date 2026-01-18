@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { AllowedProfile, LanguageItem } from "@/lib/types/portfolio";
-import {LanguageType} from "@/lib/types/type.config";
+import { LanguageType, ProfileType } from "@/lib/types/type.config";
 
 /* ============================
  * Paths
@@ -110,7 +110,7 @@ function main(): void {
         if (allowedLanguages.length === 0) continue;
 
         allowedProfiles.push({
-            value: profile,
+            value: profile as ProfileType,
             label: toTitleCase(profile),
             description: "Clean & simple",
             allowed_languages: allowedLanguages,
