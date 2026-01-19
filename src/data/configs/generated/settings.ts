@@ -8,5 +8,5 @@ export const settings_const = {
   showProfileChangeButton: true,
   showTemplateChangeButton: true,
   showThemeChangeButton: true,
-  content: "\nNA\n",
+  content: "\nNA\n"
 } as const;
