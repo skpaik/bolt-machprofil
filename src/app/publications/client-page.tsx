@@ -19,9 +19,10 @@ import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
+import {AppConfig} from "@/data/configs/constants/app-config";
 
 export default function ClientPage() {
-  const { appConfig, langI18n, profileType, languageType } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<string>("all");
@@ -40,7 +41,7 @@ export default function ClientPage() {
   );
 
   // Use real data if available, otherwise use sample data
-  const ITEMS_PER_PAGE = appConfig.item_per_page;
+  const ITEMS_PER_PAGE = AppConfig.item_per_page;
 
   // Filter and search publications
   const filteredPublications = useMemo(() => {

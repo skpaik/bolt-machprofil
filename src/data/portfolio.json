@@ -1,7 +1,4 @@
 {
-  "app_config": {
-    "item_per_page": 4
-  },
   "profiles": {
     "developer": {
       "name": "Mofiz Rahman",

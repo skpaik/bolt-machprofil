@@ -10,11 +10,27 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/lib/hooks/use-toast";
 import { PageHeading } from "@/components/shared/PageHeading";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {AboutContent} from "@/lib/types/about.contract";
+import {emptyAboutContent} from "@/data/configs/constants/empty.data";
 
 export default function ClientPage() {
-  const { appData, langI18n } = usePortfolio();
-
   const { toast } = useToast();
+
+  const { langI18n, profileType, languageType } = usePortfolio();
+
+  const {
+    data: about_content,
+    loading,
+    error,
+  } = useContentLoader<AboutContent>(
+      profileType,
+      languageType,
+      "about_content",
+      emptyAboutContent,
+  );
+  
+  const profile = about_content.bio;
 
   const emptyForm = {
     name: "",
@@ -63,10 +79,10 @@ export default function ClientPage() {
                     {langI18n.email}
                   </p>
                   <a
-                    href={`mailto:${appData.email}`}
+                    href={`mailto:${profile.email}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {appData.email}
+                    {profile.email}
                   </a>
                 </div>
               </div>
@@ -80,10 +96,10 @@ export default function ClientPage() {
                     {langI18n.phone}
                   </p>
                   <a
-                    href={`tel:${appData.phone}`}
+                    href={`tel:${profile.phone}`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {appData.phone}
+                    {profile.phone}
                   </a>
                 </div>
               </div>
@@ -96,7 +112,7 @@ export default function ClientPage() {
                   <p className="font-medium text-foreground mb-1">
                     {langI18n.location}
                   </p>
-                  <p className="text-muted-foreground">{appData.location}</p>
+                  <p className="text-muted-foreground">{profile.location}</p>
                 </div>
               </div>
             </div>
@@ -107,7 +123,7 @@ export default function ClientPage() {
               {langI18n.connect_with_me}
             </h2>
             <div className="flex flex-wrap gap-3">
-              {Object.entries(appData.social).map(([platform, url]) => (
+              {Object.entries(profile.social).map(([platform, url]) => (
                 <Button
                   key={platform}
                   variant="outline"

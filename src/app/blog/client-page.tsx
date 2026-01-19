@@ -21,12 +21,13 @@ import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { PageHeading } from "@/components/shared/PageHeading";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
+import {AppConfig} from "@/data/configs/constants/app-config";
 
 export default function ClientPage() {
-  const { appConfig, langI18n, profileType, languageType } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const POSTS_PER_PAGE = appConfig.item_per_page;
+  const POSTS_PER_PAGE = AppConfig.item_per_page;
 
   const {
     data: posts,

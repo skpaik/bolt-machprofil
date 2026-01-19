@@ -14,11 +14,12 @@ import { SortOption } from "@/lib/types/type.config";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
+import {AppConfig} from "@/data/configs/constants/app-config";
 
 type ViewMode = "gallery" | "albums";
 
 export default function ClientPage() {
-  const { appConfig, langI18n, profileType, languageType } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -153,15 +154,15 @@ export default function ClientPage() {
     searchQuery,
     sortBy,
   ]);
-
+  const ITEMS_PER_PAGE = AppConfig.item_per_page;
   const totalPhotos = filteredPhotos.length;
-  const totalPages = Math.ceil(totalPhotos / (appConfig?.item_per_page || 12));
+  const totalPages = Math.ceil(totalPhotos / ITEMS_PER_PAGE);
 
   const currentPhotos = useMemo(() => {
-    const startIndex = (currentPage - 1) * (appConfig?.item_per_page || 12);
-    const endIndex = startIndex + (appConfig?.item_per_page || 12);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
     return filteredPhotos.slice(startIndex, endIndex);
-  }, [filteredPhotos, currentPage, appConfig]);
+  }, [filteredPhotos, currentPage]);
 
   // Get page from URL or default to 1
   const pageParam = searchParams?.get("page");

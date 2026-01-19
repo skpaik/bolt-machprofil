@@ -7,30 +7,61 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import {useContentLoader} from "@/components/hooks/use-content-loader";
+import {AboutContent} from "@/lib/types/about.contract";
+import {emptyAboutContent} from "@/data/configs/constants/empty.data";
+import {Experience, Project, Certificate, Skills, Testimonial, Education} from "@/lib/types/portfolio";
 
 export default function ClientPage() {
-  const { langI18n, contentData } = usePortfolio();
-  const aboutContent = contentData.about_content;
+  const { langI18n, profileType, languageType} = usePortfolio();
+  const {data: aboutContent, loading, error,} = useContentLoader<AboutContent>(
+      profileType,
+      languageType,
+      "about_content",
+      emptyAboutContent,
+  );
+
+  const {data: experiences} = useContentLoader<Experience[]>(
+      profileType,
+      languageType,
+      "experience_list",
+      [],
+  );
+
+  const {data: skills} = useContentLoader<Skills[]>(
+      profileType,
+      languageType,
+      "skill_list",
+      [],
+  );
+
+  const {data: testimonials} = useContentLoader<Testimonial[]>(
+      profileType,
+      languageType,
+      "testimonial_list",
+      [],
+  );
+
+  const {data: certificates} = useContentLoader<Certificate[]>(
+      profileType,
+      languageType,
+      "certificate_list",
+      [],
+  );
+
+  const {data: education,} = useContentLoader<Education[]>(
+      profileType,
+      languageType,
+      "education_list",
+      [],
+  );
+
+  //const aboutContent = about_content;
   const socialLinks = aboutContent.socialLinks;
 
   // Aggregate data from different sources
-  const profile = aboutContent.bio || {
-    name: "Mofiz Rahman",
-    title: "Scientist @ Environment",
-    email: "mofiz@rahman.com",
-    phone: "+1 (555) 123-4567",
-    location: "Cottbus-Ströbitz, Brandenburg, Germany",
-    website: "https://johndoe.com",
-    linkedin: "linkedin.com/in/johndoe",
-    github: "github.com/johndoe",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
-  };
+  const profile = aboutContent.bio;
 
-  const experiences = contentData.experience_list;
-  const education = contentData.education_list;
-  const skills = contentData.skill_list;
-  const certificates = contentData.certificate_list;
 
   const resumePdfUrl = profile.resumeUrl || "/resume.pdf";
 

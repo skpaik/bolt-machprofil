@@ -11,7 +11,7 @@ import { AboutContent } from "@/lib/types/about.contract";
 import { emptyAboutContent } from "@/data/configs/constants/empty.data";
 
 export default function ClientPage() {
-  const { langI18n, contentData, profileType, languageType } = usePortfolio();
+  const { langI18n, profileType, languageType } = usePortfolio();
 
   const {
     data: about_content,

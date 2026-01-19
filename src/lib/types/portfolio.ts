@@ -255,10 +255,6 @@ export interface Service extends BaseContent {
   tags?: string[];
 }
 
-export interface AppConfig {
-  item_per_page: number;
-}
-
 /*
 export interface ContentData {
   about?: AboutContentData;
@@ -297,14 +293,6 @@ export interface TermsPrivacy extends BaseContent {
 export interface StaticContentData {
   terms: TermsPrivacy;
   privacy: TermsPrivacy;
-}
-
-export interface AppData extends ProfileBio {
-  bio: string;
-  avatar: string;
-
-  //configData: ConfigData;
-  social: SocialLinks;
 }
 
 export interface SettingSchema {
@@ -346,14 +334,11 @@ export interface Publication extends BaseContent {
 }
 
 export interface PortfolioContextType {
-  appData: AppData;
-  contentData: ContentData;
-  appConfig: AppConfig;
+  langI18n: LanguageI18n;
   profileType: ProfileType;
   setProfileType: (type: ProfileType) => void;
   templateType: TemplateType;
   setTemplateType: (type: TemplateType) => void;
-  langI18n: LanguageI18n;
   languageType: LanguageType;
   setLanguageType: (type: LanguageType) => void;
   themeType: ThemeType;

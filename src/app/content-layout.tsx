@@ -9,6 +9,7 @@ import {emptyAboutContent} from "@/data/configs/constants/empty.data";
 
 export default function ContentLayout({children}: { children: React.ReactNode }) {
     const {profileType, languageType,} = usePortfolio();
+
     const {data: about_content} = useContentLoader<AboutContent>(
         profileType,
         languageType,
