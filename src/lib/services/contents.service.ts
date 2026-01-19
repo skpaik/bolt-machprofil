@@ -1,7 +1,5 @@
-//src/lib/services/menu.service.ts
-import { MenuConfig } from "@/data/configs/generated/menu-config";
+//src/lib/services/contents.service.ts
 import { BlogPost } from "@/lib/types/portfolio";
-//import {loadContentFile} from "@/lib/services/loadContent";
 
 export class ContentsService {
   private static async loadContentFile(
