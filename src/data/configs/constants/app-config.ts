@@ -1,3 +1,3 @@
 export class AppConfig {
-    static item_per_page= 4;
+  static item_per_page = 4;
 }

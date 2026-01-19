@@ -6,25 +6,25 @@ export const allowed_profiles = [
     allowed_languages: [
       {
         value: "de",
-        label: "German"
+        label: "German",
       },
       {
         value: "en",
-        label: "English"
+        label: "English",
       },
       {
         value: "es",
-        label: "Spanish"
+        label: "Spanish",
       },
       {
         value: "fr",
-        label: "French"
+        label: "French",
       },
       {
         value: "ja",
-        label: "Japanese"
-      }
-    ]
+        label: "Japanese",
+      },
+    ],
   },
   {
     value: "teacher",
@@ -33,16 +33,16 @@ export const allowed_profiles = [
     allowed_languages: [
       {
         value: "en",
-        label: "English"
+        label: "English",
       },
       {
         value: "fr",
-        label: "French"
+        label: "French",
       },
       {
         value: "ja",
-        label: "Japanese"
-      }
-    ]
-  }
+        label: "Japanese",
+      },
+    ],
+  },
 ];

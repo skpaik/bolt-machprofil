@@ -14,7 +14,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
 import { Skills } from "@/lib/types/portfolio";
-import {AppConfig} from "@/data/configs/constants/app-config";
+import { AppConfig } from "@/data/configs/constants/app-config";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();

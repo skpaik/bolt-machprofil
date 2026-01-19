@@ -19,7 +19,7 @@ import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import {AppConfig} from "@/data/configs/constants/app-config";
+import { AppConfig } from "@/data/configs/constants/app-config";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();

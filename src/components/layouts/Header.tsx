@@ -14,7 +14,7 @@ export interface HeaderProps {
 }
 
 export default function Header({ siteTitle }: HeaderProps) {
-   const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {

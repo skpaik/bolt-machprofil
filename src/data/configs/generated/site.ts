@@ -9,6 +9,13 @@ export const site_const = {
   theme: "light",
   favicon: "/favicon.ico",
   socialPreview: "/images/social-card.png",
-  keywords: ["portfolio", "developer", "react", "nextjs", "typescript", "software engineer"],
-  content: ""
+  keywords: [
+    "portfolio",
+    "developer",
+    "react",
+    "nextjs",
+    "typescript",
+    "software engineer",
+  ],
+  content: "",
 } as const;

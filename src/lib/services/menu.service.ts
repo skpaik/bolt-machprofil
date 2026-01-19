@@ -15,23 +15,24 @@ export class MenuService {
    * @param desktopLimit number of primary items to show on desktop
    */
   static getMenu(
-      profileType: ProfileType = settings_const.activeProfile,
-      lang: SupportedLang = settings_const.activeLanguage,
-      isMobile: boolean,
-      mobileLimit = 4,
-      desktopLimit = 5,
+    profileType: ProfileType = settings_const.activeProfile,
+    lang: SupportedLang = settings_const.activeLanguage,
+    isMobile: boolean,
+    mobileLimit = 4,
+    desktopLimit = 5,
   ) {
-      const langWiseMenuList = MenuConfig.menuList[lang] ?? MenuConfig.menuList.en;
+    const langWiseMenuList =
+      MenuConfig.menuList[lang] ?? MenuConfig.menuList.en;
 
-      const limit = isMobile ? mobileLimit : desktopLimit;
+    const limit = isMobile ? mobileLimit : desktopLimit;
 
-      const primaryMenuItems = langWiseMenuList.primary.slice(0, limit);
+    const primaryMenuItems = langWiseMenuList.primary.slice(0, limit);
 
-      const overflowPrimary = langWiseMenuList.primary.slice(limit);
+    const overflowPrimary = langWiseMenuList.primary.slice(limit);
 
-      const moreMenuItems = [...overflowPrimary, ...langWiseMenuList.more,];
+    const moreMenuItems = [...overflowPrimary, ...langWiseMenuList.more];
 
-      return {primaryMenuItems, moreMenuItems};
+    return { primaryMenuItems, moreMenuItems };
   }
 
   static getMenuOld(

@@ -7,53 +7,64 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
-import {useContentLoader} from "@/components/hooks/use-content-loader";
-import {AboutContent} from "@/lib/types/about.contract";
-import {emptyAboutContent} from "@/data/configs/constants/empty.data";
-import {Experience, Project, Certificate, Skills, Testimonial, Education} from "@/lib/types/portfolio";
+import { useContentLoader } from "@/components/hooks/use-content-loader";
+import { AboutContent } from "@/lib/types/about.contract";
+import { emptyAboutContent } from "@/data/configs/constants/empty.data";
+import {
+  Experience,
+  Project,
+  Certificate,
+  Skills,
+  Testimonial,
+  Education,
+} from "@/lib/types/portfolio";
 
 export default function ClientPage() {
-  const { langI18n, profileType, languageType} = usePortfolio();
-  const {data: aboutContent, loading, error,} = useContentLoader<AboutContent>(
-      profileType,
-      languageType,
-      "about_content",
-      emptyAboutContent,
+  const { langI18n, profileType, languageType } = usePortfolio();
+  const {
+    data: aboutContent,
+    loading,
+    error,
+  } = useContentLoader<AboutContent>(
+    profileType,
+    languageType,
+    "about_content",
+    emptyAboutContent,
   );
 
-  const {data: experiences} = useContentLoader<Experience[]>(
-      profileType,
-      languageType,
-      "experience_list",
-      [],
+  const { data: experiences } = useContentLoader<Experience[]>(
+    profileType,
+    languageType,
+    "experience_list",
+    [],
   );
 
-  const {data: skills} = useContentLoader<Skills[]>(
-      profileType,
-      languageType,
-      "skill_list",
-      [],
+  const { data: skills } = useContentLoader<Skills[]>(
+    profileType,
+    languageType,
+    "skill_list",
+    [],
   );
 
-  const {data: testimonials} = useContentLoader<Testimonial[]>(
-      profileType,
-      languageType,
-      "testimonial_list",
-      [],
+  const { data: testimonials } = useContentLoader<Testimonial[]>(
+    profileType,
+    languageType,
+    "testimonial_list",
+    [],
   );
 
-  const {data: certificates} = useContentLoader<Certificate[]>(
-      profileType,
-      languageType,
-      "certificate_list",
-      [],
+  const { data: certificates } = useContentLoader<Certificate[]>(
+    profileType,
+    languageType,
+    "certificate_list",
+    [],
   );
 
-  const {data: education,} = useContentLoader<Education[]>(
-      profileType,
-      languageType,
-      "education_list",
-      [],
+  const { data: education } = useContentLoader<Education[]>(
+    profileType,
+    languageType,
+    "education_list",
+    [],
   );
 
   //const aboutContent = about_content;
@@ -61,7 +72,6 @@ export default function ClientPage() {
 
   // Aggregate data from different sources
   const profile = aboutContent.bio;
-
 
   const resumePdfUrl = profile.resumeUrl || "/resume.pdf";
 

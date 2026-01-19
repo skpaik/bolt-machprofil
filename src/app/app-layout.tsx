@@ -13,7 +13,7 @@ import { DefaultSkeleton } from "@/components/suspense/default-skeleton";
 import ContentLayout from "@/app/content-layout";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
-   const pathname = usePathname();
+  const pathname = usePathname();
   const fallback = suspenseFallbacks[pathname] ?? <DefaultSkeleton />;
 
   return (
@@ -21,9 +21,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <AnimatedLayout>
         <TemplateWrapper>
           <Suspense fallback={fallback}>
-            <ContentLayout>
-              {children}
-            </ContentLayout>
+            <ContentLayout>{children}</ContentLayout>
           </Suspense>
           <BottomNav />
         </TemplateWrapper>

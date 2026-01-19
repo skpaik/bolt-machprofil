@@ -14,7 +14,7 @@ import { SortOption } from "@/lib/types/type.config";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import {AppConfig} from "@/data/configs/constants/app-config";
+import { AppConfig } from "@/data/configs/constants/app-config";
 
 type ViewMode = "gallery" | "albums";
 

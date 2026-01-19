@@ -10,9 +10,9 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/lib/hooks/use-toast";
 import { PageHeading } from "@/components/shared/PageHeading";
 import { showLucidIcon } from "@/components/lucid-icon-map";
-import {useContentLoader} from "@/components/hooks/use-content-loader";
-import {AboutContent} from "@/lib/types/about.contract";
-import {emptyAboutContent} from "@/data/configs/constants/empty.data";
+import { useContentLoader } from "@/components/hooks/use-content-loader";
+import { AboutContent } from "@/lib/types/about.contract";
+import { emptyAboutContent } from "@/data/configs/constants/empty.data";
 
 export default function ClientPage() {
   const { toast } = useToast();
@@ -24,12 +24,12 @@ export default function ClientPage() {
     loading,
     error,
   } = useContentLoader<AboutContent>(
-      profileType,
-      languageType,
-      "about_content",
-      emptyAboutContent,
+    profileType,
+    languageType,
+    "about_content",
+    emptyAboutContent,
   );
-  
+
   const profile = about_content.bio;
 
   const emptyForm = {
