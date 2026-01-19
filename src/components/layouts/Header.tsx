@@ -9,9 +9,12 @@ import { ProfileSwitcher } from "@/components/switchers/profile-switcher";
 import { ThemeSwitcher } from "@/components/switchers/theme-switcher";
 import { settings_const } from "@/data/configs/generated/settings";
 
-export default function Header() {
-  const { appData } = usePortfolio();
-  const [isVisible, setIsVisible] = useState(true);
+export interface HeaderProps {
+  siteTitle: string;
+}
+
+export default function Header({ siteTitle }: HeaderProps) {
+   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -46,7 +49,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold text-foreground">
-              {appData.name}
+              {siteTitle}
             </span>
           </Link>
           {settings_const.showProfileChangeButton && <ProfileSwitcher />}

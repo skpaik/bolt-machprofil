@@ -33,7 +33,7 @@ export class MenuService {
 
       return {primaryMenuItems, moreMenuItems};
   }
-  
+
   static getMenuOld(
     profileType: ProfileType = settings_const.activeProfile,
     lang: SupportedLang = settings_const.activeLanguage,
