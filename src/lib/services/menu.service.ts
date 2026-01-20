@@ -1,6 +1,6 @@
 //src/lib/services/menu.service.ts
 import { BottomMenuItem } from "@/lib/types/portfolio";
-import { MenuConfig } from "@/data/configs/generated/menu-config";
+import { MenuConfig } from "@/data/configs/constants/menu-config";
 import { settings_const } from "@/data/configs/generated/settings";
 import { ProfileType } from "@/lib/types/type.config";
 

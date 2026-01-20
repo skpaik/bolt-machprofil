@@ -4,6 +4,7 @@ import { convertMdToTs } from "@/lib/scripts/convert-md-to-ts";
 import { generateJSONContent } from "@/lib/scripts/generate-json-content";
 import { generateMDF } from "@/lib/scripts/json-to-md";
 import { mainToConfigTs } from "@/lib/scripts/generate-config-ts";
+import { generateContentItemCounts } from "@/lib/scripts/generate-content-item-counts";
 
 // Run all preparation tasks
 function main() {
@@ -15,6 +16,7 @@ function main() {
     convertMdToTs();
     // generateJSONContent();
     // convertContentListToObject();
+    generateContentItemCounts();
   } catch (error) {
     console.error("❌ Error generating content:", error);
     process.exit(1);
