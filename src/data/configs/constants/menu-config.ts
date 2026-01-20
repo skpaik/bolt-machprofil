@@ -12,7 +12,7 @@ type MenuGroup = {
 };
 
 export class MenuConfig {
-  public static  ALLOWED_MENU_ITEMS: BottomMenuItem[] = [
+  public static ALLOWED_MENU_ITEMS: BottomMenuItem[] = [
     { key: "home", path: "/", icon: "home" },
     { key: "about", path: "/about", icon: "user" },
     { key: "projects", path: "/projects", icon: "brief-case" },
@@ -30,7 +30,7 @@ export class MenuConfig {
     { key: "privacy", path: "/legal/privacy", icon: "mail" },
     { key: "terms", path: "/legal/terms", icon: "mail" },
   ];
-  public static  MENU_KEY_TO_CONTENT_KEY: Record<string, string> = {
+  public static MENU_KEY_TO_CONTENT_KEY: Record<string, string> = {
     home: "about_content",
     about: "about_content",
     projects: "project_list",
