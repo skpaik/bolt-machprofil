@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
-import {CONTENT_ITEM_COUNTS} from "@/data/configs/generated/content-item-counts";
-import {toTsObject} from "@/lib/scripts/helpers/to-ts-helper";
+import { CONTENT_ITEM_COUNTS } from "@/data/configs/generated/content-item-counts";
+import { toTsObject } from "@/lib/scripts/helpers/to-ts-helper";
 
 /* -------------------------------------------------- */
 /* Types                                               */
@@ -19,10 +19,10 @@ type ContentItemStats = {
 /* -------------------------------------------------- */
 /* Generator                                           */
 /* -------------------------------------------------- */
-const outputDir = path.join(process.cwd(), "src/data/configs/generated")
+const outputDir = path.join(process.cwd(), "src/data/configs/generated");
 export function main(): ContentItemStats {
   const stats: ContentItemStats = {
-    profile_count: 0
+    profile_count: 0,
   };
 
   const profiles = Object.keys(CONTENT_ITEM_COUNTS);
@@ -40,7 +40,7 @@ export function main(): ContentItemStats {
 
     stats[profile] = {
       lang_count: langs.length,
-      item_count: totalItems
+      item_count: totalItems,
     };
   }
 
@@ -49,12 +49,12 @@ export function main(): ContentItemStats {
   fs.mkdirSync(outputDir, { recursive: true });
 
   fs.writeFileSync(
-      path.join(outputDir, "content-item-stats.ts"),
-      `export const CONTENT_ITEM_STATS = ${toTsObject(stats)} as const;\n`
+    path.join(outputDir, "content-item-stats.ts"),
+    `export const CONTENT_ITEM_STATS = ${toTsObject(stats)} as const;\n`,
   );
 
   return stats;
 }
-export function generateContentItemStats(){
+export function generateContentItemStats() {
   main();
 }
