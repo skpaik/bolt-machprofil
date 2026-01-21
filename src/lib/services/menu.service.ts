@@ -12,14 +12,15 @@ type ContentItemCounts =
 export class MenuService {
   /**
    * Returns both primary and more menu items based on viewport
-   * @param lang
+   * @param profileType
+   * @param languageType
    * @param isMobile boolean
    * @param mobileLimit number of primary items to show on mobile
    * @param desktopLimit number of primary items to show on desktop
    */
   static getMenu(
     profileType: ProfileType = settings_const.activeProfile,
-    lang: string = settings_const.activeLanguage,
+    languageType: LanguageType = settings_const.activeLanguage,
     isMobile: boolean,
     mobileLimit = 4,
     desktopLimit = 5,
@@ -30,7 +31,7 @@ export class MenuService {
       CONTENT_ITEM_COUNTS[profileType as keyof typeof CONTENT_ITEM_COUNTS];
 
     const contentCounts = ((profileCounts &&
-      (profileCounts as Record<string, unknown>)[lang]) ??
+      (profileCounts as Record<string, unknown>)[languageType]) ??
       {}) as ContentItemCounts;
 
     //const hiddenKeys = new Set(menu_const.hide);
