@@ -7,10 +7,7 @@ import { LanguageSwitcher } from "@/components/switchers/language-switcher";
 import { ProfileSwitcher } from "@/components/switchers/profile-switcher";
 import { ThemeSwitcher } from "@/components/switchers/theme-switcher";
 import { settings_const } from "@/data/configs/generated/settings";
-import {
-  profileLanguageMap,
-  ProfileType,
-} from "@/lib/types/type.config";
+import { profileLanguageMap, ProfileType } from "@/lib/types/type.config";
 import { ConfigData } from "@/data/configs/constants/config-data";
 
 export interface HeaderProps {

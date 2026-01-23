@@ -28,23 +28,25 @@ export function ThemeSwitcher() {
           <span className="hidden sm:inline">{currentTheme.label}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {ConfigData.themeList.map((t) => {
-          return (
-            <DropdownMenuItem
-              key={t.value}
-              onClick={() => setThemeType(t.value as ThemeType)}
-              className="flex items-center gap-2 cursor-pointer"
-            >
-              {showLucidIcon(t.icon, "", 16)}
-              <span className="font-medium">{t.label}</span>
-              {themeType === t.value && (
-                <span className="ml-auto text-xs">✓</span>
-              )}
-            </DropdownMenuItem>
-          );
-        })}
-      </DropdownMenuContent>
+      {ConfigData.themeList.length > 1 && (
+        <DropdownMenuContent align="end">
+          {ConfigData.themeList.map((t) => {
+            return (
+              <DropdownMenuItem
+                key={t.value}
+                onClick={() => setThemeType(t.value as ThemeType)}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                {showLucidIcon(t.icon, "", 16)}
+                <span className="font-medium">{t.label}</span>
+                {themeType === t.value && (
+                  <span className="ml-auto text-xs">✓</span>
+                )}
+              </DropdownMenuItem>
+            );
+          })}
+        </DropdownMenuContent>
+      )}
     </DropdownMenu>
   );
 }

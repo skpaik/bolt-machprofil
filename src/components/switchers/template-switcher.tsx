@@ -27,23 +27,25 @@ export function TemplateSwitcher() {
           <span className="hidden sm:inline">{currentTemplate?.label}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {ConfigData.templateList.map((t) => (
-          <DropdownMenuItem
-            key={t.value}
-            onClick={() => setTemplateType(t.value)}
-            className="flex flex-col items-start gap-1 cursor-pointer"
-          >
-            <div className="flex items-center gap-2">
-              <span className="font-medium">{t.label}</span>
-              {templateType === t.value && <span className="text-xs">✓</span>}
-            </div>
-            <span className="text-xs text-muted-foreground">
-              {t.description}
-            </span>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
+      {ConfigData.templateList.length > 1 && (
+        <DropdownMenuContent align="end">
+          {ConfigData.templateList.map((t) => (
+            <DropdownMenuItem
+              key={t.value}
+              onClick={() => setTemplateType(t.value)}
+              className="flex flex-col items-start gap-1 cursor-pointer"
+            >
+              <div className="flex items-center gap-2">
+                <span className="font-medium">{t.label}</span>
+                {templateType === t.value && <span className="text-xs">✓</span>}
+              </div>
+              <span className="text-xs text-muted-foreground">
+                {t.description}
+              </span>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      )}
     </DropdownMenu>
   );
 }
