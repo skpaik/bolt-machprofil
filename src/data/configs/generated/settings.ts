@@ -4,9 +4,21 @@ export const settings_const = {
   activeLanguage: "en",
   activeTheme: "light",
   activeTemplate: "modern",
-  showLanguageChangeButton: true,
   showProfileChangeButton: true,
+  showLanguageChangeButton: true,
   showTemplateChangeButton: true,
   showThemeChangeButton: true,
+  active: {
+    Profile: "developer",
+    Language: "en",
+    Theme: "light",
+    Template: "modern"
+  },
+  show: {
+    ProfileChangeButton: true,
+    LanguageChangeButton: true,
+    TemplateChangeButton: true,
+    ThemeChangeButton: true
+  },
   content: "\nNA\n"
 } as const;
