@@ -14,9 +14,9 @@ import { profileLanguageMap } from "@/lib/types/type.config";
 
 export function LanguageSwitcher() {
   const { profileType, languageType, setLanguageType } = usePortfolio();
-  const languageList = profileLanguageMap[profileType];
+  const allowedLanguages = profileLanguageMap[profileType];
 
-  const current = languageList.find((t) => t.value === languageType);
+  const current = allowedLanguages.find((t) => t.value === languageType);
 
   return (
     <DropdownMenu>
@@ -26,25 +26,27 @@ export function LanguageSwitcher() {
           <span className="hidden sm:inline">{current?.label}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {languageList.map((t) => (
-          <DropdownMenuItem
-            key={t.value}
-            onClick={() => setLanguageType(t.value)}
-            className="flex flex-col items-start gap-1 cursor-pointer"
-          >
-            <div className="flex items-center gap-2">
-              <span className="font-medium">{t.label}</span>
-              {languageType === t.value && <span className="text-xs">✓</span>}
-            </div>
-            {/*{t.description && (*/}
-            {/*  <span className="text-xs text-muted-foreground">*/}
-            {/*    {t.description}*/}
-            {/*  </span>*/}
-            {/*)}*/}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
+      {allowedLanguages.length > 1 && (
+        <DropdownMenuContent align="end">
+          {allowedLanguages.map((t) => (
+            <DropdownMenuItem
+              key={t.value}
+              onClick={() => setLanguageType(t.value)}
+              className="flex flex-col items-start gap-1 cursor-pointer"
+            >
+              <div className="flex items-center gap-2">
+                <span className="font-medium">{t.label}</span>
+                {languageType === t.value && <span className="text-xs">✓</span>}
+              </div>
+              {/*{t.description && (*/}
+              {/*  <span className="text-xs text-muted-foreground">*/}
+              {/*    {t.description}*/}
+              {/*  </span>*/}
+              {/*)}*/}
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      )}
     </DropdownMenu>
   );
 }

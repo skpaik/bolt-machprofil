@@ -18,7 +18,7 @@ function main() {
     // generateJSONContent();
     // convertContentListToObject();
     generateContentItemCounts();
-    generateContentItemStats();
+    // generateContentItemStats();
   } catch (error) {
     console.error("❌ Error generating content:", error);
     process.exit(1);

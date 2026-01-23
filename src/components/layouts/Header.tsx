@@ -1,21 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePortfolio } from "@/components/context/PortfolioContext";
 import { TemplateSwitcher } from "@/components/switchers/template-switcher";
 import { LanguageSwitcher } from "@/components/switchers/language-switcher";
 import { ProfileSwitcher } from "@/components/switchers/profile-switcher";
 import { ThemeSwitcher } from "@/components/switchers/theme-switcher";
 import { settings_const } from "@/data/configs/generated/settings";
+import {
+  profileLanguageMap,
+  ProfileType,
+} from "@/lib/types/type.config";
+import { ConfigData } from "@/data/configs/constants/config-data";
 
 export interface HeaderProps {
   siteTitle: string;
+  profileType: ProfileType;
 }
 
-export default function Header({ siteTitle }: HeaderProps) {
+export default function Header({ siteTitle, profileType }: HeaderProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const allowedLanguages = profileLanguageMap[profileType];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,8 +58,10 @@ export default function Header({ siteTitle }: HeaderProps) {
               {siteTitle}
             </span>
           </Link>
-          {settings_const.showProfileChangeButton && <ProfileSwitcher />}
-          {settings_const.showLanguageChangeButton && <LanguageSwitcher />}
+          {settings_const.show.ProfileChangeButton &&
+            ConfigData.profileList.length > 1 && <ProfileSwitcher />}
+          {settings_const.show.LanguageChangeButton &&
+            allowedLanguages.length > 1 && <LanguageSwitcher />}
           {settings_const.showTemplateChangeButton && <TemplateSwitcher />}
           {settings_const.showThemeChangeButton && <ThemeSwitcher />}
         </div>

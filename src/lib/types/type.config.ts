@@ -7,14 +7,12 @@ export const profileLanguageMap = Object.fromEntries(
   (typeof allowed_profiles)[number]["allowed_languages"]
 >;
 
-// export type ProfileType = "developer" | "photographer" | "teacher" | "student";
 export type ProfileType = (typeof allowed_profiles)[number]["value"];
 export type LanguageType =
   (typeof allowed_profiles)[number]["allowed_languages"][number]["value"];
 
 export type TemplateType = "modern" | "classic" | "minimal";
-export type LanguageTypeOld = "en" | "de" | "es" | "fr";
-// export type LanguageType = keyof typeof MenuConfig.menuList;
+
 export type ThemeType = "light" | "dark" | "system";
 
 export type SortOption =
@@ -43,3 +41,7 @@ export type SortOption =
   | "year-asc"
   | "citations-desc"
   | "type-asc";
+
+// export type ProfileType = "developer" | "photographer" | "teacher" | "student";
+export type LanguageTypeOld = "en" | "de" | "es" | "fr";
+// export type LanguageType = keyof typeof MenuConfig.menuList;
