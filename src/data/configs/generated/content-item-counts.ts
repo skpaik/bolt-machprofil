@@ -16,7 +16,7 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
+      testimonial_list: 12
     },
     en: {
       about_content: 13,
@@ -31,7 +31,7 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
+      testimonial_list: 12
     },
     es: {
       about_content: 7,
@@ -46,7 +46,7 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
+      testimonial_list: 12
     },
     fr: {
       about_content: 7,
@@ -61,7 +61,7 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
+      testimonial_list: 12
     },
     ja: {
       about_content: 7,
@@ -76,8 +76,8 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
-    },
+      testimonial_list: 12
+    }
   },
   teacher: {
     en: {
@@ -93,7 +93,7 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
+      testimonial_list: 12
     },
     fr: {
       about_content: 7,
@@ -108,7 +108,7 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
+      testimonial_list: 12
     },
     ja: {
       about_content: 7,
@@ -123,7 +123,7 @@ export const CONTENT_ITEM_COUNTS = {
       service_list: 10,
       skill_list: 21,
       static_contents: 2,
-      testimonial_list: 12,
-    },
-  },
+      testimonial_list: 12
+    }
+  }
 } as const;
