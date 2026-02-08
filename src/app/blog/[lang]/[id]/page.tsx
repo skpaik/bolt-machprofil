@@ -27,7 +27,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { lang, id } = await params;
-  const profileType = settings_const.activeProfile as ProfileType;
+  const profileType: ProfileType = settings_const.activeProfile;
 
   try {
     const { post } = await ContentsService.loadContentOfBlogDetail(

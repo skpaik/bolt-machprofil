@@ -21,4 +21,4 @@ export const settings_const = {
     ThemeChangeButton: true
   },
   content: "\nNA\n"
-} as const;
+};

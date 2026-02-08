@@ -7,7 +7,9 @@ export class ContentsService {
     lang: string | null,
     fileKey: string,
   ) {
-    const mod = await import(`@/data/contents/${profileType}/${lang}/${fileKey}`);
+    const mod = await import(
+      `@/data/contents/${profileType}/${lang}/${fileKey}`
+    );
     return mod.default;
   }
 

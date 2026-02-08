@@ -39,7 +39,7 @@ function objectToTs(obj: any, indent = 2): string {
 function writeTsFile(key: string, value: any) {
   const tsFilePath = path.join(OUTPUT_DIR, `${key}.ts`);
   const tsContent = `// This file is auto-generated from markdown
-export const ${key}_const = ${objectToTs(value, 2)} as const;
+export const ${key}_const = ${objectToTs(value, 2)};
 `;
   fs.writeFileSync(tsFilePath, tsContent, "utf-8");
   console.log(`Generated TS file: ${tsFilePath}`);

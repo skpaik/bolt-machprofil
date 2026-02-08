@@ -1,18 +1,45 @@
 ---
-siteName: GoribProfile
-siteDescription: A markdown-powered portfolio and blog
-siteTitle: "Sudipta Paik Portfolio"
+# Site Settings
+siteTitle: "LiteCMS"
 tagline: "Engineer. Creator. Problem Solver."
 author: "Sudipta Kumar Paik"
-baseUrl: "https://skpaik.github.io"
-theme: "light"
-favicon: "/favicon.ico"
-socialPreview: "/images/social-card.png"
+description: "Full-stack developer specializing in React, Next.js, and modern web technologies"
 keywords:
-  - portfolio
-  - developer
-  - react
-  - nextjs
-  - typescript
-  - software engineer
+  [
+    "portfolio",
+    "developer",
+    "react",
+    "nextjs",
+    "typescript",
+    "software engineer",
+  ]
+baseUrl: "https://skpaik.github.io"
+language: "en"
+locale: "en-US"
+timezone: "Asia/Kolkata"
+
+# Theme Settings
+layout: "classic" # classic, modern, creative
+colorScheme: "blue"
+fontFamily: "Inter"
+theme: "system" # light, dark, system
+
+# Assets
+favicon: "/favicon.ico"
+ogImage: "/images/og-image.png"
+showHeaderImage: true
+
+# Contact & Social
+email: "contact@skpaik.dev"
+github: "skpaik"
+linkedin: "skpaik"
+twitter: "@skpaik"
+
+# Analytics & SEO
+googleAnalyticsId: "G-XXXXXXXXXX"
+googleSiteVerification: "your-verification-code"
+
+# Version
+version: "1.0.0"
+generator: "GoribProfile"
 ---

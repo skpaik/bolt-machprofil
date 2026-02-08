@@ -43,5 +43,5 @@ export type SortOption =
   | "type-asc";
 
 // export type ProfileType = "developer" | "photographer" | "teacher" | "student";
-export type LanguageTypeOld = "en" | "de" | "es" | "fr";
+// export type LanguageTypeOld = "en" | "de" | "es" | "fr";
 // export type LanguageType = keyof typeof MenuConfig.menuList;

@@ -7,4 +7,4 @@ export const profile_const = {
   languages: "English, German",
   website: "https://johndoe.dev",
   content: "\nNo Profile\n"
-} as const;
+};
