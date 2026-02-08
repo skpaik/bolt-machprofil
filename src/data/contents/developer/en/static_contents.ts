@@ -14,8 +14,8 @@ export const data = {
           "Contact information: Name, email, phone number (when you reach out)",
           "Project details: Information you share about your project needs",
           "Website analytics: Basic usage data like pages visited and time spent (via Google Analytics or similar)",
-          "Technical data: IP address, browser type, device information"
-        ]
+          "Technical data: IP address, browser type, device information",
+        ],
       },
       {
         id: 2,
@@ -26,9 +26,9 @@ export const data = {
           "Respond to your inquiries and communicate about projects",
           "Provide the services you've requested",
           "Improve my website and services",
-          "Send occasional updates (only if you've opted in)"
+          "Send occasional updates (only if you've opted in)",
         ],
-        note: "I do not sell, rent, or share your personal information with third parties for marketing purposes."
+        note: "I do not sell, rent, or share your personal information with third parties for marketing purposes.",
       },
       {
         id: 3,
@@ -38,27 +38,29 @@ export const data = {
         list: [
           "Remember your preferences",
           "Understand how you use the site (via analytics tools)",
-          "Improve your browsing experience"
+          "Improve your browsing experience",
         ],
-        note: "You can control cookies through your browser settings. Note that disabling cookies may affect website functionality."
+        note: "You can control cookies through your browser settings. Note that disabling cookies may affect website functionality.",
       },
       {
         id: 4,
         title: "4. Data Security",
         icon: "lock",
-        content: "I take reasonable measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is 100% secure. If you're sharing sensitive information, please use secure channels."
+        content:
+          "I take reasonable measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is 100% secure. If you're sharing sensitive information, please use secure channels.",
       },
       {
         id: 5,
         title: "5. Third-Party Services",
         icon: "shield",
-        content: "This website may use third-party services that collect information:",
+        content:
+          "This website may use third-party services that collect information:",
         list: [
           "Google Analytics: For website analytics",
           "Contact forms: May use services like Formspree, Google Forms, etc.",
-          "Hosting provider: Your data is stored on secure hosting servers"
+          "Hosting provider: Your data is stored on secure hosting servers",
         ],
-        note: "These services have their own privacy policies. I choose reputable providers that respect user privacy."
+        note: "These services have their own privacy policies. I choose reputable providers that respect user privacy.",
       },
       {
         id: 6,
@@ -69,33 +71,38 @@ export const data = {
           "Request a copy of the information I have about you",
           "Ask me to update or delete your information",
           "Opt out of any communications from me",
-          "Withdraw consent for data processing"
+          "Withdraw consent for data processing",
         ],
-        note: "Just reach out, and I'll be happy to help with any of these requests."
+        note: "Just reach out, and I'll be happy to help with any of these requests.",
       },
       {
         id: 7,
         title: "7. Data Retention",
         icon: "clock",
-        content: "I keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy. Project-related information is typically retained for a reasonable period after project completion for reference and support purposes."
+        content:
+          "I keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy. Project-related information is typically retained for a reasonable period after project completion for reference and support purposes.",
       },
       {
         id: 8,
         title: "8. Children's Privacy",
         icon: "shield",
-        content: "This website is not intended for children under 13. I do not knowingly collect information from children. If you believe I have collected information from a child, please contact me immediately."
+        content:
+          "This website is not intended for children under 13. I do not knowingly collect information from children. If you believe I have collected information from a child, please contact me immediately.",
       },
       {
         id: 9,
         title: "9. Changes to This Policy",
         icon: "mail",
-        content: "I may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the website after changes means you accept the updated policy."
-      }
+        content:
+          "I may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the website after changes means you accept the updated policy.",
+      },
     ],
     contactTitle: "Privacy Questions?",
-    contactText: "If you have any questions about this privacy policy or how I handle your data, feel free to contact me. I'm committed to protecting your privacy and being transparent about data practices.",
-    footerText: "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒",
-    content: ""
+    contactText:
+      "If you have any questions about this privacy policy or how I handle your data, feel free to contact me. I'm committed to protecting your privacy and being transparent about data practices.",
+    footerText:
+      "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒",
+    content: "",
   },
   terms: {
     id: 1,
@@ -107,7 +114,8 @@ export const data = {
         id: 1,
         title: "1. Services 5",
         icon: "file-text",
-        content: "I provide freelance services including web development, design, and consulting. Specific project details, deliverables, and timelines will be discussed and agreed upon before starting work."
+        content:
+          "I provide freelance services including web development, design, and consulting. Specific project details, deliverables, and timelines will be discussed and agreed upon before starting work.",
       },
       {
         id: 2,
@@ -117,38 +125,44 @@ export const data = {
         list: [
           "50% deposit before starting work",
           "50% upon completion",
-          "Hourly projects billed monthly"
-        ]
+          "Hourly projects billed monthly",
+        ],
       },
       {
         id: 3,
         title: "3. Ownership & Rights",
         icon: "shield",
-        content: "Once you've paid in full, you own the final work I create for your project. I may showcase the work in my portfolio. Any pre-existing code or third-party assets have their own licenses."
+        content:
+          "Once you've paid in full, you own the final work I create for your project. I may showcase the work in my portfolio. Any pre-existing code or third-party assets have their own licenses.",
       },
       {
         id: 4,
         title: "4. Timeline & Revisions",
         icon: "clock",
-        content: "Project timelines are estimates. Most projects include 2-3 rounds of revisions. Delays can happen if feedback or content is delayed. Major changes to the project scope may require additional time and cost."
+        content:
+          "Project timelines are estimates. Most projects include 2-3 rounds of revisions. Delays can happen if feedback or content is delayed. Major changes to the project scope may require additional time and cost.",
       },
       {
         id: 5,
         title: "5. Cancellation",
         icon: "alert-circle",
-        content: "Either of us can cancel the project with notice. You'll need to pay for work completed up to that point. Deposits are generally non-refundable once work has started."
+        content:
+          "Either of us can cancel the project with notice. You'll need to pay for work completed up to that point. Deposits are generally non-refundable once work has started.",
       },
       {
         id: 6,
         title: "6. Disclaimer",
         icon: "shield",
-        content: "I'll do my best work, but I can't guarantee specific results like traffic, sales, or rankings. You're responsible for maintaining your site/app and keeping backups after launch."
-      }
+        content:
+          "I'll do my best work, but I can't guarantee specific results like traffic, sales, or rankings. You're responsible for maintaining your site/app and keeping backups after launch.",
+      },
     ],
     contactTitle: "Have Questions?",
-    contactText: "If anything is unclear or you'd like to discuss terms for your project, feel free to reach out.",
-    footerText: "By working with me, you agree to these terms. Let's create something great together! ✨",
-    content: ""
-  }
+    contactText:
+      "If anything is unclear or you'd like to discuss terms for your project, feel free to reach out.",
+    footerText:
+      "By working with me, you agree to these terms. Let's create something great together! ✨",
+    content: "",
+  },
 } as const satisfies unknown;
 export default data;

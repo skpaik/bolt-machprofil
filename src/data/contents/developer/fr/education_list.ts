@@ -9,12 +9,13 @@ export const data = [
     location: "Stanford, CA",
     gpa: "3.9/4.0",
     type: "Degree",
-    description: "Specialized in Artificial Intelligence and Machine Learning with focus on deep learning and natural language processing.",
+    description:
+      "Specialized in Artificial Intelligence and Machine Learning with focus on deep learning and natural language processing.",
     achievements: [
       "Graduated with Honors",
       "Teaching Assistant for CS231n: Deep Learning for Computer Vision",
       "Published research paper on neural network optimization",
-      "Recipient of Graduate Fellowship Award"
+      "Recipient of Graduate Fellowship Award",
     ],
     coursework: [
       "Machine Learning",
@@ -22,14 +23,14 @@ export const data = [
       "Natural Language Processing",
       "Computer Vision",
       "Algorithms & Data Structures",
-      "Distributed Systems"
+      "Distributed Systems",
     ],
     activities: [
       "AI Research Lab Member",
       "Graduate Student Council",
-      "Tech Mentorship Program"
+      "Tech Mentorship Program",
     ],
-    content: ""
+    content: "",
   },
   {
     id: 2,
@@ -41,12 +42,13 @@ export const data = [
     location: "Berkeley, CA",
     gpa: "3.8/4.0",
     type: "Degree",
-    description: "Comprehensive computer science education with strong foundation in software engineering, algorithms, and system design.",
+    description:
+      "Comprehensive computer science education with strong foundation in software engineering, algorithms, and system design.",
     achievements: [
       "Dean's List for 6 semesters",
       "First Place in Annual Hackathon 2017",
       "President of Computer Science Club",
-      "Undergraduate Research Grant Recipient"
+      "Undergraduate Research Grant Recipient",
     ],
     coursework: [
       "Data Structures",
@@ -54,14 +56,14 @@ export const data = [
       "Database Systems",
       "Software Engineering",
       "Web Development",
-      "Computer Networks"
+      "Computer Networks",
     ],
     activities: [
       "Computer Science Student Association",
       "Open Source Contributor",
-      "Peer Tutor for Programming Courses"
+      "Peer Tutor for Programming Courses",
     ],
-    content: ""
+    content: "",
   },
   {
     id: 3,
@@ -72,20 +74,21 @@ export const data = [
     endDate: "2020-06",
     location: "Online",
     type: "Certificate",
-    description: "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
+    description:
+      "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
     achievements: [
       "Completed all 5 courses with 100% scores",
       "Built and deployed 10+ deep learning projects",
-      "Specialization Certificate with Distinction"
+      "Specialization Certificate with Distinction",
     ],
     coursework: [
       "Neural Networks and Deep Learning",
       "Improving Deep Neural Networks",
       "Structuring Machine Learning Projects",
       "Convolutional Neural Networks",
-      "Sequence Models"
+      "Sequence Models",
     ],
-    content: ""
+    content: "",
   },
   {
     id: 4,
@@ -96,13 +99,14 @@ export const data = [
     endDate: "2021-05",
     location: "Online",
     type: "Certificate",
-    description: "Professional certification demonstrating expertise in designing distributed systems on AWS.",
+    description:
+      "Professional certification demonstrating expertise in designing distributed systems on AWS.",
     achievements: [
       "Passed certification exam on first attempt",
       "Score: 920/1000",
-      "Valid through 2024"
+      "Valid through 2024",
     ],
-    content: ""
+    content: "",
   },
   {
     id: 5,
@@ -113,11 +117,12 @@ export const data = [
     endDate: "2017-09",
     location: "Cottbus-Ströbitz, Brandenburg, Germany",
     type: "Bootcamp",
-    description: "Intensive 12-week immersive program covering modern web development technologies and best practices.",
+    description:
+      "Intensive 12-week immersive program covering modern web development technologies and best practices.",
     achievements: [
       "Built 4 full-stack applications",
       "Collaborated on group projects using Agile methodology",
-      "Received Outstanding Student Award"
+      "Received Outstanding Student Award",
     ],
     coursework: [
       "HTML, CSS, JavaScript",
@@ -125,9 +130,9 @@ export const data = [
       "Node.js & Express",
       "MongoDB & PostgreSQL",
       "RESTful API Design",
-      "Authentication & Security"
+      "Authentication & Security",
     ],
-    content: ""
+    content: "",
   },
   {
     id: 6,
@@ -138,13 +143,14 @@ export const data = [
     endDate: "2016-06",
     location: "Online",
     type: "Certificate",
-    description: "Self-paced curriculum covering HTML, CSS, responsive design principles, and accessibility.",
+    description:
+      "Self-paced curriculum covering HTML, CSS, responsive design principles, and accessibility.",
     achievements: [
       "Completed 300+ hours of coursework",
       "Built 5 responsive web projects",
-      "Earned certification"
+      "Earned certification",
     ],
-    content: ""
-  }
+    content: "",
+  },
 ] as const satisfies unknown;
 export default data;

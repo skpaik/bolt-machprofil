@@ -6,5 +6,5 @@ export const profile_const = {
   location: "Berlin, Germany",
   languages: "English, German",
   website: "https://johndoe.dev",
-  content: "\nNo Profile\n"
+  content: "\nNo Profile\n",
 };

@@ -3,8 +3,16 @@ export const site_const = {
   siteTitle: "LiteCMS",
   tagline: "Engineer. Creator. Problem Solver.",
   author: "Sudipta Kumar Paik",
-  description: "Full-stack developer specializing in React, Next.js, and modern web technologies",
-  keywords: ["portfolio", "developer", "react", "nextjs", "typescript", "software engineer"],
+  description:
+    "Full-stack developer specializing in React, Next.js, and modern web technologies",
+  keywords: [
+    "portfolio",
+    "developer",
+    "react",
+    "nextjs",
+    "typescript",
+    "software engineer",
+  ],
   baseUrl: "https://skpaik.github.io",
   language: "en",
   locale: "en-US",
@@ -24,5 +32,5 @@ export const site_const = {
   googleSiteVerification: "your-verification-code",
   version: "1.0.0",
   generator: "GoribProfile",
-  content: ""
+  content: "",
 };

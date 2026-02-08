@@ -10,19 +10,20 @@ export const data = [
     locationType: "Hybrid",
     startDate: "2022-03-01",
     duration: "2 years 8 months",
-    description: "Leading development of enterprise web applications and mentoring junior developers. Responsible for architecture decisions and implementation of scalable solutions.",
+    description:
+      "Leading development of enterprise web applications and mentoring junior developers. Responsible for architecture decisions and implementation of scalable solutions.",
     responsibilities: [
       "Lead a team of 5 developers in building and maintaining enterprise applications",
       "Design and implement scalable microservices architecture",
       "Conduct code reviews and establish best practices",
       "Collaborate with product managers and designers on feature development",
-      "Mentor junior developers and conduct technical interviews"
+      "Mentor junior developers and conduct technical interviews",
     ],
     achievements: [
       "Reduced application load time by 60% through optimization",
       "Led migration from monolithic to microservices architecture",
       "Increased test coverage from 45% to 95%",
-      "Implemented CI/CD pipeline reducing deployment time by 80%"
+      "Implemented CI/CD pipeline reducing deployment time by 80%",
     ],
     technologies: [
       "React",
@@ -31,15 +32,15 @@ export const data = [
       "PostgreSQL",
       "AWS",
       "Docker",
-      "Kubernetes"
+      "Kubernetes",
     ],
     projects: [
       "Customer Portal Redesign",
       "Real-time Analytics Dashboard",
-      "API Gateway Implementation"
+      "API Gateway Implementation",
     ],
     current: true,
-    content: ""
+    content: "",
   },
   {
     id: 2,
@@ -53,19 +54,20 @@ export const data = [
     startDate: "2020-01-15",
     endDate: "2022-02-28",
     duration: "2 years 1 month",
-    description: "Developed and maintained multiple client projects, from e-commerce platforms to corporate websites. Worked in an agile environment with cross-functional teams.",
+    description:
+      "Developed and maintained multiple client projects, from e-commerce platforms to corporate websites. Worked in an agile environment with cross-functional teams.",
     responsibilities: [
       "Developed responsive web applications using modern JavaScript frameworks",
       "Built RESTful APIs and integrated third-party services",
       "Collaborated with designers to implement pixel-perfect UIs",
       "Participated in agile ceremonies and sprint planning",
-      "Provided technical support and bug fixes for production applications"
+      "Provided technical support and bug fixes for production applications",
     ],
     achievements: [
       "Successfully delivered 15+ client projects on time and within budget",
       "Improved client satisfaction score from 7.2 to 9.1 out of 10",
       "Developed reusable component library used across 20+ projects",
-      "Received \"Developer of the Year\" award in 2021"
+      'Received "Developer of the Year" award in 2021',
     ],
     technologies: [
       "React",
@@ -74,14 +76,14 @@ export const data = [
       "Express",
       "MongoDB",
       "MySQL",
-      "Git"
+      "Git",
     ],
     projects: [
       "E-commerce Platform",
       "Corporate Website CMS",
-      "Booking System"
+      "Booking System",
     ],
-    content: ""
+    content: "",
   },
   {
     id: 3,
@@ -95,19 +97,20 @@ export const data = [
     startDate: "2018-06-01",
     endDate: "2019-12-31",
     duration: "1 year 7 months",
-    description: "Focused on building beautiful and performant user interfaces for SaaS products. Worked closely with the design team to create intuitive user experiences.",
+    description:
+      "Focused on building beautiful and performant user interfaces for SaaS products. Worked closely with the design team to create intuitive user experiences.",
     responsibilities: [
       "Developed responsive web interfaces using React and Redux",
       "Implemented complex UI components and animations",
       "Optimized application performance and accessibility",
       "Collaborated with backend team on API design",
-      "Wrote comprehensive unit and integration tests"
+      "Wrote comprehensive unit and integration tests",
     ],
     achievements: [
       "Improved application performance score from 65 to 95 on Lighthouse",
       "Reduced bundle size by 40% through code splitting",
       "Achieved 100% accessibility score on all major features",
-      "Contributed to 3 successful product launches"
+      "Contributed to 3 successful product launches",
     ],
     technologies: [
       "React",
@@ -116,14 +119,10 @@ export const data = [
       "SASS",
       "Webpack",
       "Jest",
-      "Cypress"
+      "Cypress",
     ],
-    projects: [
-      "SaaS Dashboard",
-      "Analytics Platform",
-      "Admin Panel"
-    ],
-    content: ""
+    projects: ["SaaS Dashboard", "Analytics Platform", "Admin Panel"],
+    content: "",
   },
   {
     id: 4,
@@ -136,19 +135,20 @@ export const data = [
     startDate: "2016-09-01",
     endDate: "2018-05-31",
     duration: "1 year 9 months",
-    description: "Worked with various clients on web development projects, from small business websites to complex web applications. Managed entire project lifecycle from requirements gathering to deployment.",
+    description:
+      "Worked with various clients on web development projects, from small business websites to complex web applications. Managed entire project lifecycle from requirements gathering to deployment.",
     responsibilities: [
       "Consulted with clients to understand requirements and propose solutions",
       "Designed and developed custom websites and web applications",
       "Managed project timelines and deliverables",
       "Provided ongoing maintenance and support",
-      "Handled hosting, domain, and deployment setup"
+      "Handled hosting, domain, and deployment setup",
     ],
     achievements: [
       "Successfully completed 30+ projects for diverse clients",
       "Maintained 100% client satisfaction rate",
       "Built long-term relationships with 10+ recurring clients",
-      "Generated $150K+ in revenue"
+      "Generated $150K+ in revenue",
     ],
     technologies: [
       "WordPress",
@@ -156,14 +156,10 @@ export const data = [
       "JavaScript",
       "MySQL",
       "HTML/CSS",
-      "jQuery"
+      "jQuery",
     ],
-    projects: [
-      "Restaurant Website",
-      "Real Estate Platform",
-      "Portfolio Sites"
-    ],
-    content: ""
+    projects: ["Restaurant Website", "Real Estate Platform", "Portfolio Sites"],
+    content: "",
   },
   {
     id: 5,
@@ -177,19 +173,20 @@ export const data = [
     startDate: "2015-07-01",
     endDate: "2016-08-31",
     duration: "1 year 2 months",
-    description: "Started my professional career as a junior developer, learning best practices and working on client projects under senior developer mentorship.",
+    description:
+      "Started my professional career as a junior developer, learning best practices and working on client projects under senior developer mentorship.",
     responsibilities: [
       "Developed website layouts and implemented designs",
       "Fixed bugs and performed code maintenance",
       "Assisted senior developers with complex features",
       "Participated in daily stand-ups and code reviews",
-      "Learned modern web development practices"
+      "Learned modern web development practices",
     ],
     achievements: [
       "Completed junior to mid-level developer progression in 10 months",
       "Contributed to 20+ successful project deliveries",
       "Received positive feedback from team leads and clients",
-      "Rapidly expanded technical skill set"
+      "Rapidly expanded technical skill set",
     ],
     technologies: [
       "HTML",
@@ -198,14 +195,10 @@ export const data = [
       "Bootstrap",
       "jQuery",
       "PHP",
-      "Git"
+      "Git",
     ],
-    projects: [
-      "Client Websites",
-      "Landing Pages",
-      "WordPress Themes"
-    ],
-    content: ""
-  }
+    projects: ["Client Websites", "Landing Pages", "WordPress Themes"],
+    content: "",
+  },
 ] as const satisfies unknown;
 export default data;

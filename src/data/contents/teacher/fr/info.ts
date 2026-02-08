@@ -2,33 +2,34 @@ export const data = {
   bio: {
     fullName: "Mofiz Rahman",
     title: "Software Engineer",
-    summary: "Experienced developer passionate about building scalable systems and mentoring others.",
+    summary:
+      "Experienced developer passionate about building scalable systems and mentoring others.",
     location: "Berlin, Germany",
     dob: "1990-05-12",
     photo: "https://example.com/photos/alex.jpg",
-    content: "<p>NA</p>\n"
+    content: "<p>NA</p>\n",
   },
   contact: [
     {
       type: "Email",
       value: "alex@example.com",
-      label: "Work"
+      label: "Work",
     },
     {
       type: "Phone",
       value: "+49 1522 1234567",
-      label: "Mobile"
+      label: "Mobile",
     },
     {
       type: "Website",
       value: "https://alexjohnson.dev",
-      label: "Website"
+      label: "Website",
     },
     {
       type: "Address",
       value: "Berlin, Germany",
-      description: "Current residence"
-    }
+      description: "Current residence",
+    },
   ],
   interest: [
     "Photography",
@@ -36,7 +37,7 @@ export const data = {
     "Open-source projects",
     "Reading",
     "Music",
-    "Sports"
+    "Sports",
   ],
   languages: [
     {
@@ -45,11 +46,8 @@ export const data = {
       write: "Fluent",
       speak: "Fluent",
       listen: "Fluent",
-      tests: [
-        "IELTS",
-        "TOEFL"
-      ],
-      level: "C1"
+      tests: ["IELTS", "TOEFL"],
+      level: "C1",
     },
     {
       name: "German",
@@ -57,11 +55,8 @@ export const data = {
       write: "Intermediate",
       speak: "Intermediate",
       listen: "Intermediate",
-      tests: [
-        "Goethe B2",
-        "Telc B2"
-      ],
-      level: "B2"
+      tests: ["Goethe B2", "Telc B2"],
+      level: "B2",
     },
     {
       name: "French",
@@ -69,8 +64,8 @@ export const data = {
       write: "Good",
       speak: "Intermediate",
       listen: "Good",
-      level: "B1"
-    }
+      level: "B1",
+    },
   ],
   reference: [
     {
@@ -79,74 +74,53 @@ export const data = {
       organization: "TechCorp GmbH",
       email: "laura.schmidt@techcorp.de",
       phone: "+49 1522 111222",
-      relation: "Manager at TechCorp"
+      relation: "Manager at TechCorp",
     },
     {
       name: "Prof. Mofiz Rahman",
       position: "Professor of Computer Science",
       organization: "University of Hamburg",
       email: "j.doe@uni-hamburg.de",
-      relation: "Thesis Supervisor"
-    }
+      relation: "Thesis Supervisor",
+    },
   ],
   skills: [
     {
       category: "Programming",
-      items: [
-        "Python",
-        "TypeScript",
-        "Java",
-        "C++"
-      ]
+      items: ["Python", "TypeScript", "Java", "C++"],
     },
     {
       category: "Tools & Cloud",
-      items: [
-        "AWS",
-        "Docker",
-        "Kubernetes"
-      ]
+      items: ["AWS", "Docker", "Kubernetes"],
     },
     {
       category: "Soft Skills",
-      items: [
-        "Leadership",
-        "Communication",
-        "Mentoring"
-      ]
+      items: ["Leadership", "Communication", "Mentoring"],
     },
     {
       category: "Design & Creative",
-      items: [
-        "Photoshop",
-        "Figma",
-        "Adobe Illustrator"
-      ]
+      items: ["Photoshop", "Figma", "Adobe Illustrator"],
     },
     {
       category: "Languages",
-      items: [
-        "English",
-        "German",
-        "French"
-      ]
-    }
+      items: ["English", "German", "French"],
+    },
   ],
   social: [
     {
       platform: "LinkedIn",
       url: "https://linkedin.com/in/alexjohnson",
-      username: "alexjohnson"
+      username: "alexjohnson",
     },
     {
       platform: "GitHub",
       url: "https://github.com/alexjohnson",
-      username: "alexjohnson"
+      username: "alexjohnson",
     },
     {
       platform: "Twitter",
-      url: "https://twitter.com/alexjohnson"
-    }
-  ]
+      url: "https://twitter.com/alexjohnson",
+    },
+  ],
 } as const satisfies unknown;
 export default data;

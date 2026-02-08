@@ -6,13 +6,10 @@ export const data = [
     proficiency: 95,
     level: "Expert",
     yearsOfExperience: 8,
-    tags: [
-      "Programming",
-      "Frontend",
-      "Backend"
-    ],
-    description: "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
-    content: ""
+    tags: ["Programming", "Frontend", "Backend"],
+    description:
+      "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
+    content: "",
   },
   {
     id: 10,
@@ -21,13 +18,9 @@ export const data = [
     proficiency: 82,
     level: "Advanced",
     yearsOfExperience: 6,
-    tags: [
-      "Management",
-      "Planning",
-      "Leadership"
-    ],
+    tags: ["Management", "Planning", "Leadership"],
     description: "Agile methodologies, Scrum, and team coordination.",
-    content: ""
+    content: "",
   },
   {
     id: 11,
@@ -36,13 +29,10 @@ export const data = [
     proficiency: 78,
     level: "Advanced",
     yearsOfExperience: 5,
-    tags: [
-      "Analysis",
-      "Strategy",
-      "Requirements"
-    ],
-    description: "Requirements gathering, stakeholder management, and process improvement.",
-    content: ""
+    tags: ["Analysis", "Strategy", "Requirements"],
+    description:
+      "Requirements gathering, stakeholder management, and process improvement.",
+    content: "",
   },
   {
     id: 12,
@@ -51,13 +41,9 @@ export const data = [
     proficiency: 73,
     level: "Intermediate",
     yearsOfExperience: 4,
-    tags: [
-      "Marketing",
-      "Strategy",
-      "Growth"
-    ],
+    tags: ["Marketing", "Strategy", "Growth"],
     description: "Digital marketing, SEO, and brand development.",
-    content: ""
+    content: "",
   },
   {
     id: 13,
@@ -66,12 +52,10 @@ export const data = [
     proficiency: 90,
     level: "Expert",
     yearsOfExperience: 10,
-    tags: [
-      "Interpersonal",
-      "Collaboration"
-    ],
-    description: "Clear verbal and written communication across teams and stakeholders.",
-    content: ""
+    tags: ["Interpersonal", "Collaboration"],
+    description:
+      "Clear verbal and written communication across teams and stakeholders.",
+    content: "",
   },
   {
     id: 14,
@@ -80,12 +64,9 @@ export const data = [
     proficiency: 88,
     level: "Expert",
     yearsOfExperience: 10,
-    tags: [
-      "Critical Thinking",
-      "Analysis"
-    ],
+    tags: ["Critical Thinking", "Analysis"],
     description: "Analytical thinking and creative solution development.",
-    content: ""
+    content: "",
   },
   {
     id: 15,
@@ -94,13 +75,9 @@ export const data = [
     proficiency: 80,
     level: "Advanced",
     yearsOfExperience: 7,
-    tags: [
-      "Management",
-      "Mentoring",
-      "Team Building"
-    ],
+    tags: ["Management", "Mentoring", "Team Building"],
     description: "Team leadership, mentoring, and conflict resolution.",
-    content: ""
+    content: "",
   },
   {
     id: 16,
@@ -109,12 +86,9 @@ export const data = [
     proficiency: 100,
     level: "Expert",
     yearsOfExperience: 20,
-    tags: [
-      "Communication",
-      "Native"
-    ],
+    tags: ["Communication", "Native"],
     description: "Native speaker with excellent written and verbal skills.",
-    content: ""
+    content: "",
   },
   {
     id: 17,
@@ -123,12 +97,9 @@ export const data = [
     proficiency: 75,
     level: "Advanced",
     yearsOfExperience: 8,
-    tags: [
-      "Communication",
-      "Second Language"
-    ],
+    tags: ["Communication", "Second Language"],
     description: "Conversational and business proficiency.",
-    content: ""
+    content: "",
   },
   {
     id: 18,
@@ -137,12 +108,9 @@ export const data = [
     proficiency: 60,
     level: "Intermediate",
     yearsOfExperience: 3,
-    tags: [
-      "Communication",
-      "Learning"
-    ],
+    tags: ["Communication", "Learning"],
     description: "Intermediate conversational skills.",
-    content: ""
+    content: "",
   },
   {
     id: 19,
@@ -151,12 +119,10 @@ export const data = [
     proficiency: 92,
     level: "Expert",
     yearsOfExperience: 8,
-    tags: [
-      "Version Control",
-      "Collaboration"
-    ],
-    description: "Version control, branching strategies, and team collaboration.",
-    content: ""
+    tags: ["Version Control", "Collaboration"],
+    description:
+      "Version control, branching strategies, and team collaboration.",
+    content: "",
   },
   {
     id: 2,
@@ -165,13 +131,10 @@ export const data = [
     proficiency: 90,
     level: "Expert",
     yearsOfExperience: 6,
-    tags: [
-      "Frontend",
-      "Framework",
-      "UI"
-    ],
-    description: "Building scalable web applications with React, hooks, and state management.",
-    content: ""
+    tags: ["Frontend", "Framework", "UI"],
+    description:
+      "Building scalable web applications with React, hooks, and state management.",
+    content: "",
   },
   {
     id: 20,
@@ -180,12 +143,9 @@ export const data = [
     proficiency: 80,
     level: "Advanced",
     yearsOfExperience: 4,
-    tags: [
-      "DevOps",
-      "Containers"
-    ],
+    tags: ["DevOps", "Containers"],
     description: "Containerization and deployment workflows.",
-    content: ""
+    content: "",
   },
   {
     id: 21,
@@ -194,12 +154,10 @@ export const data = [
     proficiency: 77,
     level: "Advanced",
     yearsOfExperience: 5,
-    tags: [
-      "Cloud",
-      "Infrastructure"
-    ],
-    description: "Cloud services, EC2, S3, Lambda, and serverless architecture.",
-    content: ""
+    tags: ["Cloud", "Infrastructure"],
+    description:
+      "Cloud services, EC2, S3, Lambda, and serverless architecture.",
+    content: "",
   },
   {
     id: 3,
@@ -208,12 +166,10 @@ export const data = [
     proficiency: 88,
     level: "Advanced",
     yearsOfExperience: 5,
-    tags: [
-      "Programming",
-      "Type Safety"
-    ],
-    description: "Strong typing for JavaScript applications, interfaces, and generics.",
-    content: ""
+    tags: ["Programming", "Type Safety"],
+    description:
+      "Strong typing for JavaScript applications, interfaces, and generics.",
+    content: "",
   },
   {
     id: 4,
@@ -222,13 +178,9 @@ export const data = [
     proficiency: 85,
     level: "Advanced",
     yearsOfExperience: 6,
-    tags: [
-      "Programming",
-      "Backend",
-      "Data Science"
-    ],
+    tags: ["Programming", "Backend", "Data Science"],
     description: "Backend development, automation, and data analysis.",
-    content: ""
+    content: "",
   },
   {
     id: 5,
@@ -237,13 +189,10 @@ export const data = [
     proficiency: 87,
     level: "Advanced",
     yearsOfExperience: 7,
-    tags: [
-      "Backend",
-      "API",
-      "Server"
-    ],
-    description: "Server-side JavaScript with Express, RESTful APIs, and microservices.",
-    content: ""
+    tags: ["Backend", "API", "Server"],
+    description:
+      "Server-side JavaScript with Express, RESTful APIs, and microservices.",
+    content: "",
   },
   {
     id: 6,
@@ -252,13 +201,9 @@ export const data = [
     proficiency: 80,
     level: "Advanced",
     yearsOfExperience: 5,
-    tags: [
-      "Design",
-      "User Experience",
-      "Interface"
-    ],
+    tags: ["Design", "User Experience", "Interface"],
     description: "Creating intuitive and visually appealing user interfaces.",
-    content: ""
+    content: "",
   },
   {
     id: 7,
@@ -267,13 +212,9 @@ export const data = [
     proficiency: 85,
     level: "Advanced",
     yearsOfExperience: 4,
-    tags: [
-      "Design Tool",
-      "Prototyping",
-      "Collaboration"
-    ],
+    tags: ["Design Tool", "Prototyping", "Collaboration"],
     description: "Wireframing, prototyping, and design systems.",
-    content: ""
+    content: "",
   },
   {
     id: 8,
@@ -282,12 +223,9 @@ export const data = [
     proficiency: 75,
     level: "Advanced",
     yearsOfExperience: 7,
-    tags: [
-      "Image Editing",
-      "Graphics"
-    ],
+    tags: ["Image Editing", "Graphics"],
     description: "Photo editing, digital art, and graphic design.",
-    content: ""
+    content: "",
   },
   {
     id: 9,
@@ -296,13 +234,9 @@ export const data = [
     proficiency: 70,
     level: "Intermediate",
     yearsOfExperience: 3,
-    tags: [
-      "Art",
-      "Creative",
-      "Visual"
-    ],
+    tags: ["Art", "Creative", "Visual"],
     description: "Digital and traditional illustration techniques.",
-    content: ""
-  }
+    content: "",
+  },
 ] as const satisfies unknown;
 export default data;

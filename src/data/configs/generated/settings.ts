@@ -12,13 +12,13 @@ export const settings_const = {
     Profile: "developer",
     Language: "en",
     Theme: "light",
-    Template: "modern"
+    Template: "modern",
   },
   show: {
     ProfileChangeButton: true,
     LanguageChangeButton: true,
     TemplateChangeButton: true,
-    ThemeChangeButton: true
+    ThemeChangeButton: true,
   },
-  content: "\nNA\n"
+  content: "\nNA\n",
 };
