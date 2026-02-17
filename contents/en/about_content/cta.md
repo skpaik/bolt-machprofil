@@ -6,4 +6,3 @@ description: >-
 primaryButton: Get in Touch
 secondaryButton: Download Resume
 ---
-

@@ -1,10 +1,11 @@
 // This file is auto-generated from markdown
 export const site_const = {
-  siteTitle: "LiteCMS",
+  siteTitle: "Tech Enthusiast",
   tagline: "Engineer. Creator. Problem Solver.",
   author: "Sudipta Kumar Paik",
   description: "Full-stack developer specializing in React, Next.js, and modern web technologies",
   keywords: ["portfolio", "developer", "react", "nextjs", "typescript", "software engineer"],
+  keywords2: ["portfolio", "developer", "react", "nextjs", "typescript", "software engineer"],
   baseUrl: "https://skpaik.github.io",
   language: "en",
   locale: "en-US",
@@ -23,6 +24,6 @@ export const site_const = {
   googleAnalyticsId: "G-XXXXXXXXXX",
   googleSiteVerification: "your-verification-code",
   version: "1.0.0",
-  generator: "GoribProfile",
+  generator: "MachProfile",
   content: ""
 };
