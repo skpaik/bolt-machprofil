@@ -9,9 +9,9 @@ export class MetadataHelper {
       metadataBase: new URL(site_const.baseUrl),
       title: {
         default: site_const.siteTitle,
-        template: `%s | ${site_const.siteName}`,
+        template: `%s | ${site_const.siteTitle}`,
       },
-      description: site_const.siteDescription,
+      description: site_const.description,
       keywords: [...site_const.keywords],
       authors: [{ name: site_const.author }],
       creator: site_const.author,
@@ -36,9 +36,9 @@ export class MetadataHelper {
       twitter: {
         card: "summary_large_image",
         title: site_const.siteTitle,
-        description: site_const.siteDescription,
+        description: site_const.description,
         creator: `@${site_const.author.replace(/\s+/g, "")}`,
-        images: [site_const.socialPreview],
+        images: [site_const.ogImage],
       },
       verification: {
         google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -57,9 +57,9 @@ export class MetadataHelper {
     publishedTime,
     modifiedTime,
   }: PageMetaParams): Metadata {
-    const siteName = site_const.siteName;
-    const defaultDescription = site_const.siteDescription;
-    const defaultImage = site_const.socialPreview;
+    const siteName = site_const.siteTitle;
+    const defaultDescription = site_const.description;
+    const defaultImage = site_const.ogImage;
     const baseUrl = site_const.baseUrl;
 
     const pageUrl = url ? `${baseUrl}${url}` : baseUrl;
@@ -122,10 +122,10 @@ export class MetadataHelper {
       url: site_const.baseUrl,
       siteName: site_const.siteTitle,
       title: site_const.siteTitle,
-      description: site_const.siteDescription,
+      description: site_const.description,
       images: [
         {
-          url: site_const.socialPreview,
+          url: site_const.ogImage,
           width: 1200,
           height: 630,
           alt: site_const.siteTitle,
@@ -141,8 +141,8 @@ export class MetadataHelper {
       "@type": "Person",
       name: site_const.author,
       url: site_const.baseUrl,
-      image: site_const.socialPreview,
-      description: site_const.siteDescription,
+      image: site_const.ogImage,
+      description: site_const.description,
       jobTitle: "Software Engineer",
       sameAs: [
         // Add social media links here
@@ -176,7 +176,7 @@ export class MetadataHelper {
       "@type": "BlogPosting",
       headline: title,
       description: description,
-      image: image ?? site_const.socialPreview,
+      image: image ?? site_const.ogImage,
       datePublished: publishedTime,
       dateModified: modifiedTime ?? publishedTime,
       author: {
@@ -201,7 +201,7 @@ export class MetadataHelper {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: site_const.siteTitle,
-      description: site_const.siteDescription,
+      description: site_const.description,
       url: site_const.baseUrl,
       author: {
         "@type": "Person",

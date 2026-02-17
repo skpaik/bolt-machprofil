@@ -1,6 +1,6 @@
 ---
 # Site Settings
-siteTitle: "LiteCMS"
+siteTitle: "Tech Enthusiast"
 tagline: "Engineer. Creator. Problem Solver."
 author: "Sudipta Kumar Paik"
 description: "Full-stack developer specializing in React, Next.js, and modern web technologies"
@@ -13,6 +13,14 @@ keywords:
     "typescript",
     "software engineer",
   ]
+keywords2:
+  - portfolio
+  - developer
+  - react
+  - nextjs
+  - typescript
+  - software engineer
+  
 baseUrl: "https://skpaik.github.io"
 language: "en"
 locale: "en-US"
@@ -41,5 +49,5 @@ googleSiteVerification: "your-verification-code"
 
 # Version
 version: "1.0.0"
-generator: "GoribProfile"
+generator: "MachProfile"
 ---
