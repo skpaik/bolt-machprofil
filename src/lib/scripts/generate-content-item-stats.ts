@@ -54,13 +54,12 @@ export function main(): ContentItemStats {
 
     for (const lang of langs) {
       const items = CONTENT_ITEM_COUNTS[profile][lang];
-
-      for (const key in items) {
-        totalItems += items[key];
+      for (const value of Object.values(items)) {
+        totalItems += value;
       }
     }
 
-    stats[profile] = {
+    stats.profiles[profile] = {
       lang_count: langs.length,
       item_count: totalItems,
     };
