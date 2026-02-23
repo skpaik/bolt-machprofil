@@ -1,5 +1,5 @@
 // hooks/useContentLoader.ts
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ContentsService } from "@/lib/services/contents.service";
 
 export function useContentLoader<T>(

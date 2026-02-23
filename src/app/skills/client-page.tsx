@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useMemo, useState } from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import { PageHeading } from "@/components/shared/PageHeading";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -13,12 +13,11 @@ import { SortOption } from "@/lib/types/type.config";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
+import { usePagination } from "@/components/hooks/use-pagination";
 import { Skills } from "@/lib/types/portfolio";
-import { AppConfig } from "@/data/configs/constants/app-config";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedLevel, setSelectedLevel] = useState<string>("all");
@@ -29,8 +28,6 @@ export default function ClientPage() {
     loading,
     error,
   } = useContentLoader<Skills[]>(profileType, languageType, "skill_list", []);
-
-  const ITEMS_PER_PAGE = AppConfig.item_per_page;
 
   // Filter and search skills
   const filteredSkills = useMemo(() => {
@@ -106,19 +103,13 @@ export default function ClientPage() {
     return uniqueLevels.sort();
   }, [skills]);
 
-  const totalSkills = filteredSkills.length;
-  const totalPages = Math.ceil(totalSkills / ITEMS_PER_PAGE);
-
-  const currentSkills = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    return filteredSkills.slice(startIndex, endIndex);
-  }, [filteredSkills, currentPage]);
-
-  // Reset to first page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory, selectedLevel, sortBy]);
+  const {
+    currentPage,
+    setCurrentPage,
+    currentItems: currentSkills,
+    totalPages,
+    totalItems: totalSkills,
+  } = usePagination(filteredSkills);
 
   // Configure filters
   const filterConfigs: FilterConfig[] = [

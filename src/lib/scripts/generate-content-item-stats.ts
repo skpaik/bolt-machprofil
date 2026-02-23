@@ -16,8 +16,7 @@ export type ContentItemStats = {
   profiles: Record<string, ProfileStats>;
 };
 type ProfileKey = keyof typeof CONTENT_ITEM_COUNTS;
-type LanguageKey<P extends ProfileKey> =
-    keyof typeof CONTENT_ITEM_COUNTS[P];
+type LanguageKey<P extends ProfileKey> = keyof (typeof CONTENT_ITEM_COUNTS)[P];
 // type ContentItemStats = {
 //   profile_count: number;
 // } & {
@@ -31,6 +30,7 @@ type LanguageKey<P extends ProfileKey> =
 /* Generator                                           */
 /* -------------------------------------------------- */
 const outputDir = path.join(process.cwd(), "src/data/configs/generated");
+
 export function main(): ContentItemStats {
   // const stats: ContentItemStats = {
   //   profile_count: 0,
@@ -41,14 +41,14 @@ export function main(): ContentItemStats {
   };
 
   //const profiles = Object.keys(CONTENT_ITEM_COUNTS);
-  const profiles: ProfileKey[] = Object.keys(CONTENT_ITEM_COUNTS) as ProfileKey[];
-
-
+  const profiles: ProfileKey[] = Object.keys(
+    CONTENT_ITEM_COUNTS,
+  ) as ProfileKey[];
 
   for (const profile of profiles) {
-    const langs = Object.keys(
-        CONTENT_ITEM_COUNTS[profile]
-    ) as LanguageKey<typeof profile>[];
+    const langs = Object.keys(CONTENT_ITEM_COUNTS[profile]) as LanguageKey<
+      typeof profile
+    >[];
 
     let totalItems = 0;
 
@@ -65,8 +65,6 @@ export function main(): ContentItemStats {
     };
   }
 
-
-
   stats.profile_count = profiles.length;
 
   fs.mkdirSync(outputDir, { recursive: true });
@@ -78,6 +76,7 @@ export function main(): ContentItemStats {
 
   return stats;
 }
+
 export function generateContentItemStats() {
   main();
 }

@@ -7,7 +7,7 @@ import { ProfileSync } from "@/components/layouts/profile-sync";
 import { StructuredData } from "@/components/seo/StructuredData";
 
 import "../assets/styles/globals.css";
-import { geistSans, geistMono } from "@/assets/fonts";
+import { geistMono, geistSans } from "@/assets/fonts";
 
 export const metadata: Metadata = MetadataHelper.generateMetaData();
 

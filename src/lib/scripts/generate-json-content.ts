@@ -103,6 +103,7 @@ function getLanguages(): string[] {
     .readdirSync(CONTENTS_DIR)
     .filter((item) => fs.statSync(path.join(CONTENTS_DIR, item)).isDirectory());
 }
+
 /**
  * Schema definitions - single source of truth
  * Define required fields with actual values, optional fields with undefined
@@ -544,6 +545,7 @@ function printValidationResults(): ValidationResult {
     warnings: validationWarnings,
   };
 }
+
 export function main(): void {
   console.log("🚀 Starting content generation...");
 

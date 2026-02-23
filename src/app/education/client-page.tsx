@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import { Education, Project } from "@/lib/types/portfolio";
+import { Education } from "@/lib/types/portfolio";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();

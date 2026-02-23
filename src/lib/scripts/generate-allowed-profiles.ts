@@ -55,6 +55,7 @@ function getProfileLanguages(profile: string): string[] {
       dirent.isDirectory() ? dirent.name : dirent.name.replace(/\.md$/, ""),
     );
 }
+
 function serializeTS(value: unknown, indent = 0): string {
   const space = "  ".repeat(indent);
 

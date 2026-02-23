@@ -53,9 +53,9 @@ function getInitialValue<T extends string>(
 }
 
 export function PortfolioProvider({ children }: { children: ReactNode }) {
-  const allowedProfiles = ConfigData.profileList.map(
+  const allowedProfileValues = ConfigData.profileList.map(
     (profile) => profile.value,
-  );
+  ) as ProfileType[];
   //console.log('allowedProfiles>  ', allowedProfiles);
 
   // ✅ Lazy initialization — runs once on first render in browser
@@ -63,7 +63,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     getInitialValue(
       "activeProfile",
       settings_const.activeProfile as ProfileType,
-      Object.keys(allowedProfiles) as ProfileType[],
+      allowedProfileValues,
     ),
   );
 

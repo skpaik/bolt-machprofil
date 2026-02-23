@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useMemo, useState } from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import { PageHeading } from "@/components/shared/PageHeading";
 import {
@@ -21,11 +21,10 @@ import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import { AppConfig } from "@/data/configs/constants/app-config";
+import { usePagination } from "@/components/hooks/use-pagination";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedTechnology, setSelectedTechnology] = useState<string>("all");
@@ -42,7 +41,6 @@ export default function ClientPage() {
     "project_list",
     [],
   );
-  const ITEMS_PER_PAGE = AppConfig.item_per_page;
 
   // Filter and search projects
   const filteredProjects = useMemo(() => {
@@ -138,28 +136,17 @@ export default function ClientPage() {
   }, [projects]);
 
   const totalProjects = filteredProjects.length;
-  const totalPages = Math.ceil(totalProjects / ITEMS_PER_PAGE);
-
-  const currentProjects = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    return filteredProjects.slice(startIndex, endIndex);
-  }, [filteredProjects, currentPage]);
 
   // Separate featured and regular projects
+  const {
+    currentPage,
+    setCurrentPage,
+    currentItems: currentProjects,
+    totalPages,
+  } = usePagination(filteredProjects);
+
   const featuredProjects = currentProjects.filter((p) => p.featured);
   const regularProjects = currentProjects.filter((p) => !p.featured);
-
-  // Reset to first page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [
-    searchQuery,
-    selectedCategory,
-    selectedTechnology,
-    selectedStatus,
-    sortBy,
-  ]);
 
   // Configure filters
   const filterConfigs: FilterConfig[] = [

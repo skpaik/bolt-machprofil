@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import { PageHeading } from "@/components/shared/PageHeading";
 import {
@@ -19,11 +19,10 @@ import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import { AppConfig } from "@/data/configs/constants/app-config";
+import { usePagination } from "@/components/hooks/use-pagination";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<string>("all");
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
@@ -39,9 +38,6 @@ export default function ClientPage() {
     "publication_list",
     [],
   );
-
-  // Use real data if available, otherwise use sample data
-  const ITEMS_PER_PAGE = AppConfig.item_per_page;
 
   // Filter and search publications
   const filteredPublications = useMemo(() => {
@@ -118,14 +114,13 @@ export default function ClientPage() {
     return uniqueStatuses.sort();
   }, [publications]);
 
-  const totalPublications = filteredPublications.length;
-  const totalPages = Math.ceil(totalPublications / ITEMS_PER_PAGE);
-
-  const currentPublications = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    return filteredPublications.slice(startIndex, endIndex);
-  }, [filteredPublications, currentPage]);
+  const {
+    currentPage,
+    setCurrentPage,
+    currentItems: currentPublications,
+    totalPages,
+    totalItems: totalPublications,
+  } = usePagination(filteredPublications);
 
   // Separate featured and regular publications
   const featuredPublications = currentPublications.filter(
@@ -134,11 +129,6 @@ export default function ClientPage() {
   const regularPublications = currentPublications.filter(
     (p: Publication) => !p.featured,
   );
-
-  // Reset to first page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedType, selectedStatus, sortBy]);
 
   // Configure filters
   const filterConfigs: FilterConfig[] = [

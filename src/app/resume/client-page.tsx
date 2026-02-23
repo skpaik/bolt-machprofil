@@ -11,12 +11,11 @@ import { useContentLoader } from "@/components/hooks/use-content-loader";
 import { AboutContent } from "@/lib/types/about.contract";
 import { emptyAboutContent } from "@/data/configs/constants/empty.data";
 import {
-  Experience,
-  Project,
   Certificate,
+  Education,
+  Experience,
   Skills,
   Testimonial,
-  Education,
 } from "@/lib/types/portfolio";
 
 export default function ClientPage() {

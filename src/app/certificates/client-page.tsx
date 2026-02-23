@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import { PageHeading } from "@/components/shared/PageHeading";
 import {
@@ -20,11 +20,10 @@ import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import { AppConfig } from "@/data/configs/constants/app-config";
+import { usePagination } from "@/components/hooks/use-pagination";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
@@ -40,8 +39,6 @@ export default function ClientPage() {
     "certificate_list",
     [],
   );
-  // Use real data if available, otherwise use sample data
-  const ITEMS_PER_PAGE = AppConfig.item_per_page;
 
   // Filter and search certificates
   const filteredCertificates = useMemo(() => {
@@ -118,14 +115,13 @@ export default function ClientPage() {
     return uniqueCategories.sort();
   }, [certificates]);
 
-  const totalCertificates = filteredCertificates.length;
-  const totalPages = Math.ceil(totalCertificates / ITEMS_PER_PAGE);
-
-  const currentCertificates = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    return filteredCertificates.slice(startIndex, endIndex);
-  }, [filteredCertificates, currentPage]);
+  const {
+    currentPage,
+    setCurrentPage,
+    currentItems: currentCertificates,
+    totalPages,
+    totalItems: totalCertificates,
+  } = usePagination(filteredCertificates);
 
   // Separate featured and regular certificates
   const featuredCertificates = currentCertificates.filter(
@@ -134,11 +130,6 @@ export default function ClientPage() {
   const regularCertificates = currentCertificates.filter(
     (cert) => !cert.featured,
   );
-
-  // Reset to first page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory, selectedStatus, sortBy]);
 
   // Configure filters
   const filterConfigs: FilterConfig[] = [

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useMemo, useEffect, cache } from "react";
+import React, { useMemo } from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import {
   Card,

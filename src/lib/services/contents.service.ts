@@ -2,17 +2,6 @@
 import { BlogPost } from "@/lib/types/portfolio";
 
 export class ContentsService {
-  private static async loadContentFile(
-    profileType: string | null,
-    lang: string | null,
-    fileKey: string,
-  ) {
-    const mod = await import(
-      `@/data/contents/${profileType}/${lang}/${fileKey}`
-    );
-    return mod.default;
-  }
-
   /**
    * Returns both primary and more menu items based on viewport
    * @param profileType
@@ -58,5 +47,16 @@ export class ContentsService {
         .slice(0, 3) || [];
 
     return { post, relatedPosts };
+  }
+
+  private static async loadContentFile(
+    profileType: string | null,
+    lang: string | null,
+    fileKey: string,
+  ) {
+    const mod = await import(
+      `@/data/contents/${profileType}/${lang}/${fileKey}`
+    );
+    return mod.default;
   }
 }

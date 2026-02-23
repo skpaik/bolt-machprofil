@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { usePortfolio } from "@/components/context/PortfolioContext";
 import { TemplateSwitcher } from "@/components/switchers/template-switcher";
 import { LanguageSwitcher } from "@/components/switchers/language-switcher";
 import { ProfileSwitcher } from "@/components/switchers/profile-switcher";

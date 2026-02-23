@@ -1,5 +1,6 @@
 import { ContentData, contentFileMap } from "@/lib/types/content.types";
 import { LanguageType } from "@/lib/types/type.config";
+
 // import {registry} from "@/data/registry";
 
 export async function loadContentFile<T>(
@@ -23,6 +24,7 @@ export async function loadAllContent(lang: LanguageType): Promise<ContentData> {
 
   return Object.fromEntries(entries) as ContentData;
 }
+
 // export function loadContent<T>(
 //     profile: string,
 //     lang: string,

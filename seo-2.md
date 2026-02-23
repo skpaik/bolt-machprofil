@@ -26,6 +26,7 @@ I've added **layout.tsx** files with specific metadata for every page:
 ### 🎯 **What Each Page Gets:**
 
 **Every page now has:**
+
 - ✅ **Unique title** with site name template
 - ✅ **Custom description** optimized for search
 - ✅ **Relevant keywords** for that page
@@ -37,12 +38,14 @@ I've added **layout.tsx** files with specific metadata for every page:
 - ✅ **Social preview images**
 
 **Plus globally:**
+
 - ✅ **Website structured data** (JSON-LD)
 - ✅ **Person/Author schema**
 - ✅ **robots.txt** file
 - ✅ **Sitemap** support
 
 **Blog posts additionally get:**
+
 - ✅ **Article-type metadata**
 - ✅ **BlogPosting schema** (JSON-LD)
 - ✅ **Breadcrumb schema**
@@ -51,21 +54,22 @@ I've added **layout.tsx** files with specific metadata for every page:
 
 ### 📊 **SEO Checklist - 100% Complete:**
 
-| Component | Status | Location |
-|-----------|--------|----------|
-| Root metadata | ✅ | `/app/layout.tsx` |
-| Page-specific metadata | ✅ | Each route's `layout.tsx` |
-| Blog post metadata | ✅ | `/app/blog/[lang]/[id]/page.tsx` |
-| Structured data | ✅ | Root + blog posts |
-| robots.txt | ✅ | `/public/robots.txt` |
-| Sitemap | ✅ | `/app/sitemap.xml` |
-| Social cards | ✅ | All pages |
-| Keywords | ✅ | All pages |
-| Canonical URLs | ✅ | All pages |
+| Component              | Status | Location                         |
+| ---------------------- | ------ | -------------------------------- |
+| Root metadata          | ✅     | `/app/layout.tsx`                |
+| Page-specific metadata | ✅     | Each route's `layout.tsx`        |
+| Blog post metadata     | ✅     | `/app/blog/[lang]/[id]/page.tsx` |
+| Structured data        | ✅     | Root + blog posts                |
+| robots.txt             | ✅     | `/public/robots.txt`             |
+| Sitemap                | ✅     | `/app/sitemap.xml`               |
+| Social cards           | ✅     | All pages                        |
+| Keywords               | ✅     | All pages                        |
+| Canonical URLs         | ✅     | All pages                        |
 
 ### 🚀 **Your Portfolio is Now Fully SEO-Optimized!**
 
 **No additional changes needed** - every page in your portfolio now has:
+
 - Professional metadata for search engines
 - Optimized social sharing previews
 - Structured data for rich search results

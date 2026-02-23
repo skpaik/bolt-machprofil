@@ -4,9 +4,7 @@ import {
   TemplateType,
   ThemeType,
 } from "@/lib/types/type.config";
-import { ContentData } from "@/lib/types/content.types";
 import { LanguageI18n } from "@/lib/types/lang.i18n";
-import { ProfileBio } from "@/lib/types/about.contract";
 
 export interface BaseContent {
   id: number;

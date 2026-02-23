@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { usePortfolio } from "@/components/context/PortfolioContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +14,7 @@ import { SortOption } from "@/lib/types/type.config";
 import { formatDateLong } from "@/lib/helpers/date.helper";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import { AppConfig } from "@/data/configs/constants/app-config";
+import { usePagination } from "@/components/hooks/use-pagination";
 
 type ViewMode = "gallery" | "albums";
 
@@ -23,7 +23,6 @@ export default function ClientPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedAlbum, setSelectedAlbum] = useState<string>("all");
   const [selectedTag, setSelectedTag] = useState<string>("all");
@@ -154,15 +153,13 @@ export default function ClientPage() {
     searchQuery,
     sortBy,
   ]);
-  const ITEMS_PER_PAGE = AppConfig.item_per_page;
-  const totalPhotos = filteredPhotos.length;
-  const totalPages = Math.ceil(totalPhotos / ITEMS_PER_PAGE);
-
-  const currentPhotos = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    return filteredPhotos.slice(startIndex, endIndex);
-  }, [filteredPhotos, currentPage]);
+  const {
+    currentPage,
+    setCurrentPage,
+    currentItems: currentPhotos,
+    totalPages,
+    totalItems: totalPhotos,
+  } = usePagination(filteredPhotos);
 
   // Get page from URL or default to 1
   const pageParam = searchParams?.get("page");

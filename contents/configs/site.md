@@ -20,7 +20,7 @@ keywords2:
   - nextjs
   - typescript
   - software engineer
-  
+
 baseUrl: "https://skpaik.github.io"
 language: "en"
 locale: "en-US"

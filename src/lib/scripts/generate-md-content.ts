@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 import {
-  ReferenceSchema,
-  LanguageProficiencySchema,
   ContactSchema,
+  LanguageProficiencySchema,
+  ReferenceSchema,
 } from "@/lib/types/contract";
 import { Certificate, Publication, Skills } from "@/lib/types/portfolio";
 import { ProfileBio, SocialLink } from "@/lib/types/about.contract";

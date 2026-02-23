@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
-import { PageMetaParams, SiteConfig } from "@/lib/types/portfolio";
+import { PageMetaParams } from "@/lib/types/portfolio";
 import { site_const } from "@/data/configs/generated/site";
 
 export class MetadataHelper {
@@ -115,25 +115,6 @@ export class MetadataHelper {
     };
   }
 
-  private static generateOpenGraphData(): OpenGraph {
-    return {
-      type: "website",
-      locale: "en_US",
-      url: site_const.baseUrl,
-      siteName: site_const.siteTitle,
-      title: site_const.siteTitle,
-      description: site_const.description,
-      images: [
-        {
-          url: site_const.ogImage,
-          width: 1200,
-          height: 630,
-          alt: site_const.siteTitle,
-        },
-      ],
-    };
-  }
-
   // Generate JSON-LD structured data for Person/Organization
   public static generatePersonStructuredData() {
     return {
@@ -228,6 +209,25 @@ export class MetadataHelper {
         name: item.name,
         item: `${site_const.baseUrl}${item.url}`,
       })),
+    };
+  }
+
+  private static generateOpenGraphData(): OpenGraph {
+    return {
+      type: "website",
+      locale: "en_US",
+      url: site_const.baseUrl,
+      siteName: site_const.siteTitle,
+      title: site_const.siteTitle,
+      description: site_const.description,
+      images: [
+        {
+          url: site_const.ogImage,
+          width: 1200,
+          height: 630,
+          alt: site_const.siteTitle,
+        },
+      ],
     };
   }
 }
