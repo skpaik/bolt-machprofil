@@ -18,23 +18,23 @@ export function main() {
 
   const profileValues = getProfileValues();
 
-  if (!profileValues.includes(settings_const.activeProfile)) {
-    settings_const.activeProfile = profileValues[0];
+  if (!profileValues.includes(settings_const.active.Profile)) {
+    settings_const.active.Profile = profileValues[0];
   }
 
   // --- languages ---
   const allowedLanguagesForProfile = getLanguagesForProfile(
-    settings_const.activeProfile,
+    settings_const.active.Profile,
   );
 
   if (allowedLanguagesForProfile.length < 1) {
     throw new Error(
-      `Profile "${settings_const.activeProfile}" has no allowed languages`,
+      `Profile "${settings_const.active.Profile}" has no allowed languages`,
     );
   }
 
-  if (!allowedLanguagesForProfile.includes(settings_const.activeLanguage)) {
-    settings_const.activeLanguage = allowedLanguagesForProfile[0];
+  if (!allowedLanguagesForProfile.includes(settings_const.active.Language)) {
+    settings_const.active.Language = allowedLanguagesForProfile[0];
   }
 }
 

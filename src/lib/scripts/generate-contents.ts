@@ -1,6 +1,7 @@
 import { mainToConfigTs } from "@/lib/scripts/generate-config-ts";
 import { generateContentItemCounts } from "@/lib/scripts/generate-content-item-counts";
 import { validateContents } from "@/lib/scripts/validate-contents";
+import {convertMdToTs} from "@/lib/scripts/convert-md-to-ts";
 
 // Run all preparation tasks
 function main() {
@@ -9,7 +10,7 @@ function main() {
     // buildConfigsJson();
     mainToConfigTs();
     // generateRegistry();
-    //convertMdToTs();
+    convertMdToTs();
     // generateJSONContent();
     // convertContentListToObject();
     generateContentItemCounts();

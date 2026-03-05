@@ -7,14 +7,13 @@ export const data = [
     location: "Cottbus-Ströbitz, Brandenburg, Germany",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
     rating: 5,
-    testimonial:
-      "Absolutely exceptional work! The web application exceeded all our expectations. The attention to detail, clean code, and professional communication throughout the project made this a seamless experience. I highly recommend their services to anyone looking for top-tier development work.",
+    testimonial: "Absolutely exceptional work! The web application exceeded all our expectations. The attention to detail, clean code, and professional communication throughout the project made this a seamless experience. I highly recommend their services to anyone looking for top-tier development work.",
     date: "2024-10-15",
     project: "E-commerce Platform",
     category: "Web Development",
     featured: true,
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 10,
@@ -24,13 +23,12 @@ export const data = [
     location: "Portland, OR",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Chris",
     rating: 4,
-    testimonial:
-      "Great experience overall! Communication was excellent and the final product met our requirements. There were a few minor delays but they kept us informed. Would work with them again on future projects.",
+    testimonial: "Great experience overall! Communication was excellent and the final product met our requirements. There were a few minor delays but they kept us informed. Would work with them again on future projects.",
     date: "2024-05-28",
     project: "MVP Development",
     category: "Web Development",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 11,
@@ -40,13 +38,12 @@ export const data = [
     location: "Nashville, TN",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nicole",
     rating: 5,
-    testimonial:
-      "The digital marketing campaign exceeded our goals. Social media engagement increased 300% and our brand awareness skyrocketed. They really understand how to connect with audiences and drive results.",
+    testimonial: "The digital marketing campaign exceeded our goals. Social media engagement increased 300% and our brand awareness skyrocketed. They really understand how to connect with audiences and drive results.",
     date: "2024-05-15",
     project: "Social Media Campaign",
     category: "Digital Marketing",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 12,
@@ -56,13 +53,12 @@ export const data = [
     location: "San Diego, CA",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Tom",
     rating: 5,
-    testimonial:
-      "Fantastic code quality and best practices. They reviewed our codebase and provided actionable recommendations that improved our app performance by 60%. True expert in their field!",
+    testimonial: "Fantastic code quality and best practices. They reviewed our codebase and provided actionable recommendations that improved our app performance by 60%. True expert in their field!",
     date: "2024-04-20",
     project: "Code Review",
     category: "Consulting",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 2,
@@ -72,14 +68,13 @@ export const data = [
     location: "New York, NY",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
     rating: 5,
-    testimonial:
-      "Working with this developer was a game-changer for our project. They brought creative solutions to complex problems and delivered a mobile app that our users absolutely love. The performance is outstanding and the UI is intuitive. Highly professional!",
+    testimonial: "Working with this developer was a game-changer for our project. They brought creative solutions to complex problems and delivered a mobile app that our users absolutely love. The performance is outstanding and the UI is intuitive. Highly professional!",
     date: "2024-09-22",
     project: "Mobile Fitness App",
     category: "Mobile Development",
     featured: true,
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 3,
@@ -89,13 +84,12 @@ export const data = [
     location: "Los Angeles, CA",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily",
     rating: 5,
-    testimonial:
-      "The SEO optimization service transformed our online presence. Within 3 months, we saw a 250% increase in organic traffic. The comprehensive strategy and regular reporting kept us informed every step of the way. Worth every penny!",
+    testimonial: "The SEO optimization service transformed our online presence. Within 3 months, we saw a 250% increase in organic traffic. The comprehensive strategy and regular reporting kept us informed every step of the way. Worth every penny!",
     date: "2024-09-10",
     project: "SEO Campaign",
     category: "Digital Marketing",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 4,
@@ -105,14 +99,13 @@ export const data = [
     location: "Seattle, WA",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=David",
     rating: 5,
-    testimonial:
-      "Outstanding cloud architecture work! They migrated our entire infrastructure to AWS with zero downtime. The auto-scaling and cost optimization strategies saved us 40% on our monthly cloud bills. True expertise in cloud technologies.",
+    testimonial: "Outstanding cloud architecture work! They migrated our entire infrastructure to AWS with zero downtime. The auto-scaling and cost optimization strategies saved us 40% on our monthly cloud bills. True expertise in cloud technologies.",
     date: "2024-08-28",
     project: "Cloud Migration",
     category: "Cloud Solutions",
     featured: true,
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 5,
@@ -122,13 +115,12 @@ export const data = [
     location: "Austin, TX",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica",
     rating: 5,
-    testimonial:
-      "The UI/UX design work was phenomenal. They really understood our users and created an interface that increased our conversion rate by 85%. The design system they created is now the foundation for all our products.",
+    testimonial: "The UI/UX design work was phenomenal. They really understood our users and created an interface that increased our conversion rate by 85%. The design system they created is now the foundation for all our products.",
     date: "2024-08-15",
     project: "SaaS Dashboard Redesign",
     category: "UI/UX Design",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 6,
@@ -138,13 +130,12 @@ export const data = [
     location: "Chicago, IL",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Robert",
     rating: 5,
-    testimonial:
-      "Built our Shopify store from scratch and it looks amazing! The custom features they developed set us apart from competitors. Sales increased 3x in the first month alone. Highly recommended for e-commerce projects!",
+    testimonial: "Built our Shopify store from scratch and it looks amazing! The custom features they developed set us apart from competitors. Sales increased 3x in the first month alone. Highly recommended for e-commerce projects!",
     date: "2024-07-30",
     project: "Shopify Store",
     category: "E-commerce",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 7,
@@ -154,13 +145,12 @@ export const data = [
     location: "Boston, MA",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Amanda",
     rating: 5,
-    testimonial:
-      "The content writing service delivered exactly what we needed. SEO-optimized, engaging articles that resonate with our audience. Our blog traffic doubled and engagement metrics are through the roof. Will definitely work together again!",
+    testimonial: "The content writing service delivered exactly what we needed. SEO-optimized, engaging articles that resonate with our audience. Our blog traffic doubled and engagement metrics are through the roof. Will definitely work together again!",
     date: "2024-07-18",
     project: "Content Strategy",
     category: "Content Writing",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 8,
@@ -170,13 +160,12 @@ export const data = [
     location: "Denver, CO",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=James",
     rating: 5,
-    testimonial:
-      "The API they developed is rock solid. Handles millions of requests daily without any issues. Documentation was clear and comprehensive. Integration was smooth and their ongoing support has been excellent.",
+    testimonial: "The API they developed is rock solid. Handles millions of requests daily without any issues. Documentation was clear and comprehensive. Integration was smooth and their ongoing support has been excellent.",
     date: "2024-06-25",
     project: "RESTful API",
     category: "API Development",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 9,
@@ -186,14 +175,13 @@ export const data = [
     location: "Miami, FL",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Lisa",
     rating: 5,
-    testimonial:
-      "Their consulting services helped us make critical technology decisions that saved our project. The architecture review identified bottlenecks we didn't know existed. Their expertise and guidance were invaluable.",
+    testimonial: "Their consulting services helped us make critical technology decisions that saved our project. The architecture review identified bottlenecks we didn't know existed. Their expertise and guidance were invaluable.",
     date: "2024-06-10",
     project: "Tech Consulting",
     category: "Consulting",
     featured: true,
     verified: true,
-    content: "",
-  },
+    content: ""
+  }
 ] as const satisfies unknown;
 export default data;

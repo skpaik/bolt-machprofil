@@ -1,22 +1,24 @@
 export const data = [
   {
     id: 1,
-    title:
-      "Deep Learning Approaches for Natural Language Processing: A Comprehensive Survey",
-    authors: ["Mofiz Rahman", "Jane Smith", "Robert Johnson"],
+    title: "Deep Learning Approaches for Natural Language Processing: A Comprehensive Survey",
+    authors: [
+      "Mofiz Rahman",
+      "Jane Smith",
+      "Robert Johnson"
+    ],
     publishedIn: "IEEE Transactions on Neural Networks and Learning Systems",
     publisher: "IEEE",
     year: 2024,
     month: "March",
     type: "Journal",
-    abstract:
-      "This survey provides a comprehensive overview of deep learning techniques applied to natural language processing tasks. We discuss recent advances in transformer architectures, pre-training methods, and their applications across various NLP domains including machine translation, sentiment analysis, and question answering.",
+    abstract: "This survey provides a comprehensive overview of deep learning techniques applied to natural language processing tasks. We discuss recent advances in transformer architectures, pre-training methods, and their applications across various NLP domains including machine translation, sentiment analysis, and question answering.",
     keywords: [
       "Deep Learning",
       "Natural Language Processing",
       "Transformers",
       "BERT",
-      "GPT",
+      "GPT"
     ],
     doi: "10.1109/TNNLS.2024.1234567",
     url: "https://ieeexplore.ieee.org/document/example",
@@ -24,26 +26,27 @@ export const data = [
     citations: 45,
     featured: true,
     status: "Published",
-    content: "",
+    content: ""
   },
   {
     id: 2,
-    title:
-      "Efficient Training of Large-Scale Neural Networks Using Mixed Precision Techniques",
-    authors: ["Mofiz Rahman", "Alice Brown", "Michael Chen"],
-    publishedIn:
-      "Proceedings of the 38th International Conference on Machine Learning (ICML)",
+    title: "Efficient Training of Large-Scale Neural Networks Using Mixed Precision Techniques",
+    authors: [
+      "Mofiz Rahman",
+      "Alice Brown",
+      "Michael Chen"
+    ],
+    publishedIn: "Proceedings of the 38th International Conference on Machine Learning (ICML)",
     publisher: "PMLR",
     year: 2024,
     month: "July",
     type: "Conference",
-    abstract:
-      "We present novel mixed precision training techniques that significantly reduce training time and memory consumption for large-scale neural networks. Our approach achieves up to 3x speedup while maintaining model accuracy on various benchmark datasets.",
+    abstract: "We present novel mixed precision training techniques that significantly reduce training time and memory consumption for large-scale neural networks. Our approach achieves up to 3x speedup while maintaining model accuracy on various benchmark datasets.",
     keywords: [
       "Deep Learning",
       "Mixed Precision",
       "Neural Networks",
-      "GPU Optimization",
+      "GPU Optimization"
     ],
     doi: "10.48550/arXiv.2024.example",
     url: "https://proceedings.mlr.press/example",
@@ -51,179 +54,194 @@ export const data = [
     citations: 28,
     featured: true,
     status: "Published",
-    content: "",
+    content: ""
   },
   {
     id: 3,
-    title:
-      "Automated Code Review Using Machine Learning: Techniques and Applications",
-    authors: ["Mofiz Rahman", "Sarah Wilson"],
+    title: "Automated Code Review Using Machine Learning: Techniques and Applications",
+    authors: [
+      "Mofiz Rahman",
+      "Sarah Wilson"
+    ],
     publishedIn: "ACM Transactions on Software Engineering and Methodology",
     publisher: "ACM",
     year: 2023,
     month: "November",
     type: "Journal",
-    abstract:
-      "This paper explores machine learning approaches for automated code review, including defect detection, code smell identification, and security vulnerability analysis. We present a comprehensive framework that integrates multiple ML models to provide intelligent code review suggestions.",
+    abstract: "This paper explores machine learning approaches for automated code review, including defect detection, code smell identification, and security vulnerability analysis. We present a comprehensive framework that integrates multiple ML models to provide intelligent code review suggestions.",
     keywords: [
       "Machine Learning",
       "Software Engineering",
       "Code Review",
-      "Static Analysis",
+      "Static Analysis"
     ],
     doi: "10.1145/3234567.8901234",
     url: "https://dl.acm.org/doi/example",
     pdfUrl: "/publications/code-review-ml-2023.pdf",
     citations: 67,
     status: "Published",
-    content: "",
+    content: ""
   },
   {
     id: 4,
     title: "Blockchain-Based Secure Data Sharing in Healthcare Systems",
-    authors: ["Mofiz Rahman", "Emily Davis", "David Lee", "Maria Garcia"],
+    authors: [
+      "Mofiz Rahman",
+      "Emily Davis",
+      "David Lee",
+      "Maria Garcia"
+    ],
     publishedIn: "IEEE International Conference on Healthcare Informatics",
     publisher: "IEEE",
     year: 2023,
     month: "September",
     type: "Conference",
-    abstract:
-      "We propose a blockchain-based framework for secure and privacy-preserving data sharing in healthcare systems. The framework leverages smart contracts and cryptographic techniques to ensure data integrity, auditability, and patient consent management.",
+    abstract: "We propose a blockchain-based framework for secure and privacy-preserving data sharing in healthcare systems. The framework leverages smart contracts and cryptographic techniques to ensure data integrity, auditability, and patient consent management.",
     keywords: [
       "Blockchain",
       "Healthcare",
       "Privacy",
       "Security",
-      "Data Sharing",
+      "Data Sharing"
     ],
     doi: "10.1109/ICHI.2023.example",
     url: "https://ieeexplore.ieee.org/document/healthcare",
     citations: 34,
     featured: true,
     status: "Published",
-    content: "",
+    content: ""
   },
   {
     id: 5,
-    title:
-      "Optimizing Web Performance: A Study of Modern JavaScript Frameworks",
-    authors: ["Mofiz Rahman", "Tom Anderson"],
+    title: "Optimizing Web Performance: A Study of Modern JavaScript Frameworks",
+    authors: [
+      "Mofiz Rahman",
+      "Tom Anderson"
+    ],
     publishedIn: "Handbook of Modern Web Development",
     publisher: "Springer",
     year: 2023,
     month: "June",
     type: "Book Chapter",
-    abstract:
-      "This chapter examines the performance characteristics of modern JavaScript frameworks including React, Vue, and Angular. We provide empirical analysis and best practices for optimizing web application performance in production environments.",
+    abstract: "This chapter examines the performance characteristics of modern JavaScript frameworks including React, Vue, and Angular. We provide empirical analysis and best practices for optimizing web application performance in production environments.",
     keywords: [
       "Web Development",
       "JavaScript",
       "React",
       "Performance",
-      "Optimization",
+      "Optimization"
     ],
     doi: "10.1007/978-3-example",
     url: "https://link.springer.com/chapter/example",
     pdfUrl: "/publications/web-performance-2023.pdf",
     citations: 23,
     status: "Published",
-    content: "",
+    content: ""
   },
   {
     id: 6,
-    title:
-      "Federated Learning for Privacy-Preserving Machine Learning in IoT Networks",
-    authors: ["Mofiz Rahman", "Lisa Martinez", "Kevin Zhang"],
+    title: "Federated Learning for Privacy-Preserving Machine Learning in IoT Networks",
+    authors: [
+      "Mofiz Rahman",
+      "Lisa Martinez",
+      "Kevin Zhang"
+    ],
     publishedIn: "IoT Workshop at NeurIPS 2023",
     publisher: "NeurIPS",
     year: 2023,
     month: "December",
     type: "Workshop",
-    abstract:
-      "We present a federated learning approach tailored for IoT networks with limited bandwidth and heterogeneous devices. Our method achieves comparable accuracy to centralized training while preserving data privacy and reducing communication overhead.",
+    abstract: "We present a federated learning approach tailored for IoT networks with limited bandwidth and heterogeneous devices. Our method achieves comparable accuracy to centralized training while preserving data privacy and reducing communication overhead.",
     keywords: [
       "Federated Learning",
       "IoT",
       "Privacy",
       "Edge Computing",
-      "Machine Learning",
+      "Machine Learning"
     ],
     url: "https://neurips.cc/workshop/example",
     pdfUrl: "/publications/federated-iot-2023.pdf",
     citations: 12,
     status: "Published",
-    content: "",
+    content: ""
   },
   {
     id: 7,
     title: "Explainable AI for Medical Diagnosis: A Clinical Perspective",
-    authors: ["Mofiz Rahman", "Dr. Rachel Kim", "Dr. James Wilson"],
+    authors: [
+      "Mofiz Rahman",
+      "Dr. Rachel Kim",
+      "Dr. James Wilson"
+    ],
     publishedIn: "Nature Machine Intelligence",
     publisher: "Nature Publishing Group",
     year: 2024,
     month: "January",
     type: "Journal",
-    abstract:
-      "This study investigates explainable AI techniques for medical diagnosis applications. We present case studies demonstrating how interpretable machine learning models can assist clinicians in making informed decisions while maintaining diagnostic accuracy.",
+    abstract: "This study investigates explainable AI techniques for medical diagnosis applications. We present case studies demonstrating how interpretable machine learning models can assist clinicians in making informed decisions while maintaining diagnostic accuracy.",
     keywords: [
       "Explainable AI",
       "Medical Diagnosis",
       "Healthcare",
-      "Interpretability",
+      "Interpretability"
     ],
     doi: "10.1038/s42256-024-example",
     url: "https://www.nature.com/articles/example",
     citations: 89,
     featured: true,
     status: "Published",
-    content: "",
+    content: ""
   },
   {
     id: 8,
-    title:
-      "Real-Time Object Detection Using Edge Computing and Neural Networks",
-    authors: ["Mofiz Rahman", "Chris Brown"],
+    title: "Real-Time Object Detection Using Edge Computing and Neural Networks",
+    authors: [
+      "Mofiz Rahman",
+      "Chris Brown"
+    ],
     publishedIn: "arXiv preprint",
     year: 2024,
     month: "April",
     type: "Preprint",
-    abstract:
-      "We propose a lightweight neural network architecture optimized for real-time object detection on edge devices. Our approach achieves state-of-the-art accuracy while maintaining inference speeds suitable for resource-constrained environments.",
+    abstract: "We propose a lightweight neural network architecture optimized for real-time object detection on edge devices. Our approach achieves state-of-the-art accuracy while maintaining inference speeds suitable for resource-constrained environments.",
     keywords: [
       "Object Detection",
       "Edge Computing",
       "Neural Networks",
-      "Computer Vision",
+      "Computer Vision"
     ],
     doi: "10.48550/arXiv.2404.example",
     url: "https://arxiv.org/abs/example",
     pdfUrl: "/publications/edge-detection-2024.pdf",
     citations: 8,
     status: "Preprint",
-    content: "",
+    content: ""
   },
   {
     id: 9,
     title: "Graph Neural Networks for Social Network Analysis",
-    authors: ["Mofiz Rahman", "Anna Lee", "Peter Johnson"],
+    authors: [
+      "Mofiz Rahman",
+      "Anna Lee",
+      "Peter Johnson"
+    ],
     publishedIn: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
     publisher: "ACM",
     year: 2023,
     month: "August",
     type: "Conference",
-    abstract:
-      "We introduce novel graph neural network architectures for analyzing social networks. Our models effectively capture complex relationships and dynamics in large-scale social graphs, enabling improved community detection and influence prediction.",
+    abstract: "We introduce novel graph neural network architectures for analyzing social networks. Our models effectively capture complex relationships and dynamics in large-scale social graphs, enabling improved community detection and influence prediction.",
     keywords: [
       "Graph Neural Networks",
       "Social Networks",
       "Community Detection",
-      "Deep Learning",
+      "Deep Learning"
     ],
     doi: "10.1145/3580305.example",
     url: "https://dl.acm.org/doi/kdd2023",
     citations: 51,
     status: "Published",
-    content: "",
-  },
+    content: ""
+  }
 ] as const satisfies unknown;
 export default data;

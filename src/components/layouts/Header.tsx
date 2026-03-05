@@ -59,8 +59,8 @@ export default function Header({ siteTitle, profileType }: HeaderProps) {
             ConfigData.profileList.length > 1 && <ProfileSwitcher />}
           {settings_const.show.LanguageChangeButton &&
             allowedLanguages.length > 1 && <LanguageSwitcher />}
-          {settings_const.showTemplateChangeButton && <TemplateSwitcher />}
-          {settings_const.showThemeChangeButton && <ThemeSwitcher />}
+          {settings_const.show.TemplateChangeButton && <TemplateSwitcher />}
+          {settings_const.show.ThemeChangeButton && <ThemeSwitcher />}
         </div>
       </div>
     </header>

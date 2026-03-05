@@ -48,7 +48,8 @@ async function generate() {
   const result: Counts = {};
 
   if (!fs.existsSync(CONTENT_ROOT)) {
-    throw new Error("Content root directory does not exist.");
+    fs.mkdirSync(CONTENT_ROOT);
+    // throw new Error("Content root directory does not exist.");
   }
 
   const profiles = fs.readdirSync(CONTENT_ROOT);

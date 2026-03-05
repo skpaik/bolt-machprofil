@@ -19,8 +19,8 @@ export class MenuService {
    * @param desktopLimit number of primary items to show on desktop
    */
   static getMenu(
-    profileType: ProfileType = settings_const.activeProfile,
-    languageType: LanguageType = settings_const.activeLanguage,
+    profileType: ProfileType = settings_const.active.Profile,
+    languageType: LanguageType = settings_const.active.Language,
     isMobile: boolean,
     mobileLimit = 4,
     desktopLimit = 5,

@@ -62,7 +62,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   const [profileType, setProfileType] = useState<ProfileType>(() =>
     getInitialValue(
       "activeProfile",
-      settings_const.activeProfile as ProfileType,
+      settings_const.active.Profile as ProfileType,
       allowedProfileValues,
     ),
   );
@@ -70,20 +70,20 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   const [templateType, setTemplateType] = useState<TemplateType>(() =>
     getInitialValue(
       "activeTemplate",
-      settings_const.activeTemplate as TemplateType,
+      settings_const.active.Template as TemplateType,
     ),
   );
 
   const [languageType, setLanguageType] = useState<LanguageType>(() =>
     getInitialValue(
       "activeLanguage",
-      settings_const.activeLanguage as LanguageType,
+      settings_const.active.Language as LanguageType,
       Object.keys(languageData) as LanguageType[],
     ),
   );
 
   const [themeType, setThemeType] = useState<ThemeType>(() =>
-    getInitialValue("activeTheme", settings_const.activeTheme as ThemeType),
+    getInitialValue("activeTheme", settings_const.active.Theme as ThemeType),
   );
 
   // Keep theme synced to DOM

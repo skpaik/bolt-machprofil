@@ -23,10 +23,10 @@ export default function Footer({ siteTitle }: FooterProps) {
           </div>
 
           <div className="flex items-center gap-3">
-            {settings_const.showLanguageChangeButton && <LanguageSwitcher />}
-            {settings_const.showTemplateChangeButton && <TemplateSwitcher />}
-            {settings_const.showProfileChangeButton && <ProfileSwitcher />}
-            {settings_const.showThemeChangeButton && <ThemeSwitcher />}
+            {settings_const.show.LanguageChangeButton && <LanguageSwitcher />}
+            {settings_const.show.TemplateChangeButton && <TemplateSwitcher />}
+            {settings_const.show.ProfileChangeButton && <ProfileSwitcher />}
+            {settings_const.show.ThemeChangeButton && <ThemeSwitcher />}
           </div>
         </div>
       </div>

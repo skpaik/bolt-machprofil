@@ -8,13 +8,17 @@ export const data = [
     credentialId: "AWS-PSA-12345",
     credentialUrl: "https://aws.amazon.com/verification",
     category: "Cloud Computing",
-    skills: ["AWS", "Cloud Architecture", "Infrastructure", "Security"],
-    description:
-      "Advanced AWS certification demonstrating expertise in designing and deploying dynamically scalable, highly available, fault-tolerant, and reliable applications on AWS.",
+    skills: [
+      "AWS",
+      "Cloud Architecture",
+      "Infrastructure",
+      "Security"
+    ],
+    description: "Advanced AWS certification demonstrating expertise in designing and deploying dynamically scalable, highly available, fault-tolerant, and reliable applications on AWS.",
     logo: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=400&h=400&fit=crop",
     verified: true,
     featured: true,
-    content: "",
+    content: ""
   },
   {
     id: 10,
@@ -29,13 +33,12 @@ export const data = [
       "Cybersecurity",
       "Network Security",
       "Risk Management",
-      "Compliance",
+      "Compliance"
     ],
-    description:
-      "Validates baseline cybersecurity skills necessary for core security functions.",
+    description: "Validates baseline cybersecurity skills necessary for core security functions.",
     logo: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 11,
@@ -46,12 +49,16 @@ export const data = [
     credentialId: "HASHI-TF-88990",
     credentialUrl: "https://www.hashicorp.com/certification",
     category: "DevOps",
-    skills: ["Terraform", "Infrastructure as Code", "Automation", "Cloud"],
-    description:
-      "Validates knowledge of basic concepts and skills with HashiCorp Terraform.",
+    skills: [
+      "Terraform",
+      "Infrastructure as Code",
+      "Automation",
+      "Cloud"
+    ],
+    description: "Validates knowledge of basic concepts and skills with HashiCorp Terraform.",
     logo: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 12,
@@ -62,12 +69,16 @@ export const data = [
     credentialId: "MONGO-DEV-33445",
     credentialUrl: "https://university.mongodb.com/certification",
     category: "Database",
-    skills: ["MongoDB", "NoSQL", "Database Design", "Node.js"],
-    description:
-      "Demonstrates ability to build applications using MongoDB and understanding of core MongoDB concepts.",
+    skills: [
+      "MongoDB",
+      "NoSQL",
+      "Database Design",
+      "Node.js"
+    ],
+    description: "Demonstrates ability to build applications using MongoDB and understanding of core MongoDB concepts.",
     logo: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 2,
@@ -78,13 +89,17 @@ export const data = [
     credentialId: "GCP-PCA-67890",
     credentialUrl: "https://cloud.google.com/certification",
     category: "Cloud Computing",
-    skills: ["GCP", "Cloud Architecture", "Kubernetes", "DevOps"],
-    description:
-      "Professional certification validating ability to design, develop, and manage robust, secure, scalable, and dynamic solutions on Google Cloud.",
+    skills: [
+      "GCP",
+      "Cloud Architecture",
+      "Kubernetes",
+      "DevOps"
+    ],
+    description: "Professional certification validating ability to design, develop, and manage robust, secure, scalable, and dynamic solutions on Google Cloud.",
     logo: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=400&fit=crop",
     verified: true,
     featured: true,
-    content: "",
+    content: ""
   },
   {
     id: 3,
@@ -95,12 +110,16 @@ export const data = [
     credentialId: "META-FED-11223",
     credentialUrl: "https://coursera.org/verify/professional-cert/xyz",
     category: "Web Development",
-    skills: ["React", "JavaScript", "HTML/CSS", "UI/UX"],
-    description:
-      "Comprehensive program covering React, JavaScript, HTML/CSS, and modern front-end development practices.",
+    skills: [
+      "React",
+      "JavaScript",
+      "HTML/CSS",
+      "UI/UX"
+    ],
+    description: "Comprehensive program covering React, JavaScript, HTML/CSS, and modern front-end development practices.",
     logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 4,
@@ -111,13 +130,17 @@ export const data = [
     credentialId: "CNCF-CKA-44556",
     credentialUrl: "https://www.cncf.io/certification/cka/",
     category: "DevOps",
-    skills: ["Kubernetes", "Docker", "Container Orchestration", "Linux"],
-    description:
-      "Validates skills in deploying, managing, and troubleshooting Kubernetes clusters.",
+    skills: [
+      "Kubernetes",
+      "Docker",
+      "Container Orchestration",
+      "Linux"
+    ],
+    description: "Validates skills in deploying, managing, and troubleshooting Kubernetes clusters.",
     logo: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=400&fit=crop",
     verified: true,
     featured: true,
-    content: "",
+    content: ""
   },
   {
     id: 5,
@@ -128,12 +151,16 @@ export const data = [
     credentialId: "MS-AZ-204-78901",
     credentialUrl: "https://learn.microsoft.com/credentials",
     category: "Cloud Computing",
-    skills: ["Azure", "Cloud Development", "APIs", "Security"],
-    description:
-      "Demonstrates expertise in designing, building, testing, and maintaining cloud applications on Microsoft Azure.",
+    skills: [
+      "Azure",
+      "Cloud Development",
+      "APIs",
+      "Security"
+    ],
+    description: "Demonstrates expertise in designing, building, testing, and maintaining cloud applications on Microsoft Azure.",
     logo: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 6,
@@ -144,12 +171,16 @@ export const data = [
     credentialId: "CSM-123456",
     credentialUrl: "https://www.scrumalliance.org/get-certified/verify",
     category: "Project Management",
-    skills: ["Scrum", "Agile", "Team Leadership", "Project Management"],
-    description:
-      "Validates understanding of Scrum framework and ability to apply it in real-world scenarios.",
+    skills: [
+      "Scrum",
+      "Agile",
+      "Team Leadership",
+      "Project Management"
+    ],
+    description: "Validates understanding of Scrum framework and ability to apply it in real-world scenarios.",
     logo: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 7,
@@ -160,12 +191,16 @@ export const data = [
     credentialId: "DL-SPEC-99887",
     credentialUrl: "https://coursera.org/verify/specialization/abc123",
     category: "Machine Learning",
-    skills: ["Deep Learning", "Neural Networks", "TensorFlow", "Python"],
-    description:
-      "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
+    skills: [
+      "Deep Learning",
+      "Neural Networks",
+      "TensorFlow",
+      "Python"
+    ],
+    description: "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
     logo: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 8,
@@ -176,12 +211,16 @@ export const data = [
     credentialId: "ADOBE-VD-55443",
     credentialUrl: "https://www.adobe.com/certification",
     category: "Design",
-    skills: ["Photoshop", "Illustrator", "InDesign", "Visual Design"],
-    description:
-      "Demonstrates proficiency in Adobe Creative Suite for professional visual design work.",
+    skills: [
+      "Photoshop",
+      "Illustrator",
+      "InDesign",
+      "Visual Design"
+    ],
+    description: "Demonstrates proficiency in Adobe Creative Suite for professional visual design work.",
     logo: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
+    content: ""
   },
   {
     id: 9,
@@ -192,12 +231,16 @@ export const data = [
     credentialId: "GA-IQ-22334",
     credentialUrl: "https://skillshop.exceedlms.com/student/catalog",
     category: "Marketing",
-    skills: ["Google Analytics", "Data Analysis", "Marketing", "SEO"],
-    description:
-      "Demonstrates proficiency in Google Analytics, including setup, collection, configuration, and reporting.",
+    skills: [
+      "Google Analytics",
+      "Data Analysis",
+      "Marketing",
+      "SEO"
+    ],
+    description: "Demonstrates proficiency in Google Analytics, including setup, collection, configuration, and reporting.",
     logo: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop",
     verified: true,
-    content: "",
-  },
+    content: ""
+  }
 ] as const satisfies unknown;
 export default data;
