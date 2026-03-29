@@ -1,39 +1,38 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { PortfolioProvider } from '@/context/PortfolioContext';
-import TemplateWrapper from '@/components/TemplateWrapper';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import BottomNav from '@/components/BottomNav';
-import { Toaster } from '@/components/ui/toaster';
+import type { Metadata } from "next";
+import { Suspense } from "react";
 
-const inter = Inter({ subsets: ['latin'] });
+import { MetadataHelper } from "@/lib/helpers/metadata.helper";
+import AppLayout from "@/app/app-layout";
+import { ProfileSync } from "@/components/layouts/profile-sync";
+import { StructuredData } from "@/components/seo/StructuredData";
 
-export const metadata: Metadata = {
-  title: 'Portfolio Website',
-  description: 'Professional portfolio website showcasing work, skills, and experience',
-};
+import "../assets/styles/globals.css";
+import { geistMono, geistSans } from "@/assets/fonts";
+
+export const metadata: Metadata = MetadataHelper.generateMetaData();
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Generate structured data for the website
+  const websiteStructuredData = MetadataHelper.generateWebsiteStructuredData();
+  const personStructuredData = MetadataHelper.generatePersonStructuredData();
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <PortfolioProvider>
-          <TemplateWrapper>
-            <div className="flex flex-col min-h-screen pb-16">
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-            <BottomNav />
-          </TemplateWrapper>
-          <Toaster />
-        </PortfolioProvider>
+      <head>
+        <StructuredData data={websiteStructuredData} />
+        <StructuredData data={personStructuredData} />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Suspense fallback={null}>
+          <ProfileSync />
+        </Suspense>
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );

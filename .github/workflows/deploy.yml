@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [release_20] # Change to your branch name if different
+  workflow_dispatch: # Allows manual trigger from Actions tab
+
+# Sets permissions of the GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24" # or "20" if you prefer
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ============================================
+      # YOUR CUSTOM PRE-BUILD COMMANDS GO HERE
+      # ============================================
+      - name: Prepare content
+        run: |
+          echo "Running content preparation scripts..."
+          npm run prepare:content
+          # Or run multiple commands:
+          # node scripts/generate-sitemap.js
+          # node scripts/optimize-images.js
+          # npm run generate:data
+
+      # ============================================
+      # BUILD STEP
+      # ============================================
+      - name: Build Next.js app
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

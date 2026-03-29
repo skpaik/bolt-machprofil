@@ -1,0 +1,2917 @@
+{
+  "configs": {},
+  "developer": {
+    "en": [
+      {
+        "slug": "static_contents",
+        "order": 0,
+        "terms": {
+          "id": 1,
+          "title": "Terms of Service",
+          "subtitle": "Simple and straightforward terms for working together.",
+          "last_updated": "November 2, 2024",
+          "sections": [
+            {
+              "id": 1,
+              "title": "1. Services 5",
+              "icon": "file-text",
+              "content": "I provide freelance services including web development, design, and consulting. Specific project details, deliverables, and timelines will be discussed and agreed upon before starting work."
+            },
+            {
+              "id": 2,
+              "title": "2. Payment",
+              "icon": "dollar-sign",
+              "content": "Payment terms will be agreed upon per project. Typically:",
+              "list": [
+                "50% deposit before starting work",
+                "50% upon completion",
+                "Hourly projects billed monthly"
+              ]
+            },
+            {
+              "id": 3,
+              "title": "3. Ownership & Rights",
+              "icon": "shield",
+              "content": "Once you've paid in full, you own the final work I create for your project. I may showcase the work in my portfolio. Any pre-existing code or third-party assets have their own licenses."
+            },
+            {
+              "id": 4,
+              "title": "4. Timeline & Revisions",
+              "icon": "clock",
+              "content": "Project timelines are estimates. Most projects include 2-3 rounds of revisions. Delays can happen if feedback or content is delayed. Major changes to the project scope may require additional time and cost."
+            },
+            {
+              "id": 5,
+              "title": "5. Cancellation",
+              "icon": "alert-circle",
+              "content": "Either of us can cancel the project with notice. You'll need to pay for work completed up to that point. Deposits are generally non-refundable once work has started."
+            },
+            {
+              "id": 6,
+              "title": "6. Disclaimer",
+              "icon": "shield",
+              "content": "I'll do my best work, but I can't guarantee specific results like traffic, sales, or rankings. You're responsible for maintaining your site/app and keeping backups after launch."
+            }
+          ],
+          "contactTitle": "Have Questions?",
+          "contactText": "If anything is unclear or you'd like to discuss terms for your project, feel free to reach out.",
+          "footerText": "By working with me, you agree to these terms. Let's create something great together! ✨"
+        },
+        "privacy": {
+          "id": 1,
+          "title": "Privacy Policy",
+          "subtitle": "How I handle and protect your information. 3",
+          "last_updated": "November 2, 2024",
+          "sections": [
+            {
+              "id": 1,
+              "title": "1. Information I Collect",
+              "icon": "eye",
+              "content": "When you visit my website or work with me, I may collect:",
+              "list": [
+                "Contact information: Name, email, phone number (when you reach out)",
+                "Project details: Information you share about your project needs",
+                "Website analytics: Basic usage data like pages visited and time spent (via Google Analytics or similar)",
+                "Technical data: IP address, browser type, device information"
+              ]
+            },
+            {
+              "id": 2,
+              "title": "2. How I Use Your Information",
+              "icon": "database",
+              "content": "I use your information to:",
+              "list": [
+                "Respond to your inquiries and communicate about projects",
+                "Provide the services you've requested",
+                "Improve my website and services",
+                "Send occasional updates (only if you've opted in)"
+              ],
+              "note": "I do not sell, rent, or share your personal information with third parties for marketing purposes."
+            },
+            {
+              "id": 3,
+              "title": "3. Cookies & Tracking",
+              "icon": "cookie",
+              "content": "This website may use cookies and similar technologies to:",
+              "list": [
+                "Remember your preferences",
+                "Understand how you use the site (via analytics tools)",
+                "Improve your browsing experience"
+              ],
+              "note": "You can control cookies through your browser settings. Note that disabling cookies may affect website functionality."
+            },
+            {
+              "id": 4,
+              "title": "4. Data Security",
+              "icon": "lock",
+              "content": "I take reasonable measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is 100% secure. If you're sharing sensitive information, please use secure channels."
+            },
+            {
+              "id": 5,
+              "title": "5. Third-Party Services",
+              "icon": "shield",
+              "content": "This website may use third-party services that collect information:",
+              "list": [
+                "Google Analytics: For website analytics",
+                "Contact forms: May use services like Formspree, Google Forms, etc.",
+                "Hosting provider: Your data is stored on secure hosting servers"
+              ],
+              "note": "These services have their own privacy policies. I choose reputable providers that respect user privacy."
+            },
+            {
+              "id": 6,
+              "title": "6. Your Rights",
+              "icon": "user-check",
+              "content": "You have the right to:",
+              "list": [
+                "Request a copy of the information I have about you",
+                "Ask me to update or delete your information",
+                "Opt out of any communications from me",
+                "Withdraw consent for data processing"
+              ],
+              "note": "Just reach out, and I'll be happy to help with any of these requests."
+            },
+            {
+              "id": 7,
+              "title": "7. Data Retention",
+              "icon": "clock",
+              "content": "I keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy. Project-related information is typically retained for a reasonable period after project completion for reference and support purposes."
+            },
+            {
+              "id": 8,
+              "title": "8. Children's Privacy",
+              "icon": "shield",
+              "content": "This website is not intended for children under 13. I do not knowingly collect information from children. If you believe I have collected information from a child, please contact me immediately."
+            },
+            {
+              "id": 9,
+              "title": "9. Changes to This Policy",
+              "icon": "mail",
+              "content": "I may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the website after changes means you accept the updated policy."
+            }
+          ],
+          "contactTitle": "Privacy Questions?",
+          "contactText": "If you have any questions about this privacy policy or how I handle your data, feel free to contact me. I'm committed to protecting your privacy and being transparent about data practices.",
+          "footerText": "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "en": {
+    "about_content": [
+      {
+        "slug": "bio",
+        "order": 0,
+        "name": "Mofiz Rahman",
+        "title": "Scientist @ Environment",
+        "tagline": "Climate & Sustainability | Reader | Traveller | Storyteller | Teacher| Mentor",
+        "image": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/461483911_10161361397073876_8347231399863771840_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=6NLEIrXflWYQ7kNvwG8zsph&_nc_oc=Admi-sjQS4A6SHr46YbW4ynF7oJegsWld5Ui0ebX6sAHKdmuS-wdoFe76Gc4PZz620c&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=A7NZnUwmhHZsK6jo69r_qQ&oh=00_AfqChnMTH5LLzlBza0pUfA6_J7D3Qa853Stpai0ftbImNw&oe=696098F1",
+        "location": "Cottbus-Ströbitz, Brandenburg, Germany",
+        "phone": "+4915222131484",
+        "website": "https://mofizsunshine.com",
+        "email": "mofiz@rahman.com",
+        "resumeUrl": "/resume.pdf",
+        "available": true,
+        "bio": "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specialized in React, Node.js, and cloud technologies.",
+        "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "social": {
+          "github": "https://github.com/mofizsunshine",
+          "linkedin": "https://linkedin.com/mofizsunshine",
+          "twitter": "https://twitter.com/mofizsunshine"
+        },
+        "content": ""
+      },
+      {
+        "slug": "cta",
+        "order": 0,
+        "title": "Let's Work Together",
+        "description": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+        "primaryButton": "Get in Touch",
+        "secondaryButton": "Download Resume",
+        "content": ""
+      },
+      {
+        "slug": "interests",
+        "order": 0,
+        "items": [
+          {
+            "name": "Coding",
+            "icon": "code"
+          },
+          {
+            "name": "Design",
+            "icon": "palette"
+          },
+          {
+            "name": "Music",
+            "icon": "music"
+          },
+          {
+            "name": "Photography",
+            "icon": "camera"
+          },
+          {
+            "name": "Reading",
+            "icon": "book"
+          },
+          {
+            "name": "Travel",
+            "icon": "plane"
+          },
+          {
+            "name": "Coffee",
+            "icon": "coffee"
+          }
+        ],
+        "content": ""
+      },
+      {
+        "slug": "intro",
+        "order": 0,
+        "content": "Hi there! 👋 I'm a passionate full-stack developer and designer with over 8 years of experience building beautiful, functional, and user-centered digital experiences. I love turning complex problems into simple, elegant solutions."
+      },
+      {
+        "slug": "sections",
+        "order": 0,
+        "items": [
+          {
+            "id": "background",
+            "title": "Background",
+            "icon": "briefcase",
+            "content": "I started my journey in tech back in 2015, teaching myself to code while working as a graphic designer. Since then, I've worked with startups, agencies, and enterprise companies, wearing many hats and learning something new every day. I believe in continuous learning and staying curious about emerging technologies."
+          },
+          {
+            "id": "approach",
+            "title": "My Approach",
+            "icon": "target",
+            "content": "I believe great products are built at the intersection of design, technology, and user needs. My approach combines technical expertise with design thinking to create solutions that not only work well but feel right. I'm all about clean code, intuitive interfaces, and smooth collaboration."
+          },
+          {
+            "id": "passion",
+            "title": "What Drives Me",
+            "icon": "heart",
+            "content": "I'm passionate about creating digital products that make people's lives easier and more enjoyable. Whether it's a sleek web app, a responsive website, or a complex system, I pour my heart into every project. I love the moment when users say \"wow, this just works!\" – that's what keeps me going."
+          }
+        ],
+        "content": ""
+      },
+      {
+        "slug": "socialLinks",
+        "order": 0,
+        "items": [
+          {
+            "platform": "GitHub",
+            "url": "https://github.com/johndoe",
+            "icon": "github"
+          },
+          {
+            "platform": "LinkedIn",
+            "url": "https://linkedin.com/in/johndoe",
+            "icon": "linkedin"
+          },
+          {
+            "platform": "Twitter",
+            "url": "https://twitter.com/johndoe",
+            "icon": "twitter"
+          },
+          {
+            "platform": "Website",
+            "url": "https://johndoe.com",
+            "icon": "globe"
+          }
+        ],
+        "content": ""
+      },
+      {
+        "slug": "stats",
+        "order": 0,
+        "items": [
+          {
+            "label": "Years Experience",
+            "value": "8+",
+            "icon": "calendar"
+          },
+          {
+            "label": "Projects Completed",
+            "value": "150+",
+            "icon": "briefcase"
+          },
+          {
+            "label": "Happy Clients",
+            "value": "80+",
+            "icon": "heart"
+          },
+          {
+            "label": "Certifications",
+            "value": "12",
+            "icon": "award"
+          }
+        ],
+        "content": ""
+      }
+    ],
+    "blog_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "title": "EN Getting Started with React Hooks: A Complete Guide",
+        "excerpt": "Learn everything you need to know about React Hooks, from useState to custom hooks. A comprehensive guide for beginners and experienced developers.",
+        "coverImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=600&fit=crop",
+        "publishedAt": "2024-11-01",
+        "author": "Abul Mal",
+        "readTime": 8,
+        "category": "Web Development",
+        "tags": ["React", "JavaScript", "Hooks", "Frontend"],
+        "featured": true,
+        "content": "<h2>Introduction</h2><p>React and TypeScript are a powerful combination for building robust web applications. In this article, we'll explore how to get started with both technologies.</p><h2>Setting Up Your Project</h2><p>First, create a new React app with TypeScript support using Create React App...</p><h2>TypeScript Basics</h2><p>TypeScript adds static typing to JavaScript, which helps catch errors early in development...</p><h2>Conclusion</h2><p>Combining React with TypeScript creates a more maintainable and scalable codebase.</p>"
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "title": "TypeScript Best Practices for 2024",
+        "excerpt": "Discover the latest TypeScript best practices and patterns to write cleaner, more maintainable code in your projects.",
+        "coverImage": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-28",
+        "author": "Abul Mal",
+        "readTime": 10,
+        "category": "Programming",
+        "tags": ["TypeScript", "JavaScript", "Best Practices", "Code Quality"],
+        "featured": true,
+        "content": "<h2>Why Scalability Matters</h2><p>Building APIs that can handle growth is crucial for long-term success...</p><h2>Architecture Patterns</h2><p>We'll explore microservices, modular monoliths, and when to use each...</p><h2>Performance Optimization</h2><p>Learn about caching strategies, database optimization, and load balancing...</p>"
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "title": "Mastering Next.js App Router: Complete Tutorial",
+        "excerpt": "Deep dive into Next.js 13+ App Router. Learn about layouts, loading states, error handling, and more with practical examples.",
+        "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-25",
+        "author": "Abul Mal",
+        "readTime": 12,
+        "category": "Web Development",
+        "tags": ["Next.js", "React", "App Router", "SSR"],
+        "featured": true,
+        "content": "<h2>The Evolution of CSS</h2><p>CSS continues to evolve with powerful new features that make styling easier...</p><h2>Container Queries</h2><p>Container queries allow components to adapt based on their container size...</p><h2>Cascade Layers</h2><p>Manage CSS specificity and organization with cascade layers...</p>"
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "title": "CSS Grid vs Flexbox: When to Use Each",
+        "excerpt": "Understanding the differences between CSS Grid and Flexbox, and knowing when to use each layout system for optimal results.",
+        "coverImage": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-22",
+        "author": "Abul Mal",
+        "readTime": 6,
+        "category": "CSS & Design",
+        "tags": ["CSS", "Grid", "Flexbox", "Layout"],
+        "content": "<h2>Normalization vs Denormalization</h2><p>Understanding when to normalize and when to denormalize your data...</p><h2>Indexing Strategies</h2><p>Proper indexing can dramatically improve query performance...</p><h2>Schema Evolution</h2><p>Plan for changes and migrations from the start...</p>"
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "title": "Building RESTful APIs with Node.js and Express",
+        "excerpt": "Step-by-step guide to creating production-ready REST APIs using Node.js, Express, and MongoDB.",
+        "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-18",
+        "author": "Abul Mal",
+        "readTime": 15,
+        "category": "Backend Development",
+        "tags": ["Node.js", "Express", "API", "REST", "MongoDB"],
+        "content": "<h2>Why Performance Matters</h2><p>Faster websites lead to better user engagement and higher conversion rates...</p><h2>Core Web Vitals</h2><p>Understanding LCP, FID, and CLS metrics...</p><h2>Optimization Techniques</h2><p>Image optimization, code splitting, and lazy loading...</p>"
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "title": "10 Modern Responsive Design Techniques",
+        "excerpt": "Explore modern approaches to responsive web design, from mobile-first strategies to advanced CSS techniques.",
+        "coverImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-15",
+        "author": "Abul Mal",
+        "readTime": 7,
+        "category": "CSS & Design",
+        "tags": ["Responsive Design", "CSS", "Mobile First", "Web Design"],
+        "content": "<h2>Git Flow vs GitHub Flow</h2><p>Compare different branching strategies and their use cases...</p><h2>Merge vs Rebase</h2><p>When to use each approach and their trade-offs...</p><h2>Collaboration Best Practices</h2><p>Code reviews, commit messages, and conflict resolution...</p>"
+      },
+      {
+        "slug": "7",
+        "order": 7,
+        "id": 7,
+        "title": "Docker and Kubernetes for Beginners",
+        "excerpt": "Learn containerization basics with Docker and orchestration with Kubernetes in this beginner-friendly guide.",
+        "coverImage": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-12",
+        "author": "Abul Mal",
+        "readTime": 14,
+        "category": "DevOps",
+        "tags": ["Docker", "Kubernetes", "Containers", "DevOps"],
+        "content": "<h2>What is Docker?</h2><p>Docker enables you to package applications with their dependencies...</p><h2>Images and Containers</h2><p>Understanding the difference and how to create efficient images...</p><h2>Docker Compose</h2><p>Orchestrating multi-container applications...</p>"
+      },
+      {
+        "slug": "8",
+        "order": 8,
+        "id": 8,
+        "title": "Essential JavaScript Design Patterns",
+        "excerpt": "Master common JavaScript design patterns including Singleton, Observer, Factory, and more with real-world examples.",
+        "coverImage": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-08",
+        "author": "Abul Mal",
+        "readTime": 11,
+        "category": "Programming",
+        "tags": [
+          "JavaScript",
+          "Design Patterns",
+          "OOP",
+          "Software Architecture"
+        ],
+        "content": "<h2>Types of Tests</h2><p>Unit tests, integration tests, and end-to-end tests explained...</p><h2>React Testing Library</h2><p>Testing components the way users interact with them...</p><h2>E2E Testing with Cypress</h2><p>Automated browser testing for complete user flows...</p>"
+      },
+      {
+        "slug": "9",
+        "order": 9,
+        "id": 9,
+        "title": "Tailwind CSS: Tips, Tricks, and Best Practices",
+        "excerpt": "Boost your productivity with these Tailwind CSS tips, from configuration tricks to advanced utility combinations.",
+        "coverImage": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-05",
+        "author": "Abul Mal",
+        "readTime": 9,
+        "category": "CSS & Design",
+        "tags": ["Tailwind CSS", "CSS", "Utility-First", "Styling"],
+        "content": "Full blog post content here..."
+      },
+      {
+        "slug": "10",
+        "order": 10,
+        "id": 10,
+        "title": "GraphQL vs REST: Which Should You Choose?",
+        "excerpt": "Comprehensive comparison of GraphQL and REST APIs, covering pros, cons, and use cases for each approach.",
+        "coverImage": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=600&fit=crop",
+        "publishedAt": "2024-10-01",
+        "author": "Abul Mal",
+        "readTime": 13,
+        "category": "Backend Development",
+        "tags": ["GraphQL", "REST", "API", "Backend"],
+        "content": "Full blog post content here..."
+      },
+      {
+        "slug": "11",
+        "order": 11,
+        "id": 11,
+        "title": "MongoDB Aggregation Pipeline: Advanced Queries",
+        "excerpt": "Master MongoDB aggregation pipeline for complex data transformations and analytics queries.",
+        "coverImage": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=600&fit=crop",
+        "publishedAt": "2024-09-28",
+        "author": "Abul Mal",
+        "readTime": 16,
+        "category": "Database",
+        "tags": ["MongoDB", "Database", "NoSQL", "Aggregation"],
+        "content": "Full blog post content here..."
+      },
+      {
+        "slug": "12",
+        "order": 12,
+        "id": 12,
+        "title": "React Performance Optimization: Complete Guide",
+        "excerpt": "Learn proven techniques to optimize React application performance, from memo to code splitting.",
+        "coverImage": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
+        "publishedAt": "2024-09-25",
+        "author": "Abul Mal",
+        "readTime": 10,
+        "category": "Web Development",
+        "tags": ["React", "Performance", "Optimization", "JavaScript"],
+        "content": "Full blog post content here..."
+      }
+    ],
+    "certificate_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "title": "AWS Certified Solutions Architect - Professional",
+        "issuer": "Amazon Web Services",
+        "issueDate": "2024-03-15",
+        "expiryDate": "2027-03-15",
+        "credentialId": "AWS-PSA-12345",
+        "credentialUrl": "https://aws.amazon.com/verification",
+        "category": "Cloud Computing",
+        "skills": ["AWS", "Cloud Architecture", "Infrastructure", "Security"],
+        "description": "Advanced AWS certification demonstrating expertise in designing and deploying dynamically scalable, highly available, fault-tolerant, and reliable applications on AWS.",
+        "logo": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=400&h=400&fit=crop",
+        "verified": true,
+        "featured": true,
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "title": "Google Cloud Professional Cloud Architect",
+        "issuer": "Google Cloud",
+        "issueDate": "2023-11-20",
+        "expiryDate": "2025-11-20",
+        "credentialId": "GCP-PCA-67890",
+        "credentialUrl": "https://cloud.google.com/certification",
+        "category": "Cloud Computing",
+        "skills": ["GCP", "Cloud Architecture", "Kubernetes", "DevOps"],
+        "description": "Professional certification validating ability to design, develop, and manage robust, secure, scalable, and dynamic solutions on Google Cloud.",
+        "logo": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=400&fit=crop",
+        "verified": true,
+        "featured": true,
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "title": "Meta Front-End Developer Professional Certificate",
+        "issuer": "Meta (Coursera)",
+        "issueDate": "2024-01-10",
+        "expiryDate": "No Expiry",
+        "credentialId": "META-FED-11223",
+        "credentialUrl": "https://coursera.org/verify/professional-cert/xyz",
+        "category": "Web Development",
+        "skills": ["React", "JavaScript", "HTML/CSS", "UI/UX"],
+        "description": "Comprehensive program covering React, JavaScript, HTML/CSS, and modern front-end development practices.",
+        "logo": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "title": "Certified Kubernetes Administrator (CKA)",
+        "issuer": "Cloud Native Computing Foundation",
+        "issueDate": "2023-09-05",
+        "expiryDate": "2026-09-05",
+        "credentialId": "CNCF-CKA-44556",
+        "credentialUrl": "https://www.cncf.io/certification/cka/",
+        "category": "DevOps",
+        "skills": ["Kubernetes", "Docker", "Container Orchestration", "Linux"],
+        "description": "Validates skills in deploying, managing, and troubleshooting Kubernetes clusters.",
+        "logo": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=400&fit=crop",
+        "verified": true,
+        "featured": true,
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "title": "Microsoft Certified: Azure Developer Associate",
+        "issuer": "Microsoft",
+        "issueDate": "2023-07-18",
+        "expiryDate": "2025-07-18",
+        "credentialId": "MS-AZ-204-78901",
+        "credentialUrl": "https://learn.microsoft.com/credentials",
+        "category": "Cloud Computing",
+        "skills": ["Azure", "Cloud Development", "APIs", "Security"],
+        "description": "Demonstrates expertise in designing, building, testing, and maintaining cloud applications on Microsoft Azure.",
+        "logo": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "title": "Certified Scrum Master (CSM)",
+        "issuer": "Scrum Alliance",
+        "issueDate": "2023-05-12",
+        "expiryDate": "2025-05-12",
+        "credentialId": "CSM-123456",
+        "credentialUrl": "https://www.scrumalliance.org/get-certified/verify",
+        "category": "Project Management",
+        "skills": ["Scrum", "Agile", "Team Leadership", "Project Management"],
+        "description": "Validates understanding of Scrum framework and ability to apply it in real-world scenarios.",
+        "logo": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "7",
+        "order": 7,
+        "id": 7,
+        "title": "Deep Learning Specialization",
+        "issuer": "deeplearning.ai (Coursera)",
+        "issueDate": "2023-03-25",
+        "expiryDate": "No Expiry",
+        "credentialId": "DL-SPEC-99887",
+        "credentialUrl": "https://coursera.org/verify/specialization/abc123",
+        "category": "Machine Learning",
+        "skills": ["Deep Learning", "Neural Networks", "TensorFlow", "Python"],
+        "description": "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
+        "logo": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "8",
+        "order": 8,
+        "id": 8,
+        "title": "Adobe Certified Professional in Visual Design",
+        "issuer": "Adobe",
+        "issueDate": "2023-01-15",
+        "expiryDate": "No Expiry",
+        "credentialId": "ADOBE-VD-55443",
+        "credentialUrl": "https://www.adobe.com/certification",
+        "category": "Design",
+        "skills": ["Photoshop", "Illustrator", "InDesign", "Visual Design"],
+        "description": "Demonstrates proficiency in Adobe Creative Suite for professional visual design work.",
+        "logo": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "9",
+        "order": 9,
+        "id": 9,
+        "title": "Google Analytics Individual Qualification",
+        "issuer": "Google",
+        "issueDate": "2024-02-28",
+        "expiryDate": "2026-02-28",
+        "credentialId": "GA-IQ-22334",
+        "credentialUrl": "https://skillshop.exceedlms.com/student/catalog",
+        "category": "Marketing",
+        "skills": ["Google Analytics", "Data Analysis", "Marketing", "SEO"],
+        "description": "Demonstrates proficiency in Google Analytics, including setup, collection, configuration, and reporting.",
+        "logo": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "10",
+        "order": 10,
+        "id": 10,
+        "title": "CompTIA Security+ Certification",
+        "issuer": "CompTIA",
+        "issueDate": "2022-11-10",
+        "expiryDate": "2025-11-10",
+        "credentialId": "COMPTIA-SEC-66778",
+        "credentialUrl": "https://www.comptia.org/certifications/security",
+        "category": "Security",
+        "skills": [
+          "Cybersecurity",
+          "Network Security",
+          "Risk Management",
+          "Compliance"
+        ],
+        "description": "Validates baseline cybersecurity skills necessary for core security functions.",
+        "logo": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "11",
+        "order": 11,
+        "id": 11,
+        "title": "Terraform Associate Certification",
+        "issuer": "HashiCorp",
+        "issueDate": "2023-08-20",
+        "expiryDate": "2025-08-20",
+        "credentialId": "HASHI-TF-88990",
+        "credentialUrl": "https://www.hashicorp.com/certification",
+        "category": "DevOps",
+        "skills": [
+          "Terraform",
+          "Infrastructure as Code",
+          "Automation",
+          "Cloud"
+        ],
+        "description": "Validates knowledge of basic concepts and skills with HashiCorp Terraform.",
+        "logo": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "12",
+        "order": 12,
+        "id": 12,
+        "title": "MongoDB Certified Developer Associate",
+        "issuer": "MongoDB University",
+        "issueDate": "2023-06-15",
+        "expiryDate": "No Expiry",
+        "credentialId": "MONGO-DEV-33445",
+        "credentialUrl": "https://university.mongodb.com/certification",
+        "category": "Database",
+        "skills": ["MongoDB", "NoSQL", "Database Design", "Node.js"],
+        "description": "Demonstrates ability to build applications using MongoDB and understanding of core MongoDB concepts.",
+        "logo": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=400&fit=crop",
+        "verified": true,
+        "content": ""
+      }
+    ],
+    "education_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "institution": "Stanford University",
+        "degree": "Master of Science",
+        "field": "Computer Science",
+        "startDate": "2018-09",
+        "endDate": "2020-06",
+        "location": "Stanford, CA",
+        "gpa": "3.9/4.0",
+        "type": "Degree",
+        "description": "Specialized in Artificial Intelligence and Machine Learning with focus on deep learning and natural language processing.",
+        "achievements": [
+          "Graduated with Honors",
+          "Teaching Assistant for CS231n: Deep Learning for Computer Vision",
+          "Published research paper on neural network optimization",
+          "Recipient of Graduate Fellowship Award"
+        ],
+        "coursework": [
+          "Machine Learning",
+          "Deep Learning",
+          "Natural Language Processing",
+          "Computer Vision",
+          "Algorithms & Data Structures",
+          "Distributed Systems"
+        ],
+        "activities": [
+          "AI Research Lab Member",
+          "Graduate Student Council",
+          "Tech Mentorship Program"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "institution": "University of California, Berkeley",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "startDate": "2014-09",
+        "endDate": "2018-05",
+        "location": "Berkeley, CA",
+        "gpa": "3.8/4.0",
+        "type": "Degree",
+        "description": "Comprehensive computer science education with strong foundation in software engineering, algorithms, and system design.",
+        "achievements": [
+          "Dean's List for 6 semesters",
+          "First Place in Annual Hackathon 2017",
+          "President of Computer Science Club",
+          "Undergraduate Research Grant Recipient"
+        ],
+        "coursework": [
+          "Data Structures",
+          "Operating Systems",
+          "Database Systems",
+          "Software Engineering",
+          "Web Development",
+          "Computer Networks"
+        ],
+        "activities": [
+          "Computer Science Student Association",
+          "Open Source Contributor",
+          "Peer Tutor for Programming Courses"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "institution": "Coursera - deeplearning.ai",
+        "degree": "Deep Learning Specialization",
+        "field": "Artificial Intelligence",
+        "startDate": "2020-01",
+        "endDate": "2020-06",
+        "location": "Online",
+        "type": "Certificate",
+        "description": "Comprehensive 5-course specialization covering neural networks, CNNs, RNNs, and deployment strategies.",
+        "achievements": [
+          "Completed all 5 courses with 100% scores",
+          "Built and deployed 10+ deep learning projects",
+          "Specialization Certificate with Distinction"
+        ],
+        "coursework": [
+          "Neural Networks and Deep Learning",
+          "Improving Deep Neural Networks",
+          "Structuring Machine Learning Projects",
+          "Convolutional Neural Networks",
+          "Sequence Models"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "institution": "AWS Training",
+        "degree": "AWS Certified Solutions Architect",
+        "field": "Cloud Computing",
+        "startDate": "2021-03",
+        "endDate": "2021-05",
+        "location": "Online",
+        "type": "Certificate",
+        "description": "Professional certification demonstrating expertise in designing distributed systems on AWS.",
+        "achievements": [
+          "Passed certification exam on first attempt",
+          "Score: 920/1000",
+          "Valid through 2024"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "institution": "General Assembly",
+        "degree": "Full Stack Web Development Bootcamp",
+        "field": "Web Development",
+        "startDate": "2017-06",
+        "endDate": "2017-09",
+        "location": "Cottbus-Ströbitz, Brandenburg, Germany",
+        "type": "Bootcamp",
+        "description": "Intensive 12-week immersive program covering modern web development technologies and best practices.",
+        "achievements": [
+          "Built 4 full-stack applications",
+          "Collaborated on group projects using Agile methodology",
+          "Received Outstanding Student Award"
+        ],
+        "coursework": [
+          "HTML, CSS, JavaScript",
+          "React & Redux",
+          "Node.js & Express",
+          "MongoDB & PostgreSQL",
+          "RESTful API Design",
+          "Authentication & Security"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "institution": "freeCodeCamp",
+        "degree": "Responsive Web Design Certification",
+        "field": "Front-End Development",
+        "startDate": "2016-03",
+        "endDate": "2016-06",
+        "location": "Online",
+        "type": "Certificate",
+        "description": "Self-paced curriculum covering HTML, CSS, responsive design principles, and accessibility.",
+        "achievements": [
+          "Completed 300+ hours of coursework",
+          "Built 5 responsive web projects",
+          "Earned certification"
+        ],
+        "content": ""
+      }
+    ],
+    "experience_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "company": "TechCorp Inc.",
+        "companyUrl": "https://techcorp.com",
+        "logo": "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=200&h=200&fit=crop",
+        "position": "Senior Full Stack Developer",
+        "employmentType": "Full-time",
+        "location": "Cottbus-Ströbitz, Brandenburg, Germany",
+        "locationType": "Hybrid",
+        "startDate": "2022-03-01",
+        "duration": "2 years 8 months",
+        "description": "Leading development of enterprise web applications and mentoring junior developers. Responsible for architecture decisions and implementation of scalable solutions.",
+        "responsibilities": [
+          "Lead a team of 5 developers in building and maintaining enterprise applications",
+          "Design and implement scalable microservices architecture",
+          "Conduct code reviews and establish best practices",
+          "Collaborate with product managers and designers on feature development",
+          "Mentor junior developers and conduct technical interviews"
+        ],
+        "achievements": [
+          "Reduced application load time by 60% through optimization",
+          "Led migration from monolithic to microservices architecture",
+          "Increased test coverage from 45% to 95%",
+          "Implemented CI/CD pipeline reducing deployment time by 80%"
+        ],
+        "technologies": [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "AWS",
+          "Docker",
+          "Kubernetes"
+        ],
+        "projects": [
+          "Customer Portal Redesign",
+          "Real-time Analytics Dashboard",
+          "API Gateway Implementation"
+        ],
+        "current": true,
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "company": "Digital Solutions Ltd",
+        "companyUrl": "https://digitalsolutions.com",
+        "logo": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&h=200&fit=crop",
+        "position": "Full Stack Developer",
+        "employmentType": "Full-time",
+        "location": "New York, NY",
+        "locationType": "On-site",
+        "startDate": "2020-01-15",
+        "endDate": "2022-02-28",
+        "duration": "2 years 1 month",
+        "description": "Developed and maintained multiple client projects, from e-commerce platforms to corporate websites. Worked in an agile environment with cross-functional teams.",
+        "responsibilities": [
+          "Developed responsive web applications using modern JavaScript frameworks",
+          "Built RESTful APIs and integrated third-party services",
+          "Collaborated with designers to implement pixel-perfect UIs",
+          "Participated in agile ceremonies and sprint planning",
+          "Provided technical support and bug fixes for production applications"
+        ],
+        "achievements": [
+          "Successfully delivered 15+ client projects on time and within budget",
+          "Improved client satisfaction score from 7.2 to 9.1 out of 10",
+          "Developed reusable component library used across 20+ projects",
+          "Received \"Developer of the Year\" award in 2021"
+        ],
+        "technologies": [
+          "React",
+          "Vue.js",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "MySQL",
+          "Git"
+        ],
+        "projects": [
+          "E-commerce Platform",
+          "Corporate Website CMS",
+          "Booking System"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "company": "StartupHub",
+        "companyUrl": "https://startuphub.io",
+        "logo": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=200&h=200&fit=crop",
+        "position": "Frontend Developer",
+        "employmentType": "Full-time",
+        "location": "Austin, TX",
+        "locationType": "Remote",
+        "startDate": "2018-06-01",
+        "endDate": "2019-12-31",
+        "duration": "1 year 7 months",
+        "description": "Focused on building beautiful and performant user interfaces for SaaS products. Worked closely with the design team to create intuitive user experiences.",
+        "responsibilities": [
+          "Developed responsive web interfaces using React and Redux",
+          "Implemented complex UI components and animations",
+          "Optimized application performance and accessibility",
+          "Collaborated with backend team on API design",
+          "Wrote comprehensive unit and integration tests"
+        ],
+        "achievements": [
+          "Improved application performance score from 65 to 95 on Lighthouse",
+          "Reduced bundle size by 40% through code splitting",
+          "Achieved 100% accessibility score on all major features",
+          "Contributed to 3 successful product launches"
+        ],
+        "technologies": [
+          "React",
+          "Redux",
+          "JavaScript",
+          "SASS",
+          "Webpack",
+          "Jest",
+          "Cypress"
+        ],
+        "projects": ["SaaS Dashboard", "Analytics Platform", "Admin Panel"],
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "company": "Freelance",
+        "companyUrl": "https://upwork.com",
+        "position": "Full Stack Developer",
+        "employmentType": "Freelance",
+        "location": "Remote",
+        "locationType": "Remote",
+        "startDate": "2016-09-01",
+        "endDate": "2018-05-31",
+        "duration": "1 year 9 months",
+        "description": "Worked with various clients on web development projects, from small business websites to complex web applications. Managed entire project lifecycle from requirements gathering to deployment.",
+        "responsibilities": [
+          "Consulted with clients to understand requirements and propose solutions",
+          "Designed and developed custom websites and web applications",
+          "Managed project timelines and deliverables",
+          "Provided ongoing maintenance and support",
+          "Handled hosting, domain, and deployment setup"
+        ],
+        "achievements": [
+          "Successfully completed 30+ projects for diverse clients",
+          "Maintained 100% client satisfaction rate",
+          "Built long-term relationships with 10+ recurring clients",
+          "Generated $150K+ in revenue"
+        ],
+        "technologies": [
+          "WordPress",
+          "PHP",
+          "JavaScript",
+          "MySQL",
+          "HTML/CSS",
+          "jQuery"
+        ],
+        "projects": [
+          "Restaurant Website",
+          "Real Estate Platform",
+          "Portfolio Sites"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "company": "WebAgency Pro",
+        "companyUrl": "https://webagencypro.com",
+        "logo": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&h=200&fit=crop",
+        "position": "Junior Web Developer",
+        "employmentType": "Full-time",
+        "location": "Seattle, WA",
+        "locationType": "On-site",
+        "startDate": "2015-07-01",
+        "endDate": "2016-08-31",
+        "duration": "1 year 2 months",
+        "description": "Started my professional career as a junior developer, learning best practices and working on client projects under senior developer mentorship.",
+        "responsibilities": [
+          "Developed website layouts and implemented designs",
+          "Fixed bugs and performed code maintenance",
+          "Assisted senior developers with complex features",
+          "Participated in daily stand-ups and code reviews",
+          "Learned modern web development practices"
+        ],
+        "achievements": [
+          "Completed junior to mid-level developer progression in 10 months",
+          "Contributed to 20+ successful project deliveries",
+          "Received positive feedback from team leads and clients",
+          "Rapidly expanded technical skill set"
+        ],
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Bootstrap",
+          "jQuery",
+          "PHP",
+          "Git"
+        ],
+        "projects": ["Client Websites", "Landing Pages", "WordPress Themes"],
+        "content": ""
+      }
+    ],
+    "photo_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "title": "Mountain Sunrise",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop",
+        "album": "Nature",
+        "category": "Nature",
+        "description": "A breathtaking sunrise view from the mountain peak, capturing the golden hour moment.",
+        "date": "2024-08-15",
+        "location": "Rocky Mountains, Colorado",
+        "camera": "Canon EOS R5",
+        "tags": ["Landscape", "Mountains", "Sunrise", "Nature"],
+        "views": 1234,
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "title": "Forest Path",
+        "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=800&fit=crop",
+        "album": "Nature",
+        "category": "Nature",
+        "description": "A serene forest path leading into the misty morning woods.",
+        "date": "2024-08-10",
+        "location": "Pacific Northwest",
+        "camera": "Sony A7III",
+        "tags": ["Forest", "Trees", "Path", "Nature"],
+        "views": 892,
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "title": "Ocean Waves",
+        "image": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=800&fit=crop",
+        "album": "Nature",
+        "category": "Nature",
+        "description": "Powerful ocean waves crashing against the rocky shore.",
+        "date": "2024-07-22",
+        "location": "Big Sur, California",
+        "camera": "Nikon Z6",
+        "tags": ["Ocean", "Waves", "Seascape", "Nature"],
+        "views": 1567,
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "title": "Desert Sunset",
+        "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&h=800&fit=crop",
+        "album": "Nature",
+        "category": "Nature",
+        "description": "Golden hour in the vast desert landscape with sand dunes.",
+        "date": "2024-06-18",
+        "location": "Sahara Desert",
+        "tags": ["Desert", "Sunset", "Dunes", "Landscape"],
+        "views": 743,
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "title": "Eiffel Tower at Night",
+        "image": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&h=800&fit=crop",
+        "album": "Travel",
+        "category": "Nature",
+        "description": "The iconic Eiffel Tower illuminated against the Paris night sky.",
+        "date": "2024-05-12",
+        "location": "Paris, France",
+        "camera": "Canon EOS R6",
+        "tags": ["Paris", "Architecture", "Night", "Travel"],
+        "views": 2134,
+        "content": ""
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "title": "Tokyo Streets",
+        "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=800&fit=crop",
+        "album": "Travel",
+        "category": "Nature",
+        "description": "Vibrant streets of Tokyo during the evening rush hour.",
+        "date": "2024-04-08",
+        "location": "Tokyo, Japan",
+        "camera": "Fujifilm X-T4",
+        "tags": ["Tokyo", "Street", "Urban", "Travel"],
+        "views": 1876,
+        "content": ""
+      },
+      {
+        "slug": "7",
+        "order": 7,
+        "id": 7,
+        "title": "Venice Canals",
+        "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&h=800&fit=crop",
+        "album": "Travel",
+        "category": "Nature",
+        "description": "Traditional gondolas navigating the historic canals of Venice.",
+        "date": "2024-03-25",
+        "location": "Venice, Italy",
+        "camera": "Sony A7IV",
+        "tags": ["Venice", "Canals", "Gondola", "Travel"],
+        "views": 1543,
+        "featured": true,
+        "content": ""
+      },
+      {
+        "slug": "8",
+        "order": 8,
+        "id": 8,
+        "title": "Santorini Sunset",
+        "image": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800&h=800&fit=crop",
+        "album": "Travel",
+        "category": "Nature",
+        "description": "Stunning sunset view over the white buildings of Santorini.",
+        "date": "2024-02-14",
+        "location": "Santorini, Greece",
+        "tags": ["Santorini", "Sunset", "Greece", "Travel"],
+        "views": 2456,
+        "featured": true,
+        "content": ""
+      },
+      {
+        "slug": "9",
+        "order": 9,
+        "id": 9,
+        "title": "Modern Skyscraper",
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=800&fit=crop",
+        "album": "Architecture",
+        "category": "Nature",
+        "description": "Contemporary glass skyscraper reflecting the city skyline.",
+        "date": "2024-09-05",
+        "location": "New York City",
+        "camera": "Nikon Z7",
+        "tags": ["Skyscraper", "Modern", "Glass", "Architecture"],
+        "views": 987,
+        "content": ""
+      },
+      {
+        "slug": "10",
+        "order": 10,
+        "id": 10,
+        "title": "Gothic Cathedral",
+        "image": "https://images.unsplash.com/photo-1549740425-5e9ed4d8cd34?w=800&h=800&fit=crop",
+        "album": "Architecture",
+        "category": "Architecture",
+        "description": "Historic Gothic cathedral with intricate stone carvings.",
+        "date": "2024-08-20",
+        "location": "Barcelona, Spain",
+        "camera": "Canon EOS 5D",
+        "tags": ["Cathedral", "Gothic", "Historic", "Architecture"],
+        "views": 1234,
+        "featured": true,
+        "content": ""
+      },
+      {
+        "slug": "11",
+        "order": 11,
+        "id": 11,
+        "title": "Minimalist Interior",
+        "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=800&fit=crop",
+        "album": "Architecture",
+        "category": "Architecture",
+        "description": "Clean lines and minimalist design in modern interior space.",
+        "date": "2024-07-10",
+        "location": "Copenhagen, Denmark",
+        "tags": ["Interior", "Minimalist", "Modern", "Design"],
+        "views": 756,
+        "content": ""
+      },
+      {
+        "slug": "12",
+        "order": 12,
+        "id": 12,
+        "title": "City Life",
+        "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=800&fit=crop",
+        "album": "Street Photography",
+        "category": "Nature",
+        "description": "Candid moments of daily life in the bustling city streets.",
+        "date": "2024-10-01",
+        "location": "New York City",
+        "camera": "Leica Q2",
+        "tags": ["Street", "Urban", "People", "Candid"],
+        "views": 1432,
+        "content": ""
+      },
+      {
+        "slug": "13",
+        "order": 13,
+        "id": 13,
+        "title": "Market Colors",
+        "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=800&fit=crop",
+        "album": "Street Photography",
+        "category": "Wildlife",
+        "description": "Vibrant colors and textures at the local street market.",
+        "date": "2024-09-18",
+        "location": "Marrakech, Morocco",
+        "tags": ["Market", "Colors", "Culture", "Street"],
+        "views": 1098,
+        "content": ""
+      },
+      {
+        "slug": "14",
+        "order": 14,
+        "id": 14,
+        "title": "Rain Reflections",
+        "image": "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&h=800&fit=crop",
+        "album": "Street Photography",
+        "category": "Nature",
+        "description": "City lights reflected in rain-soaked streets at night.",
+        "date": "2024-08-30",
+        "location": "London, UK",
+        "camera": "Fujifilm X100V",
+        "tags": ["Rain", "Night", "Reflections", "Street"],
+        "views": 1876,
+        "content": ""
+      },
+      {
+        "slug": "15",
+        "order": 15,
+        "id": 15,
+        "title": "Majestic Lion",
+        "image": "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&h=800&fit=crop",
+        "album": "Wildlife",
+        "category": "Wildlife",
+        "description": "Portrait of a magnificent male lion in his natural habitat.",
+        "date": "2024-07-05",
+        "location": "Serengeti, Tanzania",
+        "camera": "Canon EOS-1D X Mark III",
+        "tags": ["Lion", "Safari", "Africa", "Wildlife"],
+        "views": 2345,
+        "content": ""
+      },
+      {
+        "slug": "16",
+        "order": 16,
+        "id": 16,
+        "title": "Eagle in Flight",
+        "image": "https://images.unsplash.com/photo-1551927336-575d71d03f2c?w=800&h=800&fit=crop",
+        "album": "Wildlife",
+        "category": "Wildlife",
+        "description": "Bald eagle soaring through the clear blue sky.",
+        "date": "2024-06-22",
+        "location": "Alaska, USA",
+        "camera": "Nikon D850",
+        "tags": ["Eagle", "Bird", "Flight", "Wildlife"],
+        "views": 1654,
+        "content": ""
+      }
+    ],
+    "project_list": [
+      {
+        "slug": "ecommerce-platform",
+        "order": 1,
+        "id": 1,
+        "title": "E-Commerce Platform",
+        "shortDescription": "Full-stack online shopping platform with payment integration",
+        "description": "A comprehensive e-commerce solution built with Next.js and Stripe, featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.",
+        "category": "Web Development",
+        "tags": ["E-commerce", "Full Stack", "Payment Gateway"],
+        "thumbnail": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
+        "startDate": "2024-01-15",
+        "endDate": "2024-06-20",
+        "client": "RetailCo Inc.",
+        "role": "Full Stack Developer",
+        "technologies": [
+          "Next.js",
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Stripe",
+          "Tailwind CSS"
+        ],
+        "features": [
+          "Product catalog with search and filters",
+          "Shopping cart and checkout flow",
+          "Stripe payment integration",
+          "Order management system",
+          "User authentication and profiles",
+          "Admin dashboard"
+        ],
+        "liveUrl": "https://example-shop.com",
+        "githubUrl": "https://github.com/username/ecommerce",
+        "featured": true,
+        "likes": 342,
+        "views": 5420,
+        "status": "Completed",
+        "content": ""
+      },
+      {
+        "slug": "healthcare-management",
+        "order": 2,
+        "id": 2,
+        "title": "Healthcare Management System",
+        "shortDescription": "Patient management and appointment scheduling platform",
+        "description": "Modern healthcare management system for clinics and hospitals, featuring appointment scheduling, patient records, and telemedicine capabilities.",
+        "category": "Web Development",
+        "tags": ["Healthcare", "SaaS", "Dashboard"],
+        "thumbnail": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+        "startDate": "2023-09-10",
+        "endDate": "2024-02-15",
+        "client": "HealthTech Solutions",
+        "role": "Lead Developer",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "PostgreSQL",
+          "Express",
+          "Socket.io",
+          "Docker"
+        ],
+        "features": [
+          "Appointment scheduling",
+          "Patient records management",
+          "Video consultation integration",
+          "Prescription management",
+          "Billing and insurance",
+          "Analytics dashboard"
+        ],
+        "liveUrl": "https://healthcare-demo.com",
+        "featured": true,
+        "likes": 289,
+        "views": 4130,
+        "status": "Completed",
+        "content": ""
+      },
+      {
+        "slug": "social-media-dashboard",
+        "order": 3,
+        "id": 3,
+        "title": "Social Media Dashboard",
+        "shortDescription": "Analytics dashboard for social media management",
+        "description": "Comprehensive social media analytics platform that aggregates data from multiple platforms and provides actionable insights.",
+        "category": "Web Development",
+        "tags": ["Analytics", "Dashboard", "Social Media"],
+        "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+        "startDate": "2023-07-01",
+        "endDate": "2023-11-30",
+        "role": "Frontend Developer",
+        "technologies": [
+          "Vue.js",
+          "D3.js",
+          "Chart.js",
+          "Node.js",
+          "Redis",
+          "AWS"
+        ],
+        "features": [
+          "Multi-platform integration",
+          "Real-time analytics",
+          "Custom reports",
+          "Engagement metrics",
+          "Post scheduling",
+          "Team collaboration"
+        ],
+        "liveUrl": "https://social-dash.com",
+        "githubUrl": "https://github.com/username/social-dashboard",
+        "likes": 215,
+        "views": 3280,
+        "status": "Completed",
+        "content": ""
+      },
+      {
+        "slug": "ai-content-generator",
+        "order": 4,
+        "id": 4,
+        "title": "AI Content Generator",
+        "shortDescription": "AI-powered content creation tool for marketers",
+        "description": "Intelligent content generation platform leveraging GPT-4 to create blog posts, social media content, and marketing copy.",
+        "category": "AI/ML",
+        "tags": ["AI", "Content", "SaaS"],
+        "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+        "startDate": "2024-03-01",
+        "endDate": "Ongoing",
+        "role": "Full Stack Developer",
+        "technologies": [
+          "Next.js",
+          "OpenAI API",
+          "Python",
+          "FastAPI",
+          "PostgreSQL",
+          "Vercel"
+        ],
+        "features": [
+          "AI-powered content generation",
+          "Multiple content types",
+          "SEO optimization suggestions",
+          "Plagiarism checking",
+          "Content calendar",
+          "Team workspaces"
+        ],
+        "liveUrl": "https://ai-writer.com",
+        "featured": true,
+        "likes": 456,
+        "views": 6890,
+        "status": "Ongoing",
+        "content": ""
+      },
+      {
+        "slug": "fitness-tracker-app",
+        "order": 5,
+        "id": 5,
+        "title": "Fitness Tracking Mobile App",
+        "shortDescription": "Cross-platform mobile app for workout and nutrition tracking",
+        "description": "Comprehensive fitness application with workout tracking, meal planning, progress analytics, and social features.",
+        "category": "Mobile Development",
+        "tags": ["Fitness", "Health", "Mobile"],
+        "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+        "startDate": "2023-05-15",
+        "endDate": "2023-12-20",
+        "client": "FitLife App",
+        "role": "Mobile Developer",
+        "technologies": [
+          "React Native",
+          "Firebase",
+          "Node.js",
+          "MongoDB",
+          "Stripe"
+        ],
+        "features": [
+          "Workout tracking",
+          "Nutrition logging",
+          "Progress analytics",
+          "Social challenges",
+          "Personal trainer chat",
+          "Premium subscription"
+        ],
+        "liveUrl": "https://fitlife-app.com",
+        "likes": 378,
+        "views": 5210,
+        "status": "Completed",
+        "content": ""
+      },
+      {
+        "slug": "real-estate-platform",
+        "order": 6,
+        "id": 6,
+        "title": "Real Estate Listing Platform",
+        "shortDescription": "Property listing and management platform",
+        "description": "Modern real estate platform connecting buyers, sellers, and agents with advanced search, virtual tours, and scheduling.",
+        "category": "Web Development",
+        "tags": ["Real Estate", "Marketplace", "Geolocation"],
+        "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+        "startDate": "2023-03-10",
+        "endDate": "2023-09-05",
+        "client": "HomeFinder",
+        "role": "Full Stack Developer",
+        "technologies": [
+          "Next.js",
+          "Mapbox",
+          "PostgreSQL",
+          "Prisma",
+          "AWS S3",
+          "Tailwind CSS"
+        ],
+        "features": [
+          "Advanced property search",
+          "Interactive maps",
+          "Virtual 3D tours",
+          "Appointment scheduling",
+          "Mortgage calculator",
+          "Agent dashboard"
+        ],
+        "liveUrl": "https://homefinder-demo.com",
+        "likes": 267,
+        "views": 4560,
+        "status": "Completed",
+        "content": ""
+      },
+      {
+        "slug": "project-management-tool",
+        "order": 7,
+        "id": 7,
+        "title": "Project Management Tool",
+        "shortDescription": "Collaborative project management and team collaboration platform",
+        "description": "Agile project management tool with kanban boards, time tracking, and team collaboration features.",
+        "category": "Web Development",
+        "tags": ["Productivity", "Collaboration", "SaaS"],
+        "thumbnail": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
+        "startDate": "2024-02-01",
+        "endDate": "Ongoing",
+        "role": "Tech Lead",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "GraphQL",
+          "Apollo",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "features": [
+          "Kanban and Gantt views",
+          "Time tracking",
+          "Resource management",
+          "Custom workflows",
+          "Real-time collaboration",
+          "Reporting and analytics"
+        ],
+        "githubUrl": "https://github.com/username/pm-tool",
+        "featured": true,
+        "likes": 423,
+        "views": 6120,
+        "status": "In Progress",
+        "content": ""
+      },
+      {
+        "slug": "crypto-dashboard",
+        "order": 8,
+        "id": 8,
+        "title": "Cryptocurrency Dashboard",
+        "shortDescription": "Real-time cryptocurrency tracking and portfolio management",
+        "description": "Comprehensive crypto dashboard with real-time prices, portfolio tracking, and market analysis tools.",
+        "category": "Web Development",
+        "tags": ["Cryptocurrency", "Finance", "Dashboard"],
+        "thumbnail": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop",
+        "startDate": "2023-11-01",
+        "endDate": "2024-01-15",
+        "role": "Full Stack Developer",
+        "technologies": [
+          "Next.js",
+          "WebSocket",
+          "Redis",
+          "Chart.js",
+          "CoinGecko API"
+        ],
+        "features": [
+          "Real-time price tracking",
+          "Portfolio management",
+          "Price alerts",
+          "Market analysis",
+          "News aggregation",
+          "Tax reporting"
+        ],
+        "liveUrl": "https://crypto-dash.com",
+        "githubUrl": "https://github.com/username/crypto-dashboard",
+        "likes": 312,
+        "views": 4890,
+        "status": "Completed",
+        "content": ""
+      },
+      {
+        "slug": "learning-platform",
+        "order": 9,
+        "id": 9,
+        "title": "Online Learning Platform",
+        "shortDescription": "Interactive online education and course management system",
+        "description": "Complete e-learning platform with video courses, quizzes, certificates, and student progress tracking.",
+        "category": "Web Development",
+        "tags": ["Education", "Video", "LMS"],
+        "thumbnail": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+        "startDate": "2023-06-15",
+        "endDate": "2024-03-30",
+        "client": "EduTech Academy",
+        "role": "Lead Developer",
+        "technologies": [
+          "Next.js",
+          "Vimeo API",
+          "PostgreSQL",
+          "Stripe",
+          "AWS",
+          "Redis"
+        ],
+        "features": [
+          "Video course player",
+          "Interactive quizzes",
+          "Progress tracking",
+          "Certificates",
+          "Discussion forums",
+          "Instructor dashboard"
+        ],
+        "liveUrl": "https://edutech-demo.com",
+        "likes": 398,
+        "views": 5670,
+        "status": "Completed",
+        "content": ""
+      }
+    ],
+    "publication_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "title": "Deep Learning Approaches for Natural Language Processing: A Comprehensive Survey",
+        "authors": ["Mofiz Rahman", "Jane Smith", "Robert Johnson"],
+        "publishedIn": "IEEE Transactions on Neural Networks and Learning Systems",
+        "publisher": "IEEE",
+        "year": 2024,
+        "month": "March",
+        "type": "Journal",
+        "abstract": "This survey provides a comprehensive overview of deep learning techniques applied to natural language processing tasks. We discuss recent advances in transformer architectures, pre-training methods, and their applications across various NLP domains including machine translation, sentiment analysis, and question answering.",
+        "keywords": [
+          "Deep Learning",
+          "Natural Language Processing",
+          "Transformers",
+          "BERT",
+          "GPT"
+        ],
+        "doi": "10.1109/TNNLS.2024.1234567",
+        "url": "https://ieeexplore.ieee.org/document/example",
+        "pdfUrl": "/publications/nlp-survey-2024.pdf",
+        "citations": 45,
+        "featured": true,
+        "status": "Published",
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "title": "Efficient Training of Large-Scale Neural Networks Using Mixed Precision Techniques",
+        "authors": ["Mofiz Rahman", "Alice Brown", "Michael Chen"],
+        "publishedIn": "Proceedings of the 38th International Conference on Machine Learning (ICML)",
+        "publisher": "PMLR",
+        "year": 2024,
+        "month": "July",
+        "type": "Conference",
+        "abstract": "We present novel mixed precision training techniques that significantly reduce training time and memory consumption for large-scale neural networks. Our approach achieves up to 3x speedup while maintaining model accuracy on various benchmark datasets.",
+        "keywords": [
+          "Deep Learning",
+          "Mixed Precision",
+          "Neural Networks",
+          "GPU Optimization"
+        ],
+        "doi": "10.48550/arXiv.2024.example",
+        "url": "https://proceedings.mlr.press/example",
+        "pdfUrl": "/publications/mixed-precision-icml2024.pdf",
+        "citations": 28,
+        "featured": true,
+        "status": "Published",
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "title": "Automated Code Review Using Machine Learning: Techniques and Applications",
+        "authors": ["Mofiz Rahman", "Sarah Wilson"],
+        "publishedIn": "ACM Transactions on Software Engineering and Methodology",
+        "publisher": "ACM",
+        "year": 2023,
+        "month": "November",
+        "type": "Journal",
+        "abstract": "This paper explores machine learning approaches for automated code review, including defect detection, code smell identification, and security vulnerability analysis. We present a comprehensive framework that integrates multiple ML models to provide intelligent code review suggestions.",
+        "keywords": [
+          "Machine Learning",
+          "Software Engineering",
+          "Code Review",
+          "Static Analysis"
+        ],
+        "doi": "10.1145/3234567.8901234",
+        "url": "https://dl.acm.org/doi/example",
+        "pdfUrl": "/publications/code-review-ml-2023.pdf",
+        "citations": 67,
+        "status": "Published",
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "title": "Blockchain-Based Secure Data Sharing in Healthcare Systems",
+        "authors": ["Mofiz Rahman", "Emily Davis", "David Lee", "Maria Garcia"],
+        "publishedIn": "IEEE International Conference on Healthcare Informatics",
+        "publisher": "IEEE",
+        "year": 2023,
+        "month": "September",
+        "type": "Conference",
+        "abstract": "We propose a blockchain-based framework for secure and privacy-preserving data sharing in healthcare systems. The framework leverages smart contracts and cryptographic techniques to ensure data integrity, auditability, and patient consent management.",
+        "keywords": [
+          "Blockchain",
+          "Healthcare",
+          "Privacy",
+          "Security",
+          "Data Sharing"
+        ],
+        "doi": "10.1109/ICHI.2023.example",
+        "url": "https://ieeexplore.ieee.org/document/healthcare",
+        "citations": 34,
+        "featured": true,
+        "status": "Published",
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "title": "Optimizing Web Performance: A Study of Modern JavaScript Frameworks",
+        "authors": ["Mofiz Rahman", "Tom Anderson"],
+        "publishedIn": "Handbook of Modern Web Development",
+        "publisher": "Springer",
+        "year": 2023,
+        "month": "June",
+        "type": "Book Chapter",
+        "abstract": "This chapter examines the performance characteristics of modern JavaScript frameworks including React, Vue, and Angular. We provide empirical analysis and best practices for optimizing web application performance in production environments.",
+        "keywords": [
+          "Web Development",
+          "JavaScript",
+          "React",
+          "Performance",
+          "Optimization"
+        ],
+        "doi": "10.1007/978-3-example",
+        "url": "https://link.springer.com/chapter/example",
+        "pdfUrl": "/publications/web-performance-2023.pdf",
+        "citations": 23,
+        "status": "Published",
+        "content": ""
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "title": "Federated Learning for Privacy-Preserving Machine Learning in IoT Networks",
+        "authors": ["Mofiz Rahman", "Lisa Martinez", "Kevin Zhang"],
+        "publishedIn": "IoT Workshop at NeurIPS 2023",
+        "publisher": "NeurIPS",
+        "year": 2023,
+        "month": "December",
+        "type": "Workshop",
+        "abstract": "We present a federated learning approach tailored for IoT networks with limited bandwidth and heterogeneous devices. Our method achieves comparable accuracy to centralized training while preserving data privacy and reducing communication overhead.",
+        "keywords": [
+          "Federated Learning",
+          "IoT",
+          "Privacy",
+          "Edge Computing",
+          "Machine Learning"
+        ],
+        "url": "https://neurips.cc/workshop/example",
+        "pdfUrl": "/publications/federated-iot-2023.pdf",
+        "citations": 12,
+        "status": "Published",
+        "content": ""
+      },
+      {
+        "slug": "7",
+        "order": 7,
+        "id": 7,
+        "title": "Explainable AI for Medical Diagnosis: A Clinical Perspective",
+        "authors": ["Mofiz Rahman", "Dr. Rachel Kim", "Dr. James Wilson"],
+        "publishedIn": "Nature Machine Intelligence",
+        "publisher": "Nature Publishing Group",
+        "year": 2024,
+        "month": "January",
+        "type": "Journal",
+        "abstract": "This study investigates explainable AI techniques for medical diagnosis applications. We present case studies demonstrating how interpretable machine learning models can assist clinicians in making informed decisions while maintaining diagnostic accuracy.",
+        "keywords": [
+          "Explainable AI",
+          "Medical Diagnosis",
+          "Healthcare",
+          "Interpretability"
+        ],
+        "doi": "10.1038/s42256-024-example",
+        "url": "https://www.nature.com/articles/example",
+        "citations": 89,
+        "featured": true,
+        "status": "Published",
+        "content": ""
+      },
+      {
+        "slug": "8",
+        "order": 8,
+        "id": 8,
+        "title": "Real-Time Object Detection Using Edge Computing and Neural Networks",
+        "authors": ["Mofiz Rahman", "Chris Brown"],
+        "publishedIn": "arXiv preprint",
+        "year": 2024,
+        "month": "April",
+        "type": "Preprint",
+        "abstract": "We propose a lightweight neural network architecture optimized for real-time object detection on edge devices. Our approach achieves state-of-the-art accuracy while maintaining inference speeds suitable for resource-constrained environments.",
+        "keywords": [
+          "Object Detection",
+          "Edge Computing",
+          "Neural Networks",
+          "Computer Vision"
+        ],
+        "doi": "10.48550/arXiv.2404.example",
+        "url": "https://arxiv.org/abs/example",
+        "pdfUrl": "/publications/edge-detection-2024.pdf",
+        "citations": 8,
+        "status": "Preprint",
+        "content": ""
+      },
+      {
+        "slug": "9",
+        "order": 9,
+        "id": 9,
+        "title": "Graph Neural Networks for Social Network Analysis",
+        "authors": ["Mofiz Rahman", "Anna Lee", "Peter Johnson"],
+        "publishedIn": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "publisher": "ACM",
+        "year": 2023,
+        "month": "August",
+        "type": "Conference",
+        "abstract": "We introduce novel graph neural network architectures for analyzing social networks. Our models effectively capture complex relationships and dynamics in large-scale social graphs, enabling improved community detection and influence prediction.",
+        "keywords": [
+          "Graph Neural Networks",
+          "Social Networks",
+          "Community Detection",
+          "Deep Learning"
+        ],
+        "doi": "10.1145/3580305.example",
+        "url": "https://dl.acm.org/doi/kdd2023",
+        "citations": 51,
+        "status": "Published",
+        "content": ""
+      }
+    ],
+    "service_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "title": "Web Development",
+        "category": "Development",
+        "icon": "code",
+        "shortDescription": "Custom websites and web applications built with modern technologies",
+        "description": "Full-stack web development services using cutting-edge technologies like React, Next.js, Node.js, and more. I create responsive, performant, and scalable web applications tailored to your business needs.",
+        "features": [
+          "Responsive design for all devices",
+          "Modern tech stack (React, Next.js, TypeScript)",
+          "SEO optimization",
+          "Performance optimization",
+          "Security best practices",
+          "API integration",
+          "Database design and implementation",
+          "Ongoing maintenance and support"
+        ],
+        "deliverables": [
+          "Fully functional website/application",
+          "Source code with documentation",
+          "Deployment on hosting platform",
+          "30 days of post-launch support"
+        ],
+        "pricing": {
+          "type": "Project-based",
+          "amount": "3,000",
+          "currency": "USD"
+        },
+        "duration": "4-8 weeks",
+        "popular": true,
+        "tags": ["React", "Next.js", "TypeScript", "Node.js", "Full Stack"],
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "title": "Mobile App Development",
+        "category": "Development",
+        "icon": "smartphone",
+        "shortDescription": "Native and cross-platform mobile applications for iOS and Android",
+        "description": "Create stunning mobile applications that work seamlessly on both iOS and Android platforms. Using React Native and Flutter, I deliver high-performance apps with native-like experiences.",
+        "features": [
+          "Cross-platform development (iOS & Android)",
+          "Native performance and feel",
+          "Push notifications",
+          "Offline functionality",
+          "In-app purchases integration",
+          "Analytics and crash reporting",
+          "App store submission assistance",
+          "Regular updates and maintenance"
+        ],
+        "deliverables": [
+          "iOS and Android applications",
+          "App store assets and descriptions",
+          "Backend API (if required)",
+          "Technical documentation"
+        ],
+        "pricing": {
+          "type": "Project-based",
+          "amount": "5,000",
+          "currency": "USD"
+        },
+        "duration": "8-12 weeks",
+        "popular": true,
+        "tags": ["React Native", "Flutter", "iOS", "Android", "Mobile"],
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "title": "UI/UX Design",
+        "category": "Design",
+        "icon": "palette",
+        "shortDescription": "User-centered design that combines aesthetics with functionality",
+        "description": "Design beautiful and intuitive user interfaces that enhance user experience. From wireframes to high-fidelity mockups, I create designs that not only look great but also solve real user problems.",
+        "features": [
+          "User research and personas",
+          "Wireframing and prototyping",
+          "Visual design and branding",
+          "Interactive prototypes",
+          "Design system creation",
+          "Usability testing",
+          "Responsive design",
+          "Handoff to developers"
+        ],
+        "deliverables": [
+          "Figma/Sketch design files",
+          "Interactive prototypes",
+          "Design system documentation",
+          "Asset exports for development"
+        ],
+        "pricing": {
+          "type": "Hourly",
+          "amount": "75",
+          "currency": "USD"
+        },
+        "duration": "2-6 weeks",
+        "tags": [
+          "Figma",
+          "UI/UX",
+          "Prototyping",
+          "User Research",
+          "Design Systems"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "title": "SEO Optimization",
+        "category": "Marketing",
+        "icon": "search",
+        "shortDescription": "Improve your search engine rankings and drive organic traffic",
+        "description": "Comprehensive SEO services to help your website rank higher in search results. From technical SEO to content optimization, I implement strategies that drive long-term organic growth.",
+        "features": [
+          "Technical SEO audit",
+          "Keyword research and strategy",
+          "On-page optimization",
+          "Content optimization",
+          "Link building strategies",
+          "Local SEO",
+          "Performance monitoring",
+          "Monthly reports and analytics"
+        ],
+        "deliverables": [
+          "SEO audit report",
+          "Keyword strategy document",
+          "Optimized content",
+          "Monthly performance reports"
+        ],
+        "pricing": {
+          "type": "Project-based",
+          "amount": "1,500",
+          "currency": "USD"
+        },
+        "duration": "3-6 months",
+        "tags": ["SEO", "Google Analytics", "Content", "Marketing", "Growth"],
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "title": "Cloud Solutions",
+        "category": "Infrastructure",
+        "icon": "cloud",
+        "shortDescription": "Scalable cloud infrastructure and deployment solutions",
+        "description": "Design and implement cloud infrastructure on AWS, Azure, or Google Cloud. From migration to optimization, I help businesses leverage cloud technology for scalability and cost efficiency.",
+        "features": [
+          "Cloud architecture design",
+          "Migration from on-premise to cloud",
+          "Auto-scaling configuration",
+          "Database setup and optimization",
+          "CI/CD pipeline implementation",
+          "Security and compliance",
+          "Cost optimization",
+          "24/7 monitoring and alerts"
+        ],
+        "deliverables": [
+          "Cloud infrastructure setup",
+          "Architecture documentation",
+          "Deployment pipelines",
+          "Monitoring dashboards"
+        ],
+        "pricing": {
+          "type": "Hourly",
+          "amount": "100",
+          "currency": "USD"
+        },
+        "duration": "Ongoing",
+        "tags": ["AWS", "Azure", "GCP", "DevOps", "Infrastructure"],
+        "content": ""
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "title": "Digital Marketing",
+        "category": "Marketing",
+        "icon": "megaphone",
+        "shortDescription": "Strategic marketing campaigns to grow your online presence",
+        "description": "Full-service digital marketing including social media management, PPC campaigns, email marketing, and content strategy. Drive engagement and conversions with data-driven marketing.",
+        "features": [
+          "Social media management",
+          "PPC campaign management (Google Ads, Facebook Ads)",
+          "Email marketing campaigns",
+          "Content marketing strategy",
+          "Influencer outreach",
+          "A/B testing and optimization",
+          "Analytics and reporting",
+          "Brand strategy consulting"
+        ],
+        "deliverables": [
+          "Campaign strategy documents",
+          "Ad creatives and copy",
+          "Performance reports",
+          "Optimization recommendations"
+        ],
+        "pricing": {
+          "type": "Project-based",
+          "amount": "2,000",
+          "currency": "USD"
+        },
+        "duration": "3-6 months",
+        "tags": [
+          "Social Media",
+          "PPC",
+          "Email Marketing",
+          "Content",
+          "Analytics"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "7",
+        "order": 7,
+        "id": 7,
+        "title": "E-commerce Solutions",
+        "category": "Development",
+        "icon": "shopping-cart",
+        "shortDescription": "Complete e-commerce platforms for online businesses",
+        "description": "Build powerful e-commerce stores with Shopify, WooCommerce, or custom solutions. From product catalogs to payment processing, I create seamless shopping experiences.",
+        "features": [
+          "Platform setup (Shopify, WooCommerce, Custom)",
+          "Product catalog management",
+          "Payment gateway integration",
+          "Inventory management",
+          "Order processing automation",
+          "Customer account system",
+          "Analytics and reporting",
+          "Mobile-responsive design"
+        ],
+        "deliverables": [
+          "Fully functional online store",
+          "Admin panel training",
+          "Integration with shipping providers",
+          "Security and compliance setup"
+        ],
+        "pricing": {
+          "type": "Project-based",
+          "amount": "4,000",
+          "currency": "USD"
+        },
+        "duration": "6-10 weeks",
+        "popular": true,
+        "tags": [
+          "Shopify",
+          "WooCommerce",
+          "E-commerce",
+          "Payments",
+          "Inventory"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "8",
+        "order": 8,
+        "id": 8,
+        "title": "Content Writing",
+        "category": "Content",
+        "icon": "pen",
+        "shortDescription": "Engaging content that resonates with your audience",
+        "description": "Professional content writing services including blog posts, website copy, technical documentation, and more. I create SEO-optimized content that engages and converts.",
+        "features": [
+          "Blog post writing",
+          "Website copywriting",
+          "Technical documentation",
+          "Product descriptions",
+          "SEO content optimization",
+          "Content strategy development",
+          "Editing and proofreading",
+          "Content calendar planning"
+        ],
+        "deliverables": [
+          "Published articles/content",
+          "SEO-optimized copy",
+          "Content calendar",
+          "Style guide documentation"
+        ],
+        "pricing": {
+          "type": "Fixed",
+          "amount": "150",
+          "currency": "USD"
+        },
+        "duration": "Per article",
+        "tags": [
+          "Writing",
+          "SEO",
+          "Blogging",
+          "Copywriting",
+          "Content Strategy"
+        ],
+        "content": ""
+      },
+      {
+        "slug": "9",
+        "order": 9,
+        "id": 9,
+        "title": "API Development",
+        "category": "Development",
+        "icon": "database",
+        "shortDescription": "RESTful and GraphQL APIs for modern applications",
+        "description": "Design and develop robust, scalable APIs that power your applications. Whether REST or GraphQL, I create secure and well-documented APIs.",
+        "features": [
+          "RESTful API design",
+          "GraphQL implementation",
+          "Authentication and authorization",
+          "Rate limiting and security",
+          "API documentation (Swagger/OpenAPI)",
+          "Database design and optimization",
+          "Webhook integrations",
+          "API testing and monitoring"
+        ],
+        "deliverables": [
+          "Fully functional API",
+          "Comprehensive documentation",
+          "Postman collection",
+          "Security implementation"
+        ],
+        "pricing": {
+          "type": "Project-based",
+          "amount": "2,500",
+          "currency": "USD"
+        },
+        "duration": "3-6 weeks",
+        "tags": ["REST", "GraphQL", "Node.js", "API", "Backend"],
+        "content": ""
+      },
+      {
+        "slug": "10",
+        "order": 10,
+        "id": 10,
+        "title": "Consulting & Strategy",
+        "category": "Consulting",
+        "icon": "users",
+        "shortDescription": "Expert guidance for your digital transformation journey",
+        "description": "Strategic technology consulting to help you make informed decisions. From technology stack selection to digital transformation roadmaps.",
+        "features": [
+          "Technology assessment",
+          "Architecture review",
+          "Technology stack recommendations",
+          "Digital transformation strategy",
+          "Team training and mentorship",
+          "Code review and best practices",
+          "Performance optimization",
+          "Scalability planning"
+        ],
+        "deliverables": [
+          "Assessment reports",
+          "Recommendation documents",
+          "Implementation roadmap",
+          "Training sessions"
+        ],
+        "pricing": {
+          "type": "Hourly",
+          "amount": "150",
+          "currency": "USD"
+        },
+        "duration": "As needed",
+        "tags": [
+          "Consulting",
+          "Strategy",
+          "Architecture",
+          "Training",
+          "Mentorship"
+        ],
+        "content": ""
+      }
+    ],
+    "skill_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "title": "JavaScript",
+        "category": "Technical",
+        "proficiency": 95,
+        "level": "Expert",
+        "yearsOfExperience": 8,
+        "tags": ["Programming", "Frontend", "Backend"],
+        "description": "Full-stack JavaScript development including ES6+, async/await, and modern frameworks.",
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "title": "React",
+        "category": "Technical",
+        "proficiency": 90,
+        "level": "Expert",
+        "yearsOfExperience": 6,
+        "tags": ["Frontend", "Framework", "UI"],
+        "description": "Building scalable web applications with React, hooks, and state management.",
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "title": "TypeScript",
+        "category": "Technical",
+        "proficiency": 88,
+        "level": "Advanced",
+        "yearsOfExperience": 5,
+        "tags": ["Programming", "Type Safety"],
+        "description": "Strong typing for JavaScript applications, interfaces, and generics.",
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "title": "Python",
+        "category": "Technical",
+        "proficiency": 85,
+        "level": "Advanced",
+        "yearsOfExperience": 6,
+        "tags": ["Programming", "Backend", "Data Science"],
+        "description": "Backend development, automation, and data analysis.",
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "title": "Node.js",
+        "category": "Technical",
+        "proficiency": 87,
+        "level": "Advanced",
+        "yearsOfExperience": 7,
+        "tags": ["Backend", "API", "Server"],
+        "description": "Server-side JavaScript with Express, RESTful APIs, and microservices.",
+        "content": ""
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "title": "UI/UX Design",
+        "category": "Design",
+        "proficiency": 80,
+        "level": "Advanced",
+        "yearsOfExperience": 5,
+        "tags": ["Design", "User Experience", "Interface"],
+        "description": "Creating intuitive and visually appealing user interfaces.",
+        "content": ""
+      },
+      {
+        "slug": "7",
+        "order": 7,
+        "id": 7,
+        "title": "Figma",
+        "category": "Design",
+        "proficiency": 85,
+        "level": "Advanced",
+        "yearsOfExperience": 4,
+        "tags": ["Design Tool", "Prototyping", "Collaboration"],
+        "description": "Wireframing, prototyping, and design systems.",
+        "content": ""
+      },
+      {
+        "slug": "8",
+        "order": 8,
+        "id": 8,
+        "title": "Adobe Photoshop",
+        "category": "Design",
+        "proficiency": 75,
+        "level": "Advanced",
+        "yearsOfExperience": 7,
+        "tags": ["Image Editing", "Graphics"],
+        "description": "Photo editing, digital art, and graphic design.",
+        "content": ""
+      },
+      {
+        "slug": "9",
+        "order": 9,
+        "id": 9,
+        "title": "Illustration",
+        "category": "Design",
+        "proficiency": 70,
+        "level": "Intermediate",
+        "yearsOfExperience": 3,
+        "tags": ["Art", "Creative", "Visual"],
+        "description": "Digital and traditional illustration techniques.",
+        "content": ""
+      },
+      {
+        "slug": "10",
+        "order": 10,
+        "id": 10,
+        "title": "Project Management",
+        "category": "Business",
+        "proficiency": 82,
+        "level": "Advanced",
+        "yearsOfExperience": 6,
+        "tags": ["Management", "Planning", "Leadership"],
+        "description": "Agile methodologies, Scrum, and team coordination.",
+        "content": ""
+      },
+      {
+        "slug": "11",
+        "order": 11,
+        "id": 11,
+        "title": "Business Analysis",
+        "category": "Business",
+        "proficiency": 78,
+        "level": "Advanced",
+        "yearsOfExperience": 5,
+        "tags": ["Analysis", "Strategy", "Requirements"],
+        "description": "Requirements gathering, stakeholder management, and process improvement.",
+        "content": ""
+      },
+      {
+        "slug": "12",
+        "order": 12,
+        "id": 12,
+        "title": "Marketing Strategy",
+        "category": "Business",
+        "proficiency": 73,
+        "level": "Intermediate",
+        "yearsOfExperience": 4,
+        "tags": ["Marketing", "Strategy", "Growth"],
+        "description": "Digital marketing, SEO, and brand development.",
+        "content": ""
+      },
+      {
+        "slug": "13",
+        "order": 13,
+        "id": 13,
+        "title": "Communication",
+        "category": "Soft Skills",
+        "proficiency": 90,
+        "level": "Expert",
+        "yearsOfExperience": 10,
+        "tags": ["Interpersonal", "Collaboration"],
+        "description": "Clear verbal and written communication across teams and stakeholders.",
+        "content": ""
+      },
+      {
+        "slug": "14",
+        "order": 14,
+        "id": 14,
+        "title": "Problem Solving",
+        "category": "Soft Skills",
+        "proficiency": 88,
+        "level": "Expert",
+        "yearsOfExperience": 10,
+        "tags": ["Critical Thinking", "Analysis"],
+        "description": "Analytical thinking and creative solution development.",
+        "content": ""
+      },
+      {
+        "slug": "15",
+        "order": 15,
+        "id": 15,
+        "title": "Leadership",
+        "category": "Soft Skills",
+        "proficiency": 80,
+        "level": "Advanced",
+        "yearsOfExperience": 7,
+        "tags": ["Management", "Mentoring", "Team Building"],
+        "description": "Team leadership, mentoring, and conflict resolution.",
+        "content": ""
+      },
+      {
+        "slug": "16",
+        "order": 16,
+        "id": 16,
+        "title": "English",
+        "category": "Languages",
+        "proficiency": 100,
+        "level": "Expert",
+        "yearsOfExperience": 20,
+        "tags": ["Communication", "Native"],
+        "description": "Native speaker with excellent written and verbal skills.",
+        "content": ""
+      },
+      {
+        "slug": "17",
+        "order": 17,
+        "id": 17,
+        "title": "Spanish",
+        "category": "Languages",
+        "proficiency": 75,
+        "level": "Advanced",
+        "yearsOfExperience": 8,
+        "tags": ["Communication", "Second Language"],
+        "description": "Conversational and business proficiency.",
+        "content": ""
+      },
+      {
+        "slug": "18",
+        "order": 18,
+        "id": 18,
+        "title": "German",
+        "category": "Languages",
+        "proficiency": 60,
+        "level": "Intermediate",
+        "yearsOfExperience": 3,
+        "tags": ["Communication", "Learning"],
+        "description": "Intermediate conversational skills.",
+        "content": ""
+      },
+      {
+        "slug": "19",
+        "order": 19,
+        "id": 19,
+        "title": "Git",
+        "category": "Tools",
+        "proficiency": 92,
+        "level": "Expert",
+        "yearsOfExperience": 8,
+        "tags": ["Version Control", "Collaboration"],
+        "description": "Version control, branching strategies, and team collaboration.",
+        "content": ""
+      },
+      {
+        "slug": "20",
+        "order": 20,
+        "id": 20,
+        "title": "Docker",
+        "category": "Tools",
+        "proficiency": 80,
+        "level": "Advanced",
+        "yearsOfExperience": 4,
+        "tags": ["DevOps", "Containers"],
+        "description": "Containerization and deployment workflows.",
+        "content": ""
+      },
+      {
+        "slug": "21",
+        "order": 21,
+        "id": 21,
+        "title": "AWS",
+        "category": "Tools",
+        "proficiency": 77,
+        "level": "Advanced",
+        "yearsOfExperience": 5,
+        "tags": ["Cloud", "Infrastructure"],
+        "description": "Cloud services, EC2, S3, Lambda, and serverless architecture.",
+        "content": ""
+      }
+    ],
+    "testimonial_list": [
+      {
+        "slug": "1",
+        "order": 1,
+        "id": 1,
+        "name": "Sarah Johnson",
+        "role": "CEO & Founder",
+        "company": "TechStart Inc.",
+        "location": "Cottbus-Ströbitz, Brandenburg, Germany",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+        "rating": 5,
+        "testimonial": "Absolutely exceptional work! The web application exceeded all our expectations. The attention to detail, clean code, and professional communication throughout the project made this a seamless experience. I highly recommend their services to anyone looking for top-tier development work.",
+        "date": "2024-10-15",
+        "project": "E-commerce Platform",
+        "category": "Web Development",
+        "featured": true,
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "2",
+        "order": 2,
+        "id": 2,
+        "name": "Michael Chen",
+        "role": "Product Manager",
+        "company": "Digital Solutions Ltd",
+        "location": "New York, NY",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
+        "rating": 5,
+        "testimonial": "Working with this developer was a game-changer for our project. They brought creative solutions to complex problems and delivered a mobile app that our users absolutely love. The performance is outstanding and the UI is intuitive. Highly professional!",
+        "date": "2024-09-22",
+        "project": "Mobile Fitness App",
+        "category": "Mobile Development",
+        "featured": true,
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "3",
+        "order": 3,
+        "id": 3,
+        "name": "Emily Rodriguez",
+        "role": "Marketing Director",
+        "company": "Brand Boost Agency",
+        "location": "Los Angeles, CA",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily",
+        "rating": 5,
+        "testimonial": "The SEO optimization service transformed our online presence. Within 3 months, we saw a 250% increase in organic traffic. The comprehensive strategy and regular reporting kept us informed every step of the way. Worth every penny!",
+        "date": "2024-09-10",
+        "project": "SEO Campaign",
+        "category": "Digital Marketing",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "4",
+        "order": 4,
+        "id": 4,
+        "name": "David Thompson",
+        "role": "CTO",
+        "company": "CloudTech Systems",
+        "location": "Seattle, WA",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=David",
+        "rating": 5,
+        "testimonial": "Outstanding cloud architecture work! They migrated our entire infrastructure to AWS with zero downtime. The auto-scaling and cost optimization strategies saved us 40% on our monthly cloud bills. True expertise in cloud technologies.",
+        "date": "2024-08-28",
+        "project": "Cloud Migration",
+        "category": "Cloud Solutions",
+        "featured": true,
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "5",
+        "order": 5,
+        "id": 5,
+        "name": "Jessica Martinez",
+        "role": "UX Lead",
+        "company": "Creative Studio Co",
+        "location": "Austin, TX",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica",
+        "rating": 5,
+        "testimonial": "The UI/UX design work was phenomenal. They really understood our users and created an interface that increased our conversion rate by 85%. The design system they created is now the foundation for all our products.",
+        "date": "2024-08-15",
+        "project": "SaaS Dashboard Redesign",
+        "category": "UI/UX Design",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "6",
+        "order": 6,
+        "id": 6,
+        "name": "Robert Kim",
+        "role": "Founder",
+        "company": "E-Shop Plus",
+        "location": "Chicago, IL",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Robert",
+        "rating": 5,
+        "testimonial": "Built our Shopify store from scratch and it looks amazing! The custom features they developed set us apart from competitors. Sales increased 3x in the first month alone. Highly recommended for e-commerce projects!",
+        "date": "2024-07-30",
+        "project": "Shopify Store",
+        "category": "E-commerce",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "7",
+        "order": 7,
+        "id": 7,
+        "name": "Amanda Lewis",
+        "role": "Content Manager",
+        "company": "BlogHub Media",
+        "location": "Boston, MA",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Amanda",
+        "rating": 5,
+        "testimonial": "The content writing service delivered exactly what we needed. SEO-optimized, engaging articles that resonate with our audience. Our blog traffic doubled and engagement metrics are through the roof. Will definitely work together again!",
+        "date": "2024-07-18",
+        "project": "Content Strategy",
+        "category": "Content Writing",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "8",
+        "order": 8,
+        "id": 8,
+        "name": "James Wilson",
+        "role": "Operations Manager",
+        "company": "LogiTrack Systems",
+        "location": "Denver, CO",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=James",
+        "rating": 5,
+        "testimonial": "The API they developed is rock solid. Handles millions of requests daily without any issues. Documentation was clear and comprehensive. Integration was smooth and their ongoing support has been excellent.",
+        "date": "2024-06-25",
+        "project": "RESTful API",
+        "category": "API Development",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "9",
+        "order": 9,
+        "id": 9,
+        "name": "Lisa Anderson",
+        "role": "VP of Technology",
+        "company": "FinServe Inc",
+        "location": "Miami, FL",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Lisa",
+        "rating": 5,
+        "testimonial": "Their consulting services helped us make critical technology decisions that saved our project. The architecture review identified bottlenecks we didn't know existed. Their expertise and guidance were invaluable.",
+        "date": "2024-06-10",
+        "project": "Tech Consulting",
+        "category": "Consulting",
+        "featured": true,
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "10",
+        "order": 10,
+        "id": 10,
+        "name": "Chris Parker",
+        "role": "Entrepreneur",
+        "company": "StartUp Ventures",
+        "location": "Portland, OR",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Chris",
+        "rating": 4,
+        "testimonial": "Great experience overall! Communication was excellent and the final product met our requirements. There were a few minor delays but they kept us informed. Would work with them again on future projects.",
+        "date": "2024-05-28",
+        "project": "MVP Development",
+        "category": "Web Development",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "11",
+        "order": 11,
+        "id": 11,
+        "name": "Nicole Brown",
+        "role": "Brand Manager",
+        "company": "Style & Co",
+        "location": "Nashville, TN",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nicole",
+        "rating": 5,
+        "testimonial": "The digital marketing campaign exceeded our goals. Social media engagement increased 300% and our brand awareness skyrocketed. They really understand how to connect with audiences and drive results.",
+        "date": "2024-05-15",
+        "project": "Social Media Campaign",
+        "category": "Digital Marketing",
+        "verified": true,
+        "content": ""
+      },
+      {
+        "slug": "12",
+        "order": 12,
+        "id": 12,
+        "name": "Tom Mitchell",
+        "role": "Senior Developer",
+        "company": "CodeCraft Labs",
+        "location": "San Diego, CA",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Tom",
+        "rating": 5,
+        "testimonial": "Fantastic code quality and best practices. They reviewed our codebase and provided actionable recommendations that improved our app performance by 60%. True expert in their field!",
+        "date": "2024-04-20",
+        "project": "Code Review",
+        "category": "Consulting",
+        "verified": true,
+        "content": ""
+      }
+    ]
+  },
+  "teacher": {
+    "en": [
+      {
+        "slug": "static_contents",
+        "order": 0,
+        "terms": {
+          "id": 1,
+          "title": "Terms of Service",
+          "subtitle": "Simple and straightforward terms for working together.",
+          "last_updated": "November 2, 2024",
+          "sections": [
+            {
+              "id": 1,
+              "title": "1. Services 5",
+              "icon": "file-text",
+              "content": "I provide freelance services including web development, design, and consulting. Specific project details, deliverables, and timelines will be discussed and agreed upon before starting work."
+            },
+            {
+              "id": 2,
+              "title": "2. Payment",
+              "icon": "dollar-sign",
+              "content": "Payment terms will be agreed upon per project. Typically:",
+              "list": [
+                "50% deposit before starting work",
+                "50% upon completion",
+                "Hourly projects billed monthly"
+              ]
+            },
+            {
+              "id": 3,
+              "title": "3. Ownership & Rights",
+              "icon": "shield",
+              "content": "Once you've paid in full, you own the final work I create for your project. I may showcase the work in my portfolio. Any pre-existing code or third-party assets have their own licenses."
+            },
+            {
+              "id": 4,
+              "title": "4. Timeline & Revisions",
+              "icon": "clock",
+              "content": "Project timelines are estimates. Most projects include 2-3 rounds of revisions. Delays can happen if feedback or content is delayed. Major changes to the project scope may require additional time and cost."
+            },
+            {
+              "id": 5,
+              "title": "5. Cancellation",
+              "icon": "alert-circle",
+              "content": "Either of us can cancel the project with notice. You'll need to pay for work completed up to that point. Deposits are generally non-refundable once work has started."
+            },
+            {
+              "id": 6,
+              "title": "6. Disclaimer",
+              "icon": "shield",
+              "content": "I'll do my best work, but I can't guarantee specific results like traffic, sales, or rankings. You're responsible for maintaining your site/app and keeping backups after launch."
+            }
+          ],
+          "contactTitle": "Have Questions?",
+          "contactText": "If anything is unclear or you'd like to discuss terms for your project, feel free to reach out.",
+          "footerText": "By working with me, you agree to these terms. Let's create something great together! ✨"
+        },
+        "privacy": {
+          "id": 1,
+          "title": "Privacy Policy",
+          "subtitle": "How I handle and protect your information. 3",
+          "last_updated": "November 2, 2024",
+          "sections": [
+            {
+              "id": 1,
+              "title": "1. Information I Collect",
+              "icon": "eye",
+              "content": "When you visit my website or work with me, I may collect:",
+              "list": [
+                "Contact information: Name, email, phone number (when you reach out)",
+                "Project details: Information you share about your project needs",
+                "Website analytics: Basic usage data like pages visited and time spent (via Google Analytics or similar)",
+                "Technical data: IP address, browser type, device information"
+              ]
+            },
+            {
+              "id": 2,
+              "title": "2. How I Use Your Information",
+              "icon": "database",
+              "content": "I use your information to:",
+              "list": [
+                "Respond to your inquiries and communicate about projects",
+                "Provide the services you've requested",
+                "Improve my website and services",
+                "Send occasional updates (only if you've opted in)"
+              ],
+              "note": "I do not sell, rent, or share your personal information with third parties for marketing purposes."
+            },
+            {
+              "id": 3,
+              "title": "3. Cookies & Tracking",
+              "icon": "cookie",
+              "content": "This website may use cookies and similar technologies to:",
+              "list": [
+                "Remember your preferences",
+                "Understand how you use the site (via analytics tools)",
+                "Improve your browsing experience"
+              ],
+              "note": "You can control cookies through your browser settings. Note that disabling cookies may affect website functionality."
+            },
+            {
+              "id": 4,
+              "title": "4. Data Security",
+              "icon": "lock",
+              "content": "I take reasonable measures to protect your information from unauthorized access, loss, or misuse. However, no method of transmission over the internet is 100% secure. If you're sharing sensitive information, please use secure channels."
+            },
+            {
+              "id": 5,
+              "title": "5. Third-Party Services",
+              "icon": "shield",
+              "content": "This website may use third-party services that collect information:",
+              "list": [
+                "Google Analytics: For website analytics",
+                "Contact forms: May use services like Formspree, Google Forms, etc.",
+                "Hosting provider: Your data is stored on secure hosting servers"
+              ],
+              "note": "These services have their own privacy policies. I choose reputable providers that respect user privacy."
+            },
+            {
+              "id": 6,
+              "title": "6. Your Rights",
+              "icon": "user-check",
+              "content": "You have the right to:",
+              "list": [
+                "Request a copy of the information I have about you",
+                "Ask me to update or delete your information",
+                "Opt out of any communications from me",
+                "Withdraw consent for data processing"
+              ],
+              "note": "Just reach out, and I'll be happy to help with any of these requests."
+            },
+            {
+              "id": 7,
+              "title": "7. Data Retention",
+              "icon": "clock",
+              "content": "I keep your information only as long as necessary to provide services and fulfill the purposes outlined in this policy. Project-related information is typically retained for a reasonable period after project completion for reference and support purposes."
+            },
+            {
+              "id": 8,
+              "title": "8. Children's Privacy",
+              "icon": "shield",
+              "content": "This website is not intended for children under 13. I do not knowingly collect information from children. If you believe I have collected information from a child, please contact me immediately."
+            },
+            {
+              "id": 9,
+              "title": "9. Changes to This Policy",
+              "icon": "mail",
+              "content": "I may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the website after changes means you accept the updated policy."
+            }
+          ],
+          "contactTitle": "Privacy Questions?",
+          "contactText": "If you have any questions about this privacy policy or how I handle your data, feel free to contact me. I'm committed to protecting your privacy and being transparent about data practices.",
+          "footerText": "Your privacy matters. I only collect what's necessary and handle it responsibly. 🔒"
+        },
+        "content": ""
+      }
+    ]
+  }
+}

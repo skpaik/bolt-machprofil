@@ -1,0 +1,474 @@
+"use client";
+
+import React from "react";
+import { usePortfolio } from "@/components/context/PortfolioContext";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { formatDateShort } from "@/lib/helpers/date.helper";
+import { showLucidIcon } from "@/components/lucid-icon-map";
+import { useContentLoader } from "@/components/hooks/use-content-loader";
+import { AboutContent } from "@/lib/types/about.contract";
+import { emptyAboutContent } from "@/data/configs/constants/empty.data";
+import {
+  Certificate,
+  Education,
+  Experience,
+  Skills,
+  Testimonial,
+} from "@/lib/types/portfolio";
+
+export default function ClientPage() {
+  const { langI18n, profileType, languageType } = usePortfolio();
+  const {
+    data: aboutContent,
+    loading,
+    error,
+  } = useContentLoader<AboutContent>(
+    profileType,
+    languageType,
+    "about_content",
+    emptyAboutContent,
+  );
+
+  const { data: experiences } = useContentLoader<Experience[]>(
+    profileType,
+    languageType,
+    "experience_list",
+    [],
+  );
+
+  const { data: skills } = useContentLoader<Skills[]>(
+    profileType,
+    languageType,
+    "skill_list",
+    [],
+  );
+
+  const { data: testimonials } = useContentLoader<Testimonial[]>(
+    profileType,
+    languageType,
+    "testimonial_list",
+    [],
+  );
+
+  const { data: certificates } = useContentLoader<Certificate[]>(
+    profileType,
+    languageType,
+    "certificate_list",
+    [],
+  );
+
+  const { data: education } = useContentLoader<Education[]>(
+    profileType,
+    languageType,
+    "education_list",
+    [],
+  );
+
+  //const aboutContent = about_content;
+  const socialLinks = aboutContent.socialLinks;
+
+  // Aggregate data from different sources
+  const profile = aboutContent.bio;
+
+  const resumePdfUrl = profile.resumeUrl || "/resume.pdf";
+
+  const handleDownload = () => {
+    window.open(resumePdfUrl, "_blank");
+  };
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  // Group skills by category
+  const groupedSkills = skills.reduce((acc: any, skill: any) => {
+    const category = skill.category || "Other";
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(skill);
+    return acc;
+  }, {});
+
+  return (
+    <div className="min-h-screen bg-muted/30">
+      {/* Action Bar - Hidden in Print */}
+      <div className="print:hidden sticky top-0 z-10 bg-background border-b shadow-sm">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold">{langI18n.resume}</h1>
+              <p className="text-sm text-muted-foreground">
+                {langI18n.professional_cv_portfolio}
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <Button variant="outline" onClick={handlePrint}>
+                {showLucidIcon("printer", "w-4 h-4 mr-2")}
+                {langI18n.print}
+              </Button>
+              <Button onClick={handleDownload}>
+                {showLucidIcon("download", "w-4 h-4 mr-2")}
+                {langI18n.download_pdf}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Resume Content */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 print:p-0">
+        <Card className="print:shadow-none print:border-0">
+          <CardContent className="p-8 sm:p-12 space-y-8 print:p-8">
+            {/* Header Section */}
+            <div className="flex flex-col sm:flex-row gap-6 items-start print:flex-row">
+              {/* Profile Image */}
+              <div className="flex-shrink-0">
+                <img
+                  src={profile.image}
+                  alt={profile.name}
+                  className="w-32 h-32 rounded-full border-4 border-primary/20 object-cover print:w-24 print:h-24"
+                />
+              </div>
+
+              {/* Contact Info */}
+              <div className="flex-1">
+                <h1 className="text-4xl font-bold mb-2 print:text-3xl">
+                  {profile.name}
+                </h1>
+                <h2 className="text-2xl text-primary font-semibold mb-4 print:text-xl">
+                  {profile.title}
+                </h2>
+
+                <div className="grid sm:grid-cols-2 gap-2 text-sm">
+                  {profile.email && (
+                    <div className="flex items-center gap-2">
+                      {showLucidIcon("mail", "w-4 h-4 text-muted-foreground")}
+                      <a
+                        href={`mailto:${profile.email}`}
+                        className="hover:text-primary"
+                      >
+                        {profile.email}
+                      </a>
+                    </div>
+                  )}
+                  {profile.phone && (
+                    <div className="flex items-center gap-2">
+                      {showLucidIcon("phone", "w-4 h-4 text-muted-foreground")}
+                      <a
+                        href={`tel:${profile.phone}`}
+                        className="hover:text-primary"
+                      >
+                        {profile.phone}
+                      </a>
+                    </div>
+                  )}
+                  {profile.location && (
+                    <div className="flex items-center gap-2">
+                      {showLucidIcon(
+                        "map-pin",
+                        "w-4 h-4 text-muted-foreground",
+                      )}
+                      <span>{profile.location}</span>
+                    </div>
+                  )}
+                  {profile.website && (
+                    <div className="flex items-center gap-2">
+                      {showLucidIcon("globe", "w-4 h-4 text-muted-foreground")}
+                      <a
+                        href={profile.website}
+                        className="hover:text-primary"
+                        target="_blank"
+                      >
+                        {profile.website.replace("https://", "")}
+                      </a>
+                    </div>
+                  )}
+                  {socialLinks.map((socialLink) => (
+                    <div className="flex items-center gap-2">
+                      {showLucidIcon(
+                        socialLink.icon,
+                        "w-4 h-4 text-muted-foreground",
+                      )}
+                      <a
+                        href={`https://${socialLink.url}`}
+                        className="hover:text-primary"
+                        target="_blank"
+                      >
+                        {socialLink.url}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <hr className="border-border" />
+
+            {/* Summary Section */}
+            <div>
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                {showLucidIcon("file-text", "w-5 h-5 text-primary")}
+                {langI18n.professional_summary}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {aboutContent.intro.tagline}
+              </p>
+            </div>
+
+            <hr className="border-border print:hidden" />
+
+            {/* Experience Section */}
+            {experiences.length > 0 && (
+              <div className="print:break-inside-avoid">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  {showLucidIcon("brief-case", "w-5 h-5 text-primary")}
+                  {langI18n.work_experience}
+                </h3>
+                <div className="space-y-6">
+                  {experiences.map((exp: any) => (
+                    <div key={exp.id} className="print:break-inside-avoid">
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
+                          <h4 className="text-lg font-bold">{exp.position}</h4>
+                          <div className="text-primary font-semibold">
+                            {exp.company}
+                          </div>
+                        </div>
+                        <div className="text-sm text-muted-foreground text-right">
+                          <div className="flex items-center gap-1">
+                            {showLucidIcon("calendar", "w-3 h-3")}
+                            {formatDateShort(exp.startDate)} -{" "}
+                            {formatDateShort(exp.endDate)}
+                          </div>
+                          <div className="flex items-center gap-1 mt-1">
+                            {showLucidIcon("map-pin", "w-3 h-3")}
+                            {exp.location}
+                          </div>
+                        </div>
+                      </div>
+
+                      {exp.description && (
+                        <p className="text-sm text-muted-foreground mb-2">
+                          {exp.description}
+                        </p>
+                      )}
+
+                      {exp.responsibilities &&
+                        exp.responsibilities.length > 0 && (
+                          <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-2">
+                            {exp.responsibilities
+                              .slice(0, 4)
+                              .map((resp: string, idx: number) => (
+                                <li key={idx}>{resp}</li>
+                              ))}
+                          </ul>
+                        )}
+
+                      {exp.technologies && exp.technologies.length > 0 && (
+                        <div className="flex flex-wrap gap-1 mt-3">
+                          {exp.technologies.map((tech: string) => (
+                            <Badge
+                              key={tech}
+                              variant="secondary"
+                              className="text-xs"
+                            >
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {experiences.length > 0 && (
+              <hr className="border-border print:hidden" />
+            )}
+
+            {/* Education Section */}
+            {education.length > 0 && (
+              <div className="print:break-inside-avoid">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  {showLucidIcon("graduation-cap", "w-5 h-5 text-primary")}
+                  {langI18n.education}
+                </h3>
+                <div className="space-y-4">
+                  {education.map((edu: any) => (
+                    <div key={edu.id}>
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-bold">{edu.degree}</h4>
+                          <div className="text-primary font-semibold">
+                            {edu.institution}
+                          </div>
+                          <div className="text-sm text-muted-foreground">
+                            {edu.field}
+                          </div>
+                        </div>
+                        <div className="text-sm text-muted-foreground text-right">
+                          <div>
+                            {formatDateShort(edu.startDate)} -{" "}
+                            {formatDateShort(edu.endDate)}
+                          </div>
+                          {edu.gpa && (
+                            <div className="font-semibold">
+                              {langI18n.gpa}: {edu.gpa}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {education.length > 0 && (
+              <hr className="border-border print:hidden" />
+            )}
+
+            {/* Skills Section */}
+            {Object.keys(groupedSkills).length > 0 && (
+              <div className="print:break-inside-avoid">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  {showLucidIcon("code", "w-5 h-5 text-primary")}
+                  {langI18n.skills_technologies}
+                </h3>
+                <div className="space-y-4">
+                  {Object.entries(groupedSkills).map(
+                    ([category, categorySkills]: [string, any]) => (
+                      <div key={category}>
+                        <h4 className="font-semibold text-sm text-muted-foreground mb-2">
+                          {category}
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {categorySkills
+                            .sort(
+                              (a: any, b: any) => b.proficiency - a.proficiency,
+                            )
+                            .slice(0, 10)
+                            .map((skill: any) => (
+                              <Badge
+                                key={skill.id}
+                                variant="outline"
+                                className="text-sm"
+                              >
+                                {skill.name}
+                                {skill.proficiency && (
+                                  <span className="ml-1 text-xs text-muted-foreground">
+                                    ({skill.proficiency}%)
+                                  </span>
+                                )}
+                              </Badge>
+                            ))}
+                        </div>
+                      </div>
+                    ),
+                  )}
+                </div>
+              </div>
+            )}
+
+            {Object.keys(groupedSkills).length > 0 &&
+              certificates.length > 0 && (
+                <hr className="border-border print:hidden" />
+              )}
+
+            {/* Certifications Section */}
+            {certificates.length > 0 && (
+              <div className="print:break-inside-avoid">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  {showLucidIcon("award", "w-5 h-5 text-primary")}
+                  Certifications
+                </h3>
+                <div className="space-y-3">
+                  {certificates.slice(0, 6).map((cert: any) => (
+                    <div
+                      key={cert.id}
+                      className="flex justify-between items-start"
+                    >
+                      <div>
+                        <h4 className="font-semibold">{cert.name}</h4>
+                        <div className="text-sm text-primary">
+                          {cert.issuer}
+                        </div>
+                        {cert.credentialId && (
+                          <div className="text-xs text-muted-foreground">
+                            ID: {cert.credentialId}
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-sm text-muted-foreground text-right">
+                        <div>{formatDateShort(cert.issueDate)}</div>
+                        {cert.expiryDate && cert.expiryDate !== "No Expiry" && (
+                          <div className="text-xs">
+                            {langI18n.expires}:{" "}
+                            {formatDateShort(cert.expiryDate)}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Footer Note - Hidden in Print */}
+        <div className="print:hidden text-center text-sm text-muted-foreground mt-8 mb-4">
+          <p>
+            {langI18n.last_updated}:{" "}
+            {new Date().toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
+          <p className="mt-2">{langI18n.up_to_date_information}</p>
+        </div>
+      </div>
+
+      {/* Print Styles */}
+      <style jsx global>{`
+        @media print {
+          body {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+          }
+
+          .print\\:hidden {
+            display: none !important;
+          }
+
+          .print\\:break-inside-avoid {
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
+
+          .print\\:p-8 {
+            padding: 2rem;
+          }
+
+          .print\\:shadow-none {
+            box-shadow: none !important;
+          }
+
+          .print\\:border-0 {
+            border: none !important;
+          }
+
+          @page {
+            margin: 0.75in;
+            size: letter;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
