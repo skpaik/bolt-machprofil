@@ -83,14 +83,14 @@ export default function ClientPage() {
   };
 
   // Group skills by category
-  const groupedSkills = skills.reduce((acc: any, skill: any) => {
+  const groupedSkills = skills.reduce((acc: Record<string, Skills[]>, skill: Skills) => {
     const category = skill.category || "Other";
     if (!acc[category]) {
       acc[category] = [];
     }
     acc[category].push(skill);
     return acc;
-  }, {});
+  }, {} as Record<string, Skills[]>);
 
   return (
     <div className="min-h-screen bg-muted/30">
@@ -228,7 +228,7 @@ export default function ClientPage() {
                   {langI18n.work_experience}
                 </h3>
                 <div className="space-y-6">
-                  {experiences.map((exp: any) => (
+                  {experiences.map((exp: Experience) => (
                     <div key={exp.id} className="print:break-inside-avoid">
                       <div className="flex justify-between items-start mb-2">
                         <div>
@@ -298,7 +298,7 @@ export default function ClientPage() {
                   {langI18n.education}
                 </h3>
                 <div className="space-y-4">
-                  {education.map((edu: any) => (
+                  {education.map((edu: Education) => (
                     <div key={edu.id}>
                       <div className="flex justify-between items-start">
                         <div>
@@ -341,7 +341,7 @@ export default function ClientPage() {
                 </h3>
                 <div className="space-y-4">
                   {Object.entries(groupedSkills).map(
-                    ([category, categorySkills]: [string, any]) => (
+                    ([category, categorySkills]: [string, Skills[]]) => (
                       <div key={category}>
                         <h4 className="font-semibold text-sm text-muted-foreground mb-2">
                           {category}
@@ -349,16 +349,16 @@ export default function ClientPage() {
                         <div className="flex flex-wrap gap-2">
                           {categorySkills
                             .sort(
-                              (a: any, b: any) => b.proficiency - a.proficiency,
+                              (a: Skills, b: Skills) => b.proficiency - a.proficiency,
                             )
                             .slice(0, 10)
-                            .map((skill: any) => (
+                            .map((skill: Skills) => (
                               <Badge
                                 key={skill.id}
                                 variant="outline"
                                 className="text-sm"
                               >
-                                {skill.name}
+                                {skill.title}
                                 {skill.proficiency && (
                                   <span className="ml-1 text-xs text-muted-foreground">
                                     ({skill.proficiency}%)
@@ -387,13 +387,13 @@ export default function ClientPage() {
                   Certifications
                 </h3>
                 <div className="space-y-3">
-                  {certificates.slice(0, 6).map((cert: any) => (
+                  {certificates.slice(0, 6).map((cert: Certificate) => (
                     <div
                       key={cert.id}
                       className="flex justify-between items-start"
                     >
                       <div>
-                        <h4 className="font-semibold">{cert.name}</h4>
+                        <h4 className="font-semibold">{cert.title}</h4>
                         <div className="text-sm text-primary">
                           {cert.issuer}
                         </div>

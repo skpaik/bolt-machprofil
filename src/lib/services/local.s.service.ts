@@ -1,5 +1,5 @@
 export class LocalStorageService {
-  static set<T>(key: string, value: any) {
+  static set(key: string, value: string) {
     localStorage.setItem(key, value);
   }
 

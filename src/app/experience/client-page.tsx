@@ -37,7 +37,7 @@ export default function ClientPage() {
       (1000 * 60 * 60 * 24 * 365),
   );
 
-  const getEmploymentTypeColor = (type: string) => {
+  const getEmploymentTypeColor = (type: string): "default" | "secondary" | "destructive" | "outline" => {
     switch (type) {
       case "Full-time":
         return "default";
@@ -184,7 +184,7 @@ export default function ClientPage() {
                         <div className="flex flex-wrap gap-2">
                           <Badge
                             variant={
-                              getEmploymentTypeColor(exp.employmentType) as any
+                              getEmploymentTypeColor(exp.employmentType)
                             }
                           >
                             {exp.employmentType}

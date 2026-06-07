@@ -177,7 +177,7 @@ export default function ClientPage() {
     setSortBy("year-desc");
   };
 
-  const getTypeColor = (type: string) => {
+  const getTypeColor = (type: string): "default" | "secondary" | "destructive" | "outline" => {
     switch (type) {
       case "Journal":
         return "default";
@@ -198,7 +198,7 @@ export default function ClientPage() {
     }
   };
 
-  const getStatusColor = (status?: string) => {
+  const getStatusColor = (status?: string): "default" | "secondary" | "destructive" | "outline" => {
     switch (status) {
       case "Published":
         return "default";
@@ -227,9 +227,9 @@ export default function ClientPage() {
       <CardHeader>
         <div className="flex items-start justify-between gap-4 mb-3">
           <div className="flex gap-2">
-            <Badge variant={getTypeColor(pub.type) as any}>{pub.type}</Badge>
+            <Badge variant={getTypeColor(pub.type)}>{pub.type}</Badge>
             {pub.status && (
-              <Badge variant={getStatusColor(pub.status) as any}>
+              <Badge variant={getStatusColor(pub.status)}>
                 {pub.status}
               </Badge>
             )}

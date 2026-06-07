@@ -25,8 +25,8 @@ export default function ClientPage() {
     [],
   );
 
-  const getTypeColor = (type: string) => {
-    const colorMap: { [key: string]: string } = {
+  const getTypeColor = (type: string): "default" | "secondary" | "destructive" | "outline" => {
+    const colorMap: Record<string, "default" | "secondary" | "destructive" | "outline"> = {
       Degree: "default",
       Certificate: "secondary",
       Course: "outline",
@@ -74,7 +74,7 @@ export default function ClientPage() {
                       </div>
                     </div>
                     <Badge
-                      variant={getTypeColor(edu.type) as any}
+                      variant={getTypeColor(edu.type)}
                       className="w-fit"
                     >
                       {edu.type}

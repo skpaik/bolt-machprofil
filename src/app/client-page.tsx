@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
-import { AboutContent } from "@/lib/types/about.contract";
+import { AboutContent, SocialLink } from "@/lib/types/about.contract";
 import { emptyAboutContent } from "@/data/configs/constants/empty.data";
 import {
   Experience,
@@ -83,7 +83,7 @@ export default function ClientPage() {
     const totalYears =
       experiences.length > 0
         ? Math.floor(
-            experiences.reduce((total: number, exp: any) => {
+            experiences.reduce((total: number, exp: Experience) => {
               const start = new Date(exp.startDate);
               const end =
                 exp.endDate === "Present" ? new Date() : new Date(exp.endDate);
@@ -95,20 +95,20 @@ export default function ClientPage() {
 
     // Count completed projects
     const completedProjects = projects.filter(
-      (p: any) => p.status === "Completed",
+      (p: Project) => p.status === "Completed",
     ).length;
 
-    // Count unique clients
+    // Count unique clients (from projects and companies)
     const uniqueClients =
       new Set(
-        experiences.filter((e: any) => e.client).map((e: any) => e.client),
+        experiences.map((e: Experience) => e.company),
       ).size +
-      new Set(projects.filter((p: any) => p.client).map((p: any) => p.client))
+      new Set(projects.filter((p: Project) => p.client).map((p: Project) => p.client))
         .size;
 
     // Calculate satisfaction rate (based on testimonials with 5 stars)
     const fiveStarCount = testimonials.filter(
-      (t: any) => t.rating === 5,
+      (t: Testimonial) => t.rating === 5,
     ).length;
     const satisfactionRate =
       testimonials.length > 0
@@ -126,19 +126,19 @@ export default function ClientPage() {
 
   // Get featured projects (up to 3)
   const featuredProjects = useMemo(() => {
-    const featured = projects.filter((p: any) => p.featured);
+    const featured = projects.filter((p: Project) => p.featured);
     return (featured.length > 0 ? featured : projects).slice(0, 3);
   }, [projects]);
 
   // Get top services (up to 4)
-  const topServices = useMemo(() => {
+  const topServices: Array<{ id: number | string; title: string; description: string; icon: string }> = useMemo(() => {
     if (services.length > 0) {
       return services.slice(0, 4);
     }
 
     // Generate services from skills if no services data
     const skillCategories = [
-      ...new Set(skills.map((s: any) => s.category)),
+      ...new Set(skills.map((s: Skills) => s.category)),
     ].slice(0, 4);
     return skillCategories.map((category: string, idx: number) => ({
       id: `service-${idx}`,
@@ -153,7 +153,7 @@ export default function ClientPage() {
               ? "smartphone"
               : "users",
     }));
-  }, [services, skills]);
+  }, [services, skills, langI18n]);
 
   // Get top testimonials (up to 2)
   const topTestimonials = testimonials.slice(0, 2);
@@ -247,7 +247,7 @@ export default function ClientPage() {
               {/* Social Links */}
               {socialLinks?.length > 0 && (
                 <div className="flex gap-3">
-                  {socialLinks.map((social: any) => {
+                  {socialLinks.map((social: SocialLink) => {
                     return (
                       <a
                         key={social.platform}
@@ -332,7 +332,7 @@ export default function ClientPage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {topServices.map((service: any) => {
+              {topServices.map((service) => {
                 return (
                   <Card
                     key={service.id}
@@ -381,7 +381,7 @@ export default function ClientPage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredProjects.map((project: any) => (
+              {featuredProjects.map((project: Project) => (
                 <Card
                   key={project.id}
                   className="overflow-hidden group hover:shadow-xl transition-all"
@@ -435,7 +435,7 @@ export default function ClientPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {topTestimonials.map((testimonial: any) => (
+              {topTestimonials.map((testimonial: Testimonial) => (
                 <Card key={testimonial.id}>
                   <CardContent className="pt-6">
                     <div className="flex gap-1 mb-4">
@@ -447,7 +447,7 @@ export default function ClientPage() {
                       )}
                     </div>
                     <p className="text-muted-foreground mb-6 italic">
-                      "{testimonial.content || testimonial.testimonial}"
+                      "{testimonial.testimonial}"
                     </p>
                     <div className="flex items-center gap-4">
                       <img

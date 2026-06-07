@@ -227,7 +227,7 @@ export default function ClientPage({ lang, id }: PageProps) {
                 {langI18n.related_posts}
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {relatedPosts.map((relatedPost: any) => (
+                {relatedPosts.map((relatedPost: BlogPost) => (
                   <Link key={relatedPost.id} href={createBlogDetailUrl(post)}>
                     <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full group">
                       <div className="aspect-video overflow-hidden">

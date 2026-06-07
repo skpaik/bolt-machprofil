@@ -428,7 +428,7 @@ export default function ClientPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(albumGroups).map(
-              ([albumName, albumPhotos]: [string, any]) => (
+              ([albumName, albumPhotos]: [string, Photo[]]) => (
                 <Card
                   key={albumName}
                   className="overflow-hidden hover:shadow-xl transition-all cursor-pointer group"

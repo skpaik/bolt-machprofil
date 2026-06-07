@@ -208,7 +208,7 @@ export default function ClientPage() {
     setSortBy("date-desc");
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string): "default" | "secondary" | "destructive" | "outline" => {
     switch (status) {
       case "Completed":
         return "default";
@@ -245,7 +245,7 @@ export default function ClientPage() {
 
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
-          <Badge variant={getStatusColor(project.status) as any}>
+          <Badge variant={getStatusColor(project.status)}>
             {project.status}
           </Badge>
           <div className="flex gap-3 text-xs text-muted-foreground">
