@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import AnimatedLayout from "@/components/layouts/AnimatedLayout";
 import TemplateWrapper from "@/components/layouts/TemplateWrapper";
 import BottomNav from "@/components/layouts/BottomNav";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 import { PortfolioProvider } from "@/components/context/PortfolioContext";
 import { suspenseFallbacks } from "@/components/suspense/suspense-registry";
 import { DefaultSkeleton } from "@/components/suspense/default-skeleton";

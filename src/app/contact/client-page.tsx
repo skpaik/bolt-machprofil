@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/lib/hooks/use-toast";
+import { toast } from "sonner";
 import { PageHeading } from "@/components/shared/PageHeading";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
@@ -15,8 +15,6 @@ import { AboutContent } from "@/lib/types/about.contract";
 import { emptyAboutContent } from "@/data/configs/constants/empty.data";
 
 export default function ClientPage() {
-  const { toast } = useToast();
-
   const { langI18n, profileType, languageType } = usePortfolio();
 
   const {
@@ -43,8 +41,7 @@ export default function ClientPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: langI18n.message_sent,
+    toast.success(langI18n.message_sent, {
       description: langI18n.message_sent_description,
     });
     setFormData(emptyForm);
