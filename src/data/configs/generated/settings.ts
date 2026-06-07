@@ -3,8 +3,8 @@ export const settings_const = {
   active: {
     Profile: "developer",
     Language: "en",
-    Theme: "light",
-    Template: "modern"
+    Template: "modern",
+    Theme: "light"
   },
   show: {
     ProfileChangeButton: true,

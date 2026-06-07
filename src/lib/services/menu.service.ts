@@ -22,8 +22,8 @@ export class MenuService {
     profileType: ProfileType = settings_const.active.Profile,
     languageType: LanguageType = settings_const.active.Language,
     isMobile: boolean,
-    mobileLimit = 4,
-    desktopLimit = 5,
+    mobileLimit = 140,
+    desktopLimit = 150,
   ) {
     const limit = isMobile ? mobileLimit : desktopLimit;
 

@@ -43,7 +43,10 @@ export class ContentsService {
     const post = blogPostList?.find((p) => p.id.toString() === id);
     const relatedPosts =
       blogPostList
-        ?.filter((p: any) => p.id !== id && p.category === post?.category)
+        ?.filter(
+          (p: BlogPost) =>
+            p.id.toString() !== id && p.category === post?.category,
+        )
         .slice(0, 3) || [];
 
     return { post, relatedPosts };

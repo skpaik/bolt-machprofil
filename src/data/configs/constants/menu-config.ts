@@ -23,20 +23,21 @@ export class MenuConfig {
   ];
 
   public static MENU_KEY_TO_CONTENT_KEY: Record<string, string> = {
-    home: "about_content",
+    home: "home_content",
     about: "about_content",
     projects: "project_list",
+    experience: "experience_list",
     blog: "blog_list",
-    resume: "resume_list",
+    resume: "experience_list",
     education: "education_list",
-    skills: "skills_list",
-    services: "services_list",
+    skills: "skill_list",
+    services: "service_list",
     publications: "publication_list",
     certificates: "certificate_list",
     testimonials: "testimonial_list",
     photos: "photo_list",
-    contact: "contact_list", // if exists
-    privacy: "privacy_list",
-    terms: "terms_list",
+    contact: "about_content", // contact often uses about/info content if specific list doesn't exist
+    privacy: "static_contents",
+    terms: "static_contents",
   };
 }

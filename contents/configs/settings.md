@@ -2,8 +2,8 @@
 active:
   Profile: developer
   Language: en
-  Theme: light
   Template: modern
+  Theme: light
 show:
   ProfileChangeButton: true
   LanguageChangeButton: true
