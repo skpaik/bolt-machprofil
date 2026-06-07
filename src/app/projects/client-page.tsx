@@ -18,6 +18,7 @@ import { Project } from "@/lib/types/portfolio";
 import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
+import { getProjectStatusColor } from "@/lib/utils/badge-variants";
 import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
@@ -208,18 +209,6 @@ export default function ClientPage() {
     setSortBy("date-desc");
   };
 
-  const getStatusColor = (status: string): "default" | "secondary" | "destructive" | "outline" => {
-    switch (status) {
-      case "Completed":
-        return "default";
-      case "In Progress":
-        return "secondary";
-      case "Ongoing":
-        return "outline";
-      default:
-        return "outline";
-    }
-  };
 
   const ProjectCard = ({ project }: { project: Project }) => (
     <Card
@@ -245,7 +234,7 @@ export default function ClientPage() {
 
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
-          <Badge variant={getStatusColor(project.status)}>
+          <Badge variant={getProjectStatusColor(project.status)}>
             {project.status}
           </Badge>
           <div className="flex gap-3 text-xs text-muted-foreground">

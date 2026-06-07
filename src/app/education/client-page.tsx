@@ -9,6 +9,7 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
 import { Education } from "@/lib/types/portfolio";
+import { getEducationTypeColor } from "@/lib/utils/badge-variants";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
@@ -24,17 +25,6 @@ export default function ClientPage() {
     "education_list",
     [],
   );
-
-  const getTypeColor = (type: string): "default" | "secondary" | "destructive" | "outline" => {
-    const colorMap: Record<string, "default" | "secondary" | "destructive" | "outline"> = {
-      Degree: "default",
-      Certificate: "secondary",
-      Course: "outline",
-      Bootcamp: "destructive",
-      "Self-Study": "outline",
-    };
-    return colorMap[type] || "outline";
-  };
 
   return (
     <>
@@ -74,7 +64,7 @@ export default function ClientPage() {
                       </div>
                     </div>
                     <Badge
-                      variant={getTypeColor(edu.type)}
+                      variant={getEducationTypeColor(edu.type)}
                       className="w-fit"
                     >
                       {edu.type}

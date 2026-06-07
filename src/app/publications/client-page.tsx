@@ -18,6 +18,7 @@ import { FilterConfig, SortConfig } from "@/lib/types/shared.contract";
 import { SortOption } from "@/lib/types/type.config";
 import { ListEmptyDisplay } from "@/components/shared/ListEmptyDisplay";
 import { showLucidIcon } from "@/components/lucid-icon-map";
+import { getPublicationTypeColor, getPublicationStatusColor } from "@/lib/utils/badge-variants";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
 import { usePagination } from "@/components/hooks/use-pagination";
 
@@ -177,41 +178,6 @@ export default function ClientPage() {
     setSortBy("year-desc");
   };
 
-  const getTypeColor = (type: string): "default" | "secondary" | "destructive" | "outline" => {
-    switch (type) {
-      case "Journal":
-        return "default";
-      case "Conference":
-        return "secondary";
-      case "Book Chapter":
-        return "outline";
-      case "Workshop":
-        return "secondary";
-      case "Preprint":
-        return "outline";
-      case "Thesis":
-        return "default";
-      case "Patent":
-        return "destructive";
-      default:
-        return "outline";
-    }
-  };
-
-  const getStatusColor = (status?: string): "default" | "secondary" | "destructive" | "outline" => {
-    switch (status) {
-      case "Published":
-        return "default";
-      case "In Press":
-        return "secondary";
-      case "Under Review":
-        return "outline";
-      case "Preprint":
-        return "outline";
-      default:
-        return "outline";
-    }
-  };
 
   const PublicationCard = ({ pub }: { pub: Publication }) => (
     <Card
@@ -227,9 +193,9 @@ export default function ClientPage() {
       <CardHeader>
         <div className="flex items-start justify-between gap-4 mb-3">
           <div className="flex gap-2">
-            <Badge variant={getTypeColor(pub.type)}>{pub.type}</Badge>
+            <Badge variant={getPublicationTypeColor(pub.type)}>{pub.type}</Badge>
             {pub.status && (
-              <Badge variant={getStatusColor(pub.status)}>
+              <Badge variant={getPublicationStatusColor(pub.status)}>
                 {pub.status}
               </Badge>
             )}

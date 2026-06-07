@@ -17,6 +17,7 @@ import {
   Skills,
   Testimonial,
 } from "@/lib/types/portfolio";
+import { groupBy } from "@/lib/utils/array-helpers";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
@@ -83,14 +84,7 @@ export default function ClientPage() {
   };
 
   // Group skills by category
-  const groupedSkills = skills.reduce((acc: Record<string, Skills[]>, skill: Skills) => {
-    const category = skill.category || "Other";
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(skill);
-    return acc;
-  }, {} as Record<string, Skills[]>);
+  const groupedSkills = groupBy(skills, "category");
 
   return (
     <div className="min-h-screen bg-muted/30">

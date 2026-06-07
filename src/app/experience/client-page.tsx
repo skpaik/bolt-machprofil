@@ -10,6 +10,8 @@ import { showLucidIcon } from "@/components/lucid-icon-map";
 import { formatDateShort } from "@/lib/helpers/date.helper";
 import { useContentLoader } from "@/components/hooks/use-content-loader";
 import { Experience } from "@/lib/types/portfolio";
+import { getEmploymentTypeColor } from "@/lib/utils/badge-variants";
+import { calculateTotalYearsOfExperience } from "@/lib/utils/date-calculations";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
@@ -27,32 +29,7 @@ export default function ClientPage() {
   );
 
   // Calculate total experience
-  const totalYears = Math.floor(
-    experiences.reduce((total, exp) => {
-      const start = new Date(exp.startDate);
-      const end =
-        exp.endDate === "Present" ? new Date() : new Date(exp.endDate);
-      return total + (end.getTime() - start.getTime());
-    }, 0) /
-      (1000 * 60 * 60 * 24 * 365),
-  );
-
-  const getEmploymentTypeColor = (type: string): "default" | "secondary" | "destructive" | "outline" => {
-    switch (type) {
-      case "Full-time":
-        return "default";
-      case "Part-time":
-        return "secondary";
-      case "Contract":
-        return "outline";
-      case "Freelance":
-        return "secondary";
-      case "Internship":
-        return "outline";
-      default:
-        return "outline";
-    }
-  };
+  const totalYears = calculateTotalYearsOfExperience(experiences);
 
   return (
     <>

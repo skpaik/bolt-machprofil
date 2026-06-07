@@ -22,6 +22,8 @@ import {
   Skills,
   Testimonial,
 } from "@/lib/types/portfolio";
+import { calculateTotalYearsOfExperience } from "@/lib/utils/date-calculations";
+import { getFeaturedOrAll } from "@/lib/utils/array-helpers";
 
 export default function ClientPage() {
   const { langI18n, profileType, languageType } = usePortfolio();
@@ -80,18 +82,9 @@ export default function ClientPage() {
   // Calculate statistics
   const stats = useMemo(() => {
     // Calculate years of experience
-    const totalYears =
-      experiences.length > 0
-        ? Math.floor(
-            experiences.reduce((total: number, exp: Experience) => {
-              const start = new Date(exp.startDate);
-              const end =
-                exp.endDate === "Present" ? new Date() : new Date(exp.endDate);
-              return total + (end.getTime() - start.getTime());
-            }, 0) /
-              (1000 * 60 * 60 * 24 * 365),
-          )
-        : 8;
+    const totalYears = experiences.length > 0
+      ? calculateTotalYearsOfExperience(experiences)
+      : 8;
 
     // Count completed projects
     const completedProjects = projects.filter(
@@ -100,11 +93,8 @@ export default function ClientPage() {
 
     // Count unique clients (from projects and companies)
     const uniqueClients =
-      new Set(
-        experiences.map((e: Experience) => e.company),
-      ).size +
-      new Set(projects.filter((p: Project) => p.client).map((p: Project) => p.client))
-        .size;
+      new Set(experiences.map((e: Experience) => e.company)).size +
+      new Set(projects.filter((p: Project) => p.client).map((p: Project) => p.client)).size;
 
     // Calculate satisfaction rate (based on testimonials with 5 stars)
     const fiveStarCount = testimonials.filter(
@@ -126,8 +116,7 @@ export default function ClientPage() {
 
   // Get featured projects (up to 3)
   const featuredProjects = useMemo(() => {
-    const featured = projects.filter((p: Project) => p.featured);
-    return (featured.length > 0 ? featured : projects).slice(0, 3);
+    return getFeaturedOrAll(projects, 3);
   }, [projects]);
 
   // Get top services (up to 4)
